@@ -1,4 +1,4 @@
-# Introduction
+# Setting up a node
 
 ## Getting Super Powers
 
