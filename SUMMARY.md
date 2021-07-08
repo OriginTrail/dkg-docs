@@ -10,11 +10,10 @@
 * [Knowledge Graph basics](general/kg/README.md)
   * [What is a Knowledge Graph](general/kg/kginfo.md)
   * [Knowledge Graph Comparison](general/kg/kgvs.md)
-* [Decentralized Knowledge Graph \(DKG\)](general/dkg/README.md)
-  * [What is a DKG](general/dkg/dkgintro.md)
-  * [Knowledge Creators and Data Holders](general/dkg/participants.md)
-  * [Litigations](general/dkg/litigations.md)
-  * [Available networks \(testnets, mainnet\)](general/dkg/networks.md)
+* [What is the OriginTrail Decentralized Knowledgraph \(ODN\)](general/dkgintro.md)
+* [Trace Token \(TRAC\)](general/trac.md)
+* [Litigations](general/litigations.md)
+* [Available networks \(testnets, mainnet\)](general/networks.md)
 
 ## Developers
 
