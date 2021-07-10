@@ -4,14 +4,10 @@
 
 ## General Information <a id="general"></a>
 
-* [Blockchain basics](general/basics/README.md)
-  * [Introduction and benefits](general/basics/intro.md)
-  * [Data Hashing](general/basics/hash.md)
+* [Blockchain basics](general/basics.md)
 * [Knowledge Graph basics](general/kg.md)
-* [What is a Knowledge Graph](general/kginfo.md)
 * [What is the OriginTrail Decentralized Knowledgraph \(ODN\)](general/dkgintro.md)
 * [Trace Token \(TRAC\)](general/trac.md)
-* [Litigations](general/litigations.md)
 * [Available networks \(testnets, mainnet\)](general/networks.md)
 
 ## Developers
