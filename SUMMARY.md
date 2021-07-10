@@ -4,27 +4,25 @@
 
 ## General Information <a id="general"></a>
 
-* [Blockchain basics](general/basics.md)
 * [Knowledge Graph basics](general/kg.md)
 * [What is the OriginTrail Decentralized Knowledgraph \(ODN\)](general/dkgintro.md)
 * [Trace Token \(TRAC\)](general/trac.md)
 * [Available networks \(testnets, mainnet\)](general/networks.md)
 
-## Developers
+## Using the DKG <a id="developers"></a>
 
-* [Using the DKG](developers/using-the-dkg/README.md)
-  * [Getting started](developers/using-the-dkg/devsintro.md)
-  * [Querying data from the DKG](developers/using-the-dkg/querying/README.md)
-    * [Using node-API](developers/using-the-dkg/querying/nodeapi.md)
-    * [Using GraphQL](developers/using-the-dkg/querying/graphql.md)
-    * [Using EPCIS query interfac](developers/using-the-dkg/querying/epics.md)
-    * [Using SPARQL \(Coming soon\)](developers/using-the-dkg/querying/sparql.md)
-  * [Install Instructions](developers/using-the-dkg/devsinstall/README.md)
-    * [Libraries install instructions](developers/using-the-dkg/devsinstall/libraries/README.md)
-      * [Js](developers/using-the-dkg/devsinstall/libraries/js.md)
-      * [Solidity](developers/using-the-dkg/devsinstall/libraries/solidity.md)
-      * [Go](developers/using-the-dkg/devsinstall/libraries/go.md)
-    * [“Hello Trail” tutorial](developers/using-the-dkg/devsinstall/hello.md)
+* [Getting started](developers/devsintro.md)
+* [Querying data from the DKG](developers/querying/README.md)
+  * [Using node-API](developers/querying/nodeapi.md)
+  * [Using GraphQL](developers/querying/graphql.md)
+  * [Using EPCIS query interfac](developers/querying/epics.md)
+  * [Using SPARQL \(Coming soon\)](developers/querying/sparql.md)
+* [Install Instructions](developers/devsinstall/README.md)
+  * [Libraries install instructions](developers/devsinstall/libraries/README.md)
+    * [Js](developers/devsinstall/libraries/js.md)
+    * [Solidity](developers/devsinstall/libraries/solidity.md)
+    * [Go](developers/devsinstall/libraries/go.md)
+  * [“Hello Trail” tutorial](developers/devsinstall/hello.md)
 * [Integrations](developers/integrations/README.md)
   * [Using SSI agents with ODN](developers/integrations/ss.md)
   * [Integrate DKG with Smart contracts \(Oracle\)](developers/integrations/oracle.md)

@@ -1,6 +1,15 @@
 # What is the OriginTrail Decentralized Knowledgraph \(ODN\)
 
+D**ecentralized knowledge graph \(DKG\)** as a global shared knowledge graph that is designed to benefit organizations and individuals by providing a common infrastructure for data exchange. The DKG:
+
+* Enables Dapps with search, integration, analytics, AI and ML capabilities for any data source: blockchains, IPFS, enterprise systems, web services, personal devices
+* Removes central authorities \(decentralized infrastructure\)
+* Enables permissionless PUBLISH and QUERY \(public network\)
+* Decentralized identity & Verifiable Credentials based access control \(references private data\)
+
 The main concern about trust between organizations is who owns and has access to modify the data. As such we introduced in 2018 the OriginTrail Decentralized Knowledgegraph \(ODN\), to ensure data is immutable and no party has ownership over the data once it is uploaded to ODN.
+
+![](../.gitbook/assets/image%20%286%29.png)
 
 Dataset are uploaded on ODN through a Data Creator node, which could be from any number of business functions, including existing ERPs, blockchains \(permissioned and permissionless\), etc. A cryptographic data hash of the data is first fingerprinted to a blockchain to ensure data immutability. This data is then passed \(via a bidding process through a smart contract\) to three Data Holder nodes that agree to hold the data for the terms of a contract. Data holder nodes are essentially decentralized, interconnected servers and provide that data upon demand to relevant parties. 
 
