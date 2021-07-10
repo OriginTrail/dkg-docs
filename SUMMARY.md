@@ -30,39 +30,26 @@
   * [Useful data such as smart contract addresses, gateway URLs etc](developers/references/usefuldata.md)
   * [Links to relevant resources such as github etc](developers/references/links.md)
   * [API reference](developers/references/api.md)
+* [Publishing Data](developers/publish/README.md)
+  * [How to publish data on the DKG](developers/publish/publishdata/README.md)
+    * [Publishing scenarios](developers/publish/publishdata/scenarios/README.md)
+      * [Verifiable claims](developers/publish/publishdata/scenarios/claims.md)
+      * [Publishing a stream](developers/publish/publishdata/scenarios/publish-stream.md)
+    * [Considerations on data privacy](developers/publish/publishdata/privacy.md)
+    * [Publishing data streams](developers/publish/publishdata/streams.md)
+  * [How to index data for sale](developers/publish/sale/README.md)
+    * [Knowledge tokens](developers/publish/sale/knowledgetokens.md)
+    * [Data Marketplace](developers/publish/sale/marketplace.md)
 * [Contribute](developers/contribute.md)
 * [Tools](developers/tools.md)
 
-## Knowledge Creators
+## Running a node <a id="running-node"></a>
 
-* [Who is a knowledge creator](knowledge-creators/knowledgecreator.md)
-* [Publishing Data](knowledge-creators/publish/README.md)
-  * [How to publish data on the DKG](knowledge-creators/publish/publishdata/README.md)
-    * [Publishing scenarios](knowledge-creators/publish/publishdata/scenarios/README.md)
-      * [Verifiable claims](knowledge-creators/publish/publishdata/scenarios/claims.md)
-      * [Publishing a stream](knowledge-creators/publish/publishdata/scenarios/publish-stream.md)
-    * [Considerations on data privacy](knowledge-creators/publish/publishdata/privacy.md)
-    * [Publishing data streams](knowledge-creators/publish/publishdata/streams.md)
-  * [How to index data for sale](knowledge-creators/publish/sale/README.md)
-    * [Knowledge tokens](knowledge-creators/publish/sale/knowledgetokens.md)
-    * [Data Marketplace](knowledge-creators/publish/sale/marketplace.md)
-
-## Data Consumers <a id="dataconsumers"></a>
-
-* [Untitled](dataconsumers/untitled.md)
-
-## Data Holders
-
-* [Who is a Data Holder](data-holders/dh-intro.md)
-* [Setting up a node](data-holders/node-setup/README.md)
-  * [Setup instructions](data-holders/node-setup/node-setups.md)
-  * [Price setup](data-holders/node-setup/node-price.md)
-  * [Backup & restore](data-holders/node-setup/backup.md)
-  * [High-Availability configuration](data-holders/node-setup/high-availability.md)
-
-## Solution Builders
-
-* [Who is a solution builder](solution-builders/solution-builder.md)
+* [Setting up a node](running-node/node-setup/README.md)
+  * [Setup instructions](running-node/node-setup/node-setups.md)
+  * [Price setup](running-node/node-setup/node-price.md)
+  * [Backup & restore](running-node/node-setup/backup.md)
+  * [High-Availability configuration](running-node/node-setup/high-availability.md)
 
 ## Tutorials
 
