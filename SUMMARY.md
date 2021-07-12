@@ -45,11 +45,13 @@
 
 ## Running a node <a id="running-node"></a>
 
-* [Setting up a node](running-node/node-setup/README.md)
-  * [Setup instructions](running-node/node-setup/node-setups.md)
-  * [Price setup](running-node/node-setup/node-price.md)
-  * [Backup & restore](running-node/node-setup/backup.md)
-  * [High-Availability configuration](running-node/node-setup/high-availability.md)
+* [Setup instructions](running-node/node-setups/README.md)
+  * [Mainnet Docker Installation](running-node/node-setups/docker.md)
+  * [Mainnet Manual Installation](running-node/node-setups/manual.md)
+  * [Testnet Installation](running-node/node-setups/testnet-installation.md)
+* [Price setup](running-node/node-price.md)
+* [Backup & restore](running-node/backup.md)
+* [High-Availability configuration](running-node/high-availability.md)
 
 ## Tutorials
 
