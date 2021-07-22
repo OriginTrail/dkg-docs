@@ -1,47 +1,26 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Intro - start here](README.md)
 
 ## General Information <a id="general"></a>
 
-* [Knowledge Graph basics](general/kg.md)
-* [What is the OriginTrail Decentralized Knowledgraph \(ODN\)](general/dkgintro.md)
+* [Introduction to linked data & knowledge graphs](general/kg.md)
+* [OriginTrail - Decentralized Knowledge Graph \(DKG\)](general/dkgintro.md)
 * [Trace Token \(TRAC\)](general/trac.md)
 * [Available networks \(testnets, mainnet\)](general/networks.md)
 
 ## Using the DKG <a id="developers"></a>
 
 * [Getting started](developers/devsintro.md)
-* [Querying data from the DKG](developers/querying/README.md)
-  * [Using node-API](developers/querying/nodeapi.md)
-  * [Using GraphQL](developers/querying/graphql.md)
-  * [Using EPCIS query interfac](developers/querying/epics.md)
-  * [Using SPARQL \(Coming soon\)](developers/querying/sparql.md)
-* [Install Instructions](developers/devsinstall/README.md)
-  * [Libraries install instructions](developers/devsinstall/libraries/README.md)
-    * [Js](developers/devsinstall/libraries/js.md)
-    * [Solidity](developers/devsinstall/libraries/solidity.md)
-    * [Go](developers/devsinstall/libraries/go.md)
-  * [“Hello Trail” tutorial](developers/devsinstall/hello.md)
-* [Integrations](developers/integrations/README.md)
-  * [Using SSI agents with ODN](developers/integrations/ss.md)
-  * [Integrate DKG with Smart contracts \(Oracle\)](developers/integrations/oracle.md)
+* [Publishing data to the DKG](developers/devsinstall.md)
+* [Querying data from the DKG](developers/querying.md)
+* [Data verification](developers/data-verification.md)
+* [Integrations](developers/integrations.md)
 * [Developer Reference](developers/references/README.md)
   * [Useful data such as smart contract addresses, gateway URLs etc](developers/references/usefuldata.md)
   * [Links to relevant resources such as github etc](developers/references/links.md)
   * [API reference](developers/references/api.md)
-* [Publishing Data](developers/publish/README.md)
-  * [How to publish data on the DKG](developers/publish/publishdata/README.md)
-    * [Publishing scenarios](developers/publish/publishdata/scenarios/README.md)
-      * [Verifiable claims](developers/publish/publishdata/scenarios/claims.md)
-      * [Publishing a stream](developers/publish/publishdata/scenarios/publish-stream.md)
-    * [Considerations on data privacy](developers/publish/publishdata/privacy.md)
-    * [Publishing data streams](developers/publish/publishdata/streams.md)
-  * [How to index data for sale](developers/publish/sale/README.md)
-    * [Knowledge tokens](developers/publish/sale/knowledgetokens.md)
-    * [Data Marketplace](developers/publish/sale/marketplace.md)
 * [Contribute](developers/contribute.md)
-* [Tools](developers/tools.md)
 
 ## Running a node <a id="running-node"></a>
 

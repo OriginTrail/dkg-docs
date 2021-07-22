@@ -1,4 +1,13 @@
-# Knowledge Graph basics
+# Introduction to linked data & knowledge graphs
+
+### What is linked data?  **TODO:** 
+
+* _**Intro about linked data structures and strengths,**_ 
+* _**refer to semantic web**_
+* introduce graph databases, reference Neo4j and similar
+* _extend with a simple example._ 
+
+### What is a knowledge graph?
 
 There are many available definitions of a knowledge graph, therefore we will present a simplified one focused on usability, rather than completeness. The purpose of this introduction is not to be a comprehensive guide for knowledge graphs, however it aims to get you started with the basics.
 
