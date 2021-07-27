@@ -14,7 +14,7 @@ We define the **Decentralized knowledge graph \(DKG\)** as a global shared knowl
 * explain protocols
 * explain data layers
 
-The main concern about trust between organizations is who owns and has access to modify the data. As such we introduced in 2018 the OriginTrail Decentralized Knowledgegraph \(ODN\), to ensure data is immutable and no party has ownership over the data once it is uploaded to ODN.
+The main concern about trust between organizations is who owns and has access to modify the data. As such we introduced in 2018 the OriginTrail Decentralized Knowledge graph \(ODN\), to ensure data is immutable and no party has ownership over the data once it is uploaded to ODN.
 
 ![](../.gitbook/assets/origintrail-technical-stack.png)
 
