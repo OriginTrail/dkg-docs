@@ -1,6 +1,6 @@
 # Trace Token \(TRAC\)
 
-#### Token Utility
+## Token Utility
 
 The [Trace token \(TRAC\)](https://etherscan.io/token/0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f) is the utility token that drives the entire ODN. It is a pre-mined, non-inflationary token, and only 500 million will ever exist. TRAC is utilized on the OriginTrail Decentralized Network \(ODN\) in multiple ways, and the network \(and its decentralized nature\) cannot function without it. These mechanisms are:
 
