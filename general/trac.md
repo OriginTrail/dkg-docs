@@ -2,14 +2,17 @@
 
 ## Token Utility
 
+Explain why a token is needed and how it works.
+
+
+
 The [Trace token \(TRAC\)](https://etherscan.io/token/0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f) is the utility token that drives the entire ODN. It is a pre-mined, non-inflationary token, and only 500 million will ever exist. TRAC is utilized on the OriginTrail Decentralized Network \(ODN\) in multiple ways, and the network \(and its decentralized nature\) cannot function without it. These mechanisms are:
 
-* _**Engaging in the OriginTrail Ecosystem.**_ Data creators and data holders must have TRAC staked in their nodes to take part in the ODN. More TRAC staked in nodes means more data jobs can be published or held.
+_\*\*\*\*_
+
 * _**Publishing data to the ODN.**_ Data creators publish data jobs on the ODN using TRAC to compensate 3 data holding nodes for their time and resources. The exact value of TRAC for each data job is dependent on market forces, but parameters like job length and data size affect it. This TRAC is locked in a smart contract until the job’s completion.
 * _**Collateralization by Data Holders**_**.** To prevent data tampering and as a promise to hold data for a set period of time, TRAC from a data holder’s stake is also locked via smart contract for the length of the data job. Failure to provide data on-demand leads to loss of this staked TRAC to the data creator. _Upon completion of the terms of the job, the data holder earns back their original stake AND the TRAC staked by the data creator._
-* _**sTRAC Usage as StarFleet Chain Native Token**_. StarFleet Chain \(SFC\) is a substrate based blockchain developed by TraceLabs to enable cheaper data job transactions on the network, which is expected to go live in Q3-Q4 2021. The native token is sTRAC, a “wrapped” form of TRAC. No new TRAC tokens are ever created, thus constricting the supply \(i.e. the total number of sTRAC + TRAC = 500 million\). A bridge will be utilized to allow easy movement between chains.
-* _**Staking sTRAC**_. Individuals can stake their TRAC on the StarFleet Chain network to individual node runners and businesses. Stakers are then able to get a share in the profits of the data job. This locks TRAC into the network for months and years, constricting supply.
-* _**Knowledge Incentivization.**_ An addiitonal usecase for TRAC is through a data ecosystem that allows data creators to sell their data on the open market. For example, the recently [announced](https://medium.com/origintrail/announcement-european-union-supports-the-food-safety-market-with-trace-labs-to-facilitate-f37d47689420) EU-sponsored Food Safety Market aims to develop an industrial data platform for food certification in Europe by 2023. There are also Data Markets being built for both pharmaceuticals and satellite imagery; this has the potential to unlock valuable proprietary siloed data previously thought unsellable. StarFleet Chain super-charges these data marketplaces with the addition of **knowledge tokens, knowledge wallets, the knowledge marketplace, and knowledge tenders**. They allow individuals to buy and sell data in a trusted, private way, increasing TRAC’s utility _by orders of magnitude._
+* **knowledge tokens, knowledge wallets, the knowledge marketplace, and knowledge tenders**. They allow individuals to buy and sell data in a trusted, private way, increasing TRAC’s utility _by orders of magnitude._
 
 ![](../.gitbook/assets/image%20%284%29.png)
 

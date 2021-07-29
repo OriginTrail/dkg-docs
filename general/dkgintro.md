@@ -1,6 +1,6 @@
 # OriginTrail - Decentralized Knowledge Graph \(DKG\)
 
-We define the **Decentralized knowledge graph \(DKG\)** as a global shared knowledge graph that is designed to benefit organizations and individuals by providing a common infrastructure for data exchange. The DKG:
+We define the **Decentralized knowledge graph \(DKG\)** as a global shared knowledge graph data repository that is designed to benefit organizations and individuals by providing a common infrastructure for data exchange. The DKG:
 
 * Enables Dapps with search, integration, analytics, AI and ML capabilities for any data source: blockchains, IPFS, enterprise systems, web services, personal devices
 * Removes central authorities \(decentralized infrastructure\)

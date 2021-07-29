@@ -19,12 +19,14 @@ There are currently two testnet networks available to experiment with the networ
 
 Warp Testnet \(as canary testnet for early testing of new features\) -  this network is where first releases are uploaded and tested and is used mostly for quality testing of new releases, or early testing of new features.
 
-Stable testnet - This is a replication of the current mainnet, where developers can test building applications and solutions on ODN.
+Stable Testnet - This is a replication of the current mainnet, where developers can test building applications and solutions on ODN.
+
+You can obtain test TRAC tokens for both Warp Testnet and Stable Testnet by joining Discord and requesting such by sharing your wallet on the \#testnet-discussion channel.
 
 **TODO**
 
 * ~~Explain purpose of all networks listed below~~
 * ~~Provide explorer and OT hub links~~
-* Explain how to obtain tokens for each network
+* ~~Explain how to obtain tokens for each network~~
 * Refer to how one can spin up a local network on their machine for development
 
