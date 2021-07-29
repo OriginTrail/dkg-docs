@@ -112,8 +112,6 @@ The trail API details are explained on the following link
 
 ### **SPARQL interface**
 
-\*\*\*\*
-
 * explain SPARQL, refer to Semantic web documentation
 * explain it is coming soon
 

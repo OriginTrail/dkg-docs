@@ -1,2 +1,0 @@
-# Mainnet Manual Installation
-
