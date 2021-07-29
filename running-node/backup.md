@@ -22,7 +22,7 @@ Please check the contents of the latest backup directory, indicated by the direc
 
 ![../\_images/backup-contents.png](https://docs.origintrail.io/en/latest/_images/backup-contents.png)
 
-**Warning**
+⚠️**Warning**⚠️
 
 DO NOT proceed unless the backup folder contains all of the files shown above. Contact support at [tech@origin-trail.com](mailto:tech%40origin-trail.com) for guidance on backing up your node safely.
 
