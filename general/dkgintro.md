@@ -7,7 +7,7 @@ We define the **Decentralized knowledge graph \(DKG\)** as a global shared knowl
 * Enables permissionless PUBLISH and QUERY \(public network\)
 * Decentralized identity & Verifiable Credentials based access control \(references private data\)
 
-**TODO:**
+**TO DO:**
 
 * explain architecture, 
 * explain system actors 
