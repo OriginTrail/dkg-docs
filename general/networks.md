@@ -23,6 +23,8 @@ Stable Testnet - This is a replication of the current mainnet, where developers 
 
 You can obtain test TRAC tokens for both Warp Testnet and Stable Testnet by joining Discord and requesting such by sharing your wallet on the \#testnet-discussion channel.
 
+To run a local network, please refer to the [Local network setup page](../developers/setting-up-development-environment.md)
+
 **TODO**
 
 * ~~Explain purpose of all networks listed below~~

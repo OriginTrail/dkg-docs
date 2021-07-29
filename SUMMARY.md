@@ -12,6 +12,7 @@
 ## Using the DKG <a id="developers"></a>
 
 * [Getting started](developers/devsintro.md)
+* [Setting up development environment](developers/setting-up-development-environment.md)
 * [Publishing data to the DKG](developers/devsinstall.md)
 * [Querying data from the DKG](developers/querying.md)
 * [Data verification](developers/data-verification.md)
