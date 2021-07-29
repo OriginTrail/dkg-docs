@@ -25,10 +25,3 @@ You can obtain test TRAC tokens for both Warp Testnet and Stable Testnet by join
 
 To run a local network, please refer to the [Local network setup page](../developers/setting-up-development-environment.md)
 
-**TODO**
-
-* ~~Explain purpose of all networks listed below~~
-* ~~Provide explorer and OT hub links~~
-* ~~Explain how to obtain tokens for each network~~
-* Refer to how one can spin up a local network on their machine for development
-
