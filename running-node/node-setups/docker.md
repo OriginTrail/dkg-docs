@@ -1,6 +1,6 @@
 # Mainnet Docker Installation
 
-I. Obtain xDAI and xTRAC
+Obtain xDAI and xTRAC
 
 First you need xDAI, which is the gas fee currency on xDAI. Given that the gas fees there are very low, 1-2 xDAI will last you a long time. There are multiple ways to obtain it:
 
@@ -27,7 +27,7 @@ Then you will see on your Metamask xDAI entry when you click on the dropdown on 
 
 ![](https://otnode.com/wp-content/uploads/2021/03/image-12.png)
 
-II. Prepare the wallets
+Prepare the wallets
 
 **Create operational wallet** and management wallets
 
@@ -35,7 +35,7 @@ Create a new wallet using Mycrypto or Metamask and export the private key, which
 
 If you want to run nodes on Ethereum as well, the process is the same, however each blockchain network requires separate TRAC and ETH for gas fees \(i.e. 4k TRAC on ETH for the Ethereum node + 4k xTRAC for the xDAI node, etc.\). Also deposit 0.1 ETH for gas fees to the operational wallet
 
-III. **Configure the server**
+**Configure the server**
 
 Download [Termius ](https://www.termius.com/)\(or any other terminal client like [Kitty](https://www.fosshub.com/KiTTY.html)\) and configure it with the details you received from the VPS hosting \(IP, username, password\). Click on Hosts, Select New host, Choose a Label for the node and add the IP address from the confirmation e-mail from Digital Ocean or Hetzner that the node is created, choose root as username and input the password, and click on Save on the right top corner.
 
