@@ -13,32 +13,49 @@ The OriginTrail DKG:
 
 The OriginTrail Decentralized Network is an implementation of the OriginTrail DKG. With the ODN therefore you can **query for data across a multitude of systems** \(discovery\), to **exchange it** via several data exchange protocols and **integrate it** in your own local knowledge graph or data store. 
 
-_To jump right into the code, head over to the_ [_Getting Started_](../developers/getting-started.md) _page._
+{% hint style="info" %}
+_If you are looking to jump right into the code, head over to the_ [_Getting Started_](../developers/getting-started.md) _page._
+{% endhint %}
 
 ## System architecture
 
 We distinguish several layers of the DKG:
 
-* **the network layer**, formed by a peer to peer swarm of DKG nodes hosted by individuals and organisation
-* **data layer**, hosting the knowledge graph data, distributed across the network
+* **the network layer**, formed by a peer to peer swarm of DKG nodes hosted by individuals and organisation, implementing S/Kademlia
+* **data layer**, hosting the knowledge graph data, distributed across the network in separate instances of graph databases
 * **service layer**, implementing various core & extended services, such as authentication, standard interfaces and data pipelines
-* **the consensus layer**, which
-
-
+* **the consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols \(currently supporting Ethereum, xDai blockchain and the OriginTrail Polkadot Parachain\)
+* **application layer,** encompassing both Dapps and traditional applications which utilize the OriginTrail DKG as part of their data flows.
 
 ![](../.gitbook/assets/origintrail-technical-stack.png)
 
-Dataset are uploaded on ODN through a Data Creator node, which could be from any number of business functions, including existing ERPs, blockchains \(permissioned and permissionless\), etc. A cryptographic data hash of the data is first fingerprinted to a blockchain to ensure data immutability. This data is then passed \(via a bidding process through a smart contract\) to three Data Holder nodes that agree to hold the data for the terms of a contract. Data holder nodes are essentially decentralized, interconnected servers and provide that data upon demand to relevant parties. 
+We also distinguish between:
 
-![Schematic of the interaction between network nodes, enterprise connections, and the blockchain layer](../.gitbook/assets/origintrail-decentralized-network.png)
+* the **public, replicated knowledge graph**, shared by all network nodes according to the protocol
+* **private graphs**, hosted separately by each of the networked nodes, connected with the public knowledge graph
 
-ODN is integrated to Ethereum and xDAI blockchains, where businesses and users can choose which one they prefer based on their preferences in terms of fees and security. Upcoming integration to Polkadot is planned for Q3 2021.
+The public knowledge graph is used to enable data discoverability by hosting a decentralized index of information, replicated across the network, enabling search queries through its discovery protocols. Once information is discovered in separate \(private\) graphs, data exchange protocols are used to obtain full query results. An example of a data exchange protocol is a data marketplace protocol, implementing trusted data-for-tokens exchange.
 
-The bidding process is completely random and cannot be influenced in any way by any of the parties. Payment is utilized through the Trace Token \(TRAC\) which is the glue between all entities and is used as both a stake \(to keep data holders honest and data immutable\) and a payment \(to compensate data holders for their time and resources\). More information on TRAC utility and economics can be found [HERE](trac.md).
+The protocol actors are:
 
-Data creators can [set the data to be public or private](https://medium.com/origintrail/linking-data-in-supply-chains-to-bring-much-needed-resilience-to-global-businesses-8a2ed51cc928), have the data expire after a required time \(i.e. months or years\), or have that data \(or parts of data\) shared only with appropriate parties. Sensitive data is protected using zero-knowledge methods in a privacy-by-design approach. These data holding nodes also function as a vast, decentralized knowledge graph to connect data sets across companies/users quickly and efficiently. This core feature of the ODN is a groundbreaking utility of the protocol, as searching for inter-related data between partners has not been possible before.
+* data creator nodes \(DC\), responsible for publishing datasets to the DKG
+* data holder nodes \(DH\), hosting the DKG datasets, incentivised by tokens deposited by DCs
+* data viewers \(DV\), usually services or dapps that query the DKG
+* data providers \(DP\), which provide data to DC nodes for publishing
 
-![](../.gitbook/assets/image%20%285%29.png)
+The distinction between DC and DH nodes is only behavioural, as they implement the same interfaces \(each node can be both a DH and a DC node at the same time\).
+
+\*\* Currently data providers need to run their own DC nodes to publish data to the network, which is about to change in version 6 with the introduction of gateway services.
+
+Therefore, a dataset published to the DKG by a DC node:
+
+* contains a cryptographic identity \(DID\) of the DC and DP, rooted in one of the supported blockchain networks
+* is structured as graph linked data
+* has a corresponding set of cryptographic fingerprints \(graph merkle roots\) stored immutably on a blockchain
+* is timestamped and has a "data lifespan" on the network 
+* is randomly replicated across peers based on a DKG content addressing scheme
+
+In this way, any given graph vertex or edge \(triple\) in the DKG can be verifiably associated with a publisher DID, it's originating dataset and cryptographic hashes proving it being contained in that dataset, as well as enabling data integrity verification on-chain & off chain. 
 
 
 

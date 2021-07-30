@@ -12,9 +12,18 @@ The DKG enables you to:
 * Easily build custom verifiable data pipelines
 * Integrate with existing SSI & blockchain tooling
 
+This documentation is structured in 4 sections:
+
+* Introduction to OriginTrail Decentralized Knowledge Graph - we recommend starting here
+* **For developers:** how to use the DKG as a Dapp builder
+* **For node operators:** how to host the OriginTrail Decentralized Knowledge Graph by running nodes
+* Generally useful resources section
+
 _Note: This site is primarily built for **developers** and **OriginTrail network node runners** - if you are looking to learn more about OriginTrail ecosystem, please visit_ [_the official website_](https://origintrail.io)_._
 
-_**\*\* This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. We appreciate any feedback, improvement ideas and comments. To provide updates, please submit them as pull requests and use issues for feedback on the**_ [_**docs Github repo.**_](https://github.com/OriginTrail/dkg-docs) _****_
+{% hint style="info" %}
+This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. We appreciate any feedback, improvement ideas and comments. To provide updates, please submit them as pull requests and use issues for feedback on the [docs Github repo.](https://github.com/OriginTrail/dkg-docs)_\*\*\*\*_
+{% endhint %}
 
 ### Useful Links
 

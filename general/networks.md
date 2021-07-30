@@ -1,27 +1,29 @@
 # Available networks \(testnets, mainnet\)
 
-OriginTrail is currently running on the following networks:
+### OriginTrail mainnet
 
-* Multichain mainnet running on Ethereum and xDAI
+The OriginTrail ecosystem is centered around the **OriginTrail Decentralized Network \(ODN\) mainnet**, which is the main network with the full protocol implementation, launched in December 2018. In March 2021 the ODN has become a multichain network, expaning it's consensus layer to the xDAI blockchain, enabling the users to choose which network to utilize based on their requirements. Upcoming integration with the Polkadot parachain is expected in the second half of 2021.
 
-This is the mainnet network setup originally in 2018. In March 2021 xDAI has been integrated so users can choose which one to utilize based on their requirements on decentralization and expense to upload data. Upcoming integration to Polkadot are expected in Q3-Q4 2021.
-
-The ODN Explorer is a tool to search data on the DKG, which can be found HERE: [https://explorer.origintrail.io/](https://explorer.origintrail.io/)  
+The ODN Explorer is a tool to search data on the DKG: [https://explorer.origintrail.io/](https://explorer.origintrail.io/)  
 Here is also a short demo explaining how to use the ODN network explorer:  
 [https://www.youtube.com/watch?v=DM3XNmWMu0c](https://www.youtube.com/watch?v=DM3XNmWMu0c)
 
 Furthermore you can utilize the community built OT Hub, which tracks data uploads on the network here:  
 [https://othub.origin-trail.network/dashboard](https://othub.origin-trail.network/dashboard) 
 
-* Testnet network
+### OriginTrail test networks
 
 There are currently two testnet networks available to experiment with the network, and build applications and solutions.
 
-Warp Testnet \(as canary testnet for early testing of new features\) -  this network is where first releases are uploaded and tested and is used mostly for quality testing of new releases, or early testing of new features.
+**Warp Testnet** \(the canary testnet for early testing of new features\) -  this network is for early releases of the upcoming versions of DKG node implementations. It is used as a fast paced environment, focusing on speed of testing
 
-Stable Testnet - This is a replication of the current mainnet, where developers can test building applications and solutions on ODN.
+**Stable Testnet** - this testnet runs the same implementation as the OriginTrail mainnet, and is used for final release testing prior to hitting mainnet
 
-You can obtain test TRAC tokens for both Warp Testnet and Stable Testnet by joining Discord and requesting such by sharing your wallet on the \#testnet-discussion channel.
+{% hint style="info" %}
+If you want to play around and test out the DKG, we recommend using the stable testnet. For that, you will need test TRAC tokens, which you can obtain both Warp Testnet and Stable Testnet by joining [our Discord](https://discord.com/invite/FCgYk2S) and requesting such by sharing your wallet on the \#testnet-discussion channel.
 
-To run a local network, please refer to the [Local network setup page](../developers/setting-up-development-environment.md)
+You can also run a local network on your machine. To run a local network, please refer to the [Local network setup page](../developers/setting-up-development-environment.md)
+{% endhint %}
+
+
 

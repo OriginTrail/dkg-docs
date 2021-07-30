@@ -1,3 +1,7 @@
+---
+description: How we guide the OriginTrail ecosystem development
+---
+
 # Development principles
 
 The OriginTrail ecosystem is built around 3 core pillars:
@@ -8,7 +12,7 @@ The OriginTrail ecosystem is built around 3 core pillars:
 
 **Inclusiveness** — Continuing to form partnerships with technological and business global leaders that can employ the OriginTrail ecosystem for their communities. Catering to the needs of leading global communities requires us to be making strides in designing technical infrastructure and business models that support the adoption of the OriginTrail in diverse business communities.
 
-Therefore OriginTrail technology development applies the following principles:
+Therefore OriginTrail technology development follows the below principles:
 
 * **Connection-first approach** - building and utilizing synergetic technologies to connect the world’s data into a global, decentralized knowledge graph
 * **Technological neutrality** - avoiding technological lock-ins and striving towards technical agnosticism where possible
