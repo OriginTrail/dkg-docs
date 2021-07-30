@@ -2,9 +2,12 @@
 
 ## Local Network Setup Tool
 
-**Run a single command to create an entire testing enviroment for ot-node development.**
+**Run a single command to create an entire testing environment for ot-node development.**
 
 The Local Network Setup tool will start a local blockchain, deploy the required smart contracts, set up the configuration files for the nodes and start the nodes in separate windows. From there you're ready to send API calls to your local nodes and test new features on the ot-node without worrying about funds, servers or network connectivity issues.
+
+You can find the github entry for the tool here:   
+[https://github.com/OriginTrail/ot-node/tree/develop/tools/local-network-setup](https://github.com/OriginTrail/ot-node/tree/develop/tools/local-network-setup)
 
 **Note: This tool is an internal tool used by the OriginTrail team and thus is developed for our workflow, meaning that it currently only supports MacOS**, but we encourage you to adapt it for your workflow as well.
 

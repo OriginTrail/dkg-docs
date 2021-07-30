@@ -1,4 +1,4 @@
-# Price setup
+# Compensation parameters setup
 
 The data creators have the ability to set pricing through simplified setting called Lambda, which is a combination of dataset size, duration of the data, and gas fees required to start and finalize the bidding process. Lambda could range from 0 to 15.
 

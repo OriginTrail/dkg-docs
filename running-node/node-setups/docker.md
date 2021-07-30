@@ -4,8 +4,7 @@ Obtain xDAI and xTRAC
 
 First you need xDAI, which is the gas fee currency on xDAI. Given that the gas fees there are very low, 1-2 xDAI will last you a long time. There are multiple ways to obtain it:
 
-* You can obtain DAI from [Uniswap ](https://info.uniswap.org/token/0x6b175474e89094c44da98b954eedeac495271d0f)or [Curve ](https://curve.fi/). Then you convert it through the bridge [https://bridge.xdaichain.com/](https://bridge.xdaichain.com/) – here is a video tutorial how to do it: [https://www.youtube.com/watch?v=oKdh2cOOqUs](https://www.youtube.com/watch?v=oKdh2cOOqUs) This operation would cost one Ethereum smart contract transaction.
-* Buy xDAI directly from [Bitmax](https://bitmax.io/en/basic/cashtrade-spottrading/usdt/xdai). If you have USDT on Binance, send the USDT through TRX network to Bitmax \(so it costs $1 for the transfer\).
+* You can obtain xDAI by following some options described by the xDAI community here: [https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token](https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token). Then you convert your TRAC through the bridge [https://bridge.xdaichain.com/](https://bridge.xdaichain.com/) – here is a video tutorial how to do it: [https://www.youtube.com/watch?v=oKdh2cOOqUs](https://www.youtube.com/watch?v=oKdh2cOOqUs) This operation would cost one Ethereum smart contract transaction.
 * Use the faucet to get 0.01 xdai -&gt; [https://blockscout.com/xdai/mainnet/faucet](https://blockscout.com/xdai/mainnet/faucet)
 * If the faucet is not working, join the OriginTrail Community telegram and ask for a cent of xdai -&gt; [https://t.me/OriginTrailCommunity](https://t.me/OriginTrailCommunity)
 
@@ -85,21 +84,7 @@ apt-get update
 apt-get install docker-ce
 ```
 
-**4. Setup the firewall**
-
-```text
-ufw allow 22/tcp && ufw allow 3000 && ufw allow 5278 && ufw allow 8900 && yes | ufw enable
-```
-
-**4b. Double check the firewall is properly configured:**
-
-```text
-ufw status
-```
-
-![](https://otnode.com/wp-content/uploads/2020/07/image-5.png)
-
-**5. Setup the configuration file**
+**4. Setup the configuration file**
 
 ```text
 nano /root/.origintrail_noderc
@@ -188,7 +173,7 @@ i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your nod
 
 **dh\_max\_holding\_time\_in\_minutes** – the maximum length of jobs you are willing to accept in minutes \(for example 550 000 is to accept one year jobs\).
 
-**6. Install JQ to validate whether the configuration file doesn’t contain any errors**
+**5. Install JQ to validate whether the configuration file doesn’t contain any errors**
 
 ```text
 apt-get install jq
@@ -200,7 +185,7 @@ jq "." /root/.origintrail_noderc
 
 Check the brackets, double quotes and commas. Everything except your data has to be exactly like the example above.
 
-**7. Initiate the node installation**
+**6. Initiate the node installation**
 
 **Important**: Once you run this command, the TRAC will be deposited to the contract and your first task is to copy and back your ERC725 identity and node identity mentioned on Step 8 below, so you can have control over this deposited amount. Should you get an error at this stage, or if the gas setting you used is too low, do not delete the container or destroy the VPS. Instead join the discord channel or the Official Telegram group to ask for assistance
 
@@ -216,7 +201,7 @@ The first installation runs in interactive mode, and when you click CTRL + C, yo
 docker restart otnode
 ```
 
-**8. Create identities into files on the root directory**
+**7. Create identities into files on the root directory**
 
 ERC725 identity **on xDAI**
 
@@ -236,7 +221,7 @@ Node ID
 docker cp otnode:/ot-node/data/identity.json ~/identity.json
 ```
 
-**9. Read erc725 and node id and copy/paste them in secure document**
+**8. Read erc725 and node id and copy/paste them in secure document**
 
 **XDAI**
 
@@ -257,6 +242,26 @@ more identity.json
 ```
 
 Or Login to the server using WINSCP or any other FTP application, go to the root folder and download these two files on your local server and archive them with a password.
+
+\*\*\*\*
+
+**Additional node configurations**
+
+**9. Setup the firewall**
+
+```text
+ufw allow 22/tcp && ufw allow 3000 && ufw allow 5278 && ufw allow 8900 && yes | ufw enable
+```
+
+**9b. Double check the firewall is properly configured:**
+
+```text
+ufw status
+```
+
+![](https://otnode.com/wp-content/uploads/2020/07/image-5.png)
+
+\*\*\*\*
 
 **10. Deposit additional xTRAC from your management wallet to the node**
 

@@ -1,20 +1,30 @@
 # OriginTrail - Decentralized Knowledge Graph \(DKG\)
 
-We define the **Decentralized knowledge graph \(DKG\)** as a global shared knowledge graph data repository that is designed to benefit organizations and individuals by providing a common infrastructure for data exchange. The DKG:
+## What is a decentralized knowledge graph?
 
-* Enables Dapps with search, integration, analytics, AI and ML capabilities for any data source: blockchains, IPFS, enterprise systems, web services, personal devices
-* Removes central authorities \(decentralized infrastructure\)
-* Enables permissionless PUBLISH and QUERY \(public network\)
-* Decentralized identity & Verifiable Credentials based access control \(references private data\)
+A **decentralized knowledge graph \(DKG\)** is a global shared knowledge graph that is designed to benefit organizations and individuals by providing shared public infrastructure for knowledge exchange. 
 
-**TO DO:**
+The OriginTrail DKG:
 
-* explain architecture, 
-* explain system actors 
-* explain protocols
-* explain data layers
+* removes central authorities - is hosted on the OriginTrail Decentralized Network \(ODN\)
+* utilizes DIDs & Verifiable Credentials for identity and assertions management
+* enables Dapps with search, integration, analytics, AI and ML capabilities for any data source: blockchains, IPFS, enterprise systems, web services, personal devices
+* enables permissionless PUBLISH and QUERY operations
 
-The main concern about trust between organizations is who owns and has access to modify the data. As such we introduced in 2018 the OriginTrail Decentralized Knowledge graph \(ODN\), to ensure data is immutable and no party has ownership over the data once it is uploaded to ODN.
+The OriginTrail Decentralized Network is an implementation of the OriginTrail DKG. With the ODN therefore you can **query for data across a multitude of systems** \(discovery\), to **exchange it** via several data exchange protocols and **integrate it** in your own local knowledge graph or data store. 
+
+_To jump right into the code, head over to the_ [_Getting Started_](../developers/getting-started.md) _page._
+
+## System architecture
+
+We distinguish several layers of the DKG:
+
+* **the network layer**, formed by a peer to peer swarm of DKG nodes hosted by individuals and organisation
+* **data layer**, hosting the knowledge graph data, distributed across the network
+* **service layer**, implementing various core & extended services, such as authentication, standard interfaces and data pipelines
+* **the consensus layer**, which
+
+
 
 ![](../.gitbook/assets/origintrail-technical-stack.png)
 

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Intro - start here](README.md)
+* [Start here](README.md)
 
 ## General Information <a id="general"></a>
 
@@ -8,10 +8,11 @@
 * [OriginTrail - Decentralized Knowledge Graph \(DKG\)](general/dkgintro.md)
 * [Trace Token \(TRAC\)](general/trac.md)
 * [Available networks \(testnets, mainnet\)](general/networks.md)
+* [Development principles](general/development-principles.md)
 
 ## Using the DKG <a id="developers"></a>
 
-* [Getting started](developers/devsintro.md)
+* [Getting started](developers/getting-started.md)
 * [Setting up development environment](developers/setting-up-development-environment.md)
 * [Publishing data to the DKG](developers/devsinstall.md)
 * [Querying data from the DKG](developers/querying.md)
@@ -28,28 +29,10 @@
 * [Setup instructions](running-node/node-setups/README.md)
   * [Mainnet Docker Installation](running-node/node-setups/docker.md)
   * [Testnet Installation](running-node/node-setups/testnet-installation.md)
-* [Price setup](running-node/node-price.md)
+* [Compensation parameters setup](running-node/node-price.md)
 * [Backup & restore](running-node/backup.md)
-
-## Tutorials
-
-* [How to set up your dev environment \(node, libs etc\)](tutorials/dev-env.md)
-* [Hello trail tutorial](tutorials/hello2.md)
-* [Create a trusted BI interface using DKG](tutorials/trusted-interface.md)
-* [Use DKG data in Ethereum Smart contracts for trusted computation](tutorials/smart-contracts.md)
-* [Create custom data validation interfaces](tutorials/custom-interfaces.md)
-* [Use DKG with smart contracts to create automated payments](tutorials/automated-payments.md)
-* [Connect your OT node with Oracle ERPs](tutorials/oracle-erp.md)
-* [Connect your OT node with SAP](tutorials/sap.md)
-* [Connect your OT node with MS Navision](tutorials/msnavision.md)
-* [Connect your OT node with MS Navision Connect your OT node with Salesforce](tutorials/salesforce.md)
 
 ## Useful Resources
 
 * [Standards](useful-resources/standards.md)
-* [Community resources](useful-resources/community-resources.md)
-
-## Community Solutions
-
-* [Automation Through Ansible](community-solutions/ansible.md)
 

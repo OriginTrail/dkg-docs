@@ -1,22 +1,57 @@
+---
+description: Why we need linked data and what do knowledge graphs do?
+---
+
 # Introduction to linked data & knowledge graphs
 
-### What is linked data?
+### The challenges of scattered data
 
-The Semantic Web is a collection of Data — of objects and identifiers that define the data including information of its specific details and properties and any other data one might think of. However to paint a complete picture of the knowledge about each object requires relationship between the data to be available through common identifiers, which forms the term Linked Data.
+Developers constantly struggle with **discovering, sharing** and **managing data** coming from different systems in different formats. This requires understanding, structuring, integrating and verifying the data each time new features or applications are built based on that data.
 
-There are multiple technologies \(RDF, OWL, SKOS, SPARQL, etc.\) which provide a Semantic Web environment where application can query that data, draw inferences using vocabularies, etc. The introduction of native Graph databases \(i.e. Neo4j\), allows efficient storage as data is stored exactly as whiteboarded.
+In Web2, **discoverability** is enabled by search engines, which return a list of web links based on the query you search for. **Sharing** and **managing** data is governed by centralised services and protocols which do not share common data structures and interfaces, making it complicated to access and use this data.
 
-  
-**TODO:** 
+As an example, let's consider a traditional relational \(SQL\) database data source like below
 
-* ~~_**Intro about linked data structures and strengths,**_~~ 
-* ~~_**refer to semantic web**_~~
-* ~~introduce graph databases, reference Neo4j and similar~~
-* _extend with a simple example._ 
+| id | user | address | GLN |
+| :--- | :--- | :--- | :--- |
+| 987 | ACME company | Awesome st 2044, NY | 123456789 |
+
+Another system might keep some more data on this in another format, such as a CSV
+
+```text
+company_name;company_address;email
+ACME company; Awesome st 2044, NY; office@acme.com
+```
+
+As humans, we can quickly understand that this data is related to the same **thing** \(ACME company\), however it's not so obvious for software, as it doesn't have enough context. To use the example data above in apps one needs to resolve the challenges of having different data structures, schemas, means of access -  requiring many operations to understand, integrate and validate the datasets. For example, how would you query for the email address of ACME company? This is where the Semantic web helps. 
+
+### What is linked data and the Semantic Web? 
+
+> _"The Semantic Web isn't just about putting data on the web. It is about making links, so that a person or machine can explore the web of data. With linked data, when you have some of it, you can find other, related, data." - Tim Berners-Lee, the father of the World Wide Web and Semantic Web_
+
+The core idea behind linked data is to actually represent all **things** with **relationships** between them in a common graph. Linked data is built on primitives called "**triples",** which connect a **subject entity**, with an **object entity** via a **relationship**.
+
+![Example of a triple, with subject being Acme company and object being the address value](../.gitbook/assets/mind-map-copy-of-page-13.png)
+
+
+
+Triples are great because they can be used to create more complex data structures - graphs. Roughly speaking, connecting two triples gives us this.
+
+![](../.gitbook/assets/lde2.png)
+
+Integrating the two above mentioned example datasets according to the principles of Semantic web will therefore render a graph structure like this.
+
+![](../.gitbook/assets/lde1.png)
+
+
+
+Having such a "semantic network" of data, we inherently add context and enable easy extensions. The semantic data can be easily queried in many ways and enables growing a body of _knowledge_ around things, rather than keeping "tables of strings". 
+
+In the coming sections we will show you how to use the OriginTrail Decentralized Knowledge Graph for data discovery and querying, however let's first explain what a knowledge graph is.
 
 ### What is a knowledge graph?
 
-A common definition of a **knowledge graph \(KG\)** is a network of entities — physical & digital objects, events or concepts — illustrating the relationship between them \(aka a semantic network\). KGs are used by major companies such as [Amazon](http://lunadong.com/talks/PG.pdf), [Google](https://en.wikipedia.org/wiki/Google_Knowledge_Graph), [Uber](https://www.youtube.com/watch?v=r3yMSl5NB_Q), [IBM](https://www.ibm.com/cloud/learn/knowledge-graph) etc. for various applications: search, data integration, knowledge reasoning, recommendation engines, analytics, machine learning and AI etc.
+There are many definitions of knowledge graphs \(KGs\), all slightly different. Without emphasising on precision,  all of them point to a knowledge graph as a network of entities — physical & digital objects, events or concepts — illustrating the relationship between them \(aka a semantic network\). KGs are used by major companies such as [Amazon](http://lunadong.com/talks/PG.pdf), [Google](https://en.wikipedia.org/wiki/Google_Knowledge_Graph), [Uber](https://www.youtube.com/watch?v=r3yMSl5NB_Q), [IBM](https://www.ibm.com/cloud/learn/knowledge-graph) etc. for various applications: search, data integration, knowledge reasoning, recommendation engines, analytics, machine learning and AI etc. 
 
 Key characteristics of knowledge graphs:
 
@@ -24,5 +59,7 @@ Key characteristics of knowledge graphs:
 * designed to ingest data from multiple sources, usually in different formats
 * flexible data model, easily extendable
 
-Common knowledge graphs however are deployed within the domain of one organization and are designed to capture knowledge from various sources both from within and outside of the organization.
+We restrict this document only to a high level introduction and encourage the reader to research resources on the semantic web and knowledge graphs available online.
+
+**The important thing to note is that common knowledge graphs are deployed within the domain of one organisation and are designed to capture knowledge from various sources both from within and outside of the organisation.** These centralised knowledge graphs generate huge value for their owners, yet a decentralised globally shared knowledge graph brings orders of magnitude higher value to everyone participating. We present the OriginTrail Decentralized Knowledge Graph as the first permissionless, global open decentralized knowledge graph - read on.
 
