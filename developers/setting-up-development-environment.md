@@ -1,15 +1,11 @@
 # Setting up development environment
 
-## Local Network Setup Tool
+## Setting up a local DKG network on your machine
 
-**Run a single command to create an entire testing environment for ot-node development.**
+You can setup an entire DKG network locally on your machine using the local network setup tool. The Local Network Setup tool \(LNS\) will start a local blockchain \(ganache\), deploy the required smart contracts, set up the configuration files for the nodes and start the nodes in separate windows. From there you're ready to send API calls to your local nodes and test new features on the ot-node without worrying about funds, servers or network connectivity issues.
 
-The Local Network Setup tool will start a local blockchain, deploy the required smart contracts, set up the configuration files for the nodes and start the nodes in separate windows. From there you're ready to send API calls to your local nodes and test new features on the ot-node without worrying about funds, servers or network connectivity issues.
+You can find the [LNS Github repo here ](https://github.com/OriginTrail/ot-node/tree/develop/tools/local-network-setup)\(with the same instructions as on this page\).  
 
-You can find the github entry for the tool here:   
-[https://github.com/OriginTrail/ot-node/tree/develop/tools/local-network-setup](https://github.com/OriginTrail/ot-node/tree/develop/tools/local-network-setup)
-
-**Note: This tool is an internal tool used by the OriginTrail team and thus is developed for our workflow, meaning that it currently only supports MacOS**, but we encourage you to adapt it for your workflow as well.
 
 ## Quick Start
 
@@ -32,7 +28,7 @@ npm run tools:lns:start
 
 ### Specifying the number of nodes
 
-The LNS tool deploys 4 nodes, each connected to three blockchain implementations which are running on a local ganache process. You can specify to run anywhere between one and ten nodes with the `--nodes` parameter.
+The LNS tool deploys 4 nodes by default, each connected to three blockchain implementations which are running on a local ganache process. You can specify to run anywhere between one and ten nodes with the `--nodes` parameter.
 
 ```bash
 npm run tools:lns:start -- --nodes=10
@@ -68,4 +64,12 @@ If you want to edit a single node's configuration, you can do it in two ways:
     "commandExecutorVerboseLoggingEnabled": true
    }
    ```
+
+  
+
+3.  Once your local network is set up, you can go ahead and access your nodes API at:
+   * DC node: http://0.0.0.0:8900
+   * DH1 node: http://0.0.0.0:8901, DH2 node at http://0.0.0.0:8902 etc
+
+
 
