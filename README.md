@@ -22,7 +22,7 @@ This documentation is structured in 4 sections:
 _Note: This site is primarily built for **developers** and **OriginTrail network node runners** - if you are looking to learn more about OriginTrail ecosystem, please visit_ [_the official website_](https://origintrail.io)_._
 
 {% hint style="info" %}
-This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. We appreciate any feedback, improvement ideas and comments. To provide updates, please submit them as pull requests and use issues for feedback on the [docs Github repo.](https://github.com/OriginTrail/dkg-docs)_\*\*\*\*_
+This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. We appreciate any feedback, improvement ideas and comments. To provide updates, please submit them as pull requests on the [docs Github repo.](https://github.com/OriginTrail/dkg-docs) For feedback and discussions please use Github issues.
 {% endhint %}
 
 ### Useful Links
