@@ -1,4 +1,4 @@
-# Setting up development environment
+# Setting up your development environment
 
 ## Setting up a local DKG network on your machine
 

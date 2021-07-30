@@ -13,15 +13,12 @@
 ## Using the DKG <a id="developers"></a>
 
 * [Getting started](developers/getting-started.md)
-* [Setting up development environment](developers/setting-up-development-environment.md)
+* [Setting up your development environment](developers/setting-up-development-environment.md)
 * [Publishing data to the DKG](developers/devsinstall.md)
 * [Querying data from the DKG](developers/querying.md)
 * [Data verification](developers/data-verification.md)
 * [Integrations](developers/integrations.md)
-* [Developer Reference](developers/references/README.md)
-  * [Useful data such as smart contract addresses, gateway URLs etc](developers/references/usefuldata.md)
-  * [Links to relevant resources such as github etc](developers/references/links.md)
-  * [API reference](developers/references/api.md)
+* [Developer Reference](developers/references.md)
 * [Contribute](developers/contribute.md)
 
 ## Running a node <a id="running-node"></a>
