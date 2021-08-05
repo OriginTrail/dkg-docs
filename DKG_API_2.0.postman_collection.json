@@ -1,0 +1,1271 @@
+{
+	"info": {
+		"_postman_id": "3603e568-c9b2-4888-adbc-0c9090e1ecc9",
+		"name": "DKG API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Info",
+			"item": [
+				{
+					"name": "DKG Node Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/info",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  dataset info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/get_dataset_info/0xcd6a43c9dc068fc1a8c91486e5a2d5a3ed8e19c9deb85975e9bedf2e4e79dffa",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"get_dataset_info",
+								"0xcd6a43c9dc068fc1a8c91486e5a2d5a3ed8e19c9deb85975e9bedf2e4e79dffa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Import",
+			"item": [
+				{
+					"name": "DKG Import request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/miloskotlar/ot-node/importers/use_cases/trail/milk.xml"
+								},
+								{
+									"key": "standard_id",
+									"value": "GS1-EPCIS",
+									"description": "GS1-EPCIS | WOT | GRAPH",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/import",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Import status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/import/result/bf58c043-b95a-416a-b7c6-e744e56623c7",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"import",
+								"result",
+								"bf58c043-b95a-416a-b7c6-e744e56623c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Publish (replicate)",
+			"item": [
+				{
+					"name": "DKG  Replication request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dataset_id\": \"0x850453081cef772efa993552d74467f00ef9e9c8736dde9e40a9f4e76fc8f0ca\",\n    \"blockchain_id\": \"xdai:testnet\"\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/replicate",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"replicate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Replication status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/replicate/result/8d35beac-73ab-431e-a6bb-37fda577a303",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"replicate",
+								"result",
+								"8d35beac-73ab-431e-a6bb-37fda577a303"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Export",
+			"item": [
+				{
+					"name": "DKG  Export request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "dataset_id",
+									"value": "0xea05797aa2de1f1e09fea368e5538664383a879186e22bfde6f39396b7599b1c",
+									"type": "text"
+								},
+								{
+									"key": "standard_id",
+									"value": "GRAPH",
+									"description": "GS1-EPCIS | WOT | GRAPH",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/export",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"export"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Export status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/export/result/b1a400ca-8377-4c50-b7ad-ba63745ad616",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"export",
+								"result",
+								"b1a400ca-8377-4c50-b7ad-ba63745ad616"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Network Query",
+			"item": [
+				{
+					"name": "DKG  Network query request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"query\" : [{\n\t\"path\": \"id\",\n\t\"value\": \"urn:ot:object:actor:id:Company_Green\",\n\t\"opcode\": \"EQ\"\n}]}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/network/query",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Network query response",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/network/query/responses/77d3fd81-c586-4c1d-8375-af1a028f89b3",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"query",
+								"responses",
+								"77d3fd81-c586-4c1d-8375-af1a028f89b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Network read export request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "reply_id",
+									"value": "51cceff0-82fd-43c6-98a2-4cd64ca45ff9",
+									"type": "text"
+								},
+								{
+									"key": "data_set_id",
+									"value": "0x14fa53714b8b0bca2e0048f5ab715f32edadb2279708d54dd176f5a21820b668",
+									"type": "text"
+								},
+								{
+									"key": "standard_id",
+									"value": "GRAPH",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/network/read_export",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"read_export"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Network read export status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/network/read_export/result/bf58c043-b95a-416a-b7c6-e744e56623c7",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"read_export",
+								"result",
+								"bf58c043-b95a-416a-b7c6-e744e56623c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Network whitelist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ot_object_id",
+									"value": "urn:ot:object:actor:id:company-red",
+									"type": "text"
+								},
+								{
+									"key": "dataset_id",
+									"value": "0xe22112d81da1caa53aa06f13fe715775430579423a50e4fd7c20995c771ca7fd",
+									"type": "text"
+								},
+								{
+									"key": "viewer_erc_id",
+									"value": "0x193a22749001fA75497fb8fcCE11235947a19b3d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/permissioned_data/whitelist_viewer",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"permissioned_data",
+								"whitelist_viewer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Local query request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"query\" : [{\n\t\"path\": \"id\",\n\t\"value\": [\"a273G0000004lEM\"]\n}]}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/query/local",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"query",
+								"local"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trail",
+			"item": [
+				{
+					"name": "DKG  Trail Lookup 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identifier_types\": [\"serial\"],\n\t\"identifier_values\": [\"311220\"],\n\t\"opcode\": \"EQ\"\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/trail/lookup",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"trail",
+								"lookup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Trail Lookup 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identifier_types\": [\"serial\", \"companyPrefix\"],\n\t\"identifier_values\": [\"311220\", \"00100\"],\n\t\"opcode\": \"EQ\"\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/trail/lookup",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"trail",
+								"lookup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Trail Find",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"unique_identifiers\": \"0xc394927aa40afdf72d786b6511477a794d499eb5f9bf9a3c0d05e61276de8ca4\",\n\t\"depth\": 50,\n\t\"included_connection_types\": [\"EPC\", \"PARENT_EPC\", \"CHILD_EPC\", \"INPUT_EPC\", \"OUTPUT_EPC\" ],\n\t\"excluded_connection_types\": [\"PART_OF\" ]\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/trail/find",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"trail",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Trail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identifier_types\": [\"sgtin\"],\n\t\"identifier_values\": [\"urn:epc:idpat:sgtin:100678\"],\n    \"connection_types\": [\n      \"EPC\",\n      \"PARENT_EPC\",\n      \"CHILD_EPC\",\n      \"INPUT_EPC\",\n      \"OUTPUT_EPC\",\n      \"CONNECTOR_FOR\",\n      \"CONNECTION_DOWNSTREAM\",\n      \"OBSERVES\",\n      \"PART OF\",\n      \"OBSERVATION_READ_POINT\"\n    ],\n    \"opcode\": \"EQ\",\n\t\"depth\": 50\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/trail",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"trail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Trail Find Result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/trail/find/result/92172441-30a9-419c-9441-3fe58ae8044a",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"trail",
+								"find",
+								"result",
+								"92172441-30a9-419c-9441-3fe58ae8044a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DKG  Trail Merkle Proofs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataset_id\": \"0x129974cbed4bd56a36518c1d6820767df7cc2b288e1534c98c9a4a300db6ae3a\",\n\t\"object_ids\": [\"did:ethr:development:0x2f2697b2a7BB4555687EF76f8fb4C3DFB3028E57#https://tracelabs.io/#1611227177874\"]\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/get_merkle_proofs",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"get_merkle_proofs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staging Data",
+			"item": [
+				{
+					"name": "Staging data get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/staging_data/get",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"staging_data",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Staging data create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n  \"@id\":\"urn:ot:object:actor:id:test\",\n  \"@type\":\"otObject\",\n  \"identifiers\":[\n    {\n      \"@type\":\"id\",\n      \"@value\":\"urn:ot:object:actor:id:test\"\n    }\n  ],\n  \"properties\":{\n    \"permissioned_data\": {\n      \"data\": {\n        \"key1\": \"value1\",\n        \"key2\": \"value2\"\n      }\n    }\n  },\n  \"relations\":[\n\n  ]\n}\n]"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/staging_data/create",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"staging_data",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Staging data remove",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"urn:ot:object:actor:id:test\"\n]"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/staging_data/remove",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"staging_data",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Staging data publish",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"urn:ot:object:actor:id:test\"\n]"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/staging_data/publish",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"staging_data",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DID",
+			"item": [
+				{
+					"name": "Resolve",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"didUrl\": \"did:ethr:development:0x2f2697b2a7BB4555687EF76f8fb4C3DFB3028E57\"\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/did/resolve",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"did",
+								"resolve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"didUrl\": \"did:ethr:development:0x2f2697b2a7BB4555687EF76f8fb4C3DFB3028E57\",\n    \"message\": \"DSAR message\",\n    \"signature\": \"0xfa64ca3e0f11f11b1ecc3a72ba8cf1fae6d8e7f09f9e6377db66b29bef97c8ed6022875d7af912c9ed79d32e2b7670b5a7a7f84295c63eca22de58f390f1cc441c\"\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:8900/api/latest/did/authenticate",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "8900",
+							"path": [
+								"api",
+								"latest",
+								"did",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Marketplace",
+			"item": [
+				{
+					"name": "Permissioned data available",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/permissioned_data/available",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"permissioned_data",
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data owned",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/permissioned_data/owned",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"permissioned_data",
+								"owned"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data update price",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data_set_id\": \"0xe5e778be587707d749dfc8db20dd9bfedeff5785d6487b6f177978677c8e9969\",\n  \"ot_object_ids\": [\n    {\n      \"id\": \"urn:ot:object:actor:id:company-red\",\n      \"price_in_trac\": \"250\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/permissioned_data/update_price",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"permissioned_data",
+								"update_price"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "file",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data get price",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data_set_id\": \"0xf58c541431865c0a91ccf033c0ba31652338dd9b358de40b610d19c4f27e93e2\",\n  \"seller_node_id\": \"2b8207c1f2c7f9f212f39a3b7513a117c78f36ae\",\n   \"ot_object_id\": \"ldm_265\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/network/permissioned_data/get_price",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"permissioned_data",
+								"get_price"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "file",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data get price result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/network/permissioned_data/get_price/result/2ea565af-5391-4285-9fbf-630a14665dd9",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"permissioned_data",
+								"get_price",
+								"result",
+								"2ea565af-5391-4285-9fbf-630a14665dd9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data purchase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data_set_id\": \"0xf58c541431865c0a91ccf033c0ba31652338dd9b358de40b610d19c4f27e93e2\",\n  \"seller_node_id\": \"2b8207c1f2c7f9f212f39a3b7513a117c78f36ae\",\n   \"ot_object_id\": \"ldm_265\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/network/permissioned_data/purchase",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"permissioned_data",
+								"purchase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data purchase result",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/network/permissioned_data/purchase/result/e84bba2d-f7ea-4cdb-abf2-f652b46fd716",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"permissioned_data",
+								"purchase",
+								"result",
+								"e84bba2d-f7ea-4cdb-abf2-f652b46fd716"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data read",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data_set_id\": \"0x1e8c29e989e4e012a630ef8ceb4ad10185b6f538f69caa21cbbcf4fdf6dd76ca\",\n  \"seller_node_id\": \"0x2fa6d32e314aab43a58999d6f5532a15418da153\",\n   \"ot_object_id\": \"urn:ot:object:actor:id:Company_Green\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/network/permissioned_data/read",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"permissioned_data",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data read result",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/network/permissioned_data/read/result/cd8692bf-ea2a-4d49-9ad4-295c668c1c75",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"network",
+								"permissioned_data",
+								"read",
+								"result",
+								"cd8692bf-ea2a-4d49-9ad4-295c668c1c75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissioned data trading info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/permissioned_data/trading_info/ALL",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"permissioned_data",
+								"trading_info",
+								"ALL"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove permissioned data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataset_id\": \"0x699fbd797b310caef5bfef1381508490d12759d4fac1c5102e101198625e4155\",\n    \"identifier_value\": \"urn:ot:object:actor:id:release_test\",\n    \"identifier_type\": \"id\"\n}"
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{NODE_IP}}:{{PORT}}/api/latest/permissioned_data/remove",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{NODE_IP}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"latest",
+								"permissioned_data",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
