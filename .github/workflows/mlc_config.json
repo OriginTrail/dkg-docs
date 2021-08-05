@@ -1,0 +1,13 @@
+{
+    "ignorePatterns": [
+        {
+            "pattern": "^https://etherscan.io/address"
+        },
+        {
+            "pattern": "^http://0.0.0.0"
+        },
+        {
+            "pattern": "^mailto:"
+        }
+    ]
+}
