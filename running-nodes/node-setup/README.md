@@ -15,9 +15,9 @@ The recommended minimum specifications are:
 
 NOTE: For best performance on running a node we recommend usage of services like [Digital Ocean.](https://www.digitalocean.com/)
 
-Currently there are two blockchains available to setup node on. One VPS server can host node on each blockchain
+Currently there are two blockchains available to setup node on. One VPS server can host node on each blockchain.
 
-Ethereum and/or xDai wallet \(You can see wallet setup instructions here Identity Configuration\)
+You need the following tokens to setup a node:
 
 * for a testnet node:
 
@@ -26,6 +26,6 @@ Ethereum and/or xDai wallet \(You can see wallet setup instructions here Identit
 
 * for a mainnet node:
 
-  > * For Ethereum: at least 3000 TRAC tokens and at least 0.1 Ether
-  > * For xDai: at least 3000 xTRAC tokens and at least 0.01 xDai
+  > * For Ethereum: at least 3500+ TRAC tokens and at least 0.1 Ether
+  > * For xDai: at least 3500+ xTRAC tokens and at least 0.01 xDai
 
