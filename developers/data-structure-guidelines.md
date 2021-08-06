@@ -50,7 +50,7 @@ Once the corresponding data creator creates an event containing the same connect
 
 #### Permissioned data in EPCIS files
 
-In cases when disclosing the full data publicly is not applicable to the implementation, it is possible to add a `visibility` property to an attribute of a `VocabularyElement` in the `EPCISMasterData` section. The data marked as permissioned will be visible only to the data creator and the parties the data creator marks as whitelisted via the API. More information on permissioned data is available at [Vertex Data permissioning](https://docs.origintrail.io/en/latest/ODN-Functionalities/permissioned-data.html#permissioned-data)
+In cases when disclosing the full data publicly is not applicable to the implementation, it is possible to add a `visibility` property to an attribute of a `VocabularyElement` in the `EPCISMasterData` section. The data marked as permissioned will be visible only to the data creator and the parties the data creator marks as whitelisted via the API. More information on permissioned data is available at [Vertex Data permissioning](https://app.gitbook.com/@origintrail/s/origintrail/developers/devsinstall#how-about-permissioned-data)
 
 There are two visibility options available:
 
