@@ -31,17 +31,17 @@ As humans, we can quickly understand that this data is related to the same **thi
 
 The core idea behind linked data is to actually represent all **things** with **relationships** between them in a common graph. Linked data is built on primitives called "**triples",** which connect a **subject entity**, with an **object entity** via a **relationship**.
 
-![Example of a triple, with subject being Acme company and object being the address value](../.gitbook/assets/mind-map-copy-of-page-13.png)
+![Example of a triple, with subject being Acme company and object being the address value](../.gitbook/assets/01.jpg)
 
 
 
 Triples are great because they can be used to create more complex data structures - graphs. Roughly speaking, connecting two triples gives us this.
 
-![](../.gitbook/assets/lde2.png)
+![](../.gitbook/assets/2.jpg)
 
 Integrating the two above mentioned example datasets according to the principles of Semantic web will therefore render a graph structure like this.
 
-![](../.gitbook/assets/lde1.png)
+![](../.gitbook/assets/3.jpg)
 
 
 

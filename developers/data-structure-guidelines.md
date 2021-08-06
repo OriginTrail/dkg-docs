@@ -115,7 +115,7 @@ An OT-JSON document represents a dataset as a graph of interconnected dataset ob
 >
 > **Example:** Assuming that use case request is to connect products with factories there they are produced. Entities of the use case are Product and Producer. These entities are represented as **objects** in OT-JSON format. Product can have **relation** PRODUCED\_BY with producer that produces it and the producer can have **relation** HAS\_PRODUCED with the product. Product and producer have unique identifiers Product1, Producer1 respectively.
 
-![../\_images/datalayer4.png](https://docs.origintrail.io/en/latest/_images/datalayer4.png)
+![../\_images/datalayer4.png](../.gitbook/assets/4.jpg)
 
 _Figure 2._ Diagram of the example entities and relations
 
