@@ -77,7 +77,7 @@ docker logs otnode -f
 
 ### Additional options
 
-If you’ve backed up your files in a different place or are using a custom directory for your data on the node, you can edit those in the restore script.Run the following command to see all the options for the restore command:
+If you’ve backed up your files in a different place or are using a custom directory for your data on the node, you can edit those in the restore script. Run the following command to see all the options for the restore command:
 
 ```text
 ./restore.sh --help
