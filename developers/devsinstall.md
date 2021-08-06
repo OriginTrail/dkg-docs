@@ -12,7 +12,7 @@ In contrast to that, OriginTrail is a permissionless system, so **anybody can ad
 
 * each graph element has an associated, verifiable publisher identity \(DID\)
 * each published dataset has a corresponding set of cryptographic proofs on a blockchain \(multiple are supported\), using which every graph element can be verified for integrity \(provenance from a particular dataset and immutability\)
-* each dataset has a specified data lifespan \(and might be pruned on the network after its expiry\)
+* each dataset has a specified data lifespan \(and might be pruned on the network after it's expiry\)
 * semantic data can be queried based on IRIs \(more in [Querying](querying.md) section\)
 
 Another key differentiator of the DKG is that it is comprised of two "levels"
@@ -182,7 +182,7 @@ body{
 In the same pattern, as this operation can last for some time on the network, we can query the current status by calling the replicate route with the corresponding handler\_id returned by the _replicate_ API response:
 
 ```javascript
-GET http://NODE_IP:PORT/api/latest/replicate/{handler_id}
+GET http://NODE_IP:PORT/api/latest/replicate/result/{handler_id}
 ```
 
 Note that importing and replication can be done separately and at different times.

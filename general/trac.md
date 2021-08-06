@@ -2,7 +2,7 @@
 
 ## Token Utility
 
-In order to facilitate the upload and storage of data on ODN in a trustless and immutable way, we have introduced the Trace token \(TRAC\), which is a utility token that drives the entire ODN. The Trace token and the relevant smart contracts utilized ensure the data creators can facilitate agreement with the data holders in a secure way and guarantee fair behavior from all involved parties.
+The Trace token \(TRAC\) is used for DKG operation and incentivising protocol behavior. It is needed to perform the operations such as publishing on the network, and is a utility token that drives the entire ODN. The Trace token and the relevant smart contracts utilized ensure the data creators can facilitate agreement with the data holders in a secure way and guarantee fair behavior from all involved parties.
 
 TRAC is utilized on the OriginTrail Decentralized Network \(ODN\) in multiple ways, including:
 

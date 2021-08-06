@@ -8,7 +8,23 @@ The DKG querying entails both data discovery and graph querying. Therefore Origi
 
 Querying the DKG is done using the network query API. It is used to look up all datasets containing a specific identifier \(such as a supply chain identifier, like a GS1 barcode or RFID value\).
 
-The query request is an array of values that identify a particular object in a dataset. These identifiers are sent as an array of objects, where the `path` parameter is the type of identifier \(such as ean13, sgtin, sgln, or id for general identifier\), `value` is the identifier value or an array of possible values, and `opcode` is either EQ or IN, depending on whether the queried object identifier needs to equal or belong to the given value parameter
+The query request is an array values that identify a particular object in a dataset. These identifiers are sent as an array of objects, where the `path` parameter is the type of identifier \(such as ean13, sgtin, sgln, or id for general identifier\), `value` is the identifier value or an array of possible values, and `opcode` is either EQ or IN, depending on whether the queried object identifier needs to equal or belong to the given value parameter.
+
+**Using DKG client**
+
+```javascript
+// sending network query
+dkg.networkQuery([{
+    path: 'sgtin',
+    value: 'urn:epc:id:sgtin:111111111',
+    opcode: 'EQ'
+}]
+).then((result)=>{
+// result returned will contain network query responses
+}
+```
+
+**Using the API**
 
 ```text
 POST http://NODE_IP:PORT/api/latest/network/query
@@ -24,15 +40,33 @@ POST http://NODE_IP:PORT/api/latest/network/query
 }
 ```
 
-The returned responses contain an array of datasets which contain objects whose identifiers fit the given query. This response can then be used to import a desired dataset on one’s node, which will enable querying the graph locally or exporting and viewing the dataset.
+The returned responses contain query\_id which can be used to fetch responses from network query.
 
-The view responses call the query response API
+To view responses call the query response API, as a parameter use query\_id returned from network query API call.
 
 ```javascript
-GET http://NODE_IP:PORT/api/latest/network/query/responses/response_id
+GET http://NODE_IP:PORT/api/latest/network/query/responses/{query_id}
 ```
 
-To fetch a dataset included in the response run
+The returned responses contain an array of datasets which contain objects whose identifiers fit the given query. This response can then be used to import a desired dataset on one’s node, which will enable querying the graph locally or exporting and viewing the dataset.
+
+To fetch a dataset included in the response run.
+
+**Using DKG client**
+
+```javascript
+// fetch, save and export dataset from the network
+dkg.remoteFetch([{
+    reply_id: '51cceff0-82fd-43c6-98a2-4cd64ca45ff9',
+    data_set_id: '0x14fa53714b8b0bca2e0048f5ab715f32edadb2279708d54dd176f5a21820b668',
+    options: { standard_id: 'GRAPH' }
+}]
+).then((result)=>{
+// result returned will contain fetched dataset
+}
+```
+
+**Using the API**
 
 ```javascript
 POST http://NODE_IP:PORT/api/latest/network/read_export
@@ -45,7 +79,7 @@ body {
 }
 ```
 
-
+The returned responses contain handler\_id which can be used to download fetched dataset using export\_result route \(explained in this document\).
 
 ### Local Knowledge Graph querying - Trail
 
@@ -55,21 +89,35 @@ Querying the local knowledge graph performs a graph traversal starting from a pa
 
 The result of the trail represents all objects found on the trail \(the historical provenance trail spanning all datasets\), along with an array that indicates which datasets those objects belong to.
 
+**Using DKG client**
+
+```javascript
+// get trail
+dkg.trail({
+        identifier_types: ['ean13'],
+        identifier_values: ['123456'],
+        connection_types: ['EPC'],
+        opcode: 'EQ',
+        depth: 5,
+        extended: false
+}).then((result)=>{
+   // retuned result contains trail
+}
+```
+
+**Using the API**
+
 ```text
 POST http://NODE_IP:PORT/api/latest/trail
 
 body {
    raw {
-    "identifier_types": [
-      "ean13"
-    ],
-    "identifier_values": [
-      "123456"
-    ],
+    "identifier_types": ["ean13"],
+    "identifier_values": ["123456"],
+    "connection_types": ["EPC"],
+    "opcode": "EQ",
     "depth": 5,
-    "connection_types": [
-      "EPC"
-    ]
+    "extended": false
   }
 }
 ```
@@ -106,18 +154,18 @@ Check the [developer reference](references.md) for API details
 
 ### Exporting whole datasets
 
-Datasets can be exported via the export API \(both in the DKG client and node API\).
+Datasets can be exported via the export API.
 
-Using DKG client:
+**Using DKG client:**
 
 ```javascript
 // exporting a dataset
 dkg.export(dataset_id).then((export_result)=>{
-    console.log(export_result);
+    // result returned will contain requested dataset
 });
 ```
 
-Using the API
+**Using the API**
 
 ```javascript
 POST http://NODE_IP:PORT/api/latest/export
@@ -126,6 +174,12 @@ body{
   "dataset_id": "0x317a39f0c0bc7f24e4a27c53fca8d180156f0704351b4fd6454e981e1eb1b0a5",
  }
 }
+```
+
+The returned responses contain handler\_id which can be used to download exported dataset using export\_result route.
+
+```javascript
+GET http://NODE_IP:PORT/api/latest/export/result/{handler_id}
 ```
 
 ### Complex queries

@@ -7,7 +7,7 @@ OriginTrail software is completely source code and open for contributions by any
 If you’re new to OT node development, there are guides in this documentation for getting your dev environment set up. If you’re not sure where to start, get in touch with the devs in the discord channel. Please follow the below procedure to contribute new code or fixes:
 
 * Create a separate branch, by branching of the relevant branch \(we generally follow [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)\)
-* Create a pull request containing a description of what your code does and how it can be tested
+* Create a pull request to develop branch containing a description of what your code does and how it can be tested
 * Provide at least a minimum of unit tests
 * Please include descriptive commit messages
 

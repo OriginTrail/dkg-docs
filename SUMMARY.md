@@ -7,6 +7,7 @@
 * [Introduction to linked data & knowledge graphs](general/kg.md)
 * [OriginTrail - Decentralized Knowledge Graph \(DKG\)](general/dkgintro.md)
 * [Trace Token \(TRAC\)](general/trac.md)
+* [OriginTrail RFCs](general/origintrail-rfcs.md)
 * [Available networks \(testnets, mainnet\)](general/networks.md)
 * [Development principles](general/development-principles.md)
 

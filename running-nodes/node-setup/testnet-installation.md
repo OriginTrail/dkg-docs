@@ -78,7 +78,7 @@ Paste the below in the text editing tool and update the red letters accordingly 
      "implementations": [
        {
          "blockchain_title": "xDai",
-         "network_id": "xdai:mainnet",
+         "network_id": "xdai:testnet",
          "identity_filepath": "xdai_erc725_identity.json",
          "dh_price_factor" : "1",
          "node_wallet": "xxxxxxxx",
@@ -106,7 +106,7 @@ If you are going to run nodes on Ethereum as well, use the following configurati
      "implementations": [
        {
          "blockchain_title": "Ethereum",
-         "network_id": "ethr:mainnet",
+         "network_id": "ethr:rinkeby:1",
          "identity_filepath": "erc725_identity.json",
          "dh_price_factor" : "1",
          "node_wallet": "xxxxxxxx",
@@ -116,7 +116,7 @@ If you are going to run nodes on Ethereum as well, use the following configurati
        },
        {
          "blockchain_title": "xDai",
-         "network_id": "xdai:mainnet",
+         "network_id": "xdai:testnet",
          "identity_filepath": "xdai_erc725_identity.json",
          "dh_price_factor" : "1",
          "node_wallet": "xxxxxxxx",
