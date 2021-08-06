@@ -6,7 +6,7 @@ description: How to setup a local and shared development environment
 
 ## Setting up a local DKG network on your machine
 
-You can setup an entire DKG network locally on your machine using the local network setup tool. The Local Network Setup tool \(LNS\) will start a local blockchain \(ganache\), deploy the required smart contracts, set up the configuration files for the nodes and start the nodes in separate windows. From there you're ready to send API calls to your local nodes and test new features on the ot-node without worrying about funds, servers or network connectivity issues.
+You can set up an entire DKG network locally on your machine using the local network setup tool. The Local Network Setup tool \(LNS\) will start a local blockchain \(ganache\), deploy the required smart contracts, set up the configuration files for the nodes and start the nodes in separate windows. From there you're ready to send API calls to your local nodes and test new features on the ot-node without worrying about funds, servers or network connectivity issues.
 
 You can find the [LNS Github repo here ](https://github.com/OriginTrail/ot-node/tree/develop/tools/local-network-setup)\(with the same instructions as on this page\).  
 
@@ -71,7 +71,7 @@ If you want to edit a single node's configuration, you can do it in two ways:
 
   
 
-3.  Once your local network is set up, you can go ahead and access your nodes API at:
+3.  Once your local network is set up, you can go ahead and access your nodes' API at:
    * DC node: http://0.0.0.0:8900
    * DH1 node: http://0.0.0.0:8901, DH2 node at http://0.0.0.0:8902 etc
 

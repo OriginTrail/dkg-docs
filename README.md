@@ -1,12 +1,12 @@
 ---
-description: Learn about the worlds first decentralized knowledge graph
+description: Learn about the world's first decentralized knowledge graph
 ---
 
 # Welcome to OriginTrail Documentation Hub
 
 ## Welcome to the OriginTrail official docs
 
-OriginTrail technology is a set of tools and protocols evolving as the [semantic](https://www.w3.org/standards/semanticweb/) layer for Web3, built on the OriginTrail **Decentralized Knowledge Graph \(DKG\).** It's function is to empower developers and system integrators utilizing decentralized knowledge exchange supported by emerging standards and DLT networks.
+OriginTrail technology is a set of tools and protocols evolving as the [semantic](https://www.w3.org/standards/semanticweb/) layer for Web3, built on the OriginTrail **Decentralized Knowledge Graph \(DKG\).** Its function is to empower developers and system integrators utilizing decentralized knowledge exchange supported by emerging standards and DLT networks.
 
 The DKG enables you to:
 
@@ -23,7 +23,7 @@ This documentation is structured in 4 sections:
 * **For node operators:** how to host the OriginTrail Decentralized Knowledge Graph by running nodes
 * Generally useful resources section
 
-_Note: This site is primarily built for **developers** and **OriginTrail network node runners** - if you are looking to learn more about OriginTrail ecosystem, please visit_ [_the official website_](https://origintrail.io)_._
+_Note: This site is primarily built for **developers** and **OriginTrail network node runners** - if you are looking to learn more about the OriginTrail ecosystem, please visit_ [_the official website_](https://origintrail.io)_._
 
 {% hint style="info" %}
 This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. We appreciate any feedback, improvement ideas and comments. To provide updates, please submit them as pull requests on the [docs Github repo.](https://github.com/OriginTrail/dkg-docs) For feedback and discussions please use Github issues.

@@ -8,7 +8,7 @@ The DKG querying entails both data discovery and graph querying. Therefore Origi
 
 Querying the DKG is done using the network query API. It is used to look up all datasets containing a specific identifier \(such as a supply chain identifier, like a GS1 barcode or RFID value\).
 
-The query request is an array values that identify a particular object in a dataset. These identifiers are sent as an array of objects, where the `path` parameter is the type of identifier \(such as ean13, sgtin, sgln, or id for general identifier\), `value` is the identifier value or an array of possible values, and `opcode` is either EQ or IN, depending on whether the queried object identifier needs to equal or belong to the given value parameter
+The query request is an array of values that identify a particular object in a dataset. These identifiers are sent as an array of objects, where the `path` parameter is the type of identifier \(such as ean13, sgtin, sgln, or id for general identifier\), `value` is the identifier value or an array of possible values, and `opcode` is either EQ or IN, depending on whether the queried object identifier needs to equal or belong to the given value parameter
 
 ```text
 POST http://NODE_IP:PORT/api/latest/network/query
@@ -84,13 +84,13 @@ The `depth` parameter determines how far from the starting vertex will the trave
 
 ![../\_images/connection-example1.png](../.gitbook/assets/5.jpg)
 
-**Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1` and not `rel_type_2`, a traversal starting from vertex **B** would return vertex **A** and would not return vertex **C**
+**Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1` and not `rel_type_2`, a traversal starting from vertex **B** would return vertex **A** and would not return vertex **C.**
 
 In order to avoid backtracking in the trail and attaching superfluous information, a vertex will not be visited if the relation types on the path to that vertex are the same two times in a row.
 
 ![../\_images/connection-example2.png](../.gitbook/assets/6.jpg)
 
-**Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1`, a traversal starting from vertex **A** would return vertex **B** and would not return vertex **C**
+**Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1`, a traversal starting from vertex **A** would return vertex **B** and would not return vertex **C.**
 
 If the `connection_types` parameter is omitted, the entire graph is traversed \(to the specified depth\), without the backtracking prevention feature. It should be noted that the knowledge graph can be a highly dense graph, and traversing without filters can return extremely large results and might cause problems with node performance.
 

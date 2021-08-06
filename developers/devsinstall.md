@@ -6,13 +6,13 @@ description: All you need to know about sharing your data via the DKG
 
 ### How is data shared in the Decentralized Knowledge Graph
 
-Traditionally knowledge graphs ingest information from various sources using custom data pipelines for knowledge graph building. As an example, the Google knowledge graph is populated exclusively by Google software by ingesting information from from websites and other online resources.
+Traditionally knowledge graphs ingest information from various sources using custom data pipelines for knowledge graph building. As an example, the Google knowledge graph is populated exclusively by Google software by ingesting information from websites and other online resources.
 
 In contrast to that, OriginTrail is a permissionless system, so **anybody can add data to the Decentralized Knowledge Graph** by publishing it on the network. This means that queries performed on the DKG will be executed on records from all participants, with several characteristics:
 
 * each graph element has an associated, verifiable publisher identity \(DID\)
 * each published dataset has a corresponding set of cryptographic proofs on a blockchain \(multiple are supported\), using which every graph element can be verified for integrity \(provenance from a particular dataset and immutability\)
-* each dataset has a specified data lifespan \(and might be pruned on the network after it's expiry\)
+* each dataset has a specified data lifespan \(and might be pruned on the network after its expiry\)
 * semantic data can be queried based on IRIs \(more in [Querying](querying.md) section\)
 
 Another key differentiator of the DKG is that it is comprised of two "levels"
@@ -53,7 +53,7 @@ dkg.publish(simpleDataset).then((publish_result)=>{
 });
 ```
 
-The above code will prepare a simple dataset comprised of a single object with an associated identifier, identifier type and some properties, and the _publish_ method will import & publish it via the DKG node. Make sure to initialize the connection to the dkg using the _init_ function first. To publish multiple objects, follow the next step
+The above code will prepare a simple dataset comprised of a single object with an associated identifier, identifier type and some properties, and the _publish_ method will import & publish it via the DKG node. Make sure to initialize the connection to the dkg using the _init_ function first. To publish multiple objects, follow the next step.
 
 #### Without simplePrepare
 
@@ -140,7 +140,7 @@ The import route ingests different _standard\_ids_, being a GRAPH in this exampl
 | W3C Web of Things | WOT |
 | Generic OT-JSON serialization | GRAPH |
 
-The import operation can last for some time, so to check for it's operational status, query the import result API
+The import operation can last for some time, so to check for its operational status, query the import result API
 
 ```javascript
 GET http://NODE_IP:PORT/api/latest/import/result/{handler_id}
@@ -197,7 +197,7 @@ Publishing a dataset creates a network data holding offer on the ODN and the nod
 
 ### How about private data?
 
-The ODN is designed to support private \(non-replicated\) graph data, connected with the public DKG. In this way the DKG enables data that cannot be shared publicly to be part of the same global graph and accessible at the discretion of the data owner. At this point in time, it is possible to add permissioned data as a property object in the OT-JSON graph objects, by including a _permissioned\_data_ property as indicated below. Permissioned data trading and monetization features are currently in development, with support for blockchain purchase verification by implementing the [FairSwap](https://eprint.iacr.org/2018/740.pdf) blockchain protocol.
+The ODN is designed to support private \(non-replicated\) graph data, connected with the public DKG. In this way, the DKG enables data that cannot be shared publicly to be part of the same global graph and accessible at the discretion of the data owner. At this point in time, it is possible to add permissioned data as a property object in the OT-JSON graph objects, by including a _permissioned\_data_ property as indicated below. Permissioned data trading and monetization features are currently in development, with support for blockchain purchase verification by implementing the [FairSwap](https://eprint.iacr.org/2018/740.pdf) blockchain protocol.
 
 ```javascript
 {

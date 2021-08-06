@@ -36,7 +36,7 @@ Event data describes interactions between entities described with master data. O
 
 When converting an EPCIS Visibility Event to graph, a central vertex will be created for the event. Any event identifiers will be created as separate vertices in the graph, connected to the event vertex, in order to enable connection to other entities with the same identifier.
 
-Any observed objects in the event \(the name varies depending on the event type, see the EPCIS data structure\) will be added as separate vertices, with the relation created from the object to the event\). This enables the objects to connect to their respective master data if available, as the information about the object will be set as that object’s properties.
+Any observed objects in the event \(the name varies depending on the event type, see the EPCIS data structure\) will be added as separate vertices, with the relation created from the object to the event. This enables the objects to connect to their respective master data if available, as the information about the object will be set as that object’s properties.
 
 If the event contains bizLocation and/or readPoint attributes, those will be created as separate vertices, similar to the way it is done for observed objects in the event.
 

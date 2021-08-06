@@ -21,7 +21,7 @@ _If you are looking to jump right into the code, head over to the_ [_Getting Sta
 
 We distinguish several layers of the DKG:
 
-* **the network layer**, formed by a peer to peer swarm of DKG nodes hosted by individuals and organisation, implementing S/Kademlia
+* **the network layer**, formed by a peer to peer swarm of DKG nodes hosted by individuals and organisations, implementing S/Kademlia
 * **data layer**, hosting the knowledge graph data, distributed across the network in separate instances of graph databases
 * **service layer**, implementing various core & extended services, such as authentication, standard interfaces and data pipelines
 * **the consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols \(currently supporting Ethereum, xDai blockchain and the OriginTrail Polkadot Parachain\)
@@ -55,7 +55,7 @@ Therefore, a dataset published to the DKG by a DC node:
 * is timestamped and has a "data lifespan" on the network 
 * is randomly replicated across peers based on a DKG content addressing scheme
 
-In this way, any given graph vertex or edge \(triple\) in the DKG can be verifiably associated with a publisher DID, it's originating dataset and cryptographic hashes proving it being contained in that dataset, as well as enabling data integrity verification on-chain & off chain. 
+In this way, any given graph vertex or edge \(triple\) in the DKG can be verifiably associated with a publisher DID, its originating dataset and cryptographic hashes proving it being contained in that dataset, as well as enabling data integrity verification on-chain & off chain. 
 
 
 
