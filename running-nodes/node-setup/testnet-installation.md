@@ -1,40 +1,20 @@
-# Mainnet Docker Installation
+# Testnet Installation
 
-### Obtain xDAI and xTRAC
+Obtain test TRAC tokens
 
-First you need xDAI, which is the gas fee currency on xDAI. Given that the gas fees there are very low, 1-2 xDAI will last you a long time. There are multiple ways to obtain it:
+In order to receive TRAC tokens on the testnet, please join our discord and post your wallet in the \#testnet-discussion channel requesting TRAC on the testnet, or type !Fundme wallet \(update wallet with your public key on the wallet you would like to receive the TRAC on the Rinkeby testnet\), and the discord bot will send those to your wallet.
 
-* You can obtain xDAI by following some options described by the xDAI community here: [https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token](https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token). Then you convert your TRAC through the bridge [https://bridge.xdaichain.com/](https://bridge.xdaichain.com/) – here is a video tutorial how to do it: [https://www.youtube.com/watch?v=oKdh2cOOqUs](https://www.youtube.com/watch?v=oKdh2cOOqUs) This operation would cost one Ethereum smart contract transaction.
-* Use the faucet to get 0.01 xdai -&gt; [https://blockscout.com/xdai/mainnet/faucet](https://blockscout.com/xdai/mainnet/faucet)
-* If the faucet is not working, join the OriginTrail Community telegram and ask for a cent of xdai -&gt; [https://t.me/OriginTrailCommunity](https://t.me/OriginTrailCommunity)
 
-Second you need xTRAC. If you participated in the SFC boarding, you will obtain back 5% of your TRAC contribution as xTRAC bounty. To claim those, please visit the staking website once announced by the team.
 
-You can also convert TRAC tokens to xTRAC using the Omni Bridge. Go to [https://omni.xdaichain.com/](https://omni.xdaichain.com/) Instructions how to use the bridge can be found here: [https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20)
-
-The custom token contract to see xTRAC on your Metamask on xDAI is:
-
-```text
-0xEddd81E0792E764501AaE206EB432399a0268DB5Copy
-```
-
-Once you have sorted out your xDAI and xTRAC, you need to add the Custom RPC for xDAI, so you can switch your Metamask to the xDAI network. Easiest way to do it is to go to: [https://chainlist.org/](https://chainlist.org/) , click on Connect Wallet in the top right corner and then click “Add me to metamask” button on xDAI section.
-
-![](https://otnode.com/wp-content/uploads/2021/03/image-7.png)
-
-Then you will see on your Metamask xDAI entry when you click on the dropdown on the top where it says Ethereum Mainnet:
-
-![](https://otnode.com/wp-content/uploads/2021/03/image-12.png)
-
-### Prepare the wallets
+Prepare the wallets
 
 **Create operational wallet** and management wallets
 
-Create a new wallet using Mycrypto or Metamask and export the private key, which we will use for the operational wallet for the node. Deposit the amount of xTRAC you want to have on your node, which is minimum 3000 xTRAC to secure the network + additional xTRAC to be able to accept jobs. Currently around 5-6k total xTRAC is recommended. Also send 0.1 xDAI for gas fees during installation and litigation responses.
+Create a new wallet using Mycrypto or Metamask and export the private key, which we will use for the operational wallet for the node. Deposit the amount of test TRAC you want to have on your node, which is minimum 3000 TRAC to secure the network + additional TRAC to be able to accept jobs. Make sure you also have at least 0.1 ETH, which you can request through one of the Ethereum faucets \(i.e. [https://faucet.rinkeby.io/](https://faucet.rinkeby.io/)\)
 
-If you want to run nodes on Ethereum as well, the process is the same, however each blockchain network requires separate TRAC and ETH for gas fees \(i.e. 4k TRAC on ETH for the Ethereum node + 4k xTRAC for the xDAI node, etc.\). Also deposit 0.1 ETH for gas fees to the operational wallet
 
-### **Configure the server**
+
+**Configure the server**
 
 Download [Termius ](https://www.termius.com/)\(or any other terminal client like [Kitty](https://www.fosshub.com/KiTTY.html)\) and configure it with the details you received from the VPS hosting \(IP, username, password\). Click on Hosts, Select New host, Choose a Label for the node and add the IP address from the confirmation e-mail from Digital Ocean or Hetzner that the node is created, choose root as username and input the password, and click on Save on the right top corner.
 
@@ -54,13 +34,13 @@ If you see this notice, choose the first option
 
 ![](https://otnode.com/wp-content/uploads/2021/03/image-16.png)
 
-### **2. Reboot server with below command, close the window and login again**
+**2. Reboot server with below command, close the window and login again**
 
 ```text
 reboot
 ```
 
-### **3. Install docker** \(skip this step if you selected the Digital Ocean Server with Docker installation\).
+**3. Install docker** \(skip this step if you selected the Digital Ocean Server with Docker installation\).
 
 The official installation commands for docker can be found here, should the ones in this section become outdated: [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
 
@@ -84,13 +64,13 @@ apt-get update
 apt-get install docker-ce
 ```
 
-### **4. Setup the configuration file**
+**4. Setup the configuration file**
 
 ```text
 nano /root/.origintrail_noderc
 ```
 
-Paste the below in the text editing tool and update the red letters accordingly if you are setting up a node only on xDAI:
+Paste the below in the text editing tool and update the red letters accordingly if you are setting up a node only on x:
 
 ```text
 {
@@ -190,10 +170,8 @@ Check the brackets, double quotes and commas. Everything except your data has to
 **Important**: Once you run this command, the TRAC will be deposited to the contract and your first task is to copy and back your ERC725 identity and node identity mentioned on Step 8 below, so you can have control over this deposited amount. Should you get an error at this stage, or if the gas setting you used is too low, do not delete the container or destroy the VPS. Instead join the discord channel or the Official Telegram group to ask for assistance
 
 ```text
-sudo docker run -i --log-driver json-file --log-opt max-size=1g --name=otnode -p 8900:8900 -p 5278:5278 -p 3000:3000 -v ~/.origintrail_noderc:/ot-node/.origintrail_noderc origintrail/ot-node:release_mainnet
+sudo docker run -i --log-driver json-file --log-opt max-size=1g --name=otnode -p 8900:8900 -p 5278:5278 -p 3000:3000 -v ~/.origintrail_noderc:/ot-node/.origintrail_noderc origintrail/ot-node:release_testnet
 ```
-
-Once completed and node has joined the network \(**Make sure you wait and see it**\), exit the log with CTRL +C. If you interrupt the process before the node connecting to the network, you will need to spend some extra time fixing it so please be patient.
 
 The first installation runs in interactive mode, and when you click CTRL + C, you both exit the log and stop the node. Thus one additional start command is required.
 
@@ -299,7 +277,7 @@ Also in the **Node Maintenance** section \(menu on the right\) you can find how 
 
 **13. Add swap space**
 
-Swap space is dedicated space on your hard drive, which is used as RAM should the hardware RAM is fully utilized. This usually slows down the server as the hard drive is slower than the RAM, however the swap would ensure the node will continue operation. It's recommended to enable 1 GB Swap space on your server.
+Swap space is dedicated space on your hard drive, which is used as RAM should the hardware RAM is fully utilized. This usually slows down the server as the hard drive is slower than the RAM, however the swap would ensure the node will continue operation. I highly recommend to enable 1 GB Swap space on your server.
 
 ```text
 fallocate -l 1G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
@@ -322,6 +300,4 @@ cp /etc/fstab /etc/fstab.bak
 ```text
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
-
-\*\*\*\*
 

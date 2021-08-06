@@ -1,8 +1,12 @@
-# Start here
+---
+description: Learn about the worlds first decentralized knowledge graph
+---
+
+# Welcome to OriginTrail Documentation Hub
 
 ## Welcome to the OriginTrail official docs
 
-OriginTrail technology is a set of tools and protocols evolving as the [semantic](https://www.w3.org/standards/semanticweb/) layer for Web3, built on the OriginTrail **Decentralized Knowledge Graph \(DKG\).** It's aim is to empower developers and system integrators to utilize the decentralized knowledge exchange supported by emerging standards and DLT networks
+OriginTrail technology is a set of tools and protocols evolving as the [semantic](https://www.w3.org/standards/semanticweb/) layer for Web3, built on the OriginTrail **Decentralized Knowledge Graph \(DKG\).** It's function is to empower developers and system integrators utilizing decentralized knowledge exchange supported by emerging standards and DLT networks.
 
 The DKG enables you to:
 

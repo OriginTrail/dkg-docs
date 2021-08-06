@@ -1,4 +1,4 @@
-# Backup & restore
+# Nodes Backup & Restore
 
 If you’ve found your node failing due to some unexplained error, a clean docker image might remove the issue. But just downloading a new docker image would cause your node to lose the data it’s currently holding, making it susceptible to litigation and loss of tokens. So here we guide you through the process of how to reinstall your ot-node while keeping all the data necessary for your node to keep its jobs.
 

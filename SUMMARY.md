@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Start here](README.md)
+* [Welcome to OriginTrail Documentation Hub](README.md)
 
 ## General Information <a id="general"></a>
 
@@ -26,11 +26,12 @@
 
 * [Setup instructions](running-nodes/node-setup/README.md)
   * [Mainnet Docker Installation](running-nodes/node-setup/docker.md)
-  * [Testnet Installation](running-node/node-setups/testnet-installation.md)
+  * [Testnet Installation](running-nodes/node-setup/testnet-installation.md)
 * [Compensation parameters setup](running-nodes/node-price.md)
-* [Backup & restore](running-nodes/backup.md)
+* [Nodes Backup & Restore](running-nodes/backup.md)
 
 ## Useful Resources
 
+* [Community resources](useful-resources/community-resources.md)
 * [Standards](useful-resources/standards.md)
 
