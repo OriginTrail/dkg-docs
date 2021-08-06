@@ -195,7 +195,7 @@ The node application layer envisions support for multiple data conversion servic
 
 Publishing a dataset creates a network data holding offer on the ODN and the node will start a negotiation process with other nodes using the protocol’s incentivized replication procedure. If the replication fails to be completed for any reason, the data field in the replication result call will contain an appropriate error message, and the status field will have the value “FAILED”. Once when replication process is complete the ODN offer details are written on the blockchain.
 
-### How about private data?
+### How about permissioned data?
 
 The ODN is designed to support private \(non-replicated\) graph data, connected with the public DKG. In this way, the DKG enables data that cannot be shared publicly to be part of the same global graph and accessible at the discretion of the data owner. At this point in time, it is possible to add permissioned data as a property object in the OT-JSON graph objects, by including a _permissioned\_data_ property as indicated below. Permissioned data trading and monetization features are currently in development, with support for blockchain purchase verification by implementing the [FairSwap](https://eprint.iacr.org/2018/740.pdf) blockchain protocol.
 
