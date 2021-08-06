@@ -9,12 +9,12 @@ OriginTrail is a community driven project with lots of great community created r
 ## Tools
 
 * [OTHub](https://othub.origin-trail.network/) - OriginTrail monitoring hub developed by Luke Skinner
-* [OT-AnsibleSetup](https://github.com/calr0x/OT-Ansible-Files-and-Playbooks) by calr0x
-* [OT-Docksucker](https://github.com/calr0x/OT-DockSucker) by calr0x
-* [OT-SlimRestore](https://github.com/calr0x/OT-Slim-Restore) by calr0x
-* [OT-Smoothbrain](https://github.com/calr0x/OT-Slim-Restore) by calr0x
-* [OT-NodeWatch](https://github.com/calr0x/OT-NodeWatch) by calr0x
-* [OT-2Nodes1Server](https://github.com/calr0x/OT-2Nodes1Server) by calr0x
+* [OT-AnsibleSetup](https://github.com/calr0x/OT-Ansible-Files-and-Playbooks) by calr0x - Node management Automation through Ansible
+* [OT-Docksucker](https://github.com/calr0x/OT-DockSucker) by calr0x - Migrating a docker node to dockerless one
+* [OT-SlimRestore](https://github.com/calr0x/OT-Slim-Restore) by calr0x - Improved backup restoration
+* [OT-Smoothbrain](https://github.com/calr0x/OT-Slim-Restore) by calr0x - Incremental backup optimisation
+* [OT-NodeWatch](https://github.com/calr0x/OT-NodeWatch) by calr0x - Set of tools to monitor the performance and uptime of your node
+* [OT-2Nodes1Server](https://github.com/calr0x/OT-2Nodes1Server) by calr0x and BRX - merging 2 nodes in one VPS
 
 ## Websites
 
