@@ -34,5 +34,4 @@
 ## Useful Resources
 
 * [Community created resources](useful-resources/community-resources.md)
-* [Standards](useful-resources/standards.md)
 

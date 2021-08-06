@@ -1,4 +1,0 @@
-# Standards
-
-lorem ipsum
-
