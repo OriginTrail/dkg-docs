@@ -8,7 +8,7 @@ OriginTrail is a community driven project with lots of great community created r
 
 ## Tools
 
-* [OTHub - OriginTrail monitoring h](https://othub.origin-trail.network/)ub developed by Luke Skinner
+* [OTHub](https://othub.origin-trail.network/) - OriginTrail monitoring hub developed by Luke Skinner
 * [OT-AnsibleSetup](https://github.com/calr0x/OT-Ansible-Files-and-Playbooks) by calr0x
 * [OT-Docksucker](https://github.com/calr0x/OT-DockSucker) by calr0x
 * [OT-SlimRestore](https://github.com/calr0x/OT-Slim-Restore) by calr0x
