@@ -11,7 +11,7 @@ OriginTrail technology is a set of tools and protocols evolving as the [semantic
 The DKG enables you to:
 
 * Easily discover, query and integrate datasets from multiple sources
-* Securely share semantic data \(knowledge\) across systems and dapps
+* Securely share semantic data \(knowledge\) across systems and [dapps](https://en.wikipedia.org/wiki/Decentralized_application)
 * Monetize your APIs and data, using fungible and non-fungible tokens \(knowledge tokens\)
 * Easily build custom verifiable data pipelines
 * Integrate with existing SSI & blockchain tooling

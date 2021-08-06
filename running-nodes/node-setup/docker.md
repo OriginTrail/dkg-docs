@@ -1,18 +1,16 @@
 # Mainnet Docker Installation
 
-### Obtain xDAI and xTRAC
+## Obtain xDAI and xTRAC
 
-First you need xDAI, which is the gas fee currency on xDAI. Given that the gas fees there are very low, 1-2 xDAI will last you a long time. There are multiple ways to obtain it:
+First you need xDAI, which is the gas fee currency on xDAI. Given that the gas fees there are very low, 1-2 xDAI will last a long time. There are multiple ways to obtain it:
 
-* You can obtain xDAI by following some options described by the xDAI community here: [https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token](https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token). Then you convert your TRAC through the bridge [https://bridge.xdaichain.com/](https://bridge.xdaichain.com/) – here is a video tutorial how to do it: [https://www.youtube.com/watch?v=oKdh2cOOqUs](https://www.youtube.com/watch?v=oKdh2cOOqUs) This operation would cost one Ethereum smart contract transaction.
+* xDAI can be obtained by following some options described by the xDAI community here: [https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token](https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token).
 * Use the faucet to get 0.01 xdai -&gt; [https://blockscout.com/xdai/mainnet/faucet](https://blockscout.com/xdai/mainnet/faucet)
 * If the faucet is not working, join the OriginTrail Community telegram and ask for a cent of xdai -&gt; [https://t.me/OriginTrailCommunity](https://t.me/OriginTrailCommunity)
 
-Second you need xTRAC. If you participated in the SFC boarding, you will obtain back 5% of your TRAC contribution as xTRAC bounty. To claim those, please visit the staking website once announced by the team.
+Second, xTRAC \(TRAC on xDAI chain\) is required. You can convert TRAC tokens to xTRAC using the Omni Bridge. Go to [https://omni.xdaichain.com/](https://omni.xdaichain.com/) Instructions how to use the bridge can be found here: [https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20)
 
-You can also convert TRAC tokens to xTRAC using the Omni Bridge. Go to [https://omni.xdaichain.com/](https://omni.xdaichain.com/) Instructions how to use the bridge can be found here: [https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20)
-
-The custom token contract to see xTRAC on your Metamask on xDAI is:
+The custom token contract to see xTRAC on Metamask on xDAI is:
 
 ```text
 0xEddd81E0792E764501AaE206EB432399a0268DB5Copy
@@ -26,23 +24,23 @@ Then you will see on your Metamask xDAI entry when you click on the dropdown on 
 
 ![](https://otnode.com/wp-content/uploads/2021/03/image-12.png)
 
-### Prepare the wallets
+## Prepare the wallets
 
 **Create operational wallet** and management wallets
 
-Create a new wallet using Mycrypto or Metamask and export the private key, which we will use for the operational wallet for the node. Deposit the amount of xTRAC you want to have on your node, which is minimum 3000 xTRAC to secure the network + additional xTRAC to be able to accept jobs. Currently around 5-6k total xTRAC is recommended. Also send 0.1 xDAI for gas fees during installation and litigation responses.
+Create a new wallet using Mycrypto or Metamask and export the private key, which will be used for the operational wallet for the node. Deposit the amount of xTRAC you want to have on your node, which is minimum 3000 xTRAC to secure the network + additional xTRAC to be able to accept jobs. Currently around 5-6k total xTRAC is recommended. Also send 0.1 xDAI for gas fees during installation and litigation responses.
 
-If you want to run nodes on Ethereum as well, the process is the same, however each blockchain network requires separate TRAC and ETH for gas fees \(i.e. 4k TRAC on ETH for the Ethereum node + 4k xTRAC for the xDAI node, etc.\). Also deposit 0.1 ETH for gas fees to the operational wallet
+If you want to run nodes on Ethereum as well, the process is the same, however each blockchain network requires separate TRAC and ETH for gas fees \(i.e. 3-5k+ TRAC on ETH for the Ethereum node ; 3-5k xTRAC for the xDAI node, etc.\). Also deposit 0.1 ETH for gas fees to the operational wallet.
 
-### **Configure the server**
+## **Configure the server**
 
 Download [Termius ](https://www.termius.com/)\(or any other terminal client like [Kitty](https://www.fosshub.com/KiTTY.html)\) and configure it with the details you received from the VPS hosting \(IP, username, password\). Click on Hosts, Select New host, Choose a Label for the node and add the IP address from the confirmation e-mail from Digital Ocean or Hetzner that the node is created, choose root as username and input the password, and click on Save on the right top corner.
 
 ![](https://otnode.com/wp-content/uploads/2020/07/image-3-979x1024.png)
 
-Once you login follow the configuration logic below. Click on the COPY button after each command and **right click** into the terminal window to paste it. Then confirm with Enter
+Once you login follow the configuration logic below. Click on the copy button after each command and **right click** into the terminal window to paste it. Then confirm with Enter
 
-**1. Update the server programs:**
+### **1. Update the server programs:**
 
 ```text
 apt update && apt upgrade -y
@@ -90,7 +88,7 @@ apt-get install docker-ce
 nano /root/.origintrail_noderc
 ```
 
-Paste the below in the text editing tool and update the red letters accordingly if you are setting up a node only on xDAI:
+Paste the below in the text editing tool and update "xxxxxx" entries accordingly if you are setting up a node only on xDAI:
 
 ```text
 {
@@ -165,7 +163,7 @@ i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your nod
 
 **Note**: If your private key start with **0x**, remove these two characters when adding it to the configuration file.
 
-**management\_wallet** – this is your management wallet public address – ideally this should be a wallet on your cold storage \([Ledger Nano S](https://shop.ledger.com/pages/ledger-nano-x?r=c912d8040032), [Trezor](https://shop.trezor.io/?offer_id=10&aff_id=7122), etc.\)
+**management\_wallet** – this is your management wallet public address – ideally this should be a wallet on your cold storage.
 
 **dh\_price\_factor** – this is the setting of your lambda value – should be less than 1 if you want to accept most of all current jobs. The lower the value, the less paid jobs you are willing to accept.
 
@@ -173,7 +171,17 @@ i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your nod
 
 **dh\_max\_holding\_time\_in\_minutes** – the maximum length of jobs you are willing to accept in minutes \(for example 550 000 is to accept one year jobs\).
 
-**5. Install JQ to validate whether the configuration file doesn’t contain any errors**
+"rpc\_server\_url" - only for Ethereum, this one is not required for xDAI: your RPC solution, most use a free one from Infura. Here is a quick guide:
+
+**Register on Infura**
+
+\*\*\*\*![This image has an empty alt attribute; its file name is image-2.png](https://ot.wittymermaid.com/wp-content/uploads/2020/06/image-2.png)
+
+Go to [Infura.io](https://infura.io/) and create an account. Create a project, copy the HTTPS link under Endpoints – Mainnet. It should look like: https://mainnet.infura.io/v3/xxxxxxxxxxxxxxxxxxxxxx where the xxxxxxxx are your specific link
+
+![This image has an empty alt attribute; its file name is image-8.png](https://ot.wittymermaid.com/wp-content/uploads/2020/06/image-8.png)
+
+### **5. Install JQ to validate whether the configuration file doesn’t contain any errors**
 
 ```text
 apt-get install jq
@@ -185,7 +193,7 @@ jq "." /root/.origintrail_noderc
 
 Check the brackets, double quotes and commas. Everything except your data has to be exactly like the example above.
 
-**6. Initiate the node installation**
+### **6. Initiate the node installation**
 
 **Important**: Once you run this command, the TRAC will be deposited to the contract and your first task is to copy and back your ERC725 identity and node identity mentioned on Step 8 below, so you can have control over this deposited amount. Should you get an error at this stage, or if the gas setting you used is too low, do not delete the container or destroy the VPS. Instead join the discord channel or the Official Telegram group to ask for assistance
 
@@ -201,7 +209,7 @@ The first installation runs in interactive mode, and when you click CTRL + C, yo
 docker restart otnode
 ```
 
-**7. Create identities into files on the root directory**
+### **7. Create identities into files on the root directory**
 
 ERC725 identity **on xDAI**
 
@@ -221,7 +229,7 @@ Node ID
 docker cp otnode:/ot-node/data/identity.json ~/identity.json
 ```
 
-**8. Read erc725 and node id and copy/paste them in secure document**
+### **8. Read erc725 and node id and copy/paste them in secure document**
 
 **XDAI**
 
@@ -245,15 +253,15 @@ Or Login to the server using WINSCP or any other FTP application, go to the root
 
 \*\*\*\*
 
-**Additional node configurations**
+## **Additional node configurations**
 
-**9. Setup the firewall**
+### **9. Setup the firewall**
 
 ```text
 ufw allow 22/tcp && ufw allow 3000 && ufw allow 5278 && ufw allow 8900 && yes | ufw enable
 ```
 
-**9b. Double check the firewall is properly configured:**
+**Double check the firewall is properly configured:**
 
 ```text
 ufw status
@@ -263,13 +271,13 @@ ufw status
 
 \*\*\*\*
 
-**10. Deposit additional xTRAC from your management wallet to the node**
+### **10. Deposit additional xTRAC from your management wallet to the node**
 
 If you want to deposit more than the initial amount, you can deposit the amount of xTRAC which will be available for jobs through the node profile management page at this URL: [https://node-profile.origintrail.io/](https://node-profile.origintrail.io/)
 
-The current recommended amount is 1000 xTRAC in addition to the 3000 xTRAC required to secure the network, and they have to be present on your management wallet.
+The current recommended amount is 1000-2000 TRAC/xTRAC in addition to the 3000 TRAC/xTRAC required to secure the network, and they have to be present on your management wallet.
 
-Login with your XDAI **ERC725 Identit**y which you extracted above and the **operational wallet public address** and follow the instructions on the page. You need metamask to initiate the deposit.
+Login with your **ERC725 Identit**y which you extracted above and the **operational wallet public address** and follow the instructions on the page. You need metamask to initiate the deposit.
 
 Then on the top left section “Deposit TRAC to Your Node”, enter the amount of TRAC present on your management wallet, to be deposited to the contract for your node, and a set of 2 transactions have to be processed. Metamask popup will show up for you to confirm you want to process the transaction. Once the first transaction is processed, a second popup will show for the second transaction.
 
@@ -279,7 +287,7 @@ Once the deposit is completed, restart your node.
 docker restart otnode
 ```
 
-**11. Enable auto restart and follow the log to monitor the operation of the node**
+### **11. Enable auto restart and follow the log to monitor the operation of the node**
 
 ```text
 docker update --restart=always otnode
@@ -289,7 +297,7 @@ docker update --restart=always otnode
 docker logs -f otnode
 ```
 
-**12. Monitor your node**
+### **12. Monitor your node**
 
 You can add your node to the OT Hub and monitor how many jobs has the node won, initiate manual payouts and quickly check if your node is online. The OT Hub can be found on the link below:
 
@@ -297,7 +305,7 @@ You can add your node to the OT Hub and monitor how many jobs has the node won, 
 
 Also in the **Node Maintenance** section \(menu on the right\) you can find how to setup notifications on your mobile.
 
-**13. Add swap space**
+### **13. Add swap space**
 
 Swap space is dedicated space on your hard drive, which is used as RAM should the hardware RAM is fully utilized. This usually slows down the server as the hard drive is slower than the RAM, however the swap would ensure the node will continue operation. It's recommended to enable 1 GB Swap space on your server.
 

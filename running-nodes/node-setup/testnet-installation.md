@@ -1,20 +1,16 @@
 # Testnet Installation
 
-Obtain test TRAC tokens
+## Obtain test TRAC tokens
 
 In order to receive TRAC tokens on the testnet, please join our discord and post your wallet in the \#testnet-discussion channel requesting TRAC on the testnet, or type !Fundme wallet \(update wallet with your public key on the wallet you would like to receive the TRAC on the Rinkeby testnet\), and the discord bot will send those to your wallet.
 
-
-
-Prepare the wallets
+## Prepare the wallets
 
 **Create operational wallet** and management wallets
 
 Create a new wallet using Mycrypto or Metamask and export the private key, which we will use for the operational wallet for the node. Deposit the amount of test TRAC you want to have on your node, which is minimum 3000 TRAC to secure the network + additional TRAC to be able to accept jobs. Make sure you also have at least 0.1 ETH, which you can request through one of the Ethereum faucets \(i.e. [https://faucet.rinkeby.io/](https://faucet.rinkeby.io/)\)
 
-
-
-**Configure the server**
+## **Configure the server**
 
 Download [Termius ](https://www.termius.com/)\(or any other terminal client like [Kitty](https://www.fosshub.com/KiTTY.html)\) and configure it with the details you received from the VPS hosting \(IP, username, password\). Click on Hosts, Select New host, Choose a Label for the node and add the IP address from the confirmation e-mail from Digital Ocean or Hetzner that the node is created, choose root as username and input the password, and click on Save on the right top corner.
 
@@ -22,7 +18,7 @@ Download [Termius ](https://www.termius.com/)\(or any other terminal client like
 
 Once you login follow the configuration logic below. Click on the COPY button after each command and **right click** into the terminal window to paste it. Then confirm with Enter
 
-**1. Update the server programs:**
+### **1. Update the server programs:**
 
 ```text
 apt update && apt upgrade -y
@@ -34,13 +30,13 @@ If you see this notice, choose the first option
 
 ![](https://otnode.com/wp-content/uploads/2021/03/image-16.png)
 
-**2. Reboot server with below command, close the window and login again**
+### **2. Reboot server with below command, close the window and login again**
 
 ```text
 reboot
 ```
 
-**3. Install docker** \(skip this step if you selected the Digital Ocean Server with Docker installation\).
+### **3. Install docker** \(skip this step if you selected the Digital Ocean Server with Docker installation\).
 
 The official installation commands for docker can be found here, should the ones in this section become outdated: [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
 
@@ -64,13 +60,13 @@ apt-get update
 apt-get install docker-ce
 ```
 
-**4. Setup the configuration file**
+### **4. Setup the configuration file**
 
 ```text
 nano /root/.origintrail_noderc
 ```
 
-Paste the below in the text editing tool and update the red letters accordingly if you are setting up a node only on x:
+Paste the below in the text editing tool and update the xxxxx entries accordingly if you are setting up a node only on xDAI:
 
 ```text
 {
@@ -145,7 +141,7 @@ i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your nod
 
 **Note**: If your private key start with **0x**, remove these two characters when adding it to the configuration file.
 
-**management\_wallet** – this is your management wallet public address – ideally this should be a wallet on your cold storage \([Ledger Nano S](https://shop.ledger.com/pages/ledger-nano-x?r=c912d8040032), [Trezor](https://shop.trezor.io/?offer_id=10&aff_id=7122), etc.\)
+**management\_wallet** – this is your management wallet public address – ideally this should be a wallet on your cold storage
 
 **dh\_price\_factor** – this is the setting of your lambda value – should be less than 1 if you want to accept most of all current jobs. The lower the value, the less paid jobs you are willing to accept.
 
@@ -153,7 +149,7 @@ i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your nod
 
 **dh\_max\_holding\_time\_in\_minutes** – the maximum length of jobs you are willing to accept in minutes \(for example 550 000 is to accept one year jobs\).
 
-**5. Install JQ to validate whether the configuration file doesn’t contain any errors**
+### **5. Install JQ to validate whether the configuration file doesn’t contain any errors**
 
 ```text
 apt-get install jq
@@ -165,7 +161,7 @@ jq "." /root/.origintrail_noderc
 
 Check the brackets, double quotes and commas. Everything except your data has to be exactly like the example above.
 
-**6. Initiate the node installation**
+### **6. Initiate the node installation**
 
 **Important**: Once you run this command, the TRAC will be deposited to the contract and your first task is to copy and back your ERC725 identity and node identity mentioned on Step 8 below, so you can have control over this deposited amount. Should you get an error at this stage, or if the gas setting you used is too low, do not delete the container or destroy the VPS. Instead join the discord channel or the Official Telegram group to ask for assistance
 
@@ -179,7 +175,7 @@ The first installation runs in interactive mode, and when you click CTRL + C, yo
 docker restart otnode
 ```
 
-**7. Create identities into files on the root directory**
+### **7. Create identities into files on the root directory**
 
 ERC725 identity **on xDAI**
 
@@ -199,7 +195,7 @@ Node ID
 docker cp otnode:/ot-node/data/identity.json ~/identity.json
 ```
 
-**8. Read erc725 and node id and copy/paste them in secure document**
+### **8. Read erc725 and node id and copy/paste them in secure document**
 
 **XDAI**
 
@@ -223,15 +219,15 @@ Or Login to the server using WINSCP or any other FTP application, go to the root
 
 \*\*\*\*
 
-**Additional node configurations**
+## **Additional node configurations**
 
-**9. Setup the firewall**
+### **9. Setup the firewall**
 
 ```text
 ufw allow 22/tcp && ufw allow 3000 && ufw allow 5278 && ufw allow 8900 && yes | ufw enable
 ```
 
-**9b. Double check the firewall is properly configured:**
+**Double check the firewall is properly configured:**
 
 ```text
 ufw status
@@ -241,23 +237,7 @@ ufw status
 
 \*\*\*\*
 
-**10. Deposit additional xTRAC from your management wallet to the node**
-
-If you want to deposit more than the initial amount, you can deposit the amount of xTRAC which will be available for jobs through the node profile management page at this URL: [https://node-profile.origintrail.io/](https://node-profile.origintrail.io/)
-
-The current recommended amount is 1000 xTRAC in addition to the 3000 xTRAC required to secure the network, and they have to be present on your management wallet.
-
-Login with your XDAI **ERC725 Identit**y which you extracted above and the **operational wallet public address** and follow the instructions on the page. You need metamask to initiate the deposit.
-
-Then on the top left section “Deposit TRAC to Your Node”, enter the amount of TRAC present on your management wallet, to be deposited to the contract for your node, and a set of 2 transactions have to be processed. Metamask popup will show up for you to confirm you want to process the transaction. Once the first transaction is processed, a second popup will show for the second transaction.
-
-Once the deposit is completed, restart your node.
-
-```text
-docker restart otnode
-```
-
-**11. Enable auto restart and follow the log to monitor the operation of the node**
+### **10. Enable auto restart and follow the log to monitor the operation of the node**
 
 ```text
 docker update --restart=always otnode
@@ -267,15 +247,7 @@ docker update --restart=always otnode
 docker logs -f otnode
 ```
 
-**12. Monitor your node**
-
-You can add your node to the OT Hub and monitor how many jobs has the node won, initiate manual payouts and quickly check if your node is online. The OT Hub can be found on the link below:
-
-[https://othub.origin-trail.network/dashboard](https://othub.origin-trail.network/dashboard)
-
-Also in the **Node Maintenance** section \(menu on the right\) you can find how to setup notifications on your mobile.
-
-**13. Add swap space**
+### **11. Add swap space**
 
 Swap space is dedicated space on your hard drive, which is used as RAM should the hardware RAM is fully utilized. This usually slows down the server as the hard drive is slower than the RAM, however the swap would ensure the node will continue operation. I highly recommend to enable 1 GB Swap space on your server.
 
