@@ -9,7 +9,7 @@ If you need help installing OT Node or troubleshooting your installation, you ca
 
 The recommended minimum specifications are:
 
-* minimum of 2Gb of RAM memory
+* minimum of 2Gb of RAM memory \(+1 GB Swap to ensure any future needs are covered\)
 * 2.2 GHz CPU
 * at least 20 GB storage space
 
