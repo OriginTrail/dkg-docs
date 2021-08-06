@@ -30,7 +30,7 @@ Event data describes interactions between entities described with master data. O
 
   > For example, this could be production or assembly that results in output which is used for further production or for sale \(repackaging, labeling etc\). The important distinction is that the ownership of event objects does not change during the event.
 
-* **External events** are related to processes between different supply chain participants \(sales/purchases, transport\). They represent processes where the jurisdiction or ownership of the objects gets changed in the supply chain. These types of events should use [connectors](https://docs.origintrail.io/en/latest/Data-Structure/data-structure-guidelines.html#connectors-in-epcis-files) for connecting between parties.
+* **External events** are related to processes between different supply chain participants \(sales/purchases, transport\). They represent processes where the jurisdiction or ownership of the objects gets changed in the supply chain. These types of events should use [connectors](https://app.gitbook.com/@origintrail/s/origintrail/~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#connector-objects) for connecting between parties.
 
 #### How an event is represented in the graph
 
@@ -87,7 +87,7 @@ If we look at the physical world, a credential might consist of:
 
 A verifiable credential can represent all of the same information that a physical credential represents. The addition of technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts.
 
-Verifiable credentials data can be placed inside generic OT-JSON object \([OT-JSON Structure](https://docs.origintrail.io/en/latest/Data-Structure/ot-json.html#ot-json)\) with an additional identifier and can be queried using local knowledge graph querying system \([Querying the data](https://docs.origintrail.io/en/latest/ODN-Functionalities/query-and-trail.html#query-and-trail)\).
+Verifiable credentials data can be placed inside generic OT-JSON object \([OT-JSON Structure](https://app.gitbook.com/@origintrail/s/origintrail/~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#ot-json-structure)\) with an additional identifier and can be queried using local knowledge graph querying system \([Querying the data](https://app.gitbook.com/@origintrail/s/origintrail/~/drafts/-MgPv4CITeigfakFttFc/developers/querying)\).
 
 More detailed information about verifiable credentials can be found here:
 
@@ -193,7 +193,7 @@ Here are some essential conceptual things related to the data in a dataset. Try 
 > * Data can be connected by arbitrary relations. A user can define own relations that can be used with others defined by standard.
 > * Relations are directed from one entity to another. It is possible to create multiple relations between two objects in both directions.
 
-For more specific information about OT-JSON, see [OT-JSON Structure](https://docs.origintrail.io/en/latest/Data-Structure/ot-json.html#ot-json)
+For more specific information about OT-JSON, see [OT-JSON Structure](https://app.gitbook.com/@origintrail/s/origintrail/~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#ot-json-structure)
 
 ### Web of Things
 

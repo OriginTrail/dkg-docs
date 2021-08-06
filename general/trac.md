@@ -10,5 +10,5 @@ TRAC is utilized on the OriginTrail Decentralized Network \(ODN\) in multiple wa
 * _**Collateralization by Data Holders**_**.** To prevent data tampering and as a promise to hold data for a set period of time, TRAC from a data holder’s stake is also locked via smart contract for the length of the data job. Failure to provide data on-demand leads to loss of this staked TRAC to the data creator. _Upon completion of the terms of the job, the data holder earns back their original stake AND the TRAC staked by the data creator._
 * **Knowledge tokens, Knowledge wallets, the Knowledge marketplace, and the Knowledge tenders**. These unique propositions coming in Q4 2021 would allow users to monetize their data in multiple ways by selling their data, or providing limited access to certain individuals, or fractionalizing ownership over data to different parties.
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/scheme.png)
 
