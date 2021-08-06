@@ -17,17 +17,18 @@
 * [Publishing data to the DKG](developers/devsinstall.md)
 * [Querying data from the DKG](developers/querying.md)
 * [Data verification](developers/data-verification.md)
-* [Integrations](developers/integrations.md)
+* [Data structure guidelines](developers/data-structure-guidelines.md)
+* [Hello Trail tutorial](developers/hello-trail-tutorial.md)
 * [Developer Reference](developers/references.md)
-* [Contribute](developers/contribute.md)
+* [Contribution](developers/contribute.md)
 
-## Running a node <a id="running-node"></a>
+## Running DKG nodes <a id="running-nodes"></a>
 
-* [Setup instructions](running-node/node-setups/README.md)
-  * [Mainnet Docker Installation](running-node/node-setups/docker.md)
+* [Setup instructions](running-nodes/node-setup/README.md)
+  * [Mainnet Docker Installation](running-nodes/node-setup/docker.md)
   * [Testnet Installation](running-node/node-setups/testnet-installation.md)
-* [Compensation parameters setup](running-node/node-price.md)
-* [Backup & restore](running-node/backup.md)
+* [Compensation parameters setup](running-nodes/node-price.md)
+* [Backup & restore](running-nodes/backup.md)
 
 ## Useful Resources
 

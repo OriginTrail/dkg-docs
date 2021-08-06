@@ -1,36 +1,24 @@
 # Querying data from the DKG
 
-## Querying the data via node native API
+## How does querying of the DKG work?
 
-### 
+The DKG querying entails both data discovery and graph querying. Therefore OriginTrail implements a set of protocols for discovery and exchange which cover a wide array of possible scenarios. 
 
-TODO
-
-* Explain the OT node provides a protocol native API with data verification functions and native serialization
-* Explain routes, point to swagger link
-* add Postman collection
-* **explain complex queries can be done directly via underlying DB**
-
-### 
-
-### Decentralized Knowledge Graph querying - Network query
+### Network query
 
 Querying the DKG is done using the network query API. It is used to look up all datasets containing a specific identifier \(such as a supply chain identifier, like a GS1 barcode or RFID value\).
 
 The query request is an array values that identify a particular object in a dataset. These identifiers are sent as an array of objects, where the `path` parameter is the type of identifier \(such as ean13, sgtin, sgln, or id for general identifier\), `value` is the identifier value or an array of possible values, and `opcode` is either EQ or IN, depending on whether the queried object identifier needs to equal or belong to the given value parameter
 
 ```text
+POST http://NODE_IP:PORT/api/latest/network/query
 {
-  "query": [
+  "query":
+  [
     {
       "path": "sgtin",
-      "value": "urn:epc:id:sgtin:271119.100294475",
+      "value": "urn:epc:id:sgtin:111111111",
       "opcode": "EQ"
-    },
-    {
-      "path": "urn:epcglobal:cbv:mda#bestBeforeDate",
-      "value": ["20-09-2020","21-09-2020", "22-09-2020"],
-      "opcode": "IN"
     }
   ]
 }
@@ -38,11 +26,28 @@ The query request is an array values that identify a particular object in a data
 
 The returned responses contain an array of datasets which contain objects whose identifiers fit the given query. This response can then be used to import a desired dataset on one’s node, which will enable querying the graph locally or exporting and viewing the dataset.
 
-The network query API details are explained on the following link
+The view responses call the query response API
 
-[https://app.swaggerhub.com/apis-docs/otteam/ot-node-api/v2.0\#/network/post\_network\_query](https://app.swaggerhub.com/apis-docs/otteam/ot-node-api/v2.0#/network/post_network_query)
+```javascript
+GET http://NODE_IP:PORT/api/latest/network/query/responses/response_id
+```
 
-### Local Knowledge Graph querying - Graph Trail
+To fetch a dataset included in the response run
+
+```javascript
+POST http://NODE_IP:PORT/api/latest/network/read_export
+body {
+ form-data {
+  "reply_id": "51cceff0-82fd-43c6-98a2-4cd64ca45ff9",
+  "data_set_id": "0x14fa53714b8b0bca2e0048f5ab715f32edadb2279708d54dd176f5a21820b668",
+  "standard_id": "GRAPH"
+ }
+}
+```
+
+
+
+### Local Knowledge Graph querying - Trail
 
 #### Identifier types and values and trail depth
 
@@ -51,17 +56,21 @@ Querying the local knowledge graph performs a graph traversal starting from a pa
 The result of the trail represents all objects found on the trail \(the historical provenance trail spanning all datasets\), along with an array that indicates which datasets those objects belong to.
 
 ```text
-{
-  "identifier_types": [
-    "ean13"
-  ],
-  "identifier_values": [
-    "83213023"
-  ],
-  "depth": 5,
-  "connection_types": [
-    "EPC"
-  ]
+POST http://NODE_IP:PORT/api/latest/trail
+
+body {
+   raw {
+    "identifier_types": [
+      "ean13"
+    ],
+    "identifier_values": [
+      "123456"
+    ],
+    "depth": 5,
+    "connection_types": [
+      "EPC"
+    ]
+  }
 }
 ```
 
@@ -73,11 +82,13 @@ The `depth` parameter determines how far from the starting vertex will the trave
 
 `connection_types` is an array which serves as a filter in the graph trail traversal operation. When observing a vertex in the graph, only the vertices which are connected to the currently observed vertex by a relation type which is in the `connection_types` array will be visited and included in the graph.
 
-[![../\_images/connection-example1.png](https://docs.origintrail.io/en/latest/_images/connection-example1.png)](https://docs.origintrail.io/en/latest/_images/connection-example1.png)
+![../\_images/connection-example1.png](https://docs.origintrail.io/en/latest/_images/connection-example1.png)
 
 **Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1` and not `rel_type_2`, a traversal starting from vertex **B** would return vertex **A** and would not return vertex **C**
 
-In order to avoid backtracking in the trail and attaching superfluous information, a vertex will not be visited if the relation types on the path to that vertex are the same two times in a row.[![../\_images/connection-example2.png](https://docs.origintrail.io/en/latest/_images/connection-example2.png)](https://docs.origintrail.io/en/latest/_images/connection-example2.png)
+In order to avoid backtracking in the trail and attaching superfluous information, a vertex will not be visited if the relation types on the path to that vertex are the same two times in a row.
+
+![../\_images/connection-example2.png](https://docs.origintrail.io/en/latest/_images/connection-example2.png)
 
 **Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1`, a traversal starting from vertex **A** would return vertex **B** and would not return vertex **C**
 
@@ -89,39 +100,57 @@ Reach is an optional parameter that can be used to modify which objects are retr
 
 The default behaviour can be explicitly called by setting the `reach` parameter value to `narrow` .
 
-The trail API details are explained on the following link
+Check the [developer reference](references.md) for API details
 
-## Querying via specific query interfaces
+#### 
+
+### Exporting whole datasets
+
+Datasets can be exported via the export API \(both in the DKG client and node API\).
+
+Using DKG client:
+
+```javascript
+// exporting a dataset
+dkg.export(dataset_id).then((export_result)=>{
+    console.log(export_result);
+});
+```
+
+Using the API
+
+```javascript
+POST http://NODE_IP:PORT/api/latest/export
+body{
+ raw{
+  "dataset_id": "0x317a39f0c0bc7f24e4a27c53fca8d180156f0704351b4fd6454e981e1eb1b0a5",
+ }
+}
+```
+
+### Complex queries
+
+Complex queries are currently supported on the level of the local graph database instance. The workflow for interacting with the DKG is to:
+
+* discover information on the network via the network query
+* remote-fetch information in the local graph DB
+* query the graph DB locally
+
+The upcoming versions of ot-node will add further support for complex querying \(SPARQL, GraphQL, Pathquery\), however the intention of the OriginTrail DKG is not to reinvent the wheel, rather leverage existing graph solutions in the space - OriginTrail is about connecting, rather than replacing. To stay up to date, check out the official project [roadmap](https://origintrail.io/roadmap).
 
 
+
+## Querying via specific query interfaces \(coming soon\)
 
 ### **GraphQL interface**
 
-* GraphQL endpoints will be available in the upcoming version v6
-* explain why graphql makes sense
-* refer to interface implementation plan
-* "More information soon"
+The ability to add GraphQL endpoints will be available in the upcoming version v6.
 
 ### **EPCIS interface**
 
-* Explain what the EPCIS interface is, link to the EPCIS documentation
-* explain which EPCIS queries can be done today
-* link to upcoming EPCIS 2.0 standard
-* refer to interface implementation plan
-* more info soon
+The OT DKG has been supporting the GS1 EPCIS standard and aims at providing an EPCIS interface in the future version. More information on EPCIS interfaces can be found [here](https://www.gs1.org/sites/default/files/docs/epc/EPCIS-Standard-1.2-r-2016-09-29.pdf)
 
 ### **SPARQL interface**
 
-* explain SPARQL, refer to Semantic web documentation
-* explain it is coming soon
-
-{% embed url="https://app.swaggerhub.com/apis-docs/otteam/ot-node-api/v2.0\#/trail" %}
-
-
-
-
-
-
-
-
+The ability to create SPARQL endpoints will be available in the upcoming version v6.
 
