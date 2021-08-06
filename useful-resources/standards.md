@@ -1,4 +1,4 @@
 # Standards
 
-Links relevant to standards + short explanation
+lorem ipsum
 
