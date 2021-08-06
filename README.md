@@ -52,5 +52,4 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 * [Twitter](https://twitter.com/origin_trail)
 * [Facebook](https://www.facebook.com/origintrail/)
-* [Telegram](https://t.me/origintrail_info)
 
