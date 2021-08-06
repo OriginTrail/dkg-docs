@@ -82,13 +82,13 @@ The `depth` parameter determines how far from the starting vertex will the trave
 
 `connection_types` is an array which serves as a filter in the graph trail traversal operation. When observing a vertex in the graph, only the vertices which are connected to the currently observed vertex by a relation type which is in the `connection_types` array will be visited and included in the graph.
 
-![../\_images/connection-example1.png](https://docs.origintrail.io/en/latest/_images/connection-example1.png)
+![../\_images/connection-example1.png](../.gitbook/assets/5.jpg)
 
 **Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1` and not `rel_type_2`, a traversal starting from vertex **B** would return vertex **A** and would not return vertex **C**
 
 In order to avoid backtracking in the trail and attaching superfluous information, a vertex will not be visited if the relation types on the path to that vertex are the same two times in a row.
 
-![../\_images/connection-example2.png](https://docs.origintrail.io/en/latest/_images/connection-example2.png)
+![../\_images/connection-example2.png](../.gitbook/assets/6.jpg)
 
 **Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1`, a traversal starting from vertex **A** would return vertex **B** and would not return vertex **C**
 
