@@ -18,8 +18,8 @@ OriginTrail is a community driven project with lots of great community created r
 
 ## Websites
 
-* [otnode.com](https://otnode.com) - community instructions created by Milian
-* [origintrailexplained.com](https://origintrailexplained.info/) - excellent explainer website created by Kirk
+* [otnode.com](https://otnode.com) - community node installation and maintenance instructions and tips created by Milian
+* [origintrailexplained.com](https://origintrailexplained.info/) - excellent OriginTrail explainer website created by Kirk
 
 {% hint style="info" %}
 Want your resource featured here, or know about something that should be part of this list? Feel free to add it yourself by creating a pull request to this page on [Github](https://github.com/OriginTrail/dkg-docs)
