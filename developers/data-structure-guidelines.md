@@ -70,7 +70,7 @@ In cases that whole attribute needs to be hidden this option should be used `vis
 </VocabularyElement>
 ```
 
-For more information on structuring XML EPCIS files, see [XML EPCIS Examples](https://docs.origintrail.io/en/latest/Data-Structure/xml-epcis-examples.html#xml-epcis-examples)
+For more information on structuring XML EPCIS files, see [XML EPCIS Examples](https://github.com/OriginTrail/ot-node/tree/develop/importers/epcis_12_examples)
 
 ### Verifiable credentials data model
 
