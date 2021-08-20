@@ -30,6 +30,7 @@
   * [Testnet Installation](running-nodes/node-setup/testnet-installation.md)
 * [Compensation parameters setup](running-nodes/node-price.md)
 * [Nodes Backup & Restore](running-nodes/backup.md)
+* [DKG persistance mechanisms](running-nodes/dkg-persistance-mechanisms.md)
 
 ## Useful Resources
 

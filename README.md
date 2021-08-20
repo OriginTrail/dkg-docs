@@ -50,6 +50,7 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 **Follow the latest announcements:**
 
-* [Twitter](https://twitter.com/origin_trail)
+* [Project Twitter account](https://twitter.com/origin_trail)
+* [Developers Twitter account](https://twitter.com/OriginTrailDev)
 * [Facebook](https://www.facebook.com/origintrail/)
 
