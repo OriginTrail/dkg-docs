@@ -28,6 +28,14 @@ These features have been introduced in v5 and are editable in the node configura
 }
 ```
 
+You will know that pruning command has been started when you see this log:
+
+`trace - Dataset pruning command started. This command will work in background and will try to remove expired and low estimated value datasets.`
+
+{% hint style="info" %}
+This feature has been tested on ot-node inside docker container using default Graph database implementation. If you are running the "dockerless" node or you changed default Graph database location inside docker container, make sure that correct path to database engine folder containing all data is set in configuration under database -&gt; engine\_folder\_path.
+{% endhint %}
+
 {% hint style="info" %}
 Important: For low estimated value dataset pruning to kick in, make sure that your default backup folder doesn't contain any node data backups. This check is performed in order to provide the most precise free hard drive space estimation.
 

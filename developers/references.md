@@ -28,6 +28,11 @@ The Postman API collection file can be found [here](https://github.com/OriginTra
 * TRAC token \(bridged\): [0xEddd81E0792E764501AaE206EB432399a0268DB5](https://blockscout.com/xdai/mainnet/tokens/0xEddd81E0792E764501AaE206EB432399a0268DB5/token-transfers)
 * ODN hub contract: 0xB4Cf5D3876FA929706A87F3B4042C741dcb3d688
 
+**Polygon \(polygon:mainnet\):**
+
+* TRAC token \(bridged\): 0xA7b98d63a137bF402b4570799ac4caD0BB1c4B1c
+* ODN hub contract: 0xe5FC9F71F8e378448c0BD0Fb8E1fb879654E3fbb
+
 ### Testnet
 
 **Ethereum Rinkeby 1 \(ethr:rinkeby:1\)**
@@ -44,6 +49,11 @@ The Postman API collection file can be found [here](https://github.com/OriginTra
 
 * TRAC token: 0x18F75411914f45665f352908F1D3D11f0Eb01f2A
 * ODN hub contract: 0x17324BdB37c607c0742e95eFc98973221E1eB9b4
+
+**Polygon \(polygon:testnet\)**
+
+* TRAC token: 0x10eD38C374b2F5bBA3E85b9c478B9fc69559355B
+* ODN hub contract: 0x819deeadF9c4a1d5199435Fa195ff7824CCd687e
 
 **Parachain \(parachain:testnet\)**
 

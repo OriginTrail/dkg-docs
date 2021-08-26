@@ -20,9 +20,23 @@ Once you have sorted out your xDAI and xTRAC, you need to add the Custom RPC for
 
 ![](https://otnode.com/wp-content/uploads/2021/03/image-7.png)
 
-Then you will see on your Metamask xDAI entry when you click on the dropdown on the top where it says Ethereum Mainnet:
+Then you will see on your Metamask xDAI entry when you click on the dropdown on the top where it says Ethereum Mainnet.
 
-![](https://otnode.com/wp-content/uploads/2021/03/image-12.png)
+## Obtain Matic and TRAC on Polygon
+
+First you need Matic, which is the gas fee currency on Polygon. There are multiple ways to obtain it:
+
+* Matic can be obtained by following some options described by the Polygon community here: [https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token.](https://docs.matic.network/docs/develop/network-details/gas-token/)
+
+Second, TRAC on Polygon is required. You can convert TRAC tokens to TRAC on Polygon using the [PoS Bridge](https://wallet.matic.network/login?next=%2F%20). Instructions how to use the bridge can be found [here](https://medium.com/stakingbits/guide-to-using-the-matic-bridge-to-bridge-tokens-from-ethereum-to-polygon-c3e66cf3d334). 
+
+The custom token contract to see TRAC on Polygon on Metamask on Polygon is:
+
+```text
+0xA7b98d63a137bF402b4570799ac4caD0BB1c4B1c
+```
+
+Once you have sorted out your Matic and TRAC on Polygon, you need to add the Custom RPC for Polygon, so you can switch your Metamask to the Polygon network. Easiest way to do it is to go to: [https://chainlist.org/](https://chainlist.org/) , click on Connect Wallet in the top right corner and then click “Add me to metamask” button on Polygon section.![](https://otnode.com/wp-content/uploads/2021/03/image-7.png)
 
 ## Prepare the wallets
 
@@ -30,7 +44,7 @@ Then you will see on your Metamask xDAI entry when you click on the dropdown on 
 
 Create a new wallet using Mycrypto or Metamask and export the private key, which will be used for the operational wallet for the node. Deposit the amount of xTRAC you want to have on your node, which is minimum 3000 xTRAC to secure the network + additional xTRAC to be able to accept jobs. Currently around 5-6k total xTRAC is recommended. Also send 0.1 xDAI for gas fees during installation and litigation responses.
 
-If you want to run nodes on Ethereum as well, the process is the same, however each blockchain network requires separate TRAC and ETH for gas fees \(i.e. 3-5k+ TRAC on ETH for the Ethereum node ; 3-5k xTRAC for the xDAI node, etc.\). Also deposit 0.1 ETH for gas fees to the operational wallet.
+If you want to run nodes on Ethereum or Polygon as well, the process is the same, however each blockchain network requires separate TRAC and ETH for gas fees \(i.e. 3-5k+ TRAC on ETH for the Ethereum node ; 3-5k xTRAC for the xDAI node, etc.\). Also deposit 0.1 ETH for gas fees to the operational wallet.
 
 ## **Configure the server**
 
@@ -116,7 +130,7 @@ Paste the below in the text editing tool and update "xxxxxx" entries accordingly
 
 save the file by **Ctrl-O** and **Enter** and exit by **Ctrl-X**
 
-If you are going to run nodes on Ethereum as well, use the following configuration file:
+If you are going to run nodes on Ethereum and Polygon as well, use the following configuration file:
 
 ```text
 {
@@ -140,7 +154,16 @@ If you are going to run nodes on Ethereum as well, use the following configurati
          "node_wallet": "xxxxxxxx",
          "node_private_key": "xxxxxxxx",
          "management_wallet": "xxxxxxxx"
-       } 
+       },
+       {
+         "blockchain_title": "Polygon",
+         "network_id": "polygon:mainnet",
+         "dh_price_factor" : "1",
+         "node_wallet": "xxxxxxxx",
+         "node_private_key": "xxxxxxxx",
+         "management_wallet": "xxxxxxxx",
+         "rpc_server_url": "xxxxxxxxxxx"
+       }
      ]
    },
    "network": {
@@ -171,13 +194,13 @@ i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your nod
 
 **dh\_max\_holding\_time\_in\_minutes** – the maximum length of jobs you are willing to accept in minutes \(for example 550 000 is to accept one year jobs\).
 
-"rpc\_server\_url" - only for Ethereum, this one is not required for xDAI: your RPC solution, most use a free one from Infura. Here is a quick guide:
+"rpc\_server\_url" - only for Ethereum and Polygon, this one is not required for xDAI: your RPC solution, most use a free one from Infura. Here is a quick guide:
 
 **Register on Infura**
 
 \*\*\*\*![This image has an empty alt attribute; its file name is image-2.png](https://ot.wittymermaid.com/wp-content/uploads/2020/06/image-2.png)
 
-Go to [Infura.io](https://infura.io/) and create an account. Create a project, copy the HTTPS link under Endpoints – Mainnet. It should look like: https://mainnet.infura.io/v3/xxxxxxxxxxxxxxxxxxxxxx where the xxxxxxxx are your specific link
+Go to [Infura.io](https://infura.io/) and create an account. Create a project, copy the HTTPS link under Endpoints – Mainnet or Polygon mainnet. It should look like: https://mainnet.infura.io/v3/xxxxxxxxxxxxxxxxxxxxxx where the xxxxxxxx are your specific link
 
 ![This image has an empty alt attribute; its file name is image-8.png](https://ot.wittymermaid.com/wp-content/uploads/2020/06/image-8.png)
 
@@ -223,6 +246,12 @@ ERC725 identity **on Ethereum**
 docker cp otnode:/ot-node/data/erc725_identity.json ~/erc725_identity.json
 ```
 
+ERC725 identity **on Polygon**
+
+```text
+docker cp otnode:/ot-node/data/erc725_identity.json ~/polygon_erc725_identity.json
+```
+
 Node ID
 
 ```text
@@ -241,6 +270,12 @@ Ethereum
 
 ```text
 more erc725_identity.json
+```
+
+Polygon
+
+```text
+more polygon_erc725_identity.json
 ```
 
 Node Identity
