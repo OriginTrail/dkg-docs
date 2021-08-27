@@ -26,7 +26,7 @@ Then you will see on your Metamask xDAI entry when you click on the dropdown on 
 
 First you need Matic, which is the gas fee currency on Polygon. There are multiple ways to obtain it:
 
-* Matic can be obtained by following some options described by the Polygon community here: [https://www.xdaichain.com/about-xdai/faqs/xdai-native-coin-token.](https://docs.matic.network/docs/develop/network-details/gas-token/)
+* Matic can be obtained by following some options described by the Polygon community here: [https://docs.matic.network/docs/develop/network-details/gas-token/](https://docs.matic.network/docs/develop/network-details/gas-token/)
 
 Second, TRAC on Polygon is required. You can convert TRAC tokens to TRAC on Polygon using the [PoS Bridge](https://wallet.matic.network/login?next=%2F%20). Instructions how to use the bridge can be found [here](https://medium.com/stakingbits/guide-to-using-the-matic-bridge-to-bridge-tokens-from-ethereum-to-polygon-c3e66cf3d334). 
 
