@@ -302,9 +302,7 @@ ufw allow 22/tcp && ufw allow 3000 && ufw allow 5278 && ufw allow 8900 && yes | 
 ufw status
 ```
 
-![](https://otnode.com/wp-content/uploads/2020/07/image-5.png)
-
-\*\*\*\*
+### \*\*\*\*
 
 ### **10. Deposit additional xTRAC from your management wallet to the node**
 
