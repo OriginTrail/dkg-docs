@@ -16,6 +16,7 @@ You can find the [LNS Github repo here ](https://github.com/OriginTrail/ot-node/
 ### Prerequisites
 
 * You need to have arangodb 3.5 installed and running on your machine. Find the appropriate binary on the [ArangoDB website](https://download.arangodb.com/arangodb35/index.html)
+* You need to use Node.js version **9.11.2**
 * You should have ot-node dependencies installed with the `npm install` command
 * Install ganache-cli locally \( `npm install -g ganache-cli` \)
 * generate a .env file in the ot-node root folder and insert `NODE_ENV=development` for local development
