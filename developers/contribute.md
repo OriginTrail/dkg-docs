@@ -6,7 +6,7 @@ OriginTrail software is completely source code and open for contributions by any
 
 If you’re new to OT node development, there are guides in this documentation for getting your dev environment set up. If you’re not sure where to start, get in touch with the devs in the discord channel. Please follow the below procedure to contribute new code or fixes:
 
-* Create a separate branch, by branching of the relevant branch \(we generally follow [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)\)
+* Create a separate branch, by branching of the relevant branch (we generally follow [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow))
 * Create a pull request to develop branch containing a description of what your code does and how it can be tested
 * Provide at least a minimum of unit tests
 * Please include descriptive commit messages
@@ -19,7 +19,7 @@ If you report an issue, we’d love to see a pull request attached. Please keep 
 
 As contributors and maintainers of the OT Node project, we pledge to respect everyone who contributes by posting issues, updating documentation, submitting pull requests, providing feedback in comments, and any other activities.
 
-Communication through any of our channels \(GitHub, Discord, Twitter, etc.\) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
+Communication through any of our channels (GitHub, Discord, Twitter, etc.) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
 
 We promise to extend courtesy and respect to everyone involved in this project regardless of gender, gender identity, sexual orientation, disability, age, race, ethnicity, religion, or level of experience. We expect anyone contributing to the project to do the same.
 
@@ -40,4 +40,3 @@ If you find a bug in the source code, you can help us by submitting an issue to 
 ### Want a Doc Fix?
 
 These docs are available publicly on this [Github repo](https://github.com/OriginTrail/dkg-docs). Feel free to propose updates through Pull requests or open discussions through Github issues
-

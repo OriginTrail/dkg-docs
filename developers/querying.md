@@ -6,9 +6,9 @@ The DKG querying entails both data discovery and graph querying. Therefore Origi
 
 ### Network query
 
-Querying the DKG is done using the network query API. It is used to look up all datasets containing a specific identifier \(such as a supply chain identifier, like a GS1 barcode or RFID value\).
+Querying the DKG is done using the network query API. It is used to look up all datasets containing a specific identifier (such as a supply chain identifier, like a GS1 barcode or RFID value).
 
-The query request is an array values that identify a particular object in a dataset. These identifiers are sent as an array of objects, where the `path` parameter is the type of identifier \(such as ean13, sgtin, sgln, or id for general identifier\), `value` is the identifier value or an array of possible values, and `opcode` is either EQ or IN, depending on whether the queried object identifier needs to equal or belong to the given value parameter.
+The query request is an array values that identify a particular object in a dataset. These identifiers are sent as an array of objects, where the `path` parameter is the type of identifier (such as ean13, sgtin, sgln, or id for general identifier), `value` is the identifier value or an array of possible values, and `opcode` is either EQ or IN, depending on whether the queried object identifier needs to equal or belong to the given value parameter.
 
 **Using DKG client**
 
@@ -26,7 +26,7 @@ dkg.networkQuery([{
 
 **Using the API**
 
-```text
+```
 POST http://NODE_IP:PORT/api/latest/network/query
 {
   "query":
@@ -40,9 +40,9 @@ POST http://NODE_IP:PORT/api/latest/network/query
 }
 ```
 
-The returned responses contain query\_id which can be used to fetch responses from network query.
+The returned responses contain query_id which can be used to fetch responses from network query.
 
-To view responses call the query response API, as a parameter use query\_id returned from network query API call.
+To view responses call the query response API, as a parameter use query_id returned from network query API call.
 
 ```javascript
 GET http://NODE_IP:PORT/api/latest/network/query/responses/{query_id}
@@ -79,7 +79,7 @@ body {
 }
 ```
 
-The returned responses contain handler\_id which can be used to download fetched dataset using export\_result route \(explained in this document\).
+The returned responses contain handler_id which can be used to download fetched dataset using export_result route (explained in this document).
 
 ### Local Knowledge Graph querying - Trail
 
@@ -87,7 +87,7 @@ The returned responses contain handler\_id which can be used to download fetched
 
 Querying the local knowledge graph performs a graph traversal starting from a particular vertex in the graph and traversing over the specified edge types.
 
-The result of the trail represents all objects found on the trail \(the historical provenance trail spanning all datasets\), along with an array that indicates which datasets those objects belong to.
+The result of the trail represents all objects found on the trail (the historical provenance trail spanning all datasets), along with an array that indicates which datasets those objects belong to.
 
 **Using DKG client**
 
@@ -107,7 +107,7 @@ dkg.trail({
 
 **Using the API**
 
-```text
+```
 POST http://NODE_IP:PORT/api/latest/trail
 
 body {
@@ -122,7 +122,7 @@ body {
 }
 ```
 
-`identifier_types` and `identifier_values` are two arrays used to determine the starting object of the trail traversal. Note that these two arrays must be of the same length, and will be paired in the order they were given \(first element of the `identifier_types` array corresponds to the first element of the `identifier_values` array, etc\).
+`identifier_types` and `identifier_values` are two arrays used to determine the starting object of the trail traversal. Note that these two arrays must be of the same length, and will be paired in the order they were given (first element of the `identifier_types` array corresponds to the first element of the `identifier_values` array, etc).
 
 The `depth` parameter determines how far from the starting vertex will the traversal go. If the depth is set to 0 the traversal will return only the objects identified by the given parameters.
 
@@ -140,7 +140,7 @@ In order to avoid backtracking in the trail and attaching superfluous informatio
 
 **Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1`, a traversal starting from vertex **A** would return vertex **B** and would not return vertex **C.**
 
-If the `connection_types` parameter is omitted, the entire graph is traversed \(to the specified depth\), without the backtracking prevention feature. It should be noted that the knowledge graph can be a highly dense graph, and traversing without filters can return extremely large results and might cause problems with node performance.
+If the `connection_types` parameter is omitted, the entire graph is traversed (to the specified depth), without the backtracking prevention feature. It should be noted that the knowledge graph can be a highly dense graph, and traversing without filters can return extremely large results and might cause problems with node performance.
 
 #### Reach parameter
 
@@ -150,7 +150,7 @@ The default behaviour can be explicitly called by setting the `reach` parameter 
 
 Check the [developer reference](references.md) for API details
 
-#### 
+####
 
 ### Exporting whole datasets
 
@@ -176,7 +176,7 @@ body{
 }
 ```
 
-The returned responses contain handler\_id which can be used to download exported dataset using export\_result route.
+The returned responses contain handler_id which can be used to download exported dataset using export_result route.
 
 ```javascript
 GET http://NODE_IP:PORT/api/latest/export/result/{handler_id}
@@ -190,11 +190,11 @@ Complex queries are currently supported on the level of the local graph database
 * remote-fetch information in the local graph DB
 * query the graph DB locally
 
-The upcoming versions of ot-node will add further support for complex querying \(SPARQL, GraphQL, Pathquery\), however the intention of the OriginTrail DKG is not to reinvent the wheel, rather leverage existing graph solutions in the space - OriginTrail is about connecting, rather than replacing. To stay up to date, check out the official project [roadmap](https://origintrail.io/roadmap).
+The upcoming versions of ot-node will add further support for complex querying (SPARQL, GraphQL, Pathquery), however the intention of the OriginTrail DKG is not to reinvent the wheel, rather leverage existing graph solutions in the space - OriginTrail is about connecting, rather than replacing. To stay up to date, check out the official project [roadmap](https://origintrail.io/roadmap).
 
 
 
-## Querying via specific query interfaces \(coming soon\)
+## Querying via specific query interfaces (coming soon)
 
 ### **GraphQL interface**
 
@@ -207,4 +207,3 @@ The OT DKG has been supporting the GS1 EPCIS standard and aims at providing an E
 ### **SPARQL interface**
 
 The ability to create SPARQL endpoints will be available in the upcoming version v6.
-

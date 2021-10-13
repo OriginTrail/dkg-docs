@@ -8,9 +8,9 @@ This document will show how the GS1 EPCIS data is represented in the Knowledge G
 
 #### Document data
 
-EPCIS guideline suggests “Standard Business Document Header” SBDH standard for description of the document data. This part of data is in the EPCIS Header part of the file. It has basic information about the file \(sender, receiver, ID, purpose…\).
+EPCIS guideline suggests “Standard Business Document Header” SBDH standard for description of the document data. This part of data is in the EPCIS Header part of the file. It has basic information about the file (sender, receiver, ID, purpose…).
 
-Although OriginTrail is the receiver of the file and it can be named as receiver \(SBDH allows defining multiple receivers\) it is not necessary to include this. Receiver is some entity involved in a business process, not in the data processing.
+Although OriginTrail is the receiver of the file and it can be named as receiver (SBDH allows defining multiple receivers) it is not necessary to include this. Receiver is some entity involved in a business process, not in the data processing.
 
 This data will be stored separately from the dataset contents within the knowledge graph, as metadata.
 
@@ -26,17 +26,16 @@ Main focus of the EPCIS standard is formalizing description of event data that a
 
 Event data describes interactions between entities described with master data. OriginTrail distinguishes between two types of event data:
 
-* **Internal events** are related to processes of object movements or transformations \(production, repackaging etc\) within the scope of one supply chain participant’s business location \(read point\) as part of some business process.
+*   **Internal events** are related to processes of object movements or transformations (production, repackaging etc) within the scope of one supply chain participant’s business location (read point) as part of some business process.
 
-  > For example, this could be production or assembly that results in output which is used for further production or for sale \(repackaging, labeling etc\). The important distinction is that the ownership of event objects does not change during the event.
-
-* **External events** are related to processes between different supply chain participants \(sales/purchases, transport\). They represent processes where the jurisdiction or ownership of the objects gets changed in the supply chain. These types of events should use [connectors](https://app.gitbook.com/@origintrail/s/origintrail/~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#connector-objects) for connecting between parties.
+    > For example, this could be production or assembly that results in output which is used for further production or for sale (repackaging, labeling etc). The important distinction is that the ownership of event objects does not change during the event.
+* **External events** are related to processes between different supply chain participants (sales/purchases, transport). They represent processes where the jurisdiction or ownership of the objects gets changed in the supply chain. These types of events should use [connectors](https://app.gitbook.com/@origintrail/s/origintrail/\~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#connector-objects) for connecting between parties.
 
 #### How an event is represented in the graph
 
 When converting an EPCIS Visibility Event to graph, a central vertex will be created for the event. Any event identifiers will be created as separate vertices in the graph, connected to the event vertex, in order to enable connection to other entities with the same identifier.
 
-Any observed objects in the event \(the name varies depending on the event type, see the EPCIS data structure\) will be added as separate vertices, with the relation created from the object to the event. This enables the objects to connect to their respective master data if available, as the information about the object will be set as that object’s properties.
+Any observed objects in the event (the name varies depending on the event type, see the EPCIS data structure) will be added as separate vertices, with the relation created from the object to the event. This enables the objects to connect to their respective master data if available, as the information about the object will be set as that object’s properties.
 
 If the event contains bizLocation and/or readPoint attributes, those will be created as separate vertices, similar to the way it is done for observed objects in the event.
 
@@ -44,7 +43,7 @@ Another part of a visibility event that generates a separate vertex is a connect
 
 #### Connectors in EPCIS files
 
-If the event is external \(see above\) and it should be connected to an event from another data creator’s dataset \(such as a business partner\) the bizTransactionList should have a bizTransaction attribute containing a connection identifier and the corresponding data creator’s decentralized identity \(currently supported is the ethereum ERC-725 identity\), separated by a colon. This will create a connector vertex in the graph, and connect it to the event it belongs to.
+If the event is external (see above) and it should be connected to an event from another data creator’s dataset (such as a business partner) the bizTransactionList should have a bizTransaction attribute containing a connection identifier and the corresponding data creator’s decentralized identity (currently supported is the ethereum ERC-725 identity), separated by a colon. This will create a connector vertex in the graph, and connect it to the event it belongs to.
 
 Once the corresponding data creator creates an event containing the same connection identifier with your decentralized identity, an analogous connector vertex will be created and the two connector vertices will be connected together. This feature enables querying the knowledge graph data belonging to multiple parties.
 
@@ -70,7 +69,7 @@ In cases that whole attribute needs to be hidden this option should be used `vis
 </VocabularyElement>
 ```
 
-For more information on structuring XML EPCIS files, see [XML EPCIS Examples](https://github.com/OriginTrail/ot-node/tree/develop/importers/epcis_12_examples)
+For more information on structuring XML EPCIS files, see [XML EPCIS Examples](https://github.com/OriginTrail/ot-node/tree/develop/importers/epcis\_12\_examples)
 
 ### Verifiable credentials data model
 
@@ -78,16 +77,16 @@ What is a Verifiable Credential
 
 If we look at the physical world, a credential might consist of:
 
-* Information related to identifying the subject of the credential \(for example, a photo, name, or identification number\)
-* Information related to the issuing authority \(for example, a city government, national agency, or certification body\)
-* Information related to the type of credential this is \(for example, a Dutch passport, an American driving license, or a health insurance card\)
-* Information related to specific attributes or properties being asserted by the issuing authority about the subject \(for example, nationality, the classes of vehicle entitled to drive, or date of birth\)
+* Information related to identifying the subject of the credential (for example, a photo, name, or identification number)
+* Information related to the issuing authority (for example, a city government, national agency, or certification body)
+* Information related to the type of credential this is (for example, a Dutch passport, an American driving license, or a health insurance card)
+* Information related to specific attributes or properties being asserted by the issuing authority about the subject (for example, nationality, the classes of vehicle entitled to drive, or date of birth)
 * Evidence related to how the credential was derived
-* Information related to constraints on the credential \(for example, expiration date, or terms of use\).
+* Information related to constraints on the credential (for example, expiration date, or terms of use).
 
 A verifiable credential can represent all of the same information that a physical credential represents. The addition of technologies, such as digital signatures, makes verifiable credentials more tamper-evident and more trustworthy than their physical counterparts.
 
-Verifiable credentials data can be placed inside generic OT-JSON object \([OT-JSON Structure](https://app.gitbook.com/@origintrail/s/origintrail/~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#ot-json-structure)\) with an additional identifier and can be queried using local knowledge graph querying system \([Querying the data](https://app.gitbook.com/@origintrail/s/origintrail/~/drafts/-MgPv4CITeigfakFttFc/developers/querying)\).
+Verifiable credentials data can be placed inside generic OT-JSON object ([OT-JSON Structure](https://app.gitbook.com/@origintrail/s/origintrail/\~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#ot-json-structure)) with an additional identifier and can be queried using local knowledge graph querying system ([Querying the data](https://app.gitbook.com/@origintrail/s/origintrail/\~/drafts/-MgPv4CITeigfakFttFc/developers/querying)).
 
 More detailed information about verifiable credentials can be found here:
 
@@ -99,7 +98,7 @@ More detailed information about verifiable credentials can be found here:
 
 In order to have a database and standard agnostic data structure, the protocol utilizes a generic data structure format called OT-JSON, based on JSON-LD. The guiding principles for OT-JSON development are:
 
-* 1-1 convertibility from/to higher level data formats \(XML, JSON, CSV, … \)
+* 1-1 convertibility from/to higher level data formats (XML, JSON, CSV, … )
 * 1-1 convertibility from/to generic graph data structure.
 * Generic, use case agnostic graph representation
 * Extendable for future use cases of the protocol
@@ -107,19 +106,19 @@ In order to have a database and standard agnostic data structure, the protocol u
 
 #### OT-JSON essentials
 
-An OT-JSON document represents a dataset as a graph of interconnected dataset objects \(use case entities\), such as actors, products, batches, etc. together with relations between them. Structure of dataset objects is generally defined, but extendable to support new use cases.
+An OT-JSON document represents a dataset as a graph of interconnected dataset objects (use case entities), such as actors, products, batches, etc. together with relations between them. Structure of dataset objects is generally defined, but extendable to support new use cases.
 
-> * **Objects** - Use case entities \(products, locations, vehicles, people, … \)
-> * **Relations** - Relations between use case entities \(INSTANCE\_OF, BELONGS\_TO, … \)
-> * **Metadata** - Data about dataset \(integrity hashes, data creator, signature, transpilation data, ….\)
+> * **Objects** - Use case entities (products, locations, vehicles, people, … )
+> * **Relations** - Relations between use case entities (INSTANCE_OF, BELONGS_TO, … )
+> * **Metadata** - Data about dataset (integrity hashes, data creator, signature, transpilation data, ….)
 >
-> **Example:** Assuming that use case request is to connect products with factories there they are produced. Entities of the use case are Product and Producer. These entities are represented as **objects** in OT-JSON format. Product can have **relation** PRODUCED\_BY with producer that produces it and the producer can have **relation** HAS\_PRODUCED with the product. Product and producer have unique identifiers Product1, Producer1 respectively.
+> **Example:** Assuming that use case request is to connect products with factories there they are produced. Entities of the use case are Product and Producer. These entities are represented as **objects** in OT-JSON format. Product can have **relation** PRODUCED_BY with producer that produces it and the producer can have **relation** HAS_PRODUCED with the product. Product and producer have unique identifiers Product1, Producer1 respectively.
 
 ![../\_images/datalayer4.png](../.gitbook/assets/4.jpg)
 
 _Figure 2._ Diagram of the example entities and relations
 
-```text
+```
 {
     "@graph": [
         {
@@ -188,23 +187,23 @@ _Figure 3._ OT-JSON graph representing example entities
 
 Here are some essential conceptual things related to the data in a dataset. Try to fit example of book as an object from the physical world with its information as the data.
 
-> * Every OT-JSON entity \(Object\) is identified with at least one unique identifier. An identifier is represented as a non-empty string.
+> * Every OT-JSON entity (Object) is identified with at least one unique identifier. An identifier is represented as a non-empty string.
 > * Entities can have multiple identifiers along with the unique one. For example: EAN13, LOT number and time of some event.
 > * Data can be connected by arbitrary relations. A user can define own relations that can be used with others defined by standard.
 > * Relations are directed from one entity to another. It is possible to create multiple relations between two objects in both directions.
 
-For more specific information about OT-JSON, see [OT-JSON Structure](https://app.gitbook.com/@origintrail/s/origintrail/~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#ot-json-structure)
+For more specific information about OT-JSON, see [OT-JSON Structure](https://app.gitbook.com/@origintrail/s/origintrail/\~/drafts/-MgPv4CITeigfakFttFc/developers/data-structure-guidelines#ot-json-structure)
 
 ### Web of Things
 
-WoT \(Web of Things\) provides mechanisms to formally describe IoT interfaces to allow IoT \(Internet of Things\) devices and services to communicate with each other, independent of their underlying implementation, and across multiple networking protocols. The OriginTrail node supports the WOT standard for importing and connecting data in the knowledge graph.
+WoT (Web of Things) provides mechanisms to formally describe IoT interfaces to allow IoT (Internet of Things) devices and services to communicate with each other, independent of their underlying implementation, and across multiple networking protocols. The OriginTrail node supports the WOT standard for importing and connecting data in the knowledge graph.
 
 The goals of the WOT are to improve the interoperability and usability of the IoT. Through a collaboration involving many stakeholders over the past years, several building blocks have been identified that address these challenges. The first set of WoT building blocks is now defined:
 
-* the Web of Things \(WoT\) Thing Description
-* the Web of Things \(WoT\) Binding Templates
-* the Web of Things \(WoT\) Scripting API
-* the Web of Things \(WoT\) Security and Privacy Considerations
+* the Web of Things (WoT) Thing Description
+* the Web of Things (WoT) Binding Templates
+* the Web of Things (WoT) Scripting API
+* the Web of Things (WoT) Security and Privacy Considerations
 
 More details for defined building blocks and use cases are available on the following link: [https://www.w3.org/TR/wot-architecture/](https://www.w3.org/TR/wot-architecture/)
 
@@ -221,7 +220,7 @@ All these resources are semantically described by simple models serialized in JS
 
 #### How an event is represented in the graph
 
-When converting a WOT file to graph, a central vertex will be created for the device described in the file. All sensor measurements will be created as separate vertices in the graph, connected to the main event vertex, in order to enable connection to the rest of the graph via the main vertex. There are two custom vertices denoted as readPoint and observerdLocation. These two vertices are considered as connectors which connect data with the rest of the graph. An example of WOT file with connectors is available on the following link: [https://github.com/OriginTrail/ot-node/blob/develop/importers/use\_cases/perutnina\_kakaxi/kakaxi.wot](https://github.com/OriginTrail/ot-node/blob/develop/importers/use_cases/perutnina_kakaxi/kakaxi.wot)
+When converting a WOT file to graph, a central vertex will be created for the device described in the file. All sensor measurements will be created as separate vertices in the graph, connected to the main event vertex, in order to enable connection to the rest of the graph via the main vertex. There are two custom vertices denoted as readPoint and observerdLocation. These two vertices are considered as connectors which connect data with the rest of the graph. An example of WOT file with connectors is available on the following link: [https://github.com/OriginTrail/ot-node/blob/develop/importers/use_cases/perutnina_kakaxi/kakaxi.wot](https://github.com/OriginTrail/ot-node/blob/develop/importers/use_cases/perutnina_kakaxi/kakaxi.wot)
 
 
 
@@ -231,13 +230,13 @@ When converting a WOT file to graph, a central vertex will be created for the de
 
 OT-JSON dataset is the native serialization of objects that are transferred in the OriginTrail network. The structure of dataset consists of **dataset header**, **dataset graph** and **dataset signature**. Dataset header contains dataset metadata, such as dataset timestamp, data creator information, transpiler data, verification schemes versions etc. Identifier of a dataset is calculated as a SHA3-256 digest of dataset header and dataset graph sections. Dataset signature is calculated for the canonicalized form of the entire, unsigned, dataset object.
 
-![../\_images/graphrepresentation.png](https://docs.origintrail.io/en/latest/_images/graphrepresentation.png)
+![../\_images/graphrepresentation.png](https://docs.origintrail.io/en/latest/\_images/graphrepresentation.png)
 
 _Figure 1._ Graphic representation of a dataset
 
 **Example**
 
-```text
+```
 {
   "@type": "Dataset",
   "@id": "0x123456789034567894567890",
@@ -251,7 +250,7 @@ _Example 1._ Dataset structure example
 
 #### Attribute definitions
 
-![../\_images/table4.1.png](https://docs.origintrail.io/en/latest/_images/table4.1.png)
+![../\_images/table4.1.png](https://docs.origintrail.io/en/latest/\_images/table4.1.png)
 
 #### Dataset header
 
@@ -267,7 +266,7 @@ Dataset header contains metadata information about dataset, transpilation proces
 > * Data creator
 > * Transpilation information
 
-```text
+```
 {
     "datasetHeader": {
         "OTJSONVersion": "1.0",
@@ -342,7 +341,7 @@ Validation schemas are objects that provide information on how to validate speci
 
 #### Attribute definitions
 
-![../\_images/table4.2.png](https://docs.origintrail.io/en/latest/_images/table4.2.png)
+![../\_images/table4.2.png](https://docs.origintrail.io/en/latest/\_images/table4.2.png)
 
 ### Hash structure
 
@@ -352,37 +351,37 @@ OT-JSON service supports 1.0 and 1.1 versions which differ in sorting algorithms
 
 The following sequence diagrams describe the usage of sort methods for both versions of OT-JSON during the import process.
 
-![../\_images/sortOtJson1.0.png](https://docs.origintrail.io/en/latest/_images/sortOtJson1.0.png)
+![../\_images/sortOtJson1.0.png](https://docs.origintrail.io/en/latest/\_images/sortOtJson1.0.png)
 
 _Figure 2._ Import process for OT-JSON version 1.0
 
-![../\_images/sortOtJson1.1.png](https://docs.origintrail.io/en/latest/_images/sortOtJson1.1.png)
+![../\_images/sortOtJson1.1.png](https://docs.origintrail.io/en/latest/\_images/sortOtJson1.1.png)
 
 _Figure 3._ Import process for OT-JSON version 1.1
 
 ### Signing
 
-When the unsigned OT-JSON document is formed, resulting object is canonicalized \(serialized\) and prepared for signing by data creator. Dataset signing process can be done using different signature schemas/suits. The canonicalization of OT-JSON dataset is creating sorted stringified JSON object.
+When the unsigned OT-JSON document is formed, resulting object is canonicalized (serialized) and prepared for signing by data creator. Dataset signing process can be done using different signature schemas/suits. The canonicalization of OT-JSON dataset is creating sorted stringified JSON object.
 
-Structure of a signature object is defined according to selected signature suit specifications. Signing is done using Koblitz elliptic curve signatures \(Ethereum private keys\).
+Structure of a signature object is defined according to selected signature suit specifications. Signing is done using Koblitz elliptic curve signatures (Ethereum private keys).
 
 Also, id using JSON-LD as a format for OT-JSON, Koblitz 2016 signature suit can be used.
 
 **Example of JSON-LD Koblitz signature 2016 Signature Suite**
 
-The entire JSON-LD dataset document is canonicalized using URDNA2015 algorithm for JSON-LD canonicalization. Resulting N-QUADS data is digested using SHA256 algorithm. Finally, the digest is signed with ECDSA private key using Koblitz elliptic curve. Koblitz curve is used for generating Ethereum and Bitcoin wallets, so private keys for Ethereum and Bitcoin wallets can be used for signing.[![../\_images/kobilitzSignature.png](https://docs.origintrail.io/en/latest/_images/kobilitzSignature.png)](https://docs.origintrail.io/en/latest/_images/kobilitzSignature.png)
+The entire JSON-LD dataset document is canonicalized using URDNA2015 algorithm for JSON-LD canonicalization. Resulting N-QUADS data is digested using SHA256 algorithm. Finally, the digest is signed with ECDSA private key using Koblitz elliptic curve. Koblitz curve is used for generating Ethereum and Bitcoin wallets, so private keys for Ethereum and Bitcoin wallets can be used for signing.[![../\_images/kobilitzSignature.png](https://docs.origintrail.io/en/latest/\_images/kobilitzSignature.png)](https://docs.origintrail.io/en/latest/\_images/kobilitzSignature.png)
 
 _Figure 4._ Diagram of dataset signing procedure using Koblitz Signature 2016 Signature Suite
 
 ### Object structure
 
-OT-JSON dataset objects represent entities which can be interconnected with relations in a graph-like form. Every OT-JSON dataset object is required to have it’s **unique identifier** \(@id\), **type** \(@type\) and **signature**. Other required sections include **identifiers**, **properties** and **relations**, while optional sections include attachments.
+OT-JSON dataset objects represent entities which can be interconnected with relations in a graph-like form. Every OT-JSON dataset object is required to have it’s **unique identifier** (@id), **type** (@type) and **signature**. Other required sections include **identifiers**, **properties** and **relations**, while optional sections include attachments.
 
 #### Attribute definitions
 
-![../\_images/table4.3.png](https://docs.origintrail.io/en/latest/_images/table4.3.png)
+![../\_images/table4.3.png](https://docs.origintrail.io/en/latest/\_images/table4.3.png)
 
-```text
+```
 {
     "@id": "<UNIQUE_OBJECT_IDENTIFIER>",
     "@type": "<OBJECT_TYPE>",
@@ -405,7 +404,7 @@ _Example 3._ Dataset object structure template
 
 Object identifiers section is a list of objects that represent identifier values for certain object. Identifier objects contain information about identifier **type**, identifier **value**, and optionally **validation schema** that is used for validating identity.
 
-```text
+```
 {
     "identifiers": [
         {
@@ -426,7 +425,7 @@ _Example 4._ Example of identifiers section
 
 #### Attribute definitions
 
-![../\_images/table4.4.png](https://docs.origintrail.io/en/latest/_images/table4.4.png)
+![../\_images/table4.4.png](https://docs.origintrail.io/en/latest/\_images/table4.4.png)
 
 #### Object properties section
 
@@ -434,9 +433,9 @@ Object properties section is defined as container for all object property attrib
 
 #### Object Related objects section
 
-Related objects section is a list of objects that represent information about other objects that are related with the object and definitions of those relations. Objects in related objects list contain information about **linkedObject** \(@id\), **related object type** \(@type\), **relation direction**, **properties** containing additional information about the relation and **relation type**.
+Related objects section is a list of objects that represent information about other objects that are related with the object and definitions of those relations. Objects in related objects list contain information about **linkedObject** (@id), **related object type** (@type), **relation direction**, **properties** containing additional information about the relation and **relation type**.
 
-```text
+```
 {
     "relations": [
         {
@@ -456,13 +455,13 @@ _Example 5._ Example of related entities section
 
 #### Attribute definitions
 
-![../\_images/table4.5.png](https://docs.origintrail.io/en/latest/_images/table4.5.png)
+![../\_images/table4.5.png](https://docs.origintrail.io/en/latest/\_images/table4.5.png)
 
 #### Attachments section
 
-Attachments section contains a list of objects that represent metadata about files that are related with the object. Objects in attachment section list contain information about related **file id** \(@id, as URI\), **attachment type** \(@type\), **attachment role** \(such as certificate, lab results, etc.\), **attachment description**, **attachment file type**, and **SHA3-256** digest of a file content.
+Attachments section contains a list of objects that represent metadata about files that are related with the object. Objects in attachment section list contain information about related **file id** (@id, as URI), **attachment type** (@type), **attachment role** (such as certificate, lab results, etc.), **attachment description**, **attachment file type**, and **SHA3-256** digest of a file content.
 
-```text
+```
 {
     "attachments": [
         {
@@ -484,13 +483,13 @@ _Example 6._ Example of attachments section
 
 #### Attribute definitions
 
-![../\_images/table4.6.png](https://docs.origintrail.io/en/latest/_images/table4.6.png)
+![../\_images/table4.6.png](https://docs.origintrail.io/en/latest/\_images/table4.6.png)
 
 ### Connector objects
 
 Special type of graph objects are **Connectors**. Connectors are used to connect data from multiple datasets of possibly different data providers. Every connector contains _connectionId_ attribute, which represents value on which connectors are connected to each other. Also, the list expectedConnectionCreators contains list of data creators that are allowed to connect to a connector.
 
-```text
+```
 {
     "@id": "urn:uuid:1230c84b-5cd6-45a7-b6b5-da7ab8b6f2dd",
     "@type": "otConnector",
@@ -539,7 +538,7 @@ The differences between OT-JSON versions are in how data is ordered when generat
 
 Note
 
-**OT-JSON 1.2** was introduced in order to sort the dataset when generating a signature. Along with that, sorting of non user generated arrays \(such as identifiers and relations\) was reimplemented.
+**OT-JSON 1.2** was introduced in order to sort the dataset when generating a signature. Along with that, sorting of non user generated arrays (such as identifiers and relations) was reimplemented.
 
 The `datasetID` for OT-JSON 1.1 is generated out of the `@graph` section after **sorting every object and array, including the the** `@graph` **array, without changing the order of any array inside of a properties object**.
 
@@ -551,7 +550,7 @@ The `signature` for OT-JSON 1.1 is generated out of the dataset when the `datase
 
 Note
 
-**OT-JSON 1.1** was introduced in order to have the same sorting method for generating hashes. Along with that, sorting of arrays was removed in order to prevent unintentionally changing user defined data \(such as properties of OT-JSON objects\).
+**OT-JSON 1.1** was introduced in order to have the same sorting method for generating hashes. Along with that, sorting of arrays was removed in order to prevent unintentionally changing user defined data (such as properties of OT-JSON objects).
 
 The `datasetID` for OT-JSON 1.1 is generated out of the `@graph` section after **sorting every object in the the** `@graph` **array, without changing the order of any array**.
 
@@ -571,9 +570,7 @@ The `signature` for OT-JSON 1.0 is generated out of the dataset after first **so
 
 Below is an image visually showing the differences of how the data integrity values are calculated between the OT-JSON versions
 
-![../\_images/sorting-process-overview.png](https://docs.origintrail.io/en/latest/_images/sorting-process-overview.png)
-
-
+![../\_images/sorting-process-overview.png](https://docs.origintrail.io/en/latest/\_images/sorting-process-overview.png)
 
 
 

@@ -6,17 +6,15 @@ In similar fashion, the data holders can choose how well paid jobs they want to 
 
 The Lambda setting is present in the node configuration file, which can be accessed through:
 
-```text
+```
 nano /root/.origintrail_noderc
 ```
 
-The actual setting is called dh\_price\_factor and can be setup for each separate blockchain network.
+The actual setting is called dh_price_factor and can be setup for each separate blockchain network.
 
-```text
+```
 "dh_price_factor" : "1",
 ```
-
-
 
 
 

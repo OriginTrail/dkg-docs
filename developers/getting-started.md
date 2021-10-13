@@ -9,4 +9,3 @@ Welcome to the hands-on tutorial on how to set up and use OriginTrail. In order 
 We will start by setting up the local development environment, which will entail a local network of OriginTrail nodes. You are also free to use one of the testnets for development, however we encourage running a local network for ease of use and full control of your environment.
 
 This section will be constantly updated with resources available for developers, including examples of codes to be reused, development tools, community built solutions, etc.
-

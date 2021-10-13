@@ -8,7 +8,7 @@ OriginTrail is a community driven project with lots of great community created r
 
 ## Tools
 
-* [OTHub](https://othub.origin-trail.network/) - OriginTrail monitoring hub developed by Luke Skinner
+* [OTHub](https://othub.origin-trail.network) - OriginTrail monitoring hub developed by Luke Skinner
 * [OT-AnsibleSetup](https://github.com/calr0x/OT-Ansible-Files-and-Playbooks) by calr0x - Node management Automation through Ansible
 * [OT-Docksucker](https://github.com/calr0x/OT-DockSucker) by calr0x - Migrating a docker node to dockerless one
 * [OT-SlimRestore](https://github.com/calr0x/OT-Slim-Restore) by calr0x - Improved backup restoration
@@ -19,13 +19,11 @@ OriginTrail is a community driven project with lots of great community created r
 ## Websites
 
 * [otnode.com](https://otnode.com) - community node installation and maintenance instructions and tips created by Milian
-* [origintrailexplained.com](https://origintrailexplained.info/) - excellent OriginTrail explainer website created by Kirk
+* [origintrailexplained.com](https://origintrailexplained.info) - excellent OriginTrail explainer website created by Kirk
 
 {% hint style="info" %}
 Want your resource featured here, or know about something that should be part of this list? Feel free to add it yourself by creating a pull request to this page on [Github](https://github.com/OriginTrail/dkg-docs)
 {% endhint %}
-
-
 
 
 

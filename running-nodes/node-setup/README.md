@@ -9,23 +9,21 @@ If you need help installing OT Node or troubleshooting your installation, you ca
 
 The recommended minimum specifications are:
 
-* minimum of 2Gb of RAM memory \(+1 GB Swap to ensure any future needs are covered\)
+* minimum of 2Gb of RAM memory (+1 GB Swap to ensure any future needs are covered)
 * 2.2 GHz CPU
 * at least 20 GB storage space
 
-NOTE: For best performance on running a node we recommend usage of services like [Digital Ocean.](https://www.digitalocean.com/)
+NOTE: For best performance on running a node we recommend usage of services like [Digital Ocean.](https://www.digitalocean.com)
 
 Currently there are two blockchains available to setup node on. One VPS server can host node on each blockchain.
 
 You need the following tokens to setup a node:
 
-* for a testnet node:
+*   for a testnet node:
 
-  > * For Ethereum: at least 3000 test TRAC tokens and at least 0.05 test Ether
-  > * For xDai: at least 3000 test xTRAC tokens and at least 0.01 xDai
+    > * For Ethereum: at least 3000 test TRAC tokens and at least 0.05 test Ether
+    > * For xDai: at least 3000 test xTRAC tokens and at least 0.01 xDai
+*   for a mainnet node:
 
-* for a mainnet node:
-
-  > * For Ethereum: at least 3500+ TRAC tokens and at least 0.1 Ether
-  > * For xDai: at least 3500+ xTRAC tokens and at least 0.01 xDai
-
+    > * For Ethereum: at least 3500+ TRAC tokens and at least 0.1 Ether
+    > * For xDai: at least 3500+ xTRAC tokens and at least 0.01 xDai

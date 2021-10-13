@@ -20,4 +20,3 @@ Therefore OriginTrail technology development follows the below principles:
 * **Privacy-by-Design approach** - according to the [7 Foundational Principles](https://www.ipc.on.ca/wp-content/uploads/Resources/7foundationalprinciples.pdf) of Privacy by Design
 * **Development transparency** - towards the OriginTrail Ecosystem community of developers, node runners and businesses
 * **Open Source Development** - according to [Open Source Software](https://en.wikipedia.org/wiki/Open-source_model) principle
-

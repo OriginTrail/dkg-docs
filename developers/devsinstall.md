@@ -10,17 +10,17 @@ Traditionally knowledge graphs ingest information from various sources using cus
 
 In contrast to that, OriginTrail is a permissionless system, so **anybody can add data to the Decentralized Knowledge Graph** by publishing it on the network. This means that queries performed on the DKG will be executed on records from all participants, with several characteristics:
 
-* each graph element has an associated, verifiable publisher identity \(DID\)
-* each published dataset has a corresponding set of cryptographic proofs on a blockchain \(multiple are supported\), using which every graph element can be verified for integrity \(provenance from a particular dataset and immutability\)
-* each dataset has a specified data lifespan \(and might be pruned on the network after it's expiry\)
-* semantic data can be queried based on IRIs \(more in [Querying](querying.md) section\)
+* each graph element has an associated, verifiable publisher identity (DID)
+* each published dataset has a corresponding set of cryptographic proofs on a blockchain (multiple are supported), using which every graph element can be verified for integrity (provenance from a particular dataset and immutability)
+* each dataset has a specified data lifespan (and might be pruned on the network after it's expiry)
+* semantic data can be queried based on IRIs (more in [Querying](querying.md) section)
 
 Another key differentiator of the DKG is that it is comprised of two "levels"
 
 * public decentralized DKG as shared state
-* private, node-specific KGs, connected with the DKG \(shareable by the data owner\)
+* private, node-specific KGs, connected with the DKG (shareable by the data owner)
 
-Dapps can use just the public DKG, just private KG \(they can access\), or can use both synergistically. More information is available in the [querying](querying.md) section.
+Dapps can use just the public DKG, just private KG (they can access), or can use both synergistically. More information is available in the [querying](querying.md) section.
 
 {% hint style="info" %}
 This section assumes you have [set up your development environment](setting-up-development-environment.md).
@@ -57,7 +57,7 @@ The above code will prepare a simple dataset comprised of a single object with a
 
 #### Without simplePrepare
 
-Below is an example of a linked data OT-JSON serialization, with two objects and their defined relation in a @graph array. \(OT-JSON is an internal serialization format and is intended for protocol level communication, while specific standard data models such as RDF, GS1 EPCIS, JSON-LD are translated to it via _transpilers_\).
+Below is an example of a linked data OT-JSON serialization, with two objects and their defined relation in a @graph array. (OT-JSON is an internal serialization format and is intended for protocol level communication, while specific standard data models such as RDF, GS1 EPCIS, JSON-LD are translated to it via _transpilers_).
 
 ```javascript
 const dataset = {
@@ -112,7 +112,7 @@ dkg.publish(dataset).then((publish_result)=>{
 
 #### Using the direct node API
 
-Publish the above dataset in two steps, by putting it in a _file.json._ First we use the _**import**_ API
+Publish the above dataset in two steps, by putting it in a _file.json. _First we use the _**import**_ API
 
 ```javascript
 POST http://NODE_IP:PORT/api/latest/import
@@ -124,7 +124,7 @@ body {
 }
 ```
 
-As a response you will get a handler\_id. This will be used to inquire about operation execution on the OT node.
+As a response you will get a handler_id. This will be used to inquire about operation execution on the OT node.
 
 ```javascript
 {
@@ -132,13 +132,13 @@ As a response you will get a handler\_id. This will be used to inquire about ope
 }
 ```
 
-The import route ingests different _standard\_ids_, being a GRAPH in this example. Currently the following data models are supported:
+The import route ingests different _standard_ids_, being a GRAPH in this example. Currently the following data models are supported:
 
-| Standard | standard\_id |
-| :--- | :--- |
-| GS1 EPCIS 1.2 | GS1-EPCIS |
-| W3C Web of Things | WOT |
-| Generic OT-JSON serialization | GRAPH |
+| Standard                      | standard_id |
+| ----------------------------- | ----------- |
+| GS1 EPCIS 1.2                 | GS1-EPCIS   |
+| W3C Web of Things             | WOT         |
+| Generic OT-JSON serialization | GRAPH       |
 
 The import operation can last for some time, so to check for its operational status, query the import result API
 
@@ -166,7 +166,7 @@ The status field will be in _COMPLETED_ state when the import is done, otherwise
 At this moment, the dataset has been ingested and processed by your node, which in this case is considered a DC node. To publish it on the network, use the _replicate_ route using the dataset id obtained from the import result call. 
 
 {% hint style="info" %}
-Note: publishing datasets on the network requires TRAC tokens, available on the desired blockchain. Please refer to supported blockchains and their associated identifiers \(such as _xdai:mainnet_\) in the [Developer reference](references.md).
+Note: publishing datasets on the network requires TRAC tokens, available on the desired blockchain. Please refer to supported blockchains and their associated identifiers (such as _xdai:mainnet_) in the [Developer reference](references.md).
 {% endhint %}
 
 ```javascript
@@ -179,7 +179,7 @@ body{
 }
 ```
 
-In the same pattern, as this operation can last for some time on the network, we can query the current status by calling the replicate route with the corresponding handler\_id returned by the _replicate_ API response:
+In the same pattern, as this operation can last for some time on the network, we can query the current status by calling the replicate route with the corresponding handler_id returned by the _replicate_ API response:
 
 ```javascript
 GET http://NODE_IP:PORT/api/latest/replicate/result/{handler_id}
@@ -189,7 +189,7 @@ Note that importing and replication can be done separately and at different time
 
 ### What kinds of datasets can be published?
 
-The node application layer envisions support for multiple data conversion services \(transpilers\), which enable anyone to create a converter and share it in an interoperable way with the rest of the network. New data models are expected to be added over time to help share multi-modal data through a shared, verifiable graph interface. More information on how to create converters will be available in a specific section.
+The node application layer envisions support for multiple data conversion services (transpilers), which enable anyone to create a converter and share it in an interoperable way with the rest of the network. New data models are expected to be added over time to help share multi-modal data through a shared, verifiable graph interface. More information on how to create converters will be available in a specific section.
 
 ### How do my published datasets get stored on the ODN?
 
@@ -197,7 +197,7 @@ Publishing a dataset creates a network data holding offer on the ODN and the nod
 
 ### How about permissioned data?
 
-The ODN is designed to support private \(non-replicated\) graph data, connected with the public DKG. In this way, the DKG enables data that cannot be shared publicly to be part of the same global graph and accessible at the discretion of the data owner. At this point in time, it is possible to add permissioned data as a property object in the OT-JSON graph objects, by including a _permissioned\_data_ property as indicated below. Permissioned data trading and monetization features are currently in development, with support for blockchain purchase verification by implementing the [FairSwap](https://eprint.iacr.org/2018/740.pdf) blockchain protocol.
+The ODN is designed to support private (non-replicated) graph data, connected with the public DKG. In this way, the DKG enables data that cannot be shared publicly to be part of the same global graph and accessible at the discretion of the data owner. At this point in time, it is possible to add permissioned data as a property object in the OT-JSON graph objects, by including a _permissioned_data_ property as indicated below. Permissioned data trading and monetization features are currently in development, with support for blockchain purchase verification by implementing the [FairSwap](https://eprint.iacr.org/2018/740.pdf) blockchain protocol.
 
 ```javascript
 {
@@ -229,7 +229,7 @@ The ODN is designed to support private \(non-replicated\) graph data, connected 
 
 The upcoming v6 update will extend the permissioning options to whole subgraphs and RDF triples.
 
-### 
+###
 
 ### What are connectors?
 
@@ -237,13 +237,11 @@ Connectors are a special type of vertex in the graph that enable traversing data
 
 When creating a connector it is required to specify a connection identifier and the ERC-725 identity address of the data creator for whom the connection is intended.
 
-If the connector vertices have matching identifiers, and the connector vertices were created by the corresponding dataset creators \(which is determined by the dataset creator’s identity address\), an additional set of two “connector” graph edges is created to enable a cryptographically verifiable connection between the two respective subgraphs.
+If the connector vertices have matching identifiers, and the connector vertices were created by the corresponding dataset creators (which is determined by the dataset creator’s identity address), an additional set of two “connector” graph edges is created to enable a cryptographically verifiable connection between the two respective subgraphs.
 
 Note that the connection between two connector vertices will only be created if both data creators specified the other’s ERC-725 node identity in the connector
 
-> **Example:** Data creator Alice replicates a dataset containing a connector CONN1 designated for a data creator Bob. When Bob adds a dataset containing a connector CONN1 designated for Alice to the local knowledge graph, a pair of edges \(one for each direction\) with relation type `CONNECTION_DOWNSTREAM` will be created between two connector vertices.
+> **Example:** Data creator Alice replicates a dataset containing a connector CONN1 designated for a data creator Bob. When Bob adds a dataset containing a connector CONN1 designated for Alice to the local knowledge graph, a pair of edges (one for each direction) with relation type `CONNECTION_DOWNSTREAM` will be created between two connector vertices.
 
 For specific information on how to create connectors depending on the data standard, see [Data Structure Guidelines](data-structure-guidelines.md)
-
-
 
