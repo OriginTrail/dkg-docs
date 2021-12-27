@@ -57,7 +57,7 @@ npm install forever -g
 
 ```
 apt install tcllib
-ppt install mysql-server
+apt install mysql-server
 service mysql start
 mysql -u root  -e "CREATE DATABASE operationaldb /*\!40100 DEFAULT CHARACTER SET utf8 */;" 
 mysql -u root -e "update mysql.user set plugin = 'mysql_native_password' where User='root';"
