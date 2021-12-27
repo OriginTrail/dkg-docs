@@ -56,7 +56,7 @@ npm install forever -g
 #### Step 3 - Install **mysql** and create a local operational database
 
 ```
-aapt install tcllib
+apt install tcllib
 ppt install mysql-server
 service mysql start
 mysql -u root  -e "CREATE DATABASE operationaldb /*\!40100 DEFAULT CHARACTER SET utf8 */;" 
