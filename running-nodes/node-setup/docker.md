@@ -28,7 +28,7 @@ First you need Matic, which is the gas fee currency on Polygon. There are multip
 
 * Matic can be obtained by following some options described by the Polygon community here: [https://docs.matic.network/docs/develop/network-details/gas-token/](https://docs.matic.network/docs/develop/network-details/gas-token/)
 
-Second, TRAC on Polygon is required. You can convert TRAC tokens to TRAC on Polygon using the [PoS Bridge](https://wallet.matic.network/login?next=%2F). Instructions how to use the bridge can be found [here](https://medium.com/stakingbits/guide-to-using-the-matic-bridge-to-bridge-tokens-from-ethereum-to-polygon-c3e66cf3d334). 
+Second, TRAC on Polygon is required. You can convert TRAC tokens to TRAC on Polygon using the [PoS Bridge](https://wallet.matic.network/login?next=%2F). Instructions how to use the bridge can be found [here](https://medium.com/stakingbits/guide-to-using-the-matic-bridge-to-bridge-tokens-from-ethereum-to-polygon-c3e66cf3d334).&#x20;
 
 The custom token contract to see TRAC on Polygon on Metamask on Polygon is:
 
@@ -128,7 +128,7 @@ Paste the below in the text editing tool and update "xxxxxx" entries accordingly
 }
 ```
 
-save the file by **Ctrl-O** and **Enter **and exit by **Ctrl-X**
+save the file by **Ctrl-O** and **Enter** and exit by **Ctrl-X**
 
 If you are going to run nodes on Ethereum and Polygon as well, use the following configuration file:
 
@@ -178,23 +178,23 @@ If you are going to run nodes on Ethereum and Polygon as well, use the following
 
 **Explanation:**
 
-i**nitial_deposit_amount** – amount of xTRAC you want to deposit on your node during the installation. (5000000000000000000000 is equal to 5000 xTRAC)
+i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your node during the installation. (5000000000000000000000 is equal to 5000 xTRAC)
 
-**node_wallet** – Operational wallet public address
+**node\_wallet** – Operational wallet public address
 
-**node_private_key** – Operational wallet private key. As you will store just 0.1 xDAI there for gas fees, even if server gets compromised, the hacker would have access only to this small amount
+**node\_private\_key** – Operational wallet private key. As you will store just 0.1 xDAI there for gas fees, even if server gets compromised, the hacker would have access only to this small amount
 
 **Note**: If your private key start with **0x**, remove these two characters when adding it to the configuration file.
 
-**management_wallet **– this is your management wallet public address – ideally this should be a wallet on your cold storage.
+**management\_wallet** – this is your management wallet public address – ideally this should be a wallet on your cold storage.
 
-**dh_price_factor** – this is the setting of your lambda value – should be less than 1 if you want to accept most of all current jobs. The lower the value, the less paid jobs you are willing to accept.
+**dh\_price\_factor** – this is the setting of your lambda value – should be less than 1 if you want to accept most of all current jobs. The lower the value, the less paid jobs you are willing to accept.
 
-**Hostname **– this is your server IP, which you can find in the notification e-mail when you setup the VPS
+**Hostname** – this is your server IP, which you can find in the notification e-mail when you setup the VPS
 
-**dh_max_holding_time_in_minutes** – the maximum length of jobs you are willing to accept in minutes (for example 550 000 is to accept one year jobs).
+**dh\_max\_holding\_time\_in\_minutes** – the maximum length of jobs you are willing to accept in minutes (for example 550 000 is to accept one year jobs).
 
-"rpc_server_url" - only for Ethereum and Polygon, this one is not required for xDAI: your RPC solution, most use a free one from Infura. Here is a quick guide:
+"rpc\_server\_url" - only for Ethereum and Polygon, this one is not required for xDAI: your RPC solution, most use a free one from Infura. Here is a quick guide:
 
 **Register on Infura**
 
@@ -234,19 +234,19 @@ docker restart otnode
 
 ### **7. Create identities into files on the root directory**
 
-ERC725 identity** on xDAI**
+ERC725 identity **on xDAI**
 
 ```
 docker cp otnode:/ot-node/data/xdai_erc725_identity.json ~/xdai_erc725_identity.json
 ```
 
-ERC725 identity** on Ethereum**
+ERC725 identity **on Ethereum**
 
 ```
 docker cp otnode:/ot-node/data/erc725_identity.json ~/erc725_identity.json
 ```
 
-ERC725 identity** on Polygon**
+ERC725 identity **on Polygon**
 
 ```
 docker cp otnode:/ot-node/data/erc725_identity.json ~/polygon_erc725_identity.json
@@ -310,7 +310,7 @@ If you want to deposit more than the initial amount, you can deposit the amount 
 
 The current recommended amount is 1000-2000 TRAC/xTRAC in addition to the 3000 TRAC/xTRAC required to secure the network, and they have to be present on your management wallet.
 
-Login with your **ERC725 Identit**y which you extracted above and the **operational wallet public address **and follow the instructions on the page. You need metamask to initiate the deposit.
+Login with your **ERC725 Identit**y which you extracted above and the **operational wallet public address** and follow the instructions on the page. You need metamask to initiate the deposit.
 
 Then on the top left section “Deposit TRAC to Your Node”, enter the amount of TRAC present on your management wallet, to be deposited to the contract for your node, and a set of 2 transactions have to be processed. Metamask popup will show up for you to confirm you want to process the transaction. Once the first transaction is processed, a second popup will show for the second transaction.
 

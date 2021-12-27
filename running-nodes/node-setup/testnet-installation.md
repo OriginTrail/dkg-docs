@@ -4,33 +4,33 @@
 
 In order to receive TRAC tokens on the testnet, please join our discord and post your wallet in the #testnet-discussion channel requesting TRAC from the faucet bot. Discord faucet bot operates on **Rinkeby**, **Kovan** and **Polygon** test networks. You can use the following commands in order to request test TRAC tokens:
 
-**Rinkeby**: !fundme_rinkeby_ <_wallet_address>
+**Rinkeby**: !fundme\_rinkeby _<_wallet\_address>
 
-**Polygon**: !fundme_mumbai _<_wallet_address>
+**Polygon**: !fundme\_mumbai _<_wallet\_address>
 
-**Kovan**: !fundme_kovan _<_wallet_address>
+**Kovan**: !fundme\_kovan _<_wallet\_address>
 
-Bot will provide you with **6000 TRAC** tokens on the network of your choice. 
+Bot will provide you with **6000 TRAC** tokens on the network of your choice.&#x20;
 
-**Note: **_In order to see the tokens in your Metamask, you will have to switch it to the desired network and "Import token" by entering the token contract address._ 
+**Note:** _In order to see the tokens in your Metamask, you will have to switch it to the desired network and "Import token" by entering the token contract address._&#x20;
 
 ### Test TRAC token contracts:
 
 **Rinkeby:** 0x98d9a611ad1b5761bdc1daac42c48e4d54cf5882
 
-**Polygon testnet (Mumbai):** 0x10eD38C374b2F5bBA3E85b9c478B9fc69559355B 
+**Polygon testnet (Mumbai):** 0x10eD38C374b2F5bBA3E85b9c478B9fc69559355B&#x20;
 
-**Kovan testnet: ** 0x3C841844cFe11d3999eD5c0B0d1714cC1eBB23dc
+**Kovan testnet:** 0x3C841844cFe11d3999eD5c0B0d1714cC1eBB23dc
 
 ### **Bot help:**
 
-Ask our bot for help by executing the **!help **command and see the list of all networks and available interactions.
+Ask our bot for help by executing the **!help** command and see the list of all networks and available interactions.
 
 ## Prepare the wallets
 
 **Create operational wallet** and management wallets
 
-Create a new wallet using Mycrypto or Metamask and export the private key, which we will use for the operational wallet for the node. Deposit the amount of test TRAC you want to have on your node, which is minimum 3000 TRAC to secure the network + additional TRAC to be able to accept jobs. Make sure you also have at least 0.1 test ETH,KOVAN or MATIC in order for your node to be able to pay for the blockchain transactions. 
+Create a new wallet using Mycrypto or Metamask and export the private key, which we will use for the operational wallet for the node. Deposit the amount of test TRAC you want to have on your node, which is minimum 3000 TRAC to secure the network + additional TRAC to be able to accept jobs. Make sure you also have at least 0.1 test ETH,KOVAN or MATIC in order for your node to be able to pay for the blockchain transactions.&#x20;
 
 ## **Configure the server**
 
@@ -114,7 +114,7 @@ Paste the below in the text editing tool and update the xxxxx entries accordingl
 }
 ```
 
-save the file by **Ctrl-O** and **Enter **and exit by **Ctrl-X**
+save the file by **Ctrl-O** and **Enter** and exit by **Ctrl-X**
 
 If you are going to run nodes on Ethereum as well, use the following configuration file:
 
@@ -155,21 +155,21 @@ If you are going to run nodes on Ethereum as well, use the following configurati
 
 **Explanation:**
 
-i**nitial_deposit_amount** – amount of xTRAC you want to deposit on your node during the installation. (5000000000000000000000 is equal to 5000 xTRAC)
+i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your node during the installation. (5000000000000000000000 is equal to 5000 xTRAC)
 
-**node_wallet** – Operational wallet public address
+**node\_wallet** – Operational wallet public address
 
-**node_private_key** – Operational wallet private key. As you will store just 0.1 xDAI there for gas fees, even if server gets compromised, the hacker would have access only to this small amount
+**node\_private\_key** – Operational wallet private key. As you will store just 0.1 xDAI there for gas fees, even if server gets compromised, the hacker would have access only to this small amount
 
 **Note**: If your private key start with **0x**, remove these two characters when adding it to the configuration file.
 
-**management_wallet **– this is your management wallet public address – ideally this should be a wallet on your cold storage
+**management\_wallet** – this is your management wallet public address – ideally this should be a wallet on your cold storage
 
-**dh_price_factor** – this is the setting of your lambda value – should be less than 1 if you want to accept most of all current jobs. The lower the value, the less paid jobs you are willing to accept.
+**dh\_price\_factor** – this is the setting of your lambda value – should be less than 1 if you want to accept most of all current jobs. The lower the value, the less paid jobs you are willing to accept.
 
-**Hostname **– this is your server IP, which you can find in the notification e-mail when you setup the VPS
+**Hostname** – this is your server IP, which you can find in the notification e-mail when you setup the VPS
 
-**dh_max_holding_time_in_minutes** – the maximum length of jobs you are willing to accept in minutes (for example 550 000 is to accept one year jobs).
+**dh\_max\_holding\_time\_in\_minutes** – the maximum length of jobs you are willing to accept in minutes (for example 550 000 is to accept one year jobs).
 
 ### **5. Install JQ to validate whether the configuration file doesn’t contain any errors**
 
@@ -199,13 +199,13 @@ docker restart otnode
 
 ### **7. Create identities into files on the root directory**
 
-ERC725 identity** on xDAI**
+ERC725 identity **on xDAI**
 
 ```
 docker cp otnode:/ot-node/data/xdai_erc725_identity.json ~/xdai_erc725_identity.json
 ```
 
-ERC725 identity** on Ethereum**
+ERC725 identity **on Ethereum**
 
 ```
 docker cp otnode:/ot-node/data/erc725_identity.json ~/erc725_identity.json

@@ -1,2 +1,0 @@
-# Docker - COMING SOON
-

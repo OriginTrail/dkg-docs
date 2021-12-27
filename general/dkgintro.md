@@ -2,7 +2,7 @@
 
 ## What is a decentralized knowledge graph?
 
-A **decentralized knowledge graph (DKG)** is a global shared knowledge graph that is designed to benefit organizations and individuals by providing shared public infrastructure for knowledge exchange. 
+A **decentralized knowledge graph (DKG)** is a global shared knowledge graph that is designed to benefit organizations and individuals by providing shared public infrastructure for knowledge exchange.&#x20;
 
 The OriginTrail DKG:
 
@@ -11,10 +11,10 @@ The OriginTrail DKG:
 * enables Dapps with search, integration, analytics, AI and ML capabilities for any data source: blockchains, IPFS, enterprise systems, web services, personal devices
 * enables permissionless PUBLISH and QUERY operations
 
-The OriginTrail Decentralized Network is an implementation of the OriginTrail DKG. With the ODN therefore you can **query for data across a multitude of systems** (discovery), to **exchange it** via several data exchange protocols and** integrate it** in your own local knowledge graph or data store. 
+The OriginTrail Decentralized Network is an implementation of the OriginTrail DKG. With the ODN therefore you can **query for data across a multitude of systems** (discovery), to **exchange it** via several data exchange protocols and **integrate it** in your own local knowledge graph or data store.&#x20;
 
 {% hint style="info" %}
-_If you are looking to jump right into the code, head over to the _[_Getting Started_](../developers/getting-started.md)_ page._
+_If you are looking to jump right into the code, head over to the_ [_Getting Started_](../developers/getting-started.md) _page._
 {% endhint %}
 
 ## System architecture
@@ -25,7 +25,7 @@ We distinguish several layers of the DKG:
 * **data layer**, hosting the knowledge graph data, distributed across the network in separate instances of graph databases
 * **service layer**, implementing various core & extended services, such as authentication, standard interfaces and data pipelines
 * **the consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols (currently supporting Ethereum, xDai blockchain and the OriginTrail Polkadot Parachain)
-* **application layer, **encompassing both Dapps and traditional applications which utilize the OriginTrail DKG as part of their data flows.
+* **application layer,** encompassing both Dapps and traditional applications which utilize the OriginTrail DKG as part of their data flows.
 
 ![](<../.gitbook/assets/OriginTrail - Technical Stack.png>)
 
@@ -52,10 +52,10 @@ Therefore, a dataset published to the DKG by a DC node:
 * contains a cryptographic identity (DID) of the DC and DP, rooted in one of the supported blockchain networks
 * is structured as graph linked data
 * has a corresponding set of cryptographic fingerprints (graph merkle roots) stored immutably on a blockchain
-* is timestamped and has a "data lifespan" on the network 
+* is timestamped and has a "data lifespan" on the network&#x20;
 * is randomly replicated across peers based on a DKG content addressing scheme
 
-In this way, any given graph vertex or edge (triple) in the DKG can be verifiably associated with a publisher DID, its originating dataset and cryptographic hashes proving it being contained in that dataset, as well as enabling data integrity verification on-chain & off chain. 
+In this way, any given graph vertex or edge (triple) in the DKG can be verifiably associated with a publisher DID, its originating dataset and cryptographic hashes proving it being contained in that dataset, as well as enabling data integrity verification on-chain & off chain.&#x20;
 
 
 

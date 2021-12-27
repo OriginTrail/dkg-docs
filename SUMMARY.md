@@ -36,16 +36,3 @@
 ## Useful Resources
 
 * [Community created resources](useful-resources/community-resources.md)
-
-## v6 - launch
-
-* [v6 introduction](v6-launch/v6-introduction.md)
-* [v6 beta1 - Node installation guide](v6-launch/v6-beta1-node-installation-guide/README.md)
-  * [Setup instructions](v6-launch/v6-beta1-node-installation-guide/setup-instructions.md)
-  * [Docker - COMING SOON](v6-launch/v6-beta1-node-installation-guide/docker-coming-soon.md)
-  * [Setting up telemetry reporting - COMING SOON](v6-launch/v6-beta1-node-installation-guide/setting-up-telemetry-reporting-coming-soon.md)
-* [Using the DKG v6 beta1](v6-launch/using-the-dkg-v6-beta1/README.md)
-  * [Overview](v6-launch/using-the-dkg-v6-beta1/overview.md)
-  * [SDK / API](v6-launch/using-the-dkg-v6-beta1/sdk-api.md)
-  * [Integrating data over multiple Knowledge Graphs - COMING SOON](v6-launch/using-the-dkg-v6-beta1/integrating-data-over-multiple-knowledge-graphs-coming-soon.md)
-* [Tutorials - COMING SOON](v6-launch/tutorials-coming-soon.md)

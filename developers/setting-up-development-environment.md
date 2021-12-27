@@ -71,13 +71,13 @@ If you want to edit a single node's configuration, you can do it in two ways:
 
     \
 
-3.  Once your local network is set up, you can go ahead and access your nodes' API at:
+3. &#x20;Once your local network is set up, you can go ahead and access your nodes' API at:
    * DC node: http://0.0.0.0:8900
    * DH1 node: http://0.0.0.0:8901, DH2 node at http://0.0.0.0:8902 etc
 
 ### Using one of the testnets
 
-For a shared development environment, we recommend deploying DKG testnet nodes on the stable testnet - instructions can be found [here](../running-nodes/node-setup/). 
+For a shared development environment, we recommend deploying DKG testnet nodes on the stable testnet - instructions can be found [here](../running-nodes/node-setup/).&#x20;
 
 
 

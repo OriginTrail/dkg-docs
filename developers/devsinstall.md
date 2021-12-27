@@ -112,7 +112,7 @@ dkg.publish(dataset).then((publish_result)=>{
 
 #### Using the direct node API
 
-Publish the above dataset in two steps, by putting it in a _file.json. _First we use the _**import**_ API
+Publish the above dataset in two steps, by putting it in a _file.json._ First we use the _**import**_ API
 
 ```javascript
 POST http://NODE_IP:PORT/api/latest/import
@@ -124,7 +124,7 @@ body {
 }
 ```
 
-As a response you will get a handler_id. This will be used to inquire about operation execution on the OT node.
+As a response you will get a handler\_id. This will be used to inquire about operation execution on the OT node.
 
 ```javascript
 {
@@ -132,13 +132,13 @@ As a response you will get a handler_id. This will be used to inquire about oper
 }
 ```
 
-The import route ingests different _standard_ids_, being a GRAPH in this example. Currently the following data models are supported:
+The import route ingests different _standard\_ids_, being a GRAPH in this example. Currently the following data models are supported:
 
-| Standard                      | standard_id |
-| ----------------------------- | ----------- |
-| GS1 EPCIS 1.2                 | GS1-EPCIS   |
-| W3C Web of Things             | WOT         |
-| Generic OT-JSON serialization | GRAPH       |
+| Standard                      | standard\_id |
+| ----------------------------- | ------------ |
+| GS1 EPCIS 1.2                 | GS1-EPCIS    |
+| W3C Web of Things             | WOT          |
+| Generic OT-JSON serialization | GRAPH        |
 
 The import operation can last for some time, so to check for its operational status, query the import result API
 
@@ -163,7 +163,7 @@ An example response would look like this
 
 The status field will be in _COMPLETED_ state when the import is done, otherwise it will be _PENDING_. Once import is complete, you can observe the dataset id, graph root hash, original input dataset hash, import time and size.
 
-At this moment, the dataset has been ingested and processed by your node, which in this case is considered a DC node. To publish it on the network, use the _replicate_ route using the dataset id obtained from the import result call. 
+At this moment, the dataset has been ingested and processed by your node, which in this case is considered a DC node. To publish it on the network, use the _replicate_ route using the dataset id obtained from the import result call.&#x20;
 
 {% hint style="info" %}
 Note: publishing datasets on the network requires TRAC tokens, available on the desired blockchain. Please refer to supported blockchains and their associated identifiers (such as _xdai:mainnet_) in the [Developer reference](references.md).
@@ -179,7 +179,7 @@ body{
 }
 ```
 
-In the same pattern, as this operation can last for some time on the network, we can query the current status by calling the replicate route with the corresponding handler_id returned by the _replicate_ API response:
+In the same pattern, as this operation can last for some time on the network, we can query the current status by calling the replicate route with the corresponding handler\_id returned by the _replicate_ API response:
 
 ```javascript
 GET http://NODE_IP:PORT/api/latest/replicate/result/{handler_id}
@@ -197,7 +197,7 @@ Publishing a dataset creates a network data holding offer on the ODN and the nod
 
 ### How about permissioned data?
 
-The ODN is designed to support private (non-replicated) graph data, connected with the public DKG. In this way, the DKG enables data that cannot be shared publicly to be part of the same global graph and accessible at the discretion of the data owner. At this point in time, it is possible to add permissioned data as a property object in the OT-JSON graph objects, by including a _permissioned_data_ property as indicated below. Permissioned data trading and monetization features are currently in development, with support for blockchain purchase verification by implementing the [FairSwap](https://eprint.iacr.org/2018/740.pdf) blockchain protocol.
+The ODN is designed to support private (non-replicated) graph data, connected with the public DKG. In this way, the DKG enables data that cannot be shared publicly to be part of the same global graph and accessible at the discretion of the data owner. At this point in time, it is possible to add permissioned data as a property object in the OT-JSON graph objects, by including a _permissioned\_data_ property as indicated below. Permissioned data trading and monetization features are currently in development, with support for blockchain purchase verification by implementing the [FairSwap](https://eprint.iacr.org/2018/740.pdf) blockchain protocol.
 
 ```javascript
 {
