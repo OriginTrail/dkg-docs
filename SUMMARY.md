@@ -11,7 +11,7 @@
 * [Available networks (testnets, mainnet)](general/networks.md)
 * [Development principles](general/development-principles.md)
 
-## Using the DKG <a href="#developers" id="developers"></a>
+## Using the DKG v5 (current version) <a href="#developers" id="developers"></a>
 
 * [Getting started](developers/getting-started.md)
 * [Setting up your development environment](developers/setting-up-development-environment.md)
@@ -24,7 +24,7 @@
 * [Contribution](developers/contribute.md)
 * [Using NFT with the DKG](developers/using-nft-with-the-dkg.md)
 
-## Running DKG nodes <a href="#running-nodes" id="running-nodes"></a>
+## Running DKG nodes (v5 - current version) <a href="#running-nodes" id="running-nodes"></a>
 
 * [Setup instructions](running-nodes/node-setup/README.md)
   * [Mainnet Docker Installation](running-nodes/node-setup/docker.md)
@@ -32,6 +32,17 @@
 * [Compensation parameters setup](running-nodes/node-price.md)
 * [Nodes Backup & Restore](running-nodes/backup.md)
 * [DKG persistance mechanisms](running-nodes/dkg-persistance-mechanisms.md)
+
+## DKG v6 (upcoming version)
+
+* [🚀 Introduction to DKG v6 - start here](dkg-v6-upcoming-version/introduction-to-dkg-v6-start-here.md)
+* [Setup instructions (Dockerless)](dkg-v6-upcoming-version/setup-instructions-dockerless.md)
+* [Docker setup](dkg-v6-upcoming-version/docker-setup.md)
+* [Example flow: Publishing Product Dataset, Resolving, Searching on the DKG and Querying via SPARQL](dkg-v6-upcoming-version/example-flow-publishing-product-dataset-resolving-searching-on-the-dkg-and-querying-via-sparql.md)
+* [DKG v6 API](dkg-v6-upcoming-version/dkg-v6-api.md)
+* [Setting up DKG metrics reporting](dkg-v6-upcoming-version/setting-up-dkg-metrics-reporting.md)
+* [Integrating data over multiple Knowledge Graphs](dkg-v6-upcoming-version/integrating-data-over-multiple-knowledge-graphs.md)
+* [Tutorials](dkg-v6-upcoming-version/tutorials.md)
 
 ## Useful Resources
 
