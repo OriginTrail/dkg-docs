@@ -10,7 +10,7 @@ The DKG v6 introduces various improvements to the existing OriginTrail DKG. Amon
 * improved discoverability, performance and semantic powers with the expanding support for semantic technologies such as RDF, OWL, SPARQL, Triple Pattern Fragments, SHACL and others&#x20;
 * numerous performance updates to the protocol & network implementation
 
-To learn more about OriginTrail v6, check out this **blogpost**.
+To learn more about OriginTrail v6, check out this [**blogpost**](https://medium.com/origintrail/launching-the-origintrail-v6-stages-explained-3997797d44c0).
 
 ### Launch procedure
 

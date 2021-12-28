@@ -47,8 +47,9 @@ It follows Schema.org as standard and contains an object of type _Product_ with 
     }
   }
 }
-//Save the above dataset as Product.json (to be passed in API)
 ```
+
+Save the above dataset as Product.json (to be passed in API).
 
 #### Publishing via Publish API
 
