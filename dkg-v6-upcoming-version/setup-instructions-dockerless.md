@@ -45,7 +45,12 @@ sudo apt update
 sudo apt install nodejs npm
 ```
 
-Alternatively, you can use [**nvm**](https://www.npmjs.com/package/nvm) to manage your npm/nodejs version.
+Alternatively, you can use [**nvm**](https://www.npmjs.com/package/nvm) to manage your npm/nodejs version or do this to install node:
+
+```
+apt install aptitude
+aptitude install nodejs npm
+```
 
 #### Step 2 - Install forever
 
