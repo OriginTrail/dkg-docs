@@ -69,6 +69,34 @@ files=[
 ]
 ```
 
+#### Getting Assertion\_ID after successful publish operation
+
+On successful publish, the response will generate a handler\_id which can be further used as a parameter for below API:
+
+```javascript
+POST http://NODE_IP:PORT/publish/result/${handler_id}
+```
+
+As a result, user will get the following response for publishing the dataset successfully. The assertion\_id(id) can be used for Resolve in next section.&#x20;
+
+```javascript
+{
+    "status": "COMPLETED",
+    "data": {
+        "id": "f44199fdc034a105a538e5f8f86fb0418b5ac6b80a537176d55e900ce53720b9",
+        "rootHash": "f29afc26528610294a426015a30fdac7cefaf32f6002cf8f934bce14e951566a",
+        "signature": "0x44694dc8f3ea5abcf0054a5437e517eefad6aab7e9aaf881227dcd253237a7961e9fb11a7d99af9e7baba885626f70ead66c3e3b9d57595ff57a263b0560ac101c",
+        "metadata": {
+            "type": "Person",
+            "timestamp": "2021-12-24T10:20:12.881Z",
+            "issuer": "0xbd084ab97c704fe4a6d620cb7c30c0be0366646f",
+            "visibility": true,
+            "dataHash": "c8817ca24382818180a978fb1e628904ea4abd0a9d526ad2ca0aa9ad552b4283"
+        }
+    }
+}
+```
+
 ## How to resolve an assertion on the DKG?
 
 Data are persisted on the network by publishing on the DKG. Data are published as assertions that are immutable and verifiable, which could be resolved using assertion ID. Assertion ID is signed hash of published triples which is calculated during the publish.
@@ -76,6 +104,12 @@ Data are persisted on the network by publishing on the DKG. Data are published a
 #### Resolving via Resolve API
 
 In this tutorial, we are going to resolve the above Product assertion with the Resolve API using /resolve and /resolve/result API routes:
+
+```
+GET http://NODE_IP:PORT/resolve?ids={assertion_id}
+```
+
+The above will generate a handler\_id which can be used in API below to get Resolve result.
 
 ```
 curl --location --request GET 'http://127.0.0.1:8901/resolve/result/${handler_id}'
@@ -350,8 +384,10 @@ The SPARQL Construct query helps to get the response as a RDF sub-graph. In case
 
 ```
 POST http://NODE_IP:PORT/query?type=construct
+
 //provide all the connected properties and values for an object having sellername 
 //'Executive Objects'
+
 payload=
 {'query': 'PREFIX schema: <http://schema.org/>
 construct { ?s ?p ?o}
