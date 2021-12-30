@@ -14,7 +14,7 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 
 ### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
 
-* A dedicated **4GB RAM/2CPUs** **Ubuntu** server (minimum hardware requirements)
+* A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** server (minimum hardware requirements)
 * An installed and running **GraphDB**
 
 **GraphDB installation process:**
@@ -67,6 +67,30 @@ service mysql start
 mysql -u root  -e "CREATE DATABASE operationaldb /*\!40100 DEFAULT CHARACTER SET utf8 */;" 
 mysql -u root -e "update mysql.user set plugin = 'mysql_native_password' where User='root';"
 mysql -u root -e "flush privileges;"
+```
+
+Disable binary logging in the mysql config file:
+
+```
+nano /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+
+Find a line that reads "log\_bin" and remove or comment next line:
+
+```
+#max_binlog_size = 100M
+```
+
+Disable logs by adding the following to configuration file:
+
+```
+disable_log_bin
+```
+
+Close and save the file. Restart:&#x20;
+
+```
+service mysql restart
 ```
 
 #### Step 4 - Get the DKG code by cloning the  repo and checking out the proper branch
