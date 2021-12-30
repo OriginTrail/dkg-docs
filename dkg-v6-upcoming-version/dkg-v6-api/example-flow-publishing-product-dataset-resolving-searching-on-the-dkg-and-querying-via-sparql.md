@@ -7,8 +7,6 @@ This page intends to introduce a basic flow of:
 * searching for it via the search API
 * querying using SPARQL
 
-The user will be able to use both API as well as [dkg-client](https://github.com/OriginTrail/dkg-client/tree/v6/develop) to try out the listed functionalities.
-
 More instructions will be provided through the documentation in the following updates.
 
 ### How to publishing product dataset on DKG?
@@ -19,7 +17,7 @@ The dataset used in this tutorial is maintained by jsonld.com can be found here 
 
 It follows Schema.org as standard and contains an object of type _Product_ with its description, identifier, brand, rating and other details. An extensive documentation for Product class can be found here [https://schema.org/Product](https://schema.org/Product). The sample dataset values can be referred below:
 
-```
+```json
 {
   "@context": "https://schema.org/",
   "@type": "Product",
@@ -51,7 +49,7 @@ It follows Schema.org as standard and contains an object of type _Product_ with 
 }
 ```
 
-Save the above dataset as Product.json (to be passed in API or dkg-client).
+Save the above dataset as Product.json to be passed in API.
 
 #### Publishing via Publish API
 
@@ -63,41 +61,21 @@ POST http://NODE_IP:PORT/publish
 
 //pass Product.json path in files variables
 payload= {
-'assets': '["0x123456789123456789123456789"]',
-'keywords': '["Product", "Executive Objects", "ACME"]',
-'visibility': 'true'}
+  'assets': '["0x123456789123456789123456789"]',
+  'keywords': '["Product", "Executive Objects", "ACME"]',
+  'visibility': 'true'
+}
 
 files=[
   ('file',('Product.json',open('{LocalPATH}/Product.json','rb'),'application/json'))
 ]
 ```
 
-#### Publishing via dkg-client
-
-We can also publish the above Product dataset with the Publish method in the dkg-client:
-
-```javascript
-//Initial Setup for dkg-client:
-//Clone the latest client from https://github.com/OriginTrail/dkg-client/tree/v6/develop
-//Create a new test.js script file with below code. 
-const DKGClient = require('./index');
-const OT_NODE_HOSTNAME = '0.0.0.0''; //change as per your NODE setup
-const OT_NODE_PORT = '8900';
-
-//Search starts here
-options = { filepath: '{LocalPATH}/Product.json', 
-assets: ['0x123456789123456789123456789'],
-keywords: '["Product", "Executive Objects", "ACME"]', 
-visibility: true };
-
-await dkg.publish(options).then((result) => console.log(result));
-```
-
-#### Getting Assertion\_ID after successful publish operation(in case of API)
+#### Getting Assertion\_ID after successful publish operation
 
 On successful publish, the response will generate a handler\_id which can be further used as a parameter for below API:
 
-_NOTE: The pattern of using handlers for Resolve, Search and Query API remains the same. In case of dkg-client, handler\_ids_ _are not required._&#x20;
+_NOTE: The pattern of using handlers for Resolve, Search and Query API remains the same._
 
 ```javascript
 POST http://NODE_IP:PORT/publish/result/${handler_id}
@@ -137,19 +115,9 @@ In this tutorial, we are going to resolve the above Product assertion with the R
 GET http://NODE_IP:PORT/resolve?ids={assertion_id}
 ```
 
-#### Resolving via dkg-client
-
-```
-options =  { ids: assertion_id };        
-dkg.resolve(options).then((result) => {
-    console.log(JSON.stringify(result));        
-});
-
-```
-
 The result of above is the following:
 
-```
+```json
 
 {
     "metadata": {
@@ -259,19 +227,9 @@ In this tutorial, we are going to search the above Product entity using /entitie
 curl --location --request GET 'http://NODE_IP:PORT/entities:search?prefix=true&limit=20&query=ExecutiveAnvil'
 ```
 
-#### Searching for an entity via dkg-client
-
-```
-//Search for ExecutiveAnvil
-options = { query: 'ExecutiveAnvil', resultType: 'assertions' };
-dkg.search(options).then((result) => {
-console.log(JSON.stringify(result));
-});
-```
-
 The result of Search API route is the following:
 
-```
+```json
 {
     "@context": {
         "@vocab": "http://schema.org/",
@@ -377,20 +335,9 @@ In this tutorial, we are going to search the above Product entity using /entitie
 curl --location --request GET 'http://127.0.0.1:8901/assertions:search?prefix=true&limit=20&query=ExecutiveAnvil'
 ```
 
-#### Searching for an assertion via dkg-client
-
-In this tutorial, we are going to search the above Product entity using /entities:search and /entities:search/result API routes:
-
-```
-options = { query: 'ExecutiveAnvil', resultType: 'entities' };
-dkg.search(options).then((result) => {
-console.log(JSON.stringify(result));
-});
-```
-
 The result of Search API route is the following:
 
-```
+```json
 {
     "@context": {
         "@vocab": "http://schema.org/",
@@ -444,14 +391,16 @@ POST http://NODE_IP:PORT/query?type=construct
 //'Executive Objects'
 
 payload=
-{'query': 'PREFIX schema: <http://schema.org/>
-construct { ?s ?p ?o}
-WHERE { 
-GRAPH ?g {?s ?p ?o .
-    ?s schema:offers / schema:seller/ schema:name "Executive Objects" .
+{
+    'query': 'PREFIX schema: <http://schema.org/>
+        construct { ?s ?p ?o}
+        WHERE { 
+            GRAPH ?g {
+                ?s ?p ?o .
+                ?s schema:offers / schema:seller/ schema:name "Executive Objects" .
+            }
+        }'
 }
-}'}
-}' \
 ```
 
 The returned responses contain query\_id which can be used to fetch responses from network query.
@@ -460,22 +409,6 @@ To view responses call the query response API, as a parameter use query\_id retu
 
 ```javascript
 GET http://NODE_IP:PORT/query/result/{query_id}
-```
-
-**Using the dkg-client with a sample construct query (Dataset having seller with name 'Executive Objects')**
-
-```
-options = {
-                query: `PREFIX schema: <http://schema.org/>
-construct { ?s ?p ?o}
-WHERE { 
-GRAPH ?g {?s ?p ?o .
-    ?s schema:offers / schema:seller/ schema:name "Executive Objects" .
-}`
-            };
-dkg.query(options).then((result) => {
-console.log(JSON.stringify(result));
-            });
 ```
 
 The returned responses contain an array of all connected nodes for returned dataset which contain objects whose identifiers(or value) fit the given query.&#x20;
