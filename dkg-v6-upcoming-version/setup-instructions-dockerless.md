@@ -107,16 +107,10 @@ git checkout v6/release/testnet
 npm install
 ```
 
-#### Step 6 - Run DB migrations
-
-```
-npx sequelize --config=./config/sequelizeConfig.js db:migrate
-```
-
-#### Step 7 - Allow traffic on ports 8900 (RPC) and 9000 (libp2p)
+#### Step 6 - Allow traffic on ports 8900 (RPC) and 9000 (libp2p)
 
 \
-**Step 8 -** Create **.env** file:&#x20;
+**Step 7 -** Create **.env** file:&#x20;
 
 ```
 nano .env
@@ -128,7 +122,7 @@ Paste the following variable into the .**env** file, save and close:
 NODE_ENV=testnet
 ```
 
-**Step 9 -** Create **.origintrail\_noderc** file \
+**Step 8 -** Create **.origintrail\_noderc** file \
 \
 .**origintrail\_noderc** example can be found on our [GitHub](https://github.com/OriginTrail/ot-node/blob/v6/develop/.origintrail\_noderc\_example).\
 
@@ -139,14 +133,14 @@ OriginTrail v6 testnet node is running on **Polygon Mumbai (testnet)** network *
 
 #### Polygon Mumbai MATIC faucet: [https://faucet.polygon.technology/](https://faucet.polygon.technology)
 
-#### Step **10 -** Run DB migrations:
+#### Step **9 -** Run DB migrations:
 
 ```
 npx sequelize --config=./config/sequelizeConfig.js db:migrate
 ```
 
 ****\
-**Step 11 - Start OriginTrail v6 node**\
+**Step 10 - Start OriginTrail v6 node**\
 ****In order to start the node, execute the following command:
 
 ```
@@ -169,7 +163,7 @@ forever stop index.js
 ```
 
 ****\
-**Step 12 - Enable SSL (optional, but recommended):**\
+**Step 11 - Enable SSL (optional, but recommended):**\
 Ensure that the following certificate files are in the right directory: **`/root/certs/privkey.pem`**` ``&`` `**`/root/certs/fullchain.pem`**
 
 
