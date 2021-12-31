@@ -13,7 +13,7 @@ This page intends to introduce a basic flow using [dkg-client](https://github.co
 You can install DKG client in you project by executing next command in your project root directory:
 
 ```bash
-npm install dkg-client
+npm install dkg-client@beta.1
 ```
 
 ### Initialization of client
