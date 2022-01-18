@@ -9,6 +9,7 @@
 * [Trace Token (TRAC)](general/trac.md)
 * [OriginTrail RFCs](general/origintrail-rfcs.md)
 * [Available networks (testnets, mainnet)](general/networks.md)
+* [Contribution Guidelines](general/contribute.md)
 * [Development principles](general/development-principles.md)
 
 ## Using the DKG v5 (current version) <a href="#developers" id="developers"></a>
@@ -21,7 +22,6 @@
 * [Data structure guidelines](developers/data-structure-guidelines.md)
 * [Hello Trail tutorial](developers/hello-trail-tutorial.md)
 * [Developer Reference](developers/references.md)
-* [Contribution](developers/contribute.md)
 * [Using NFT with the DKG](developers/using-nft-with-the-dkg.md)
 
 ## Running DKG nodes (v5 - current version) <a href="#running-nodes" id="running-nodes"></a>
@@ -44,6 +44,7 @@
 * [Setting up DKG metrics reporting](dkg-v6-upcoming-version/setting-up-dkg-metrics-reporting.md)
 * [Integrating data over multiple Knowledge Graphs](dkg-v6-upcoming-version/integrating-data-over-multiple-knowledge-graphs.md)
 * [Tutorials](dkg-v6-upcoming-version/tutorials.md)
+* [🏁 v6 bounty program](dkg-v6-upcoming-version/v6-bounty-program.md)
 
 ## Useful Resources
 
