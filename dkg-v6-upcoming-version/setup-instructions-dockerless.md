@@ -35,7 +35,7 @@ When graphDB is started, please check the **nohup.out** file that was generated 
 
 #### Step 1:
 
-OriginTrail v6 node requires **npm** and **Node.js (v14)** or higher. In order to install them, please execute the following set of commands:
+OriginTrail v6 node requires **npm** and **Node.js v14**. In order to install them, please execute the following set of commands:
 
 ```
 cd ~
