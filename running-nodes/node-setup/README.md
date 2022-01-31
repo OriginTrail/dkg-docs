@@ -2,7 +2,7 @@
 
 If you need help installing OT Node or troubleshooting your installation, you can either:
 
-* engage in our Discord community and post your question,
+* engage in our [Discord](https://discord.gg/xXUqG49Ftb) community and post your question,
 * contact us directly via email at [tech@origin-trail.com](mailto:tech%40origin-trail.com)
 
 #### Hardware requirements
