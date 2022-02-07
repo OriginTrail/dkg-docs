@@ -36,6 +36,7 @@
 ## DKG v6 (upcoming version)
 
 * [🚀 Introduction to DKG v6 - start here](dkg-v6-upcoming-version/introduction-to-dkg-v6-start-here.md)
+* [Setting up your development environment](dkg-v6-upcoming-version/setting-up-your-development-environment.md)
 * [Setup instructions (Dockerless)](dkg-v6-upcoming-version/setup-instructions-dockerless.md)
 * [Docker setup](dkg-v6-upcoming-version/docker-setup.md)
 * [DKG v6 API](dkg-v6-upcoming-version/dkg-v6-api/README.md)
