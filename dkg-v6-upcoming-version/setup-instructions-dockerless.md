@@ -17,10 +17,40 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 * A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** server (minimum hardware requirements)
 * An installed and running **GraphDB**
 
-**GraphDB installation process:**
+**Prepare GraphDB**
 
 In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out a form. Installation files will be provided to you via email. Use the standalone version of GraphDB.\
 Upload the **\<graphDB\_file>.zip** file to your server (e.g. using **scp** or some other way).
+
+### Automatic installation&#x20;
+
+#### Step 1
+
+Login to the server as root. You **cannot** use sudo and run this script. The command "npm install" **will** fail.
+
+#### Step 2
+
+Execute **one** of the following commands depending on if you have cloned the ot-node repo:
+
+**If the repo is not cloned yet:**
+
+```
+apt install git -y && cd /root && git clone https://github.com/OriginTrail/ot-node && cd ot-node && git checkout v6/release/testnet && installer/installer.sh
+```
+
+**If you have already cloned the ot-node repo:**
+
+```
+/root/ot-node/installer/installer.sh
+```
+
+{% hint style="success" %}
+**Congratulations. Welcome to v6 beta**
+{% endhint %}
+
+### Manual installation steps
+
+#### Step 0 - Start GraphDB
 
 ```
 apt install default-jre
@@ -28,10 +58,7 @@ unzip graphdb-free-9.10.1-dist.zip
 nohup ~/graphdb-free-9.10.1/bin/graphdb &
 ```
 
-When graphDB is started, please check the **nohup.out** file that was generated in order to confirm that it is running in the background .\
-
-
-### Installation steps
+When graphDB is started, please check the **nohup.out** file that was generated in order to confirm that it is running in the background .
 
 #### Step 1:
 
