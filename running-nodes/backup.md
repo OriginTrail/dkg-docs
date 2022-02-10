@@ -10,17 +10,17 @@ Make sure your node is running the latest version of ot-node. This tutorial down
 
 The first thing to do is to back up your files and store them outside your docker so that you can delete the container and install a new one. Run the following commands to create a backup
 
-```text
+```
 docker exec otnode node /ot-node/current/scripts/backup.js --configDir=/ot-node/data
 docker cp otnode:/ot-node/backup ./
 ls ./backup
 ```
 
-These commands should show something similar to the following image![../\_images/backup.png](https://docs.origintrail.io/en/latest/_images/backup.png)
+These commands should show something similar to the following image![../\_images/backup.png](https://docs.origintrail.io/en/latest/\_images/backup.png)
 
-Please check the contents of the latest backup directory, indicated by the directory name \(in the above case, the folder named `2020-03-20T09:10:28.059Z`. They should contain all of the files shown below.
+Please check the contents of the latest backup directory, indicated by the directory name (in the above case, the folder named `2020-03-20T09:10:28.059Z`. They should contain all of the files shown below.
 
-![../\_images/backup-contents.png](https://docs.origintrail.io/en/latest/_images/backup-contents.png)
+![../\_images/backup-contents.png](https://docs.origintrail.io/en/latest/\_images/backup-contents.png)
 
 ⚠️**Warning**⚠️
 
@@ -30,7 +30,7 @@ DO NOT proceed unless the backup folder contains all of the files shown above. C
 
 Now we can stop the container and download a new one. Run the following commands:
 
-```text
+```
 docker stop otnode
 docker rm otnode
 imageId=$(docker images | grep otnode | awk '{print $3}')
@@ -39,7 +39,7 @@ docker rmi $imageId
 
 Now you’ve successfully removed your image, and can download a new one.Run the following command to download a new docker image
 
-```text
+```
 sudo docker create -i --log-driver json-file --log-opt max-size=1g --name=otnode -p 8900:8900 -p 5278:5278 -p 3000:3000 -v ~/.origintrail_noderc:/ot-node/.origintrail_noderc origintrail/ot-node:release_mainnet
 ```
 
@@ -59,19 +59,19 @@ The dataset pruning feature is disabled by default, but if you have it enabled y
 
 Extract the restore script from the container with the following command
 
-```text
+```
 docker cp otnode:/ot-node/current/scripts/restore.sh ./
 ```
 
 And now run it:
 
-```text
+```
 ./restore.sh
 ```
 
 That’s it! Your node should be running now, you can go ahead and see the logs by running:
 
-```text
+```
 docker logs otnode -f
 ```
 
@@ -79,7 +79,6 @@ docker logs otnode -f
 
 If you’ve backed up your files in a different place or are using a custom directory for your data on the node, you can edit those in the restore script. Run the following command to see all the options for the restore command:
 
-```text
+```
 ./restore.sh --help
 ```
-

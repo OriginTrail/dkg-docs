@@ -1,6 +1,6 @@
 # OriginTrail RFCs
 
-The OriginTrail development is transparent and being guided by public debate through the Trace Alliance working groups, as well as through technical discussions within the community through the technical **Requests for Commments \(OT-RFCs\)**. 
+The OriginTrail development is transparent and being guided by public debate through the Trace Alliance working groups, as well as through technical discussions within the community through the technical **Requests for Commments (OT-RFCs)**. 
 
 The RFCs have formerly been part of the official documentation and have moved to [this repository](https://github.com/OriginTrail/OT-RFC-repository) from OT-RFC-07 on October 12th 2020.
 
@@ -15,7 +15,7 @@ There are three stages for an OT-RFC, easily visible in [the RFC Repository Kanb
 #### The RFC rules & best practices
 
 * RFCs move to the “Accepted” stage by the core developers, after discussions with relevant Trace Alliance working group task forces and the community
-* A **“last call”** can be issued for an RFC which is close to moving out of the draft stage to notify the community to provide the final feedback \(about a week before acceptance\) 
+* A **“last call”** can be issued for an RFC which is close to moving out of the draft stage to notify the community to provide the final feedback (about a week before acceptance) 
 * Moving the RFC to “Final” stage is performed by developers, responsible to indicate the specific client release that has implemented the RFC
 * All RFC related discussions should be directed to the dedicated [RFC issues](https://github.com/OriginTrail/OT-RFC-repository/issues) page to promote a constructive, structured and long-term debate on the RFC, avoiding less structured channels such as chat rooms and social media.
 
@@ -24,4 +24,3 @@ The RFC Github repository can be found [here](https://github.com/OriginTrail/OT-
 ### Can I contribute to RFCs?
 
 Absolutely! You can propose your own RFCs or comment and provide feedback on the existing ones in the pipeline. The OriginTrail community welcomes inputs and will greatly appreciate any improvement proposals!
-
