@@ -136,11 +136,10 @@ git checkout v6/release/testnet
 ```
 
 #### Step 5 - Install dependencies
-
 ```
 npm install
 ```
-
+Warning messages are expected and should be ignored for the purpose of this testnet setup. These are dependencies someone else has added to their package and we might be depending on abandoned or badly maintained packages. 
 #### Step 6 - Allow traffic on ports 8900 (RPC) and 9000 (libp2p)
 
 \
