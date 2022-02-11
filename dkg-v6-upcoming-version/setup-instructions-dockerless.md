@@ -19,8 +19,15 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 
 **Prepare GraphDB**
 
-In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out a form. Installation files will be provided to you via email. Use the standalone version of GraphDB.\
-Upload the **\<graphDB\_file>.zip** file to your server (e.g. using **scp** or some other way).
+1. Please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will sent to you by email. **Use the standalone version of GraphDB**.
+2. Upload the **\<graphDB\_file>.zip** file to your server. There are several ways:
+
+- For MAC OS and Windows, download the FTP program [FileZilla](https://filezilla-project.org/) and copy the **\<graphDB\_file>.zip** to the server's /root directory;
+
+- For Ubuntu, use a file manager such as Files, then go to sftp://your_test_node_server and copy the file over as you would locally;
+
+- For other Linux platforms, use command: scp \<graphDB\_file>.zip root@your_test_node_server:/root
+
 
 ### Automatic installation&#x20;
 
