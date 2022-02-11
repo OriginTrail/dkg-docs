@@ -56,7 +56,10 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
-
+```
+systemctl daemon-reload
+systemctl start graphdb.service
+```
 When graphDB is started, please check the status in order to confirm that it is running in the background. 
 ```
 systemctl status graphdb.service
@@ -70,13 +73,7 @@ OriginTrail v6 node requires **npm** and **Node.js v14**. In order to install th
 pacman -S npm nodejs-lts-fermium
 ```
 
-#### Step 2 - Install forever
-
-```
-npm install forever -g
-```
-
-#### Step 3 - Install **mysql** and create a local operational database
+#### Step 2 - Install **mysql** and create a local operational database
 
 For Arch Linux, MariaDB is a community-developed, commercially supported fork of the MySQL, intended to remain free and open-source software. It meets the same standard enterprise requirements as MySQL, often with additional features, capabilities and options, and shows an improved speed when compared. 
 
@@ -107,7 +104,7 @@ Close and save the file. Restart the service:&#x20;
 systemctl restart mariadb
 ```
 
-#### Step 4 - Get the DKG code by cloning the  repo and checking out the proper branch
+#### Step 3 - Get the DKG code by cloning the  repo and checking out the proper branch
 
 ```
 git clone https://github.com/OriginTrail/ot-node
@@ -115,16 +112,18 @@ cd ot-node
 git checkout v6/release/testnet
 ```
 
-#### Step 5 - Install dependencies
+#### Step 4 - Install dependencies
 
 ```
 npm install
 ```
 
-#### Step 6 - Allow traffic on ports 8900 (RPC) and 9000 (libp2p) on your router. Note that all ports are open by default on Arch Linux.
+#### Step 5 - Ports
 
-\
-**Step 7 -** Create **.env** file:&#x20;
+Allow traffic on ports 8900 (RPC) and 9000 (libp2p) on your router. Note that all ports are open by default on Arch Linux.
+
+
+#### Step 6 - Create .env file:
 
 ```
 nano .env
@@ -155,17 +154,43 @@ npx sequelize --config=./config/sequelizeConfig.js db:migrate
 
 ****\
 **Step 10 - Start OriginTrail v6 node**\
-****In order to start the node, execute the following command:
+****We will create a service to start the node:
 
 ```
-forever start -a -o out.log -e out.log index.js
+nano /lib/systemd/system/otnode.service
+```
+Paste the following content and save
+```
+#/lib/systemd/system/otnode.service
+
+[Unit]
+Description=V6 Test Node
+After=network.target graphdb.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/ot-node
+ExecStart=/usr/bin/node /root/ot-node/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+```
+systemctl daemon-reload
+systemctl start otnode.service
+```
+Verify that the service is up and running:
+```
+systemctl status otnode.service
 ```
 
 **Checking node logs:**\
-****In order to check if the node started successfully, you can access node logs byecuting the following command:
+****Use the following command to check the logs:
 
 ```
-tail -f -n100 out.log
+journalctl -f -u otnode.service --all
 ```
 
 ![Successfully started](<../.gitbook/assets/Screenshot 2021-12-27 at 15.49.28.png>)
@@ -173,22 +198,20 @@ tail -f -n100 out.log
 In order to stop your node, use the following command:
 
 ```
-forever stop index.js
+systemctl stop otnode.service
 ```
 
-You can enable GraphDB and MariaDB services to allow them to start on reboot.
+### OPTIONAL: 
+You can enable all previous services to allow them to start on reboot.
 ```
 systemctl enable graphdb.service
 systemctl enable mariadb.service
-
+systemctl enable otnode.service
 ```
-
-
-****\
-**Step 11 - Enable SSL (optional, but recommended):**\
-Ensure that the following certificate files are in the right directory: **`/root/certs/privkey.pem`**` ``&`` `**`/root/certs/fullchain.pem`**
-
-
+To control your journal size over time, I strongly suggest running the following:
+```
+journalctl --vacuum-size=200M
+```
 
 {% hint style="success" %}
 **Congratulations. Welcome to v6 beta**
