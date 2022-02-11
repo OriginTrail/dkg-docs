@@ -1,0 +1,197 @@
+# Setup instructions (Arch Linux)
+
+{% hint style="info" %}
+These setup instructions for DKGv6 are "Work in progress" and are subject to change. The development team expects to introduce improvements as well as a more automated process of setting up the DKGv6 node in the future.
+{% endhint %}
+
+{% hint style="success" %}
+Need any assistance with node setup? Join the DKGv6 Discord chat and find help within the OriginTrail tech community!
+{% endhint %}
+
+{% hint style="warning" %}
+**IMPORTANT: These instructions are not intended for migrating your current v5 node to v6. Attempting this will most likely break your v5 node at this point. You should only use these instructions in order to setup a fresh OriginTrail v6 testnet node.**
+{% endhint %}
+
+### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
+
+* A dedicated **4GB RAM/2CPUs/50GB HDD** **Arch Linux** server (minimum hardware requirements)
+* An installed and running **GraphDB**
+
+**Prepare GraphDB**
+
+In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out a form. Installation files will be provided to you via email. Use the standalone version of GraphDB.\
+Save the **\<graphDB\_file>.zip** on your root folder.
+
+### Manual installation steps
+```
+pacman -Syu
+```
+
+#### Step 0: Setup GraphDB
+
+```
+pacman -S jre-openjdk
+unzip graphdb-free-9.10.1-dist.zip
+```
+
+We will create a system service to allow graphDB to keep running in the background.
+```
+nano /lib/systemd/system/graphdb.service
+```
+Paste the following content and save
+```
+#/lib/systemd/system/graphdb.service
+
+[Unit]
+Description=graphdb-free-9.10.1
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/graphdb-free-9.10.1/bin/
+ExecStart=/root/graphdb-free-9.10.1/bin/graphdb
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+When graphDB is started, please check the status in order to confirm that it is running in the background. 
+```
+systemctl status graphdb.service
+```
+
+#### Step 1: Installing other requirements
+
+OriginTrail v6 node requires **npm** and **Node.js v14**. In order to install them, please execute the following set of commands:
+
+```
+pacman -S npm nodejs-lts-fermium
+```
+
+#### Step 2 - Install forever
+
+```
+npm install forever -g
+```
+
+#### Step 3 - Install **mysql** and create a local operational database
+
+For Arch Linux, MariaDB is a community-developed, commercially supported fork of the MySQL, intended to remain free and open-source software. It meets the same standard enterprise requirements as MySQL, often with additional features, capabilities and options, and shows an improved speed when compared. 
+
+```
+pacman -S tcl mariadb
+mariadb-install-db --user=mysql --basedir=/usr --datadir=/var
+systemctl start mariadb
+mysql -u root -e "CREATE DATABASE operationaldb /*\!40100 DEFAULT CHARACTER SET utf8 */;" 
+mysql -u root -e "ALTER USER root@localhost IDENTIFIED VIA mysql_native_password;"
+mysql -u root -e "flush privileges;"
+```
+
+Disable binary logging in the mysql config file:
+
+```
+nano /etc/my.cnf.d/mysql-clients.cnf
+```
+
+Under the line that reads [mysqlbinlog], add the following line:
+
+```
+skip-log-bin
+```
+
+Close and save the file. Restart the service:&#x20;
+
+```
+systemctl restart mariadb
+```
+
+#### Step 4 - Get the DKG code by cloning the  repo and checking out the proper branch
+
+```
+git clone https://github.com/OriginTrail/ot-node
+cd ot-node
+git checkout v6/release/testnet
+```
+
+#### Step 5 - Install dependencies
+
+```
+npm install
+```
+
+#### Step 6 - Allow traffic on ports 8900 (RPC) and 9000 (libp2p) on your router. Note that all ports are open by default on Arch Linux.
+
+\
+**Step 7 -** Create **.env** file:&#x20;
+
+```
+nano .env
+```
+
+Paste the following variable into the .**env** file, save and close:
+
+```
+NODE_ENV=testnet
+```
+
+**Step 8 -** Create **.origintrail\_noderc** file \
+\
+.**origintrail\_noderc** example can be found on our [GitHub](https://github.com/OriginTrail/ot-node/blob/v6/develop/.origintrail\_noderc\_example).\
+
+
+{% hint style="info" %}
+OriginTrail v6 testnet node is running on **Polygon Mumbai (testnet)** network **** and it is currently not requiring any test TRAC tokens. Make sure that the wallet you are using in your configuration file is funded with test MATIC tokens.
+{% endhint %}
+
+#### Polygon Mumbai MATIC faucet: [https://faucet.polygon.technology/](https://faucet.polygon.technology)
+
+#### Step **9 -** Run DB migrations:
+
+```
+npx sequelize --config=./config/sequelizeConfig.js db:migrate
+```
+
+****\
+**Step 10 - Start OriginTrail v6 node**\
+****In order to start the node, execute the following command:
+
+```
+forever start -a -o out.log -e out.log index.js
+```
+
+**Checking node logs:**\
+****In order to check if the node started successfully, you can access node logs byecuting the following command:
+
+```
+tail -f -n100 out.log
+```
+
+![Successfully started](<../.gitbook/assets/Screenshot 2021-12-27 at 15.49.28.png>)
+
+In order to stop your node, use the following command:
+
+```
+forever stop index.js
+```
+
+You can enable GraphDB and MariaDB services to allow them to start on reboot.
+```
+systemctl enable graphdb.service
+systemctl enable mariadb.service
+
+```
+
+
+****\
+**Step 11 - Enable SSL (optional, but recommended):**\
+Ensure that the following certificate files are in the right directory: **`/root/certs/privkey.pem`**` ``&`` `**`/root/certs/fullchain.pem`**
+
+
+
+{% hint style="success" %}
+**Congratulations. Welcome to v6 beta**
+{% endhint %}
+
+We would love to meet you in our Discord chat - join us [here](https://discord.gg/6BGSCJfk4Y).&#x20;
