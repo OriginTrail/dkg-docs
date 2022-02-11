@@ -43,7 +43,8 @@ Paste the following content and save
 #/lib/systemd/system/graphdb.service
 
 [Unit]
-Description=graphdb-free-9.10.1
+Description=GraphDB - OriginTrail V6 Stage 1 Beta Node
+Documentation=https://github.com/OriginTrail/ot-node
 After=network.target
 
 [Service]
@@ -164,7 +165,8 @@ Paste the following content and save
 #/lib/systemd/system/otnode.service
 
 [Unit]
-Description=V6 Test Node
+Description=OriginTrail V6 Stage 1 Beta Node
+Documentation=https://github.com/OriginTrail/ot-node/
 After=network.target graphdb.service
 
 [Service]
