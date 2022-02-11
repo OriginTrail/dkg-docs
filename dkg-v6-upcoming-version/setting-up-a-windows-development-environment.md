@@ -117,6 +117,9 @@ node index.js
 ```
 ![Successfully started](<../.gitbook/assets/Screen Shot 2022-01-19 at 12.32.39.png>)
 
+#### Step 2.4.1 - Start node in debug mode
+If using Visual Studio Code, it is possible to run your node in **debug** mode. Navigate to the the `/ot-node/index.js` file and press F5 to start debugging.
+
 ### API access from the Windows host
 If you are wanting to send API requests to your node from outside of WSL (e.g. Using Postman), you will have to configure your node to allow requests from your host IP. This is done using the node configuration **ipWhitelist**.
 
