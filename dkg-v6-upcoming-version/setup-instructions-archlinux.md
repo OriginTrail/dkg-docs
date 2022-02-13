@@ -15,19 +15,25 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 ### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
 
 * A dedicated **4GB RAM/2CPUs/50GB HDD** **Arch Linux** server (minimum hardware requirements)
-* An installed and running **GraphDB**
 
-**Prepare GraphDB**
+## **Manual installation steps**
 
-In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out a form. Installation files will be provided to you via email. Use the standalone version of GraphDB.\
-Save the **\<graphDB\_file>.zip** on your root folder.
-
-### Manual installation steps
+First, log in as root and update your system
 ```
 pacman -Syu
 ```
 
-#### Step 0: Setup GraphDB
+**Prepare Databases**
+
+In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will be provided to you via email. Use the standalone version of GraphDB.\
+Save the **\<graphDB\_file>.zip** on your root folder.
+
+In order to download blazegraph, run
+```
+wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar
+```
+
+#### **Step 0: Setup GraphDB and Blazegraph**
 
 ```
 pacman -S jre-openjdk
@@ -57,16 +63,43 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
+We will also create a system service to allow Blazegraph to keep running in the background.
+```
+nano /lib/systemd/system/blazegraph.service
+```
+Paste the following content and save
+```
+#/lib/systemd/system/blazegraph.service
+
+[Unit]
+Description=blazegraph - OriginTrail V6 Stage 1 Beta Node
+Documentation=https://github.com/OriginTrail/ot-node
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/
+ExecStart=/bin/java -jar /root/blazegraph.jar
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
 ```
 systemctl daemon-reload
-systemctl start graphdb.service
+systemctl start graphdb
+systemctl start blazegraph
 ```
-When graphDB is started, please check the status in order to confirm that it is running in the background. 
+When graphDB and blazegraph are started, please check the status in order to confirm that it is running in the background. 
 ```
-systemctl status graphdb.service
+systemctl status graphdb
+```
+```
+systemctl status blazegraph
 ```
 
-#### Step 1: Installing other requirements
+#### **Step 1: Installing other requirements**
 
 OriginTrail v6 node requires **npm** and **Node.js v14**. In order to install them, please execute the following set of commands:
 
@@ -74,7 +107,7 @@ OriginTrail v6 node requires **npm** and **Node.js v14**. In order to install th
 pacman -S npm nodejs-lts-fermium
 ```
 
-#### Step 2 - Install **mysql** and create a local operational database
+#### **Step 2 - Install **mysql** and create a local operational database**
 
 For Arch Linux, MariaDB is a community-developed, commercially supported fork of the MySQL, intended to remain free and open-source software. It meets the same standard enterprise requirements as MySQL, often with additional features, capabilities and options, and shows an improved speed when compared. 
 
@@ -105,7 +138,7 @@ Close and save the file. Restart the service:&#x20;
 systemctl restart mariadb
 ```
 
-#### Step 3 - Get the DKG code by cloning the  repo and checking out the proper branch
+#### **Step 3 - Get the DKG code by cloning the  repo and checking out the proper branch**
 
 ```
 git clone https://github.com/OriginTrail/ot-node
@@ -113,18 +146,18 @@ cd ot-node
 git checkout v6/release/testnet
 ```
 
-#### Step 4 - Install dependencies
+#### **Step 4 - Install dependencies**
 
 ```
 npm install
 ```
 
-#### Step 5 - Ports
+#### **Step 5 - Ports**
 
 Allow traffic on ports 8900 (RPC) and 9000 (libp2p) on your router. Note that all ports are open by default on Arch Linux.
 
 
-#### Step 6 - Create .env file:
+#### **Step 6 - Create .env file:**
 
 ```
 nano .env
@@ -136,9 +169,37 @@ Paste the following variable into the .**env** file, save and close:
 NODE_ENV=testnet
 ```
 
-**Step 8 -** Create **.origintrail\_noderc** file \
-\
-.**origintrail\_noderc** example can be found on our [GitHub](https://github.com/OriginTrail/ot-node/blob/v6/develop/.origintrail\_noderc\_example).\
+**Step 7 -** Create **.origintrail\_noderc** file
+
+An example is provided below :
+```
+{
+  "blockchain":[
+    {
+      "blockchainTitle": "Polygon",
+      "networkId": "polygon::testnet",
+      "rpcEndpoints": ["https://rpc-mumbai.maticvigil.com/"],
+      "publicKey": "...",
+      "privateKey": "..."
+    }
+  ],
+  "graphDatabase": {
+    "implementation": "Blazegraph",
+    "url": "http://localhost:9999/blazegraph",
+    "username": "admin",
+    "password": ""
+  },
+  "logLevel": "trace",
+  "rpcPort": 8900,
+  "network": {
+  },
+  "ipWhitelist": [
+  "::1",
+    "127.0.0.1"
+  ]
+}
+```
+.**origintrail\_noderc** example can also be found on our [GitHub](https://github.com/OriginTrail/ot-node/blob/v6/develop/.origintrail\_noderc\_example).
 
 
 {% hint style="info" %}
@@ -147,14 +208,14 @@ OriginTrail v6 testnet node is running on **Polygon Mumbai (testnet)** network *
 
 #### Polygon Mumbai MATIC faucet: [https://faucet.polygon.technology/](https://faucet.polygon.technology)
 
-#### Step **9 -** Run DB migrations:
+#### Step **8 -** Run DB migrations:
 
 ```
 npx sequelize --config=./config/sequelizeConfig.js db:migrate
 ```
 
 ****\
-**Step 10 - Start OriginTrail v6 node**\
+**Step 9 - Start OriginTrail v6 node**\
 ****We will create a service to start the node:
 
 ```
@@ -181,18 +242,18 @@ WantedBy=multi-user.target
 ```
 ```
 systemctl daemon-reload
-systemctl start otnode.service
+systemctl start otnode
 ```
 Verify that the service is up and running:
 ```
-systemctl status otnode.service
+systemctl status otnode
 ```
 
 **Checking node logs:**\
 ****Use the following command to check the logs:
 
 ```
-journalctl -f -u otnode.service --all
+journalctl -f -u otnode --all
 ```
 
 ![Successfully started](<../.gitbook/assets/Screenshot 2021-12-27 at 15.49.28.png>)
@@ -200,15 +261,16 @@ journalctl -f -u otnode.service --all
 In order to stop your node, use the following command:
 
 ```
-systemctl stop otnode.service
+systemctl stop otnode
 ```
 
 ### OPTIONAL: 
 You can enable all previous services to allow them to start on reboot.
 ```
-systemctl enable graphdb.service
-systemctl enable mariadb.service
-systemctl enable otnode.service
+systemctl enable graphdb
+systemctl enable blazegraph
+systemctl enable mariadb
+systemctl enable otnode
 ```
 To control your journal size over time, I strongly suggest running the following:
 ```
