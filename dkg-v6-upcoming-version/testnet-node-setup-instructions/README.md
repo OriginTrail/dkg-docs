@@ -1,0 +1,2 @@
+# Testnet node - setup instructions
+

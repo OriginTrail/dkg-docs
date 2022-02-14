@@ -21,11 +21,10 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 1. Please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will sent to you by email. **Use the standalone version of GraphDB**.
 2. Upload the **\<graphDB\_file>.zip** file to your server. There are several ways:
 
-- Download any FTP program, such as [FileZilla](https://filezilla-project.org/) (works for Mac OS, Windows and Ubuntu), and copy the **\<graphDB\_file>.zip** to the server's /root directory;
+* Download any FTP program, such as [FileZilla](https://filezilla-project.org) (works for Mac OS, Windows and Ubuntu), and copy the **\<graphDB\_file>.zip** to the server's /root directory;
+* You can also use sftp://user@ip\_address and copy the file over for Ubuntu users. Consult these [instructions](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) if needed;
 
-- You can also use sftp://user@ip_address and copy the file over for Ubuntu users. Consult these [instructions](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) if needed;
-
-### Installation&#x20;
+### Installation
 
 #### Step 1
 
@@ -51,14 +50,13 @@ apt install git -y && cd /root && git clone https://github.com/OriginTrail/ot-no
 **Congratulations. Welcome to v6 beta**
 {% endhint %}
 
-
 **Checking node logs:**
 
 ```
 journalctl -u otnode --output cat -fn 100
 ```
 
-![Successfully started](<../.gitbook/assets/Screenshot 2021-12-27 at 15.49.28.png>)
+![Successfully started](<../../.gitbook/assets/Screenshot 2021-12-27 at 15.49.28.png>)
 
 **Stop / Start / Restarting your node:**
 
@@ -68,4 +66,4 @@ systemctl start otnode
 systemctl restart otnode
 ```
 
-We would love to meet you in our Discord chat - join us [here](https://discord.gg/6BGSCJfk4Y).&#x20;
+We would love to meet you in our Discord chat - join us [here](https://discord.gg/6BGSCJfk4Y).
