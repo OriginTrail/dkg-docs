@@ -23,7 +23,9 @@ First, log in as root and update your system
 pacman -Syu
 ```
 
-**Prepare Databases**
+#### **Prepare Databases**
+
+**In this section and the one below, you can choose between using GraphDB or Blazegraph. If you choose one, you can ignore the instructions for the other.**
 
 In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will be provided to you via email. Use the standalone version of GraphDB.\
 Save the **\<graphDB\_file>.zip** on your root folder.
@@ -33,8 +35,8 @@ In order to download blazegraph, run
 wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar
 ```
 
-#### **Step 0: Setup GraphDB and Blazegraph**
-
+#### **Step 0: Setup GraphDB or Blazegraph**
+If you chose to use **GraphDB**, below are the steps to follow:
 ```
 pacman -S jre-openjdk
 unzip graphdb-free-9.10.1-dist.zip
@@ -63,7 +65,14 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
-We will also create a system service to allow Blazegraph to keep running in the background.
+Now let's start the service:
+```
+systemctl daemon-reload
+systemctl start graphdb
+```
+If you chose to use **Blazegraph**, please follow the steps below:
+
+We will create a system service to allow Blazegraph to keep running in the background.
 ```
 nano /lib/systemd/system/blazegraph.service
 ```
@@ -86,12 +95,12 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
+Now let's start the service:
 ```
 systemctl daemon-reload
-systemctl start graphdb
 systemctl start blazegraph
 ```
-When graphDB and blazegraph are started, please check the status in order to confirm that it is running in the background. 
+When graphDB or blazegraph are started, please check the status in order to confirm that it is running in the background. 
 ```
 systemctl status graphdb
 ```
@@ -171,7 +180,33 @@ NODE_ENV=testnet
 
 **Step 7 -** Create **.origintrail\_noderc** file
 
-An example is provided below :
+Paste the content below if you are using **GraphDB**, then add your operational wallet public and private keys :
+```
+{
+  "blockchain":[
+    {
+      "blockchainTitle": "Polygon",
+      "networkId": "polygon::testnet",
+      "rpcEndpoints": ["https://rpc-mumbai.maticvigil.com/"],
+      "publicKey": "...",
+      "privateKey": "..."
+    }
+  ],
+  "graphDatabase": {
+    "username": "admin",
+    "password": ""
+  },
+  "logLevel": "trace",
+  "rpcPort": 8900,
+  "network": {
+  },
+  "ipWhitelist": [
+  "::1",
+    "127.0.0.1"
+  ]
+}
+```
+Paste the content below if you are using **Blazegraph**, then add your operational wallet public and private keys :
 ```
 {
   "blockchain":[
@@ -265,7 +300,7 @@ systemctl stop otnode
 ```
 
 ### OPTIONAL: 
-You can enable all previous services to allow them to start on reboot.
+You can enable all previous services to allow them to start on reboot. Enable GraphDB or Blazegraph depending on your choice above.
 ```
 systemctl enable graphdb
 systemctl enable blazegraph
