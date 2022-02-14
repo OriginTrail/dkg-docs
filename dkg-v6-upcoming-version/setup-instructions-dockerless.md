@@ -15,7 +15,6 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 ### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
 
 * A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** server (minimum hardware requirements)
-* An installed and running **GraphDB**
 
 **Prepare GraphDB**
 
@@ -68,7 +67,5 @@ systemctl stop otnode
 systemctl start otnode
 systemctl restart otnode
 ```
-
-****\
 
 We would love to meet you in our Discord chat - join us [here](https://discord.gg/6BGSCJfk4Y).&#x20;
