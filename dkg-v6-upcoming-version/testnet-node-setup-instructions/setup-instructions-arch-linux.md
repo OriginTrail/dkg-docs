@@ -1,4 +1,4 @@
-# Setup instructions Arch Linux
+# Setup instructions (Arch Linux)
 
 {% hint style="info" %}
 These setup instructions for DKGv6 are "Work in progress" and are subject to change. The development team expects to introduce improvements as well as a more automated process of setting up the DKGv6 node in the future.
@@ -12,29 +12,12 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 **IMPORTANT: These instructions are not intended for migrating your current v5 node to v6. Attempting this will most likely break your v5 node at this point. You should only use these instructions in order to setup a fresh OriginTrail v6 testnet node.**
 {% endhint %}
 
-### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
-
-* A dedicated **4GB RAM/2CPUs/50GB HDD** **Arch Linux** server (minimum hardware requirements)
-
 ## **Manual installation steps**
 
 First, log in as root and update your system
 
 ```
 pacman -Syu
-```
-
-#### **Prepare Databases**
-
-**In this section and the one below, you can choose between using GraphDB or Blazegraph. If you choose one, you can ignore the instructions for the other.**
-
-In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will be provided to you via email. Use the standalone version of GraphDB.\
-Save the **\<graphDB\_file>.zip** on your root folder.
-
-In order to download blazegraph, run
-
-```
-wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar
 ```
 
 #### **Step 0: Setup GraphDB or Blazegraph**
@@ -81,6 +64,11 @@ systemctl start graphdb
 ```
 
 If you chose to use **Blazegraph**, please follow the steps below:
+
+First, download blazegraph
+```
+wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar
+```
 
 We will create a system service to allow Blazegraph to keep running in the background.
 
