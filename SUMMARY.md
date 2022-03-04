@@ -12,6 +12,23 @@
 * [Contribution Guidelines](general/contribute.md)
 * [Development principles](general/development-principles.md)
 
+## DKG v6 (beta)
+
+* [🚀 Introduction to DKG v6 - start here](dkg-v6-beta/introduction-to-dkg-v6-start-here.md)
+* [Setting up your development environment](dkg-v6-beta/setting-up-your-development-environment.md)
+* [Testnet node - setup instructions](dkg-v6-beta/testnet-node-setup-instructions/README.md)
+  * [Setup instructions (Dockerless)](dkg-v6-beta/testnet-node-setup-instructions/setup-instructions-dockerless.md)
+  * [Docker setup](dkg-v6-beta/testnet-node-setup-instructions/docker-setup.md)
+  * [Setup instructions Arch Linux](dkg-v6-beta/testnet-node-setup-instructions/setup-instructions-arch-linux.md)
+* [DKG v6 API](dkg-v6-beta/dkg-v6-api/README.md)
+  * [Example flow: Publishing Product Dataset, Resolving, Searching on the DKG and Querying via SPARQL](dkg-v6-beta/dkg-v6-api/example-flow-publishing-product-dataset-resolving-searching-on-the-dkg-and-querying-via-sparql.md)
+  * [DKG v6 JS client](dkg-v6-beta/dkg-v6-api/dkg-v6-js-client.md)
+* [Setting up DKG metrics reporting](dkg-v6-beta/setting-up-dkg-metrics-reporting.md)
+* [Integrating data over multiple Knowledge Graphs](dkg-v6-beta/integrating-data-over-multiple-knowledge-graphs.md)
+* [Tutorials](dkg-v6-beta/tutorials.md)
+* [🏁 v6 bounty program](dkg-v6-beta/v6-bounty-program.md)
+* [👾 Telemetry Hub](dkg-v6-beta/telemetry-hub.md)
+
 ## Using the DKG v5 (current version) <a href="#developers" id="developers"></a>
 
 * [Getting started](developers/getting-started.md)
@@ -32,22 +49,6 @@
 * [Compensation parameters setup](running-nodes/node-price.md)
 * [Nodes Backup & Restore](running-nodes/backup.md)
 * [DKG persistance mechanisms](running-nodes/dkg-persistance-mechanisms.md)
-
-## DKG v6 (upcoming version)
-
-* [🚀 Introduction to DKG v6 - start here](dkg-v6-upcoming-version/introduction-to-dkg-v6-start-here.md)
-* [Setting up your development environment](dkg-v6-upcoming-version/setting-up-your-development-environment.md)
-* [Testnet node - setup instructions](dkg-v6-upcoming-version/testnet-node-setup-instructions/README.md)
-  * [Setup instructions (Dockerless)](dkg-v6-upcoming-version/testnet-node-setup-instructions/setup-instructions-dockerless.md)
-  * [Docker setup](dkg-v6-upcoming-version/testnet-node-setup-instructions/docker-setup.md)
-  * [Setup instructions Arch Linux](dkg-v6-upcoming-version/testnet-node-setup-instructions/setup-instructions-arch-linux.md)
-* [DKG v6 API](dkg-v6-upcoming-version/dkg-v6-api/README.md)
-  * [Example flow: Publishing Product Dataset, Resolving, Searching on the DKG and Querying via SPARQL](dkg-v6-upcoming-version/dkg-v6-api/example-flow-publishing-product-dataset-resolving-searching-on-the-dkg-and-querying-via-sparql.md)
-  * [DKG v6 JS client](dkg-v6-upcoming-version/dkg-v6-api/dkg-v6-js-client.md)
-* [Setting up DKG metrics reporting](dkg-v6-upcoming-version/setting-up-dkg-metrics-reporting.md)
-* [Integrating data over multiple Knowledge Graphs](dkg-v6-upcoming-version/integrating-data-over-multiple-knowledge-graphs.md)
-* [Tutorials](dkg-v6-upcoming-version/tutorials.md)
-* [🏁 v6 bounty program](dkg-v6-upcoming-version/v6-bounty-program.md)
 
 ## Useful Resources
 
