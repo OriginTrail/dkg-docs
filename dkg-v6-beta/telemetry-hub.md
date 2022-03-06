@@ -4,7 +4,7 @@ description: The OriginTrail v6 network monitoring system
 
 # 👾 Telemetry Hub
 
-The OriginTrail v6 telemetry hub is a system designed to monitor the Decentralized Knowledge Graph network performance and provide feedback on the network activity.&#x20;
+The OriginTrail v6 telemetry hub is a system designed to monitor the Decentralized Knowledge Graph (DKG) network performance and provide feedback on the network activity.&#x20;
 
 ### What kind of data does the Telemetry hub collect?
 
@@ -29,23 +29,23 @@ Note: no personal data, keys or sensitive information is collected via the Telem
 
 The telemetry hub is in essence a Semantic Web3 application collecting and analysing telemetry data on the usage of the DKG, by using the DKG itself for monitoring its **performance**. During the beta however there is one more purpose - testing the DKG **functionalities** in the real-world environment, in order to be able reach of TRL8 and TRL9 (see "[NASA technology readiness levels](https://www.nasa.gov/directorates/heo/scan/engineering/technology/technology\_readiness\_level)").
 
-Therefore it is expected that during beta stages the Telemetry will collect errors, reveal previously undetected issues and problems - all of these are valuable to the OriginTrail Developer community and by running a v6 node you can contribute to the mission [and earn bounty rewards](v6-bounty-program.md)!
+Therefore it is expected that during beta stages the Telemetry will collect errors, reveal previously undetected issues and problems - all of these are valuable to the OriginTrail Developer community. By running a v6 node you can contribute to the mission [and earn bounty rewards](v6-bounty-program.md)!
 
 ### How can you verify your node is submitting data to telemetry?
 
-If you are running an OriginTrail v6 testnet node and want to contribute to the Telemetry system and earn bounty, please make sure to verify the following:
+If you are running an OriginTrail v6 testnet node, you can contribute to the Telemetry system and increase your bounty score. You will need to verify the following:
 
-* Check that your node is up to date with the latest v6 node version (check for the latest release [on Github](https://github.com/OriginTrail/ot-node/releases)). We suggest that you turn on autoupdating during the beta stage to make sure your node is updated constantly
+* Check that your node is up to date with the latest v6 node version (you can find the latest release [on Github](https://github.com/OriginTrail/ot-node/releases)). There is an autoupdating feature during the beta stage to make sure your node is updated constantly. This feature is turned on by default. To confirm this and also your node's current version, point your browser to http://<ip--of-ot-node>:8900/info (see screenshot below)
 * Make sure that the node operational wallet has enough tokens&#x20;
-  * Polygon Mumbai MATIC tokens (from launch stage 1 onwards)
+  * Polygon Mumbai MATIC testnet tokens (from launch stage 1 onwards). You can request testnet MATIC tokens for free from [this faucet](https://faucet.polygon.technology/). Currently the testnet node is spending about 0.076 MATIC per day. The faucet will transfer 0.5 MATIC on each request. The faucet has not been working 100% of the time lately. In case you don't receive any MATIC within a few minutes, you can check if the faucet is working by looking for errors in recent transactions [at this contract address](https://mumbai.polygonscan.com/address/0x7f092e65c688a509737fcd8d0998dd12208f5297)
   * Test TRAC tokens (from launch stage 2 onwards) - not applicable yet
-* Make sure your node is communicating properly [with the Polygon Mumbai RPC](https://docs.polygon.technology/docs/develop/network-details/network/) endpoints
-* Make sure to check that your nodes are operating properly by checking the node logs
-* Check if your node telemetry plugin has been enabled by using the node API info route (see screenshot below from Postman)
+* Make sure your node is communicating properly [with the Polygon Mumbai RPC](https://docs.polygon.technology/docs/develop/network-details/network/) endpoints. (? how to do this? check logs? then is redudant with the next point). 
+* Make sure that your node is operating properly by checking the node logs. Login to your testnet server and monitor the log with the command `journalctl -u otnode --output cat -fn 100`
+* Check if your node telemetry plugin has been enabled by using the node API info route on your browser (http://<ip--of-ot-node>:8900/info See screenshot below from Postman)
 
 ![Example of the response from a node /info API call showing the latest version and if telemetry data is being sent ](<../.gitbook/assets/Screen Shot 2022-03-04 at 14.27.16.png>)
 
-Additionally, check the Telemetry Debug Dashboard to find your node:
+Additionally, check the [Telemetry Debug Dashboard](https://telemetry.origintrail.io/d/ddf1iEf7k/bounty-scoreboards) to find your node's contribution:
 
 * Find your node wallet address in the table
 * Check that the "records\_seen\_by\_signaling\_server" is greater than 0 (the number should be close to 24 as the node should submit one telemetry report assertion every hour)
