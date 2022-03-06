@@ -15,14 +15,20 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 ### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
 
 * A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** server (minimum hardware requirements)
+* Either GraphDB or Blazegraph DB. Blazegraph DB is currently being automatically installed by the installer script. If you prefer to use GraphDB, you have to manually get the installation file over to the server. See instructions below
+* An Ethereum compatible address and its private key. You will need to provide both during installation. You can create a new address / key pair in Metamask for example. Don't use an address that contains valuable tokens, create a disposable address for this purpose
+* MATIC testnet tokens in the Mumbai network. You can have some tokens airdropped from [this faucet](https://faucet.polygon.technology/)
 
 **Prepare GraphDB**
 
-1. Please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will sent to you by email. **Use the standalone version of GraphDB**.
-2. Upload the **\<graphDB\_file>.zip** file to your server. There are several ways:
+1. Please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will be sent to you by email. **Use the standalone version of GraphDB**.
+
+* Alternatively, you can download the installation file directly to your server's /root directory using `wget https://tracdeepdive.info/wp-content/uploads/2022/02/graphdb-free-9.10.1-dist.zip`. This file is hosted in a Origin Trail community server for your convenience.
+
+3. Upload the **\<graphDB\_file>.zip** file to your server. There are several ways:
 
 * Download any FTP program, such as [FileZilla](https://filezilla-project.org) (works for Mac OS, Windows and Ubuntu), and copy the **\<graphDB\_file>.zip** to the server's /root directory;
-* You can also use sftp://user@ip\_address and copy the file over for Ubuntu users. Consult these [instructions](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) if needed;
+* Ubuntu users can also use the default file manager Files to connect and copy the file over SFTP. Use `sftp://user@ip\_address` as the path. Consult these [instructions](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) if needed;
 
 ### Installation
 
@@ -34,13 +40,13 @@ Login to the server as root. You **cannot** use sudo and run this script. The co
 
 Execute **one** of the following commands depending on if you have cloned the ot-node repo:
 
-**If the repo is not cloned yet:**
+**If the repository is not cloned yet:**
 
 ```
 apt install git -y && cd /root && git clone https://github.com/OriginTrail/ot-node && cd ot-node && git checkout v6/release/testnet && installer/installer.sh
 ```
 
-**If you have already cloned the ot-node repo:**
+**If you have already cloned the ot-node repository:**
 
 ```
 /root/ot-node/installer/installer.sh
