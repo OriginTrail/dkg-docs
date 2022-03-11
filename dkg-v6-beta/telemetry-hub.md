@@ -31,21 +31,34 @@ The telemetry hub is in essence a Semantic Web3 application collecting and analy
 
 Therefore it is expected that during beta stages the Telemetry will collect errors, reveal previously undetected issues and problems - all of these are valuable to the OriginTrail Developer community and by running a v6 node you can contribute to the mission [and earn bounty rewards](v6-bounty-program.md)!
 
+### Important notes
+
+{% hint style="warning" %}
+You are free to run multiple nodes, and will be rewarded for each of the nodes contributing, however make sure each node uses a different wallet (this is a prerequisite).
+{% endhint %}
+
+{% hint style="warning" %}
+For each node that you are running, please go to [bounty program website](https://bountyprogram.origintrail.io) and register wallet of that node (you can preform this step anytime before or after starting your node)
+{% endhint %}
+
 ### How can you verify your node is submitting data to telemetry?
 
 If you are running an OriginTrail v6 testnet node and want to contribute to the Telemetry system and earn bounty, please make sure to verify the following:
 
 * Check that your node is up to date with the latest v6 node version (check for the latest release [on Github](https://github.com/OriginTrail/ot-node/releases)). We suggest that you turn on autoupdating during the beta stage to make sure your node is updated constantly
+* Make sure to check that your nodes are operating properly by checking the node logs
 * Make sure that the node operational wallet has enough tokens&#x20;
   * Polygon Mumbai MATIC tokens (from launch stage 1 onwards)
   * Test TRAC tokens (from launch stage 2 onwards) - not applicable yet
 * Make sure your node is communicating properly [with the Polygon Mumbai RPC](https://docs.polygon.technology/docs/develop/network-details/network/) endpoints
-* Make sure to check that your nodes are operating properly by checking the node logs
-* Check if your node telemetry plugin has been enabled by using the node API info route (see screenshot below from Postman)
+* Check if your node telemetry plugin has been enabled by using the node API info route (see screenshot below from browser)
+  * If you have setup SSL on your node, use https to check
+  * If you get _"Access denied"_ message, you need to whitelist yourself by adding your IP address in ipWhitelist array in .origintrail\_noderc file, and then restart your node
+  * After starting/restarting, following message in the logs means that telemetry plugin is enabled _"Telemetry hub module initialized successfully, using ot-telemetry-collector package(s)"_
 
-![Example of the response from a node /info API call showing the latest version and if telemetry data is being sent ](<../.gitbook/assets/Screen Shot 2022-03-04 at 14.27.16.png>)
+![Example of the response from a node /info API call showing the latest version and if telemetry data is being sent ](<../.gitbook/assets/Screen Shot 2022-03-11 at 10.18.34.png>)
 
-Additionally, check the Telemetry Debug Dashboard to find your node:
+Additionally, check the Debug section in Protocol operations KPIs [Dashboard](https://telemetry.origintrail.io/d/Cs4uPdLnk/telemetry-protocol-operation-kpis) to find your node:
 
 * Find your node wallet address in the table
 * Check that the "records\_seen\_by\_signaling\_server" is greater than 0 (the number should be close to 24 as the node should submit one telemetry report assertion every hour)
@@ -57,14 +70,10 @@ The Telemetry data received might be lagging behind (not realtime) which is expe
 {% endhint %}
 
 {% hint style="info" %}
-The bounty scoreboard table is only showing a list of nodes, ranked randomly **until the official launch of the Telemetry bounty** (tentatively scheduled for March 9th 2022). The table is only used to check if the bounty results are being received, the ranking positions are not relevant.
+The bounty scoreboard table is updated daily with points for the previous day.
 {% endhint %}
-
-
 
 ### What should you do if you observe issues?
 
 After checking the above list and not being able to resolve any issues, please contact the developers directly [on Discord](https://discordapp.com/invite/FCgYk2S).
-
-
 
