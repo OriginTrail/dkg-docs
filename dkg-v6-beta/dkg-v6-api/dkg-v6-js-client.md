@@ -87,7 +87,7 @@ options = {
     filepath: '{LocalPATH}/Product.json', 
     assets: ['0x123456789123456789123456789'],
     keywords: ['Product', 'Executive Objects', 'ACME'],
-    visibility: true
+    visibility: "public"
 };
 
 dkg.publish(options).then((result) => {
