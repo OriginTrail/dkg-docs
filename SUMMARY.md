@@ -19,6 +19,7 @@
 * [Testnet node - setup instructions](dkg-v6-beta/testnet-node-setup-instructions/README.md)
   * [Setup instructions (Dockerless)](dkg-v6-beta/testnet-node-setup-instructions/setup-instructions-dockerless.md)
   * [Docker setup](dkg-v6-beta/testnet-node-setup-instructions/docker-setup.md)
+  * [Fund your v6 testnet node](dkg-v6-beta/testnet-node-setup-instructions/fund-your-v6-testnet-node.md)
   * [Setup instructions Arch Linux](dkg-v6-beta/testnet-node-setup-instructions/setup-instructions-arch-linux.md)
 * [DKG v6 API](dkg-v6-beta/dkg-v6-api/README.md)
   * [Example flow: Publishing Product Dataset, Resolving, Searching on the DKG and Querying via SPARQL](dkg-v6-beta/dkg-v6-api/example-flow-publishing-product-dataset-resolving-searching-on-the-dkg-and-querying-via-sparql.md)
