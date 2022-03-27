@@ -1,4 +1,4 @@
-# Setup instructions Arch Linux
+# Setup instructions (Arch Linux)
 
 {% hint style="info" %}
 These setup instructions for DKGv6 are "Work in progress" and are subject to change. The development team expects to introduce improvements as well as a more automated process of setting up the DKGv6 node in the future.
@@ -12,10 +12,6 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 **IMPORTANT: These instructions are not intended for migrating your current v5 node to v6. Attempting this will most likely break your v5 node at this point. You should only use these instructions in order to setup a fresh OriginTrail v6 testnet node.**
 {% endhint %}
 
-### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
-
-* A dedicated **4GB RAM/2CPUs/50GB HDD** **Arch Linux** server (minimum hardware requirements)
-
 ## **Manual installation steps**
 
 First, log in as root and update your system
@@ -24,26 +20,14 @@ First, log in as root and update your system
 pacman -Syu
 ```
 
-#### **Prepare Databases**
-
-**In this section and the one below, you can choose between using GraphDB or Blazegraph. If you choose one, you can ignore the instructions for the other.**
-
-In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will be provided to you via email. Use the standalone version of GraphDB.\
-Save the **\<graphDB\_file>.zip** on your root folder.
-
-In order to download blazegraph, run
-
-```
-wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar
-```
-
 #### **Step 0: Setup GraphDB or Blazegraph**
 
 If you chose to use **GraphDB**, below are the steps to follow:
 
 ```
 pacman -S jre-openjdk
-unzip graphdb-free-9.10.1-dist.zip
+unzip graphdb*.zip
+mv $(echo /root/graphdb*.zip | sed 's|-dist.zip||') graphdb-free
 ```
 
 We will create a system service to allow graphDB to keep running in the background.
@@ -65,8 +49,8 @@ After=network.target
 [Service]
 Type=simple
 User=root
-WorkingDirectory=/root/graphdb-free-9.10.1/bin/
-ExecStart=/root/graphdb-free-9.10.1/bin/graphdb
+WorkingDirectory=/root/graphdb-free/bin/
+ExecStart=/root/graphdb-free/bin/graphdb
 Restart=on-failure
 
 [Install]
@@ -81,6 +65,11 @@ systemctl start graphdb
 ```
 
 If you chose to use **Blazegraph**, please follow the steps below:
+
+First, download blazegraph
+```
+wget https://github.com/blazegraph/database/releases/latest/download/blazegraph.jar
+```
 
 We will create a system service to allow Blazegraph to keep running in the background.
 
@@ -102,7 +91,7 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=/root/
-ExecStart=/bin/java -jar /root/blazegraph.jar
+ExecStart=/usr/bin/java -jar /root/blazegraph.jar
 Restart=on-failure
 
 [Install]
@@ -128,10 +117,10 @@ systemctl status blazegraph
 
 #### **Step 1: Installing other requirements**
 
-OriginTrail v6 node requires **npm** and **Node.js v14**. In order to install them, please execute the following set of commands:
+OriginTrail v6 node requires **npm** and **Node.js**. In order to install them, please execute the following set of commands:
 
 ```
-pacman -S npm nodejs-lts-fermium
+pacman -S npm nodejs-lts-gallium
 ```
 
 #### **Step 2 - Install mysql and create a local operational database**
@@ -181,7 +170,7 @@ npm install
 
 #### **Step 5 - Ports**
 
-Allow traffic on ports 8900 (RPC) and 9000 (libp2p) on your router. Note that all ports are open by default on Arch Linux.
+Allow traffic on ports 8900 (RPC) and 9000 (libp2p) on your router if you are running nodes locally. Note that all ports are open by default on Arch Linux.
 
 #### **Step 6 - Create .env file:**
 
@@ -284,13 +273,13 @@ Paste the following content and save
 [Unit]
 Description=OriginTrail V6 Stage 1 Beta Node
 Documentation=https://github.com/OriginTrail/ot-node/
-After=network.target graphdb.service
+After=network.target graphdb.service blazegraph.service
 
 [Service]
 Type=simple
 User=root
 WorkingDirectory=/root/ot-node
-ExecStart=/usr/bin/node /root/ot-node/index.js
+ExecStart=/usr/local/bin/node /root/ot-node/index.js
 Restart=on-failure
 
 [Install]
@@ -312,7 +301,7 @@ systemctl status otnode
 Use the following command to check the logs:
 
 ```
-journalctl -f -u otnode --all
+journalctl -u otnode --output cat -fn 100
 ```
 
 ![Successfully started](<../../.gitbook/assets/Screenshot 2021-12-27 at 15.49.28.png>)
@@ -336,8 +325,18 @@ systemctl enable otnode
 
 To control your journal size over time, I strongly suggest running the following:
 
+reduce your current log size to 200mb
+
 ```
 journalctl --vacuum-size=200M
+```
+
+set maximum log size to 200mb
+```
+sed -i 's|#SystemMaxUse=|SystemMaxUse=200M|' /etc/systemd/journald.conf
+```
+```
+systemctl restart systemd-journald
 ```
 
 {% hint style="success" %}
