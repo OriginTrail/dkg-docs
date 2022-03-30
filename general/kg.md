@@ -61,4 +61,7 @@ Key characteristics of knowledge graphs are:
 
 For the moment we restrict this document only to a high level introduction and encourage the reader to research resources on the semantic web and knowledge graphs available online.
 
-**Commonly knowledge graphs are deployed within the domain of one organisation and are designed to capture knowledge from various sources both from within and outside of the organisation.** These centralised knowledge graphs generate huge value for their owners, yet a decentralised globally shared knowledge graph brings orders of magnitude higher value to everyone participating. We present the OriginTrail Decentralized Knowledge Graph as the first permissionless, global open decentralized knowledge graph - read on.
+![An illustration of a Knowledge Graph and it's entities](https://lh4.googleusercontent.com/1rOyzC751vA96QcoPOOavfy\_RlkKuEofhJ8M9I9KHSK\_XCPuW5HxAvIioqSqFROkNMbEqD0Muq0yGKAHSA4ZqIYQgtsz-J0pmBJ64bzZARoHXOdMMNoA3VdD40yoTTLbhyyPfn4Rs7CS)
+
+**Commonly knowledge graphs are deployed within the domain of one organisation and are designed to capture knowledge from various sources both from within and outside of the organisation.** These centralised knowledge graphs generate huge value for their owners, yet a decentralised globally shared knowledge graph brings orders of magnitude higher value to everyone participating. We present the **OriginTrail Decentralized Knowledge Graph** as the first permissionless, global open decentralized knowledge graph - read on.
+

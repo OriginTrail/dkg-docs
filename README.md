@@ -1,12 +1,6 @@
----
-description: Learn about the world's first decentralized knowledge graph
----
+# 👋 Welcome to official OriginTrail Docs
 
-# Welcome to OriginTrail Documentation Hub
-
-## Welcome to the OriginTrail official docs
-
-OriginTrail technology is a set of tools and protocols evolving as the [semantic](https://www.w3.org/standards/semanticweb/) layer for Web3, built on the OriginTrail **Decentralized Knowledge Graph (DKG).** Its function is to empower developers and system integrators utilizing decentralized knowledge exchange supported by emerging standards and DLT networks.
+OriginTrail ecosystem is built on a set of tools and protocols evolving as the [semantic](https://www.w3.org/standards/semanticweb/) layer of Web3. The heart of the ecosystem is the **OriginTrail Decentralized Knowledge Graph (DKG)**, an open, collaborative network combining blockchain and knowledge graph technology. The core unit of the network - the **OriginTrail node** - is the ultimate data service for your Web3 applications. OriginTrail DKG is a powerful Web3 backend, and together with **DKG SDKs** you can create graph-native Web3 applications, interfacing with verifiable assets on the DKG.
 
 The DKG enables you to:
 
@@ -16,12 +10,11 @@ The DKG enables you to:
 * Easily build custom verifiable data pipelines
 * Integrate with existing SSI & blockchain tooling
 
-This documentation is structured in 4 sections:
+This documentation is structured in 3 sections:
 
 * Introduction to OriginTrail Decentralized Knowledge Graph - we recommend starting here
-* **For developers:** how to use the DKG as a Dapp builder
-* **For node operators:** how to host the OriginTrail Decentralized Knowledge Graph by running nodes
-* Generally useful resources section
+* **For developers and node operators:** explaining **how to build the DKG** and contribute to the OriginTrail Decentralized Knowledge Graph by **running network nodes**
+* Additional resources and links
 
 _Note: This site is primarily built for **developers** and **OriginTrail network node runners** - if you are looking to learn more about the OriginTrail ecosystem, please visit_ [_the official website_](https://origintrail.io)_._
 
@@ -35,12 +28,10 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 * [GitHub](https://github.com/origintrail)
 * [OriginTrail website](https://origintrail.io)
-* [Trace Alliance](https://alliance.origintrail.io) website
-* [Trace Labs - OriginTrail Core Developers](https://tracelabs.io)
-* [OriginTrail Network Explorer](https://explorer.origintrail.io)
 * [Medium blog](https://medium.com/origintrail)
 * [YouTube channel](https://www.youtube.com/c/OriginTrail)
-* [Knowledge Base](https://knowledge-base.origintrail.io)
+* [Trace Labs - OriginTrail Core Developers](https://tracelabs.io)
+* [Trace Alliance](https://alliance.origintrail.io) website
 
 **Join the OriginTrail community:**
 

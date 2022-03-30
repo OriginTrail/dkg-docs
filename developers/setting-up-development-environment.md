@@ -2,7 +2,7 @@
 description: How to setup a local and shared development environment
 ---
 
-# Setting up your development environment
+# Development environment setup (v5)
 
 ## Setting up a local DKG network on your machine
 
@@ -77,7 +77,7 @@ If you want to edit a single node's configuration, you can do it in two ways:
 
 ### Using one of the testnets
 
-For a shared development environment, we recommend deploying DKG testnet nodes on the stable testnet - instructions can be found [here](../running-nodes/node-setup/).&#x20;
+For a shared development environment, we recommend deploying DKG testnet nodes on the stable testnet - instructions can be found [here](node-setup/).&#x20;
 
 
 

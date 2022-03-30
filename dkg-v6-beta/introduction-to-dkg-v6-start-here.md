@@ -1,18 +1,30 @@
 ---
-description: What's new in OriginTrail v6 and how can you get involved?
+description: What's new in OriginTrail v6 and how can you get started?
 ---
 
 # 🚀 Introduction to DKG v6 - start here
 
-The DKG v6 introduces various improvements to the existing OriginTrail DKG. Among others, it will introduce:
+The OriginTrail DKG v6 is the newest version of OriginTrail, which introduces various improvements to the existing OriginTrail DKG. Among others, it will introduce:
 
-* the Universal Asset Locator (UAL), akin to URLs in Web2
-* improved discoverability, performance and semantic powers with the expanding support for semantic technologies such as RDF, OWL, SPARQL, Triple Pattern Fragments, SHACL and others&#x20;
+* **DKG Asset graphs**, identified by the **Universal Asset Locators** (UAL), akin to URLs in Web2
+* improved discoverability, performance and semantic capabilities with the expanding support for semantic technologies such as RDF, OWL, SPARQL, Triple Pattern Fragments, SHACL and others&#x20;
 * numerous performance updates to the protocol & network implementation
 
-To learn more about OriginTrail v6, check out this [**blogpost**](https://medium.com/origintrail/launching-the-origintrail-v6-stages-explained-3997797d44c0).
+To learn more about what's new in OriginTrail v6, check out **this** [**page**](https://origintrail.io/v6)****
 
-### Launch procedure
+### How do you build on OriginTrail v6?
+
+We have a great new SDK for v6 - get started here!
+
+### How can you contribute to OriginTrail v6?
+
+You can contribute in several ways:
+
+* by contributing to the OriginTrail v6 codebase (we have an active [bounty program](v6-bounty-program.md))
+* by running OriginTrail v6 nodes in one of the networks. Running a v6 node on the testnet will also make you eligible for bounty rewards, while after mainnet launch your node will be earning TRAC rewards for the services provided to the network
+* join the discussion in our tech community [Discord](https://discordapp.com/invite/FCgYk2S)!
+
+### OriginTrail v6 launch procedure
 
 The OriginTrail DKG v6 launch is performed in 3 stages:
 
@@ -20,4 +32,4 @@ The OriginTrail DKG v6 launch is performed in 3 stages:
 * **Stage 2** which introduces the incentivisation layer (smart contracts and TRAC token). Stage 2 immediately kicks in once stage 1 KPIs are stable, which will introduce the incentivisation layer, implemented through smart contracts, opening the doors for token delegation, staking and improving several existing mechanisms
 * **Stage 3** will be focused on performing the migration from v5 to the v6 mainnet.
 
-**Throughout the stages the OriginTrail community is invited to participate by actively utilizing the v6 network. Each node will be capable of collecting granular network KPI and telemetry data and publishing it to the DKG itself, further utilized by the core developers to improve the DKG implementation and proceed through the launch stages. For that purpose, there will be a designated reward pool that node runners will be able to collect by submitting relevant network utilization data.** All node runners will be motivated to test and utilize their nodes in various creative ways, in order to generate as much quality DKG utilization data to be able to collect rewards. The collected data will include performance metrics, collected error information from bugs occurrences and other. More details on the reward pool distribution among all node runners will be available shortly\
+**Throughout the stages the OriginTrail community is invited to participate in the Telemetry bounty program, by actively utilizing the v6 network. Each node in the network is capable of actively collecting granular network KPI and telemetry data and publishing it to the DKG itself, further utilized by the core developers to improve the DKG implementation and proceed through the launch stages. Check out more about the** [**Telemetry bounty program here**](v6-bounty-program.md)**.**\

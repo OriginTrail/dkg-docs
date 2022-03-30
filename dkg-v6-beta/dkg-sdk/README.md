@@ -1,0 +1,22 @@
+---
+description: The one-stop-shop SDK for your Semantic Web3 needs
+---
+
+# DKG SDK
+
+The OriginTrail SDKs are client libraries for your Web3 applications, used to interact and connect with the OriginTrail Decentralized Knowledge Graph.
+
+From an architectural standpoint, the SDK libraries are application interfaces into the DKG, enabling you to create and manage **DKG Asset graphs** through your apps, as well as perform network queries (such as search, or SPARQL queries), as illustrated below.&#x20;
+
+![The interplay between your app, DKG and blockchains](<../../.gitbook/assets/image (7).png>)
+
+
+
+The OriginTrail SDK libraries are being built in various languages, as listed below (if you are interested in building a language-specifc client, contact us):
+
+* ****[**dkg.js**](dkg-v6-js-client.md) -Javascript client (if you are looking for the v5 client, you can find it [here](https://github.com/OriginTrail/dkg-client))
+* **dkg.rs** - Rust client (coming soon)
+* **dkg.py** (Python client, coming soon)
+* **dkg.go** (Go client, coming soon)
+* **dkg.php** (Php client, coming soon)
+* **dkg.net** (.NET client, coming soon)

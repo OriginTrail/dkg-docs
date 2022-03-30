@@ -1,17 +1,21 @@
 # OriginTrail - Decentralized Knowledge Graph (DKG)
 
-## What is a decentralized knowledge graph?
+## What is the OriginTrail Decentralized Knowledge Graph?
 
-A **decentralized knowledge graph (DKG)** is a global shared knowledge graph that is designed to benefit organizations and individuals by providing shared public infrastructure for knowledge exchange.&#x20;
+OriginTrail Decentralized Knowledge Graph (DKG) is an open, collaborative network combining **blockchain** and **knowledge graph** technology. The core unit of the network - the OriginTrail node - is the ultimate data service for your Web3 applications. OriginTrail DKG is a powerful Web3 backend, and together with DKG SDK you can create graph-native Web3 applications, interfacing with verifiable assets on the DKG.
 
-The OriginTrail DKG:
+OriginTrail connects to multiple blockchains, such as Ethereum, Polkadot, Polygon, Gnosis and more to come. It is fuelled by the TRAC token, which is used to manage relations between DKG network participants. Running an OriginTrail node also makes you one of the contributors to hosting the DKG and makes you eligible for earning TRAC token rewards.
 
-* removes central authorities - is hosted on the OriginTrail Decentralized Network (ODN)
-* utilizes DIDs & Verifiable Credentials for identity and assertions management
-* enables Dapps with search, integration, analytics, AI and ML capabilities for any data source: blockchains, IPFS, enterprise systems, web services, personal devices
-* enables permissionless PUBLISH and QUERY operations
+As a developer using the OriginTrail DKG you can create and maintain **Web3 asset graphs** - immutable, queryable and searchable graphs that can be used across Web3 applications. You can additionally apply standardized technologies such as GS1 EPCIS, RDF/SPARQL, JSON-LD and other W3C and GS1 standards out of the box.
 
-The OriginTrail Decentralized Network is an implementation of the OriginTrail DKG. With the ODN therefore you can **query for data across a multitude of systems** (discovery), to **exchange it** via several data exchange protocols and **integrate it** in your own local knowledge graph or data store.&#x20;
+### Why combine Blockchain with Knowledge Graphs?
+
+Blockchains and knowledge graphs are two different types of networks:
+
+* **blockchains are trust networks**. They run on decentralized stateful protocols enabling a verifiable shared state, and are used for applications such as Decentralized identity, Asset tokenization (NFTs), Decentralized Finance, Trusted multi-party computation etc
+* **knowledge graphs are semantic networks.** When Google first coined the term "knowledge graph", they explained it as "things, not strings". Knowledge Graphs connect highly structured, machine-understandable, semantic entities into one **semantic data network,** enabling powerful data capabilities, such as search, inference, recommendations, advanced machine learning and others. Knowledge graphs inherit the technology stack idea of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic\_Web#:\~:text=The%20Semantic%20Web%2C%20sometimes%20known,make%20Internet%20data%20machine%2Dreadable.) (introduced as the "original" Web3.0 by Sir Tim Berners-Lee, the inventor of WWW)
+
+The two technologies are combined in the **OriginTrail** **Decentralized Knowledge Graph**, in a materialized vision of the **Semantic Web3** - a user owned, data centric, trusted, semantic web.
 
 {% hint style="info" %}
 _If you are looking to jump right into the code, head over to the_ [_Getting Started_](../developers/getting-started.md) _page._
@@ -27,7 +31,7 @@ We distinguish several layers of the DKG:
 * **the consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols (currently supporting Ethereum, xDai blockchain and the OriginTrail Polkadot Parachain)
 * **application layer,** encompassing both Dapps and traditional applications which utilize the OriginTrail DKG as part of their data flows.
 
-![](<../.gitbook/assets/OriginTrail - Technical Stack.png>)
+![OriginTrail conceptual architecture](<../.gitbook/assets/Screenshot 2022-03-30 at 16.46.10.png>)
 
 We also distinguish between:
 

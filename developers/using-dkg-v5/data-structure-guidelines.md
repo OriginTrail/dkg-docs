@@ -109,12 +109,12 @@ In order to have a database and standard agnostic data structure, the protocol u
 An OT-JSON document represents a dataset as a graph of interconnected dataset objects (use case entities), such as actors, products, batches, etc. together with relations between them. Structure of dataset objects is generally defined, but extendable to support new use cases.
 
 > * **Objects** - Use case entities (products, locations, vehicles, people, … )
-> * **Relations** - Relations between use case entities (INSTANCE_OF, BELONGS_TO, … )
+> * **Relations** - Relations between use case entities (INSTANCE\_OF, BELONGS\_TO, … )
 > * **Metadata** - Data about dataset (integrity hashes, data creator, signature, transpilation data, ….)
 >
-> **Example:** Assuming that use case request is to connect products with factories there they are produced. Entities of the use case are Product and Producer. These entities are represented as **objects** in OT-JSON format. Product can have **relation** PRODUCED_BY with producer that produces it and the producer can have **relation** HAS_PRODUCED with the product. Product and producer have unique identifiers Product1, Producer1 respectively.
+> **Example:** Assuming that use case request is to connect products with factories there they are produced. Entities of the use case are Product and Producer. These entities are represented as **objects** in OT-JSON format. Product can have **relation** PRODUCED\_BY with producer that produces it and the producer can have **relation** HAS\_PRODUCED with the product. Product and producer have unique identifiers Product1, Producer1 respectively.
 
-![../\_images/datalayer4.png](../.gitbook/assets/4.jpg)
+![../\_images/datalayer4.png](../../.gitbook/assets/4.jpg)
 
 _Figure 2._ Diagram of the example entities and relations
 
@@ -220,7 +220,7 @@ All these resources are semantically described by simple models serialized in JS
 
 #### How an event is represented in the graph
 
-When converting a WOT file to graph, a central vertex will be created for the device described in the file. All sensor measurements will be created as separate vertices in the graph, connected to the main event vertex, in order to enable connection to the rest of the graph via the main vertex. There are two custom vertices denoted as readPoint and observerdLocation. These two vertices are considered as connectors which connect data with the rest of the graph. An example of WOT file with connectors is available on the following link: [https://github.com/OriginTrail/ot-node/blob/develop/importers/use_cases/perutnina_kakaxi/kakaxi.wot](https://github.com/OriginTrail/ot-node/blob/develop/importers/use_cases/perutnina_kakaxi/kakaxi.wot)
+When converting a WOT file to graph, a central vertex will be created for the device described in the file. All sensor measurements will be created as separate vertices in the graph, connected to the main event vertex, in order to enable connection to the rest of the graph via the main vertex. There are two custom vertices denoted as readPoint and observerdLocation. These two vertices are considered as connectors which connect data with the rest of the graph. An example of WOT file with connectors is available on the following link: [https://github.com/OriginTrail/ot-node/blob/develop/importers/use\_cases/perutnina\_kakaxi/kakaxi.wot](https://github.com/OriginTrail/ot-node/blob/develop/importers/use\_cases/perutnina\_kakaxi/kakaxi.wot)
 
 
 

@@ -2,7 +2,7 @@
 
 ## How does querying of the DKG work?
 
-The DKG querying entails both data discovery and graph querying. Therefore OriginTrail implements a set of protocols for discovery and exchange which cover a wide array of possible scenarios. 
+The DKG querying entails both data discovery and graph querying. Therefore OriginTrail implements a set of protocols for discovery and exchange which cover a wide array of possible scenarios.&#x20;
 
 ### Network query
 
@@ -40,9 +40,9 @@ POST http://NODE_IP:PORT/api/latest/network/query
 }
 ```
 
-The returned responses contain query_id which can be used to fetch responses from network query.
+The returned responses contain query\_id which can be used to fetch responses from network query.
 
-To view responses call the query response API, as a parameter use query_id returned from network query API call.
+To view responses call the query response API, as a parameter use query\_id returned from network query API call.
 
 ```javascript
 GET http://NODE_IP:PORT/api/latest/network/query/responses/{query_id}
@@ -79,7 +79,7 @@ body {
 }
 ```
 
-The returned responses contain handler_id which can be used to download fetched dataset using export_result route (explained in this document).
+The returned responses contain handler\_id which can be used to download fetched dataset using export\_result route (explained in this document).
 
 ### Local Knowledge Graph querying - Trail
 
@@ -130,13 +130,13 @@ The `depth` parameter determines how far from the starting vertex will the trave
 
 `connection_types` is an array which serves as a filter in the graph trail traversal operation. When observing a vertex in the graph, only the vertices which are connected to the currently observed vertex by a relation type which is in the `connection_types` array will be visited and included in the graph.
 
-![../\_images/connection-example1.png](../.gitbook/assets/5.jpg)
+![../\_images/connection-example1.png](../../.gitbook/assets/5.jpg)
 
 **Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1` and not `rel_type_2`, a traversal starting from vertex **B** would return vertex **A** and would not return vertex **C.**
 
 In order to avoid backtracking in the trail and attaching superfluous information, a vertex will not be visited if the relation types on the path to that vertex are the same two times in a row.
 
-![../\_images/connection-example2.png](../.gitbook/assets/6.jpg)
+![../\_images/connection-example2.png](../../.gitbook/assets/6.jpg)
 
 **Example**: In the graph pictured above, if the `connection_types` contained `rel_type_1`, a traversal starting from vertex **A** would return vertex **B** and would not return vertex **C.**
 
@@ -176,7 +176,7 @@ body{
 }
 ```
 
-The returned responses contain handler_id which can be used to download exported dataset using export_result route.
+The returned responses contain handler\_id which can be used to download exported dataset using export\_result route.
 
 ```javascript
 GET http://NODE_IP:PORT/api/latest/export/result/{handler_id}

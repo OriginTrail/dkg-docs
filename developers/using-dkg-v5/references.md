@@ -4,7 +4,7 @@ description: Useful reference links and addresses for developers
 
 # Developer Reference
 
-### DKG Client library
+### DKG v5 Client library
 
 You can get the DKG client library [on this Github repo](https://github.com/OriginTrail/dkg-client).
 
@@ -12,11 +12,11 @@ You can get the DKG client library [on this Github repo](https://github.com/Orig
 
 You can find the API reference on [Swagger](https://app.swaggerhub.com/apis-docs/TraceLabs/ot-node-api/v2.1)
 
-The Postman API collection file can be found [here](../DKG_API\_2.0.postman_collection.json).
+The Postman API collection file can be found [here](../../DKG\_API\_2.0.postman\_collection.json).
 
 ### Blockchain smart contract addresses
 
-### **Mainnet**
+### **v5 Mainnet**
 
 **Ethereum (eth:mainnet)**
 
@@ -33,7 +33,7 @@ The Postman API collection file can be found [here](../DKG_API\_2.0.postman_coll
 * TRAC token (bridged): 0xA7b98d63a137bF402b4570799ac4caD0BB1c4B1c
 * ODN hub contract: 0xe5FC9F71F8e378448c0BD0Fb8E1fb879654E3fbb
 
-### Testnet
+### **v5** Testnet
 
 **Ethereum Rinkeby 1 (ethr:rinkeby:1)**
 

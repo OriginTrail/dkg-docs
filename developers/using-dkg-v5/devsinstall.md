@@ -23,7 +23,7 @@ Another key differentiator of the DKG is that it is comprised of two "levels"
 Dapps can use just the public DKG, just private KG (they can access), or can use both synergistically. More information is available in the [querying](querying.md) section.
 
 {% hint style="info" %}
-This section assumes you have [set up your development environment](setting-up-development-environment.md).
+This section assumes you have [set up your development environment](../setting-up-development-environment.md).
 {% endhint %}
 
 ### Publishing data using the DKG client library
