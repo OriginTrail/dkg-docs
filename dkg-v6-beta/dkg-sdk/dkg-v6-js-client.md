@@ -40,9 +40,7 @@ Then include `dist/dkg.min.js` in your html file. This will expose `DKG` on the 
 Make sure to also include Web3.js library as it is a dependency for DKG.js!
 {% endhint %}
 
-
-
-#### Node
+#### In NodeJS apps
 
 Run the command to install dependency from the [NPM](https://www.npmjs.com/package/dkg.js) repository:
 

@@ -37,7 +37,7 @@ Execute **one** of the following commands depending on if you have cloned the ot
 **If the repo is not cloned yet:**
 
 ```
-apt install git -y && cd /root && git clone https://github.com/OriginTrail/ot-node && cd ot-node && git checkout v6/release/testnet && installer/installer.sh
+apt install git -y && cd /root && git clone https://github.com/OriginTrail/ot-node && cd ot-node && git checkout v6/release/testnet 
 ```
 
 **If you have already cloned the ot-node repo:**

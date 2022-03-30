@@ -14,7 +14,7 @@ To learn more about what's new in OriginTrail v6, check out **this** [**page**](
 
 ### How do you build on OriginTrail v6?
 
-We have a great new SDK for v6 - get started here!
+We have a great new SDK for v6 - get started [here](dkg-sdk/)!
 
 ### How can you contribute to OriginTrail v6?
 

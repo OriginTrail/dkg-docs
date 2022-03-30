@@ -18,5 +18,10 @@ The OriginTrail SDK libraries are being built in various languages, as listed be
 * **dkg.rs** - Rust client (coming soon)
 * **dkg.py** (Python client, coming soon)
 * **dkg.go** (Go client, coming soon)
+* **dkg.java** (Java client, coming soon)
 * **dkg.php** (Php client, coming soon)
 * **dkg.net** (.NET client, coming soon)
+
+{% hint style="info" %}
+Interested in building a DKG SDK in a particular programming language? We'd love to support you. Create an [issue](https://github.com/OriginTrail/ot-node/issues) on our Github and let's get the conversation going!
+{% endhint %}
