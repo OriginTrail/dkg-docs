@@ -60,7 +60,7 @@ To use the DKG library, you need to connect to a running local or remote OT-Node
 
 ```javascript
 const dkg = new DKG({ 
-            endpoint: '0.0.0.0', 
+            endpoint: '127.0.0.1', 
             port: '8900', 
             useSSL: false,
             loglevel: 'trace' 
@@ -141,7 +141,6 @@ Index the asset with associated keywords. In this example, the keyword is `micro
 
 ```javascript
 var result = await dkg.assets.create({
-{
     "@context": "https://schema.org",
     "@type": "Product",
     "aggregateRating": {
@@ -226,11 +225,11 @@ Data are persisted on the network by indexing and replicating on the DKG. Assets
 ```javascript
 var productProxy = await dkg.assets.get(ual);
 
-const productData = await productProxy.data;
+const productData = await productProxy.data.valueOf;
 console.log(JSON.stringify(productData));
 ```
 
-The proxy object can access any property in an object except an array, like:
+The proxy object can access any property in an object **except an array** (which is case in this tutorial), like:
 
 ```javascript
 await productProxy.data.name
@@ -378,7 +377,10 @@ var result = await dkg.assets.update({
 "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
 "name": "Kenmore Black 17\" Microwave",
 "image": "kenmore-microwave-17in.jpg"
-}, ual, options)
+}, ual, {
+        keywords: ['microwave'],
+        visibility: 'public'
+    })
 ```
 
 The result of operation is the same as for `create` operation. The updated asset has different name, so in order to present the changes, let's retrieve the data from the proxy:
@@ -528,7 +530,7 @@ The result the search is the following:
 Assertion search returns assertions metadata of assets indexed by provided keyword:
 
 ```javascript
-ovar result = dkg.search({ query: 'ExecutiveAnvil', resultType: 'assertions' });
+var result = dkg.search({ query: 'ExecutiveAnvil', resultType: 'assertions' });
 console.log(JSON.stringify(result));
 ```
 
