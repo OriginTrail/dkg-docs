@@ -126,7 +126,6 @@ To obtain the IP address of the Linux Subsytem on Windows follow the steps below
 From your git cloned directory, run the following to build and start Ubuntu based docker container.
 
 ```
-docker-compose -f docker/docker-compose-ubuntu.yaml pull
 docker-compose -f docker/docker-compose-ubuntu.yaml up
 ```
 
@@ -143,7 +142,6 @@ Docker-compose will first pull and then start two containers (ot-node & graphdb)
 From your git cloned directory, run the following to build and start Debian based docker container.
 
 ```
-docker-compose -f docker/docker-compose-debian.yaml pull
 docker-compose -f docker/docker-compose-debian.yaml up
 ```
 
@@ -152,7 +150,6 @@ docker-compose -f docker/docker-compose-debian.yaml up
 From your git cloned directory, run the following to build and start Alpine based docker container.
 
 ```
-docker-compose -f docker/docker-compose-alpine.yaml pull
 docker-compose -f docker/docker-compose-alpine.yaml up
 ```
 
