@@ -58,12 +58,16 @@ journalctl -u otnode --output cat -fn 100
 
 ![Successfully started](<../../.gitbook/assets/Screenshot 2021-12-27 at 15.49.28.png>)
 
-**Stop / Start / Restarting your node:**
+**OriginTrail node commands:**
 
-```
-systemctl stop otnode
-systemctl start otnode
-systemctl restart otnode
-```
+**Start node:** otnode-start&#x20;
+
+**Stop node:** otnode-stop&#x20;
+
+**Restart node:** otnode-restart&#x20;
+
+**Show node logs:** otnode-logs&#x20;
+
+**Open node configuration:** otnode-config
 
 We would love to meet you in our Discord chat - join us [here](https://discord.gg/6BGSCJfk4Y).
