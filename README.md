@@ -26,8 +26,10 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 **Explore the OriginTrail ecosystem:**
 
-* [GitHub](https://github.com/origintrail)
 * [OriginTrail website](https://origintrail.io)
+* [OriginTrail Parachain Website](https://parachain.origintrail.io)
+* [OriginTrail White paper 2.0](https://parachain.origintrail.io/whitepaper)
+* [GitHub](https://github.com/origintrail)
 * [Medium blog](https://medium.com/origintrail)
 * [YouTube channel](https://www.youtube.com/c/OriginTrail)
 * [Trace Labs - OriginTrail Core Developers](https://tracelabs.io)

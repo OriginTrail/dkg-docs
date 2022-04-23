@@ -8,7 +8,7 @@ The OriginTrail SDKs are client libraries for your Web3 applications, used to in
 
 From an architectural standpoint, the SDK libraries are application interfaces into the DKG, enabling you to create and manage **DKG Asset graphs** through your apps, as well as perform network queries (such as search, or SPARQL queries), as illustrated below.&#x20;
 
-![The interplay between your app, DKG and blockchains](<../../.gitbook/assets/image (7).png>)
+![The interplay between your app, DKG and blockchains](<../../.gitbook/assets/image (7) (1).png>)
 
 
 
