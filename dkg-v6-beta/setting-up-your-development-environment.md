@@ -2,7 +2,7 @@
 description: How to setup a local and shared development environment
 ---
 
-# Setting up your development environment
+# Development environment setup (v6)
 
 {% hint style="info" %}
 These setup instructions for DKGv6 are "Work in progress" and are subject to change. The development team expects to introduce improvements of setting up the DKGv6 node in local environment in the future.

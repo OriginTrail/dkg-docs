@@ -5,7 +5,7 @@ description: >-
   parameters such as:
 ---
 
-# v6 configuration
+# DKG v6 node configuration
 
 **"blockchainTitle":**\
 Title of the blockchain your node will use.

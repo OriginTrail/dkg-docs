@@ -1,6 +1,8 @@
 # 👋 Welcome to official OriginTrail Docs
 
-OriginTrail ecosystem is built on a set of tools and protocols evolving as the [semantic](https://www.w3.org/standards/semanticweb/) layer of Web3. The heart of the ecosystem is the **OriginTrail Decentralized Knowledge Graph (DKG)**, an open, collaborative network combining blockchain and knowledge graph technology. The core unit of the network - the **OriginTrail node** - is the ultimate data service for your Web3 applications. OriginTrail DKG is a powerful Web3 backend, and together with **DKG SDKs** you can create graph-native Web3 applications, interfacing with verifiable assets on the DKG.
+OriginTrail ecosystem is built on a set of tools and protocols evolving as the [semantic](https://www.w3.org/standards/semanticweb/) layer of Web3. It is a two-layer system connecting blockchain technology on "Layer 1" and knowledge graph technology on "Layer 2", supporting the **OriginTrail Decentralized Knowledge Graph (DKG)**.&#x20;
+
+The core unit of the DKG - the **OriginTrail node** - is the ultimate data service for your Web3 applications. OriginTrail DKG is a powerful Web3 backend, and together with **DKG SDKs** you can create graph-native Web3 applications, interfacing with verifiable assets on the DKG.
 
 The DKG enables you to:
 

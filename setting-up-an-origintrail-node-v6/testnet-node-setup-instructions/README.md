@@ -2,13 +2,13 @@
 description: Instructions for setting up an OriginTrail v6 node
 ---
 
-# v6 node - setup instructions
+# DKG v6 node - setup instructions
 
 {% hint style="info" %}
 These setup instructions for DKGv6 are "Work in progress" and are subject to change. The development team expects to introduce improvements as well as a more automated process of setting up the DKGv6 node in the future.
 {% endhint %}
 
-## There are 4  ways to setup a **v6** **testnet** node: <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
+## There are 4 ways to setup a **v6** **testnet** node: <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
 
 1. [Automated setup instructions for Ubuntu server](setup-instructions-dockerless.md) (Dockerless)
 2. [Setup instructions using Docker](docker-setup.md)

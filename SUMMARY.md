@@ -6,13 +6,12 @@
 
 * [Ecosystem White Paper](general/ecosystem-white-paper.md)
 * [Development principles](general/development-principles.md)
-* [OriginTrail RFCs](general/origintrail-rfcs.md)
 * [OriginTrail technology stack](general/origintrail-technology-stack.md)
 
 ## Layer 1: Blockchains
 
 * [Layer 1 - Multi-chain consensus](layer-1-blockchains/layer-1-multi-chain-consensus.md)
-* [OriginTrail Parachain introduction](layer-1-blockchains/origintrail-parachain-introduction.md)
+* [OriginTrail Parachain introduction](origintrail-parachain/origintrail-parachain-coming-soon-to-polkadot.md)
 * [OriginTrail Parachain Crowdloan](layer-1-blockchains/origintrail-parachain-crowdloan.md)
 
 ## Layer 2: Decentralized Knowledge Graph (DKG)
@@ -21,25 +20,24 @@
 * [OriginTrail - Decentralized Knowledge Graph (DKG)](layer-2-decentralized-knowledge-graph-dkg/dkgintro.md)
 * [Trace Token (TRAC)](layer-2-decentralized-knowledge-graph-dkg/trac.md)
 * [OriginTrail RFCs](layer-2-decentralized-knowledge-graph-dkg/origintrail-rfcs.md)
-* [Development principles](layer-2-decentralized-knowledge-graph-dkg/development-principles.md)
 
 ## Layer 2: DKG v6 (beta)
 
-* [🚀 Introduction to DKG v6 - start here](layer-2-dkg-v6-beta/introduction-to-dkg-v6-start-here.md)
-* [DKG Asset graphs](layer-2-dkg-v6-beta/dkg-asset-graphs.md)
-* [DKG SDK](layer-2-dkg-v6-beta/dkg-sdk/README.md)
-  * [Javascript SDK (dkg.js)](layer-2-dkg-v6-beta/dkg-sdk/dkg-v6-js-client.md)
-* [Development environment setup (v6)](layer-2-dkg-v6-beta/setting-up-your-development-environment.md)
-* [🏁 v6 bounty program](layer-2-dkg-v6-beta/v6-bounty-program.md)
-* [👾 Telemetry Hub](layer-2-dkg-v6-beta/telemetry-hub.md)
-* [Tutorials](layer-2-dkg-v6-beta/tutorials/README.md)
-  * [Integrating data over multiple Knowledge Graphs](layer-2-dkg-v6-beta/tutorials/integrating-data-over-multiple-knowledge-graphs.md)
-* [DKG v6 node - setup instructions](layer-2-dkg-v6-beta/testnet-node-setup-instructions/README.md)
-  * [Setup instructions (Dockerless)](layer-2-dkg-v6-beta/testnet-node-setup-instructions/setup-instructions-dockerless.md)
-  * [Docker setup](layer-2-dkg-v6-beta/testnet-node-setup-instructions/docker-setup.md)
-  * [Fund your v6 testnet node](layer-2-dkg-v6-beta/testnet-node-setup-instructions/fund-your-v6-testnet-node.md)
-  * [Setup instructions Arch Linux](layer-2-dkg-v6-beta/testnet-node-setup-instructions/setup-instructions-arch-linux.md)
-* [DKG v6 node configuration](layer-2-dkg-v6-beta/dkg-v6-node-configuration.md)
+* [🚀 Introduction to DKG v6 - start here](dkg-v6-beta/introduction-to-dkg-v6-start-here.md)
+* [DKG Asset graphs](dkg-v6-beta/dkg-asset-graphs.md)
+* [DKG SDK](dkg-v6-beta/dkg-sdk/README.md)
+  * [Javascript SDK (dkg.js)](dkg-v6-beta/dkg-sdk/dkg-v6-js-client.md)
+* [Development environment setup (v6)](dkg-v6-beta/setting-up-your-development-environment.md)
+* [🏁 v6 bounty program](dkg-v6-beta/v6-bounty-program.md)
+* [👾 Telemetry Hub](dkg-v6-beta/telemetry-hub.md)
+* [Tutorials](dkg-v6-beta/tutorials/README.md)
+  * [Integrating data over multiple Knowledge Graphs](dkg-v6-beta/tutorials/integrating-data-over-multiple-knowledge-graphs.md)
+* [DKG v6 node - setup instructions](setting-up-an-origintrail-node-v6/testnet-node-setup-instructions/README.md)
+  * [Setup instructions (Dockerless)](setting-up-an-origintrail-node-v6/testnet-node-setup-instructions/setup-instructions-dockerless.md)
+  * [Docker setup](setting-up-an-origintrail-node-v6/testnet-node-setup-instructions/docker-setup.md)
+  * [Fund your v6 testnet node](setting-up-an-origintrail-node-v6/testnet-node-setup-instructions/fund-your-v6-testnet-node.md)
+  * [Setup instructions Arch Linux](setting-up-an-origintrail-node-v6/testnet-node-setup-instructions/setup-instructions-arch-linux.md)
+* [DKG v6 node configuration](setting-up-an-origintrail-node-v6/v6-configuration.md)
 
 ## Layer 2: DKG v5 documentation <a href="#developers" id="developers"></a>
 
