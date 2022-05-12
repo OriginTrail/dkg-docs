@@ -28,22 +28,26 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 
 #### Step 1
 
-Login to the server as root. You **cannot** use sudo and run this script. The command "npm install" **will** fail.
+Login to the server as root. You **cannot** use sudo and run this script. The command "**npm ci**" might fail.
 
 #### Step 2
 
-Execute **one** of the following commands depending on if you have cloned the ot-node repo:
-
-**If the repo is not cloned yet:**
+**Download the installer script:**
 
 ```
-apt install git -y && cd /root && git clone https://github.com/OriginTrail/ot-node && cd ot-node && git checkout v6/release/testnet 
+cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/testnet/installer/installer.sh --output installer.sh
 ```
 
-**If you have already cloned the ot-node repo:**
+**Update permissions for the installer script:**
 
 ```
-/root/ot-node/installer/installer.sh
+chmod +x installer.sh
+```
+
+**Run the installer script:**
+
+```
+./installer.sh
 ```
 
 {% hint style="success" %}
