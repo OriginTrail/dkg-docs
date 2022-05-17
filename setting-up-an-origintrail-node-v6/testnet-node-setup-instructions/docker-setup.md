@@ -89,36 +89,7 @@ sudo nano ~/ot-node/.origintrail_noderc
 
 
 
-If you wish to run your node with **GraphDB,** make sure that your configuration file has the correct parameters set under the **"graphDatabase"** section as shown in the example below:
-
-```
-{
-  "blockchain":[
-    {
-      "blockchainTitle": "Polygon",
-      "networkId": "polygon::testnet",
-      "rpcEndpoints": ["https://rpc-mumbai.maticvigil.com/"],
-      "publicKey": "...",
-      "privateKey": "..."
-    }
-  ],
-  "graphDatabase": {
-    "username": "admin",
-    "password": ""
-  },
-  "logLevel": "trace",
-  "rpcPort": 8900,
-  "network": {
-  },
-  "ipWhitelist": [
-    "127.0.0.1"
-  ]
-}
-```
-
-
-
-If you wish to run your node with **BlazeGraph,** make sure that your configuration file has the correct parameters set under the **"graphDatabase"** section as shown in the example below:
+Dockerized OriginTrail v6 node runs with **BlazeGraph** so please make sure that your configuration file has the correct parameters set under the **"graphDatabase"** section as shown in the example below:
 
 ```
 {
@@ -174,52 +145,30 @@ Always run docker-compose command from the cloned "**ot-node**" directory, so th
 
 ### Ubuntu based image build
 
-From your git cloned directory, run the following to build and start Ubuntu based docker container with **GraphDB:**
-
-```
-docker-compose -f docker/docker-compose-ubuntu-graphdb.yaml up --detach
-```
-
-or if you wish to build and start Ubuntu based docker container with **BlazeGraph** use**:**
+For Ubuntu based docker container **** use**:**
 
 ```
 docker-compose -f docker/docker-compose-ubuntu-blazegraph.yaml up --detach
 ```
 
-
-
 ### Debian based image build
 
-From your git cloned directory, run the following to build and start Debian based docker container with **GraphDB:**
-
-```
-docker-compose -f docker/docker-compose-debian-graphdb.yaml up --detach
-```
-
-or if you wish to build and start Debian based docker container with **BlazeGraph** use**:**
+For Debian based docker container **** use**:**
 
 ```
 docker-compose -f docker/docker-compose-debian-blazegraph.yaml up --detach
 ```
 
-
-
 ### Alpine based image build:
 
-From your git cloned directory, run the following to build and start Alpine based docker container with **GraphDB:**
-
-```
-docker-compose -f docker/docker-compose-alpine-graphdb.yaml up --detach
-```
-
-or if you wish to build and start Alpine based docker container with **BlazeGraph** use**:**
+For Alpine based docker container **** use**:**
 
 ```
 docker-compose -f docker/docker-compose-alpine-blazegraph.yaml up --detach
 ```
 
 {% hint style="info" %}
-1. **docker-compose** command will first pull and then start three containers (ot-node, mysql, graphdb).
+1. **docker-compose** command will first pull and then start three containers (ot-node, mysql, BlazeGraph).
 2. **--detach** will start docker containers as a background process
 3. use "**docker logs -f ot-node**" command in order to see the node logs and confirm that your node is successfully started
 
