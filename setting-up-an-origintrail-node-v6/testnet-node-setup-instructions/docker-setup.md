@@ -89,7 +89,36 @@ sudo nano ~/ot-node/.origintrail_noderc
 
 
 
-Dockerized OriginTrail v6 node runs with **BlazeGraph** so please make sure that your configuration file has the correct parameters set under the **"graphDatabase"** section as shown in the example below:
+If you wish to run your node with **GraphDB,** make sure that your configuration file has the correct parameters set under the **"graphDatabase"** section as shown in the example below:
+
+```
+{
+  "blockchain":[
+    {
+      "blockchainTitle": "Polygon",
+      "networkId": "polygon::testnet",
+      "rpcEndpoints": ["https://rpc-mumbai.maticvigil.com/"],
+      "publicKey": "...",
+      "privateKey": "..."
+    }
+  ],
+  "graphDatabase": {
+    "username": "admin",
+    "password": ""
+  },
+  "logLevel": "trace",
+  "rpcPort": 8900,
+  "network": {
+  },
+  "ipWhitelist": [
+    "127.0.0.1"
+  ]
+}
+```
+
+
+
+If you wish to run your node with **BlazeGraph,** make sure that your configuration file has the correct parameters set under the **"graphDatabase"** section as shown in the example below:
 
 ```
 {
@@ -161,7 +190,13 @@ docker-compose -f docker/docker-compose-ubuntu-blazegraph.yaml up --detach
 
 ### Debian based image build
 
-For Debian based docker container **** use**:**
+From your git cloned directory, run the following to build and start Debian based docker container with **GraphDB:**
+
+```
+docker-compose -f docker/docker-compose-debian-graphdb.yaml up --detach
+```
+
+or if you wish to build and start Debian based docker container with **BlazeGraph** use**:**
 
 ```
 docker-compose -f docker/docker-compose-debian-blazegraph.yaml up --detach
@@ -171,7 +206,13 @@ docker-compose -f docker/docker-compose-debian-blazegraph.yaml up --detach
 
 ### Alpine based image build:
 
-For Alpine based docker container **** use**:**
+From your git cloned directory, run the following to build and start Alpine based docker container with **GraphDB:**
+
+```
+docker-compose -f docker/docker-compose-alpine-graphdb.yaml up --detach
+```
+
+or if you wish to build and start Alpine based docker container with **BlazeGraph** use**:**
 
 ```
 docker-compose -f docker/docker-compose-alpine-blazegraph.yaml up --detach

@@ -19,7 +19,7 @@ Network/Blockchain identity you wish your node to connect to.
 
 **"rpcEndpoints":**\
 Endpoint/URL which your node will use in order to communicate with blockchain. OriginTrail v6 Beta node is currently running on **Polygon Mumbai (testnet)** network**.**\
-****Polygon Mumbai RPC: [https://matic-mumbai.chainstacklabs.com/](https://matic-mumbai.chainstacklabs.com).
+****Polygon Mumbai RPC: [https://matic-mumbai.chainstacklabs.com/](https://matic-mumbai.chainstacklabs.com/).
 
 ****
 
@@ -29,22 +29,9 @@ Operational wallet address which your node will use. At this time, it needs MATI
 ****
 
 **"graphDatabase":**\
-Currently, OriginTrail v6 Beta node is supporting two graph databases: **GraphDB** and **Blazegraph**
+Currently, OriginTrail v6 Beta node uses **Blazegraph** as graphDatabase for both dockerless and dockerized versions.
 
-Check the following [documentation](https://docs.origintrail.io/dkg-v6-beta/testnet-node-setup-instructions/setup-instructions-arch-linux#step-0-setup-graphdb-or-blazegraph) in order to setup the database of your choice.
-
-Please make sure that your configuration is properly set based on the installed graph database.
-
-**For GraphDB:**
-
-```
-"graphDatabase":{
-      "username":"admin",
-      "password":""
-},
-```
-
-**For Blazegraph:**
+Please make sure that your **graphDatabase** section in configuration file is properly set as shown below.
 
 ```
 "graphDatabase": {
@@ -102,8 +89,12 @@ OriginTrail v6 node configuration file example:
          "privateKey":"ec0e6c36bd88342..."
       }
    ],
-   "graphDatabase":{
-      ...<add parameters based on your database choice>...
+   "graphDatabase": {
+       "implementation": "Blazegraph",
+       "url": "http://localhost:9999/blazegraph",
+       "username": "admin",
+       "password": ""
+      },
    },
    "logLevel":"trace",
    "rpcPort":8900,
