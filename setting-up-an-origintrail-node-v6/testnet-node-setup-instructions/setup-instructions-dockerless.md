@@ -16,14 +16,6 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 
 * A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** server (minimum hardware requirements)
 
-**Prepare GraphDB**
-
-1. Please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out the form. Installation files will sent to you by email. **Use the standalone version of GraphDB**.
-2. Upload the **\<graphDB\_file>.zip** file to your server. There are several ways:
-
-* Download any FTP program, such as [FileZilla](https://filezilla-project.org) (works for Mac OS, Windows and Ubuntu), and copy the **\<graphDB\_file>.zip** to the server's /root directory;
-* You can also use sftp://user@ip\_address and copy the file over for Ubuntu users. Consult these [instructions](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server) if needed;
-
 ### Installation
 
 #### Step 1
