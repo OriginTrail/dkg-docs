@@ -31,9 +31,10 @@
 
 ## Blockchain (Layer 1)
 
-* [OriginTrail Parachain introduction](blockchain-layer-1/origintrail-parachain-introduction.md)
-* [OriginTrail Parachain EVM](blockchain-layer-1/origintrail-parachain-evm.md)
-* [OriginTrail Parachain Network RPC](blockchain-layer-1/origintrail-parachain-network-rpc.md)
+* [OriginTrail Parachain](blockchain-layer-1/origintrail-parachain/README.md)
+  * [OriginTrail Parachain Network RPC](blockchain-layer-1/origintrail-parachain/origintrail-parachain-network-rpc.md)
+  * [OriginTrail Parachain EVM](blockchain-layer-1/origintrail-parachain/origintrail-parachain-evm.md)
+* [Other blockchains](blockchain-layer-1/other-blockchains.md)
 
 ## Useful Resources
 
