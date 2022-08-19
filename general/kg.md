@@ -1,8 +1,8 @@
 ---
-description: Why we need linked data and what do knowledge graphs do?
+description: The power of semantic technology
 ---
 
-# Introduction to linked data & knowledge graphs
+# Linked data & knowledge graphs
 
 ### The challenges of scattered data
 

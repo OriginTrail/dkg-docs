@@ -6,7 +6,7 @@ description: Javascript library for the Decentralized Knowledge Graph.
 
 If you are looking to build Web3 applications on the OriginTrail DKG, the dkg.js SDK library is the best place to start!
 
-The DKG SDK is used together with an OriginTrail node (the node is it's dependency). Therefore you either need to run a node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-Node](../../setting-up-an-origintrail-node-v6/testnet-node-setup-instructions/), in order to use the SDK.&#x20;
+The DKG SDK is used together with an OriginTrail node (the node is it's dependency). Therefore you either need to run a node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-Node](../testnet-node-setup-instructions/), in order to use the SDK.&#x20;
 
 {% hint style="info" %}
 This library operates with OriginTrail nodes starting with v6.
@@ -59,28 +59,24 @@ const DKG = require('dkg.js');
 To use the DKG library, you need to connect to a running local or remote OT-Node.&#x20;
 
 ```javascript
-const dkg = new DKG({ 
-            endpoint: '127.0.0.1', 
-            port: '8900', 
-            useSSL: false,
-            loglevel: 'trace' 
-    });
+const dkg = new DKG({
+  endpoint: "http://127.0.0.1",
+  port: 8900,
+  useSSL: false,
+  loglevel: "trace",
+});
 
-var result = await dkg.nodeInfo();
+const result = await dkg.node.info();
 console.log(JSON.stringify(result, null, 2));
 ```
 
-In the code snippet above, you enter the node's hostname, port, type of protocol, and log level.  After connecting to the node, it will log the informations about node, like:
+In the code snippet above, after connecting to the node, the node info route will return the ot-node version. The result should look like this:
 
 ```json
 {
-  "version": "6.0.0-beta.1.30",
-  "auto_update": false,
-  "telemetry": false
+  "version": "6.0.0-beta.2.0"
 }
 ```
-
-The library has `assets` and `native` modules. Assets module is intended for handling assets on the network, while native module is intended for basic protocol operations on the network, such as searching, executing queries and retrieving proofs.
 
 #### Create an asset
 
@@ -88,9 +84,8 @@ Asset presents a digital or physical object indexed on the DKG. Asset used in th
 
 It follows the standard and contains an object of type `Product` __ with its description, name, image, and other details. An extensive documentation for Product class can be found here [https://schema.org/Product](https://schema.org/Product). The sample dataset values can be referred below:
 
-```json
-{
-  "@context": "https://schema.org",
+<pre class="language-javascript"><code class="lang-javascript"><strong>const assertion = {
+</strong>  "@context": "https://schema.org",
   "@type": "Product",
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -134,85 +129,31 @@ It follows the standard and contains an object of type `Product` __ with its des
       }
     }
   ]
-}
-```
+}</code></pre>
 
 Index the asset with associated keywords. In this example, the keyword is `microwave`:
 
-```javascript
-var result = await dkg.assets.create({
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "aggregateRating": {
-    "@type": "AggregateRating",
-        "ratingValue": "3.5",
-        "reviewCount": "11"
-},
-    "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
-    "name": "Kenmore White 17\" Microwave",
-    "image": "kenmore-microwave-17in.jpg",
-    "offers": {
-    "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "price": "55.00",
-        "priceCurrency": "USD"
-},
-    "review": [
-    {
-        "@type": "Review",
-        "author": "Ellie",
-        "datePublished": "2011-04-01",
-        "reviewBody": "The lamp burned out and now I have to replace it.",
-        "name": "Not a happy camper",
-        "reviewRating": {
-            "@type": "Rating",
-            "bestRating": "5",
-            "ratingValue": "1",
-            "worstRating": "1"
-        }
+<pre class="language-javascript"><code class="lang-javascript"><strong>const { UAL } = await dkg.assets.create(assertion, {
+</strong>    visibility: "public",
+    holdingTimeInYears: 1,
+    tokenAmount: 10,
+    blockchain: {
+      name: "otp",
+      publicKey: PUBLIC_KEY,
+      privateKey: PRIVATE_KEY,
     },
-    {
-        "@type": "Review",
-        "author": "Lucas",
-        "datePublished": "2011-03-25",
-        "reviewBody": "Great microwave for the price. It is small and fits in my apartment.",
-        "name": "Value purchase",
-        "reviewRating": {
-            "@type": "Rating",
-            "bestRating": "5",
-            "ratingValue": "4",
-            "worstRating": "1"
-        }
-    }]
-}, {
-    keywords: ['microwave'],
-    visibility: 'public'
-})
-let ual = result.data.metadata.UALs[0];
-console.log(ual);
-```
+  })
+console.log(UAL);</code></pre>
 
 After returning the result, the asset's unique identifier (UAL) is logged. The complete response of the method is:
 
 ```javascript
 {
-  status: 'COMPLETED',
-  data: {
-    id: '0b2f32a380f61fda8a3b2461074183dfbc9e19c0cbb59275969e6370aa5b26cf',
-    rootHash: '94ad72c79a88fd2da048cc8c4b3abbdc2cd507ab4b9fccfacd9eae0f8907dac3',
-    signature: '0x2a036001d2ca32fb2e528d6e8c414ab86f5b000e87558ae9c75a74c46bcd4fc16d47e865412341640b3d81e05fd2e4ed9f96d63188ad28476b276ba1d7c06d581b',
-    metadata: {
-      type: 'Product',
-      UALs: ['aa1bd80f61fda8a3b2461074183dfbc9e19c0cbb59275969e6370aa5b26cf']
-      timestamp: '2022-30-30T13:08:14.770Z',
-      issuer: '0xbd084ab97c704fe4a6d620cb7c30c0be0366646f',
-      visibility: true,
-      dataHash: 'ed13153fa4090eceedf6c1dd1aa030ec45ab75c2f9510c64a2014f1c6424e7dd'
-    },
-    blockchain: {
-      name: 'polygon::testnet',
-      transactionHash: '0x2450007ccaec94e18f2d0ed20e776f05aa43ab6f8480d3ee2d77c61bece71184'
-    }
+  "UAL": "did:otp:0x6e002616adf12d4cc908976eb16a7646b6cd6596/2785",
+  "assertionId": "0x8705b09bdca4ca23bf31f1048452cefea0b5f142ee72a7e09434ed4cc50a3b3e",
+  "operation": {
+    "operationId": "d97b4716-3feb-463c-acf5-9ca52cde3564",
+    "status": "COMPLETED"
   }
 }
 
@@ -220,203 +161,140 @@ After returning the result, the asset's unique identifier (UAL) is logged. The c
 
 #### Read an asset from the DKG
 
-Data are persisted on the network by indexing and replicating on the DKG. Assets consist of building blocks entitled as assertions that are immutable and verifiable. Assets could be resolved from the network by using UAL:
+Data is persisted on the network by indexing and replicating on the DKG. Assets consist of building blocks entitled as assertions that are immutable and verifiable. Assets latest assertion could be resolved from the network by using UAL.
 
 ```javascript
-var productProxy = await dkg.assets.get(ual);
+const { assertion } = await dkg.assets.get(UAL);
 
-const productData = await productProxy.data.valueOf;
-console.log(JSON.stringify(productData));
-```
-
-The proxy object can access any property in an object **except an array** (which is case in this tutorial), like:
-
-```javascript
-await productProxy.data.name
+console.log(JSON.stringify(data, null, 2));
 ```
 
 The response response of the asset's data is:
 
 ```javascript
 {
-    "@context": "https://www.schema.org/",
+    "@context": "http://schema.org/",
     "@graph": [
-        {
-            "aggregateRating": {
-                "id": "_:b1",
-                "ratingValue": "3.5",
-                "reviewCount": "11",
-                "type": "AggregateRating"
-            },
-            "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
-            "name": "Kenmore White 17\" Microwave",
-            "offers": {
-                "availability": "https://schema.org/InStock",
-                "id": "_:b2",
-                "price": "55.00",
-                "priceCurrency": "USD",
-                "type": "Offer"
-            },
-            "proof": {
-                "account": "0xE6976A991A9C32aB665E1118Fd7cfDB58A23116d",
-                "hash": "0x7bc087f4ef9d0dc15fef823bff9c78cc5cca8be0a85234afcfd807f412f40877",
-                "id": "_:b3",
-                "signature": "0x13a970137bd89ac8e812aafd049f74c1fa7138b9ed1b94a177a9c02af063038b39086b110b6751d3f18b4ba39cbeaaf506fed386828144f1826a4215a4499abc1c"
-            },
-            "review": [
-                {
-                    "author": "Ellie",
-                    "datePublished": "2011-04-01",
-                    "id": "_:b4",
-                    "name": "Not a happy camper",
-                    "reviewBody": "The lamp burned out and now I have to replace it.",
-                    "reviewRating": {
-                        "bestRating": "5",
-                        "id": "_:b6",
-                        "ratingValue": "1",
-                        "type": "Rating",
-                        "worstRating": "1"
-                    },
-                    "type": "Review"
-                },
-                {
-                    "author": "Lucas",
-                    "datePublished": "2011-03-25",
-                    "id": "_:b5",
-                    "name": "Value purchase",
-                    "reviewBody": "Great microwave for the price. It is small and fits in my apartment.",
-                    "reviewRating": {
-                        "bestRating": "5",
-                        "id": "_:b7",
-                        "ratingValue": "4",
-                        "type": "Rating",
-                        "worstRating": "1"
-                    },
-                    "type": "Review"
-                }
-            ],
-            "type": "Product"
+      {
+        "id": "_:c14n0",
+        "type": "Product",
+        "aggregateRating": {
+          "id": "_:c14n4"
         },
-        {
-            "id": "_:b1",
-            "ratingValue": "3.5",
-            "reviewCount": "11",
-            "type": "AggregateRating"
+        "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
+        "name": "Kenmore White 17\" Microwave",
+        "offers": {
+          "id": "_:c14n5"
         },
-        {
-            "availability": "https://schema.org/InStock",
-            "id": "_:b2",
-            "price": "55.00",
-            "priceCurrency": "USD",
-            "type": "Offer"
+        "review": [
+          {
+            "id": "_:c14n2"
+          },
+          {
+            "id": "_:c14n3"
+          }
+        ]
+      },
+      {
+        "id": "_:c14n1",
+        "type": "Rating",
+        "bestRating": "100",
+        "ratingValue": {
+          "type": "xsd:double",
+          "@value": "5.935915107714318E0"
         },
-        {
-            "account": "0xE6976A991A9C32aB665E1118Fd7cfDB58A23116d",
-            "hash": "0x7bc087f4ef9d0dc15fef823bff9c78cc5cca8be0a85234afcfd807f412f40877",
-            "id": "_:b3",
-            "signature": "0x13a970137bd89ac8e812aafd049f74c1fa7138b9ed1b94a177a9c02af063038b39086b110b6751d3f18b4ba39cbeaaf506fed386828144f1826a4215a4499abc1c"
-        },
-        {
-            "author": "Ellie",
-            "datePublished": "2011-04-01",
-            "id": "_:b4",
-            "name": "Not a happy camper",
-            "reviewBody": "The lamp burned out and now I have to replace it.",
-            "reviewRating": {
-                "bestRating": "5",
-                "id": "_:b6",
-                "ratingValue": "1",
-                "type": "Rating",
-                "worstRating": "1"
-            },
-            "type": "Review"
-        },
-        {
-            "author": "Lucas",
-            "datePublished": "2011-03-25",
-            "id": "_:b5",
-            "name": "Value purchase",
-            "reviewBody": "Great microwave for the price. It is small and fits in my apartment.",
-            "reviewRating": {
-                "bestRating": "5",
-                "id": "_:b7",
-                "ratingValue": "4",
-                "type": "Rating",
-                "worstRating": "1"
-            },
-            "type": "Review"
-        },
-        {
-            "bestRating": "5",
-            "id": "_:b6",
-            "ratingValue": "1",
-            "type": "Rating",
-            "worstRating": "1"
-        },
-        {
-            "bestRating": "5",
-            "id": "_:b7",
-            "ratingValue": "4",
-            "type": "Rating",
-            "worstRating": "1"
+        "worstRating": "0"
+      },
+      {
+        "id": "_:c14n2",
+        "type": "Review",
+        "author": "Ellie",
+        "datePublished": "2011-04-01",
+        "name": "Not a happy camper",
+        "reviewBody": "The lamp burned out and now I have to replace it.",
+        "reviewRating": {
+          "id": "_:c14n6"
         }
+      },
+      {
+        "id": "_:c14n3",
+        "type": "Review",
+        "author": "Lucas",
+        "datePublished": "2011-03-25",
+        "name": "Value purchase",
+        "reviewBody": "Great microwave for the price. It is small and fits in my apartment.",
+        "reviewRating": {
+          "id": "_:c14n1"
+        }
+      },
+      {
+        "id": "_:c14n4",
+        "type": "AggregateRating",
+        "ratingValue": "1.1",
+        "reviewCount": "11"
+      },
+      {
+        "id": "_:c14n5",
+        "type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "price": "55.00",
+        "priceCurrency": "USD"
+      },
+      {
+        "id": "_:c14n6",
+        "type": "Rating",
+        "bestRating": "5",
+        "ratingValue": "1",
+        "worstRating": "1"
+      }
     ]
-}
+  }
 ```
 
-If JSON-LD type is supported on the network, the document should be framed according to the frame document. Otherwise, the result is framed by using the default (empty) frame document, as shown above.
+
 
 #### Update an asset on the DKG
 
 Assets on the DKG can be updated by providing the latest state for the asset:
 
 ```javascript
-var result = await dkg.assets.update({
+const { UAL } = await dkg.assets.update(UAL, {
 "@context": "https://schema.org",
 "@type": "Product",
 "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
 "name": "Kenmore Black 17\" Microwave",
 "image": "kenmore-microwave-17in.jpg"
-}, ual, {
-        keywords: ['microwave'],
-        visibility: 'public'
-    })
+}, {
+    visibility: "public",
+    holdingTimeInYears: 1,
+    tokenAmount: 10,
+    blockchain: {
+      name: "otp",
+      publicKey: PUBLIC_KEY,
+      privateKey: PRIVATE_KEY,
+    },
+  })
 ```
 
-The result of operation is the same as for `create` operation. The updated asset has different name, so in order to present the changes, let's retrieve the data from the proxy:
+The result of the operation is the same as for the `create` operation. The updated asset has different name, so in order to present the changes, let's retrieve the data from the proxy:
 
 ```javascript
-console.log(await productProxy.data.valueOf);
+const { assertion } = await dkg.assets.get(UAL);
+
+console.log(JSON.stringify(data, null, 2));
 ```
 
-The latest state of the product is:
+The latest state of the product is now:
 
-```json5
-{
-    "@context": "https://www.schema.org/",
-    "@graph": [
-        {
-            "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
-            "name": "Kenmore Black 17\" Microwave",
-            "proof": {
-                "account": "0xE6976A991A9C32aB665E1118Fd7cfDB58A23116d",
-                "hash": "0x7bc087f4ef9d0dc15fef823bff9c78cc5cca8be0a85234afcfd807f412f40877",
-                "id": "_:b1",
-                "signature": "0x13a970137bd89ac8e812aafd049f74c1fa7138b9ed1b94a177a9c02af063038b39086b110b6751d3f18b4ba39cbeaaf506fed386828144f1826a4215a4499abc1c"
-            },
-            "type": "Product"
-        },
-        {
-            "account": "0xE6976A991A9C32aB665E1118Fd7cfDB58A23116d",
-            "hash": "0x7bc087f4ef9d0dc15fef823bff9c78cc5cca8be0a85234afcfd807f412f40877",
-            "id": "_:b1",
-            "signature": "0x13a970137bd89ac8e812aafd049f74c1fa7138b9ed1b94a177a9c02af063038b39086b110b6751d3f18b4ba39cbeaaf506fed386828144f1826a4215a4499abc1c"
-        }
-    ]
-}
-```
+<pre class="language-json5"><code class="lang-json5">{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
+<strong>  "name": "Kenmore Black 17\" Microwave",
+</strong>  "image": "kenmore-microwave-17in.jpg"
+}</code></pre>
 
-#### Search for an entity or an assertion on the DKG
+#### Search for an entity or an assertion on the DKG (To be updated soon)
 
 DKG can be searched by keywords for related assets and assertions. Search result consists of elements listed by score and issuer.&#x20;
 
@@ -571,7 +449,7 @@ The result of Search API route is the following:
 }
 ```
 
-#### Executing SPARQL queries
+#### Executing SPARQL queries (To be updated soon)
 
 Querying the DKG is done by using the SPARQL queries. The SPARQL construct query helps to get the response as a RDF graph. In case you are interested to create your own application, it will return portable graph described by the query:
 
@@ -606,37 +484,6 @@ The returned responses contain an array of n-quads with predicate `schema:hasVis
     ]
   }
 }
-```
-
-#### Validate data integrity
-
-Validate triples that you got performing SPARQL queries. We have chosen two triplets from above query result and we will check their integrity:
-
-```javascript
-options = {
-    nquads: [
-        '<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasDataHash> \"019042b4b5cb5701579a4fd8e339bed0fa983b06920ed8cd4d5864ffcb01c801\" .',
-        '<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasIssuer> \"0xbd084ab97c704fe4a6d620cb7c30c0be0366646f\" .'
-    ],
-};
-
-var result = await dkg.validate(options);
-console.log(JSON.stringify(result));
-```
-
-The result presents an array that for each element indicates if the root hash matched or not:
-
-```json
-[
-  {
-    "triple": "<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasDataHash> \"019042b4b5cb5701579a4fd8e339bed0fa983b06920ed8cd4d5864ffcb01c801\" .",
-    "valid": true
-  },
-  {
-    "triple": "<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasIssuer> \"0xbd084ab97c704fe4a6d620cb7c30c0be0366646f\" .",
-    "valid": true
-  }
-]
 ```
 
 More details about the library is available [here](https://github.com/OriginTrail/dkg.js).

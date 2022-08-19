@@ -8,7 +8,7 @@ First you need xDAI, which is the gas fee currency on xDAI. Given that the gas f
 * Use the faucet to get 0.01 xdai -> [https://blockscout.com/xdai/mainnet/faucet](https://blockscout.com/xdai/mainnet/faucet)
 * If the faucet is not working, join the OriginTrail Community telegram and ask for a cent of xdai -> [https://t.me/OriginTrailCommunity](https://t.me/OriginTrailCommunity)
 
-Second, xTRAC (TRAC on xDAI chain) is required. You can convert TRAC tokens to xTRAC using the Omni Bridge. Go to [https://omni.xdaichain.com/](https://omni.xdaichain.com) Instructions how to use the bridge can be found here: [https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20)
+Second, xTRAC (TRAC on xDAI chain) is required. You can convert TRAC tokens to xTRAC using the Omni Bridge. Go to [https://omni.xdaichain.com/](https://omni.xdaichain.com/) Instructions how to use the bridge can be found here: [https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension/ui-to-transfer-tokens/transfer-erc20)
 
 The custom token contract to see xTRAC on Metamask on xDAI is:
 
@@ -16,7 +16,7 @@ The custom token contract to see xTRAC on Metamask on xDAI is:
 0xEddd81E0792E764501AaE206EB432399a0268DB5Copy
 ```
 
-Once you have sorted out your xDAI and xTRAC, you need to add the Custom RPC for xDAI, so you can switch your Metamask to the xDAI network. Easiest way to do it is to go to: [https://chainlist.org/](https://chainlist.org) , click on Connect Wallet in the top right corner and then click “Add me to metamask” button on xDAI section.
+Once you have sorted out your xDAI and xTRAC, you need to add the Custom RPC for xDAI, so you can switch your Metamask to the xDAI network. Easiest way to do it is to go to: [https://chainlist.org/](https://chainlist.org/) , click on Connect Wallet in the top right corner and then click “Add me to metamask” button on xDAI section.
 
 ![](https://otnode.com/wp-content/uploads/2021/03/image-7.png)
 
@@ -36,7 +36,7 @@ The custom token contract to see TRAC on Polygon on Metamask on Polygon is:
 0xA7b98d63a137bF402b4570799ac4caD0BB1c4B1c
 ```
 
-Once you have sorted out your Matic and TRAC on Polygon, you need to add the Custom RPC for Polygon, so you can switch your Metamask to the Polygon network. Easiest way to do it is to go to: [https://chainlist.org/](https://chainlist.org) , click on Connect Wallet in the top right corner and then click “Add me to metamask” button on Polygon section.![](https://otnode.com/wp-content/uploads/2021/03/image-7.png)
+Once you have sorted out your Matic and TRAC on Polygon, you need to add the Custom RPC for Polygon, so you can switch your Metamask to the Polygon network. Easiest way to do it is to go to: [https://chainlist.org/](https://chainlist.org/) , click on Connect Wallet in the top right corner and then click “Add me to metamask” button on Polygon section.![](https://otnode.com/wp-content/uploads/2021/03/image-7.png)
 
 ## Prepare the wallets
 
@@ -48,7 +48,7 @@ If you want to run nodes on Ethereum or Polygon as well, the process is the same
 
 ## **Configure the server**
 
-Download [Termius ](https://www.termius.com)(or any other terminal client like [Kitty](https://www.fosshub.com/KiTTY.html)) and configure it with the details you received from the VPS hosting (IP, username, password). Click on Hosts, Select New host, Choose a Label for the node and add the IP address from the confirmation e-mail from Digital Ocean or Hetzner that the node is created, choose root as username and input the password, and click on Save on the right top corner.
+Download [Termius ](https://www.termius.com/)(or any other terminal client like [Kitty](https://www.fosshub.com/KiTTY.html)) and configure it with the details you received from the VPS hosting (IP, username, password). Click on Hosts, Select New host, Choose a Label for the node and add the IP address from the confirmation e-mail from Digital Ocean or Hetzner that the node is created, choose root as username and input the password, and click on Save on the right top corner.
 
 ![](https://otnode.com/wp-content/uploads/2020/07/image-3-979x1024.png)
 
@@ -200,7 +200,7 @@ i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your nod
 
 ****![This image has an empty alt attribute; its file name is image-2.png](https://ot.wittymermaid.com/wp-content/uploads/2020/06/image-2.png)
 
-Go to [Infura.io](https://infura.io) and create an account. Create a project, copy the HTTPS link under Endpoints – Mainnet or Polygon mainnet. It should look like: https://mainnet.infura.io/v3/xxxxxxxxxxxxxxxxxxxxxx where the xxxxxxxx are your specific link
+Go to [Infura.io](https://infura.io/) and create an account. Create a project, copy the HTTPS link under Endpoints – Mainnet or Polygon mainnet. It should look like: https://mainnet.infura.io/v3/xxxxxxxxxxxxxxxxxxxxxx where the xxxxxxxx are your specific link
 
 ![This image has an empty alt attribute; its file name is image-8.png](https://ot.wittymermaid.com/wp-content/uploads/2020/06/image-8.png)
 
@@ -306,7 +306,7 @@ ufw status
 
 ### **10. Deposit additional xTRAC from your management wallet to the node**
 
-If you want to deposit more than the initial amount, you can deposit the amount of xTRAC which will be available for jobs through the node profile management page at this URL: [https://node-profile.origintrail.io/](https://node-profile.origintrail.io)
+If you want to deposit more than the initial amount, you can deposit the amount of xTRAC which will be available for jobs through the node profile management page at this URL: [https://node-profile.origintrail.io/](https://node-profile.origintrail.io/)
 
 The current recommended amount is 1000-2000 TRAC/xTRAC in addition to the 3000 TRAC/xTRAC required to secure the network, and they have to be present on your management wallet.
 

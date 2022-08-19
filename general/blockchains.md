@@ -1,4 +1,8 @@
-# Layer 1 - Multi-chain consensus
+---
+description: The OriginTrail multi-chain consensus layer
+---
+
+# Blockchains
 
 **The OriginTrail consensus layer** is composed of blockchains which enable trusted computation necessary for the DKG to operate in a decentralized environment. Currently deployed on Ethereum, Gnosis chain and Polygon, OriginTrail is a multi-chain system with the ability to integrate all assets native to the connected blockchains and extend them with asset graphs and smart contract based applications such as data marketplaces.&#x20;
 

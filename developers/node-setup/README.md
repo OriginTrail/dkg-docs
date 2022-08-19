@@ -1,4 +1,4 @@
-# Setup instructions
+# v5 node - setup instructions
 
 If you need help installing OT Node or troubleshooting your installation, you can either:
 
@@ -13,7 +13,7 @@ The recommended minimum specifications are:
 * 2.2 GHz CPU
 * at least 20 GB storage space
 
-NOTE: For best performance on running a node we recommend usage of services like [Digital Ocean.](https://www.digitalocean.com)
+NOTE: For best performance on running a node we recommend usage of services like [Digital Ocean.](https://www.digitalocean.com/)
 
 Currently there are two blockchains available to setup node on. One VPS server can host node on each blockchain.
 

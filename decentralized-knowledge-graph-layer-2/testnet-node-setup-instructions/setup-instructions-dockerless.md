@@ -20,9 +20,17 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 
 #### Step 1
 
-Login to the server as root. You **cannot** use sudo and run this script. The command "**npm ci**" might fail.
+Fund your Substrate and Ethereum wallets with OTP and TRACE test tokens. Instructions are available at [fund-your-v6-testnet-node.md](fund-your-v6-testnet-node.md "mention") page.
 
 #### Step 2
+
+Create a mapping between your Substrate and Ethereum wallets that are pre-funded in previous step, this can be performed through [this interface](https://parachain.origintrail.io/parachain-account-mapping).
+
+#### Step 3
+
+Login to the server as root. You **cannot** use sudo and run this script. The command "**npm ci**" might fail.
+
+#### Step 4
 
 **Download the installer script:**
 
@@ -57,6 +65,8 @@ journalctl -u otnode --output cat -fn 100
 **OriginTrail node commands:**
 
 **Start node:** otnode-start&#x20;
+
+Note: to verify your node is running, run `otnode-logs` command
 
 **Stop node:** otnode-stop&#x20;
 

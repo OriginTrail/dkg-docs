@@ -2,7 +2,7 @@
 description: How to setup a local and shared development environment
 ---
 
-# Development environment setup (v6)
+# Development environment setup
 
 {% hint style="info" %}
 These setup instructions for DKGv6 are "Work in progress" and are subject to change. The development team expects to introduce improvements of setting up the DKGv6 node in local environment in the future.
@@ -52,7 +52,7 @@ PRIVATE_KEY=<insert_here>
 OriginTrail v6 development node is running on **Polygon Mumbai (testnet)** network **** and it is currently not requiring any test TRAC tokens. Make sure that the wallet you are using in your configuration file is funded with test MATIC tokens.
 {% endhint %}
 
-#### Polygon Mumbai MATIC faucet: [https://faucet.polygon.technology/](https://faucet.polygon.technology)
+#### Polygon Mumbai MATIC faucet: [https://faucet.polygon.technology/](https://faucet.polygon.technology/)
 
 #### Step **5 -** Run DB migrations:
 

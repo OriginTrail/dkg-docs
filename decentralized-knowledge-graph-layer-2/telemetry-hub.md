@@ -38,7 +38,7 @@ You are free to run multiple nodes, and will be rewarded for each of the nodes c
 {% endhint %}
 
 {% hint style="warning" %}
-For each node that you are running, please go to [bounty program website](https://bountyprogram.origintrail.io) and register wallet of that node (you can preform this step anytime before or after starting your node)
+For each node that you are running, please go to [bounty program website](https://bountyprogram.origintrail.io/) and register wallet of that node (you can preform this step anytime before or after starting your node)
 {% endhint %}
 
 ### How can you verify your node is submitting data to telemetry?

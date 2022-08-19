@@ -4,12 +4,12 @@
 
 The OriginTrail ecosystem is centered around the **OriginTrail Decentralized Network (ODN) mainnet**, which is the main network with the full protocol implementation, launched in December 2018. In March 2021 the ODN has become a multichain network, expaning its consensus layer to the xDAI blockchain, enabling the users to choose which network to utilize based on their requirements. Upcoming integration with the Polkadot parachain is expected in the second half of 2021.
 
-The ODN Explorer is a tool to search data on the DKG: [https://explorer.origintrail.io/](https://explorer.origintrail.io)\
+The ODN Explorer is a tool to search data on the DKG: [https://explorer.origintrail.io/](https://explorer.origintrail.io/)\
 Here is also a short demo explaining how to use the ODN network explorer:\
 [https://www.youtube.com/watch?v=DM3XNmWMu0c](https://www.youtube.com/watch?v=DM3XNmWMu0c)
 
 Furthermore, you can utilize the community built OT Hub, which tracks data uploads on the network here:\
-[https://othub.origin-trail.network/dashboard](https://othub.origin-trail.network/dashboard) 
+[https://othub.origin-trail.network/dashboard](https://othub.origin-trail.network/dashboard)&#x20;
 
 ### OriginTrail test networks
 

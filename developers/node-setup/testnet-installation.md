@@ -34,7 +34,7 @@ Create a new wallet using Mycrypto or Metamask and export the private key, which
 
 ## **Configure the server**
 
-Download [Termius ](https://www.termius.com)(or any other terminal client like [Kitty](https://www.fosshub.com/KiTTY.html)) and configure it with the details you received from the VPS hosting (IP, username, password). Click on Hosts, Select New host, Choose a Label for the node and add the IP address from the confirmation e-mail from Digital Ocean or Hetzner that the node is created, choose root as username and input the password, and click on Save on the right top corner.
+Download [Termius ](https://www.termius.com/)(or any other terminal client like [Kitty](https://www.fosshub.com/KiTTY.html)) and configure it with the details you received from the VPS hosting (IP, username, password). Click on Hosts, Select New host, Choose a Label for the node and add the IP address from the confirmation e-mail from Digital Ocean or Hetzner that the node is created, choose root as username and input the password, and click on Save on the right top corner.
 
 ![](https://otnode.com/wp-content/uploads/2020/07/image-3-979x1024.png)
 

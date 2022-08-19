@@ -7,5 +7,5 @@ description: >-
 # 🏁 v6 bounty program
 
 {% hint style="info" %}
-To learn more about the bounty program, check out the bounty specific website at [https://bountyprogram.origintrail.io/](https://bountyprogram.origintrail.io)
+To learn more about the bounty program, check out the bounty specific website at [https://bountyprogram.origintrail.io/](https://bountyprogram.origintrail.io/)
 {% endhint %}
