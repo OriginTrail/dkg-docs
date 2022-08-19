@@ -22,7 +22,6 @@
   * [Setup instructions (Dockerless)](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/setup-instructions-dockerless.md)
   * [Docker setup](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/docker-setup.md)
   * [Fund your v6 testnet node](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/fund-your-v6-testnet-node.md)
-  * [Setup instructions Arch Linux](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/setup-instructions-arch-linux.md)
 * [DKG v6 node configuration](decentralized-knowledge-graph-layer-2/dkg-v6-node-configuration.md)
 * [DKG v6 launch progress](decentralized-knowledge-graph-layer-2/dkg-v6-launch-progress.md)
 * [🏁 v6 bounty program](decentralized-knowledge-graph-layer-2/v6-bounty-program.md)
@@ -31,9 +30,9 @@
 
 ## Blockchain (Layer 1)
 
-* [OriginTrail Parachain](blockchain-layer-1/origintrail-parachain/README.md)
-  * [OriginTrail Parachain Network RPC](blockchain-layer-1/origintrail-parachain/origintrail-parachain-network-rpc.md)
-  * [OriginTrail Parachain EVM](blockchain-layer-1/origintrail-parachain/origintrail-parachain-evm.md)
+* [OriginTrail Parachain](blockchain-layer-1/origintrail-parachain-introduction.md)
+  * [OriginTrail Parachain Network RPC](blockchain-layer-1/origintrail-parachain-network-rpc.md)
+  * [OriginTrail Parachain EVM](blockchain-layer-1/origintrail-parachain-evm.md)
 * [Other blockchains](blockchain-layer-1/other-blockchains.md)
 
 ## Useful Resources

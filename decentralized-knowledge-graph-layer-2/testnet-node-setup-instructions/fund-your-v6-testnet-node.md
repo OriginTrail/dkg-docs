@@ -17,4 +17,6 @@ To request test TRAC tokens type in:\
 
 The OriginTrail\_Bot will respond back in chat and send you some tokens on the OriginTrail Parachain testnet.\
 __\
-__![](<../../.gitbook/assets/Screenshot 2022-08-19 at 14.32.08.png>)__
+__Your discord should look like in the screenshot below
+
+![](<../../.gitbook/assets/Screenshot 2022-08-19 at 19.58.47.png>)

@@ -18,19 +18,27 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 
 ### Installation
 
-#### Step 1
+#### Step 1 - Fund your wallets
 
-Fund your Substrate and Ethereum wallets with OTP and TRACE test tokens. Instructions are available at [fund-your-v6-testnet-node.md](fund-your-v6-testnet-node.md "mention") page.
+Fund your Substrate and Ethereum wallets with OTP and TRAC test tokens. Instructions are available at [fund-your-v6-testnet-node.md](fund-your-v6-testnet-node.md "mention") page.
 
-#### Step 2
+{% hint style="info" %}
+Make sure to fund both your operational and management wallets.
+{% endhint %}
 
-Create a mapping between your Substrate and Ethereum wallets that are pre-funded in previous step, this can be performed through [this interface](https://parachain.origintrail.io/parachain-account-mapping).
+#### Step 2 - Create a mapping for both operational and management wallets
 
-#### Step 3
+Create a mapping between your Substrate and Ethereum wallets (that are pre-funded in the previous step), this can be performed through [this interface](https://parachain.origintrail.io/parachain-account-mapping).&#x20;
+
+{% hint style="info" %}
+The mapping needs to be performed for both for the node operational and management wallets.
+{% endhint %}
+
+#### Step 3 - Login to your node server
 
 Login to the server as root. You **cannot** use sudo and run this script. The command "**npm ci**" might fail.
 
-#### Step 4
+#### Step 4 - Run the installer
 
 **Download the installer script:**
 
@@ -49,6 +57,8 @@ chmod +x installer.sh
 ```
 ./installer.sh
 ```
+
+The installer script will guide you through the installation.
 
 {% hint style="success" %}
 **Congratulations. Welcome to v6 beta**

@@ -11,7 +11,7 @@ These setup instructions for DKGv6 are "Work in progress" and are subject to cha
 ## There are 3 ways to setup a **v6** **testnet** node: <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
 
 1. [Automated setup instructions for Ubuntu server](setup-instructions-dockerless.md) (Dockerless)
-2. [Setup instructions for Arch Linux server](setup-instructions-arch-linux.md)
+2. [Setup instructions for Arch Linux server](broken-reference)
 3. Directly on a cloud provider supporting OriginTrail, such as on the [**DigitalOcean Marketplace**](https://marketplace.digitalocean.com/apps/origintrail-node)
 
 
