@@ -133,7 +133,7 @@ It follows the standard and contains an object of type `Product` __ with its des
 
 Index the asset with associated keywords. In this example, the keyword is `microwave`:
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>const { UAL } = await dkg.assets.create(assertion, {
+<pre class="language-javascript"><code class="lang-javascript"><strong>const { UAL } = await dkg.asset.create(assertion, {
 </strong>    visibility: "public",
     holdingTimeInYears: 1,
     tokenAmount: 10,
@@ -164,7 +164,7 @@ After returning the result, the asset's unique identifier (UAL) is logged. The c
 Data is persisted on the network by indexing and replicating on the DKG. Assets consist of building blocks entitled as assertions that are immutable and verifiable. Assets latest assertion could be resolved from the network by using UAL.
 
 ```javascript
-const { assertion } = await dkg.assets.get(UAL);
+const { assertion } = await dkg.asset.get(UAL);
 
 console.log(JSON.stringify(data, null, 2));
 ```
@@ -258,7 +258,7 @@ The response response of the asset's data is:
 Assets on the DKG can be updated by providing the latest state for the asset:
 
 ```javascript
-const { UAL } = await dkg.assets.update(UAL, {
+const { UAL } = await dkg.asset.update(UAL, {
 "@context": "https://schema.org",
 "@type": "Product",
 "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
@@ -279,7 +279,7 @@ const { UAL } = await dkg.assets.update(UAL, {
 The result of the operation is the same as for the `create` operation. The updated asset has different name, so in order to present the changes, let's retrieve the data from the proxy:
 
 ```javascript
-const { assertion } = await dkg.assets.get(UAL);
+const { assertion } = await dkg.asset.get(UAL);
 
 console.log(JSON.stringify(data, null, 2));
 ```
