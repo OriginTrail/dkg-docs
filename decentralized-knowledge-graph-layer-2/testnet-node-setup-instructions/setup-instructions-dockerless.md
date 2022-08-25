@@ -14,7 +14,7 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 
 ### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
 
-* A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** server (minimum hardware requirements)
+* A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** or **Arch Linux** server (minimum hardware requirements)
 
 # Installation
 
@@ -84,13 +84,6 @@ If you see MOTP in Metamask on the 'OriginTrail Parachain Network RPC', it means
 Login to the server as root. You **cannot** use sudo and run this script. The command "**npm ci**" might fail.
 
 ## Step 5 - Run the installer
-
-{% hint style="info" %}
-This installer is intended for use on a fresh server. It will only work on a current v6 Stage 1 testnet server if you wipe it by doing the following step: 
-```
-systemctl stop otnode blazegraph fuseki && rm -rf ot-node blazegraph* fuseki* installer.sh
-```
-{% endhint %}
 
 **Download and run the installer script:**
 
