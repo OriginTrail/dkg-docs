@@ -18,6 +18,9 @@
 * [DKG SDK](decentralized-knowledge-graph-layer-2/dkg-sdk/README.md)
   * [Javascript SDK (dkg.js)](decentralized-knowledge-graph-layer-2/dkg-sdk/dkg-v6-js-client.md)
 * [Development environment setup](decentralized-knowledge-graph-layer-2/setting-up-your-development-environment.md)
+* [Implementations](decentralized-knowledge-graph-layer-2/implementations/README.md)
+  * [Modules](decentralized-knowledge-graph-layer-2/implementations/modules.md)
+  * [Command Executor](decentralized-knowledge-graph-layer-2/implementations/command-executor.md)
 * [DKG v6 node - setup instructions](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/README.md)
   * [Setup instructions (Dockerless)](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/setup-instructions-dockerless.md)
   * [Docker setup](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/docker-setup.md)
@@ -39,7 +42,8 @@
 
 * [Community created resources](useful-resources/community-resources.md)
 * [Available networks (testnets, mainnet)](useful-resources/networks.md)
-* [Contribution Guidelines](useful-resources/contribute.md)
+* [Contribution Guidelines](useful-resources/contribute/README.md)
+  * [Guidelines for automated test contributions](useful-resources/contribute/guidelines-for-automated-test-contributions.md)
 
 ## DKG v5 documentation <a href="#developers" id="developers"></a>
 

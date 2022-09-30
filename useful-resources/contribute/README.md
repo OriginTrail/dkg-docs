@@ -4,7 +4,7 @@ description: How to contribute to OriginTrail code repositories
 
 # Contribution Guidelines
 
-OriginTrail is completely source code and open for contributions by anyone.&#x20;
+OriginTrail is completely open source code and open for contributions by anyone.&#x20;
 
 If you’re new to OT node development, there are guides in this documentation for getting your dev environment set up. If you’re not sure where to start, get in touch with the devs in the discord channel. Please follow the below procedure to contribute new code or fixes:
 
