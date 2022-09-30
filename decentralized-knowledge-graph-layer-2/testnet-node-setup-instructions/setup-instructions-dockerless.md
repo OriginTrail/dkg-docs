@@ -14,48 +14,81 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 
 ### Prerequisites <a href="#docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b" id="docs-internal-guid-e057adbf-7fff-9a68-2579-1fe11935388b"></a>
 
-* A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** server (minimum hardware requirements)
+* A dedicated **4GB RAM/2CPUs/50GB HDD** **Ubuntu** or **Arch Linux** server (minimum hardware requirements)
 
-### Installation
+# Installation
 
-#### Step 1 - Fund your wallets
+## Step 1 - Create your wallets
 
-Fund your Substrate and Ethereum wallets with OTP and TRAC test tokens. Instructions are available at [fund-your-v6-testnet-node.md](fund-your-v6-testnet-node.md "mention") page.
+First, you will need a total of **4 wallets**. 
+
+### **2 EVM (Ethereum) wallets**
+- **1 Operational wallet**
+    - Private keys will be stored in the node
+    - An ideal example is a Metamask wallet
+    - *For V6 Stage 1 testers, you must use the same operational wallet address for telemetry contributions*
+- **1 Management wallet** 
+    - Private keys are not stored on the node
+    - An ideal example is a Ledger wallet
 
 {% hint style="info" %}
-Make sure to fund both your operational and management wallets.
+To view your EVM wallet balance, make sure to add the [OriginTrail Parachain Network RPC](https://docs.origintrail.io/blockchain-layer-1/origintrail-parachain/origintrail-parachain-network-rpc) to your Metamask
 {% endhint %}
 
-#### Step 2 - Create a mapping for both operational and management wallets
-
-Create a mapping between your Substrate and Ethereum wallets (that are pre-funded in the previous step), this can be performed through [this interface](https://parachain.origintrail.io/parachain-account-mapping).&#x20;
+### **2 Substrate wallets**
+- **1 Operational wallet**
+    - An ideal example is a wallet generated on [Polkadot{.js} extension](https://polkadot.js.org/extension/) or [Talisman](https://talisman.xyz/)
+- **1 Management wallet**
+    - You can also use a Polkadot{.js} or Talisman extension.
 
 {% hint style="info" %}
-The mapping needs to be performed for both for the node operational and management wallets.
+To view your substrate wallet balance, you can either visit
+[**OriginTrail Parachain Devnet**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Flofar.origin-trail.network#/accounts) **(testnet)** or [**OriginTrail Parachain**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fparachain-rpc.origin-trail.network#/accounts) **(mainnet)**
 {% endhint %}
 
-#### Step 3 - Login to your node server
+## Step 2 - Fund your wallets
+
+Fund your Substrate and EVM wallets with test OTP and TRAC tokens. Instructions are available on [fund-your-v6-testnet-node.md](fund-your-v6-testnet-node.md "mention") page.
+
+You can also ask for test OTP and TRAC tokens on [OriginTrail Node Community](https://t.me/otnodegroup). 
+
+{% hint style="info" %}
+You need test OTP in both substrate wallets, and test Trac in your EVM operational wallet.
+{% endhint %}
+
+{% hint style="info" %}
+The [Discord channel](https://discord.com/channels/460837319025623050/748179338699997235) will only fund 1 substrate wallet (starting with 'g') and 1 EVM wallet. After receiving test OTP on your first substrate wallet, visit [OriginTrail Parachain Devnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Flofar.origin-trail.network#/accounts) and send test OTP to your second substrate wallet. 
+{% endhint %}
+
+To view your test TRAC balance on Metamask, first switch your network to 'OriginTrail Parachain Network RPC' using the instructions above, then add the TEST custom token address using the import function
+```
+0x137e321166522A60CBF649Beb7a65989b9e1518e
+```
+
+## Step 3 - Create a mapping for both operational and management wallets
+
+Create a mapping between your Substrate and EVM wallet, this can be performed through [this interface](https://parachain.origintrail.io/parachain-account-mapping).&#x20;
+
+Connect the mapping interface with your EVM operational wallet and paste your substrate operational wallet (can start with 5 or g). 
+
+{% hint style="info" %}
+The mapping needs to be performed twice. Once for operational wallets (substrate and EVM) and once for management wallets (substrate and EVM).
+{% endhint %}
+
+{% hint style="info" %}
+If you see MOTP in Metamask on the 'OriginTrail Parachain Network RPC', it means the mapping succeeded. Once mapped, the OriginTrail Parachain Devnet (substrate) and OriginTrail Parachain Network RPC (EVM) should show the same balance/tokens. 
+{% endhint %}
+
+## Step 4 - Login to your node server
 
 Login to the server as root. You **cannot** use sudo and run this script. The command "**npm ci**" might fail.
 
-#### Step 4 - Run the installer
+## Step 5 - Run the installer
 
-**Download the installer script:**
-
-```
-cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/testnet/installer/installer.sh --output installer.sh
-```
-
-**Update permissions for the installer script:**
+**Download and run the installer script:**
 
 ```
-chmod +x installer.sh
-```
-
-**Run the installer script:**
-
-```
-./installer.sh
+cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/testnet/installer/installer.sh --output installer.sh && chmod +x installer.sh && ./installer.sh
 ```
 
 The installer script will guide you through the installation.
@@ -75,8 +108,6 @@ journalctl -u otnode --output cat -fn 100
 **OriginTrail node commands:**
 
 **Start node:** otnode-start&#x20;
-
-Note: to verify your node is running, run `otnode-logs` command
 
 **Stop node:** otnode-stop&#x20;
 
