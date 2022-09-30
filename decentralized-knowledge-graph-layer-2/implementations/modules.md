@@ -10,34 +10,41 @@ As soon as you run the node, module configurations are picked up from the **conf
 
 ### Module types
 
-#### Auto updater
+#### The Blockchain module
+
+The ot-node blockchain module enables interactions with multiple blockchains in order to perform operations of the OriginTrail protocol. To learn more about the OriginTrail blockchain layer visit [blockchains.md](../../general/blockchains.md "mention").
+
+#### Triple store module
+
+The entire DKG state is replicated and sharded across the ODN network. Each node persists their designated replicas in their individual local triple stores (graph databases). The triple store module is responsible for connecting and communicating to a triple store avaiable to the ot-node. There are several triple store implementations supported directly at the moment:
+
+* [Ontotext GraphDB](https://www.ontotext.com/products/graphdb/)
+* [Blazegraph](https://blazegraph.com/)
+* [Apache Jena Fuseki](https://jena.apache.org/documentation/fuseki2/)
+
+However due to the standard implementation (W3C RDF / SPARQL standards) it is easy to integrate with any standardized RDF triple store.&#x20;
+
+The triple store module utilizes [the Communica framework](https://comunica.dev/) under the hood.&#x20;
+
+#### Validation module
+
+The validation module is used to validate assertions seen on the network. More information on assertions can be found [here](../dkg-asset-graphs.md#dkg-assertions).
+
+#### Auto updater module
 
 If enabled, this module takes care of automatic updates of the local node. Every 15 minutes, it checks if the remote(git) version is different than the local version of ot-node, and if it is, local node will be updated to the latest version of the code. After a successful update, node will be restarted and start running on the latest version.&#x20;
 
-#### Http client
-
-Client applications use http requests to communicate with the node. But, how should they know which endpoints to hit? This problem is solved with Http client module, which is used for defining the endpoints at which requests can be made and defining ot-node's response to http requests.&#x20;
-
 #### Network module
 
-Whenever an asset is published,  it's content is hashed and replicated to _k_ nodes closest to it's hashed value on the network. Closeness is calculated using the XOR metric. Network module is in charge of finding the right nodes and storing an asset on found nodes. Essentially, we're using [_Kademlia_](https://en.wikipedia.org/wiki/Kademlia)'s _find peers_ and _store_ operations.&#x20;
+The network module takes care of all network RPC communication between nodes in the DKG. It is utilized for implementing the necessary protocol choreographies such as the publishing choreography. Under the hood it is utilizing an implementation of [_Kademlia_](https://en.wikipedia.org/wiki/Kademlia).&#x20;
 
-#### Repository
+#### Http client module
 
-Repository module is responsible for establishing connections with the database and storing, updating, deleting commands and operations data. Storing commands and operations states makes the node fault tolerant; making it possible to, in the case of node failure, just return to last preserved state and continue working from where it left off.&#x20;
+Client applications use http requests to communicate with the node. The Http client module implements the endpoints at which requests can be made and defining ot-node's response to http requests.&#x20;
 
-#### Triple store
+#### Repository module
 
-DKG's assets are persisted in the graph databases. This module is responsible for connecting and communicating to the graph database where assets are stored. There are multiple triple store implementations:
+The repository module is responsible for establishing connections with the operational database and storing, updating, deleting commands and operations data. Storing commands and operations states makes the node fault tolerant, making it possible to, in e.g. the case of node restart, continue from the last preserved state of operation and continue working from where it left off.&#x20;
 
-* blazegraph
-* fuseki
-* graphdb
+We expect additional modules to be added in the future based on the evolution of the DKG implementations.
 
-#### Validation
-
-After the publishing on an assertions is started, it's content is transformed into [_nquads_](https://www.w3.org/TR/n-quads/)_,_ and then used as leaves of a [Merkle tree](https://en.wikipedia.org/wiki/Merkle\_tree). Assertion id is the root of a Merkle tree. Transforming an assertion to nquads format and creating the assertion id is done on the client side, but after the request is passed to the ot-node, validation module is used to validate the _nquads_ and _assertion id_ format. &#x20;
-
-#### Blockchain
-
-Information about published assets is also persistent on the blockchain, making it public and unmodifiable. Blockchain module enables the node to use smart contract's functions as needed. To learn more about the OriginTrail blockchain layer visit [blockchains.md](../../general/blockchains.md "mention").
