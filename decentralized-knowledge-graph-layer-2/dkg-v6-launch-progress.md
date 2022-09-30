@@ -8,8 +8,6 @@ description: >-
 
 <mark style="color:green;">**Current launch stage:**</mark> <mark style="color:green;"></mark><mark style="color:green;">Stage 2</mark>
 
-**Latest version:** 6.0.0-beta.2.1
-
 ### DKG v6 development progress status
 
 The OriginTrail DKGv6 testnet has been successfully integrated with the OriginTrail Parachain testnet, introducing [UALs, DKG asset graphs](dkg-asset-graphs.md) and the stage 2 implementation of TRAC and OTP token features. Stage 2 proceeds with the final validation and testing of OriginTrail v6 protocol implementation in the Polkadot environment with EVM support, and will be used for rolling out the complete OriginTrail feature set in consecutive Stage 2 releases.&#x20;
