@@ -35,4 +35,4 @@ Account mapping interface is available [here](https://parachain.origintrail.io/p
 
 Once the TRAC is deployed on OriginTrail parachain, you will receive it in the same ethereum wallet used in the teleport process for the OriginTrail Parachain.
 
-If you experience any issues or have question, please contact the developers directly [on Discord](https://discordapp.com/invite/FCgYk2S).
+If you experience any issues or have a question, please contact the developers directly [on Discord](https://discordapp.com/invite/FCgYk2S).
