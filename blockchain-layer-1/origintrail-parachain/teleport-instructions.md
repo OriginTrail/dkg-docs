@@ -23,11 +23,13 @@ OTP bounties will be distributed to substrate wallets provided in step 2.
 OriginTrail Parachain supports two types of blockchain accounts:&#x20;
 
 * Substrate accounts (Polkadot native, used with Polkadot wallets such as Polkadot.js), which are used for native OriginTrail Parachain functionality
-*   Ethereum accounts (Ethereum native, used with Ethereum wallets such as Metamask), which are used within the EVM This enables the OriginTrail Parachain users to get benefits of "both worlds".&#x20;
+*   Ethereum accounts (Ethereum native, used with Ethereum wallets such as Metamask), which are used within the EVM. This enables the OriginTrail Parachain users to get benefits of "both worlds".&#x20;
 
 
 
-To enable the EVM functionality, users need to create a mapping between their Substrate and Ethereum accounts (wallets) to the OriginTrail Parachain through a one time transaction, which can be performed through this interface. Once the mapping is completed, your wallets will be ready for receiving TRAC on OriginTrail Parachain. IMPORTANT: If you chose not to take part in the bounty program, you must ensure your mapped wallet has an existential amount of OTP available on the OriginTrail Parachain. Without an existential amount of OTP on your wallet, your TRAC will not be able to receive TRAC on the OriginTrail Parachain and your TRAC tokens will be unavailable until the bridge implementation is finalised.&#x20;
+To enable the EVM functionality, users need to create a mapping between their Substrate and Ethereum accounts (wallets) to the OriginTrail Parachain through a one time transaction, which can be performed through this interface. Once the mapping is completed, your wallets will be ready for receiving TRAC on OriginTrail Parachain. I
+
+**MPORTANT**: If you chose not to take part in the bounty program, you must ensure your mapped wallet has an existential amount of OTP available on the OriginTrail Parachain. Without an existential amount of OTP on your wallet, your TRAC will not be able to receive TRAC on the OriginTrail Parachain and your TRAC tokens will be unavailable until the bridge implementation is finalised.&#x20;
 
 Account mapping interface is available [here](https://parachain.origintrail.io/parachain-account-mapping).&#x20;
 
