@@ -13,7 +13,7 @@
 
 ## Decentralized Knowledge Graph (Layer 2)
 
-* [📖 Introduction to DKG v6 - start here](decentralized-knowledge-graph-layer-2/introduction-to-dkg-v6-start-here.md)
+* [Introduction to DKG v6 - start here](decentralized-knowledge-graph-layer-2/introduction-to-dkg-v6-start-here.md)
 * [DKG Asset graphs](decentralized-knowledge-graph-layer-2/dkg-asset-graphs.md)
 * [DKG SDK](decentralized-knowledge-graph-layer-2/dkg-sdk/README.md)
   * [Javascript SDK (dkg.js)](decentralized-knowledge-graph-layer-2/dkg-sdk/dkg-v6-js-client.md)
