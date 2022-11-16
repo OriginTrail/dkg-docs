@@ -8,7 +8,7 @@ The OriginTrail DKG runs as a peer-to-peer network (OriginTrail Decentralized Ne
 
 Learn more about [ot-node modules here](modules.md) and the [command system](command-executor.md) implementation here.&#x20;
 
-Find out more about the [v6 node configuration on this page](../dkg-v6-node-configuration.md).
+Find out more about the [v6 node configuration on this page](broken-reference).
 
 
 
