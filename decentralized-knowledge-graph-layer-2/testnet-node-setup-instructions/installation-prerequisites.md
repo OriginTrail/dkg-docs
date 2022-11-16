@@ -13,7 +13,7 @@ There are 4 wallets (keys) that your node needs to properly function with Origin
 
 These wallets will be used during the installation process and you will add them into the configuration file.
 
-Read more about operational and admin wallets here.
+Read more about operational and admin wallets [here](https://docs.origintrail.io/decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/node-keys).
 
 ## 2. Tokens
 
