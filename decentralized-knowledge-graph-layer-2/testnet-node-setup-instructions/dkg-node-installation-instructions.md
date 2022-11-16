@@ -10,35 +10,33 @@ Currently the node can be run as a system process (Step 1). Follow the Discord c
 
 Dockerless installation will only require the interaction with the installation script so please make sure that you have your wallet’s public and private keys ready.
 
-#### 1.1 - Login to the server as root. You cannot use sudo and run this script.
+### 1.1 - Login to the server as root. You cannot use sudo and run this script.
 
-#### 1.2 - Download one of the following installer scripts:
+### 1.2 - Download one of the following installer scripts:
 
+#### ****
 
-
-### **Mainnet installer:**
+**Mainnet installer:**
 
 ```
 Coming soon…
 ```
 
-### **Testnet installer:**
+#### **Testnet installer:**
 
 ```
 cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/testnet/installer/installer.sh --output installer.sh && chmod +x installer.sh
 ```
 
-#### 1.3 - **Running the installer scripts**:
+### 1.3 - **Running the installer scripts**:
 
-
-
-### **Mainnet:**
+#### **Mainnet:**
 
 ```
 Coming soon…
 ```
 
-### **Testnet:**
+#### **Testnet:**
 
 ```
 ./installer.sh
