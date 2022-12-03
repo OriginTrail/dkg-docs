@@ -41,7 +41,7 @@
 
 * [OriginTrail Parachain](blockchain-layer-1/origintrail-parachain-introduction.md)
   * [Teleport instructions](blockchain-layer-1/origintrail-parachain/teleport-instructions.md)
-  * [OriginTrail Parachain Network RPC](blockchain-layer-1/origintrail-parachain-network-rpc.md)
+  * [OriginTrail Parachain Networks](blockchain-layer-1/origintrail-parachain/origintrail-parachain-networks.md)
   * [OriginTrail Parachain EVM](blockchain-layer-1/origintrail-parachain-evm.md)
 * [Other blockchains](blockchain-layer-1/other-blockchains.md)
 

@@ -27,7 +27,7 @@ OriginTrail Parachain supports two types of blockchain accounts:&#x20;
 
 
 
-To enable the EVM functionality, users need to create a mapping between their Substrate and Ethereum accounts (wallets) to the OriginTrail Parachain through a one time transaction, which can be performed through this interface. For network in the mapping interface choose Parachain Mainnet and more details about different parachain networks you can read [here](../origintrail-parachain-network-rpc.md). Once the mapping is completed, your wallets will be ready for receiving TRAC on OriginTrail Parachain.
+To enable the EVM functionality, users need to create a mapping between their Substrate and Ethereum accounts (wallets) to the OriginTrail Parachain through a one time transaction, which can be performed through this interface. For network in the mapping interface choose Parachain Mainnet and more details about different parachain networks you can read [here](origintrail-parachain-networks.md). Once the mapping is completed, your wallets will be ready for receiving TRAC on OriginTrail Parachain.
 
 **IMPORTANT**: If you chose not to take part in the bounty program, you must ensure your mapped wallet has an existential amount of OTP available on the OriginTrail Parachain. Without an existential amount of OTP on your wallet, your Ethereum wallet will not be able to receive TRAC on the OriginTrail Parachain and your TRAC tokens will be unavailable until the bridge implementation is finalised.&#x20;
 
