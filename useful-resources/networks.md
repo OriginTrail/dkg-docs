@@ -1,27 +1,16 @@
 # Available networks (testnets, mainnet)
 
-### OriginTrail mainnet
+### DKG Mainnet
 
-The OriginTrail ecosystem is centered around the **OriginTrail Decentralized Network (ODN) mainnet**, which is the main network with the full protocol implementation, launched in December 2018. In March 2021 the ODN has become a multichain network, expaning its consensus layer to the xDAI blockchain, enabling the users to choose which network to utilize based on their requirements. Upcoming integration with the Polkadot parachain is expected in the second half of 2021.
+The OriginTrail ecosystem is centered around the **Decentralized Knowledge Graph (DKG)**, which is the main network with the full protocol implementation, launched in December 2018. In March 2021 the DKG has become a multichain network, expanding its consensus layer to the xDAI blockchain, enabling the users to choose which network to utilize based on their requirements. In December 2022, DKG version 6 is launched and it is connected to OriginTrail Parachain main network secured by the Polkadot Relay Chain.
 
-The ODN Explorer is a tool to search data on the DKG: [https://explorer.origintrail.io/](https://explorer.origintrail.io/)\
-Here is also a short demo explaining how to use the ODN network explorer:\
-[https://www.youtube.com/watch?v=DM3XNmWMu0c](https://www.youtube.com/watch?v=DM3XNmWMu0c)
+### DKG Testnet
 
-Furthermore, you can utilize the community built OT Hub, which tracks data uploads on the network here:\
-[https://othub.origin-trail.network/dashboard](https://othub.origin-trail.network/dashboard)&#x20;
-
-### OriginTrail test networks
-
-There are currently two testnet networks available to experiment with the network, and build applications and solutions.
-
-**Warp Testnet** (the canary testnet for early testing of new features) -  this network is for early releases of the upcoming versions of DKG node implementations. It is used as a fast paced environment, focusing on speed of testing
-
-**Stable Testnet** - this testnet runs the same implementation as the OriginTrail mainnet, and is used for final release testing prior to hitting mainnet
+DKG Testnet runs the same implementation as the DKG Mainnet, and it is used for final release testing prior to hitting mainnet. Testnet is connected to OriginTrail Parachain Testnet which is secured by Rococo Relay Chain.
 
 {% hint style="info" %}
-If you want to play around and test out the DKG, we recommend using the stable testnet. For that, you will need test TRAC tokens, which you can obtain for both Warp Testnet and Stable Testnet by joining [our Discord](https://discord.com/invite/FCgYk2S) and requesting such by sharing your wallet on the #testnet-discussion channel.
+If you want to play around and test out the DKG, we recommend using the DKG Testnet. For that, you will need test TRAC and test OTP tokens, which you can obtain by joining [our Discord](https://discord.com/invite/FCgYk2S) and [requesting it from our discord bot](../decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/fund-your-v6-testnet-node.md).
 
-You can also run a local network on your machine. To run a local network, please refer to the [Local network setup page](../developers/setting-up-development-environment.md)
+You can also run a local network on your machine. To run a local network, please refer to the [Local network setup page](../decentralized-knowledge-graph-layer-2/setting-up-your-development-environment.md)
 {% endhint %}
 

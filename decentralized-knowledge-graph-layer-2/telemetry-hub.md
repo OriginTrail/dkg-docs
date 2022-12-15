@@ -48,15 +48,7 @@ If you are running an OriginTrail v6 testnet node and want to contribute to the 
 * Check that your node is up to date with the latest v6 node version (check for the latest release [on Github](https://github.com/OriginTrail/ot-node/releases)). We suggest that you turn on autoupdating during the beta stage to make sure your node is updated constantly
 * Make sure to check that your nodes are operating properly by checking the node logs
 * Make sure that the node operational wallet has enough tokens&#x20;
-  * Polygon Mumbai MATIC tokens (from launch stage 1 onwards)
-  * Test TRAC tokens (from launch stage 2 onwards) - not applicable yet
-* Make sure your node is communicating properly [with the Polygon Mumbai RPC](https://docs.polygon.technology/docs/develop/network-details/network/) endpoints
-* Check if your node telemetry plugin has been enabled by using the node API info route (see screenshot below from browser)
-  * If you have setup SSL on your node, use https to check
-  * If you get _"Access denied"_ message, you need to whitelist yourself by adding your IP address in ipWhitelist array in .origintrail\_noderc file, and then restart your node
-  * After starting/restarting, following message in the logs means that telemetry plugin is enabled _"Telemetry hub module initialized successfully, using ot-telemetry-collector package(s)"_
-
-![Example of the response from a node /info API call showing the latest version and if telemetry data is being sent ](<../.gitbook/assets/Screen Shot 2022-03-11 at 10.18.34.png>)
+  * Test TRAC tokens (from launch stage 2 onwards)
 
 Additionally, check the Debug section in Protocol operations KPIs [Dashboard](https://telemetry.origintrail.io/d/Cs4uPdLnk/telemetry-protocol-operation-kpis) to find your node:
 

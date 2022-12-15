@@ -21,7 +21,7 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
   * In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out a form. Installation files will be provided to you via email.
 * An installed and running **MySQL**
   * You need to create empty table named **operationaldb** inside MySQL
-* You should have installed **npm** and **Node.js (v14)**
+* You should have installed **npm** and **Node.js (v16)**
 
 ### Installation steps
 

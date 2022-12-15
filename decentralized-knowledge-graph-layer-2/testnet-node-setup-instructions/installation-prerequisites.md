@@ -1,5 +1,9 @@
 # Installation prerequisites
 
+{% hint style="info" %}
+Before running a mainnet node, consider first to run a testnet node.
+{% endhint %}
+
 Before we dive into the installation process of the DKG node, there are a few important steps that need to be executed such as acquiring tokens needed for the node’s proper functioning on the network as well as mapping your **ERC20** and **Substrate** wallets.
 
 ## 1. Node wallets

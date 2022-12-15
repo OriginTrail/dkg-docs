@@ -39,6 +39,7 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 **Follow the latest announcements:**
 
-* [Project Twitter account](https://twitter.com/origin\_trail)
+* [OriginTrail Twitter account](https://twitter.com/origin\_trail)
+* [OriginTrail Parachain Twitter account](https://twitter.com/ot\_parachain?s=21\&t=qxqZ\_fegNuIU3BF14xseaw)
 * [Developers Twitter account](https://twitter.com/OriginTrailDev)
 * [Facebook](https://www.facebook.com/origintrail/)

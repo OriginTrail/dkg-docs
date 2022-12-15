@@ -19,7 +19,7 @@ The OriginTrail SDK libraries are being built in various languages, as listed be
 * **dkg.py** (Python client, coming soon)
 * **dkg.go** (Go client, coming soon)
 * **dkg.java** (Java client, coming soon)
-* **dkg.php** (Php client, coming soon)
+* ****[**dkg.php**](https://github.com/OriginTrail/dkg.php) (Php client, coming soon)
 * **dkg.net** (.NET client, coming soon)
 
 {% hint style="info" %}

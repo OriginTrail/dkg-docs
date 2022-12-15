@@ -26,12 +26,12 @@
   * [Installation prerequisites](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/installation-prerequisites.md)
   * [DKG Node installation instructions:](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/dkg-node-installation-instructions.md)
   * [Configuring your node](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/configuring-your-node.md)
-  * [Houston - OriginTrail node control center:](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/houston-origintrail-node-control-center.md)
+  * [Houston - OriginTrail node control center](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/houston-origintrail-node-control-center.md)
   * [Backing up your node](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/backing-up-your-node.md)
   * [Migrating your V5 node to V6?](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/migrating-your-v5-node-to-v6.md)
   * [Node keys](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/node-keys.md)
-  * [Need help?](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/need-help.md)
   * [Fund your v6 testnet node](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/fund-your-v6-testnet-node.md)
+  * [Need help?](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/need-help.md)
 * [DKG v6 launch progress](decentralized-knowledge-graph-layer-2/dkg-v6-launch-progress.md)
 * [🏁 v6 bounty program](decentralized-knowledge-graph-layer-2/v6-bounty-program.md)
 * [👾 Telemetry Hub](decentralized-knowledge-graph-layer-2/telemetry-hub.md)
@@ -43,6 +43,8 @@
   * [Teleport instructions](blockchain-layer-1/origintrail-parachain/teleport-instructions.md)
   * [OriginTrail Parachain Networks](blockchain-layer-1/origintrail-parachain/origintrail-parachain-networks.md)
   * [OriginTrail Parachain EVM](blockchain-layer-1/origintrail-parachain-evm.md)
+  * [Deployed smart-contracts](blockchain-layer-1/origintrail-parachain/deployed-smart-contracts.md)
+  * [Add TRAC to Metamask](blockchain-layer-1/origintrail-parachain/add-trac-to-metamask.md)
 * [Other blockchains](blockchain-layer-1/other-blockchains.md)
 
 ## Useful Resources

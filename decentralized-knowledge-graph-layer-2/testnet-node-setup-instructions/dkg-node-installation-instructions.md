@@ -4,8 +4,6 @@ After acquiring TRAC and OTP tokens, teleporting TRAC to the OriginTrail Paracha
 
 Currently the node can be run as a system process (Step 1). Follow the Discord channel announcements for availability of the Docker installation as well as cloud marketplace simple installers (such as the 1-click installer on DigitalOcean).
 
-
-
 ## 1. Setup instructions (Dockerless)
 
 Dockerless installation will only require the interaction with the installation script so please make sure that you have your wallet’s public and private keys ready.
@@ -14,12 +12,10 @@ Dockerless installation will only require the interaction with the installation 
 
 ### 1.2 - Download one of the following installer scripts:
 
-#### ****
-
 **Mainnet installer:**
 
 ```
-Coming soon…
+cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/mainnet/installer/installer.sh --output installer.sh && chmod +x installer.sh
 ```
 
 #### **Testnet installer:**
@@ -30,13 +26,7 @@ cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/relea
 
 ### 1.3 - **Running the installer scripts**:
 
-#### **Mainnet:**
-
-```
-Coming soon…
-```
-
-#### **Testnet:**
+#### **Both, mainnet and testnet:**
 
 ```
 ./installer.sh
@@ -45,6 +35,36 @@ Coming soon…
 If your installation has been successful, your node will show the “**Node is up and running!**” log as shown in the example image below:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2022-11-16 at 18.29.58.png" alt=""><figcaption><p>OriginTrail V6 node stated</p></figcaption></figure>
+
+### **1.4 Setting the stake and ask**
+
+Once the node starts, **you will need to execute two setup transactions for your node to become active**. We have prepared two scripts that are used from the command line (but both these transactions will be executable with a click of a button from Houston very soon). These two transactions are needed to set stake for your node (50 000 TRAC as minimum for the node to operate) and set the node ask (in TRAC tokens).
+
+Set your node stake using the **set-stake** npm script (run from ot-node folder):&#x20;
+
+```
+npm run set-stake -- --rpcEndpoint=<rpc_enpoint> --stake=<stake_in_TRAC> --operationalWalletPrivateKey=<private_key> --managementWalletPrivateKey=<private_key> --hubContractAddress=<hub_contract_address> 
+```
+
+Example for mainnet:&#x20;
+
+```
+npm run set-stake -- --rpcEndpoint=https://astrostat-parachain-rpc.origin-trail.network/ --stake=50000 --operationalWalletPrivateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --managementWalletPrivateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
+```
+
+Set your node ask using the **set-ask** npm script (run from ot-node folder):&#x20;
+
+```
+npm run set-ask -- --rpcEndpoint=<rpc_enpoint> --ask=<ask_in_kb_per_epoch_in_TRAC> --privateKey=<operational_wallet_private_key> --hubContractAddress=<hub_contract_address>
+```
+
+Example for mainnet:&#x20;
+
+```
+npm run set-ask -- --rpcEndpoint=https://astrosat-parachain-rpc.origin-trail.network/ --ask=0.0002 --privateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
+```
+
+Note: Use the operational private key for "--private-key" parameter in set-ask script
 
 ### **OriginTrail node commands:**
 

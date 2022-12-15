@@ -11,10 +11,11 @@ From v6 of OriginTrail a new core primitive in the system has been introduced - 
 Formally defined, a **DKG asset graph** is unique digital asset, representing a real-world asset so that it:&#x20;
 
 * **has a unique identifier** - **UAI/UAL**, referring to the&#x20;
-* **semantic state** representation of the real-world asset, associated with&#x20;
-* has state verifiability **proofs**,&#x20;
-* has **ownership record** (optional)&#x20;
-* has associated **token pools** (optional)
+* **semantic state** representation of the real-world asset, associated with
+* state **mutability**,
+* state verifiability **proofs**,&#x20;
+* **ownership record**,
+* associated **token pools** (optional)
 
 This means that for any asset (e.g. a physical product with a data carrier such as a barcode or RFID, a digital document such as a certificate, or a Web3 asset such as an NFT) an associated DKG Asset graph can be created, indexed and queried for on the network. **OriginTrail v6 allows all these assets to become Web3 ready and makes them easily discoverable, verifiable and valuable.**
 

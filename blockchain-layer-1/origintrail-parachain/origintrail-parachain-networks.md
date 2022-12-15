@@ -27,7 +27,7 @@ Note: because of difference in token decimals between ETH (18) and OTP (12), one
 ### OriginTrail Parachain Testnet
 
 {% hint style="success" %}
-The Parachain Testnet is the testing environment for the OriginTrail Parachain. It is the recommended environment for all DKG & Parachain development purposes - if you are building a dapp or smart contract, you can use the testnet as your "staging" environment
+The Parachain Testnet is the testing environment for the OriginTrail Parachain. It is the recommended environment for all DKG & Parachain development purposes - if you are building a dapp or smart contract, you can use the testnet as your "staging" environment.
 {% endhint %}
 
 Polkadot.js endpoint is available [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fparachain-testnet-rpc.origin-trail.network#/explorer).

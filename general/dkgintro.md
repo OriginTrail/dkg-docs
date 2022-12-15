@@ -69,8 +69,6 @@ The protocol actors are:
 
 The distinction between DC and DH nodes is only behavioural, as they implement the same interfaces (each node can be both a DH and a DC node at the same time).
 
-\*\* Currently data providers need to run their own DC nodes to publish data to the network, which is about to change in version 6 with the introduction of gateway services.
-
 Therefore, a dataset published to the DKG by a DC node:
 
 * contains a cryptographic identity (DID) of the DC and DP, rooted in one of the supported blockchain networks
@@ -79,7 +77,7 @@ Therefore, a dataset published to the DKG by a DC node:
 * is timestamped and has a "data lifespan" on the network&#x20;
 * is randomly replicated across peers based on a DKG content addressing scheme
 
-In this way, any given graph vertex or edge (triple) in the DKG can be verifiably associated with a publisher DID, its originating dataset and cryptographic hashes proving it being contained in that dataset, as well as enabling data integrity verification on-chain & off chain.&#x20;
+In this way, any given graph vertex or edge (triple/chunk) in the DKG can be verifiably associated with a publisher DID, its originating dataset and cryptographic hashes proving it being contained in that dataset, as well as enabling data integrity verification on-chain & off chain.&#x20;
 
 
 
