@@ -48,8 +48,12 @@ npm run set-stake -- --rpcEndpoint=<rpc_enpoint> --stake=<stake_in_TRAC> --opera
 
 Example for mainnet:&#x20;
 
+{% hint style="warning" %}
+**50000** **TRAC** is the default value for stake, even though node-runners are free to change this value. 50000 is the minimum required for node to become active, but when Delegated Staking will go live, delegations will also be summed up.
+{% endhint %}
+
 ```
-npm run set-stake -- --rpcEndpoint=https://astrostat-parachain-rpc.origin-trail.network/ --stake=50000 --operationalWalletPrivateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --managementWalletPrivateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
+npm run set-stake -- --rpcEndpoint=https://astrosat-parachain-rpc.origin-trail.network/ --stake=50000 --operationalWalletPrivateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --managementWalletPrivateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
 ```
 
 Set your node ask using the **set-ask** npm script (run from ot-node folder):&#x20;
@@ -60,8 +64,12 @@ npm run set-ask -- --rpcEndpoint=<rpc_enpoint> --ask=<ask_in_kb_per_epoch_in_TRA
 
 Example for mainnet:&#x20;
 
+{% hint style="warning" %}
+**0.00375 $TRAC / (KB \* epoch)** is the default value on the Trace Labs nodes, even though node-runners are free to choose any other value.
+{% endhint %}
+
 ```
-npm run set-ask -- --rpcEndpoint=https://astrosat-parachain-rpc.origin-trail.network/ --ask=0.0002 --privateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
+npm run set-ask -- --rpcEndpoint=https://astrosat-parachain-rpc.origin-trail.network/ --ask=0.00375 --privateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
 ```
 
 Note: Use the operational private key for "--private-key" parameter in set-ask script
