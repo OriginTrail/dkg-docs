@@ -26,7 +26,7 @@
   * [Installation prerequisites](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/installation-prerequisites.md)
   * [DKG Node installation instructions:](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/dkg-node-installation-instructions.md)
   * [Configuring your node](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/configuring-your-node.md)
-  * [Houston - OriginTrail node control center](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/houston-origintrail-node-control-center.md)
+  * [Houston V6 - Node command center](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/houston-v6-node-command-center.md)
   * [Backing up your node](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/backing-up-your-node.md)
   * [Migrating your V5 node to V6?](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/migrating-your-v5-node-to-v6.md)
   * [Node keys](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/node-keys.md)

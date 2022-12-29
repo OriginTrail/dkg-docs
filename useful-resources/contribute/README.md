@@ -4,9 +4,11 @@ description: How to contribute to OriginTrail code repositories
 
 # Contribution Guidelines
 
-OriginTrail is completely open source code and open for contributions by anyone.&#x20;
+OriginTrail is an ecosystem dedicated to open source software and based on the principles of neutrality, inclusiveness and usability.&#x20;
 
-If you’re new to OT node development, there are guides in this documentation for getting your dev environment set up. If you’re not sure where to start, get in touch with the devs in the discord channel. Please follow the below procedure to contribute new code or fixes:
+All project repositories, such as OT node, DKG clients, Houston etc are available on our official Github
+
+If your are new with OriginTrail development, there are guides in this documentation for getting your development environment set up. Please follow the below procedure to contribute new code or fixes:&#x20;
 
 * Create a separate branch, by branching of the relevant branch (we generally follow [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow))
 * Create a pull request to **develop** (except for v6 contributions, then use the **v6/develop**) branch containing a description of what your code does and how it can be tested
