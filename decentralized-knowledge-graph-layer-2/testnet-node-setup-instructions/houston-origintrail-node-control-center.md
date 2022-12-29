@@ -9,7 +9,7 @@ description: >-
 There are two ways you can use the Houston application:
 
 1. Via a hosted application, which is available at the following link: [https://houston.origintrail.io/](https://houston.origintrail.io/) or
-2. Run Houston Web application locally by following the setup instructions.
+2. Run Houston Web application locally by following the setup [instructions](houston-origintrail-node-control-center.md#setup-houston-locally).
 
 **Houston is an open source project and we welcome your contributions on the** [**official project repository.**](https://github.com/OriginTrail/houston-v6/)****
 
