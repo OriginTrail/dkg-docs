@@ -391,7 +391,7 @@ The complete response of the method will look like:
 
 ```javascript
 {
-    UAL: 'did:dkg:ganache/0xa5cef543538b997b7a125cc849005b62a3da2271/1,
+    UAL: 'did:dkg:ganache/0xa5cef543538b997b7a125cc849005b62a3da2271/1',
     publicAssertionId: '0xef11c3f4bc3331f5d1ad3ec8ddb63928913f7a4d546c6a03fe4485837ad4c494',
     operation: {
         operationId: '1c7e860a-219c-4a0c-896d-9c62e19e3fe4',
