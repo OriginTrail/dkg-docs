@@ -2,23 +2,27 @@
 description: Javascript library for the Decentralized Knowledge Graph.
 ---
 
-# Javascript SDK (dkg.js)
+# DKG Javascript SDK (dkg.js)
 
-If you are looking to build Web3 applications on the OriginTrail DKG, the dkg.js SDK library is the best place to start!
+If you are looking to build applications leveraging [knowledge assets](../dkg-basic-concepts.md) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.js SDK library is the best place to start!
 
-The DKG SDK is used together with an OriginTrail node (the node is it's dependency). Therefore you either need to run a node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-Node](../testnet-node-setup-instructions/), in order to use the SDK.&#x20;
+The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on[ your local environment](https://docs.origintrail.io/decentralized-knowledge-graph-layer-2/setting-up-your-development-environment) or a[ hosted OT-Node](https://docs.origintrail.io/decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions), in order to use the SDK.
 
 {% hint style="info" %}
-This library operates with OriginTrail nodes starting with v6.
+Running a gateway node is not the same as running a **full (DKG hosting) node**, which requires 50 000 TRAC tokens to be posted as stake collateral. Running a gateway node requires no tokens to be posted as collateral.
+{% endhint %}
+
+{% hint style="info" %}
+This library operates with OriginTrail nodes starting from version 6.0.0
 {% endhint %}
 
 ### Installation
 
 The library can be used both in the browser or in a NodeJS application.
 
-#### In the Browser
+#### Using dkg.js in the Browser
 
-Use the prebuilt `dist/dkg.min.js`, or build using the [DKG.js](https://github.com/OriginTrail/dkg.js) repository:
+Use the prebuilt `dist/dkg.min.js`, or build the file on your own using the[ dkg.js](https://github.com/OriginTrail/dkg.js) repository:
 
 ```
 npm run build
@@ -27,20 +31,20 @@ npm run build
 Then include `dist/dkg.min.js` in your html file. This will expose `DKG` on the window object:
 
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-<script src="./dist/dkg.min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js'></script>
+<script src='./dist/dkg.min.js'></script>
 <script>
-    window.addEventListener('load', async function () {
-        // TODO
-    });
+   window.addEventListener('load', async function () {
+       // DKG object is available here
+   });
 </script>
 ```
 
 {% hint style="info" %}
-Make sure to also include Web3.js library as it is a dependency for DKG.js!
+Make sure to also include web3.js library as it is a dependency for dkg.js.
 {% endhint %}
 
-#### In NodeJS apps
+#### Using dkg.js in NodeJS apps
 
 Run the command to install dependency from the [NPM](https://www.npmjs.com/package/dkg.js) repository:
 
@@ -48,7 +52,7 @@ Run the command to install dependency from the [NPM](https://www.npmjs.com/packa
 npm install dkg.js
 ```
 
-Then include `dkg.js` in your node file. This will expose `DKG` on as a variable:
+Then include `dkg.js` in your project files. This will expose the `DKG` object:
 
 ```javascript
 const DKG = require('dkg.js');
@@ -60,430 +64,469 @@ To use the DKG library, you need to connect to a running local or remote OT-Node
 
 ```javascript
 const dkg = new DKG({
-  endpoint: "http://127.0.0.1",
-  port: 8900,
-  useSSL: false,
-  loglevel: "trace",
-});
-
-const result = await dkg.node.info();
-console.log(JSON.stringify(result, null, 2));
-```
-
-In the code snippet above, after connecting to the node, the node info route will return the ot-node version. The result should look like this:
-
-```json
-{
-  "version": "6.0.0-beta.2.0"
-}
-```
-
-#### Create an asset
-
-Asset presents a digital or physical object indexed on the DKG. Asset used in this tutorial is maintained by [schema.org](https://schema.org) can be found [here](https://schema.org/Product).
-
-It follows the standard and contains an object of type `Product` __ with its description, name, image, and other details. An extensive documentation for Product class can be found here [https://schema.org/Product](https://schema.org/Product). The sample dataset values can be referred below:
-
-<pre class="language-javascript"><code class="lang-javascript"><strong>const assertion = {
-</strong>  "@context": "https://schema.org",
-  "@type": "Product",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "3.5",
-    "reviewCount": "11"
-  },
-  "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
-  "name": "Kenmore White 17\" Microwave",
-  "image": "kenmore-microwave-17in.jpg",
-  "offers": {
-    "@type": "Offer",
-    "availability": "https://schema.org/InStock",
-    "price": "55.00",
-    "priceCurrency": "USD"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": "Ellie",
-      "datePublished": "2011-04-01",
-      "reviewBody": "The lamp burned out and now I have to replace it.",
-      "name": "Not a happy camper",
-      "reviewRating": {
-        "@type": "Rating",
-        "bestRating": "5",
-        "ratingValue": "1",
-        "worstRating": "1"
-      }
-    },
-    {
-      "@type": "Review",
-      "author": "Lucas",
-      "datePublished": "2011-03-25",
-      "reviewBody": "Great microwave for the price. It is small and fits in my apartment.",
-      "name": "Value purchase",
-      "reviewRating": {
-        "@type": "Rating",
-        "bestRating": "5",
-        "ratingValue": "4",
-        "worstRating": "1"
-      }
-    }
-  ]
-}</code></pre>
-
-Index the asset with associated keywords. In this example, the keyword is `microwave`:
-
-<pre class="language-javascript"><code class="lang-javascript"><strong>const { UAL } = await dkg.asset.create(assertion, {
-</strong>    visibility: "public",
-    holdingTimeInYears: 1,
-    tokenAmount: 10,
+    endpoint: 'http://127.0.0.1',  // gateway node URI
+    port: 8900,
     blockchain: {
-      name: "otp",
-      publicKey: PUBLIC_KEY,
-      privateKey: PRIVATE_KEY,
+        name: 'ganache', // or otp::mainnet, otp::testnet, otp::devnet
+        publicKey: PUBLIC_KEY, // not required in browser, metamask used instead
+        privateKey: PRIVATE_KEY, // not required in browser, metamask used instead
     },
-  })
-console.log(UAL);</code></pre>
+});
+​
+const nodeInfo = await dkg.node.info(); 
+// if successfully connected, the will return an object indicating the node version
+// { 'version': '6.0.3' }
+```
 
-After returning the result, the asset's unique identifier (UAL) is logged. The complete response of the method is:
+#### Create a Knowledge Asset
+
+In this example, let’s create a simple Knowledge Asset representing a Tesla Model X car. We will be using a Schema.org type **Car** for our data (detailed schema can be found on [https://schema.org/Car](https://schema.org/Car)). The sample content can be seen below:
+
+```javascript
+const publicAssertion = {
+    '@context': 'https://schema.org',
+    '@id': 'https://tesla.modelX/2321',
+    '@type': 'Car',
+    'name': 'Tesla Model X',
+    'brand': {
+        '@type': 'Brand',
+        'name': 'Tesla'
+    },
+    'model': 'Model X',
+    'manufacturer': {
+        '@type': 'Organization',
+        'name': 'Tesla, Inc.'
+    },
+    'fuelType': 'Electric',
+    'numberOfDoors': 5,
+    'vehicleEngine': {
+        '@type': 'EngineSpecification',
+        'engineType': 'Electric motor',
+        'enginePower': {
+        	'@type': 'QuantitativeValue',
+        	'value': '416',
+        	'unitCode': 'BHP'
+        }
+    },
+    'driveWheelConfiguration': 'AWD',
+    'speed': {
+        '@type': 'QuantitativeValue',
+        'value': '250',
+        'unitCode': 'KMH'
+    },
+}
+
+```
+
+When you create the asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an asset on DKG.&#x20;
+
+```javascript
+const result = await dkg.asset.create({
+    public: publicAssertion,
+  },
+  { epochsNum: 2 }
+);
+
+console.log(result);
+
+```
+
+The complete response of the method will look like:
 
 ```javascript
 {
-  "UAL": "did:otp:0x6e002616adf12d4cc908976eb16a7646b6cd6596/2785",
-  "assertionId": "0x8705b09bdca4ca23bf31f1048452cefea0b5f142ee72a7e09434ed4cc50a3b3e",
+  UAL: 'did:dkg:ganache/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  publicAssertionId: '0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42',
+  operation: {
+    operationId: '5195d01a-b437-4aae-b388-a77b9fa715f1',
+    status: 'COMPLETED'
+  }
+}
+```
+
+#### Read Knowledge Asset data from the DKG
+
+To read knowledge asset data from the DKG we utilize the **get** protocol operation.
+
+In this example we will get the latest state of the asset we published previously:
+
+```javascript
+const { UAL } = result;
+
+const getAssetResult = await dkg.asset.get(UAL);
+
+console.log(JSON.stringify(getAssetResult, null, 2));
+```
+
+The response of the get operation will be the assertion graph:
+
+<pre class="language-javascript"><code class="lang-javascript">{
+  "assertion": [
+    {
+      "@id": "_:c14n0",
+      "http://schema.org/name": [
+        {
+          "@value": "Tesla, Inc."
+        }
+      ],
+      "@type": [
+        "http://schema.org/Organization"
+      ]
+    },
+    {
+      "@id": "_:c14n1",
+      "http://schema.org/unitCode": [
+        {
+          "@value": "KMH"
+        }
+      ],
+      "http://schema.org/value": [
+        {
+          "@value": "250"
+        }
+      ],
+      "@type": [
+        "http://schema.org/QuantitativeValue"
+      ]
+    },
+    {
+      "@id": "_:c14n2",
+      "http://schema.org/enginePower": [
+        {
+          "@id": "_:c14n4"
+        }
+      ],
+      "http://schema.org/engineType": [
+        {
+          "@value": "Electric motor"
+        }
+      ],
+      "@type": [
+        "http://schema.org/EngineSpecification"
+      ]
+    },
+    {
+      "@id": "_:c14n3",
+      "http://schema.org/name": [
+        {
+          "@value": "Tesla"
+        }
+      ],
+      "@type": [
+        "http://schema.org/Brand"
+      ]
+    },
+    {
+      "@id": "_:c14n4",
+      "http://schema.org/unitCode": [
+        {
+          "@value": "BHP"
+        }
+      ],
+      "http://schema.org/value": [
+        {
+          "@value": "416"
+        }
+      ],
+      "@type": [
+        "http://schema.org/QuantitativeValue"
+      ]
+    },
+    {
+      "@id": "https://tesla.modelX/2321",
+      "http://schema.org/brand": [
+        {
+          "@id": "_:c14n3"
+        }
+      ],
+      "http://schema.org/driveWheelConfiguration": [
+        {
+          "@value": "AWD"
+        }
+      ],
+<strong>      "http://schema.org/fuelType": [
+</strong>        {
+          "@value": "Electric"
+        }
+      ],
+      "http://schema.org/manufacturer": [
+        {
+          "@id": "_:c14n0"
+        }
+      ],
+      "http://schema.org/model": [
+        {
+          "@value": "Model X"
+        }
+      ],
+      "http://schema.org/name": [
+        {
+          "@value": "Tesla Model X"
+        }
+      ],
+      "http://schema.org/numberOfDoors": [
+        {
+          "@value": "5",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ],
+      "http://schema.org/speed": [
+        {
+          "@id": "_:c14n1"
+        }
+      ],
+      "http://schema.org/vehicleEngine": [
+        {
+          "@id": "_:c14n2"
+        }
+      ],
+      "@type": [
+        "http://schema.org/Car"
+      ],
+      "https://dkg.private": [
+        {
+          "@value": "0x0742b8172dd827e2b2905b4968df1e5d1213071cbcba0b04378a4931c904e9b1"
+        }
+      ]
+    }
+  ],
+  "assertionId": "0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42",
   "operation": {
-    "operationId": "d97b4716-3feb-463c-acf5-9ca52cde3564",
+    "operationId": "5f343130-bf0f-471e-8fda-9b400f0aa392",
     "status": "COMPLETED"
   }
 }
 
-```
+</code></pre>
 
-#### Read an asset from the DKG
+#### Querying asset data with SPARQL
 
-Data is persisted on the network by indexing and replicating on the DKG. Assets consist of building blocks entitled as assertions that are immutable and verifiable. Assets latest assertion could be resolved from the network by using UAL.
+Querying the DKG is done by using the SPARQL query language, which is very similar to SQL, applied to graph data(if you have SQL experience, SPARQL should be relatively easy to get started with - more information[ can be found here](https://www.w3.org/TR/rdf-sparql-query/)).
 
-```javascript
-const { assertion } = await dkg.asset.get(UAL);
-
-console.log(JSON.stringify(data, null, 2));
-```
-
-The response response of the asset's data is:
+Let’s write simple query to select all subjects and objects in graph that have the **Model** property of Schema.org context:
 
 ```javascript
-{
-    "@context": "http://schema.org/",
-    "@graph": [
-      {
-        "id": "_:c14n0",
-        "type": "Product",
-        "aggregateRating": {
-          "id": "_:c14n4"
-        },
-        "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
-        "name": "Kenmore White 17\" Microwave",
-        "offers": {
-          "id": "_:c14n5"
-        },
-        "review": [
-          {
-            "id": "_:c14n2"
-          },
-          {
-            "id": "_:c14n3"
-          }
-        ]
-      },
-      {
-        "id": "_:c14n1",
-        "type": "Rating",
-        "bestRating": "100",
-        "ratingValue": {
-          "type": "xsd:double",
-          "@value": "5.935915107714318E0"
-        },
-        "worstRating": "0"
-      },
-      {
-        "id": "_:c14n2",
-        "type": "Review",
-        "author": "Ellie",
-        "datePublished": "2011-04-01",
-        "name": "Not a happy camper",
-        "reviewBody": "The lamp burned out and now I have to replace it.",
-        "reviewRating": {
-          "id": "_:c14n6"
-        }
-      },
-      {
-        "id": "_:c14n3",
-        "type": "Review",
-        "author": "Lucas",
-        "datePublished": "2011-03-25",
-        "name": "Value purchase",
-        "reviewBody": "Great microwave for the price. It is small and fits in my apartment.",
-        "reviewRating": {
-          "id": "_:c14n1"
-        }
-      },
-      {
-        "id": "_:c14n4",
-        "type": "AggregateRating",
-        "ratingValue": "1.1",
-        "reviewCount": "11"
-      },
-      {
-        "id": "_:c14n5",
-        "type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "price": "55.00",
-        "priceCurrency": "USD"
-      },
-      {
-        "id": "_:c14n6",
-        "type": "Rating",
-        "bestRating": "5",
-        "ratingValue": "1",
-        "worstRating": "1"
-      }
-    ]
-  }
+const result = await dkg.graph.query(
+    `prefix schema: <https://schema.org/>
+        select ?s ?modelName
+        where {
+            ?s schema:model ?modelName
+        }`,
+    'SELECT',
+);
+
+console.log(JSON.stringify(result, null, 2));
 ```
 
-
-
-#### Update an asset on the DKG
-
-Assets on the DKG can be updated by providing the latest state for the asset:
-
-```javascript
-const { UAL } = await dkg.asset.update(UAL, {
-"@context": "https://schema.org",
-"@type": "Product",
-"description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
-"name": "Kenmore Black 17\" Microwave",
-"image": "kenmore-microwave-17in.jpg"
-}, {
-    visibility: "public",
-    holdingTimeInYears: 1,
-    tokenAmount: 10,
-    blockchain: {
-      name: "otp",
-      publicKey: PUBLIC_KEY,
-      privateKey: PRIVATE_KEY,
-    },
-  })
-```
-
-The result of the operation is the same as for the `create` operation. The updated asset has different name, so in order to present the changes, let's retrieve the data from the proxy:
-
-```javascript
-const { assertion } = await dkg.asset.get(UAL);
-
-console.log(JSON.stringify(data, null, 2));
-```
-
-The latest state of the product is now:
-
-<pre class="language-json5"><code class="lang-json5">{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "description": "0.7 cubic feet countertop microwave. Has six preset cooking categories and convenience features like Add-A-Minute and Child Lock.",
-<strong>  "name": "Kenmore Black 17\" Microwave",
-</strong>  "image": "kenmore-microwave-17in.jpg"
-}</code></pre>
-
-#### Search for an entity or an assertion on the DKG (To be updated soon)
-
-DKG can be searched by keywords for related assets and assertions. Search result consists of elements listed by score and issuer.&#x20;
-
-Entity search returns latest state of assets indexed by provided keywor:
-
-```javascript
-var result = dkg.search({ query: 'ExecutiveAnvil', resultType: 'entities' });
-console.log(JSON.stringify(result));
-```
-
-The result the search is the following:
-
-```javascript
-{
-    "@context": {
-        "@vocab": "http://schema.org/",
-        "goog": "http://schema.googleapis.com/",
-        "resultScore": "goog:resultScore",
-        "detailedDescription": "goog:detailedDescription",
-        "EntitySearchResult": "goog:EntitySearchResult",
-        "kg": "http://g.co/kg"
-    },
-    "@type": "ItemList",
-    "itemListElement": [
-        {
-            "@type": "EntitySearchResult",
-            "result": {
-                "@id": "f7fb9c597ec04c1a7a6c1b03f5ef365ac7b47416b23e4c0772195175258266b8",
-                "@type": "PRODUCT",
-                "@context": "https://www.schema.org/",
-                "@graph": [
-                    {
-                        "type": "Product",
-                        "aggregateRating": {
-                            "id": "_:b1",
-                            "type": "AggregateRating",
-                            "ratingValue": "4.4",
-                            "reviewCount": "89"
-                        },
-                        "brand": {
-                            "id": "_:b2",
-                            "type": "Thing",
-                            "name": "ACME"
-                        },
-                        "description": "Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.",
-                        "image": "http://www.example.com/anvil_executive.jpg",
-                        "mpn": "925872",
-                        "name": "Executive Anvil",
-                        "offers": {
-                            "id": "_:b3",
-                            "type": "Offer",
-                            "availability": "http://schema.org/InStock",
-                            "itemCondition": "http://schema.org/UsedCondition",
-                            "price": "119.99",
-                            "priceCurrency": "USD",
-                            "priceValidUntil": "2020-11-05",
-                            "seller": {
-                                "id": "_:b4",
-                                "type": "Organization",
-                                "name": "Executive Objects"
-                            }
-                        }
-                    },
-                    {
-                        "id": "_:b1",
-                        "type": "AggregateRating",
-                        "ratingValue": "4.4",
-                        "reviewCount": "89"
-                    },
-                    {
-                        "id": "_:b2",
-                        "type": "Thing",
-                        "name": "ACME"
-                    },
-                    {
-                        "id": "_:b3",
-                        "type": "Offer",
-                        "availability": "http://schema.org/InStock",
-                        "itemCondition": "http://schema.org/UsedCondition",
-                        "price": "119.99",
-                        "priceCurrency": "USD",
-                        "priceValidUntil": "2020-11-05",
-                        "seller": {
-                            "id": "_:b4",
-                            "type": "Organization",
-                            "name": "Executive Objects"
-                        }
-                    },
-                    {
-                        "id": "_:b4",
-                        "type": "Organization",
-                        "name": "Executive Objects"
-                    }
-                ]
-            },
-            "issuers": [
-                "0xbd084ab97c704fe4a6d620cb7c30c0be0366646f"
-            ],
-            "assertions": [
-                "6b02bc68a44c255c0738b94a72a41ae2c0959e7e6a53554f90ec75ed6d7921de"
-            ],
-            "nodes": [
-                "QmdD6AuWRoVpAjkxEtBgeUDUBaddNT3SD2cZo8sMV5CMn6"
-            ],
-            "resultScore": 0
-        }
-    ]
-}
-```
-
-Assertion search returns assertions metadata of assets indexed by provided keyword:
-
-```javascript
-var result = dkg.search({ query: 'ExecutiveAnvil', resultType: 'assertions' });
-console.log(JSON.stringify(result));
-```
-
-The result of Search API route is the following:
-
-```json
-{
-    "@context": {
-        "@vocab": "http://schema.org/",
-        "goog": "http://schema.googleapis.com/",
-        "resultScore": "goog:resultScore",
-        "detailedDescription": "goog:detailedDescription",
-        "EntitySearchResult": "goog:EntitySearchResult",
-        "kg": "http://g.co/kg"
-    },
-    "@type": "ItemList",
-    "itemListElement": [
-        {
-            "@type": "AssertionSearchResult",
-            "result": {
-                "@id": "6b02bc68a44c255c0738b94a72a41ae2c0959e7e6a53554f90ec75ed6d7921de",
-                "metadata": {
-                    "issuer": "0xbd084ab97c704fe4a6d620cb7c30c0be0366646f",
-                    "type": "Product",
-                    "timestamp": "2021-12-27T16:06:57.912Z",
-                    "visibility": true,
-                    "dataHash": "ed13153fa4090eceedf6c1dd1aa030ec45ab75c2f9510c64a2014f1c6424e7dd"
-                },
-                "signature": "0xbe37c15aa21835b9fe50b5225cfb61cd8ab3f06374705a91f5a5989105d2d2ec151c8bbb5d0f07c8508d37c77a15ac08456342d156ae52ced4520c15cb94eee91c",
-                "rootHash": "45f04483daac38828d634d404e1a12d60d7b4749813edea7fd8b1701a725f37e"
-            },
-            "nodes": [
-                "QmdD6AuWRoVpAjkxEtBgeUDUBaddNT3SD2cZo8sMV5CMn6"
-            ],
-            "resultScore": 0
-        }
-    ]
-}
-```
-
-#### Executing SPARQL queries (To be updated soon)
-
-Querying the DKG is done by using the SPARQL queries. The SPARQL construct query helps to get the response as a RDF graph. In case you are interested to create your own application, it will return portable graph described by the query:
-
-```javascript
-options = {
-    query: `PREFIX schema: <http://schema.org/>
-            CONSTRUCT { ?s ?p ?o }
-            WHERE {
-                GRAPH ?g {
-                ?s ?p ?o .
-                ?s schema:hasVisibility ?v
-            }
-        }`
-};
-
-var result = await dkg.query(options)
-console.log(JSON.stringify(result));
-```
-
-The returned responses contain an array of n-quads with predicate `schema:hasVisibility`:
+The returned response will contain an array of n-quads:
 
 ```javascript
 {
   "status": "COMPLETED",
-  "data": {
-    "response": [
-      "<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasDataHash> \"019042b4b5cb5701579a4fd8e339bed0fa983b06920ed8cd4d5864ffcb01c801\" .",
-      "<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasIssuer> \"0xbd084ab97c704fe4a6d620cb7c30c0be0366646f\" .",
-      "<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasSignature> \"0x1303593aa18a94c54d85649915809f6f3849bd28ad3780b1ce458086f8547e10665dd3d8f2900724853fc5b6c34599d68657fa0f5bb3c7542f02673fc6e609b41b\" .",
-      "<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasTimestamp> \"2021-12-14T12:43:10.742Z\" .",
-      "<did:dkg:43a5f8c55600a36882f9bac7c69c05a3e0edd1293b56b8024faf3a29d8157435> <http://schema.org/hasType> \"default\" .",
-    ]
-  }
+  "data": [
+    {
+      "s": "https://tesla.modelX/2321",
+      "modelName": "\"Model X\""
+    }
+  ]
 }
 ```
 
-More details about the library is available [here](https://github.com/OriginTrail/dkg.js).
+As the OriginTrail node leverages a fully fledged graph database (triple store supporting RDF), you can run arbitrary SPARQL queries on it.
+
+**Create a Knowledge Asset with private assertion**
+
+In addition to Knowledge Assets with public assertions, we can create private assertions, which will contain data that we don’t want to expose publicly.
+
+The sample assertion content for public assertion will be the same as before, just a bit reduced:
+
+```javascript
+const publicAssertion = {
+    '@context': 'https://schema.org',
+    '@id': 'https://tesla.modelX/2321',
+    '@type': 'Car',
+    'name': 'Tesla Model X',
+    'brand': {
+        '@type': 'Brand',
+        'name': 'Tesla'
+    },
+    'model': 'Model X',
+    'manufacturer': {
+        '@type': 'Organization',
+        'name': 'Tesla, Inc.'
+    },
+}
+```
+
+Sample private assertion:
+
+<pre class="language-javascript"><code class="lang-javascript">const privateAssertion = {
+<strong>    '@context': 'https://schema.org',
+</strong><strong>    '@id': 'https://tesla.modelX/2321',
+</strong>    'productionDate': '2015-09-29',
+    'mileageFromOdometer': {
+        '@type': 'QuantitativeValue',
+    	'value': '25672',
+    	'unitCode': 'KMT'
+    },
+}
+</code></pre>
+
+When assertions with public and private data are prepared, we can publish it on the DKG. It’s actually as simple as executing one function:&#x20;
+
+```javascript
+const result = await dkg.asset.create({
+            public: publicAssertion,
+            private: privateAssertion,      
+      },
+      {
+            epochsNum: 2,
+      }
+);
+
+console.log(result);
+```
+
+The complete response of the method will look like:
+
+```javascript
+{
+    UAL: 'did:dkg:ganache/0xa5cef543538b997b7a125cc849005b62a3da2271/1,
+    publicAssertionId: '0xef11c3f4bc3331f5d1ad3ec8ddb63928913f7a4d546c6a03fe4485837ad4c494',
+    operation: {
+        operationId: '1c7e860a-219c-4a0c-896d-9c62e19e3fe4',
+        status: 'COMPLETED'
+    }
+}
+
+```
+
+**Get Knowledge Asset private assertion from the DKG**
+
+To read knowledge asset private assertion from the DKG we utilize the same get protocol operation as before, just now we will specify content type option to be private. Keep in mind, you can only get private assertions if your node contains them. This feature is to be further extended with knowledge marketplace tools for knowledge asset monetization.
+
+```javascript
+const { UAL } = createAssetResult;
+
+const options = {
+	contentType: "private"
+};
+const getAssetResult = await dkg.asset.get(UAL, options);
+
+console.log(JSON.stringify(getAssetResult, null, 2));
+```
+
+The response of the get operation will be the assertion graph:
+
+```javascript
+{
+  "operation": {
+    "queryPrivate": {
+      "operationId": "30734787-3779-4a02-8b79-82102c508327",
+      "status": "COMPLETED"
+    }
+  },
+  "assertion": [
+    {
+      "@id": "_:c14n0",
+      "http://schema.org/unitCode": [
+        {
+          "@value": "KMT"
+        }
+      ],
+      "http://schema.org/value": [
+        {
+          "@value": "25672"
+        }
+      ],
+      "@type": [
+        "http://schema.org/QuantitativeValue"
+      ]
+    },
+    {
+      "@id": "https://tesla.modelX/2321",
+      "http://schema.org/mileageFromOdometer": [
+        {
+          "@id": "_:c14n0"
+        }
+      ],
+      "http://schema.org/productionDate": [
+        {
+          "@value": "2015-09-29",
+          "@type": "http://schema.org/Date"
+        }
+      ]
+    }
+  ],
+  "assertionId": "0x0742b8172dd827e2b2905b4968df1e5d1213071cbcba0b04378a4931c904e9b1"
+}
+```
+
+#### Check the Knowledge Asset owner
+
+Thanks to the blockchain representation of the Knowledge Assets it’s possible to check the owner of the Knowledge Asset by checking the ownership record of its NFT token, representing the asset on-chain.
+
+In order to do this, we should execute the function below:
+
+```javascript
+const getOwnerResult = await dkg.asset.getOwner(UAL);
+
+console.log(getOwnerResult);
+```
+
+Owner of the Knowledge Asset:
+
+```javascript
+{
+  UAL: 'did:dkg:ganache/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  owner: '0xBaF76aC0d0ef9a2FFF76884d54C9D3e270290a43',
+  operation: { operationId: null, status: 'COMPLETED' }
+}
+```
+
+#### Transfer Knowledge Asset ownership
+
+It’s also possible to transfer ownership of the asset ERC721 token.
+
+In this example we will transfer our Tesla ERC721 token to another wallet:
+
+```javascript
+const newOwner = "0x2ACa90078563133db78085F66e6B8Cf5531623Ad";
+
+let assetTransferResult = await dkg.asset.transfer(UAL, newOwner);
+
+console.log(assetTransferResult);
+```
+
+Result of the transfer operation:
+
+```json
+{
+  UAL: 'did:dkg:ganache/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  owner: '0x2ACa90078563133db78085F66e6B8Cf5531623Ad',
+  operation: { operationId: null, status: 'COMPLETED' }
+}
+```
+
+#### **More on types of interaction with the DKG SDK**
+
+We can divide operations done by SDK into 3 types:
+
+* Node API request
+* Smart contract call (non state-changing interaction)
+* Smart contract transaction (state-changing interaction)
+
+Non state-changing interactions with smart contracts are free and can be described as contract getters and don’t require transactions on the blockchain, meaning they do not incur transaction fees. Smart contract transactions are state-changing operations, meaning that they’re changing the state of the smart contract memory and it costs some amount in blockchain native gas tokens (such as ETH, OTP, etc.).
+
+In order to perform state-changing operations, you need to use a wallet funded with gas tokens.
+
+You can use default keys from the example below for ganache blockchain:
+
+```javascript
+const PRIVATE_KEY="0x9b9af041edc816692276ac3c8f1d5565e3c01ddff80ec982943a29bd8d1d8863"
+const PUBLIC_KEY="0xBaF76aC0d0ef9a2FFF76884d54C9D3e270290a43"
+```
+
+{% hint style="warning" %}
+Default keys above should not be used anywhere except in local environment for development.
+{% endhint %}

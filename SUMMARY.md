@@ -14,9 +14,9 @@
 ## Decentralized Knowledge Graph (Layer 2)
 
 * [Introduction to DKG v6 - start here](decentralized-knowledge-graph-layer-2/introduction-to-dkg-v6-start-here.md)
-* [DKG Asset graphs](decentralized-knowledge-graph-layer-2/dkg-asset-graphs.md)
+* [DKG Basic concepts](decentralized-knowledge-graph-layer-2/dkg-basic-concepts.md)
 * [DKG SDK](decentralized-knowledge-graph-layer-2/dkg-sdk/README.md)
-  * [Javascript SDK (dkg.js)](decentralized-knowledge-graph-layer-2/dkg-sdk/dkg-v6-js-client.md)
+  * [DKG Javascript SDK (dkg.js)](decentralized-knowledge-graph-layer-2/dkg-sdk/dkg-v6-js-client.md)
 * [Development environment setup](decentralized-knowledge-graph-layer-2/setting-up-your-development-environment.md)
 * [Implementation](decentralized-knowledge-graph-layer-2/implementation/README.md)
   * [Modules](decentralized-knowledge-graph-layer-2/implementation/modules.md)
@@ -36,6 +36,7 @@
 * [🏁 v6 bounty program](decentralized-knowledge-graph-layer-2/v6-bounty-program.md)
 * [👾 Telemetry Hub](decentralized-knowledge-graph-layer-2/telemetry-hub.md)
 * [Tutorials (coming soon)](decentralized-knowledge-graph-layer-2/tutorials.md)
+* [Knowledge Assets](decentralized-knowledge-graph-layer-2/knowledge-assets.md)
 
 ## Blockchain (Layer 1)
 

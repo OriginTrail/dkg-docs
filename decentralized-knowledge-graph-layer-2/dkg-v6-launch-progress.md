@@ -40,4 +40,4 @@ The OriginTrail DKG v6 launch is performed in 3 stages:
 
 * **Stage 1** which introduced the new network and data layer. The goal of Stage1 is to verify smooth operation of the v6 network and data layer in a public network environment.
 * **Stage 2** which introduces UALs and asset functionality, including the smart contract layer (smart contracts and TRAC token). Stage 2 has started in August 2022. Stage 2 ends with OriginTrail DKG v6 launching its mainnet on OriginTrail Parachain.
-* **Stage 3** will be focused on performing the migration from v5 to the v6 mainne. This will include backward compatibility tests, a network update exercise and other related activities.
+* **Stage 3** will be focused on performing the migration from v5 to the v6 mainnet. This will include backward compatibility tests, a network update exercise and other related activities.

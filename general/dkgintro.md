@@ -2,11 +2,11 @@
 
 ## What is the OriginTrail Decentralized Knowledge Graph?
 
-OriginTrail Decentralized Knowledge Graph (DKG) is an open, collaborative network combining **blockchain** and **knowledge graph** technology. The core unit of the network - the OriginTrail node - is the ultimate data service for your Web3 applications. OriginTrail DKG is a powerful Web3 backend, and together with DKG SDK you can create graph-native Web3 applications, interfacing with verifiable assets on the DKG.
+OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **knowledge assets**. It is hosted on an open, permissionless OriginTrail Decentralized Network (ODN) which combines **blockchain** with **knowledge graph** technology.&#x20;
 
 OriginTrail connects to multiple blockchains, such as Ethereum, Polkadot (via [OriginTrail Parachain](../blockchain-layer-1/origintrail-parachain-evm.md)), Polygon, Gnosis and more to come. It is fuelled by the TRAC token, which is used to manage relations between DKG network participants. Running an OriginTrail node also makes you one of the contributors to hosting the DKG and makes you eligible for earning TRAC token rewards.
 
-As a developer using the OriginTrail DKG you can create and maintain **Web3 asset graphs** - immutable, queryable and searchable graphs that can be used across Web3 applications. You can additionally apply standardized technologies such as GS1 EPCIS, RDF/SPARQL, JSON-LD and other W3C and GS1 standards out of the box.
+As a developer using the OriginTrail DKG you can create and maintain **Knowledge Assets** that can be used across Web3 applications. You can additionally apply standardized technologies such as GS1 EPCIS, RDF/SPARQL, JSON-LD and other W3C and GS1 standards out of the box.
 
 ### Why combine Blockchain with Knowledge Graphs?
 
