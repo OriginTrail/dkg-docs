@@ -56,4 +56,4 @@ bash tools/local-network-setup/setup-macos-environment.sh --nodes=12
 
 ## Running nodes on testnet
 
-For a shared development environment, we recommend deploying DKG testnet nodes on the beta testnet - instructions can be found [here](https://docs.origintrail.io/dkg-v6-upcoming-version/setup-instructions-dockerless).
+For a shared development environment, we recommend deploying DKG testnet nodes on the testnet - instructions can be found [here](https://docs.origintrail.io/dkg-v6-upcoming-version/setup-instructions-dockerless).
