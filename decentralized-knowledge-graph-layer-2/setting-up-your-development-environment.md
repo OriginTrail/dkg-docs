@@ -7,7 +7,7 @@ description: How to setup a local and shared development environment
 These setup instructions for DKGv6 are "Work in progress" and are subject to change. The development team expects to introduce improvements of setting up the DKGv6 node in local environment in the future.
 
 {% hint style="success" %}
-Need any assistance with node setup? Join the DKGv6 Discord chat and find help within the OriginTrail tech community!
+Need any assistance with node setup? Join the DKGv6 [Discord ](https://discord.com/invite/FCgYk2S)chat and find help within the OriginTrail tech community!
 {% endhint %}
 
 ## Quick Start
@@ -15,15 +15,15 @@ Need any assistance with node setup? Join the DKGv6 Discord chat and find help w
 ### Prerequisites
 
 * This instructions are made for MacOS and Linux
-* An installed and running **GraphDB**
-  * In order to download GraphDB, please visit their [official website](https://www.ontotext.com/products/graphdb/graphdb-free/) and fill out a form. Installation files will be provided to you via email.
+* An installed and running **Blazegraph**
+  * In order to download Blazegraph, please visit their [official website](https://blazegraph.com/).
 * An installed and running **MySQL**
   * You need to create empty table named **operationaldb** inside MySQL
 * You should have installed **npm** and **Node.js (v16)**
 
 ### Installation steps
 
-#### Step 1 - Get the DKG code by cloning the  repo and checking out the proper branch
+#### Step 1 - Get the DKG code by cloning the repo and checking out the proper branch
 
 ```
 git clone https://github.com/OriginTrail/ot-node
@@ -41,12 +41,17 @@ npm install
 
 ```
 NODE_ENV=development
-RPC_ENDPOINT=http://127.0.0.1:7545
+RPC_ENDPOINT=http://127.0.0.1:8545
 ```
 
 ****\
-**Step 4 - Start local DKG network**\
-****In order to start the local DKG network, run the **local network setup** script to have multiple nodes running in local environment:
+**Step 4 - Start local DKG network**
+
+In order to start the local DKG network, run the **local network setup** script to have multiple nodes running in local environment:
+
+{% hint style="warning" %}
+The script below only works for MacOS. If you need help with the Linux setup contact the team on [Discord](https://discord.com/invite/FCgYk2S).
+{% endhint %}
 
 ```
 bash tools/local-network-setup/setup-macos-environment.sh --nodes=12

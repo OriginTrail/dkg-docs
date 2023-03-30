@@ -1,6 +1,6 @@
 # OriginTrail RFCs
 
-The OriginTrail development is transparent and being guided by public debate through the Trace Alliance working groups, as well as through technical discussions within the community through the technical **Requests for Commments (OT-RFCs)**.&#x20;
+The OriginTrail development is transparent and being guided by public debate through the Trace Alliance working groups, as well as through technical discussions within the community through the technical **Requests for Comments (OT-RFCs)**.&#x20;
 
 The RFCs have formerly been part of the official documentation and have moved to [this repository](https://github.com/OriginTrail/OT-RFC-repository) from OT-RFC-07 on October 12th 2020.
 

@@ -67,7 +67,7 @@ const dkg = new DKG({
     endpoint: 'http://127.0.0.1',  // gateway node URI
     port: 8900,
     blockchain: {
-        name: 'ganache', // or otp::mainnet, otp::testnet, otp::devnet
+        name: 'hardhat', // or otp::mainnet, otp::testnet, otp::devnet
         publicKey: PUBLIC_KEY, // not required in browser, metamask used instead
         privateKey: PRIVATE_KEY, // not required in browser, metamask used instead
     },
@@ -135,7 +135,7 @@ The complete response of the method will look like:
 
 ```javascript
 {
-  UAL: 'did:dkg:ganache/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
   publicAssertionId: '0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42',
   operation: {
     operationId: '5195d01a-b437-4aae-b388-a77b9fa715f1',
@@ -391,7 +391,7 @@ The complete response of the method will look like:
 
 ```javascript
 {
-    UAL: 'did:dkg:ganache/0xa5cef543538b997b7a125cc849005b62a3da2271/1',
+    UAL: 'did:dkg:hardhat/0xa5cef543538b997b7a125cc849005b62a3da2271/1',
     publicAssertionId: '0xef11c3f4bc3331f5d1ad3ec8ddb63928913f7a4d546c6a03fe4485837ad4c494',
     operation: {
         operationId: '1c7e860a-219c-4a0c-896d-9c62e19e3fe4',
@@ -478,7 +478,7 @@ Owner of the Knowledge Asset:
 
 ```javascript
 {
-  UAL: 'did:dkg:ganache/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
   owner: '0xBaF76aC0d0ef9a2FFF76884d54C9D3e270290a43',
   operation: { operationId: null, status: 'COMPLETED' }
 }
@@ -500,9 +500,9 @@ console.log(assetTransferResult);
 
 Result of the transfer operation:
 
-```json
+```javascript
 {
-  UAL: 'did:dkg:ganache/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
   owner: '0x2ACa90078563133db78085F66e6B8Cf5531623Ad',
   operation: { operationId: null, status: 'COMPLETED' }
 }
@@ -520,11 +520,11 @@ Non state-changing interactions with smart contracts are free and can be describ
 
 In order to perform state-changing operations, you need to use a wallet funded with gas tokens.
 
-You can use default keys from the example below for ganache blockchain:
+You can use default keys from the example below for hardhat blockchain:
 
 ```javascript
-const PRIVATE_KEY="0x9b9af041edc816692276ac3c8f1d5565e3c01ddff80ec982943a29bd8d1d8863"
-const PUBLIC_KEY="0xBaF76aC0d0ef9a2FFF76884d54C9D3e270290a43"
+const PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+const PUBLIC_KEY="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
 ```
 
 {% hint style="warning" %}
