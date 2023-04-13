@@ -44,7 +44,7 @@ NODE_ENV=development
 RPC_ENDPOINT=http://127.0.0.1:8545
 ```
 
-****\
+\
 **Step 4 - Start local DKG network**
 
 In order to start the local DKG network, run the **local network setup** script to have multiple nodes running in local environment:
@@ -52,6 +52,9 @@ In order to start the local DKG network, run the **local network setup** script 
 {% hint style="warning" %}
 The script below only works for MacOS. If you need help with the Linux setup contact the team on [Discord](https://discord.com/invite/FCgYk2S).
 {% endhint %}
+
+\
+In order to start the local DKG network, run the **local network setup** script to have multiple nodes running in local environment:
 
 ```
 bash tools/local-network-setup/setup-macos-environment.sh --nodes=12

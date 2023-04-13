@@ -17,7 +17,18 @@ Asset graphs are formed of **assertions**, which represent asset content states.
 
 Knowledge Assets can contain both public and private data - the public assertion data being replicated on the OriginTrail Decentralized Network and publicly available, and private assertion data contained within the private domain of the asset owner (e.g. OriginTrail Node run by the asset owner, such as a person or company).
 
-In summary, a knowledge asset is a combination of an NFT record and a semantic record. Using the dkg.js SDK you will be able to perform CRUT (create, read, update, transfer) operations with Knowledge assets, which will be explained in further detail below.\
+In summary, a knowledge asset is a combination of an NFT record and a semantic record. Using the dkg.js SDK you will be able to perform CRUT (create, read, update, transfer) operations with Knowledge assets, which will be explained in further detail below.
+
+#### State finality
+
+Similar to distributed databases, the OriginTrail Decentralized Knowledge Graph applies replication mechanisms and needs mechanisms to reach a consistent state on the network for knowledge assets. In OriginTrail DKG, state consistency is reconciled using the blockchain, which hosts state proofs for knowledge assets as well as replication commit information from DKG nodes. This means that updates for an existing knowledge asset are accepted by the network nodes (similar to the way nodes accept knowledge assets on creation) and can operate with all accepted states.
+
+There are three phases for a state of a knowledge asset:
+
+* LATEST: which indicates the Knowledge Asset state pending for an update, awaiting commits from DKG nodes. Once commits are received, the state transitions to LATEST\_FINALIZED.
+* LATEST\_FINALIZED: latest committed state, accepted by the network.
+* HISTORICAL: any previously finalized state, identifiable by its state hash.
+
 
 
 More information about [Knowledge Assets.](knowledge-assets.md)
@@ -60,4 +71,4 @@ This page is a WIP and is currently being updated (Q1 2023)
 
 <figure><img src="https://documents.lucid.app/documents/f47b9383-e097-4900-a1cc-4a0dd8f92d7e/pages/cOGrK2Oo9ApD?a=845&#x26;x=-1625&#x26;y=128&#x26;w=1450&#x26;h=306&#x26;store=1&#x26;accept=image%2F*&#x26;auth=LCA%20a95999ac650cc24e34a8a53424c1b104bc59d0cc-ts%3D1676043825" alt=""><figcaption></figcaption></figure>
 
-**To see the DKG in action, continue to the** [**DKG SDK section**](dkg-sdk/)****
+**To see the DKG in action, continue to the** [**DKG SDK section**](dkg-sdk/)

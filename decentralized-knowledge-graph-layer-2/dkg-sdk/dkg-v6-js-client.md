@@ -80,7 +80,7 @@ const nodeInfo = await dkg.node.info();
 
 #### Create a Knowledge Asset
 
-In this example, let’s create a simple Knowledge Asset representing a Tesla Model X car. We will be using a Schema.org type **Car** for our data (detailed schema can be found on [https://schema.org/Car](https://schema.org/Car)). The sample content can be seen below:
+In this example, let’s create an example Knowledge Asset representing a Tesla Model X car. We will be using a Schema.org type **Car** for our data (detailed schema can be found on [https://schema.org/Car](https://schema.org/Car)). The sample content can be seen below:
 
 ```javascript
 const publicAssertion = {
@@ -118,7 +118,7 @@ const publicAssertion = {
 
 ```
 
-When you create the asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an asset on DKG.&#x20;
+When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an knowledge asset on DKG.&#x20;
 
 ```javascript
 const result = await dkg.asset.create({
@@ -148,7 +148,7 @@ The complete response of the method will look like:
 
 To read knowledge asset data from the DKG we utilize the **get** protocol operation.
 
-In this example we will get the latest state of the asset we published previously:
+In this example we will get the latest state of the knowledge asset we published previously:
 
 ```javascript
 const { UAL } = result;
@@ -299,15 +299,93 @@ The response of the get operation will be the assertion graph:
 
 </code></pre>
 
-#### Querying asset data with SPARQL
+#### Update Knowledge Asset data
 
-Querying the DKG is done by using the SPARQL query language, which is very similar to SQL, applied to graph data(if you have SQL experience, SPARQL should be relatively easy to get started with - more information[ can be found here](https://www.w3.org/TR/rdf-sparql-query/)).
+Knowledge assets can be updated by using the **update** function. In this example we will update the previously published knowledge asset to reflect the features of the Tesla S model. The updated content can be seen below:
+
+```javascript
+const updatedPublicAssertion = {
+    '@context': 'https://schema.org',
+    '@id': 'https://tesla.modelS/2322',
+    '@type': 'Car',
+    'name': 'Tesla Model S',
+    'brand': {
+        '@type': 'Brand',
+        'name': 'Tesla'
+    },
+    'model': 'Model S',
+    'manufacturer': {
+        '@type': 'Organization',
+        'name': 'Tesla, Inc.'
+    },
+    'fuelType': 'Electric',
+}
+
+```
+
+The function call for updating a knowledge asset receives a UAL (the same one that the previous create returned) and is of same structure as for knowledge asset creation:
+
+```javascript
+const result = await dkg.asset.update(UAL, {
+    public: updatedPublicAssertion
+ });
+
+console.log(JSON.stringify(result, null, 2));
+```
+
+The returned response will contain the UAL and operation status:
+
+```javascript
+{
+  UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  operation: {
+    operationId: '50fd6920-e084-433b-a518-26bf326a7b5a',
+    status: 'COMPLETED'
+  }
+}
+```
+
+After an update is finalized, a user can get the updated asset state by invoking the get operation.
+
+**Note on state finality**
+
+Similar to distributed databases, the OriginTrail Decentralized Knowledge Graph applies replication mechanisms and needs mechanisms to reach a consistent state on the network for knowledge assets. In OriginTrail DKG, state consistency is reconciled using the blockchain, which hosts state proofs for knowledge assets as well as replication commit information from DKG nodes. This means that updates for an existing knowledge asset are accepted by the network nodes (similar to the way nodes accept knowledge assets on creation) and can operate with all accepted states.
+
+There are three phases for a state of a knowledge asset:
+
+* LATEST: which indicates the Knowledge Asset state pending for an update, awaiting commits from DKG nodes. Once commits are received, the state transitions to LATEST\_FINALIZED.
+* LATEST\_FINALIZED: latest committed state, accepted by the network.
+* HISTORICAL: any previously finalized state, identifiable by its state hash.
+
+From DKG.js v6.0.2, the user is able to specify if he wants to get the latest or latest finalized state. Example:
+
+```javascript
+let options = {
+    state: 'LATEST_FINALIZED'
+};
+
+let asset = await dkg.asset.get(UAL, options);
+```
+
+Application builders are able to get all above states, however querying the DKG (via query functions) will only return the cumulative finalized state, for consistency reasons.
+
+Additionally, user can call the _waitFinalization_ function to wait for knowledge asset update finalization (network nodes commit to storing the updated knowledge asset):
+
+```javascript
+await dkg.asset.waitFinalization(UAL);
+```
+
+After the user waits for finalization, the get operation will return the same response for the latest and latest finalized state.
+
+#### Querying knowledge asset data with SPARQL
+
+Querying the DKG is done by using the SPARQL query language, which is very similar to SQL, applied to graph data (if you have SQL experience, SPARQL should be relatively easy to get started with - more information[ can be found here](https://www.w3.org/TR/rdf-sparql-query/)).
 
 Let’s write simple query to select all subjects and objects in graph that have the **Model** property of Schema.org context:
 
 ```javascript
 const result = await dkg.graph.query(
-    `prefix schema: <https://schema.org/>
+    `prefix schema: <http://schema.org/>
         select ?s ?modelName
         where {
             ?s schema:model ?modelName
@@ -332,11 +410,37 @@ The returned response will contain an array of n-quads:
 }
 ```
 
-As the OriginTrail node leverages a fully fledged graph database (triple store supporting RDF), you can run arbitrary SPARQL queries on it.
+As the OriginTrail node leverages a fully fledged graph database (triple store supporting RDF), you can run arbitrary SPARQL queries on it.&#x20;
 
-**Create a Knowledge Asset with private assertion**
+However, when it comes to querying the DKG, it is important to note that at the moment there are only options to query finalized and historical states. This means that any SPARQL queries that are run on the DKG will return data from the latest finalized state by default, or any previously finalized states, identifiable by their state hash.
 
-In addition to Knowledge Assets with public assertions, we can create private assertions, which will contain data that we don’t want to expose publicly.
+To query for historical states in the DKG, you need to pass the `graphState: 'HISTORICAL'` option when making the SPARQL query. Here's an example of how to do that:
+
+```javascript
+let options = {
+    graphState: 'HISTORICAL'
+};
+
+const result = await dkg.graph.query(
+    `prefix schema: <https://schema.org/>
+        select ?s ?modelName
+        where {
+            ?s schema:model ?modelName
+        }`,
+    'SELECT',
+    options
+);
+
+console.log(JSON.stringify(result, null, 2));
+```
+
+To query the latest finalized state of the DKG, the `'CURRENT'` option should be passed for the graphState parameter. It's important to note that this is also the default behavior if the graphState parameter is not specified in the SPARQL query.
+
+In addition to the `graphState` option, there is also the `graphLocation` option which determines where the query will be executed. The two available options are `LOCAL_KG` and `PUBLIC_KG`. The `LOCAL_KG` option is used to query data from the local knowledge graph which stores all private that is not shared with the network, while the `PUBLIC_KG` option is used to query all data on the node that is received from the network. By default, if the `graphLocation` option is not specified, the query will be executed on the local knowledge graph (`LOCAL_KG`).
+
+**Create a Knowledge Asset with private data**
+
+In addition to knowledge assets with public assertions, we can add private data to our knowledge asset by creating private assertions, which will contain data that we don’t want to expose publicly.
 
 The sample assertion content for public assertion will be the same as before, just a bit reduced:
 
@@ -403,7 +507,7 @@ The complete response of the method will look like:
 
 **Get Knowledge Asset private assertion from the DKG**
 
-To read knowledge asset private assertion from the DKG we utilize the same get protocol operation as before, just now we will specify content type option to be private. Keep in mind, you can only get private assertions if your node contains them. This feature is to be further extended with knowledge marketplace tools for knowledge asset monetization.
+To read knowledge asset private assertion from the DKG we utilize the same get protocol operation as before, just now we will specify content type option to be private. Keep in mind, you can only get private assertions if your node owns them. This feature is to be further extended with knowledge marketplace tools for knowledge asset monetization.
 
 ```javascript
 const { UAL } = createAssetResult;
