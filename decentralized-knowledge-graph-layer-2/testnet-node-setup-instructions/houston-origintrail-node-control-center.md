@@ -11,7 +11,7 @@ There are two ways you can use the Houston application:
 1. Via a hosted application, which is available at the following link: [https://houston.origintrail.io/](https://houston.origintrail.io/) or
 2. Run Houston Web application locally by following the setup [instructions](houston-origintrail-node-control-center.md#setup-houston-locally).
 
-**Houston is an open source project and we welcome your contributions on the** [**official project repository.**](https://github.com/OriginTrail/houston-v6/)****
+**Houston is an open source project and we welcome your contributions on the** [**official project repository.**](https://github.com/OriginTrail/houston-v6/)
 
 ### Usage instructions:
 
@@ -52,6 +52,10 @@ Under “**Service tokenomics**” section, you’re able to manage TRAC stake s
 This section allows node runners to add additional keys (wallets) or remove keys from the node. OriginTrail V6 node operates with 2 key types (admin key and operational key).&#x20;
 
 Houston will allow a node runner to remove a key (of a certain type) if there are at least two keys available for that type (e.g. you cannot remove your only admin key, as you would lose the ability to manage your node).
+
+{% hint style="danger" %}
+As for the current implementation, staked tokens can only be managed by the admin wallet that was initially used to stake them, so before removing any admin keys, make sure you unstaked all tokens and staked them with the new one!
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/node_wallets.png" alt=""><figcaption><p>Houston - Node wallets section</p></figcaption></figure>
 

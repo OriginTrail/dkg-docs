@@ -144,6 +144,24 @@ The complete response of the method will look like:
 }
 ```
 
+In case you want to create multiple different assets you can increase your allowance and then each time you initiate a publish, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a much faster publish time.
+
+```javascript
+await dkg.asset.increaseAllowance('1569429592284014000');
+
+const result = await dkg.asset.create({
+    public: publicAssertion,
+  },
+  { epochsNum: 2 }
+);
+```
+
+After you've finished publishing data to the blockchain, you can decrease your allowance to reclaim your tokens. Note that if you try to retrieve an amount greater than your current allowance, you will be able to retrieve up to the current allowance amount - so if you want to retrieve all your remaining tokens it's a good practice to pass the same value that you used for increasing your allowance.
+
+```javascript
+await dkg.asset.decreaseAllowance('1569429592284014000');
+```
+
 #### Read Knowledge Asset data from the DKG
 
 To read knowledge asset data from the DKG we utilize the **get** protocol operation.
@@ -343,6 +361,23 @@ The returned response will contain the UAL and operation status:
     status: 'COMPLETED'
   }
 }
+```
+
+In case you want to update multiple different assets you can increase your allowance and then each time you initiate an update, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a much faster update time.
+
+```javascript
+await dkg.asset.increaseAllowance('1569429592284014000');
+
+const result = await dkg.asset.update(UAL, {
+    public: updatedPublicAssertion,
+  }
+);
+```
+
+After you've finished updating data, you can decrease your allowance to reclaim your tokens. Note that if you try to retrieve an amount greater than your current allowance, you will be able to retrieve up to the current allowance amount - so if you want to retrieve all your remaining tokens it's a good practice to pass the same value that you used for increasing your allowance.
+
+```javascript
+await dkg.asset.decreaseAllowance('1569429592284014000');
 ```
 
 After an update is finalized, a user can get the updated asset state by invoking the get operation.
