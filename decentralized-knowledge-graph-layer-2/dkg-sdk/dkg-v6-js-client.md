@@ -156,7 +156,7 @@ const result = await dkg.asset.create({
 );
 ```
 
-After you've finished publishing data to the blockchain, you can decrease your allowance to reclaim your tokens. Note that if you try to retrieve an amount greater than your current allowance, you will be able to retrieve up to the current allowance amount - so if you want to retrieve all your remaining tokens it's a good practice to pass the same value that you used for increasing your allowance.
+After you've finished publishing data to the blockchain, you can decrease your allowance to revoke the authorization given to the contract to spend your tokens - so if you want to revoke all remaining authorization, it's a good practice to pass the same value that you used for increasing your allowance.
 
 ```javascript
 await dkg.asset.decreaseAllowance('1569429592284014000');
@@ -374,7 +374,7 @@ const result = await dkg.asset.update(UAL, {
 );
 ```
 
-After you've finished updating data, you can decrease your allowance to reclaim your tokens. Note that if you try to retrieve an amount greater than your current allowance, you will be able to retrieve up to the current allowance amount - so if you want to retrieve all your remaining tokens it's a good practice to pass the same value that you used for increasing your allowance.
+After you've finished updating data, you can decrease your allowance to revoke the authorization given to the contract to spend your tokens - so if you want to revoke all remaining authorization, it's a good practice to pass the same value that you used for increasing your allowance.
 
 ```javascript
 await dkg.asset.decreaseAllowance('1569429592284014000');
