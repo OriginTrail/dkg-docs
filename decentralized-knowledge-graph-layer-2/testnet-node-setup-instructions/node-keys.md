@@ -15,7 +15,7 @@ In case of OriginTrail Parachain, your operational wallets need to be mapped - t
 
 ## Admin key
 
-The admin wallet, also known as the management wallet (**evmManagementWallet**) is designated for all administrative activities for your node, such as managing stake, collecting rewards, changing your nodes on-chain parameters and managing keys (such as adding or removing admin wallets). **The admin , private key is NOT stored on the node for additional safety..**
+The admin wallet, also known as the management wallet (**evmManagementWallet**) is designated for all administrative activities for your node, such as managing stake, collecting rewards, changing your nodes on-chain parameters and managing keys (such as adding or removing admin wallets). **The admin, private key is NOT stored on the node for additional safety.**
 
 Your Substrate “Admin” wallet should be mapped to your **evmManagementWallet**.
 

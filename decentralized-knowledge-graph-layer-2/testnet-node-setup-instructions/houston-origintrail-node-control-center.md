@@ -53,8 +53,20 @@ This section allows node runners to add additional keys (wallets) or remove keys
 
 Houston will allow a node runner to remove a key (of a certain type) if there are at least two keys available for that type (e.g. you cannot remove your only admin key, as you would lose the ability to manage your node).
 
-{% hint style="danger" %}
-As for the current implementation, staked tokens can only be managed by the admin wallet that was initially used to stake them, so before removing any admin keys, make sure you unstaked all tokens and staked them with the new one!
+{% hint style="warning" %}
+When you stake TRAC tokens to your DKG node with an admin wallet, that admin wallet will receive a certain amount of “Stake Share Tokens” in return. Stake share tokens are ERC20 tokens that represent the amount of shares of the total token stake that this particular wallet owns. Unstaking TRAC tokens from your DKG node is performed by “burning” an amount of share tokens. (e.g. you can burn 10% of your share tokens to get back 10% of your staked TRAC. This approach is similar to AMMs such as Uniswap and their LP tokens representing ownership share in token pairs liquidity pools).\
+
+
+This means that, in case of you wanting to use multiple admin wallets to manage your node (by adding additional admin wallets), only the wallets that own share tokens will be able to manage the TRAC stake.\
+\
+For example, if you would like to swap one admin wallet which has already staked TRAC tokens, for another fresh admin wallet, apart from adding the new admin wallet you should make sure to also transfer your TRAC stake to the new wallet. This can be done in two ways::
+
+* By transferring share tokens from the current admin wallet to the new wallet (since the Share token is ERC20, they can be transferred to another wallet easily) You can see your node share token address in Houston. This is the recommended option as your node TRAC stake will not change during this operation.
+* Unstaking all TRAC tokens and moving them to the new admin wallet. After transferring the tokens to the new wallet, they must be staked again with the new admin wallet. This means that for the period of time that your node is without TRAC stake, it will not participate in hosting in the network, risking that it can lose rewards.
+
+
+
+Please make sure to exercise caution when handling staked tokens and make sure to choose the best approach that meets your needs.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/node_wallets.png" alt=""><figcaption><p>Houston - Node wallets section</p></figcaption></figure>
