@@ -473,6 +473,31 @@ To query the latest finalized state of the DKG, the `'CURRENT'` option should be
 
 In addition to the `graphState` option, there is also the `graphLocation` option which determines where the query will be executed. The two available options are `LOCAL_KG` and `PUBLIC_KG`. The `LOCAL_KG` option is used to query data from the local knowledge graph which stores all private that is not shared with the network, while the `PUBLIC_KG` option is used to query all data on the node that is received from the network. By default, if the `graphLocation` option is not specified, the query will be executed on the local knowledge graph (`LOCAL_KG`).
 
+**Query for Historical State of the Knowledge Asset**
+
+Sometimes we want to get data of historical state of the Knowledge Asset. To do so, we can use the following query:
+
+```javascript
+let options = {
+    graphState: 'HISTORICAL'
+};
+
+const stateId = '0xe3a6733d7b999ca6f0d141afe3e38ac59223a4dfde7a5458932d2094ed4193cf';
+
+const result = await dkg.graph.query(
+    `PREFIX schema: <http://schema.org/>
+        CONSTRUCT { ?s ?p ?o }
+        WHERE {
+            {
+                GRAPH <assertion:${stateId}>
+                { ?s ?p ?o . }
+            }
+        }`,
+    'CONSTRUCT',
+    options
+);
+```
+
 **Create a Knowledge Asset with private data**
 
 In addition to knowledge assets with public assertions, we can add private data to our knowledge asset by creating private assertions, which will contain data that we don’t want to expose publicly.
@@ -601,7 +626,7 @@ The response of the get operation will be the assertion graph:
 }
 ```
 
-#### Check the Knowledge Asset owner
+#### Check Knowledge Asset Owner
 
 Thanks to the blockchain representation of the Knowledge Assets it’s possible to check the owner of the Knowledge Asset by checking the ownership record of its NFT token, representing the asset on-chain.
 
@@ -632,7 +657,7 @@ In this example we will transfer our Tesla ERC721 token to another wallet:
 ```javascript
 const newOwner = "0x2ACa90078563133db78085F66e6B8Cf5531623Ad";
 
-let assetTransferResult = await dkg.asset.transfer(UAL, newOwner);
+const assetTransferResult = await dkg.asset.transfer(UAL, newOwner);
 
 console.log(assetTransferResult);
 ```
@@ -643,6 +668,76 @@ Result of the transfer operation:
 {
   UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
   owner: '0x2ACa90078563133db78085F66e6B8Cf5531623Ad',
+  operation: { operationId: null, status: 'COMPLETED' }
+}
+```
+
+#### Get states of the Knowledge Asset
+
+As you already know, Knowledge Assets can be updated, therefore one Knowledge Assets can have multiple states.
+
+In order to get a list of all asset states, we can you the following function:
+
+```javascript
+const getStatesResult = await dkg.asset.getStates(UAL);
+
+console.log(getStatesResult);
+```
+
+Result of the get states operation:
+
+```javascript
+{
+    UAL: 'did:dkg:hardhat/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
+    states: [
+        '0xe3a6733d7b999ca6f0d141afe3e38ac59223a4dfde7a5458932d2094ed4193cf',
+        '0xe37350c9b0e2881af2e7e89a986e87f3d3158611b794bf75dcbb8d6e4aea7f95'
+    ],
+    operation: { operationId: null, status: 'COMPLETED' }
+}
+```
+
+#### Check Knowledge Asset State Issuer
+
+Since it's possible to transfer ownership of the Knowledge Asset and also update it, we can expect that different states of the asset can have different issuers.
+
+Knowing index of the state we're interested in, it's possible to get issuer of this specific state.
+
+In this example, we will get issuer of the previous state for the asset that has multiple states:
+
+```javascript
+const getStatesResult = await dkg.asset.getStates(UAL);
+const previousStateIndex = getStatesResult.states.length - 2;
+
+const getStateIssuerResult = await dkg.asset.getStateIssuer(UAL, previousStateIndex);
+
+console.log(getStateIssuerResult);
+```
+
+&#x20;Result of the get issuer operation:
+
+```javascript
+{
+  UAL: 'did:dkg:hardhat/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
+  issuer: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
+  state: '0xe3a6733d7b999ca6f0d141afe3e38ac59223a4dfde7a5458932d2094ed4193cf',
+  operation: { operationId: null, status: 'COMPLETED' }
+}
+```
+
+In order to get latest state issuer, you can use this function:
+
+```javascript
+const getLatestStateIssuerResult = await dkg.asset.getLatestStateIssuer(UAL);
+```
+
+With the following result:
+
+```javascript
+{
+  UAL: 'did:dkg:hardhat/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
+  issuer: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
+  latestState: '0xe37350c9b0e2881af2e7e89a986e87f3d3158611b794bf75dcbb8d6e4aea7f95',
   operation: { operationId: null, status: 'COMPLETED' }
 }
 ```
