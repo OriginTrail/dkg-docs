@@ -78,6 +78,12 @@ The process will require you to use an “account mapping” interface - an exam
 
 In order to deploy your OriginTrail V6 node, you will need a Linux server with the following minimum recommended hardware:
 
+{% hint style="warning" %}
+The provided installer script is designed for installing the OriginTrail node on **Ubuntu 20.04 LTS and 22.04 LTS** distributions.\
+\
+It is also possible to install the OriginTrail node on other systems but it would require  modifications to the installer script. If you have any such modifications in mind, we highly encourage your contributions so please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
+{% endhint %}
+
 * **4GB RAM,**&#x20;
 * **2CPUs**&#x20;
 * **50GB HDD space**

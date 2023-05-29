@@ -4,9 +4,9 @@ After acquiring TRAC and OTP tokens, teleporting TRAC to the OriginTrail Paracha
 
 Currently the node can be run as a system process (Step 1). Follow the Discord channel announcements for availability of the Docker installation as well as cloud marketplace simple installers (such as the 1-click installer on DigitalOcean).
 
-## 1. Setup instructions (Dockerless)
+## 1. Setup instructions
 
-Dockerless installation will only require the interaction with the installation script so please make sure that you have your wallet’s public and private keys ready.
+Installation process will require the interaction with the installation script so please make sure that you have your wallet’s public and private keys ready.
 
 ### 1.1 - Login to the server as root. You cannot use sudo and run this script.
 
@@ -24,7 +24,20 @@ cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/relea
 cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/testnet/installer/installer.sh --output installer.sh && chmod +x installer.sh
 ```
 
-### 1.3 - **Running the installer scripts**:
+### 1.3 - **Firewall**:
+
+OriginTrail node needs the following ports allowed in order to properly operate:
+
+* 8900 (API)
+* 9000 (Libp2p)
+
+**This installer will enable UFW and open ports 22 (ssh), 8900 and 9000.**&#x20;
+
+{% hint style="warning" %}
+Different cloud providers use different best practices when it comes to configuring firewall on the servers. Make sure that enabling UFW will not cause any networking issues on your server or disable it upon installation is completed if you wish to configure firewall differently. &#x20;
+{% endhint %}
+
+### 1.4 - **Running the installer scripts**:
 
 #### **Both, mainnet and testnet:**
 
