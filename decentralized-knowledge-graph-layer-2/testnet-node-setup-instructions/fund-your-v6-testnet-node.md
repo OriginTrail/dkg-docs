@@ -16,7 +16,7 @@ To request test TRAC tokens type in:\
 &#x20;`!fundme_`_`otp_trac <ethereum_wallet_address>`_
 
 The OriginTrail\_Bot will respond back in chat and send you some tokens on the OriginTrail Parachain testnet.\
-__\
-__Your discord should look like in the screenshot below
+\
+Your discord should look like in the screenshot below
 
 ![](<../../.gitbook/assets/Screenshot 2022-08-19 at 19.58.47.png>)

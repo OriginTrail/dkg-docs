@@ -8,13 +8,17 @@ The OriginTrail SDKs are client libraries for your applications, used to interac
 
 From an architectural standpoint, the SDK libraries are application interfaces into the DKG, enabling you to create and manage **Knowledge Assets** through your apps, as well as perform network queries (such as search, or SPARQL queries), as illustrated below.&#x20;
 
-![The interplay between your app, DKG and blockchains](<../../.gitbook/assets/image (7) (1).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (7) (1).png" alt="The interplay between your app, DKG and blockchains">
+
+</div>
 
 
 
 The OriginTrail SDK libraries are being built in various languages, as listed below (if you are interested in building a language-specifc client, contact us):
 
-* ****[**dkg.js**](dkg-v6-js-client.md) -Javascript client (if you are looking for the v5 client, you can find it [here](https://github.com/OriginTrail/dkg-client))
+* [**dkg.js**](dkg-v6-js-client.md) -Javascript client (if you are looking for the v5 client, you can find it [here](https://github.com/OriginTrail/dkg-client))
 * **dkg.rs** - Rust client (coming soon)
 * **dkg.py** (Python client, coming soon)
 * **dkg.go** (Go client, coming soon)

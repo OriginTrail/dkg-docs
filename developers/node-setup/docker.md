@@ -198,7 +198,7 @@ i**nitial\_deposit\_amount** – amount of xTRAC you want to deposit on your nod
 
 **Register on Infura**
 
-****![This image has an empty alt attribute; its file name is image-2.png](https://ot.wittymermaid.com/wp-content/uploads/2020/06/image-2.png)
+![This image has an empty alt attribute; its file name is image-2.png](https://ot.wittymermaid.com/wp-content/uploads/2020/06/image-2.png)
 
 Go to [Infura.io](https://infura.io/) and create an account. Create a project, copy the HTTPS link under Endpoints – Mainnet or Polygon mainnet. It should look like: https://mainnet.infura.io/v3/xxxxxxxxxxxxxxxxxxxxxx where the xxxxxxxx are your specific link
 
@@ -286,7 +286,7 @@ more identity.json
 
 Or Login to the server using WINSCP or any other FTP application, go to the root folder and download these two files on your local server and archive them with a password.
 
-****
+
 
 ## **Additional node configurations**
 
@@ -302,7 +302,7 @@ ufw allow 22/tcp && ufw allow 3000 && ufw allow 5278 && ufw allow 8900 && yes | 
 ufw status
 ```
 
-### ****
+###
 
 ### **10. Deposit additional xTRAC from your management wallet to the node**
 
@@ -364,4 +364,3 @@ cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-****

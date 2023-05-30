@@ -61,7 +61,7 @@ Command executor is initialized on ot-node start. Commands are stored in the **\
 
 #### PublishStartedCommand
 
-Let’s create a simple `PublishStartedCommand` and call it in`handleHttpApiPublishRequest` **** controller method that handles the asset publishing request.
+Let’s create a simple `PublishStartedCommand` and call it in`handleHttpApiPublishRequest` controller method that handles the asset publishing request.
 
 {% code title="publish-started-command.js" %}
 ```javascript

@@ -24,17 +24,19 @@ cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/relea
 cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/testnet/installer/installer.sh --output installer.sh && chmod +x installer.sh
 ```
 
-### 1.3 - **Firewall**:
+### 1.3 - **Firewall settings**:
 
-OriginTrail node needs the following ports allowed in order to properly operate:
+OriginTrail node needs the following ports allowed in order to properly operate
 
-* 8900 (API)
-* 9000 (Libp2p)
+* 8900 (your node API)
+* 9000 (networking port for communication with other nodes)
 
-**This installer will enable UFW and open ports 22 (ssh), 8900 and 9000.**&#x20;
+
 
 {% hint style="warning" %}
-Different cloud providers use different best practices when it comes to configuring firewall on the servers. Make sure that enabling UFW will not cause any networking issues on your server or disable it upon installation is completed if you wish to configure firewall differently. &#x20;
+The below provided installer script (_installer.sh_) will automatically enable UFW and open ports 22 (ssh), 8900 and 9000.\
+\
+If you're setting up the OriginTrail node in a cloud environment, please keep in mind that different cloud providers use different security practices when it comes to configuring firewalls on the servers. Make sure that enabling UFW will not cause any networking issues on your server or disable it upon installation is completed if you wish to configure firewall differently. &#x20;
 {% endhint %}
 
 ### 1.4 - **Running the installer scripts**:
@@ -47,39 +49,78 @@ Different cloud providers use different best practices when it comes to configur
 
 If your installation has been successful, your node will show the “**Node is up and running!**” log as shown in the example image below:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2022-11-16 at 18.29.58.png" alt=""><figcaption><p>OriginTrail V6 node stated</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-05-29 at 18.40.45.png" alt=""><figcaption><p>Example of a successfully installed node</p></figcaption></figure>
 
-### **1.4 Setting the stake and ask**
+### **1.4 Setup finalization - setting the node stake and service ask parameters**
 
-Once the node starts, **you will need to execute two setup transactions for your node to become active**. We have prepared two scripts that are used from the command line (but both these transactions will be executable with a click of a button from Houston very soon). These two transactions are needed to set stake for your node (50 000 TRAC as minimum for the node to operate) and set the node ask (in TRAC tokens).
-
-Set your node stake using the **set-stake** npm script (run from ot-node folder):&#x20;
-
-```
-npm run set-stake -- --rpcEndpoint=<rpc_enpoint> --stake=<stake_in_TRAC> --operationalWalletPrivateKey=<private_key> --managementWalletPrivateKey=<private_key> --hubContractAddress=<hub_contract_address> 
-```
-
-Example for mainnet:&#x20;
+Once the OriginTrail node starts, **several blockchain transactions need to be executed for your node to become an active part of the network and start hosting the DKG Knowledge assets**. These transactions are needed to set the required TRAC stake for your node (50 000 TRAC at this time) and set the node service ask. Both values are set in TRAC tokens.
 
 {% hint style="warning" %}
-**50000** **TRAC** is the default value for stake, even though node-runners are free to change this value. 50000 is the minimum required for node to become active, but when Delegated Staking will go live, delegations will also be summed up.
+**50000** **TRAC** is the minimum amount of TRAC on the OriginTrail DKG Mainnet for your node to become eligble for DKG hosting and rewards. More information is available in the following OriginTrail [OT-RFC-14](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-14%20DKG%20v6%20TRAC%20Tokenomics.pdf).
 {% endhint %}
+
+\
+You can set the node stake and ask settings in two ways. The first option is to use the Houston application and the second is to do it by running a few npm scripts directly on the server where your nodes is installed.
+
+### Setting up node stake and service ask via Houston (Recommended):
+
+[Houston](houston-origintrail-node-control-center.md) is the OriginTrail node user interface (command center) that allows you to execute certain operations regarding your node on the blockchain. There are two ways to run Houston:
+
+1. Via a hosted application, which is available at the following link: [https://houston.origintrail.io/](https://houston.origintrail.io/) or
+2. Run Houston Web application locally by following the setup [instructions](dkg-node-installation-instructions.md#setup-houston-locally).
+
+More  information on Houston can be found [here](houston-origintrail-node-control-center.md)\
+\
+**Setting your node service ask**\
+Navigate to the "Service tokenomics" page within the Houston application, enter the service ask amount, denominated in TRAC and click "Update ask" button. This will trigger the transaction signing process with Metamask.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2023-05-29 at 18.44.29.png" alt="" width="320"><figcaption><p>Node service ask setting interface</p></figcaption></figure>
+
+**Staking TRAC to your node**
+
+Navigate to the "Service tokenomics" section within Houston application, enter the stake amount in TRAC and click "Add stake" button. This will again trigger the transaction signing process with Metamask, this time requiring two transactions to complete the process of TRAC staking to your node.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2023-05-29 at 18.44.49.png" alt="" width="375"><figcaption><p>Node stake settings interface</p></figcaption></figure>
+
+## <mark style="color:green;">Congratulations! You have just set up your OriginTrail DKG node!</mark>
+
+### **OriginTrail node useful terminal commands (aliases):**
+
+**Startting your node:** _otnode-start_&#x20;
+
+**Stopping the node:** _otnode-stop_&#x20;
+
+**Restarting the node:** _otnode-restart_&#x20;
+
+**Showing node logs:** _otnode-logs_&#x20;
+
+**Openning the node config:** _otnode-config_
+
+###
+
+### Alternative way of setting up STAKE and ASK via npm scripts (NOT recommended):
+
+It is possible to use npm scripts to setup both node stake and service ask directly from the server where your node was installed, **however this process requires you to provide your node admin wallet key on the script.** We don't recommend using this process for obvious security implications. It is however practical in setting up nodes in development environments (see also [Development environment setup](../setting-up-your-development-environment.md)).
+
+**Setting TRAC stake for your node:**
+
+{% hint style="warning" %}
+**Please make sure that you replace the public and private key values accordingly as well as the stake value before execution.**
+{% endhint %}
+
+Example command:&#x20;
 
 ```
 npm run set-stake -- --rpcEndpoint=https://astrosat-parachain-rpc.origin-trail.network/ --stake=50000 --operationalWalletPrivateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --managementWalletPrivateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
 ```
 
-Set your node ask using the **set-ask** npm script (run from ot-node folder):&#x20;
-
-```
-npm run set-ask -- --rpcEndpoint=<rpc_enpoint> --ask=<ask_in_kb_per_epoch_in_TRAC> --privateKey=<operational_wallet_private_key> --hubContractAddress=<hub_contract_address>
-```
-
-Example for mainnet:&#x20;
+**Set your node ask using the set-ask npm script:**&#x20;
 
 {% hint style="warning" %}
-**0.00375 $TRAC / (KB \* epoch)** is the default value on the Trace Labs nodes, even though node-runners are free to choose any other value.
+This script should be run from the ot-node directory.
 {% endhint %}
+
+Example command:&#x20;
 
 ```
 npm run set-ask -- --rpcEndpoint=https://astrosat-parachain-rpc.origin-trail.network/ --ask=0.00375 --privateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
@@ -87,17 +128,7 @@ npm run set-ask -- --rpcEndpoint=https://astrosat-parachain-rpc.origin-trail.net
 
 Note: Use the operational private key for "--private-key" parameter in set-ask script
 
-### **OriginTrail node commands:**
 
-**Start node:** _otnode-start_&#x20;
-
-**Stop node:** _otnode-stop_&#x20;
-
-**Restart node:** _otnode-restart_&#x20;
-
-**Show node logs:** _otnode-logs_&#x20;
-
-**Open node configuration:** _otnode-config_
 
 ## Monitoring node operations & rewards
 

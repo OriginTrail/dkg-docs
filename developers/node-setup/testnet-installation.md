@@ -239,7 +239,7 @@ more identity.json
 
 Or Login to the server using WINSCP or any other FTP application, go to the root folder and download these two files on your local server and archive them with a password.
 
-****
+
 
 ## **Additional node configurations**
 
@@ -257,7 +257,7 @@ ufw status
 
 ![](https://otnode.com/wp-content/uploads/2020/07/image-5.png)
 
-****
+
 
 ### **10. Enable auto restart and follow the log to monitor the operation of the node**
 

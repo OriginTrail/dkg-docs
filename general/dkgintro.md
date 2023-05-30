@@ -51,7 +51,11 @@ We distinguish several sub-layers of the DKG layer (Layer 2):
 * **the consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols (currently supporting Ethereum, xDai blockchain and the OriginTrail Polkadot Parachain)
 * **application layer,** encompassing both Dapps and traditional applications which utilize the OriginTrail DKG as part of their data flows.
 
-![OriginTrail conceptual architecture](<../.gitbook/assets/Screenshot 2022-03-30 at 16.46.10.png>)
+<div align="center">
+
+<img src="../.gitbook/assets/Screenshot 2022-03-30 at 16.46.10.png" alt="OriginTrail conceptual architecture">
+
+</div>
 
 We also distinguish between:
 

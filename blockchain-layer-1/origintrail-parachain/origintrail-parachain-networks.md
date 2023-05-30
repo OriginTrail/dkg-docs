@@ -12,17 +12,11 @@ Polkadot.js endpoint is available [here](https://polkadot.js.org/apps/?rpc=wss%3
 
 Metamask connection parameters:
 
-| Parameter          | Value                                                                                                        |
-| ------------------ | ------------------------------------------------------------------------------------------------------------ |
-| chainID            | 2043                                                                                                         |
-| Network Name       | OriginTrail Parachain Mainnet                                                                                |
-| RPC Endpoint       | [https://astrosat-parachain-rpc.origin-trail.network/](https://astrosat-parachain-rpc.origin-trail.network/) |
-| Token symbol       | MOTP                                                                                                         |
-| Block Explorer URL | (coming soon)                                                                                                |
+<table><thead><tr><th width="365">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>chainID</td><td>2043</td></tr><tr><td>Network Name</td><td>OriginTrail Parachain Mainnet</td></tr><tr><td>RPC Endpoint</td><td><a href="https://astrosat-parachain-rpc.origin-trail.network/">https://astrosat-parachain-rpc.origin-trail.network/</a></td></tr><tr><td>Token symbol</td><td>MOTP</td></tr><tr><td>Block Explorer URL</td><td>(coming soon)</td></tr></tbody></table>
 
 Note: because of difference in token decimals between ETH (18) and OTP (12), one token in Metamask will be equal to 1 milion OTPs. This issue will be resolved in the following releases.
 
-<mark style="color:red;"></mark>
+
 
 ### OriginTrail Parachain Testnet
 
@@ -50,12 +44,6 @@ Polkadot.js endpoint is available [here](https://polkadot.js.org/apps/?rpc=wss%3
 
 Metamask connection parameters:
 
-| Parameter          | Value                                                                                  |
-| ------------------ | -------------------------------------------------------------------------------------- |
-| chainID            | 2160                                                                                   |
-| Network Name       | OriginTrail Parachain Devnet                                                           |
-| RPC Endpoint       | [https://lofar-tm-rpc.origin-trail.network](https://lofar-tm-rpc.origin-trail.network) |
-| Token symbol       | MOTP                                                                                   |
-| Block Explorer URL | (not available at the moment)                                                          |
+<table><thead><tr><th width="365">Parameter</th><th>Value</th></tr></thead><tbody><tr><td>chainID</td><td>2160</td></tr><tr><td>Network Name</td><td>OriginTrail Parachain Devnet</td></tr><tr><td>RPC Endpoint</td><td><a href="https://lofar-tm-rpc.origin-trail.network">https://lofar-tm-rpc.origin-trail.network</a></td></tr><tr><td>Token symbol</td><td>MOTP</td></tr><tr><td>Block Explorer URL</td><td>(not available at the moment)</td></tr></tbody></table>
 
 Note: because of difference in token decimals between ETH (18) and OTP (12), one token in metamask will be equal to 1 milion OTPs. This issue will be resolved in the following releases.
