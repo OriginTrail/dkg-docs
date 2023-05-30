@@ -6,7 +6,7 @@ description: What's new in OriginTrail v6 and how can you get started?
 
 The OriginTrail DKG v6 is the newest version of OriginTrail, which introduces various improvements to the existing OriginTrail DKG. Among others, it brings:
 
-* **DKG Asset graphs**, identified by the **Universal Asset Locators** (UAL), akin to URLs in Web2
+* **Knowledge assets**, identified by the **Universal Asset Locators** (UAL), akin to URLs in Web2
 * improved discoverability, performance and semantic capabilities with the expanding support for semantic technologies such as RDF, OWL, SPARQL, Triple Pattern Fragments, SHACL and others&#x20;
 * numerous performance updates to the protocol & network implementation
 
