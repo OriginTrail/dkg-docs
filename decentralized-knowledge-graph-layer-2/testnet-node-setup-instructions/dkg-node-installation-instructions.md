@@ -41,6 +41,12 @@ If you're setting up the OriginTrail node in a cloud environment, please keep in
 
 ### 1.4 - **Running the installer scripts**:
 
+{% hint style="warning" %}
+The provided installer script is designed for installing the OriginTrail node on **Ubuntu 20.04 LTS and 22.04 LTS** distributions.\
+\
+It is also possible to install the OriginTrail node on other systems but it would require  modifications to the installer script. If you have any such modifications in mind, we highly encourage your contributions so please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
+{% endhint %}
+
 #### **Both, mainnet and testnet:**
 
 ```
