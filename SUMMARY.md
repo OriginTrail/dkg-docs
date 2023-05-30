@@ -32,7 +32,6 @@
   * [Node keys](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/node-keys.md)
   * [Fund your v6 testnet node](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/fund-your-v6-testnet-node.md)
   * [Need help?](decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/need-help.md)
-* [DKG v6 launch progress](decentralized-knowledge-graph-layer-2/dkg-v6-launch-progress.md)
 * [🏁 v6 bounty program](decentralized-knowledge-graph-layer-2/v6-bounty-program.md)
 * [👾 Telemetry Hub](decentralized-knowledge-graph-layer-2/telemetry-hub.md)
 * [Tutorials (coming soon)](decentralized-knowledge-graph-layer-2/tutorials.md)

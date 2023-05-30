@@ -1,6 +1,6 @@
 # DKG Basic concepts
 
-OriginTrail Decentralized Knowledge Graph (DKG) combines several standardized components from both  blockchain and knowledge graph technologies. The core primitive of the DKG is the "Knowledge Asset", explained together with other important components below.
+OriginTrail Decentralized Knowledge Graph (DKG) combines several standardized components from both blockchain and knowledge graph space. The core primitive of the DKG is the "Knowledge Asset", explained together with other important components below.
 
 ### What is a Knowledge Asset?
 
@@ -61,14 +61,8 @@ Universal Asset Locators are ownable identifiers of the DKG, similar to URLs in 
 * identifier specific to the contract, such as the ID of the NFT token
 * query and fragment components
 
-
-
 More information on DID URLs can be found [here](https://www.w3.org/TR/did-core/#did-url-syntax)
 
-{% hint style="info" %}
-This page is a WIP and is currently being updated (Q1 2023)
-{% endhint %}
 
-<figure><img src="https://documents.lucid.app/documents/f47b9383-e097-4900-a1cc-4a0dd8f92d7e/pages/cOGrK2Oo9ApD?a=845&#x26;x=-1625&#x26;y=128&#x26;w=1450&#x26;h=306&#x26;store=1&#x26;accept=image%2F*&#x26;auth=LCA%20a95999ac650cc24e34a8a53424c1b104bc59d0cc-ts%3D1676043825" alt=""><figcaption></figcaption></figure>
 
 **To see the DKG in action, continue to the** [**DKG SDK section**](dkg-sdk/)

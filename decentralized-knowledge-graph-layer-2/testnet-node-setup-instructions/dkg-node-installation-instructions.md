@@ -122,13 +122,15 @@ This script should be run from the ot-node directory.
 
 Example command:&#x20;
 
-```
-npm run set-ask -- --rpcEndpoint=https://astrosat-parachain-rpc.origin-trail.network/ --ask=0.00375 --privateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA 
-```
-
 Note: Use the operational private key for "--private-key" parameter in set-ask script
 
 
+
+If you have come this far and your node logs are not showing any errors, you're node is successfully set up!&#x20;
+
+###
+
+### **OriginTrail node commands:**
 
 ## Monitoring node operations & rewards
 

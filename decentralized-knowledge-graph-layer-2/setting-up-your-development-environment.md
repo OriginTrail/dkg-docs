@@ -4,7 +4,7 @@ description: How to setup a local and shared development environment
 
 # Development environment setup
 
-These setup instructions for DKGv6 are "Work in progress" and are subject to change. The development team expects to introduce improvements of setting up the DKGv6 node in local environment in the future.
+These setup instructions for DKG v6 are "Work in progress" and are subject to change. The development team expects to introduce improvements of setting up the DKGv6 node in local environment in the future.
 
 {% hint style="success" %}
 Need any assistance with node setup? Join the DKGv6 [Discord ](https://discord.com/invite/FCgYk2S)chat and find help within the OriginTrail tech community!
@@ -16,7 +16,7 @@ Need any assistance with node setup? Join the DKGv6 [Discord ](https://discord.c
 
 * This instructions are made for MacOS and Linux
 * An installed and running **Blazegraph**
-  * In order to download Blazegraph, please visit their [official website](https://blazegraph.com/).
+  * In order to download and run Blazegraph, please visit their [official website](https://blazegraph.com/).
 * An installed and running **MySQL**
   * You need to create empty table named **operationaldb** inside MySQL
 * You should have installed **npm** and **Node.js (v16)**
