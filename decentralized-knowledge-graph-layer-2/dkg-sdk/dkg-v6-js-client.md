@@ -317,6 +317,21 @@ The response of the get operation will be the assertion graph:
 
 </code></pre>
 
+Get function also takes options object as a second argument, where state of the knowledge asset can be specified.
+
+Example:
+
+```javascript
+await dkg.asset.get(UAL, { state: 'LATEST_FINALIZED' });
+```
+
+Available states:
+
+* **LATEST (default)** - gets latest state of the knowledge asset (can get both finalized and unfinalized states)
+* **LATEST\_FINALIZED** - gets latest from finalized states (doesn't take into account updates that aren't finished)
+* **State hash** - assertion id
+* **State index** - numerical index of the state
+
 #### Update Knowledge Asset data
 
 Knowledge assets can be updated by using the **update** function. In this example we will update the previously published knowledge asset to reflect the features of the Tesla S model. The updated content can be seen below:
