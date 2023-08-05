@@ -70,12 +70,12 @@ You can set the node stake and ask settings in two ways. The first option is to 
 
 ### Setting up node stake and service ask via Houston (Recommended):
 
-[Houston](houston-origintrail-node-control-center.md) is the OriginTrail node user interface (command center) that allows you to execute certain operations regarding your node on the blockchain. There are two ways to run Houston:
+[Houston](houston-v6-node-command-center.md) is the OriginTrail node user interface (command center) that allows you to execute certain operations regarding your node on the blockchain. There are two ways to run Houston:
 
 1. Via a hosted application, which is available at the following link: [https://houston.origintrail.io/](https://houston.origintrail.io/) or
 2. Run Houston Web application locally by following the setup [instructions](dkg-node-installation-instructions.md#setup-houston-locally).
 
-More  information on Houston can be found [here](houston-origintrail-node-control-center.md)\
+More  information on Houston can be found [here](houston-v6-node-command-center.md)\
 \
 **Setting your node service ask**\
 Navigate to the "Service tokenomics" page within the Houston application, enter the service ask amount, denominated in TRAC and click "Update ask" button. This will trigger the transaction signing process with Metamask.

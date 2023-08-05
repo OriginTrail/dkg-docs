@@ -75,7 +75,7 @@ const dkg = new DKG({
 ​
 const nodeInfo = await dkg.node.info(); 
 // if successfully connected, the will return an object indicating the node version
-// { 'version': '6.0.3' }
+// { 'version': '6.X.X' }
 ```
 
 #### Create a Knowledge Asset
