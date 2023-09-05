@@ -10,19 +10,13 @@ Installation process will require the interaction with the installation script s
 
 ### 1.1 - Login to the server as root. You cannot use sudo and run this script.
 
-### 1.2 - Download one of the following installer scripts:
-
-**Mainnet installer:**
+### 1.2 - Download OriginTrail node installer:
 
 ```
-cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/mainnet/installer/installer.sh --output installer.sh && chmod +x installer.sh
+cd /root/ && curl https://github.com/OriginTrail/ot-node/blob/v6/develop/installer/installer.sh --output installer.sh && chmod +x installer.sh
 ```
 
-#### **Testnet installer:**
 
-```
-cd /root/ && curl https://raw.githubusercontent.com/OriginTrail/ot-node/v6/release/testnet/installer/installer.sh --output installer.sh && chmod +x installer.sh
-```
 
 ### 1.3 - **Firewall settings**:
 
