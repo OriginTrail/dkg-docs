@@ -10,15 +10,11 @@ Installation process will require the interaction with the installation script s
 
 ### 1.1 - Login to the server as root. You cannot use sudo and run this script.
 
-###
-
 ### 1.2 - Download OriginTrail node installer:
 
 ```
 cd /root/ && curl https://github.com/OriginTrail/ot-node/blob/v6/develop/installer/installer.sh --output installer.sh && chmod +x installer.sh
 ```
-
-###
 
 ### 1.3 - **Firewall settings**:
 
@@ -35,7 +31,7 @@ The below provided installer script (_installer.sh_) will automatically enable U
 If you're setting up the OriginTrail node in a cloud environment, please keep in mind that different cloud providers use different security practices when it comes to configuring firewalls on the servers. Make sure that enabling UFW will not cause any networking issues on your server or disable it upon installation is completed if you wish to configure firewall differently. &#x20;
 {% endhint %}
 
-###
+
 
 ### 1.4 - **Running the installer script**:
 
