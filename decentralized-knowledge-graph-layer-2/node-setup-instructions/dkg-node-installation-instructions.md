@@ -13,7 +13,7 @@ Installation process will require the interaction with the installation script s
 ### 1.2 - Download OriginTrail node installer:
 
 ```
-cd /root/ && curl https://github.com/OriginTrail/ot-node/blob/v6/develop/installer/installer.sh --output installer.sh && chmod +x installer.sh
+cd /root/ && curl -k -o installer.sh https://raw.githubusercontent.com/OriginTrail/ot-node/v6/develop/installer/installer.sh && chmod +x installer.sh
 ```
 
 ### 1.3 - **Firewall settings**:
