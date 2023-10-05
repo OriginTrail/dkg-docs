@@ -46,6 +46,7 @@
   * [OriginTrail Parachain EVM](blockchain-layer-1/origintrail-parachain-evm.md)
   * [Deployed smart-contracts](blockchain-layer-1/origintrail-parachain/deployed-smart-contracts.md)
   * [Add TRAC to Metamask](blockchain-layer-1/origintrail-parachain/add-trac-to-metamask.md)
+  * [Bridging to Moonbeam](blockchain-layer-1/origintrail-parachain/bridging-to-moonbeam.md)
 * [Other blockchains](blockchain-layer-1/other-blockchains.md)
 
 ## Useful Resources
