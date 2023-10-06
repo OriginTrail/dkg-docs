@@ -120,6 +120,39 @@ The complete response of the method will look like:
 }
 ```
 
+In case you want to create multiple different assets you can increase your allowance and then each time you initiate a publish, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a faster publish time.
+
+```python
+dkg.asset.increase_allowance(1569429592284014000)
+
+result = dkg.asset.create(
+  {
+    "public": publicAssertion,
+  },
+  epochs_number=2,
+)
+```
+
+After you've finished publishing data to the blockchain, you can decrease your allowance to revoke the authorization given to the contract to spend your tokens - so if you want to revoke all remaining authorization, it's a good practice to pass the same value that you used for increasing your allowance.
+
+```python
+dkg.asset.decrease_allowance(1569429592284014000)
+```
+
+Alternatively, you can set allowance to specific amount of tokens, increasing or decreasing it depending on your current allowance. To do so, you can utilize the following function:
+
+```python
+dkg.asset.set_allowance(1000000000000000000)
+```
+
+Furthermore, you can always check your current allowance:
+
+```python
+current_allowance = dkg.asset.get_current_allowance()
+
+print(current_allowance)
+```
+
 #### Read Knowledge Asset data from the DKG
 
 To read knowledge asset data from the DKG we utilize the **get** protocol operation.
@@ -576,6 +609,58 @@ Result of the transfer operation:
   "owner": "0x2ACa90078563133db78085F66e6B8Cf5531623Ad",
   "operation": { "operationId": None, "status": "COMPLETED" }
 }
+```
+
+#### Estimate cost of the Knowledge Asset publishing
+
+Before actual creation of the Knowledge Asset, we can estimate how much would it cost for publisher to host Knowledge Asset on the DKG for a specific period of time.
+
+In order to do this, we can send a request to one of the DKG nodes, which would return suggested cost of the publishing (so that Knowledge Asset is accepted by at least 8 nodes on the DKG).
+
+In order to estimate cost of the publishing, you should know the metadata of the public assertion, such as: assertion ID (Merkle Root) and size in bytes. Additionally, you need to provide number of epochs.
+
+Don't know how to calculate assertion metadata? Don't you worry, in the following example we will go through all the steps from having just Knowledge Asset content to having estimated price.
+
+```python
+knowledge_asset_content = {
+    "public": {
+        "@context": ["http://schema.org"],
+        "@id": "uuid:1",
+        "company": "OT",
+        "user": {"@id": "uuid:user:1"},
+        "city": {"@id": "uuid:belgrade"},
+    },
+    "private": {
+        "@context": ["http://schema.org"],
+        "@graph": [
+            {"@id": "uuid:user:1", "name": "Adam", "lastname": "Smith"},
+            {"@id": "uuid:belgrade", "title": "Belgrade", "postCode": "11000"},
+        ],
+    },
+}
+```
+
+In order to calculate public assertion metadata, we would use **assertion module**:
+
+```python
+public_assertion_id = dkg.assertion.get_public_assertion_id(knowledge_asset_content)
+public_assertion_size = dkg.assertion.get_size(knowledge_asset_content)
+```
+
+Besides assertion ID and size, following functions are available in the **assertion module**:
+
+* **format\_graph(knowledge\_asset\_content)** - formats the content provided, producing both a public and, if available, a private assertion and a link to it in the public assertion.
+* **get\_triples\_number(knowledge\_asset\_content)** - calculates and returns the number of triples of the public assertion from the provided content.
+* **get\_chunks\_number(knowledge\_asset\_content)** - calculates and returns the number of chunks of the public assertion from the provided content.
+
+After calculating public assertion metadata, we can get suggested publishing cost using the **network module**:
+
+```python
+bid_suggestion = dkg.network.get_bid_suggestion(
+    public_assertion_id,
+    public_assertion_size,
+    2,
+)
 ```
 
 #### **More on types of interaction with the DKG SDK**

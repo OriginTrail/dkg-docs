@@ -144,7 +144,7 @@ The complete response of the method will look like:
 }
 ```
 
-In case you want to create multiple different assets you can increase your allowance and then each time you initiate a publish, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a much faster publish time.
+In case you want to create multiple different assets you can increase your allowance and then each time you initiate a publish, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a faster publish time.
 
 ```javascript
 await dkg.asset.increaseAllowance('1569429592284014000');
@@ -160,6 +160,20 @@ After you've finished publishing data to the blockchain, you can decrease your a
 
 ```javascript
 await dkg.asset.decreaseAllowance('1569429592284014000');
+```
+
+Alternatively, you can set allowance to specific amount of tokens, increasing or decreasing it depending on your current allowance. To do so, you can utilize the following function:
+
+```javascript
+await dkg.asset.setAllowance('1000000000000000000');
+```
+
+Furthermore, you can always check your current allowance:
+
+```javascript
+const currentAllowance = await dkg.asset.getCurrentAllowance();
+
+console.log(currentAllowance);
 ```
 
 #### Read Knowledge Asset data from the DKG
@@ -755,6 +769,70 @@ With the following result:
   latestState: '0xe37350c9b0e2881af2e7e89a986e87f3d3158611b794bf75dcbb8d6e4aea7f95',
   operation: { operationId: null, status: 'COMPLETED' }
 }
+```
+
+#### Estimate cost of the Knowledge Asset publishing
+
+Before actual creation of the Knowledge Asset, we can estimate how much would it cost for publisher to host Knowledge Asset on the DKG for a specific period of time.
+
+In order to do this, we can send a request to one of the DKG nodes, which would return suggested cost of the publishing (so that Knowledge Asset is accepted by at least 8 nodes on the DKG).
+
+In order to estimate cost of the publishing, you should know the metadata of the public assertion, such as: assertion ID (Merkle Root) and size in bytes. Additionally, you need to provide number of epochs.
+
+Don't know how to calculate assertion metadata? Don't you worry, in the following example we will go through all the steps from having just Knowledge Asset content to having estimated price.
+
+```javascript
+const knowledgeAssetContent = {
+    public: {
+        '@context': ['https://schema.org'],
+        '@id': 'uuid:1',
+        company: 'OT',
+        user: {
+            '@id': 'uuid:user:1',
+        },
+        city: {
+            '@id': 'uuid:belgrade',
+        },
+    },
+    private: {
+        '@context': ['https://schema.org'],
+        '@graph': [
+            {
+                '@id': 'uuid:user:1',
+                name: 'Adam',
+                lastname: 'Smith',
+            },
+            {
+                '@id': 'uuid:belgrade',
+                title: 'Belgrade',
+                postCode: '11000',
+            },
+        ],
+    },
+};
+```
+
+In order to calculate public assertion metadata, we would use **assertion module**:
+
+```javascript
+const publicAssertionId = await dkg.assertion.getPublicAssertionId(knowledgeAssetContent);
+const publicAssertionSize = await dkg.assertion.getSizeInBytes(knowledgeAssetContent);
+```
+
+Besides assertion ID and size, following functions are available in the **assertion module**:
+
+* **formatGraph(knowledgeAssetContent)** - formats the content provided, producing both a public and, if available, a private assertion and a link to it in the public assertion.
+* **getTriplesNumber(knowledgeAssetContent)** - calculates and returns the number of triples of the public assertion from the provided content.
+* **getChunksNumber(knowledgeAssetContent)** - calculates and returns the number of chunks of the public assertion from the provided content.
+
+After calculating public assertion metadata, we can get suggested publishing cost (in Wei), using the **network module**:
+
+```javascript
+const bidSuggestion = await dkg.network.getBidSuggestion(
+    publicAssertionId,
+    publicAssertionSize,
+    { epochsNum: 2 },
+);
 ```
 
 #### **More on types of interaction with the DKG SDK**
