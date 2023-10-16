@@ -59,13 +59,6 @@
 ## DKG v5 documentation <a href="#developers" id="developers"></a>
 
 * [Getting started](developers/getting-started.md)
-* [v5 node - setup instructions](developers/node-setup/README.md)
-  * [Mainnet Docker Installation](developers/node-setup/docker.md)
-  * [Testnet Installation](developers/node-setup/testnet-installation.md)
-  * [Compensation parameters setup](developers/node-setup/node-price.md)
-  * [Nodes Backup & Restore](developers/node-setup/backup.md)
-  * [DKG persistance mechanisms](developers/node-setup/dkg-persistance-mechanisms.md)
-* [Development environment setup (v5)](developers/setting-up-development-environment.md)
 * [Using DKG v5](developers/using-dkg-v5/README.md)
   * [Publishing data to the DKG](developers/using-dkg-v5/devsinstall.md)
   * [Querying data from the DKG](developers/using-dkg-v5/querying.md)
