@@ -18,7 +18,7 @@ Blockchains and knowledge graphs are two different types of networks:
 The two technologies are combined in the **OriginTrail** **Decentralized Knowledge Graph**, in a materialized vision of the **Semantic Web3** - a user owned, data centric, trusted, semantic web.
 
 {% hint style="info" %}
-_If you are looking to jump right into the code, head over to the_ [_Getting Started_](../developers/getting-started.md) _page._
+_If you are looking to jump right into the code, head over to the_ [_Getting Started_](broken-reference) _page._
 {% endhint %}
 
 ## System architecture

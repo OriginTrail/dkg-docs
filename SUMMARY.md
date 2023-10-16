@@ -55,13 +55,3 @@
 * [Available networks (testnets, mainnet)](useful-resources/networks.md)
 * [Contribution Guidelines](useful-resources/contribute/README.md)
   * [Guidelines for automated test contributions](useful-resources/contribute/guidelines-for-automated-test-contributions.md)
-
-## DKG v5 documentation <a href="#developers" id="developers"></a>
-
-* [Getting started](developers/getting-started.md)
-* [Using DKG v5](developers/using-dkg-v5/README.md)
-  * [Publishing data to the DKG](developers/using-dkg-v5/devsinstall.md)
-  * [Querying data from the DKG](developers/using-dkg-v5/querying.md)
-  * [Data verification](developers/using-dkg-v5/data-verification.md)
-  * [Data structure guidelines](developers/using-dkg-v5/data-structure-guidelines.md)
-  * [Developer Reference](developers/using-dkg-v5/references.md)
