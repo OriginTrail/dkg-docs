@@ -1,40 +1,104 @@
+---
+description: >-
+  The instructions on this page will guide you through the step-by-step process
+  of teleporting your TRAC tokens between the OriginTrail Parachain and Ethereum
+  networks and vice versa.
+---
+
 # Teleport instructions
 
-The OriginTrail Decentralized Knowledge Graph (DKG) is about to get integrated with the OriginTrail Parachain. To become part of the initial stage of OriginTrail DKG and Parachain integration, you will need to teleport TRAC from Ethereum to the OriginTrail Parachain. Read more about the process in [this blogpost](https://medium.com/origintrail/ot-rfc-12-v2-teleporting-trac-to-the-origintrail-parachain-on-polkadot-de535a9d2693) .&#x20;
+After the successful integration of the OriginTrail Decentralized Knowledge Graph (DKG) with the OriginTrail Parachain the teleport interface has been launched in order to allow users to transfer TRAC tokens from Ethereum to OriginTrail Parachain and vice versa. The specific details of the teleport can be found in relevant OriginTrail RFCs:
 
-#### Step 1 - Initiate teleport&#x20;
-
-A special smart contract is deployed on Ethereum blockchain designed to lock a specific amount of TRAC tokens, to be teleported to the OriginTrail Parachain. Teleporting will occur in 15 batches, and first step of teleporting is to lock desired amount of TRAC in ongoing batch and you can do that on [teleport.origintrail.io](https://teleport.origintrail.io/)&#x20;
-
-#### Step 2 - Sign up for Teleport bounty&#x20;
-
-Everyone participating in the teleport process is eligible for OTP tokens awards. The exact bounty amount is different among batches, details are available [here](http://teleport.origintrail.io/).&#x20;
-
-The bounty amount on the OriginTrail Parachain will be sent to the same wallet (combination of public and private keys) used for teleport.&#x20;
-
-To be eligible for a bounty you are required to provide us with an Ethereum wallet that is used to initiate teleport and substrate wallet that will receive OTP bounty. Form for providing wallets is available [here](https://teleport.origintrail.io/teleport-reward-claim).&#x20;
-
-#### Step 3 - Receive OTP bounty&#x20;
-
-OTP bounties will be distributed to substrate wallets provided in step 2.
-
-#### Step 4 - Map ethereum and substrate wallet&#x20;
-
-OriginTrail Parachain supports two types of blockchain accounts:&#x20;
-
-* Substrate accounts (Polkadot native, used with Polkadot wallets such as Polkadot.js), which are used for native OriginTrail Parachain functionality
-*   Ethereum accounts (Ethereum native, used with Ethereum wallets such as Metamask), which are used within the EVM. This enables the OriginTrail Parachain users to get benefits of "both worlds".&#x20;
+* [OT-RFC-12 on OriginTrail Parachain TRAC bridges](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-12%20OriginTrail%20Parachain%20TRAC%20bridges%20\(v2\).pdf)
+* [OT-RFC-16 on Parachain Bridges Implementation RFC](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-16-Parachain-Bridges-Implementation/OT-RFC-16-Parachain-Bridges-Implementation.pdf)
 
 
 
-To enable the EVM functionality, users need to create a mapping between their Substrate and Ethereum accounts (wallets) to the OriginTrail Parachain through a one time transaction, which can be performed through this interface. For network in the mapping interface choose Parachain Mainnet and more details about different parachain networks you can read [here](origintrail-parachain-networks.md). Once the mapping is completed, your wallets will be ready for receiving TRAC on OriginTrail Parachain.
+### Prerequisites:
 
-**IMPORTANT**: If you chose not to take part in the bounty program, you must ensure your mapped wallet has an existential amount of OTP available on the OriginTrail Parachain. Without an existential amount of OTP on your wallet, your Ethereum wallet will not be able to receive TRAC on the OriginTrail Parachain and your TRAC tokens will be unavailable until the bridge implementation is finalised.&#x20;
+* Wallet with TRAC tokens on Ethereum or OriginTrail Parachain network that you wish to teleport. Make sure you own the private key of the wallets that hold your TRAC token. Do not use exchange wallets or any other wallet that you do not own the private key to.
+* Some amount of ETH or OTP tokens, depending on the teleport direction, on the same wallet where you hold TRAC tokens to pay for the teleport transactions.
+* You will need to connect your Ethereum wallet address with an OriginTrail Parachain wallet address using [the mapping interface](https://parachain.origintrail.io/parachain-account-mapping). This will create a mapping between the two addresses and is necessary for the successful transfer of TRAC between the two networks.
+* The minimum amount of TRAC tokens for teleport is 1 TRAC.
+* Metamask browser extension.
 
-Account mapping interface is available [here](https://parachain.origintrail.io/parachain-account-mapping).&#x20;
 
-#### Step 5 - Receive TRAC on OriginTrail Parachain&#x20;
 
-Once the TRAC is deployed on OriginTrail parachain, you will receive it in the same ethereum wallet used in the teleport process for the OriginTrail Parachain.
+Note: _We recommend that you also go through the_ [_Teleport FAQ_](https://teleport.origintrail.io/#faq) _page and get additional information on the teleport process._
 
-If you experience any issues or have a question, please contact the developers directly [on Discord](https://discordapp.com/invite/FCgYk2S).
+
+
+## Step 1:
+
+In order to teleport your TRAC tokens between the two networks, go to [https://teleport.origintrail.io/](https://teleport.origintrail.io/) and navigate to the teleport interface by clicking on the **“Teleport TRAC tokens”** button.
+
+The interface will guide you through the “Get started” process. Please make sure that you read all the instructions provided in order to get fully familiarized with the teleport process.
+
+
+
+## Step 2:
+
+There are four steps required to transfer TRAC tokens from Ethereum to OriginTrail Parachain network and vice versa.
+
+### Step 2.1 - Choose the teleport direction:
+
+First out of four required steps for successful teleport is selecting the proper network in Metamask. This should be set based on the desired teleport direction between the two networks.
+
+If you are teleporting TRAC tokens from Ethereum to OriginTrail Parachain, make sure that your selected network in Metamask is “Ethereum mainnet”.  If you wish to teleport TRAC tokens from OriginTrail Parachain to Ethereum, select “OriginTrail Parachain mainnet” network.\
+Instructions on how to connect Metamask to OriginTrail Parachain can be found [here](https://docs.origintrail.io/blockchain-layer-1/origintrail-parachain/origintrail-parachain-networks#origintrail-parachain-mainnet).
+
+
+
+When the desired network in Metamask is selected and recognized by the interface, select the teleport direction and proceed to the next step.
+
+{% hint style="warning" %}
+Before proceeding to the next step, make sure that you have selected the proper wallet address with TRAC tokens you wish to teleport.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/Screenshot 2023-10-26 at 14.25.02.png" alt=""><figcaption><p>Choosing teleport direction</p></figcaption></figure>
+
+
+
+### Step 2.2 - Connect your wallet:
+
+When you proceed to this step, the selected wallet address in Metamask should be automatically recognized by the interface and loaded into the required field.
+
+Make sure you double check that the selected wallet is the one you wish to teleport TRAC tokens from as well as if the “Current network” recognized by the interface is the correct one (depending on the desired teleport direction).
+
+<figure><img src="../../.gitbook/assets/connect_wallet.png" alt=""><figcaption><p>Connect wallet address</p></figcaption></figure>
+
+After making sure that all values are correct, proceed to the next step.
+
+
+
+### Step 2.3 - Initiate teleport process:&#x20;
+
+During this step you will have to provide the desired TRAC amount that you wish to teleport from one network to another. The interface will check the TRAC balance on the selected wallet and display it. Enter the TRAC amount into the required input field and initiate the teleport process.
+
+After initiating it Metamask will pop-up and ask you to approve the transaction. By clicking “Approve” you authorize our contract to transfer your TRAC tokens and you will proceed to the final initialization step.
+
+<figure><img src="../../.gitbook/assets/initiate-teleport.png" alt=""><figcaption><p>Initiating teleport process</p></figcaption></figure>
+
+{% hint style="info" %}
+You are allowed to teleport different amounts of TRAC multiple times from the same wallet address.
+{% endhint %}
+
+
+
+### Step 2.4 - Complete teleport process:
+
+During the final step of the process you will see the TRAC amount you are about to teleport. If the amount is correct, proceed by clicking the “Confirm teleport” button. After confirming, your Metamask will pop-up and ask you to confirm the teleport finalization. Upon approval, TRAC tokens will be locked on the smart contract on Ethereum or OriginTrail Parachain, depending on the teleport direction.
+
+
+
+{% hint style="warning" %}
+Deposits are possible until the 10th of each month, closing at 15:00 UTC.
+
+Distributions of TRAC on the destination network will be performed by 15th each month (no more than 5 days after the finalization of deposits).
+{% endhint %}
+
+
+
+### Need help?
+
+In case you encounter any issues or have any additional questions regarding TRAC teleport, contact technical support at [tech@origin-trail.com](mailto:tech@origin-trail.com).
