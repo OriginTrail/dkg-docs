@@ -1,4 +1,4 @@
-# DKG Node installation instructions:
+# DKG Node installation instructions
 
 After acquiring TRAC and OTP tokens, teleporting TRAC to the OriginTrail Parachain network and mapping your wallets as per instructions provided above, you have all the pieces ready for the OriginTrail node installation process.
 
@@ -126,11 +126,9 @@ Example command:&#x20;
 
 Note: Use the operational private key for "--private-key" parameter in set-ask script
 
-
-
 If you have come this far and your node logs are not showing any errors, you're node is successfully set up!&#x20;
 
-###
+
 
 ### **OriginTrail node commands:**
 

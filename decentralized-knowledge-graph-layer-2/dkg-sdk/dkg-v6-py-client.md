@@ -111,7 +111,7 @@ The complete response of the method will look like:
 
 ```python
 {
-  "UAL": "did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0",
+  "UAL": "did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0",
   "publicAssertionId": "0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42",
   "operation": {
     "operationId": "5195d01a-b437-4aae-b388-a77b9fa715f1",
@@ -337,7 +337,7 @@ The returned response will contain the UAL and operation status:
 
 ```python
 {
-  "UAL": "did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0",
+  "UAL": "did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0",
   "operation": {
     "operationId": "50fd6920-e084-433b-a518-26bf326a7b5a",
     "status": "COMPLETED"
@@ -497,7 +497,7 @@ The complete response of the method will look like:
 
 ```python
 {
-    "UAL": "did:dkg:hardhat/0xa5cef543538b997b7a125cc849005b62a3da2271/1",
+    "UAL": "did:dkg:hardhat1:31337/0xa5cef543538b997b7a125cc849005b62a3da2271/1",
     "publicAssertionId": "0xef11c3f4bc3331f5d1ad3ec8ddb63928913f7a4d546c6a03fe4485837ad4c494",
     "operation": {
         "operationId": "1c7e860a-219c-4a0c-896d-9c62e19e3fe4",
@@ -581,7 +581,7 @@ Owner of the Knowledge Asset:
 
 ```python
 {
-  "UAL": "did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0",
+  "UAL": "did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0",
   "owner": "0xBaF76aC0d0ef9a2FFF76884d54C9D3e270290a43",
   "operation": { "operationId": None, "status": "COMPLETED" }
 }
@@ -605,7 +605,7 @@ Result of the transfer operation:
 
 ```python
 {
-  "UAL": "did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0",
+  "UAL": "did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0",
   "owner": "0x2ACa90078563133db78085F66e6B8Cf5531623Ad",
   "operation": { "operationId": None, "status": "COMPLETED" }
 }

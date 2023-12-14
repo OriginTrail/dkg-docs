@@ -64,10 +64,11 @@ To use the DKG library, you need to connect to a running local or remote OT-Node
 
 ```javascript
 const dkg = new DKG({
+    environment: development, // or devnet, testnet, mainnet
     endpoint: 'http://127.0.0.1',  // gateway node URI
     port: 8900,
     blockchain: {
-        name: 'hardhat', // or otp::mainnet, otp::testnet, otp::devnet
+        name: 'hardhat1:31337', // or otp:2160, otp::20430, otp::2043
         publicKey: PUBLIC_KEY, // not required in browser, metamask used instead
         privateKey: PRIVATE_KEY, // not required in browser, metamask used instead
     },
@@ -135,7 +136,7 @@ The complete response of the method will look like:
 
 ```javascript
 {
-  UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
   publicAssertionId: '0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42',
   operation: {
     operationId: '5195d01a-b437-4aae-b388-a77b9fa715f1',
@@ -143,6 +144,21 @@ The complete response of the method will look like:
   }
 }
 ```
+
+Before creating a new asset, you have the option to calculate the recommended bid amount to determine how much tokens you'll need to create an asset successfully. This can help you ensure that you have the necessary funds available.
+
+<pre class="language-javascript"><code class="lang-javascript"><strong>const bidSuggestion = await dkg.asset.getBidSuggestion({
+</strong>    public: publicAssertion,
+  },
+  { epochsNum: 2 }
+);
+
+const result = await dkg.asset.create({
+    public: publicAssertion,
+  },
+  { tokenAmount: bidSuggestion, epochsNum: 2 }
+);
+</code></pre>
 
 In case you want to create multiple different assets you can increase your allowance and then each time you initiate a publish, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a faster publish time.
 
@@ -384,7 +400,7 @@ The returned response will contain the UAL and operation status:
 
 ```javascript
 {
-  UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
   operation: {
     operationId: '50fd6920-e084-433b-a518-26bf326a7b5a',
     status: 'COMPLETED'
@@ -584,7 +600,7 @@ The complete response of the method will look like:
 
 ```javascript
 {
-    UAL: 'did:dkg:hardhat/0xa5cef543538b997b7a125cc849005b62a3da2271/1',
+    UAL: 'did:dkg:hardhat1:31337/0xa5cef543538b997b7a125cc849005b62a3da2271/1',
     publicAssertionId: '0xef11c3f4bc3331f5d1ad3ec8ddb63928913f7a4d546c6a03fe4485837ad4c494',
     operation: {
         operationId: '1c7e860a-219c-4a0c-896d-9c62e19e3fe4',
@@ -671,7 +687,7 @@ Owner of the Knowledge Asset:
 
 ```javascript
 {
-  UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
   owner: '0xBaF76aC0d0ef9a2FFF76884d54C9D3e270290a43',
   operation: { operationId: null, status: 'COMPLETED' }
 }
@@ -695,7 +711,7 @@ Result of the transfer operation:
 
 ```javascript
 {
-  UAL: 'did:dkg:hardhat/0x791ee543738b997b7a125bc849005b62afd35578/0',
+  UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
   owner: '0x2ACa90078563133db78085F66e6B8Cf5531623Ad',
   operation: { operationId: null, status: 'COMPLETED' }
 }
@@ -717,7 +733,7 @@ Result of the get states operation:
 
 ```javascript
 {
-    UAL: 'did:dkg:hardhat/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
+    UAL: 'did:dkg:hardhat1:31337/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
     states: [
         '0xe3a6733d7b999ca6f0d141afe3e38ac59223a4dfde7a5458932d2094ed4193cf',
         '0xe37350c9b0e2881af2e7e89a986e87f3d3158611b794bf75dcbb8d6e4aea7f95'
@@ -747,7 +763,7 @@ console.log(getStateIssuerResult);
 
 ```javascript
 {
-  UAL: 'did:dkg:hardhat/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
+  UAL: 'did:dkg:hardhat1:31337/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
   issuer: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
   state: '0xe3a6733d7b999ca6f0d141afe3e38ac59223a4dfde7a5458932d2094ed4193cf',
   operation: { operationId: null, status: 'COMPLETED' }
@@ -764,7 +780,7 @@ With the following result:
 
 ```javascript
 {
-  UAL: 'did:dkg:hardhat/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
+  UAL: 'did:dkg:hardhat1:31337/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
   issuer: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
   latestState: '0xe37350c9b0e2881af2e7e89a986e87f3d3158611b794bf75dcbb8d6e4aea7f95',
   operation: { operationId: null, status: 'COMPLETED' }

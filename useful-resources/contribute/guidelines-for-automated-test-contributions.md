@@ -29,7 +29,3 @@ Tests need to cover errors listed in [github discussions](https://github.com/Ori
 7. There will likely be feedback on your PR before it gets approved, so make sure to follow the status of your PR contribution. After PR approval, your changes will be merged.&#x20;
 8. Congratulations! You've just made ot-node more robust :tada:
 
-### Other ways to contribute
-
-If you're interested in other ways of helping the project, you can check out [https://bountyprogram.origintrail.io](https://bountyprogram.origintrail.io/).
-

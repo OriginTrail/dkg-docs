@@ -9,7 +9,7 @@ description: >-
 
 ## Operational key
 
-The operational wallet (or operational key) is used to perform actions on the network. Its **private key is stored on the OriginTrail node** itself and is needed to perform a multitude of operations on the DKG such as sending transactions to blockchains, signing, submitting proofs, etc. It requires blockchain native tokens in order to be able to publish transactions. (OTP for OriginTrail Parachain, MATIC for Polygon, ETH for Ethereum etc). In the configuration this key is known as “**evmOperationalWallet**”.
+The operational wallet (or operational key) is used to perform actions on the network. Its **private key is stored on the OriginTrail node** itself and is needed to perform a multitude of operations on the DKG such as sending transactions to blockchains, signing, submitting proofs, etc. It requires blockchain native tokens in order to be able to publish transactions. (OTP for OriginTrail Parachain, MATIC for Polygon, xDAI for Gnosis, ETH for Ethereum etc). In the configuration this key is known as “**evmOperationalWallet**”.
 
 In case of OriginTrail Parachain, your operational wallets need to be mapped - the Substrate operational wallet should be mapped to your **evmOperationalWallet**.
 

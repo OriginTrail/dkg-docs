@@ -41,7 +41,8 @@ npm install
 
 ```
 NODE_ENV=development
-RPC_ENDPOINT=http://127.0.0.1:8545
+RPC_ENDPOINT_BC1=http://127.0.0.1:8545
+RPC_ENDPOINT_BC2=http://127.0.0.1:9545
 ```
 
 \
