@@ -68,16 +68,20 @@ Please make sure that you replace the public and private key values accordingly 
 Example command:&#x20;
 
 ```
-npm run set-stake -- --rpcEndpoint=https://rpc.chiado.gnosischain.comm/ --stake=50000 --operationalWalletPrivateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --managementWalletPrivateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0xC06210312C9217A0EdF67453618F5eB96668679A 
+npm run set-stake -- --rpcEndpoint=https://rpc.chiado.gnosischain.com/ --stake=50000 --operationalWalletPrivateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --managementWalletPrivateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0xC06210312C9217A0EdF67453618F5eB96668679A --gasPriceOracleLink=https://blockscout.chiadochain.net/api/v1/gas-price-oracle
 ```
 
-**Set your ask for your node:**&#x20;
+**Set ask for your node:**&#x20;
 
 Example command:&#x20;
 
 ```
-npm run set-stake -- --rpcEndpoint=https://rpc.chiado.gnosischain.com/ --stake=50000 --operationalWalletPrivateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --managementWalletPrivateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0xC06210312C9217A0EdF67453618F5eB96668679A 
+npm run set-ask -- --rpcEndpoint=https://rpc.chiado.gnosischain.com/ --ask=0.01 --privateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --hubContractAddress=0xC06210312C9217A0EdF67453618F5eB96668679A --gasPriceOracleLink=https://blockscout.chiadochain.net/api/v1/gas-price-oracle
 ```
+
+{% hint style="warning" %}
+Use the operational private key for "--private-key" parameter in set-ask script
+{% endhint %}
 
 If you have come this far and your node logs are not showing any errors, you're node is successfully set up!&#x20;
 
