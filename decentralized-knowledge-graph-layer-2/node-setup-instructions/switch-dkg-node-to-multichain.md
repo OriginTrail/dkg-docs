@@ -6,7 +6,7 @@ Before diving into the integration process, ensure you have your OriginTrail Par
 
 ## Mainnet DKG node
 
-Coming soon!
+Coming soon! The 6.1.0 release is live on Mainnet nodes, ensure that you have it on your node, and soon, as Gnosis integration becomes live, there will be published more informations about how to run a multichain node.
 
 ## Testnet DKG node
 
