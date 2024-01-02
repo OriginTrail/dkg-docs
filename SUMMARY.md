@@ -51,6 +51,8 @@
 * [Bridging to Moonbeam](blockchain-layer-1/bridging-to-moonbeam.md)
 * [Deployed smart contracts](blockchain-layer-1/deployed-smart-contracts.md)
 * [Other blockchains](blockchain-layer-1/other-blockchains.md)
+* [Indexers](indexers/overview.md)
+  * [SubQuery](indexers/subquery.md)
 
 ## Useful Resources
 
