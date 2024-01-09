@@ -43,9 +43,9 @@ Below is an example configuration that indicates how to configure some of the mo
                         "evmManagementWalletPublicKey": "0x813..."
                     }
                 },
-                "gnosis:100": {
+                "gnosis:10200": {
                       "enabled": true,
-                      "config": {,
+                      "config": {
                         "rpcEndpoints": [
                           "https://rpc.eu-central-2.gateway.fm/v4/gnosis/archival/chiado"
                         ],
