@@ -40,14 +40,9 @@
 
 ## Blockchain (Layer 1)
 
-* [OriginTrail Parachain](blockchain-layer-1/origintrail-parachain-introduction.md)
-  * [Teleport instructions](blockchain-layer-1/origintrail-parachain/teleport-instructions.md)
-  * [OriginTrail Parachain Networks](blockchain-layer-1/origintrail-parachain/origintrail-parachain-networks.md)
-  * [OriginTrail Parachain EVM](blockchain-layer-1/origintrail-parachain-evm.md)
-  * [Add TRAC to Metamask](blockchain-layer-1/origintrail-parachain/add-trac-to-metamask.md)
-  * [On-chain Governance](blockchain-layer-1/origintrail-parachain/on-chain-governance/README.md)
-    * [Voting on a referendum](blockchain-layer-1/origintrail-parachain/on-chain-governance/voting-on-a-referendum.md)
-    * [Removing expired democracy locks](blockchain-layer-1/origintrail-parachain/on-chain-governance/removing-expired-democracy-locks.md)
+* [NeuroWeb](blockchain-layer-1/neuroweb/README.md)
+  * [Teleport instructions](blockchain-layer-1/neuroweb/teleport-instructions.md)
+  * [Add TRAC to Metamask](blockchain-layer-1/neuroweb/add-trac-to-metamask.md)
 * [Bridging to Moonbeam](blockchain-layer-1/bridging-to-moonbeam.md)
 * [Deployed smart contracts](blockchain-layer-1/deployed-smart-contracts.md)
 * [Other blockchains](blockchain-layer-1/other-blockchains.md)

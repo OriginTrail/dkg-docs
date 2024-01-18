@@ -1,10 +1,10 @@
 # Add TRAC to Metamask
 
-Here are step by step instructions for adding TRAC token to Metamask that is connected to OriginTrail Parachain. This instructions and TRAC token address are same for both OriginTrail Parachain mainnet and testnet.
+Here are step by step instructions for adding TRAC token to Metamask that is connected to NeuroWeb. This instructions and TRAC token address are same for both NeuroWeb mainnet and testnet.
 
 TRAC token address: 0xFfFFFFff00000000000000000000000000000001
 
-First open Metamask that is connected to OriginTrail parachain (connection details available here), then under the Assets tab click on `Import tokens`.
+First open Metamask that is connected to NeuroWeb (connection details available here), then under the Assets tab click on `Import tokens`.
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-12-15 at 14.22.00.png" alt=""><figcaption></figcaption></figure>
 
