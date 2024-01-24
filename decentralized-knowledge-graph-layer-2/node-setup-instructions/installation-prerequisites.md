@@ -1,7 +1,7 @@
 # Installation prerequisites
 
 {% hint style="info" %}
-Before running a mainnet node, consider first to run a testnet node.
+Before running a mainnet node, consider running a testnet node first.
 {% endhint %}
 
 Before we dive into the installation process of the DKG node, there are a few important steps that need to be executed such as acquiring tokens needed for the node’s proper functioning on the network as well as mapping your **ERC20** and **Substrate** wallets.
@@ -21,7 +21,10 @@ Read more about operational and admin wallets [here](https://docs.origintrail.io
 
 ## 2. Tokens
 
-OriginTrail V6 Mainnet nodes will support multiple blockchains, however, V6 mainnet is launching first on the OriginTrail Parachain. Its operations are fueled by two tokens, TRAC and the native blockchain token - OTP in the case of OriginTrail Parachain, ETH in the case of Ethereum, MATIC for Polygon etc.
+The OriginTrail DKG nodes operate with a two token system:&#x20;
+
+* the TRAC token which is the native utility token of the DKG used for knowledge publishing, and&#x20;
+* the native blockchain token of the chosen chain, used for interacting with DKG smart contracts (e.g NeuroWeb, Gnosis, Ethereum etc and their native tokens)
 
 In order for your node to successfully start and run, you will need to provide these tokens to its **operational wallet.**
 
@@ -29,9 +32,10 @@ For more information on OriginTrail two-layer utility tokens - both TRAC and OTP
 
 #### Layer 2 utility token - TRAC
 
-The Trace token (TRAC) is the utility token of the DKG (layer 2 of OriginTrail). It is required to perform operations such as publishing assets on the network, and is a utility token that drives the entire DKG.
+The Trace token (TRAC) is the utility token of the DKG (layer 2 of OriginTrail). It is required to perform operations such as publishing knowledge to the network, and is a utility token that drives the entire DKG. Nodes in the DKG can operate in two ways:&#x20;
 
-**To run a node in OriginTrail V6, your node requires at least 50.000 TRAC tokens posted as a security collateral to the network.**
+* **as non-hosting network gateways**, which enables access to the DKG and communication with other network nodes, without hosting the DKG
+* **as hosting nodes,** which apart from being network gateways also host a portion of the DKG knowledge assets, for which they receive TRAC publishing fees as rewards. T**o run a hosting node in OriginTrail DKG, your node requires at least 50.000 TRAC tokens posted as a security collateral to the network**
 
 #### How can you acquire TRAC?&#x20;
 
@@ -52,21 +56,13 @@ More options can be found on [CoinMarketCap](https://coinmarketcap.com/currencie
 
 #### Layer 1 utility tokens
 
-OriginTrail has over time evolved into a multichain system (supporting Ethereum, Polygon and Gnosis blockchains) and with V6 makes an extension to the OriginTrail Parachain on Polkadot, which is the first blockchain OriginTrail V6 will support.
+OriginTrail has over time evolved into a multichain system (supporting Ethereum, Polkadot, Polygon and Gnosis blockchains) and for a fully functional hosting node you will require native tokens of the blockchains you intend to run it on as well.
 
-The OriginTrail Parachain Token (OTP) is the utility token for OriginTrail Parachain and is necessary for OriginTrail V6 nodes to run.
+#### In case you want to use NeuroWeb blockchain&#x20;
 
-#### How can you acquire OTP tokens?
+TRAC is an ERC20 token on the Ethereum blockchain, transferred over to the NeuroWeb blockchain and enhanced with Polkadot native capabilities. In order to transfer your TRAC tokens to the NeuroWeb blockchain, a Teleport system has been established until a Polkadot <-> Ethereum bridge is ready. Therefore to get your TRAC on the OriginTrail Parachain, you need to [teleport your tokens first](https://teleport.origintrail.io/).
 
-OTP tokens have been distributed to contributors of the OriginTrail Parachain crowdloan, as well being available in bounty for teleporting TRAC tokens to OriginTrail Parachain.
-
-Follow the announcements in Discord to learn once a converter between TRAC and OTP will be launched on the OriginTrail Parachain, allowing you to exchange between the two tokens.
-
-#### Getting your TRAC tokens on the OriginTrail Parachain (TRAC Teleport)
-
-&#x20;TRAC is an ERC20 token on the Ethereum blockchain, transferred over to the OriginTrail Parachain and enhanced with Polkadot native capabilities. In order to transfer your TRAC tokens to the OriginTrail Parachain, a Teleport system has been established until a Polkadot <-> Ethereum bridge is ready. Therefore to get your TRAC on the OriginTrail Parachain, you need to [teleport your tokens first](https://teleport.origintrail.io/).
-
-Note: Teleporting is performed in 15 batches. Details are available in [OT-RFC-12](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-12%20OriginTrail%20Parachain%20TRAC%20bridges%20\(v2\).pdf).
+Details are available in [OT-RFC-12](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-12%20OriginTrail%20Parachain%20TRAC%20bridges%20\(v2\).pdf).
 
 ## **3**. **Mapping your operational and admin wallets**
 

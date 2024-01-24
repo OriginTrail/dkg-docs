@@ -15,6 +15,7 @@
 
 * [Introduction to DKG v6 - start here](decentralized-knowledge-graph-layer-2/introduction-to-dkg-v6-start-here.md)
 * [DKG Basic concepts](decentralized-knowledge-graph-layer-2/dkg-basic-concepts.md)
+* [Delegated staking](decentralized-knowledge-graph-layer-2/delegated-staking.md)
 * [DKG SDK](decentralized-knowledge-graph-layer-2/dkg-sdk/README.md)
   * [DKG Javascript SDK (dkg.js)](decentralized-knowledge-graph-layer-2/dkg-sdk/dkg-v6-js-client.md)
   * [DKG Python SDK (dkg.py)](decentralized-knowledge-graph-layer-2/dkg-sdk/dkg-v6-py-client.md)
@@ -22,8 +23,7 @@
 * [Implementation](decentralized-knowledge-graph-layer-2/implementation/README.md)
   * [Modules](decentralized-knowledge-graph-layer-2/implementation/modules.md)
   * [Command Executor](decentralized-knowledge-graph-layer-2/implementation/command-executor.md)
-* [DKG v6 node](decentralized-knowledge-graph-layer-2/node-setup-instructions/README.md)
-  * [Introduction](decentralized-knowledge-graph-layer-2/node-setup-instructions/setup-instructions-dockerless.md)
+* [Running a DKG node](decentralized-knowledge-graph-layer-2/node-setup-instructions/README.md)
   * [Installation prerequisites](decentralized-knowledge-graph-layer-2/node-setup-instructions/installation-prerequisites.md)
   * [DKG Node installation instructions](decentralized-knowledge-graph-layer-2/node-setup-instructions/dkg-node-installation-instructions.md)
   * [Houston V6 - Node command center](decentralized-knowledge-graph-layer-2/node-setup-instructions/houston-v6-node-command-center.md)
