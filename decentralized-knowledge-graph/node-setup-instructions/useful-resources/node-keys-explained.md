@@ -5,7 +5,7 @@ description: >-
   management key).
 ---
 
-# Node keys
+# Node keys explained
 
 ## Operational key
 

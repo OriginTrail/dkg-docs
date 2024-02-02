@@ -2,9 +2,9 @@
 description: Employ your TRAC in the OriginTrail Decentralized Knowledge Graph
 ---
 
-# Delegated staking
+# 🚀 Delegated staking
 
-The OriginTrail Decentralized Network is a permissionless system that hosts the Decentralized Knowledge Graph (DKG) and is ran by the OriginTrail community. Anyone can run an OriginTrail DKG node ([installation instructions can be found here](node-setup-instructions/)).&#x20;
+The OriginTrail Decentralized Network is a permissionless system that hosts the Decentralized Knowledge Graph (DKG) and is ran by the OriginTrail community. Anyone can run an OriginTrail DKG node ([installation instructions can be found here](../node-setup-instructions/)).&#x20;
 
 For a DKG node to be eligible to host a portion of the DKG and receive publishing fees (to be a hosting node), it has to accumulate a **minimum of 50 000 TRAC** tokens as stake in the network on a particular blockchain. Network stake provides the economic security layer and can be provided by anyone owning TRAC tokens by the notion of "delegated staking".&#x20;
 
@@ -42,16 +42,24 @@ Each node can also set an _**operator\_fee**_ - taken as a percentage of the TRA
 
 ### How to delegate your TRAC&#x20;
 
-* First navigate to [DKG Explorer Staking UI ](https://dkg.origintrail.io/staking)(launching imminently)
+First navigate to:
+
+* Testnet [DKG Explorer Staking D](https://dkg-testnet.origintrail.io)[ashboard](https://dkg-testnet.origintrail.io/staking)
+* Mainnet [DKG Explorer Staking Dashboard ](https://dkg.origintrail.io/staking)(launching imminently)
+
+{% hint style="warning" %}
+The DKG Staking dashboard is currently in beta and still in development, and is available on the Testnet DKG explorer. As you might discover bugs and UX issues we'd love to hear you report them in our #staking [Discord](https://discordapp.com/invite/FCgYk2S) channel. We expect the productive Staking Dashboard release together with 6.2.0 mainnet release.
+{% endhint %}
+
 * Pick one or more nodes to which you'd like to delegate your TRAC tokens. Consider the node's performance and characteristics (such as the operator fee, accumulated stake, information about the node operator and the amount of stake provided by them, etc.)
 * Click the "Delegate stake" button to open the delegation popup
 
-<figure><img src="../.gitbook/assets/staking-ui.png" alt="" width="563"><figcaption><p>Indicative dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/staking-ui.png" alt="" width="563"><figcaption><p>Indicative dashboard</p></figcaption></figure>
 
 * Designate how much TRAC you want to delegate to this node in the input box
 * Click the **Delegate button** to initiate the delegation process. This will entail two blockchain transactions - the token **approval** transaction, and the TRAC **token transfer** transaction**.**
 
-<figure><img src="../.gitbook/assets/delegate.png" alt="" width="563"><figcaption><p>Indicative Delegation popup modal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/delegate.png" alt="" width="563"><figcaption><p>Indicative Delegation popup modal</p></figcaption></figure>
 
 * Once the transactions are executed successfully, you will receive node share tokens in your wallet. (make sure to keep those tokens to be able to withdraw your TRAC rewards later)
 * That's it, you have successfully delegated TRAC tokens to a DKG node!
@@ -60,15 +68,21 @@ Each node can also set an _**operator\_fee**_ - taken as a percentage of the TRA
 
 Over time the amount of TRAC tokens earned by the node will grow (as the node accumulates knowledge asset fees, increasing the node's total stake). A portion, proportionate to the amount of share tokens you own to that node, will be available for you to withdraw (after the deduction of the operator fee). You can initiate the withdrawal of the accumulated TRAC at any time by burning a portion of your node share tokens. The withdrawal is performed in two transactions, with a 28 day delay.&#x20;
 
-<figure><img src="../.gitbook/assets/withdrwa.png" alt="" width="553"><figcaption><p>Indicative Withdrawal popup modal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/withdrwa.png" alt="" width="553"><figcaption><p>Indicative Withdrawal popup modal</p></figcaption></figure>
+
+
+
+{% hint style="warning" %}
+The Delegated Staking feature is initially launched on Gnosis blockchain where the OriginTrail core developers will confirm the staking implementation correctness and perform bug bounty on staking smart contracts. After successful confirmation of the implementation, the delegated staking feature will be rolled out to NeuroWeb and other blockchains.
+{% endhint %}
 
 ### If you are running a node
 
 If you are running a DKG node you can delegate TRAC tokens to your node in the same way as described above (effectively assuming the role of a delegator). It is recommended you delegate TRAC tokens as well, signalling your commitment to the network via economic stake as well - this provides a trust signal to other delegators.
 
-To understand how to set up your operator fee, follow the [node-setup-instructions](node-setup-instructions/ "mention") instructions for node setup. Note that changing your operator fee incurs a 28 day delay, balancing the 28 day delay delegators experience when withdrawing stake from your node.&#x20;
+To understand how to set up your operator fee, follow the [node-setup-instructions](../node-setup-instructions/ "mention") instructions for node setup. Note that changing your operator fee incurs a 28 day delay, balancing the 28 day delay delegators experience when withdrawing stake from your node.&#x20;
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>Depiction of delegating and withdrawing of TRAC from DKG smart contracts</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Depiction of delegating and withdrawing of TRAC from DKG smart contracts</p></figcaption></figure>
 
 ### Have questions?
 

@@ -1,4 +1,4 @@
-# Migrating your V5 node to V6?
+# Migrating your V5 node to V6
 
 The migration process from V5 to V6 is expected to be performed over the course of several months, depending on application migration timelines. We expect that network activity on the V6 network picks up and “consumes” the entirety of V5 implementations once ready.
 

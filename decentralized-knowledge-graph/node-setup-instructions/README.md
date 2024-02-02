@@ -1,10 +1,4 @@
----
-description: >-
-  This section will guide you through all the requirements and the process of
-  configuring and deploying your OriginTrail DKG node.
----
-
-# Running a DKG node
+# 🤖 Running a DKG node
 
 The OriginTrail Decentralized Network is a permissionless system that hosts the Decentralized Knowledge Graph and is ran by the OriginTrail community. **Anyone, anywhere can run an OriginTrail DKG node -** you require no permission, and you can even expand node functionalities as it is completely open source software.&#x20;
 
