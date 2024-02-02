@@ -47,7 +47,7 @@ Below is an example configuration that indicates how to configure some of the mo
                       "enabled": true,
                       "config": {
                         "rpcEndpoints": [
-                          "https://rpc.eu-central-2.gateway.fm/v4/gnosis/archival/chiado"
+                          "https://<gnosis_rpc_endpoint>"
                         ],
                         "evmOperationalWalletPublicKey": "0x0bf...",
                         "evmOperationalWalletPrivateKey": "0x1e3...",
@@ -72,7 +72,8 @@ Below is an example configuration that indicates how to configure some of the mo
     "auth": {
         "ipWhitelist": [
             "::1",
-            "127.0.0.1"
+            "127.0.0.1",
+            "<ip_address_you_wish_to_whitelist>"
         ]
     },
     "hostname": "https://my-node.hostname"

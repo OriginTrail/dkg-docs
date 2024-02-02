@@ -1,8 +1,4 @@
-# Switch DKG node to multichain
-
-Welcome to the guide on expanding the capabilities of your existing OriginTrail DKG node! By following these instructions, you'll seamlessly transition from a single-chain setup to a powerful multichain configuration, connecting your node not only to the OriginTrail Parachain but also to the Gnosis blockchain.
-
-Before diving into the integration process, ensure you have your OriginTrail Parachain DKG node fully operational and connected.
+# Add Gnosis blockchain
 
 ## Mainnet DKG node
 
@@ -24,7 +20,7 @@ Selecting an archival endpoint is a crucial requirement for the optimal function
 
 ### 2. Acquire test tokens
 
-Go to [fund-your-dkg-testnet-node.md](fund-your-dkg-testnet-node.md "mention") to get test TRAC and xDAI tokens.
+Go to [dkg-testnet-faucet.md](../useful-resources/dkg-testnet-faucet.md "mention") to get test TRAC and xDAI tokens.
 
 ### 3. Update DKG node configuration
 
@@ -84,6 +80,3 @@ Use the operational private key for "--private-key" parameter in set-ask script
 {% endhint %}
 
 If you have come this far and your node logs are not showing any errors, you're node is successfully set up!&#x20;
-
-
-
