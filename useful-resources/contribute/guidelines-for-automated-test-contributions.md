@@ -16,7 +16,7 @@ We use [**Cucumber.js**](https://cucumber.io/) for running automated tests. This
 
 For a detailed guide on how to write BDD scenarios, visit [Cucumber docs](https://cucumber.io/docs/gherkin/reference/).
 
-Tests need to cover errors listed in [github discussions](https://github.com/OriginTrail/ot-node/discussions/2095) page. Different errors are thrown in different commands, all of which are executed by the **command executor**. To learn what command executor is and how it works, please visit [command-executor.md](../../decentralized-knowledge-graph/implementation/command-executor.md "mention").
+Tests need to cover errors listed in [github discussions](https://github.com/OriginTrail/ot-node/discussions/2095) page. Different errors are thrown in different commands, all of which are executed by the **command executor**. To learn what command executor is and how it works, please visit [command-executor.md](../../decentralized-knowledge-graph/implementation-details/command-executor.md "mention").
 
 ### Steps to contribute BDD tests&#x20;
 

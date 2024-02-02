@@ -2,7 +2,7 @@
 description: What's new in OriginTrail v6 and how can you get started?
 ---
 
-# Introduction to DKG v6 - start here
+# 👉 Introduction to DKG - start here
 
 The OriginTrail DKG v6 is the newest version of OriginTrail, which introduces various improvements to the existing OriginTrail DKG. Among others, it brings:
 

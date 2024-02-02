@@ -1,4 +1,4 @@
-# ⚒ Tutorials
+# 📚 Tutorials
 
 Check out the tutorials prepared by the OriginTrail Builders community:
 

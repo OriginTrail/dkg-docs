@@ -13,17 +13,10 @@
 
 ## Decentralized Knowledge Graph
 
-* [Introduction to DKG - start here](decentralized-knowledge-graph/introduction-to-dkg-v6-start-here.md)
-* [DKG Basic concepts](decentralized-knowledge-graph/dkg-basic-concepts.md)
+* [👉 Introduction to DKG - start here](decentralized-knowledge-graph/introduction-to-dkg-v6-start-here.md)
+* [🔌 DKG Basic concepts](decentralized-knowledge-graph/dkg-basic-concepts.md)
 * [🚀 Delegated staking](decentralized-knowledge-graph/delegated-staking/README.md)
   * [🐛 Staking bug bounty](decentralized-knowledge-graph/delegated-staking/staking-bug-bounty.md)
-* [DKG SDK](decentralized-knowledge-graph/dkg-sdk/README.md)
-  * [DKG Javascript SDK (dkg.js)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-js-client.md)
-  * [DKG Python SDK (dkg.py)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-py-client.md)
-* [Development environment setup](decentralized-knowledge-graph/setting-up-your-development-environment.md)
-* [Implementation](decentralized-knowledge-graph/implementation/README.md)
-  * [Modules](decentralized-knowledge-graph/implementation/modules.md)
-  * [Command Executor](decentralized-knowledge-graph/implementation/command-executor.md)
 * [🤖 Running a DKG node](decentralized-knowledge-graph/node-setup-instructions/README.md)
   * [Installation prerequisites](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/README.md)
     * [Hardware requirements](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/hardware-requirements.md)
@@ -45,8 +38,15 @@
     * [Manually configuring your node](decentralized-knowledge-graph/node-setup-instructions/useful-resources/manually-configuring-your-node.md)
     * [Backing up your node](decentralized-knowledge-graph/node-setup-instructions/useful-resources/backing-up-your-node.md)
   * [Need help?](decentralized-knowledge-graph/node-setup-instructions/need-help.md)
-* [⚒ Tutorials](decentralized-knowledge-graph/tutorials.md)
+* [🛠 DKG SDK](decentralized-knowledge-graph/dkg-sdk/README.md)
+  * [DKG Javascript SDK (dkg.js)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-js-client.md)
+  * [DKG Python SDK (dkg.py)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-py-client.md)
+* [💻 Development environment setup](decentralized-knowledge-graph/setting-up-your-development-environment.md)
+* [📚 Tutorials](decentralized-knowledge-graph/tutorials.md)
 * [Knowledge Assets](decentralized-knowledge-graph/knowledge-assets.md)
+* [Implementation details](decentralized-knowledge-graph/implementation-details/README.md)
+  * [Modules](decentralized-knowledge-graph/implementation-details/modules.md)
+  * [Command Executor](decentralized-knowledge-graph/implementation-details/command-executor.md)
 
 ## Integrated Blockchains
 

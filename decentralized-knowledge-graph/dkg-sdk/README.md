@@ -2,7 +2,7 @@
 description: The one-stop-shop SDK for your Semantic Web3 needs
 ---
 
-# DKG SDK
+# 🛠 DKG SDK
 
 The OriginTrail SDKs are client libraries for your applications, used to interact and connect with the OriginTrail Decentralized Knowledge Graph.
 
