@@ -54,4 +54,4 @@ As described in the beginning of this tutorial, OriginTrail DKG node can be depl
 1. NeuroWeb testnet
 2. Chiado (Gnosis testnet)
 
-In order to acquire testnet tokens for the above listed blockchain, please refer to OriginTrail's Discord Faucet usage [instructions](https://docs.origintrail.io/decentralized-knowledge-graph-layer-2/node-setup-instructions/dkg-testnet-faucet).
+In order to acquire testnet tokens for the above listed blockchain, please refer to OriginTrail's Discord Faucet usage [instructions](../useful-resources/dkg-testnet-faucet.md).

@@ -4,11 +4,9 @@ OriginTrail DKG v6 testnet nodes operate on the NeuroWeb testnet and Gnosis Chia
 
 In order to get your test tokens, first join our [discord server](https://discord.com/invite/FCgYk2S).
 
-Once you've joined our server, enter the discord-bot channel.\
+Once you've joined our server, enter the **#discord-bot** channel.\
 \
-![](<../../../.gitbook/assets/Screenshot 2022-08-19 at 14.25.28.png>)
-
-
+<img src="../../../.gitbook/assets/Screenshot 2024-02-02 at 22.15.15.png" alt="" data-size="original">
 
 ### Request NeuroWeb TRAC and Neuro:
 
