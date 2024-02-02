@@ -31,16 +31,18 @@ Go to [fund-your-dkg-testnet-node.md](fund-your-dkg-testnet-node.md "mention") t
 Open .origintrail\_noderc file of your DKG testnet node. Within the config, locate the 'blockchain' object, and add the following object to the 'implementation' array, specifying your RPC endpoint and wallets.
 
 ```json
-"gnosis:100": {
+"gnosis:10200": {
   "enabled": true,
-  "config": {,
+  "config": {
     "rpcEndpoints": [
-      "https://archive-rpc.chiado.gnosischain.com/"
+      "https://rpc.chiado.gnosis.gateway.fm"
     ],
     "gasPriceOracleLink": "https://blockscout.chiadochain.net/api/v1/gas-price-oracle",
     "evmOperationalWalletPublicKey": "0x0bf...",
     "evmOperationalWalletPrivateKey": "0x1e3...",
-    "evmManagementWalletPublicKey": "0xd09..."
+    "evmManagementWalletPublicKey": "0xd09...",
+    "sharesTokenName": "...",
+    "sharesTokenSymbol": "..."
    }
  }
 ```
