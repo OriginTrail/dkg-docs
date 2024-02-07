@@ -2,7 +2,7 @@
 
 ## Mainnet DKG node
 
-Coming soon! The 6.1.0 release is live on Mainnet nodes, ensure that you have it on your node, and soon, as Gnosis integration becomes live, there will be published more informations about how to run a multichain node.
+Coming soon! The 6.1.0 release is live on Mainnet nodes, ensure that you have it on your node, and soon, as Gnosis integration becomes live, there will be published more information about how to run a multichain node.
 
 ## Testnet DKG node
 
@@ -10,9 +10,7 @@ Since the 6.1.0 release, your OriginTrail DKG Testnet node now supports Gnosis C
 
 ### 1. Obtain Gnosis Chiado Archival RPC Endpoint
 
-Refer to the [official Gnosis documentation](https://docs.gnosischain.com/tools/rpc/) and select an RPC provider to acquire the Archival RPC Endpoint.&#x20;
-
-Selecting an archival endpoint is a crucial requirement for the optimal functionality of your DKG node.
+Refer to the [official Gnosis documentation](https://docs.gnosischain.com/tools/rpc/) and select an RPC provider to acquire the Archival RPC Endpoint.
 
 {% hint style="warning" %}
 Selecting an archival endpoint is a crucial requirement for the optimal functionality of your DKG node.
@@ -53,7 +51,7 @@ If you added everything successfully, your node will show the “**blockchain mo
 
 ### 5. Set up stake and ask via npm scripts
 
-Use npm scripts to setup both node stake and service ask directly from the server where your node was installed, **however this process requires you to provide your node admin wallet key on the script.**&#x20;
+Use npm scripts to setup both node stake and service ask (the parameter) directly from the server where your node was installed. **However, this process requires you to provide your node admin wallet key to the script.**
 
 {% hint style="warning" %}
 Please make sure that you replace the public and private key values accordingly as well as the stake value before execution. This scripts should be run from the ot-node directory.
@@ -61,7 +59,7 @@ Please make sure that you replace the public and private key values accordingly 
 
 **Set TRAC stake for your node:**
 
-Example command:&#x20;
+Example command:
 
 ```
 npm run set-stake -- --rpcEndpoint=https://rpc.chiado.gnosischain.com/ --stake=50000 --operationalWalletPrivateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --managementWalletPrivateKey=0x6f9a4cd2714f8a56950ad96742d2e6efcd0319a259a47cf56775c6d63e731e67 --hubContractAddress=0xC06210312C9217A0EdF67453618F5eB96668679A --gasPriceOracleLink=https://blockscout.chiadochain.net/api/v1/gas-price-oracle
@@ -69,7 +67,7 @@ npm run set-stake -- --rpcEndpoint=https://rpc.chiado.gnosischain.com/ --stake=5
 
 **Set ask for your node:**&#x20;
 
-Example command:&#x20;
+Example command:
 
 ```
 npm run set-ask -- --rpcEndpoint=https://rpc.chiado.gnosischain.com/ --ask=0.01 --privateKey=0x92962c43dd7cb66d9d37c174388558eb57a722d33f65f91398a5a2714c36fdc4 --hubContractAddress=0xC06210312C9217A0EdF67453618F5eB96668679A --gasPriceOracleLink=https://blockscout.chiadochain.net/api/v1/gas-price-oracle
@@ -79,4 +77,4 @@ npm run set-ask -- --rpcEndpoint=https://rpc.chiado.gnosischain.com/ --ask=0.01 
 Use the operational private key for "--private-key" parameter in set-ask script
 {% endhint %}
 
-If you have come this far and your node logs are not showing any errors, you're node is successfully set up!&#x20;
+If you have come this far and your node logs are not showing any errors, your node is successfully set up!

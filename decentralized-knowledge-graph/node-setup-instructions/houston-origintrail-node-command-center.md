@@ -36,16 +36,14 @@ The Overview section shows general information about your node TRAC balance and 
 
 ### Service tokenomics:
 
-Under “**Service tokenomics**” section, you’re able to manage TRAC stake settings on the node as well as updating:
+Under “**Service tokenomics**” section, you’re able to manage TRAC stake settings on the node as well as:
 
-* Ask parameter, which will determine the preferred amount of TRAC your node is asking for its services in the network,
+* Update the ask parameter, which will determine the preferred amount of TRAC your node is asking for its services in the network.
 * Add and withdraw TRAC stake. Note that both operations require executing 2 transactions.
 
 <figure><img src="../../.gitbook/assets/service_tokenomics.png" alt=""><figcaption><p>Houston - Service tokenomics section 1.1</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/add_withdraw_stake.png" alt=""><figcaption><p>Houston - Service tokenomics section 1.2</p></figcaption></figure>
-
-
 
 ### Node wallets:
 
@@ -102,7 +100,7 @@ git clone https://github.com/OriginTrail/houston-v6.git
 cd houston-v6 && npm install
 ```
 
-3\. Run Houston application:
+3\. Run the Houston app:
 
 ```
 npm run serve

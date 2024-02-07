@@ -1,15 +1,17 @@
 # OriginTrail node installation
 
-After preparing all the requirements for running your OriginTrail DKG node which includes wallets, tokens and RPC endpoint's, you are now ready to start the installer and launch your OriginTrail DKG node.
+After preparing all the requirements for running your OriginTrail DKG node which includes wallets, tokens and RPC endpoints, you are now ready to start the installer and launch your OriginTrail DKG node.
 
-At this stahe, there are two approaches when it comes to deploying the OriginTrail DKG node:
+At this stage, there are two approaches when it comes to deploying the OriginTrail DKG node:
 
 1. Downloading and running the installer (instructions provided below)
 2. DigitalOcean 1-click deployment (available on DigitalOcean marketplace)
    * Mainnet 1-click deployment: [Marketplace link](https://marketplace.digitalocean.com/apps/origintrail-dkg-mainnet-node)
    * Testnet 1-click deployment: [Marketplace link](https://marketplace.digitalocean.com/apps/origintrail-dkg-testnet-node)
 
-Note: _Make sure that you follow our communication channels closely for all the updates regarding additional options of launching and running the OriginTrail DKG node._
+{% hint style="info" %}
+Make sure that you follow our communication channels closely for all the updates regarding additional options of launching and running the OriginTrail DKG node.
+{% endhint %}
 
 ## 1. Running the installer (installation script)
 
@@ -27,19 +29,15 @@ The installation process will require interaction with the installer script via 
 In order to avoid any installation issues, please run the installer on a clean Ubuntu 20.04 or 22.04 server.
 {% endhint %}
 
-## 1.1 - SSH to the server:&#x20;
+## 1.1 - Download OriginTrail DKG node installer:
 
-Make sure that you ssh to the server as root or switch to root user when on the server.
-
-### 1.2 - Download OriginTrail DKG node installer:
-
-Execute the following command in order to download the installation script.
+Ensure that you're logged in as root. Then, execute the following command in order to download the installation script and grant it executable access:
 
 ```
 cd /root/ && curl -k -o installer.sh https://raw.githubusercontent.com/OriginTrail/ot-node/v6/develop/installer/installer.sh && chmod +x installer.sh
 ```
 
-### 1.3 - **Firewall configuration**:
+### 1.2 - **Firewall configuration**:
 
 OriginTrail node needs the following ports to be opened in order to properly operate.
 
@@ -50,18 +48,16 @@ OriginTrail node needs the following ports to be opened in order to properly ope
 Installer will automatically enable UFW and open ports 22 (ssh), 8900 and 9000.\
 \
 Please keep in mind that different cloud providers use different security practices when it comes to configuring firewalls on the servers. \
-Make sure that enabling UFW will not cause any networking issues on your server or disable it after the installation process is completed if you wish to configure firewall settings differently (ex. via cloud provers console). &#x20;
+Make sure that enabling UFW will not cause any networking issues on your server or disable it after the installation process is completed if you wish to configure firewall settings differently (ex. via cloud provider's console). &#x20;
 {% endhint %}
 
-### 1.4 - **Running the installer script**:
+### 1.3 - **Running the installer script**:
 
 {% hint style="info" %}
 The provided installer script is designed for installing the OriginTrail node on **Ubuntu 20.04 LTS and 22.04 LTS** distributions.\
 \
-It is also possible to install the OriginTrail node on other systems but it would require  modifications to the installer script. If you have any such modifications in mind, we highly encourage your contributions so please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
+It is also possible to install the OriginTrail node on other systems, but it would require  modifications to the installer script. If you have any such modifications in mind, we highly encourage your contributions. Please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
 {% endhint %}
-
-### **1.5 - Running the installer:**
 
 #### **During the installation process, OriginTrail node installer will execute the following actions:**
 
@@ -78,7 +74,7 @@ It is also possible to install the OriginTrail node on other systems but it woul
 Do not run the installer with "sudo".
 {% endhint %}
 
-#### Execute installer by running:
+#### Execute the installer by running:
 
 ```
 ./installer.sh

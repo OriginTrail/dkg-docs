@@ -12,5 +12,5 @@ For a DKG node to be eligible to host a portion of the DKG and receive publishin
 However running a DKG node requires some degree of technical knowledge, so you are advised to carefully consider all of the relevant implications of doing so. In the following pages you will get detailed instructions on how to setup a DKG node, and we encourage you to seek assistance if needed within the [OriginTrail community Discord](https://discord.com/invite/FCgYk2S) server
 
 {% hint style="info" %}
-These setup instructions are a "Work in progress" and are subject to change, and the core developers aim to keep it up to date at all times. However if you notice an issue during installation, we ask for you to please report the issue on our official [Github repo](https://github.com/OriginTrail/ot-node) or [Discord channel](https://discord.com/invite/FCgYk2S)
+These setup instructions are a "Work in progress" and are subject to change, and the core developers aim to keep it up to date at all times. However if you notice an issue during installation, we ask for you to please report the issue on our official [Github repo](https://github.com/OriginTrail/ot-node) or [Discord channel](https://discord.com/invite/FCgYk2S).
 {% endhint %}

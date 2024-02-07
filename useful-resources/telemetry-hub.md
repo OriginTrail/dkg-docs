@@ -8,7 +8,7 @@ The OriginTrail v6 telemetry hub is a system designed to monitor the Decentraliz
 
 ### What kind of data does the Telemetry hub collect?
 
-The Telemetry hub aggregates node telemetry measurements - values such as the timestamps and durations of graph queries, inserts, network operations etc as well as errors observed during execution. These measurements are collected by each individual node on the v6 network and submitted to Telemetry hub in the following way:
+The Telemetry hub aggregates node telemetry measurements - values such as the timestamps and durations of graph queries, inserts, network operations etc, as well as errors observed during execution. These measurements are collected by each individual node on the v6 network and submitted to Telemetry hub in the following way:
 
 * by generating measurement data assertions once per hour and publishing them to the DKG&#x20;
 * by submitting a log of published assertion IDs to a centralized signalling server, used for double-checking the data pipeline incurs no data loss (potentially due to Telemetry Hub ingestion service or network communication issues)

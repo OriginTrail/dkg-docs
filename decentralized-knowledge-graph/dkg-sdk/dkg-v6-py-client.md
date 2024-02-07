@@ -4,8 +4,6 @@ description: Python library for interacting with the Decentralized Knowledge Gra
 
 # DKG Python SDK (dkg.py)
 
-
-
 {% hint style="danger" %}
 dkg.py library is currently in beta. The beta version is intended for testing and evaluation purposes only. It is not recommended for use in a production environment where stability and reliability are crucial.
 {% endhint %}
@@ -94,7 +92,7 @@ public_assertion = {
 }
 ```
 
-When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an knowledge asset on DKG.&#x20;
+When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochs_number` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
 
 ```python
 create_asset_result = dkg.asset.create(

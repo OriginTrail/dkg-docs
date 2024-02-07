@@ -41,7 +41,7 @@ The scope of this bug bounty program focuses on potential exploits specifically 
 * contracts/v1/ProofManagerV1.sol
 * contracts/v1/ProofManagerV1U1.sol
 
-Bounty branch: [https://github.com/OriginTrail/dkg-evm-module/tree/staking-bounty](https://github.com/OriginTrail/dkg-evm-module/tree/staking-bounty)
+The bounty branch can be found here: [https://github.com/OriginTrail/dkg-evm-module/tree/staking-bounty](https://github.com/OriginTrail/dkg-evm-module/tree/staking-bounty)
 
 ### Important restrictions
 

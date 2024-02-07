@@ -6,7 +6,7 @@ description: How to contribute to OriginTrail code repositories
 
 OriginTrail is an ecosystem dedicated to open source software and based on the principles of neutrality, inclusiveness and usability.&#x20;
 
-All project repositories, such as OT node, DKG clients, Houston etc are available on our official Github
+All project repositories, such as OT node, DKG clients, Houston etc are available on our official [Github](https://github.com/OriginTrail) page.
 
 If your are new with OriginTrail development, there are guides in this documentation for getting your development environment set up. Please follow the below procedure to contribute new code or fixes:&#x20;
 

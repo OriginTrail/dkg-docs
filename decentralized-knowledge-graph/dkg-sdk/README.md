@@ -20,7 +20,7 @@ The OriginTrail SDK libraries are being built in various languages by the team a
 
 * [**dkg.js**](dkg-v6-js-client.md) -Javascript client (if you are looking for the v5 client, you can find it [here](https://github.com/OriginTrail/dkg-client))
 * [**dkg.py**](dkg-v6-py-client.md) - Python client
-* **dkg.php** - Php client (coming soon)
+* **dkg.php** - PHP client (coming soon)
 * **dkg.rs** - Rust client (coming soon)
 * **dkg.go** - Go client (coming soon)
 * **dkg.java** - Java client (coming soon)

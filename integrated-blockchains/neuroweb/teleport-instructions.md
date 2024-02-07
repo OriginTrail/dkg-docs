@@ -22,19 +22,15 @@ After the successful integration of the OriginTrail Decentralized Knowledge Grap
 * The minimum amount of TRAC tokens for teleport is 1 TRAC.
 * Metamask browser extension.
 
-
-
-Note: _We recommend that you also go through the_ [_Teleport FAQ_](https://teleport.origintrail.io/#faq) _page and get additional information on the teleport process._
-
-
+{% hint style="info" %}
+We recommend that you also go through the [Teleport FAQ](https://teleport.origintrail.io/#faq) page and get additional information on the teleport process.
+{% endhint %}
 
 ## Step 1:
 
 In order to teleport your TRAC tokens between the two networks, go to [https://teleport.origintrail.io/](https://teleport.origintrail.io/) and navigate to the teleport interface by clicking on the **“Teleport TRAC tokens”** button.
 
 The interface will guide you through the “Get started” process. Please make sure that you read all the instructions provided in order to get fully familiarized with the teleport process.
-
-
 
 ## Step 2:
 
@@ -44,7 +40,7 @@ There are four steps required to transfer TRAC tokens from Ethereum to OriginTra
 
 First out of four required steps for successful teleport is selecting the proper network in Metamask. This should be set based on the desired teleport direction between the two networks.
 
-If you are teleporting TRAC tokens from Ethereum to OriginTrail Parachain, make sure that your selected network in Metamask is “Ethereum mainnet”.  If you wish to teleport TRAC tokens from OriginTrail Parachain to Ethereum, select “OriginTrail Parachain mainnet” network.\
+If you are teleporting TRAC tokens from Ethereum to OriginTrail Parachain, make sure that your selected network in Metamask is “Ethereum mainnet”.  If you wish to teleport TRAC tokens from OriginTrail Parachain to Ethereum, select the “OriginTrail Parachain mainnet” network.\
 Instructions on how to connect Metamask to OriginTrail Parachain can be found [here](https://docs.origintrail.io/blockchain-layer-1/origintrail-parachain/origintrail-parachain-networks#origintrail-parachain-mainnet).
 
 
@@ -57,8 +53,6 @@ Before proceeding to the next step, make sure that you have selected the proper 
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-10-26 at 14.25.02.png" alt=""><figcaption><p>Choosing teleport direction</p></figcaption></figure>
 
-
-
 ### Step 2.2 - Connect your wallet:
 
 When you proceed to this step, the selected wallet address in Metamask should be automatically recognized by the interface and loaded into the required field.
@@ -68,8 +62,6 @@ Make sure you double check that the selected wallet is the one you wish to telep
 <figure><img src="../../.gitbook/assets/connect_wallet.png" alt=""><figcaption><p>Connect wallet address</p></figcaption></figure>
 
 After making sure that all values are correct, proceed to the next step.
-
-
 
 ### Step 2.3 - Initiate teleport process:&#x20;
 
@@ -83,21 +75,15 @@ After initiating it Metamask will pop-up and ask you to approve the transaction.
 You are allowed to teleport different amounts of TRAC multiple times from the same wallet address.
 {% endhint %}
 
-
-
 ### Step 2.4 - Complete teleport process:
 
 During the final step of the process you will see the TRAC amount you are about to teleport. If the amount is correct, proceed by clicking the “Confirm teleport” button. After confirming, your Metamask will pop-up and ask you to confirm the teleport finalization. Upon approval, TRAC tokens will be locked on the smart contract on Ethereum or OriginTrail Parachain, depending on the teleport direction.
-
-
 
 {% hint style="warning" %}
 Deposits are possible until the 10th of each month, closing at 15:00 UTC.
 
 Distributions of TRAC on the destination network will be performed by 15th each month (no more than 5 days after the finalization of deposits).
 {% endhint %}
-
-
 
 ### Need help?
 

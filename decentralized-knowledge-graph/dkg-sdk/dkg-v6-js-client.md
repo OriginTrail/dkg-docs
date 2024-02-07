@@ -13,7 +13,7 @@ Running a gateway node is not the same as running a **full (DKG hosting) node**,
 {% endhint %}
 
 {% hint style="info" %}
-This library operates with OriginTrail nodes starting from version 6.0.0
+This library operates with OriginTrail nodes starting from version 6.0.0.
 {% endhint %}
 
 ### Installation
@@ -119,7 +119,7 @@ const publicAssertion = {
 
 ```
 
-When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an knowledge asset on DKG.&#x20;
+When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochsNum` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
 
 ```javascript
 const result = await dkg.asset.create({
@@ -129,7 +129,6 @@ const result = await dkg.asset.create({
 );
 
 console.log(result);
-
 ```
 
 The complete response of the method will look like:

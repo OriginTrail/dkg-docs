@@ -22,7 +22,7 @@ For more information on OriginTrail two-layer utility tokens - both TRAC and OTP
 The Trace token (TRAC) is the utility token of the DKG (layer 2 of OriginTrail). It is required to perform operations such as publishing knowledge to the network, and is a utility token that drives the entire DKG. Nodes in the DKG can operate in two ways:&#x20;
 
 * **as non-hosting network gateways**, which enables access to the DKG and communication with other network nodes, without hosting the DKG
-* **as hosting nodes,** which apart from being network gateways also host a portion of the DKG knowledge assets, for which they receive TRAC publishing fees as rewards. T**o run a hosting node in OriginTrail DKG, your node requires at least 50.000 TRAC tokens posted as a security collateral to the network**
+* **as hosting nodes,** which apart from being network gateways also host a portion of the DKG knowledge assets, for which they receive TRAC publishing fees as rewards. **To run a hosting node in OriginTrail DKG, your node requires at least 50.000 TRAC tokens posted as a security collateral to the network**
 
 #### How can you acquire TRAC?&#x20;
 
@@ -44,8 +44,6 @@ More options can be found on [CoinMarketCap](https://coinmarketcap.com/currencie
 #### Layer 1 utility tokens
 
 OriginTrail has over time evolved into a multichain system (supporting Ethereum, Polkadot, Polygon and Gnosis blockchains) and for a fully functional hosting node you will require native tokens of the blockchains you intend to run it on as well.
-
-
 
 ## Testnet:
 

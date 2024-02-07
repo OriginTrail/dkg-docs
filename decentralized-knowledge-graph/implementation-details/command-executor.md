@@ -205,7 +205,7 @@ async add(addCommand, addDelay = 0, insert = true) {...}
 async replay() {...}
 ```
 
-One of the key methods of the API is **add()** which is responsible for adding new commands to the array of commands for command-executor to carry out. Simple call would look like this code snippet:
+One of the key methods of the API is **add()** which is responsible for adding new commands to the array of commands for command-executor to carry out. Such a call would look like this:
 
 ```javascript
 await this.commandExecutor.add({

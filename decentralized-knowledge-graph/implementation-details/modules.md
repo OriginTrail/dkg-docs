@@ -32,7 +32,7 @@ The validation module is used to validate assertions seen on the network. More i
 
 #### Auto updater module
 
-If enabled, this module takes care of automatic updates of the local node. Every 15 minutes, it checks if the remote(git) version is different than the local version of ot-node, and if it is, local node will be updated to the latest version of the code. After a successful update, node will be restarted and start running on the latest version.&#x20;
+If enabled, this module takes care of automatic updates of the local node. Every 15 minutes, it checks if the remote (git) version is different than the local version of ot-node, and if it is, local node will be updated to the latest version of the code. After a successful update, node will be restarted and start running on the latest version.&#x20;
 
 #### Network module
 

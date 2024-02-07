@@ -10,30 +10,28 @@ Developers constantly struggle with **discovering, sharing** and **managing data
 
 In Web2, **discoverability** is enabled by search engines, which return a list of web links based on the query you search for. **Sharing** and **managing** data is governed by centralised services and protocols which do not share common data structures and interfaces, making it complicated to access and use this data.
 
-As a simple example, let's consider a traditional relational (SQL) database dataset like the one below
+As a simple example, let's consider a traditional relational (SQL) database dataset like the one below:
 
 | id  | user         | address             | GLN       |
 | --- | ------------ | ------------------- | --------- |
 | 987 | ACME company | Awesome st 2044, NY | 123456789 |
 
-Another system might keep some more data on this in another format, such as a CSV
+Another system might keep some more data on this in another format, such as a CSV:
 
 ```
 company_name;company_address;email
 ACME company; Awesome st 2044, NY; office@acme.com
 ```
 
-As humans, we can quickly understand that this data is related to the same **thing** (ACME company), however it's not so obvious to software, as it generally doesn't have enough context. To use the example data above in apps one needs to resolve the challenges of having different data structures, schemas, means of access -  requiring many operations to understand, integrate and validate the datasets. For example, how would you query for the email address of ACME company? This is where the Semantic web helps.&#x20;
+As humans, we can quickly understand that this data is related to the same **thing** (ACME company), however it's not so obvious to software, as it generally doesn't have enough context. To use the example data above in apps one needs to resolve the challenges of having different data structures, schemas, means of access -  requiring many operations to understand, integrate and validate the datasets. For example, how would you query for the email address of ACME company? This is where the Semantic web helps.
 
-### What is linked data and the Semantic Web? 
+### What is linked data and the Semantic Web?
 
 > _"The Semantic Web isn't just about putting data on the web. It is about making links, so that a person or machine can explore the web of data. With linked data, when you have some of it, you can find other, related, data." - Tim Berners-Lee, the father of the World Wide Web and Semantic Web_
 
 The core idea behind linked data is to actually represent all **things** with **relationships** between them in a common graph. Linked data is built on primitives called "**triples",** which connect a **subject entity**, with an **object entity** via a **relationship**.
 
 ![Example of a triple, with subject being Acme company and object being the address value](../.gitbook/assets/01.jpg)
-
-
 
 Triples are great because they can be used to create more complex data structures - graphs. Roughly speaking, connecting two triples gives us this.
 

@@ -29,9 +29,7 @@ During the installation process, the installer will ask you to provide it with t
 
 Read more about operational and admin wallets [here](https://docs.origintrail.io/decentralized-knowledge-graph-layer-2/testnet-node-setup-instructions/node-keys).
 
-After you finish the Teleport and mapping process, your keys are ready to be used by the OriginTrail DKG node on&#x20;
-
-
+After you finish the Teleport and mapping process, your keys are ready to be used by the OriginTrail DKG node.
 
 ## Gnosis and Chiado wallet preparation:
 

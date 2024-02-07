@@ -18,8 +18,8 @@ Need any assistance with node setup? Join the DKGv6 [Discord ](https://discord.c
 * An installed and running **Blazegraph**
   * In order to download and run Blazegraph, please visit their [official website](https://blazegraph.com/).
 * An installed and running **MySQL**
-  * You need to create empty table named **operationaldb** inside MySQL
-* You should have installed **npm** and **Node.js (v16)**
+  * You need to create empty table named **operationaldb** inside MySQL.
+* You should have **npm** and **Node.js (v16)** installed
 
 ### Installation steps
 

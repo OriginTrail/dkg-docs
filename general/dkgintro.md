@@ -12,8 +12,8 @@ As a developer using the OriginTrail DKG you can create and maintain **Knowledge
 
 Blockchains and knowledge graphs are two different types of networks:
 
-* **blockchains are trust networks**. They run on decentralized stateful protocols enabling a verifiable shared state, and are used for applications such as Decentralized identity, Asset tokenization (NFTs), Decentralized Finance, Trusted multi-party computation etc
-* **knowledge graphs are semantic networks.** When Google first coined the term "knowledge graph", they explained it as "things, not strings". Knowledge Graphs connect highly structured, machine-understandable, semantic entities into one **semantic data network,** enabling powerful data capabilities, such as search, inference, recommendations, advanced machine learning and others. Knowledge graphs inherit the technology stack idea of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic\_Web) (introduced as the "original" Web3.0 by Sir Tim Berners-Lee, the inventor of WWW)
+* **blockchains are trust networks**. They run on decentralized stateful protocols enabling a verifiable shared state, and are used for applications such as Decentralized identity, Asset tokenization (NFTs), Decentralized Finance, Trusted multi-party computation etc.
+* **knowledge graphs are semantic networks.** When Google first coined the term "knowledge graph", they explained it as "things, not strings". Knowledge Graphs connect highly structured, machine-understandable, semantic entities into one **semantic data network,** enabling powerful data capabilities, such as search, inference, recommendations, advanced machine learning and others. Knowledge graphs inherit the technology stack idea of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic\_Web) (introduced as the "original" Web3.0 by Sir Tim Berners-Lee, the inventor of WWW).
 
 The two technologies are combined in the **OriginTrail** **Decentralized Knowledge Graph**, in a materialized vision of the **Semantic Web3** - a user owned, data centric, trusted, semantic web.
 
@@ -29,19 +29,17 @@ Two key requirements necessary for such Web3 infrastructure are the ability to e
 
 These distinct requirements require two distinct types of technology mentioned above  - blockchains and knowledge graphs.
 
-**Blockchains are trust networks**, designed to enable trusted computation through **decentralized consensus**, behaving like a global, trusted computer processor. **Knowledge graphs** on the other hand are semantic data networks. Powering systems of Google, NASA, Amazon and others, knowledge graphs are connected graph data structures, best for representing complex assets and their relationships in the real world.&#x20;
+**Blockchains are trust networks**, designed to enable trusted computation through **decentralized consensus**, behaving like a global, trusted computer processor. **Knowledge graphs**, on the other hand, are semantic data networks. Powering systems of Google, NASA, Amazon and others, knowledge graphs are connected graph data structures, best for representing complex assets and their relationships in the real world.&#x20;
 
 The OriginTrail tech stack leverages blockchains and knowledge graphs by incorporating them into **two network layers**.
 
 
 
-![OriginTrail combines blockchains and knowledge graphs in it's two layer infrastructure](<../.gitbook/assets/image (8).png>)
+![OriginTrail combines blockchains and knowledge graphs in its two layer infrastructure](<../.gitbook/assets/image (8).png>)
 
 
 
-The following sections of the documentation dive deep into each of the two technical layers and their interplay.&#x20;
-
-
+The following sections of the documentation dive deep into each of the two technical layers and their interplay.
 
 We distinguish several sub-layers of the DKG layer (Layer 2):
 

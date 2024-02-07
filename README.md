@@ -18,8 +18,8 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 **Explore the OriginTrail ecosystem:**
 
-* [OriginTrail websit](https://origintrail.io/)e
-* [OriginTrail White paper 2.0](https://origintrail.io/documents/OriginTrail\_Ecosystem\_White\_Paper\_2.0.pdf)
+* [OriginTrail website](https://origintrail.io/)
+* [OriginTrail White paper 2.0](https://parachain.origintrail.io/whitepaper)
 * [GitHub](https://github.com/origintrail)
 * [Medium blog](https://medium.com/origintrail)
 * [YouTube channel](https://www.youtube.com/c/OriginTrail)
@@ -37,4 +37,4 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 * [OriginTrail Twitter account](https://twitter.com/origin\_trail)
 * [Developers Twitter account](https://twitter.com/OriginTrailDev)
-* [NeuroWeb Twitter account](https://twitter.com/NeuroWebAI)
+* NeuroWeb Twitter account
