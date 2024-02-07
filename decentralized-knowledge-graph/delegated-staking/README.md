@@ -44,7 +44,7 @@ Each node can also set an _**operator\_fee**_ - taken as a percentage of the TRA
 
 First navigate to:
 
-* Testnet [DKG Explorer Staking D](https://dkg-testnet.origintrail.io)[ashboard](https://dkg-testnet.origintrail.io/staking)
+* Testnet [DKG Explorer Staking Dashboard](https://dkg-testnet.origintrail.io/staking)
 * Mainnet [DKG Explorer Staking Dashboard ](https://dkg.origintrail.io/staking)(launching imminently)
 
 {% hint style="warning" %}

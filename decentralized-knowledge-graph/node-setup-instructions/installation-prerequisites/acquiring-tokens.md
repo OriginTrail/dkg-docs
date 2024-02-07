@@ -35,7 +35,7 @@ TRAC token can be accessed through multiple (decentralized and centralized) plat
 * Bancor&#x20;
 * Wintermute (over-the-counter)
 
-More options can be found on [CoinMarketCap](https://coinmarketcap.com/currencies/origintrail/) or [CoinGecko](https://www.coingecko.com/sl/coins/origintrail#markets) platforms.
+More options can be found on [CoinMarketCap](https://coinmarketcap.com/currencies/origintrail/) or [CoinGecko](https://www.coingecko.com/en/coins/origintrail#markets) platforms.
 
 {% hint style="danger" %}
 **IMPORTANT: There is no association between the core development team and the above mentioned platforms. You should familiarise yourself with all possible risks of using their services as you are doing so under your own responsibility.**

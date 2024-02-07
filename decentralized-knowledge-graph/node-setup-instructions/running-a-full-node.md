@@ -19,14 +19,14 @@ Once the OriginTrail node starts, **several blockchain transactions need to be e
 \
 You can set the node stake and ask settings in two ways. The first option is to use the Houston application and the second is to do it by running a few npm scripts directly on the server where your nodes is installed.
 
-In order to configure stake and ask parameters on your OriginTrail DKG node, we recommend using [Houston application](https://docs.origintrail.io/decentralized-knowledge-graph-layer-2/node-setup-instructions/houston-origintrail-node-command-center).
+In order to configure stake and ask parameters on your OriginTrail DKG node, we recommend using [Houston application](houston-origintrail-node-command-center.md).
 
 ### Setting up node stake and service ask via Houston (Recommended):
 
 [Houston](houston-origintrail-node-command-center.md) is the OriginTrail node user interface (command center) that allows you to execute certain operations regarding your node on the blockchain. There are two ways to run Houston:
 
 1. Via a hosted application, which is available at the following link: [https://houston.origintrail.io/](https://houston.origintrail.io/) or
-2. Run Houston Web application locally by following the setup [instructions](running-a-full-node.md#setup-houston-locally).
+2. Run Houston Web application locally by following the setup [instructions](houston-origintrail-node-command-center.md#setup-houston-locally).
 
 More  information on Houston can be found [here](houston-origintrail-node-command-center.md)\
 \
