@@ -2,7 +2,7 @@
 
 ## Mainnet DKG node
 
-Coming soon! The 6.1.0 release is live on Mainnet nodes, ensure that you have it on your node, and soon, as Gnosis integration becomes live, there will be published more information about how to run a multichain node.
+Coming soon!
 
 ## Testnet DKG node
 
@@ -22,7 +22,7 @@ Go to [dkg-testnet-faucet.md](../useful-resources/dkg-testnet-faucet.md "mention
 
 ### 3. Update DKG node configuration
 
-Open .origintrail\_noderc file of your DKG testnet node. Within the config, locate the 'blockchain' object, and add the following object to the 'implementation' array, specifying your RPC endpoint and wallets.
+Open .origintrail\_noderc file of your DKG testnet node. Within the config, locate the `blockchain` object, and add the following object to the `implementation` array, specifying your RPC endpoint and wallets. As `operationalWallets` is an array, you can define multiple operational wallets, which is recommended.
 
 ```json
 "gnosis:100": {
@@ -32,8 +32,12 @@ Open .origintrail\_noderc file of your DKG testnet node. Within the config, loca
       "https://archive-rpc.chiado.gnosischain.com/"
     ],
     "gasPriceOracleLink": "https://blockscout.chiadochain.net/api/v1/gas-price-oracle",
-    "evmOperationalWalletPublicKey": "0x0bf...",
-    "evmOperationalWalletPrivateKey": "0x1e3...",
+    "operationalWallets": [
+      {
+        "evmAddress": "0x0bf...",
+        "privateKey": "0x1e3..."
+      }
+    ],
     "evmManagementWalletPublicKey": "0xd09..."
    }
  }
