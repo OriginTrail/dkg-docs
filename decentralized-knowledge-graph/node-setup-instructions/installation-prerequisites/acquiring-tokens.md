@@ -15,7 +15,7 @@ The OriginTrail DKG nodes operate with a two token system:&#x20;
 
 In order for your node to successfully start and run, you will need to provide these tokens to its **operational wallet.**
 
-For more information on OriginTrail two-layer utility tokens - both TRAC and OTP, please check the following page: [https://parachain.origintrail.io/whitepaper?section=trac-otp-tokenomics](https://parachain.origintrail.io/whitepaper?section=trac-otp-tokenomics)
+For more information on OriginTrail two-layer utility tokens - both TRAC and NEURO, please check the [whitepapers](https://origintrail.io/ecosystem/whitepaper).
 
 #### Layer 2 utility token - TRAC
 

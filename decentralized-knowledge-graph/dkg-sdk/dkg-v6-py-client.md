@@ -669,7 +669,7 @@ We can divide operations done by SDK into 3 types:
 * Smart contract call (non state-changing interaction)
 * Smart contract transaction (state-changing interaction)
 
-Non state-changing interactions with smart contracts are free and can be described as contract getters and don’t require transactions on the blockchain, meaning they do not incur transaction fees. Smart contract transactions are state-changing operations, meaning that they’re changing the state of the smart contract memory and it costs some amount in blockchain native gas tokens (such as ETH, OTP, etc.).
+Non state-changing interactions with smart contracts are free and can be described as contract getters and don’t require transactions on the blockchain, meaning they do not incur transaction fees. Smart contract transactions are state-changing operations, meaning that they’re changing the state of the smart contract memory and it costs some amount in blockchain native gas tokens (such as ETH, NEURO, etc.).
 
 In order to perform state-changing operations, you need to use a wallet funded with gas tokens.
 

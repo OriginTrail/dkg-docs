@@ -56,7 +56,7 @@ Universal Asset Locators are ownable identifiers of the DKG, similar to URLs in 
 
 * did (decentralized identifier) predicate
 * dkg (decentralized knowledge graph) predicate
-* blockchain identifier (otp:2043 = OriginTrail Parachain Mainnet)
+* blockchain identifier (otp:2043 = OriginTrail NeuroWeb Mainnet)
 * blockchain address (such as the address of the relevant asset NFT smart contract)
 * identifier specific to the contract, such as the ID of the NFT token
 * query and fragment components

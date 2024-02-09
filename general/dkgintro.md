@@ -46,7 +46,7 @@ We distinguish several sub-layers of the DKG layer (Layer 2):
 * **the network layer**, formed by a peer to peer swarm of DKG nodes hosted by individuals and organisations, implementing S/Kademlia
 * **data layer**, hosting the knowledge graph data, distributed across the network in separate instances of graph databases
 * **service layer**, implementing various core & extended services, such as authentication, standard interfaces and data pipelines
-* **the consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols (currently supporting Ethereum, xDai blockchain and the OriginTrail Polkadot Parachain)
+* **the consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols (currently supporting Ethereum, xDai blockchain and the OriginTrail NeuroWeb)
 * **application layer,** encompassing both Dapps and traditional applications which utilize the OriginTrail DKG as part of their data flows.
 
 <div align="center">

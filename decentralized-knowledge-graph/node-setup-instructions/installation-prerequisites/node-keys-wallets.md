@@ -17,7 +17,7 @@ In order for you to run your OriginTrail DKG node on NeuroWeb blockchain, you wi
 
 TRAC is an ERC20 token on the Ethereum blockchain, transferred over to the NeuroWeb blockchain and enhanced with Polkadot native capabilities. In order to run OriginTrail DKG node on NeuroWeb parachain, TRAC tokens are required to be transfered from Ethereum to NeuroWeb blockchain network.
 
-In order to transfer your TRAC tokens to the NeuroWeb blockchain, a Teleport system has been established until a Polkadot <-> Ethereum bridge is ready. Therefore to get your TRAC on the OriginTrail Parachain, you need to [teleport your tokens first](https://teleport.origintrail.io/).
+In order to transfer your TRAC tokens to the NeuroWeb blockchain, a Teleport system has been established until a Polkadot <-> Ethereum bridge is ready. Therefore to get your TRAC on the NeuroWeb blockchain, you need to [teleport your tokens first](https://teleport.origintrail.io/).
 
 Details are available in [OT-RFC-12](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-12%20OriginTrail%20Parachain%20TRAC%20bridges%20\(v2\).pdf).
 

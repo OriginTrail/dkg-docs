@@ -1,6 +1,6 @@
 # DKG Testnet faucet
 
-OriginTrail DKG v6 testnet nodes operate on the NeuroWeb testnet and Gnosis Chiado, and therefore operate with test tokens. For a node to be operational, it requires TRAC and OTP test tokens for OTP testnet or Gnosis Chiado for Gnosis testnet blockchains.
+OriginTrail DKG v6 testnet nodes operate on the NeuroWeb testnet and Gnosis Chiado, and therefore operate with test tokens. For a node to be operational, it requires TRAC and NEURO test tokens for NEURO testnet or Gnosis Chiado for Gnosis testnet blockchains.
 
 In order to get your test tokens, first join our [Discord server](https://discord.com/invite/FCgYk2S).
 
@@ -10,10 +10,10 @@ Once you've joined our server, enter the **#discord-bot** channel.\
 
 ### Request NeuroWeb TRAC and Neuro:
 
-To request test OTP tokens type in:\
+To request test NEURO tokens type in:\
 `!fundme_`_`otp <substrate_wallet_address`_`>`&#x20;
 
-To request test TRAC tokens on OriginTrail Parachain type in:\
+To request test TRAC tokens on OriginTrail NeuroWeb type in:\
 &#x20;`!fundme_`_`otp_trac <ethereum_wallet_address>`_
 
 ### Request Chiado TRAC and xDai:

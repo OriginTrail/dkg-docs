@@ -1,16 +1,16 @@
 # Bridging to Moonbeam
 
-### Bridge OTP from OriginTrail Parachain to Moonbeam
+### Bridge NEURO from OriginTrail NeuroWeb to Moonbeam
 
-OriginTrail Parachain token can be bridged to Moonbeam parachain using XCM. This can be done using multiple interfaces like Polkadot.js, Moonbeam Dapp etc.
+OriginTrail NEURO token can be bridged to Moonbeam parachain using XCM. This can be done using multiple interfaces like Polkadot.js, Moonbeam Dapp etc.
 
 Steps for bridgin OTP to Moonbeam using Moonbeam Dapp are:
 
 1. Visit [Moonbeam Dapp - Parachain bridges page](https://apps.moonbeam.network/moonbeam/xcm).
 2. Click on the connect the wallet in the top right corner:
    1. Choose Moonbeam for network.
-   2. Connect your EVM wallet that will receive OTP tokens on Moonbeam. This can be done using Metamask or any other wallet provided as option in the interface.
-   3. Connect your Substrate wallet that will send OTP tokens from OriginTrail Parachain. This can be done using Polkadot.js extension wallet or any other wallet that is provided as option in the interface.
+   2. Connect your EVM wallet that will receive NEURO tokens on Moonbeam. This can be done using Metamask or any other wallet provided as option in the interface.
+   3. Connect your Substrate wallet that will send NEURO tokens from OriginTrail NeuroWeb. This can be done using Polkadot.js extension wallet or any other wallet that is provided as option in the interface.
 3. Choose OTP as token.
 4. Choose OriginTrail Parachain as 'to' and Moonbeam as 'from', and click connect wallet for both chains.
 5. Select amount of tokens to bridge.&#x20;
