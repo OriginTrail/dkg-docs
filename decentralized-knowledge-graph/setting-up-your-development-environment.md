@@ -4,12 +4,6 @@ description: How to setup a local and shared development environment
 
 # 💻 Development environment setup
 
-These setup instructions for DKG v6 are "Work in progress" and are subject to change. The development team expects to introduce improvements of setting up the DKGv6 node in local environment in the future.
-
-{% hint style="success" %}
-Need any assistance with node setup? Join the DKGv6 [Discord ](https://discord.com/invite/FCgYk2S)chat and find help within the OriginTrail tech community!
-{% endhint %}
-
 ## Quick Start
 
 ### Prerequisites
@@ -21,23 +15,31 @@ Need any assistance with node setup? Join the DKGv6 [Discord ](https://discord.c
   * You need to create empty table named **operationaldb** inside MySQL.
 * You should have **npm** and **Node.js (v16)** installed
 
+{% hint style="success" %}
+Need any assistance with node setup? Join the DKGv6 [Discord ](https://discord.com/invite/FCgYk2S)chat and find help within the OriginTrail tech community!
+{% endhint %}
+
 ### Installation steps
 
-#### Step 1 - Get the DKG code by cloning the repo and checking out the proper branch
+First, clone the ot-node repo by running:
 
 ```
 git clone https://github.com/OriginTrail/ot-node
+```
+
+Navigate to it:
+
+```
 cd ot-node
 ```
 
-#### Step 2 - Install dependencies
+Then, install the required dependencies by running:
 
 ```
 npm install
 ```
 
-\
-**Step 3 -** Create **.env** file the ot-node root folder and add following line:
+Next, create a file called  `.env` and add following lines:
 
 ```
 NODE_ENV=development
@@ -45,26 +47,23 @@ RPC_ENDPOINT_BC1=http://127.0.0.1:8545
 RPC_ENDPOINT_BC2=http://127.0.0.1:9545
 ```
 
-\
-**Step 4 - Start local DKG network**
-
-In order to start the local DKG network, run the **local network setup** script to have multiple nodes running in local environment:
+In order to start the local DKG network, run the **local network setup** script to have multiple nodes running in local environment. It's recommended to run at least 12 nodes (1 bootstrap and 11 subsequent nodes) to ensure stability of operation.
 
 {% hint style="warning" %}
-The scripts below only work for macOS and WSL. If you need help with the setup on contact the team on [Discord](https://discord.com/invite/FCgYk2S).
+The scripts below only work for macOS and Linux. If you need help with the setup, contact the team on [Discord](https://discord.com/invite/FCgYk2S).
 {% endhint %}
 
 \
-In order to start the local DKG network on **macOS**, run the **local network setup** script to have multiple nodes running in local environment:
+In order to start the local DKG network on **macOS**, run the following command:
 
 ```bash
 bash tools/local-network-setup/setup-macos-environment.sh --nodes=12
 ```
 
-For running the local DKG network on **WSL**, execute the **local network setup** script. This will configure and launch multiple nodes within your **WSL** environment:
+For running the local DKG network on **Linux**, run the following command:
 
 ```bash
-./tools/local-network-setup/setup-wsl-environment.sh --ubuntuVersion=Ubuntu --nodes=12
+./tools/local-network-setup/setup-linux-environment.sh --nodes=12
 ```
 
 <figure><img src="../.gitbook/assets/Screen Shot 2023-02-22 at 14.51.44 (1).png" alt=""><figcaption><p>Successfully started node</p></figcaption></figure>
@@ -72,3 +71,10 @@ For running the local DKG network on **WSL**, execute the **local network setup*
 ## Running nodes on testnet
 
 For a shared development environment, we recommend deploying DKG testnet nodes on the testnet - instructions can be found [here](https://docs.origintrail.io/dkg-v6-upcoming-version/setup-instructions-dockerless).
+
+## Contributing
+
+These setup instructions for DKG v6 are a "Work in progress" and are subject to change. The development team expects to introduce improvements of setting up the DKGv6 node in local environment in the future.
+
+As ot-node is open source, we happily invite you to join us in our mission of building the decentralized knowledge graph - we're excited for your contributions! Please visit the [Github](https://github.com/OriginTrail/ot-node) repo for more info.
+
