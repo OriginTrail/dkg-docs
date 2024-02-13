@@ -101,7 +101,7 @@ In the upper right corner of the Staking Dashboard, click on the "Connect Wallet
 ### 5. Pick a node to delegate to
 
 * Pick one or more nodes to which you'd like to delegate your TRAC tokens. Consider the node's performance and characteristics (such as the operator fee, accumulated stake, pending rewards, etc.)
-* Click the "Delegate stake" button to open the delegation popup
+* Click the "Manage stake" button to open the delegation popup
 
 <figure><img src="../../.gitbook/assets/staking-ui.png" alt="" width="563"><figcaption><p>Indicative dashboard</p></figcaption></figure>
 
