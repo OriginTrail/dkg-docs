@@ -2,7 +2,7 @@
 
 ## What is the OriginTrail Decentralized Knowledge Graph?
 
-OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **knowledge assets**. It is hosted on an open, permissionless OriginTrail Decentralized Network (ODN) which combines **blockchain** with **knowledge graph** technology.&#x20;
+OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **knowledge assets, structured in a RDF based knowledge graph**. It is hosted on an open, permissionless OriginTrail Decentralized Network (ODN) which combines **blockchain** with **knowledge graph** technology.&#x20;
 
 OriginTrail connects to multiple blockchains, such as Ethereum, Polkadot (via NeuroWeb), Polygon, Gnosis and more to come. It is fuelled by the TRAC token, which is used to manage relations between DKG network participants. Running an OriginTrail node also makes you one of the contributors to hosting the DKG and makes you eligible for earning TRAC token rewards.
 

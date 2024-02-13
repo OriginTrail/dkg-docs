@@ -1,5 +1,5 @@
 ---
-description: What is a gateway node and what can I use it for?
+description: What is a gateway node and what can i use it for?
 ---
 
 # Running a gateway node

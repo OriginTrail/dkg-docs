@@ -6,7 +6,7 @@ description: >-
 
 # Acquiring tokens
 
-## Mainnet:
+## Mainnet networks:
 
 The OriginTrail DKG nodes operate with a two token system:&#x20;
 
@@ -16,6 +16,10 @@ The OriginTrail DKG nodes operate with a two token system:&#x20;
 In order for your node to successfully start and run, you will need to provide these tokens to its **operational wallet.**
 
 For more information on OriginTrail two-layer utility tokens - both TRAC and NEURO, please check the [whitepapers](https://origintrail.io/ecosystem/whitepaper).
+
+#### Layer 1 utility tokens
+
+OriginTrail has over time evolved into a multichain system (supporting Ethereum, Polkadot, Polygon and Gnosis blockchains) and for a fully functional hosting node you will require native tokens of the blockchains you intend to run it on as well.
 
 #### Layer 2 utility token - TRAC
 
@@ -41,15 +45,27 @@ More options can be found on [CoinMarketCap](https://coinmarketcap.com/currencie
 **IMPORTANT: There is no association between the core development team and the above mentioned platforms. You should familiarise yourself with all possible risks of using their services as you are doing so under your own responsibility.**
 {% endhint %}
 
-#### Layer 1 utility tokens
 
-OriginTrail has over time evolved into a multichain system (supporting Ethereum, Polkadot, Polygon and Gnosis blockchains) and for a fully functional hosting node you will require native tokens of the blockchains you intend to run it on as well.
 
-## Testnet:
+## Testnet networks:
 
-As described in the beginning of this tutorial, OriginTrail DKG node can be deployed on the following testnet blockchains:
+At the current stage, OriginTrail DKG node can be deployed on the following testnet blockchains:
 
 1. NeuroWeb testnet
 2. Chiado (Gnosis testnet)
 
-In order to acquire testnet tokens for the above listed blockchain, please refer to OriginTrail's Discord Faucet usage [instructions](../useful-resources/dkg-testnet-faucet.md).
+In order to acquire testnet tokens for the above listed blockchains, please refer to OriginTrail's Discord Faucet usage [instructions](../useful-resources/dkg-testnet-faucet.md).
+
+## Teleporting TRAC tokens to NeuroWeb:
+
+To transfer TRAC tokens between Ethereum and NeuroWeb, you need to execute the Teleport process. The process of Teleporting TRAC between the two networks has been explained in the [Teleport instructions](https://docs.origintrail.io/integrated-blockchains/neuroweb/teleport-instructions) section of our documentation.
+
+## Bridging TRAC to Gnosis:
+
+In order to have your TRAC tokens become available on Gnosis mainnet network, you will have to bridge them from Ethereum network with the use of bridging platforms such as [**OmniBridge**](https://omnibridge.gnosischain.com/bridge) or an another platform of your choice.
+
+
+
+{% hint style="info" %}
+Once you acquire TRAC tokens on the desired network, you may proceed with the setup.
+{% endhint %}

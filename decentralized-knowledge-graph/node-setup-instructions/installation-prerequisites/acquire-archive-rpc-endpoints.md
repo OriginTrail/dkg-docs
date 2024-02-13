@@ -20,8 +20,8 @@ Refer to the [official Gnosis documentation](https://docs.gnosischain.com/tools/
 Selecting an archival endpoint is a crucial requirement for the optimal functionality of your DKG node.&#x20;
 {% endhint %}
 
-During the installation process, installer will ask you to input the Chiado (Testnet) or Gnosis (Mainnet) archival RPC endpoint and autimatically configure your node to use it. The endpoint you provide, will be inserted into the **.origintrail\_noderc** (configuration file) automatically.
+During the installation process, installer will ask you to input the Chiado (Testnet) or Gnosis (Mainnet) archival RPC endpoint and autimatically configure your node to use it. The endpoint you provide, will be inserted into the **.origintrail\_noderc** (custom configuration file) automatically.
 
 {% hint style="info" %}
-You will be able to change your RPC endpoint manually later if you wish by editing the .origintrail\_noderc custom configuration file which will be located inside the "ot-node" directory.
+You will be able to change your RPC endpoint manually later by editing the **.origintrail\_noderc** custom configuration file which will be located inside the "ot-node" directory.
 {% endhint %}

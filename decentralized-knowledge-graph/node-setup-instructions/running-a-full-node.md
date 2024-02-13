@@ -6,14 +6,14 @@ description: >-
 
 # Running a full node
 
-## How to initiate a full node?
+## How to initiate a full DKG node?
 
-Once the OriginTrail node starts, **several blockchain transactions need to be executed for your node to become an active part of the network and start hosting the DKG Knowledge assets**. These transactions are needed to set the required TRAC stake for your node (50 000 TRAC at this time) and set the node service ask. Both values are set in TRAC tokens.
+Once the OriginTrail DKG node starts, **several blockchain transactions need to be executed for your node to become an active part of the network and start hosting the DKG Knowledge assets**. These transactions are needed to set the required TRAC stake for your node (50 000 TRAC at this time) and set the node service ask. Both values are set in TRAC tokens.
 
 ### **Setting the node stake and service ask parameters**
 
 {% hint style="warning" %}
-**50000** **TRAC** is the minimum amount of TRAC on the OriginTrail DKG Mainnet for your node to become eligible for DKG hosting and rewards. More information is available in the following OriginTrail [OT-RFC-14](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-14%20DKG%20v6%20TRAC%20Tokenomics.pdf).
+**50000** **TRAC** is the minimum amount of TRAC for a Full DKG Mainnet for your node to become eligible for DKG hosting and rewards. More information is available in the following OriginTrail [OT-RFC-14](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-14%20DKG%20v6%20TRAC%20Tokenomics.pdf).
 {% endhint %}
 
 \

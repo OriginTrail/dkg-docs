@@ -10,11 +10,11 @@ The OriginTrail DKG v6 is the newest version of OriginTrail, which introduces va
 * improved discoverability, performance and semantic capabilities with the expanding support for semantic technologies such as RDF, OWL, SPARQL, Triple Pattern Fragments, SHACL and others&#x20;
 * numerous performance updates to the protocol & network implementation
 
-### How do you build on OriginTrail v6?
+### How do you build on OriginTrail V6?
 
-We have a great new SDK for v6 - get started [here](dkg-sdk/)!
+We have a great new SDK for V6 - get started [here](dkg-sdk/)!
 
-### How can you contribute to OriginTrail v6?
+### How can you contribute to OriginTrail V6?
 
 You can contribute in several ways:
 
