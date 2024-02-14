@@ -83,7 +83,7 @@ Recommended gas price oracle by the Gnosis team: `https://api.gnosisscan.io/api?
 Initial operator fee can only be set on the profile creation, so make sure not to forget about it. In order to change it later through Houston, you will need to wait for a delay of 28 days!
 {% endhint %}
 
-After these additions, your **"blockchain"** object in the configuration file should look like the one below:
+After these additions, your **"blockchain"** object in the configuration file should look similar to the example below:
 
 ```json
 ...
@@ -93,7 +93,7 @@ After these additions, your **"blockchain"** object in the configuration file sh
         "otp:2043": {
           "enabled": true,
           "config": {
-            "hubContractAddress": "0x...",
+            "hubContractAddress": "0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA",
             "sharesTokenSymbol": "shares_token_symbol",
             "sharesTokenName": "shares_token_name",
             "operationalWallets": [
@@ -108,11 +108,11 @@ After these additions, your **"blockchain"** object in the configuration file sh
         "gnosis:100": {
           "enabled": true,
           "config": {
-            "hubContractAddress": "0x...",
-            "gasPriceOracleLink": "<gas_price_oracle_url>",
+            "hubContractAddress": "0xbEF14fc04F870c2dD65c13Df4faB6ba01A9c746b",
+            "gasPriceOracleLink": "https://api.gnosisscan.io/api?module=proxy&action=eth_gasPrice",
             "sharesTokenSymbol": "shares_token_symbol",
             "sharesTokenName": "shares_token_name",
-            "operatorFee": <desired_initial_operator_fee>,
+            "operatorFee": 5,
             "rpcEndpoints": [
               "https://<desired_rpc.endpoint>"
             ],
