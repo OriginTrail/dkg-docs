@@ -69,7 +69,21 @@ Open **.origintrail\_noderc** file of your DKG node located inside the **ot-node
  }
 ```
 
-After adding **"gnosis:100"**, your **"blockchain"** object in the configuration file should look like the one below:
+After adding **"gnosis:100"**, make sure to add the `hubContractAddress`, `gasPriceOracleLink` and initial `operatorFee` (range from 0% to 100%).
+
+{% hint style="info" %}
+List of the latest deployed contracts can be found here: [https://github.com/OriginTrail/dkg-evm-module/blob/main/deployments/gnosis\_mainnet\_contracts.json](https://github.com/OriginTrail/dkg-evm-module/blob/main/deployments/gnosis\_mainnet\_contracts.json)
+{% endhint %}
+
+{% hint style="info" %}
+Recommended gas price oracle by the Gnosis team: `https://api.gnosisscan.io/api?module=proxy&action=eth_gasPrice`
+{% endhint %}
+
+{% hint style="warning" %}
+Initial operator fee can only be set on the profile creation, so make sure not to forget about it. In order to change it later through Houston, you will need to wait for a delay of 28 days!
+{% endhint %}
+
+After these additions, your **"blockchain"** object in the configuration file should look like the one below:
 
 ```json
 ...
@@ -94,8 +108,11 @@ After adding **"gnosis:100"**, your **"blockchain"** object in the configuration
         "gnosis:100": {
           "enabled": true,
           "config": {
+            "hubContractAddress": "0x...",
+            "gasPriceOracleLink": "<gas_price_oracle_url>",
             "sharesTokenSymbol": "shares_token_symbol",
             "sharesTokenName": "shares_token_name",
+            "operatorFee": <desired_initial_operator_fee>,
             "rpcEndpoints": [
               "https://<desired_rpc.endpoint>"
             ],
