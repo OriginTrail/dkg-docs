@@ -55,6 +55,7 @@ Open **.origintrail\_noderc** file of your DKG node located inside the **ot-node
 "gnosis:100": {
   "enabled": true,
   "config": {,
+    "operatorFee": 5,
     "rpcEndpoints": [
       "https://<desired_rpc_endpoint>"
     ],
@@ -69,18 +70,10 @@ Open **.origintrail\_noderc** file of your DKG node located inside the **ot-node
  }
 ```
 
-After adding **"gnosis:100"**, make sure to add the `hubContractAddress`, `gasPriceOracleLink` and initial `operatorFee` (range from 0% to 100%).
-
-{% hint style="info" %}
-List of the latest deployed contracts can be found here: [https://github.com/OriginTrail/dkg-evm-module/blob/main/deployments/gnosis\_mainnet\_contracts.json](https://github.com/OriginTrail/dkg-evm-module/blob/main/deployments/gnosis\_mainnet\_contracts.json)
-{% endhint %}
-
-{% hint style="info" %}
-Recommended gas price oracle by the Gnosis team: `https://api.gnosisscan.io/api?module=proxy&action=eth_gasPrice`
-{% endhint %}
+After adding **"gnosis:100"**, make sure to add the initial `operatorFee` (range from 0% to 100%).
 
 {% hint style="warning" %}
-Initial operator fee can only be set on the profile creation, so make sure not to forget about it. In order to change it later through Houston, you will need to wait for a delay of 28 days!
+Initial operator fee (**operatorFee**) can only be set on the profile creation, so make sure not to forget about it. In order to change it later through Houston, you will need to wait for a delay of 28 days!
 {% endhint %}
 
 After these additions, your **"blockchain"** object in the configuration file should look similar to the example below:
@@ -93,9 +86,9 @@ After these additions, your **"blockchain"** object in the configuration file sh
         "otp:2043": {
           "enabled": true,
           "config": {
-            "hubContractAddress": "0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA",
             "sharesTokenSymbol": "shares_token_symbol",
             "sharesTokenName": "shares_token_name",
+            "operatorFee": 5,
             "operationalWallets": [
                {
                 "evmAddress": "0x...",
@@ -108,8 +101,6 @@ After these additions, your **"blockchain"** object in the configuration file sh
         "gnosis:100": {
           "enabled": true,
           "config": {
-            "hubContractAddress": "0xbEF14fc04F870c2dD65c13Df4faB6ba01A9c746b",
-            "gasPriceOracleLink": "https://api.gnosisscan.io/api?module=proxy&action=eth_gasPrice",
             "sharesTokenSymbol": "shares_token_symbol",
             "sharesTokenName": "shares_token_name",
             "operatorFee": 5,
@@ -163,11 +154,13 @@ Open the **.origintrail\_noderc** configuration file of your DKG node located in
 ```json
 "gnosis:10200": {
   "enabled": true,
-  "config": {,
+  "config": {
+    "sharesTokenSymbol": "shares_token_symbol",
+    "sharesTokenName": "shares_token_name",
+    "operatorFee": 5,
     "rpcEndpoints": [
       "https://archive-rpc.chiado.gnosischain.com/"
     ],
-    "gasPriceOracleLink": "https://blockscout.chiadochain.net/api/v1/gas-price-oracle",
     "operationalWallets": [
       {
         "evmAddress": "0x0bf...",
@@ -189,12 +182,16 @@ After adding **"gnosis:10200"**, your **"blockchain"** object in the configurati
         "otp:20430": {
           "enabled": true,
           "config": {
-            "hubContractAddress": "0x...",
             "sharesTokenSymbol": "shares_token_symbol",
             "sharesTokenName": "shares_token_name",
-            "evmOperationalWalletPublicKey": "0x...",
-            "evmOperationalWalletPrivateKey": "0x...",
-            "evmManagementWalletPublicKey": "0x..."
+            "operatorFee": 5,
+            "operationalWallets": [
+              {
+                "evmAddress": "0x0bf...",
+                "privateKey": "0x1e3..."
+              }
+            ],
+            "evmManagementWalletPublicKey": "0xd09..."
           }
         },
         "gnosis:10200": {
@@ -202,18 +199,19 @@ After adding **"gnosis:10200"**, your **"blockchain"** object in the configurati
           "config": {
             "sharesTokenSymbol": "shares_token_symbol",
             "sharesTokenName": "shares_token_name",
+            "operatorFee": 5,
             "rpcEndpoints": [
-              "https://<desired_rpc.endpoint>"
+              "https://archive-rpc.chiado.gnosischain.com/"
             ],
             "operationalWallets": [
-               {
-                "evmAddress": "0x...",
-                "privateKey": "0x..."
-               }
+              {
+                "evmAddress": "0x0bf...",
+                "privateKey": "0x1e3..."
+              }
             ],
-            "evmManagementWalletPublicKey": "0x..."
-          }
-        }
+            "evmManagementWalletPublicKey": "0xd09..."
+           }
+         }
       }
     },
 ...
