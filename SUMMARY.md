@@ -15,6 +15,7 @@
 
 * [👉 Introduction to DKG - start here](decentralized-knowledge-graph/introduction-to-dkg-v6-start-here.md)
 * [🔌 DKG Basic concepts](decentralized-knowledge-graph/dkg-basic-concepts.md)
+* [🕸️ DKG Paranets](decentralized-knowledge-graph/dkg-paranets.md)
 * [🚀 Delegated staking](decentralized-knowledge-graph/delegated-staking/README.md)
   * [🐛 Staking bug bounty](decentralized-knowledge-graph/delegated-staking/staking-bug-bounty.md)
 * [🤖 Running a DKG node](decentralized-knowledge-graph/node-setup-instructions/README.md)
@@ -38,7 +39,7 @@
     * [Manually configuring your node](decentralized-knowledge-graph/node-setup-instructions/useful-resources/manually-configuring-your-node.md)
     * [Backing up your node](decentralized-knowledge-graph/node-setup-instructions/useful-resources/backing-up-your-node.md)
   * [Need help?](decentralized-knowledge-graph/node-setup-instructions/need-help.md)
-* [🛠 DKG SDK](decentralized-knowledge-graph/dkg-sdk/README.md)
+* [🛠️ DKG SDK](decentralized-knowledge-graph/dkg-sdk/README.md)
   * [DKG Javascript SDK (dkg.js)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-js-client.md)
   * [DKG Python SDK (dkg.py)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-py-client.md)
 * [💻 Development environment setup](decentralized-knowledge-graph/setting-up-your-development-environment.md)
