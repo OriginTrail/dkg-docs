@@ -82,11 +82,7 @@ More information on Gnosis bridges can be found [here](https://docs.gnosischain.
 ### 2. Navigate to the Delegated Staking Dashboard
 
 * Testnet [DKG Explorer Staking Dashboard](https://dkg-testnet.origintrail.io/staking)
-* Mainnet [DKG Explorer Staking Dashboard ](https://dkg.origintrail.io/staking)(launching imminently)
-
-{% hint style="warning" %}
-The DKG Staking dashboard is currently in beta and is available on the Testnet DKG Explorer. As you might discover bugs and UX issues we'd love to hear you report them in our #staking [Discord](https://discordapp.com/invite/FCgYk2S) channel. We expect the productive Staking Dashboard release together with 6.2.0 mainnet release.
-{% endhint %}
+* Mainnet [DKG Explorer Staking Dashboard](https://dkg.origintrail.io/staking)
 
 ### 3. Make sure you are connected to the right blockchain
 
