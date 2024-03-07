@@ -1,3 +1,3 @@
 # Ecosystem White Paper
 
-Explore [the OriginTrail White paper 2.0](https://parachain.origintrail.io/whitepaper) to learn more about OriginTrail Ecosystem and its two layer infrastructure, combining blockchains and knowledge graphs.
+Expllore [the OriginTrail Whitepaper 3.0](https://origintrail.io/ecosystem/whitepaper) to learn more about a vision for the future of Artificial Intelligence through the concept of a Verifiable Internet for AI, leveraging synergies of crypto, internet, and AI technologies.
