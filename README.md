@@ -29,7 +29,7 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 **Join the OriginTrail community:**
 
-* [Discord](https://discordapp.com/invite/FCgYk2S)
+* [Discord](https://discord.gg/gYq6GuJ4sJ)
 * [Telegram group](https://t.me/origintrail)
 * [Reddit](https://www.reddit.com/r/OriginTrail/)
 
@@ -37,4 +37,4 @@ This site is a constantly updated, work-in-progress documentation built by the O
 
 * [OriginTrail Twitter account](https://twitter.com/origin\_trail)
 * [Developers Twitter account](https://twitter.com/OriginTrailDev)
-* NeuroWeb Twitter account
+* [NeuroWeb Twitter account](https://twitter.com/NeuroWebAI)
