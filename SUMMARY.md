@@ -5,17 +5,20 @@
 ## General
 
 * [OriginTrail - Decentralized Knowledge Graph (DKG)](general/dkgintro.md)
+* [Ecosystem White Paper](general/ecosystem-white-paper.md)
 * [Linked data & knowledge graphs](general/kg.md)
 * [Blockchains](general/blockchains.md)
 * [Development principles](general/development-principles.md)
 * [OriginTrail RFCs](general/origintrail-rfcs.md)
-* [Ecosystem White Paper](general/ecosystem-white-paper.md)
 
 ## Decentralized Knowledge Graph
 
 * [👉 Introduction to DKG - start here](decentralized-knowledge-graph/introduction-to-dkg-v6-start-here.md)
 * [🔌 DKG Basic concepts](decentralized-knowledge-graph/dkg-basic-concepts.md)
-* [🕸️ DKG Paranets](decentralized-knowledge-graph/dkg-paranets.md)
+* [🕸️ Autonomous AI Paranets](decentralized-knowledge-graph/autonomous-ai-paranets/README.md)
+  * [Initial Paranet Offerings (IPOs)](decentralized-knowledge-graph/autonomous-ai-paranets/initial-paranet-offerings-ipos.md)
+  * [IPO specification](decentralized-knowledge-graph/autonomous-ai-paranets/ipo-specification.md)
+  * [IPO registration](decentralized-knowledge-graph/autonomous-ai-paranets/ipo-registration.md)
 * [🚀 Delegated staking](decentralized-knowledge-graph/delegated-staking/README.md)
   * [🐛 Staking bug bounty](decentralized-knowledge-graph/delegated-staking/staking-bug-bounty.md)
 * [🤖 Running a DKG node](decentralized-knowledge-graph/node-setup-instructions/README.md)

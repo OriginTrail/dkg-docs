@@ -20,4 +20,5 @@ You can contribute in several ways:
 
 * by contributing to the OriginTrail v6 codebase
 * by running OriginTrail v6 nodes in one of the networks. Running a v6 node on the testnet will also make you eligible for bounty rewards, while after mainnet launch your node will be earning TRAC rewards for the services provided to the network
-* join the discussion in our tech community [Discord](https://discordapp.com/invite/FCgYk2S)!
+* join the discussion in our tech community [Discord](https://discord.gg/VZjGVwuyyZ)
+
