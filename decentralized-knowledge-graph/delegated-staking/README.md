@@ -72,9 +72,9 @@ Prepare your wallet by acquiring the TRAC tokens and native gas tokens for the b
 {% hint style="info" %}
 Delegated Staking is initially rolled out on Gnosis, which means that staking your TRAC tokens requires bridging them to the Gnosis blockchain and acquiring a small amount of Gnosis native gas token xDAI to perform transactions.&#x20;
 
-More information on xDAI and how to obtain it can be found [here](https://docs.gnosischain.com/concepts/tokens/xdai).
+More information on xDAI and how to obtain it can be found [here](https://docs.gnosischain.com/bridges/Build%20with%20Bridges/using-xdai-bridge/) and [here](https://docs.gnosischain.com/tools/Faucets).
 
-For bridging TRAC tokens to Gnosis you can use the Gnosis [Omnibridge](https://docs.gnosischain.com/bridges/tokenbridge/omnibridge).&#x20;
+For bridging TRAC tokens to Gnosis you can use the Gnosis [Omnibridge](https://docs.gnosischain.com/bridges/Build%20with%20Bridges/using-omnibridge/).&#x20;
 
 More information on Gnosis bridges can be found [here](https://docs.gnosischain.com/bridges/).
 {% endhint %}
