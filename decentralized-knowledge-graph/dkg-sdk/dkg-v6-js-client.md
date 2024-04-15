@@ -149,13 +149,13 @@ Before creating a new asset, you have the option to calculate the recommended bi
 <pre class="language-javascript"><code class="lang-javascript"><strong>const bidSuggestion = await dkg.asset.getBidSuggestion({
 </strong>    public: publicAssertion,
   },
-  { epochsNum: 2 }
+  { epochsNum: 2, bidSuggestionRange: low|mid|high|all }
 );
 
 const result = await dkg.asset.create({
     public: publicAssertion,
   },
-  { tokenAmount: bidSuggestion, epochsNum: 2, bidSuggestionRange: low|mid|high|all }
+  { tokenAmount: bidSuggestion, epochsNum: 2 }
 );
 </code></pre>
 
