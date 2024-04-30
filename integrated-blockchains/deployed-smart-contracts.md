@@ -2,7 +2,7 @@
 
 ### Blockchain smart contract addresses
 
-### **OriginTrail Parachain Mainnet**
+### **Neuroweb Mainnet**
 
 * Hub: 0x5fA7916c48Fe6D5F1738d12Ad234b78c90B4cAdA
 * HubController: 0xC9d90B4AF12dE5d25767fcd7d34529e432730F51

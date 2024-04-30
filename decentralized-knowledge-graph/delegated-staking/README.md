@@ -65,36 +65,26 @@ Each node operator can also set an “**operator fee**” which is taken as a pe
 
 ## Delegating your TRAC: Step by step
 
-### 1. Get your tokens ready
+### 1. Get your TRAC ready and open the Staking Dashboard
 
 Prepare your wallet by acquiring the TRAC tokens and native gas tokens for the blockchain you are staking on.
 
-{% hint style="info" %}
-Delegated Staking is initially rolled out on Gnosis, which means that staking your TRAC tokens requires bridging them to the Gnosis blockchain and acquiring a small amount of Gnosis native gas token xDAI to perform transactions.&#x20;
+Then navigate to the [DKG Delegated Staking Dashboard](https://dkg.origintrail.io/staking)
 
-More information on xDAI and how to obtain it can be found [here](https://docs.gnosischain.com/bridges/Build%20with%20Bridges/using-xdai-bridge/) and [here](https://docs.gnosischain.com/tools/Faucets).
-
-For bridging TRAC tokens to Gnosis you can use the Gnosis [Omnibridge](https://docs.gnosischain.com/bridges/Build%20with%20Bridges/using-omnibridge/).&#x20;
-
-More information on Gnosis bridges can be found [here](https://docs.gnosischain.com/bridges/).
-{% endhint %}
-
-### 2. Navigate to the Delegated Staking Dashboard
-
-* Testnet [DKG Explorer Staking Dashboard](https://dkg-testnet.origintrail.io/staking)
-* Mainnet [DKG Explorer Staking Dashboard](https://dkg.origintrail.io/staking)
-
-### 3. Make sure you are connected to the right blockchain
-
-Check your Metamask and confirm that you are connected properly to the Gnosis blockchain. Check the [official Gnosis instructions here. ](https://docs.gnosischain.com/developers/getting-started/quickstart)If your Metamask doesn't have Gnosis in its list of networks, follow the [instructions here to add Gnosis](https://support.metamask.io/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC).&#x20;
-
-### 4. Connect your wallet
+### 2. Connect your wallet and select the right blockchain
 
 In the upper right corner of the Staking Dashboard, click on the "Connect Wallet" button, and select your desired wallet in Metamask.
 
 ![](<../../.gitbook/assets/Screenshot 2024-02-12 at 17.00.11.png>)
 
-### 5. Pick a node to delegate to
+
+
+Check your Metamask and confirm that you are connected to the right network. To add these networks to Metamask
+
+* for **Neuroweb**: Check the [official Neuroweb documentation here](https://docs.neuroweb.ai/neuroweb-technical-information/available-networks)
+* For **Gnosis:** Check the [official Gnosis instructions here](https://docs.gnosischain.com/developers/getting-started/quickstart)
+
+### 3. Pick a DKG node to delegate TRAC to
 
 * Pick one or more nodes to which you'd like to delegate your TRAC tokens. Consider the node's performance and characteristics (such as the operator fee, accumulated stake, pending rewards, etc.)
 * Click the "Manage stake" button to open the delegation popup
@@ -117,9 +107,7 @@ Over time the amount of TRAC tokens earned by the node will grow (as the node ac
 
 <figure><img src="../../.gitbook/assets/withdrwa.png" alt="" width="553"><figcaption><p>Indicative Withdrawal popup modal</p></figcaption></figure>
 
-{% hint style="warning" %}
-The Delegated Staking feature is initially launched on the Gnosis blockchain where the OriginTrail core developers will confirm the staking implementation correctness and perform bug bounty on staking smart contracts. After successful confirmation of the implementation, the delegated staking feature will be rolled out to NeuroWeb and other blockchains.
-{% endhint %}
+
 
 ### If you are running a node
 
