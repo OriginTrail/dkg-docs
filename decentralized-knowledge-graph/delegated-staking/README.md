@@ -89,7 +89,7 @@ Check your Metamask and confirm that you are connected to the right network. To 
 * Pick one or more nodes to which you'd like to delegate your TRAC tokens. Consider the node's performance and characteristics (such as the operator fee, accumulated stake, pending rewards, etc.)
 * Click the "Manage stake" button to open the delegation popup
 
-<figure><img src="../../.gitbook/assets/staking-ui.png" alt="" width="563"><figcaption><p>Indicative dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-04-30 at 19.07.13.png" alt="" width="563"><figcaption><p>Indicative staking dashboard</p></figcaption></figure>
 
 * Designate how much TRAC you want to delegate to this node in the input box
 * Click the **Delegate button** to initiate the delegation process. This will entail two blockchain transactions - the token **approval** transaction, and the TRAC **token transfer** transaction**.**
