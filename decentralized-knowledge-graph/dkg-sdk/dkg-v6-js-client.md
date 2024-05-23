@@ -68,7 +68,7 @@ const dkg = new DKG({
     endpoint: 'http://127.0.0.1',  // gateway node URI
     port: 8900,
     blockchain: {
-        name: 'hardhat1:31337', // or otp:2160, otp::20430, otp::2043
+        name: 'hardhat1:31337', // or otp:2160, otp:20430, otp:2043
         publicKey: PUBLIC_KEY, // not required in browser, metamask used instead
         privateKey: PRIVATE_KEY, // not required in browser, metamask used instead
     },
@@ -146,7 +146,7 @@ The complete response of the method will look like:
 
 Before creating a new asset, you have the option to calculate the recommended bid amount to determine how much tokens you'll need to create an asset successfully. This can help you ensure that you have the necessary funds available. Optionally, you can specify bidSuggestionRange as low, mid,  high or all to adjust the suggested bid accordingly and satisfy the ask on desired number of nodes.
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>const bidSuggestion = await dkg.asset.getBidSuggestion({
+<pre class="language-javascript"><code class="lang-javascript"><strong>const bidSuggestion = await dkg.network.getBidSuggestion({
 </strong>    public: publicAssertion,
   },
   { epochsNum: 2, bidSuggestionRange: low|mid|high|all }
