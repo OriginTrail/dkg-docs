@@ -81,8 +81,8 @@ In the upper right corner of the Staking Dashboard, click on the "Connect Wallet
 
 Check your Metamask and confirm that you are connected to the right network. To add these networks to Metamask
 
-* for **Neuroweb**: Check the [official Neuroweb documentation here](https://docs.neuroweb.ai/neuroweb-technical-information/available-networks)
-* For **Gnosis:** Check the [official Gnosis instructions here](https://docs.gnosischain.com/developers/getting-started/quickstart)
+* for **Neuroweb**: Check the [official Neuroweb documentation](https://docs.neuroweb.ai/neuroweb-technical-information/available-networks)
+* For **Gnosis:** Check the [official Gnosis instructions](https://docs.gnosischain.com/tools/wallets/metamask/)
 
 ### 3. Pick a DKG node to delegate TRAC to
 
