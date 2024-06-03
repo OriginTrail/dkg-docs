@@ -37,8 +37,6 @@ In order for you to run your OriginTrail DKG node on NeuroWeb blockchain, you wi
 
 A node can use multiple operational wallets at once. Utilising multiple is preferrable and provides the node with more throughput for sending and updating commits and proofs, as well as performing other operations in parallel.
 
-A node can use multiple operational wallets at once. Utilising multiple is preferrable and provides the node with more throughput for sending and updating commits and proofs, as well as performing other operations in parallel.
-
 TRAC is an ERC20 token on the Ethereum blockchain, transferred over to the NeuroWeb blockchain and enhanced with Polkadot native capabilities. In order to run OriginTrail DKG node on NeuroWeb parachain, TRAC tokens are required to be transfered from Ethereum to NeuroWeb blockchain network.
 
 In order to transfer your TRAC tokens to the NeuroWeb blockchain, a Teleport system has been established until a Polkadot <-> Ethereum bridge is ready. Therefore to get your TRAC on the NeuroWeb blockchain, you need to [teleport your tokens first](https://teleport.origintrail.io/).
