@@ -14,6 +14,8 @@ Once the OriginTrail DKG node starts, **several blockchain transactions need to 
 
 {% hint style="warning" %}
 **50000** **TRAC** is the minimum amount of TRAC for a Full DKG Mainnet for your node to become eligible for DKG hosting and rewards. More information is available in the following OriginTrail [OT-RFC-14](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-14%20DKG%20v6%20TRAC%20Tokenomics.pdf).
+
+If a Full DKG node's TRAC falls below 50,000, reset the operator fee to the desired value before reactivating it.
 {% endhint %}
 
 \
