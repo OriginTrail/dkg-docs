@@ -57,6 +57,8 @@ This is a discretionary rewards program. We can cancel the program at any time, 
 
 Your testing must not violate any law, or disrupt or compromise any data that is not your own.
 
-To avoid potential conflicts of interest, we will not grant rewards to Trace Labs employees and contractors.
+{% hint style="warning" %}
+To avoid potential conflicts of interest, we will not grant rewards to Trace Labs employees, employees that have left Trace Labs within last 2 years and contractors.&#x20;
+{% endhint %}
 
 \
