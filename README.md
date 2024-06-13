@@ -1,14 +1,31 @@
-# 👋 Welcome to official OriginTrail Docs
+---
+cover: .gitbook/assets/kk.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-OriginTrail is an ecosystem **building trusted knowledge infrastructure for artificial intelligence**. It aims to address the challenge of misinformation in the age of AI by driving discoverability and ensuring the origin of information. OriginTrail is dedicated to building a sustainable global economy by organizing trusted AI-ready Knowledge Assets. It builds upon its unique Decentralized Knowledge Graph (DKG) in combination with multiple blockchains to drive value on the basis of network effects.
+# 🌍 Welcome to the official OriginTrail Documentation
 
-The DKG enables you to:
+OriginTrail is an ecosystem dedicated to **organizing knowledge in the Verifiable Internet for AI by building trusted knowledge infrastructure**.&#x20;
 
-* Easily discover, query and integrate knowledge from multiple sources
-* Securely share semantic data (knowledge) across systems and [dapps](https://en.wikipedia.org/wiki/Decentralized\_application)
-* Monetize your APIs and data, using fungible and non-fungible tokens (knowledge tokens)
-* Easily build custom verifiable data pipelines
-* Integrate with existing SSI & blockchain tooling
+It aims to address the challenge of misinformation in the age of AI by tackling the problems of AI hallucinations, data ownership and IP rights, centralization of power, bias and model collapse. It does so by building on core values of **information provenance**, **verifiability** and **positive incentive alignment** through organizing human knowledge in a **neuro-symbolic Decentralized Knowledge Graph (DKG)** and the Decentralized Retrieval Augmented Generation (DRAG) framework.
+
+To learn more about the vision of the Verifiable Internet for AI and DRAG check out the [ecosystem white paper](decentralized-knowledge-graph/ecosystem-white-paper.md).
+
+To learn more about the inner workings of the DKG and to participate [start here](decentralized-knowledge-graph/dkgintro.md).
 
 {% hint style="info" %}
 This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. We appreciate any feedback, improvement ideas and comments. To provide updates, please submit them as pull requests on the [docs Github repo.](https://github.com/OriginTrail/dkg-docs) For feedback and discussions please use Github issues.
@@ -19,7 +36,7 @@ This site is a constantly updated, work-in-progress documentation built by the O
 **Explore the OriginTrail ecosystem:**
 
 * [OriginTrail website](https://origintrail.io/)
-* [OriginTrail White paper 2.0](https://parachain.origintrail.io/whitepaper)
+* [OriginTrail White paper](https://origintrail.io/ecosystem/whitepaper)
 * [GitHub](https://github.com/origintrail)
 * [Medium blog](https://medium.com/origintrail)
 * [YouTube channel](https://www.youtube.com/c/OriginTrail)

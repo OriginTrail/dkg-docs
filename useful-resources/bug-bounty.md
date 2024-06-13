@@ -1,4 +1,4 @@
-# 🐞 General bounty program
+# Bug bounty
 
 With the intention to ensure the security and proper functioning of our websites and applications, Trace Labs has launched a dedicated bounty program. Each submission will be evaluated based on its severity and will correspond to a specific bounty reward.
 

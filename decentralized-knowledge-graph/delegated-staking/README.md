@@ -5,9 +5,9 @@ description: >-
   stake delegators.
 ---
 
-# 🚀 Delegated staking
+# 🪙 Delegated staking
 
-For a DKG node to be eligible to host a portion of the [DKG](../../general/dkgintro.md) and receive TRAC network rewards, its TRAC stake plays a crucial role. Set at the minimum of 50 000 TRAC on a particular blockchain, stake has an important role in ensuring security of the DKG. The DKG node operators can contribute to the node stake on their own or by attracting more TRAC to their stake through delegated staking. &#x20;
+For a DKG node to be eligible to host a portion of the [DKG](../dkgintro.md) and receive TRAC network rewards, its TRAC stake plays a crucial role. Set at the minimum of 50 000 TRAC on a particular blockchain, stake has an important role in ensuring security of the DKG. The DKG node operators can contribute to the node stake on their own or by attracting more TRAC to their stake through delegated staking. &#x20;
 
 There are 2 roles involved in delegated staking -  **node operators** and **TRAC delegators**.
 

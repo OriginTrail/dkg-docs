@@ -1,12 +1,24 @@
-# OriginTrail - Decentralized Knowledge Graph (DKG)
+# 🌐 OriginTrail - Decentralized Knowledge Graph (DKG)
 
 ## What is the OriginTrail Decentralized Knowledge Graph?
 
-OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **knowledge assets, structured in a RDF based knowledge graph**. It is hosted on an open, permissionless OriginTrail Decentralized Network (ODN) which combines **blockchain** with **knowledge graph** technology.&#x20;
+OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **knowledge assets, structured in a RDF knowledge graph,** hosted on an open, permissionless decentralized network of DKG nodes. It's designed to support [**the Verifiable Internet for AI**](ecosystem-white-paper.md) on the basis of an open, permissionless knowledge economy in which knowledge is the primary asset class.
 
-OriginTrail connects to multiple blockchains, such as Ethereum, Polkadot (via NeuroWeb), Gnosis and more to come. It is fueled by the TRAC token, which is used to manage relations between DKG network participants. Running an OriginTrail node also makes you one of the contributors to hosting the DKG and makes you eligible for earning TRAC token rewards.
+As a builder you can create **collaborative knowledge graphs** using DKG [paranets](autonomous-ai-paranets/), incentivise the growth of your knowledge graph with [IPOs](autonomous-ai-paranets/initial-paranet-offerings-ipos.md), with a combination of public and private (and hybrid) [knowledge assets](dkg-basic-concepts.md) and use them within an ecosystem of composable services on multiple blockchains.
 
-As a developer using the OriginTrail DKG you can create and maintain **Knowledge Assets** that can be used across Web3 applications. You can additionally apply standardized technologies such as GS1 EPCIS, RDF/SPARQL, JSON-LD and other W3C and GS1 standards out of the box.
+OriginTrail DKG strongly focuses on interoperability through standards such as semantic web standards (RDF, SPARQL, JSON-LD etc), Verifiable Credentials and Decentralized Identifiers (DIDs) by W3C, as well as GS1 standards such as the [Digital Link](https://www.gs1.org/standards/gs1-digital-link) and [EPCIS 2.0](https://www.gs1au.org/standards/epcis) for real world asset tracking (and to which OriginTrail core developers have actively contributed to).
+
+OriginTrail DKG is multi-chain, integrating with Ethereum and Polkadot ecosystem blockchains such as Gnosis, Neuroweb, Base and others. It is fueled by the TRAC utility token, which is used to manage relations between DKG network participants.&#x20;
+
+There are many ways to participate, such as:
+
+* building dapps with [DKG SDKs](dkg-sdk/)&#x20;
+* launching [DKG paranets](autonomous-ai-paranets/)
+* publishing knowledge to the DKG via knowledge mining&#x20;
+* [delegating TRAC tokens](delegated-staking/) to DKG nodes to help secure the network and earning TRAC&#x20;
+* [running DKG nodes,](node-setup-instructions/) and so helping host the DKG network and earning TRAC node operator fees&#x20;
+* open source contributions [to DKG code](../useful-resources/contribute/)
+* sharing your ideas and joining the discussion in [Discord](https://discord.gg/gYq6GuJ4sJ), [Telegram](https://t.me/origintrail), [Reddit](https://www.reddit.com/r/OriginTrail/), [X](https://x.com/origin\_trail)&#x20;
 
 ### Why combine Blockchain with Knowledge Graphs?
 
@@ -18,7 +30,7 @@ Blockchains and knowledge graphs are two different types of networks:
 The two technologies are combined in the **OriginTrail** **Decentralized Knowledge Graph**, in a materialized vision of the **Semantic Web3** - a user owned, data centric, trusted, semantic web.
 
 {% hint style="info" %}
-_If you are looking to jump right into the code, head over to the_ [_Getting Started_](../decentralized-knowledge-graph/introduction-to-dkg-v6-start-here.md) _page._
+_If you are looking to jump right into the code, head over to the_ [_Getting Started_](broken-reference) _page._
 {% endhint %}
 
 ## System architecture

@@ -12,7 +12,7 @@ As soon as you run the node, module configurations are picked up from the **conf
 
 #### The Blockchain module
 
-The ot-node blockchain module enables interactions with multiple blockchains in order to perform operations of the OriginTrail protocol. To learn more about the OriginTrail blockchain layer visit [blockchains.md](../../general/blockchains.md "mention").
+The ot-node blockchain module enables interactions with multiple blockchains in order to perform operations of the OriginTrail protocol. To learn more about the OriginTrail blockchain layer visit [Broken link](broken-reference "mention").
 
 #### Triple store module
 
@@ -28,7 +28,7 @@ The triple store module utilizes [the Communica framework](https://comunica.dev/
 
 #### Validation module
 
-The validation module is used to validate assertions seen on the network. More information on assertions can be found [here](../dkg-basic-concepts.md#dkg-assertions).
+The validation module is used to validate assertions seen on the network. More information on assertions can be found [here](../../decentralized-knowledge-graph/dkg-basic-concepts.md#dkg-assertions).
 
 #### Auto updater module
 

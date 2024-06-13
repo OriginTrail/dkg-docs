@@ -1,3 +1,9 @@
+---
+description: >-
+  What you need to launch an Initial Paranet Offering and incentivise creation
+  of your paranet knowledge graph
+---
+
 # IPO specification
 
 In this specification phase, the focus is on the concept for your paranet and how you plan to apply incentives to grow a vibrant community of knowledge miners. [Here is a template](https://docs.google.com/document/d/1QzKpH\_ex-U8mxh-IgwTjijEe3n6vwRVAhG599siapQQ/edit#heading=h.61lymw4v18qp) that needs to be populated for your Initial Paranet Offering (IPO). Below, you will find detailed guidelines and additional information to assist you in filling out the template and structuring your IPO proposal effectively.

@@ -20,7 +20,7 @@ To launch your Initial Paranet Offering you are expected to:
    * Sharing it on X (Twitter)
    * Posting on [Discord](https://discord.com/invite/qRc4xHpFnN)&#x20;
    * Sending to [Telegram](https://t.me/origintrail)&#x20;
-4. Before launching the Governance vote,[ **register your paranet**](ipo-registration.md) by creating the Paranet Registry Knowledge Asse and instantiating the _ParanetIncentives_ smart contract via the _ParanetIncentiveFactory_ contract.&#x20;
+4. Before launching the Governance vote,[ **register your paranet**](launching-your-ipo.md) by creating the Paranet Registry Knowledge Asse and instantiating the _ParanetIncentives_ smart contract via the _ParanetIncentiveFactory_ contract.&#x20;
 5. **Launch the NeuroWeb Governance Proposal for your paranet**. General instructions for submitting governance proposals are available [here](https://docs.neuroweb.ai/on-chain-governance/submit-a-governance-proposal).
 6. Once your paranet idea is supported (voted Aye by majority vote of the Neuroweb community), proceed with activating your paranet and knowledge mining
 

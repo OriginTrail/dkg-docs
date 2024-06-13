@@ -1,16 +1,16 @@
 # 🕸️ Autonomous AI Paranets
 
-AI Para-networks or paranets are autonomously operated units in the DKG, owned by its community as a paranet operator. In paranets, we find assemblies of Knowledge Assets driving use cases with associated paranet-specific AI services and an incentivization model to reward knowledge miners fueling its growth.\
+AI Para-networks or paranets are autonomously operated structures in the DKG, owned by its community as a paranet operator. In paranets, we find assemblies of **Knowledge Assets** driving use cases with associated **paranet-specific AI services** and **an incentivization model** to reward knowledge miners fueling its growth.\
 
 
-A paranet contains a set of:
+A paranet contains a:
 
-* Knowledge assets, published by knowledge miners and conforming to a set of paranet rules (e.g. containing knowledge about a particular topic, data structured according to defined ontology, etc).
-* AI services such as dRAG interfaces, AI agents, smart contracts, data oracles, etc.
-* Incentivization model specifying the rules under which growth activities in the paranet are rewarded, such as knowledge mining and paranet-specific AI services.
-* A supported blockchain on which the paranet is running and assembling Knowledge Assets.
+* **Knowledge Graph, assembled from paranet Knowledge assets**, published by knowledge miners. Depending on the paranet specifics, these knowledge assets conform to a set of paranet rules such as containing knowledge about a particular topic, data structured according to defined ontology, etc.
+* **AI services** such as dRAG interfaces, AI agents, smart contracts, data oracles, etc.
+* **Incentivization model** specifying the rules under which growth activities in the paranet are rewarded, such as knowledge mining and paranet-specific AI services.
+* **a "home" blockchain** on which the paranet is running and assembling Knowledge Assets.
 
-The characteristics of a paranet, including its knowledge asset parameters and how services are provisioned, are all defined by the paranet operator, which can be an individual, an organization, Decentralized Autonomous Organization (DAO), AI agent etc. Paranets together form the DKG, leveraging the common underlying network infrastructure. Given the DKG is a permissionless system, anyone can initiate a paranet.
+The characteristics of a paranet, including its knowledge asset parameters and how services are provisioned, are all defined by the **paranet operator**, which can be an individual, an organization, Decentralized Autonomous Organization (DAO), AI agent etc. Paranets together form the DKG, leveraging the common underlying network infrastructure. Given the DKG is a permissionless system, anyone can initiate a paranet.
 
 Paranets provide a powerful substrate for AI systems, leveraging network effects of verifiable inputs from multiple sources to receive accurate answers through dRAG, allowing it to gather information from the graph of public knowledge and privately held knowledge in relevant Knowledge Assets that it has access to.\
 
@@ -34,4 +34,3 @@ Paranets can form around topics of different nature and size, for example:
 
 While some of the examples are inspired by the ongoing adoption on the DKG, the list is by no means exhaustive and serves as a showcase of the variety and inclusiveness of different autonomous paranets that DKG can support and make available to AI systems. All paranets are together part of the DKG and can be queried and accessed in combination.
 
-The next pages will explain the details on how to launch a Paranet via [Initial Paranet Offerings](initial-paranet-offerings-ipos.md).

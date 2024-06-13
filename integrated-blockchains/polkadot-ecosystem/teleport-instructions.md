@@ -1,18 +1,16 @@
 ---
 description: >-
   The instructions on this page will guide you through the step-by-step process
-  of teleporting your TRAC tokens between the OriginTrail NeuroWeb and Ethereum
+  of teleporting your TRAC tokens between the NeuroWeb blockchain and Ethereum
   networks and vice versa.
 ---
 
 # Teleport instructions
 
-After the successful integration of the OriginTrail Decentralized Knowledge Graph (DKG) with the OriginTrail NeuroWeb the teleport interface has been launched in order to allow users to transfer TRAC tokens from Ethereum to OriginTrail NeuroWeb and vice versa. The specific details of the teleport can be found in relevant OriginTrail RFCs:
+After the successful integration of the OriginTrail Decentralized Knowledge Graph (DKG) with the  NeuroWeb the teleport interface has been launched in order to allow users to transfer TRAC tokens from Ethereum to OriginTrail NeuroWeb and vice versa. The specific details of the teleport can be found in relevant OriginTrail RFCs:
 
 * [OT-RFC-12 on OriginTrail Parachain TRAC bridges](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-12%20OriginTrail%20Parachain%20TRAC%20bridges%20\(v2\).pdf)
 * [OT-RFC-16 on Parachain Bridges Implementation RFC](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-16-Parachain-Bridges-Implementation/OT-RFC-16-Parachain-Bridges-Implementation.pdf)
-
-
 
 ### Prerequisites:
 

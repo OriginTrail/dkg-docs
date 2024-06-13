@@ -2,7 +2,7 @@
 description: How to setup a local and shared development environment
 ---
 
-# 💻 Development environment setup
+# Development environment setup
 
 ## Quick Start
 
@@ -66,7 +66,7 @@ For running the local DKG network on **Linux**, run the following command:
 ./tools/local-network-setup/setup-linux-environment.sh --nodes=12
 ```
 
-<figure><img src="../.gitbook/assets/Screen Shot 2023-02-22 at 14.51.44 (1).png" alt=""><figcaption><p>Successfully started node</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2023-02-22 at 14.51.44 (1).png" alt=""><figcaption><p>Successfully started node</p></figcaption></figure>
 
 ## Running nodes on testnet
 

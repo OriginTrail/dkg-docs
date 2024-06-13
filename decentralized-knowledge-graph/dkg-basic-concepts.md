@@ -31,7 +31,7 @@ There are three phases for a state of a knowledge asset:
 * LATEST\_FINALIZED: latest committed state, accepted by the network.
 * HISTORICAL: any previously finalized state, identifiable by its state hash.
 
-More information about [Knowledge Assets.](knowledge-assets.md)
+More information about [Knowledge Assets.](broken-reference)
 
 ### What is RDF?
 
@@ -39,7 +39,7 @@ The Resource Description Framework (RDF) is a W3C standardized model designed to
 
 RDF Schemas provide mechanisms for describing related resources and their relationships. It is similar to object-oriented programming languages and differs in that it describes properties in terms of resource classes. RDF enables querying via the SPARQL query language.
 
-[More information about RDF Schemas used for Knowledge Assets](knowledge-assets.md)
+[More information about RDF Schemas used for Knowledge Assets](broken-reference)
 
 [Examples of Schemas Definitions by schema.org](https://schema.org/docs/schemas.html)
 
