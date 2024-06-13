@@ -12,4 +12,6 @@ Using SPARQL it is possible to query and integrate knowledge from multiple paran
 
 ### Running paranet services
 
-Paranets enable registering and exposing both on chain and off chain services associated with it. It would be&#x20;
+Paranets enable registering and exposing both on chain and off chain services associated with it. A paranet service can be identified by all users of the paranet via its registry knowledge asset, and can have multiple on-chain accounts under its control, enabling them to engage in economic activity within the DKG. Examples of paranet services are AI agents (e.g. autonomous reasoners mining knowledge assets), chatbots (e.g. [Polkabot](https://polkabot.ai/)) , oracle feeds, LLMs, DRAG APIs etc.
+
+Paranet operators manage the services through the Paranet Services Registry smart contracts.&#x20;
