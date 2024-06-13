@@ -27,8 +27,8 @@ To learn more about the vision of the Verifiable Internet for AI and DRAG check 
 
 To learn more about the inner workings of the DKG and to participate [start here](decentralized-knowledge-graph/dkgintro.md).
 
-{% hint style="info" %}
-This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. We appreciate any feedback, improvement ideas and comments. To provide updates, please submit them as pull requests on the [docs Github repo.](https://github.com/OriginTrail/dkg-docs) For feedback and discussions please use Github issues.
+{% hint style="success" %}
+This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. Find the "Edit on Github" button in the upper right corner and submit your updates as pull requests (or do it directly on the [docs Github repo).](https://github.com/OriginTrail/dkg-docs) We appreciate any feedback, improvement ideas and comments.
 {% endhint %}
 
 ### Useful Links
