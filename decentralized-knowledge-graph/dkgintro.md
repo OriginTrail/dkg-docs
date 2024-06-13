@@ -25,9 +25,7 @@ There are many ways to participate, such as:
 Blockchains and knowledge graphs are two different types of networks:
 
 * **blockchains are trust networks**. They run on decentralized stateful protocols enabling a verifiable shared state, and are used for applications such as Decentralized identity, Asset tokenization (NFTs), Decentralized Finance, Trusted multi-party computation etc.
-* **knowledge graphs are semantic networks.** When Google first coined the term "knowledge graph", they explained it as "things, not strings". Knowledge Graphs connect highly structured, machine-understandable, semantic entities into one **semantic data network,** enabling powerful data capabilities, such as search, inference, recommendations, advanced machine learning and others. Knowledge graphs inherit the technology stack idea of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic\_Web) (introduced as the "original" Web3.0 by Sir Tim Berners-Lee, the inventor of WWW).
-
-The two technologies are combined in the **OriginTrail** **Decentralized Knowledge Graph**, in a materialized vision of the **Semantic Web3** - a user owned, data centric, trusted, semantic web.
+* **knowledge graphs are semantic networks.** When Google first coined the term "knowledge graph", they explained it as "things, not strings". Knowledge Graphs connect highly structured, machine-understandable, semantic entities into one **semantic data network,** enabling powerful data capabilities, such as search, reasoning, inference, recommendations and other forms of symbolic AI. Knowledge graphs inherit the technology stack idea of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic\_Web) (introduced as the "original" Web3.0 by Sir Tim Berners-Lee, the inventor of WWW). They are particularly well positioned for use with LLMs as they provide highly contextualized knowledge (or annotated data)
 
 {% hint style="info" %}
 _If you are looking to jump right into the code, head over to the_ [_Getting Started_](broken-reference) _page._
@@ -35,21 +33,11 @@ _If you are looking to jump right into the code, head over to the_ [_Getting Sta
 
 ## System architecture
 
-The OriginTrail tech stack is purposefully designed to bring real world assets into the Web3, enabling discoverability, verifiability and connectivity of physical and digital assets in one coherent Web3 data ecosystem.&#x20;
+OriginTrail synergizes blockchains and knowledge graphs in a layered architecture.&#x20;
 
-Two key requirements necessary for such Web3 infrastructure are the ability to ensure **trust via decentralized consensus** and utilize **semantic, verifiable asset data** for representing complex real world relationships and characteristics (such as ownership, location, business context, etc).
+**Blockchains are trust networks**, designed to enable trusted computation through **decentralized consensus**, behaving like a global, trusted computer. **Knowledge graphs**, on the other hand, are semantic data networks for knowledge management. Providing a trusted environment for AI applications via these two fundamental layers is what OriginTrail architecture is designed for.
 
-These distinct requirements require two distinct types of technology mentioned above  - blockchains and knowledge graphs.
-
-**Blockchains are trust networks**, designed to enable trusted computation through **decentralized consensus**, behaving like a global, trusted computer processor. **Knowledge graphs**, on the other hand, are semantic data networks. Powering systems of Google, NASA, Amazon and others, knowledge graphs are connected graph data structures, best for representing complex assets and their relationships in the real world.&#x20;
-
-The OriginTrail tech stack leverages blockchains and knowledge graphs by incorporating them into **two network layers**.
-
-
-
-![OriginTrail combines blockchains and knowledge graphs in its two layer infrastructure](<../.gitbook/assets/image (8).png>)
-
-
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-13 at 23.54.29.png" alt=""><figcaption><p>The three layers of OriginTrail</p></figcaption></figure>
 
 The following sections of the documentation dive deep into each of the two technical layers and their interplay.
 
