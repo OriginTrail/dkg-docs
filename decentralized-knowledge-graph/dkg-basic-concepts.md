@@ -1,21 +1,22 @@
 # 🔌 DKG Basic concepts
 
-OriginTrail Decentralized Knowledge Graph (DKG) combines several standardized components from both blockchain and knowledge graph space. The core primitive of the DKG is the "Knowledge Asset", explained together with other important components below.
+The OriginTrail Decentralized Knowledge Graph (DKG) combines several standardized components from both blockchain and knowledge graph technologies. The core primitive of the DKG is the "knowledge asset" (KA), the _"molecule"_ of the DKG.
 
-### What is a Knowledge Asset?
+### What are Knowledge Assets
 
-A knowledge asset is an ownable container for your valuable information that can describe any physical thing, documents, abstract concepts, numbers and strings. It lives in a decentralized knowledge graph which makes it easily discoverable, while your information integrity and knowledge asset ownership are safeguarded by the underlying blockchain.
+A knowledge asset is an ownable container of knowledge that can describe any digital or physical object, abstract concept, or really any "thing". It lives in a decentralized knowledge graph which makes it easily discoverable, while its information integrity and ownership are supported by the blockchain.
 
 More precisely, a Knowledge Asset is a web resource identified by Uniform Asset Locators (or UAL, which is an extension of the traditional URL), consisting of
 
-* the asset graph, which contains the knowledge asset **data**, represented in RDF, stored on the DKG (and not on the blockchain)
-* Immutability proofs & ownership record: consisting of asset graph state **proofs** and **ownership record**, represented using a non-fungible token stored on a blockchain.
+* **knowledge:** in the form of graph data (RDF) and vector embeddings, stored on the DKG (not on the blockchain)
+* **cryptographic proofs**:  representing cryptographic digests of the **knowledge,** stored on the blockchain
+* **Uniform Asset Locator:** globally unique URI with assigned ownership using blockchain accounts, implemented as a non-fungible token on the blockchain
 
-<figure><img src="https://lh4.googleusercontent.com/Cr4oefUxDeNxFWsnoJzp9b_N3aaQ85W8UUJJ8psliceQqM5X4SxSWNlKgij_UrkNXcsI6Re50hYOWBbIO8lMc5oNPRGVVfM6PeptRfb40DavCxR7Kl33eud6gZ51WIqh90acwVR-L_EZQpv6Aer9bog" alt=""><figcaption><p>The anatomy of a Knowledge Asset</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-13 at 22.59.48.png" alt=""><figcaption></figcaption></figure>
 
-Asset graphs are formed of **assertions**, which represent asset content states. An assertion is stored on the DKG with a cryptographic fingerprint used for verification. Each assertion can be independently verified for integrity, by recomputing the cryptographic fingerprint by the verifier and comparing if the computed result matches with the corresponding blockchain fingerprint record.
+The knowledge content can be observed as a time series of knowledge content states, or **assertions**.  Each assertion can be independently verified for integrity, by recomputing the cryptographic fingerprint by the verifier and comparing if the computed result matches with the corresponding blockchain fingerprint record.
 
-Technically, an assertion is represented using the n-quads serialization (stored on the DKG) and a cryptographic fingerprint used for assertion verification (n-quads graph Merkle root, stored immutably on the blockchain).
+Technically, an assertion is represented using the n-quads serialization and a cryptographic fingerprint used for assertion verification (n-quads graph Merkle root, stored immutably on the blockchain).
 
 Knowledge Assets can contain both public and private data - the public assertion data being replicated on the OriginTrail Decentralized Network and publicly available, and private assertion data contained within the private domain of the asset owner (e.g. OriginTrail Node run by the asset owner, such as a person or company).
 
