@@ -1,3 +1,22 @@
+---
+cover: ../../../.gitbook/assets/dkg-js-banner.jpg
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Interact with DKG Paranets
 
 The DKG JavaScript SDK provides functionality for interacting with Paranets on the OriginTrail Decentralized Knowledge Graph. This section of the SDK allows developers to create, manage, and utilize paranets effectively.
