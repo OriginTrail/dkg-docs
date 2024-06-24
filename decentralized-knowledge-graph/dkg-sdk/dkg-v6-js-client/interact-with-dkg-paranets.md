@@ -71,10 +71,10 @@ In this example:
 
 The object passed as the third parameter includes the following properties:
 
-* **TRAC to NEURO Emission Multiplier:** This defines the conversion rate for emissions. For instance, with a multiplier of `2.5`, for every 1 TRAC used in knowledge mining, 2 NEURO will be emitted. This is distributed among the contributors as follows:
-  * **Knowledge Miners:** Receive the bulk of the emissions, equating to 2 NEURO per 1 TRAC used.
-  * **Paranet Operator:** Receives a percentage of the emissions, calculated as a fraction of the TRAC used.
-  * **Proposal Voters:** Share the remaining portion of the emissions, rewarded for supporting incentivization proposals.
+* **TRAC to NEURO Emission Multiplier:** This defines the conversion rate for emissions. For instance, with a multiplier of `2.5`, for every 1 TRAC used in knowledge mining, 2.5 NEURO will be emitted. This is distributed among the contributors as follows:
+  * **Paranet Operator:** Receives a percentage of the emissions, calculated as a fraction of the TRAC used (10% of 2.5 NEURO).
+  * **Proposal Voters:** Share the remaining portion of the emissions, rewarded for supporting incentivization proposals (10% of 2.5 NEURO).
+  * **Knowledge Miners:** Receive the rest of the emissions, equating to 2 NEURO per 1 TRAC used in this case.
 * **Operator Reward Percentage:** Defines the portion of the NEURO emissions that will be allocated to the Paranet operator as a fee. For example, if set to `10.00%`, the operator receives 0.25 NEURO per 1 TRAC used for knowledge mining.
 * **Incentivization Proposal Voters Reward Percentage:** Specifies the percentage of NEURO emissions that will be distributed among the voters who supported incentivization proposals. For instance, with a `10.00%` setting, 0.25 NEURO will be shared among the voters per 1 TRAC used.
 
