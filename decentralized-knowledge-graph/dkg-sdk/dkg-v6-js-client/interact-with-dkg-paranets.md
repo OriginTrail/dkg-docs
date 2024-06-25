@@ -108,6 +108,48 @@ In this example:
 
 By integrating and managing services, Paranet operators can expand the capabilities of their Paranet, providing a robust infrastructure for decentralized applications and AI-driven services.
 
+#### Knowledge mining for Paranets
+
+Paranets allow users to leverage collective intelligence by contributing their knowledge assets, enhancing the overall utility and value of the network. There are two primary ways to add a Knowledge Asset to a Paranet:
+
+1. **Directly Mining Knowledge Assets to a Paranet**
+2. **Submitting Existing Knowledge Assets to a Paranet**
+
+To directly mine Knowledge Assets and add them to a Paranet, use the `dkg.asset.create` function and specify the `paranetUAL` as a parameter. Here’s an example:
+
+```javascript
+const content = {
+    public: {
+        '@context': ['https://schema.org'],
+        '@id': 'uuid:22',
+        company: 'KA-Company',
+        user: {
+            '@id': 'uuid:user:22',
+        },
+        city: {
+            '@id': 'uuid:budapest',
+        },
+    }
+};
+const paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1';
+
+const knowledgeAsset = await DkgClient.asset.create(content, { epochsNum: 2, paranetUAL: paranetUAL });
+console.log('Knowledge asset created with UAL: ', knowledgeAsset.UAL);
+```
+
+In this example, the Knowledge Asset is created and directly added to the specified Paranet.
+
+If you have existing Knowledge Assets, you can submit them to a Paranet using the `dkg.asset.submitToParanet` function. Here’s an example:
+
+```javascript
+const paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1';
+const kaUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/55';
+
+await DkgClient.asset.submitToParanet(kaUAL, paranetUAL);
+```
+
+Adding Knowledge Assets to Paranets can be done directly during the creation process or by submitting existing assets. This flexibility allows for robust management and contribution of knowledge, enhancing the collective intelligence and functionality of the Paranet.
+
 #### Checking and Claiming Rewards
 
 Participants in a Paranet can earn rewards for their various roles and contributions, such as knowledge mining, voting on proposals, or operating the Paranet. The dkg.js library provides functions to check if an address has a specific role within the Paranet and to claim rewards associated with that role.
