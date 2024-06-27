@@ -41,7 +41,7 @@
   * [Development environment setup](decentralized-knowledge-graph/dkg-sdk/setting-up-your-development-environment.md)
   * [DKG Javascript SDK (dkg.js)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-js-client/README.md)
     * [Interact with DKG Paranets](decentralized-knowledge-graph/dkg-sdk/dkg-v6-js-client/interact-with-dkg-paranets.md)
-  * [DKG Python SDK (dkg.py)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-py-client/README.md)
+  * [DKG Python SDK (dkg.py)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-py-client.md)
     * [Interact with DKG Paranets](decentralized-knowledge-graph/dkg-sdk/dkg-v6-py-client/interact-with-dkg-paranets.md)
 * [📚 Tutorials](decentralized-knowledge-graph/tutorials.md)
 * [📜 Ecosystem White Paper](decentralized-knowledge-graph/ecosystem-white-paper.md)

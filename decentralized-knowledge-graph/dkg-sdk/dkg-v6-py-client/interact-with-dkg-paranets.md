@@ -18,7 +18,7 @@ The DKG Python SDK provides functionality for interacting with Paranets on the O
 
 #### Setup and Installation
 
-To interact with Paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.py SDK installed and properly configured. Follow the general setup instructions for [installing dkg.py](./) and read more about Paranets [in the following section](../../autonomous-ai-paranets/).
+To interact with Paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.py SDK installed and properly configured. Follow the general setup instructions for [installing dkg.py](../dkg-v6-py-client.md) and read more about Paranets [in the following section](../../autonomous-ai-paranets/).
 
 #### Creating a Paranet
 

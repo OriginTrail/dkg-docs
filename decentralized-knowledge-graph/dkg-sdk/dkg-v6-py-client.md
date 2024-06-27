@@ -4,13 +4,9 @@ description: Python library for interacting with the Decentralized Knowledge Gra
 
 # DKG Python SDK (dkg.py)
 
-{% hint style="danger" %}
-dkg.py library is currently in beta. The beta version is intended for testing and evaluation purposes only. It is not recommended for use in a production environment where stability and reliability are crucial.
-{% endhint %}
+If you are looking to build applications leveraging [knowledge assets](../dkg-basic-concepts.md) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.py library is the best place to start!
 
-If you are looking to build applications leveraging [knowledge assets](../../dkg-basic-concepts.md) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.py library is the best place to start!
-
-The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-Node](../../node-setup-instructions/), in order to use the SDK.
+The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on [your local environment](setting-up-your-development-environment.md) or a [hosted OT-Node](../node-setup-instructions/), in order to use the SDK.
 
 {% hint style="info" %}
 Running a gateway node is not the same as running a **full (DKG hosting) node**, which requires 50 000 TRAC tokens to be posted as stake collateral. Running a gateway node requires no tokens to be posted as collateral.
@@ -92,7 +88,7 @@ public_assertion = {
 }
 ```
 
-When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochs_number` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
+When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](../dkg-basic-concepts.md)). When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochs_number` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
 
 ```python
 create_asset_result = dkg.asset.create(
