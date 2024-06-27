@@ -19,7 +19,7 @@ From an architectural standpoint, the SDK libraries are application interfaces i
 The OriginTrail SDK libraries are being built in various languages by the team and the community, as listed below:
 
 * [**dkg.js**](dkg-v6-js-client/) -Javascript client (if you are looking for the v5 client, you can find it [here](https://github.com/OriginTrail/dkg-client))
-* [**dkg.py**](dkg-v6-py-client.md) - Python client
+* [**dkg.py**](dkg-v6-py-client/) - Python client
 * **dkg.php** - PHP client (coming soon)
 * **dkg.rs** - Rust client (coming soon)
 * **dkg.go** - Go client (coming soon)
