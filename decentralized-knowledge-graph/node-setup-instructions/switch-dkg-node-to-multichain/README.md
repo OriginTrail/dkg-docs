@@ -12,6 +12,8 @@ At the current stage, the following multichain integrations are available for th
 * NeuroWeb testnet
 * Gnosis
 * Chiado (Gnosis testnet)
+* Base **(coming soon)**
+* Base Sepolia
 
 {% hint style="info" %}
 Before proceeding with updating your node to multichain state, ensure you have DKG node fully operational and connected to at least 1 of the currently supported blockchains.

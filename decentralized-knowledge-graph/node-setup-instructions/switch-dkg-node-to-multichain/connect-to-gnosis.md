@@ -17,7 +17,7 @@ layout:
     visible: true
 ---
 
-# Connect your node to Gnosis
+# Connect to Gnosis
 
 Since 6.2.0 release, OriginTrail DKG nodes support Gnosis blockchain. Learn more about how to use your node with Gnosis below.
 
@@ -231,9 +231,7 @@ otnode-restart && otnode-logs
 
 If you added everything successfully, your node will show the log that says “**blockchain module initialized with implementation: gnosis:10200**”.
 
-Use npm scripts to setup both node stake and service ask directly from the server where your node was installed, **however this process requires you to provide your node admin wallet key on the script.**&#x20;
 
-Example command:&#x20;
 
 If you have come this far and your node logs are not showing any errors, you're node is successfully set up!&#x20;
 
