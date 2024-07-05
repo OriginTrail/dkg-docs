@@ -1,4 +1,4 @@
-# OriginTrail node installation
+# DKG node installation
 
 After preparing all the requirements for running your OriginTrail DKG node which includes wallets, tokens and RPC endpoints, you are now ready to start the installer and launch your OriginTrail DKG node.
 
@@ -6,8 +6,8 @@ At this stage, there are two approaches when it comes to deploying the OriginTra
 
 1. Downloading and running the installer (instructions provided below)
 2. DigitalOcean 1-click deployment (available on DigitalOcean marketplace)
-   * Mainnet 1-click deployment: [Marketplace link](https://marketplace.digitalocean.com/apps/origintrail-dkg-mainnet-node)
-   * Testnet 1-click deployment: [Marketplace link](https://marketplace.digitalocean.com/apps/origintrail-dkg-testnet-node)
+   * Mainnet 1-click deployment: Currently unavailable (Coming soon)
+   * Testnet 1-click deployment: Currently unavailable (Coming soon)
 
 {% hint style="info" %}
 Make sure that you follow our communication channels closely for all the updates regarding additional options of launching and running the OriginTrail DKG node.
@@ -79,4 +79,3 @@ Do not run the installer with "sudo".
 ```
 ./installer.sh
 ```
-

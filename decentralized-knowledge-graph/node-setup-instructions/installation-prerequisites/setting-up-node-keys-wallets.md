@@ -68,4 +68,17 @@ In order for you to run your OriginTrail DKG node on Gnosis or Chiado blockchain
 
 It's recommended to assign multiple operational wallets to a node in order to increase throughput and reliability of operations.
 
-Once the wallets have been prepared, proceed to the process of acquiring tokens on the desired network (testnet or mainnet). It's recommended to assign multiple operational wallets to a node in order to increase throughput and reliability of operations.
+Once the wallets have been prepared, proceed to the process of acquiring tokens on the desired network (testnet or mainnet).&#x20;
+
+
+
+## Base and Base Sepolia wallet preparation:
+
+In order for you to run your OriginTrail DKG node on Base or Base Sepolia blockchains, you will need to prepare and fund at least following wallets:
+
+* At least one “Operational” EVM wallet (defined in **operationalWallets**)
+* 1x “Admin” EVM wallet (mapped to **evmManagementWallet**)
+
+It's recommended to assign multiple operational wallets to a node in order to increase throughput and reliability of operations.
+
+Once the wallets have been prepared, proceed to the process of acquiring tokens on the desired network (testnet or mainnet).&#x20;

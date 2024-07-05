@@ -14,13 +14,29 @@ When it comes to deploying your node on OriginTrail's NeuroWeb (testnet or mainn
 
 ## 2. Gnosis and Chiado archival RPC endpoints:
 
-Refer to the [official Gnosis documentation](https://docs.gnosischain.com/tools/rpc/) and choose an RPC provider in order to acquire the archival RPC Endpoint.
+Refer to the [official Gnosis documentation](https://docs.gnosischain.com/tools/rpc/)[ ](https://docs.gnosischain.com/)and choose an RPC provider in order to acquire the archival RPC Endpoint.
 
 {% hint style="warning" %}
 Selecting an archival endpoint is a crucial requirement for the optimal functionality of your DKG node.&#x20;
 {% endhint %}
 
-During the installation process, installer will ask you to input the Chiado (Testnet) or Gnosis (Mainnet) archival RPC endpoint and autimatically configure your node to use it. The endpoint you provide, will be inserted into the **.origintrail\_noderc** (custom configuration file) automatically.
+During the installation process, installer will ask you to input the Chiado (Testnet) or Gnosis (Mainnet) archival RPC endpoint which will autimatically configure your node to use it. The endpoint you provide, will be inserted into the **.origintrail\_noderc** (custom configuration file) automatically.
+
+{% hint style="info" %}
+You will be able to change your RPC endpoint manually later by editing the **.origintrail\_noderc** custom configuration file which will be located inside the "ot-node" directory.
+{% endhint %}
+
+
+
+## 3. Base and Base Sepolia archival RPC endpoints:
+
+Refer to the[ official Base documentation](https://docs.base.org/docs/) and choose an RPC provider in order to acquire the archival RPC Endpoint.
+
+{% hint style="warning" %}
+Selecting an archival endpoint is a crucial requirement for the optimal functionality of your DKG node.&#x20;
+{% endhint %}
+
+During the installation process, installer will ask you to input the Base Sepolia (Testnet) or Base (Mainnet) archival RPC endpoint which will autimatically configure your node to use it. The endpoint you provide, will be inserted into the **.origintrail\_noderc** (custom configuration file) automatically.
 
 {% hint style="info" %}
 You will be able to change your RPC endpoint manually later by editing the **.origintrail\_noderc** custom configuration file which will be located inside the "ot-node" directory.

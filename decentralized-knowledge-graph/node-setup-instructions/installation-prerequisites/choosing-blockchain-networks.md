@@ -12,11 +12,13 @@ At the current stage, OriginTrail DKG V6 supports the following blockchains:
 
 1. [NeuroWeb](https://neuroweb.ai/) (Polkadot)
 2. [Gnosis chain ](https://www.gnosis.io/)(Ethereum)
+3. [Base](https://www.base.org/) (Ethereum)
 
 **Testnet blockchains**
 
 1. NeuroWeb testnet
 2. Gnosis Chiado testnet&#x20;
+3. Base Sepolia testnet
 
 Depending on your network of choice for the OriginTrail DKG node, please make sure that you carefully read through the requirements in the next sections connected to acquiring tokens and preparing node keys (wallets).
 

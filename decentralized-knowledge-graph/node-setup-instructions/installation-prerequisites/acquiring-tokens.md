@@ -66,6 +66,12 @@ In order to have your TRAC tokens become available on Gnosis mainnet network, yo
 
 
 
+## Bridging TRAC to Base:
+
+In order to have your TRAC tokens become available on Base mainnet network, you will have to bridge them from Ethereum network with the use of bridging platforms such as [**Superbridge**](https://superbridge.app/base) or an another platform of your choice.&#x20;
+
+TRAC bridge instructions using Superbridge are available [here](https://docs.origintrail.io/integrated-blockchains/ethereum-ecosystem/base-blockchain#bridging-trac-to-base).
+
 {% hint style="info" %}
 Once you acquire TRAC tokens on the desired network, you may proceed with the setup.
 {% endhint %}
