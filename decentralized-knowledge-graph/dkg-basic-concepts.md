@@ -42,7 +42,13 @@ The term Retrieval Augmented Generation (RAG) was coined by Patrick Lewis in a [
 
 DRAG is, therefore, a framework that allows AI solutions to tap into the strengths of both paradigms: the powerful learning and generalization capabilities of neural networks, and the precise, rule-based processing of symbolic AI. It operates on two core components - (1) the DKG paranets and (2) AI models. The dRAG applications framework is entirely compatible with the existing techniques, tools, and RAG frameworks and supports all major data formats.&#x20;
 
+### Knowledge Mining
 
+**Knowledge Mining** is the process of producing high quality, blockchain tracked knowledge for artificial intelligence, pioneered by the OriginTrail ecosystem. This cyclical process leverages the key component of the OriginTrail technology - Knowledge Assets - which are ownable containers for knowledge with inherent discoverability, connectivity and data provenance.
+
+Similarly to the concept of Bitcoin mining, where miners collectively provide computing resources to the network and receive incentives in coins, knowledge miners contributing useful knowledge to the OriginTrail DKG will receive NEURO tokens. With Knowledge Mining incentives enabled across multiple blockchains, the ambition is to drive exponential growth of trusted knowledge in the OriginTrail Decentralized Knowledge Graph.
+
+Read more about knowledge mining at [NeuroWeb docs](https://docs.neuroweb.ai/knowledge-mining).
 
 ### RDF & SPARQL
 
