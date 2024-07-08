@@ -1,6 +1,7 @@
 # 🔌 DKG Basic concepts
 
-The OriginTrail Decentralized Knowledge Graph (DKG) combines several standardized components from both blockchain and knowledge graph technologies. The core primitive of the DKG is the "knowledge asset" (KA), the _"molecule"_ of the DKG.
+The OriginTrail Decentralized Knowledge Graph (DKG) combines several standardized components from both blockchain and knowledge graph technologies. The core primitive of the DKG is the "knowledge asset" (KA), the _"molecule"_ of the DKG.\
+
 
 ### Knowledge Assets
 
@@ -80,3 +81,12 @@ did:dkg:otp:2043/0x5cac41237127f94c2d21dae0b14bfefa99880630/318322#color
 This UAL refers to the decentralized knowledge graph on the mainnet, it's blockchain address is `0x5cac41237127f94c2d21dae0b14bfefa99880630` and the ID of the token is `318322`and to a property "color" inside its knowledge graph.
 
 More information on DID URLs can be found [here](https://www.w3.org/TR/did-core/#did-url-syntax).
+
+### Autonomus AI Paranets
+
+Next building block of DKG after Knowledge Assets are **AI Para-networks** or **paranets**.
+
+**AI Para-networks** or **paranets** are autonomously operated structures in the DKG, owned by its community as a paranet operator. In paranets, we find assemblies of **Knowledge Assets** driving use cases with associated **paranet-specific AI services** and **an incentivization model** to reward knowledge miners fueling its growth. \
+To read more on **Autonomus AI Paranets** go to [#autonomus-ai-paranets](dkg-basic-concepts.md#autonomus-ai-paranets "mention")
+
+**To see the DKG in action, continue to the** [**DKG SDK section**](dkg-sdk/)**.**

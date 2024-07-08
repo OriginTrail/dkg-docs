@@ -51,13 +51,11 @@
 
 ## Integrated Blockchains
 
-* [Ethereum ecosystem](integrated-blockchains/ethereum-ecosystem/README.md)
-  * [Gnosis chain](integrated-blockchains/ethereum-ecosystem/gnosis-chain.md)
-  * [Base blockchain](integrated-blockchains/ethereum-ecosystem/base-blockchain.md)
-* [Polkadot ecosystem](integrated-blockchains/polkadot-ecosystem/README.md)
-  * [Neuroweb Network](integrated-blockchains/polkadot-ecosystem/neuroweb-network.md)
-  * [Teleport instructions](integrated-blockchains/polkadot-ecosystem/teleport-instructions.md)
-  * [Bridging to Moonbeam](integrated-blockchains/polkadot-ecosystem/bridging-to-moonbeam.md)
+* [Base blockchain](integrated-blockchains/base-blockchain.md)
+* [NeuroWeb](integrated-blockchains/neuroweb.md)
+* [Gnosis chain](integrated-blockchains/gnosis-chain.md)
+* [Teleport instructions](integrated-blockchains/teleport-instructions.md)
+* [Bridging to Moonbeam](integrated-blockchains/bridging-to-moonbeam.md)
 * [Deployed smart contracts](integrated-blockchains/deployed-smart-contracts.md)
 
 ## Useful Resources
