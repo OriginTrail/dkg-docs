@@ -2,7 +2,7 @@
 
 The OriginTrail Decentralized Knowledge Graph (DKG) combines several standardized components from both blockchain and knowledge graph technologies. The core primitive of the DKG is the "knowledge asset" (KA), the _"molecule"_ of the DKG.
 
-### What are Knowledge Assets
+### Knowledge Assets
 
 A knowledge asset is an ownable container of knowledge that can describe any digital or physical object, abstract concept, or really any "thing". It lives in a decentralized knowledge graph which makes it easily discoverable, while its information integrity and ownership are supported by the blockchain.
 
@@ -32,9 +32,18 @@ There are three phases for a state of a knowledge asset:
 * LATEST\_FINALIZED: latest committed state, accepted by the network.
 * HISTORICAL: any previously finalized state, identifiable by its state hash.
 
-More information about [Knowledge Assets.](broken-reference)
+### Decentralized Retreival Augmented Generation
 
-### What is RDF?
+The term Retrieval Augmented Generation (RAG) was coined by Patrick Lewis in a [2020 paper](https://arxiv.org/pdf/2005.11401.pdf) and it represents a technique for enhancing the accuracy and reliability of GenAI models with facts fetched from external sources. This allows AI solutions to dynamically fetch relevant information before the generation process, enhancing the accuracy of responses by limiting the generation to re-working the retrieved inputs.&#x20;
+
+\
+**Decentralized Retrieval Augmented Generation (DRAG) advances the model by organizing external sources in a Decentralized Knowledge Graph (DKG) with verifiable sources** made available for AI models to use. The framework enables a hybrid AI system that brings together neural (e.g. LLMs) and symbolic AI (e.g. Knowledge Graph) methodologies. Contrary to using a solely neural AI approach which is based on vector embedding representations, a symbolic AI approach enhances it with the strength of Knowledge Graphs by introducing a basis in the symbolic representation.
+
+DRAG is, therefore, a framework that allows AI solutions to tap into the strengths of both paradigms: the powerful learning and generalization capabilities of neural networks, and the precise, rule-based processing of symbolic AI. It operates on two core components - (1) the DKG paranets and (2) AI models. The dRAG applications framework is entirely compatible with the existing techniques, tools, and RAG frameworks and supports all major data formats.&#x20;
+
+
+
+### RDF & SPARQL
 
 The Resource Description Framework (RDF) is a W3C standardized model designed to represent data about physical objects and abstract concepts (resources). It’s a model to express relations between entities using a graph format.
 
@@ -53,7 +62,7 @@ If you are interested in learning more about NFTs, you can find out more [here](
 
 ### What is a UAL?
 
-Universal Asset Locators are ownable identifiers of the DKG, similar to URLs in the traditional web. The UALs follow the DID URL specification and are used to identify and locate a specific Knowledge Asset within the OriginTrail Decentralized Knowledge Graph (DKG). UAL consists of 5 parts:
+Uniform Asset Locators are ownable identifiers of the DKG, similar to URLs in the traditional web. The UALs follow the DID URL specification and are used to identify and locate a specific Knowledge Asset within the OriginTrail Decentralized Knowledge Graph (DKG). UAL consists of 5 parts:
 
 * did (decentralized identifier) predicate
 * dkg (decentralized knowledge graph) predicate
@@ -65,11 +74,9 @@ Universal Asset Locators are ownable identifiers of the DKG, similar to URLs in 
 An example UAL may look like this:
 
 ```
-did:dkg:otp:2043/0x5cac41237127f94c2d21dae0b14bfefa99880630/318322
+did:dkg:otp:2043/0x5cac41237127f94c2d21dae0b14bfefa99880630/318322#color
 ```
 
-This UAL refers to the decentralized knowledge graph on the mainnet, it's blockchain address is `0x5cac41237127f94c2d21dae0b14bfefa99880630` and the ID of the token is `318322`.
+This UAL refers to the decentralized knowledge graph on the mainnet, it's blockchain address is `0x5cac41237127f94c2d21dae0b14bfefa99880630` and the ID of the token is `318322`and to a property "color" inside its knowledge graph.
 
 More information on DID URLs can be found [here](https://www.w3.org/TR/did-core/#did-url-syntax).
-
-**To see the DKG in action, continue to the** [**DKG SDK section**](dkg-sdk/)**.**
