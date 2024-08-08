@@ -17,6 +17,7 @@
 * [🤖 Running DKG nodes](decentralized-knowledge-graph/node-setup-instructions/README.md)
   * [Installation prerequisites](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/README.md)
     * [Hardware requirements](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/hardware-requirements.md)
+    * [Triple store setup](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/triple-store-setup.md)
     * [Choosing blockchain networks](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/choosing-blockchain-networks.md)
     * [Setting up node keys (wallets)](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/setting-up-node-keys-wallets.md)
     * [Acquiring tokens](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/acquiring-tokens.md)
