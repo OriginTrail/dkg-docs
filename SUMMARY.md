@@ -4,6 +4,10 @@
 
 ## Decentralized Knowledge Graph
 
+* [🪙 Delegated Staking](decentralized-knowledge-graph/delegated-staking/README.md)
+  * [Staking TRAC on Base](decentralized-knowledge-graph/delegated-staking/staking-trac-on-base.md)
+  * [Staking TRAC on Neuroweb](decentralized-knowledge-graph/delegated-staking/staking-trac-on-neuroweb.md)
+  * [Staking TRAC on Gnosis](decentralized-knowledge-graph/delegated-staking/staking-trac-on-gnosis.md)
 * [🌐 OriginTrail - Decentralized Knowledge Graph (DKG)](decentralized-knowledge-graph/dkgintro.md)
 * [🔌 DKG Basic concepts](decentralized-knowledge-graph/dkg-basic-concepts.md)
 * [🕸️ Autonomous AI Paranets](decentralized-knowledge-graph/autonomous-ai-paranets/README.md)
@@ -12,8 +16,6 @@
   * [Initial Paranet Offerings (IPOs)](decentralized-knowledge-graph/autonomous-ai-paranets/initial-paranet-offerings-ipos.md)
   * [IPO specification](decentralized-knowledge-graph/autonomous-ai-paranets/ipo-specification.md)
   * [Launching your IPO](decentralized-knowledge-graph/autonomous-ai-paranets/launching-your-ipo.md)
-* [🪙 Delegated staking](decentralized-knowledge-graph/delegated-staking/README.md)
-  * [🐛 Staking bug bounty](decentralized-knowledge-graph/delegated-staking/staking-bug-bounty.md)
 * [🤖 Running DKG nodes](decentralized-knowledge-graph/node-setup-instructions/README.md)
   * [Installation prerequisites](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/README.md)
     * [Hardware requirements](decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/hardware-requirements.md)
