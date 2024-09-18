@@ -4,10 +4,6 @@
 
 ## Decentralized Knowledge Graph
 
-* [🪙 Delegated Staking](decentralized-knowledge-graph/delegated-staking/README.md)
-  * [Staking TRAC on Base](decentralized-knowledge-graph/delegated-staking/staking-trac-on-base.md)
-  * [Staking TRAC on Neuroweb](decentralized-knowledge-graph/delegated-staking/staking-trac-on-neuroweb.md)
-  * [Staking TRAC on Gnosis](decentralized-knowledge-graph/delegated-staking/staking-trac-on-gnosis.md)
 * [🌐 OriginTrail - Decentralized Knowledge Graph (DKG)](decentralized-knowledge-graph/dkgintro.md)
 * [🔌 DKG Basic concepts](decentralized-knowledge-graph/dkg-basic-concepts.md)
 * [🕸️ Autonomous AI Paranets](decentralized-knowledge-graph/autonomous-ai-paranets/README.md)
@@ -47,6 +43,10 @@
     * [Interact with DKG Paranets](decentralized-knowledge-graph/dkg-sdk/dkg-v6-js-client/interact-with-dkg-paranets.md)
   * [DKG Python SDK (dkg.py)](decentralized-knowledge-graph/dkg-sdk/dkg-v6-py-client.md)
     * [Interact with DKG Paranets](decentralized-knowledge-graph/dkg-sdk/dkg-v6-py-client/interact-with-dkg-paranets.md)
+* [🪙 Delegated Staking](decentralized-knowledge-graph/delegated-staking/README.md)
+  * [Staking TRAC on Base](decentralized-knowledge-graph/delegated-staking/staking-trac-on-base.md)
+  * [Staking TRAC on Neuroweb](decentralized-knowledge-graph/delegated-staking/staking-trac-on-neuroweb.md)
+  * [Staking TRAC on Gnosis](decentralized-knowledge-graph/delegated-staking/staking-trac-on-gnosis.md)
 * [📚 Tutorials](decentralized-knowledge-graph/tutorials.md)
 * [📜 Ecosystem White Paper](decentralized-knowledge-graph/ecosystem-white-paper.md)
 * [DKG V8](decentralized-knowledge-graph/dkg-v8.md)
