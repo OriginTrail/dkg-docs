@@ -5,7 +5,7 @@ description: >-
   stake delegators.
 ---
 
-# 🪙 Delegated Staking
+# Delegated Staking
 
 Staking is currently enabled on Neuroweb, Base and Gnosis blockchains.
 
@@ -75,7 +75,7 @@ If you are running a DKG node you can delegate TRAC tokens to your node in the s
 
 To understand how to set up your operator fee, follow the [node-setup-instructions](../node-setup-instructions/ "mention") instructions for node setup. Note that changing your operator fee incurs a 28 day delay, balancing the 28 day delay delegators experience when withdrawing stake from your node.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Depiction of delegating and withdrawing of TRAC from DKG smart contracts</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Depiction of delegating and withdrawing of TRAC from DKG smart contracts</p></figcaption></figure>
 
 ### What is next for delegated staking?
 

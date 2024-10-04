@@ -28,7 +28,7 @@ The triple store module utilizes [the Communica framework](https://comunica.dev/
 
 #### Validation module
 
-The validation module is used to validate assertions seen on the network. More information on assertions can be found [here](../../decentralized-knowledge-graph/dkg-basic-concepts.md#dkg-assertions).
+The validation module is used to validate assertions seen on the network. More information on assertions can be found [here](../../dkg-v6-current-version/dkg-basic-concepts.md#dkg-assertions).
 
 #### Auto updater module
 

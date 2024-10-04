@@ -18,11 +18,11 @@ The DKG Python SDK provides functionality for interacting with Paranets on the O
 
 #### Setup and Installation
 
-To interact with Paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.py SDK installed and properly configured. Follow the general setup instructions for [installing dkg.py](../dkg-v6-py-client.md) and read more about Paranets [in the following section](../../autonomous-ai-paranets/).
+To interact with Paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.py SDK installed and properly configured. Follow the general setup instructions for [installing dkg.py](../../../dkg-v6-current-version/dkg-sdk/dkg-v6-py-client/) and read more about Paranets [in the following section](../../../dkg-v6-current-version/autonomous-ai-paranets/).
 
 #### Creating a Paranet
 
-Before creating a Paranet, you must first create a Knowledge Asset (KA) on the Decentralized Knowledge Graph (DKG) that will represent the Paranet. To create a Knowledge Asset on the DKG refer to [the following page.](../dkg-v6-js-client/)
+Before creating a Paranet, you must first create a Knowledge Asset (KA) on the Decentralized Knowledge Graph (DKG) that will represent the Paranet. To create a Knowledge Asset on the DKG refer to [the following page.](../../../dkg-v6-current-version/dkg-sdk/dkg-v6-js-client/)
 
 Once the Knowledge Asset is created, it will have a unique identifier known as a Universal Asset Locator (UAL). To create a Paranet, you will use this UAL. The Paranet creation process essentially links the Paranet to the Knowledge Asset, establishing it on the blockchain. This on-chain representation allows for decentralized management and interaction with the Paranet.
 
@@ -210,7 +210,7 @@ This function only updates the claimable rewards based on your latest contributi
 
 The Decentralized Knowledge Graph (DKG) enables users to perform SPARQL queries on specific Paranets. By specifying a Paranet, users can target their queries to retrieve data related to that Paranet. This can be particularly useful when working with domain-specific data or services within a Paranet.
 
-To query a specific Paranet, ensure that the node you are querying has already enabled Paranet syncing for the Paranet you wish to query. Without this setup, the node may not have the relevant data required to process your queries.[ Read here](../../node-setup-instructions/sync-a-dkg-paranet.md) how to setup node to sync a Paranet.
+To query a specific Paranet, ensure that the node you are querying has already enabled Paranet syncing for the Paranet you wish to query. Without this setup, the node may not have the relevant data required to process your queries.[ Read here](../../../dkg-v6-current-version/node-setup-instructions/sync-a-dkg-paranet.md) how to setup node to sync a Paranet.
 
 To query a specific Paranet, you should set the `graph_location` to the desired Paranet UAL. This approach allows you to direct your queries to the Paranet that holds the relevant data.
 

@@ -9,8 +9,8 @@ The OriginTrail ecosystem is centered around the **Decentralized Knowledge Graph
 DKG Testnet runs the same implementation as the DKG Mainnet, and it is used for final release testing prior to hitting mainnet. Testnet is connected to OriginTrail NeuroWeb Testnet which is secured by Rococo Relay Chain.
 
 {% hint style="info" %}
-If you want to play around and test out the DKG, we recommend using the DKG Testnet. For that, you will need test TRAC and test NEURO tokens, which you can obtain by joining [our Discord](https://discord.com/invite/FCgYk2S) and [requesting it from our discord bot](../decentralized-knowledge-graph/node-setup-instructions/useful-resources/dkg-testnet-faucet.md).
+If you want to play around and test out the DKG, we recommend using the DKG Testnet. For that, you will need test TRAC and test NEURO tokens, which you can obtain by joining [our Discord](https://discord.com/invite/FCgYk2S) and [requesting it from our discord bot](../dkg-v6-current-version/node-setup-instructions/useful-resources/dkg-testnet-faucet.md).
 
-You can also run a local network on your machine. To run a local network, please refer to the [Local network setup page](../decentralized-knowledge-graph/dkg-sdk/setting-up-your-development-environment.md)
+You can also run a local network on your machine. To run a local network, please refer to the [Local network setup page](../dkg-v6-current-version/dkg-sdk/setting-up-your-development-environment.md)
 {% endhint %}
 

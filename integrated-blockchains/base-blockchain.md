@@ -17,10 +17,10 @@ TRAC token contract address on Base: 0xa81a52b4dda010896cdd386c7fbdc5cdc835ba23
 
 ### Setting Up DKG Node on BASE
 
-Setting up DKG node on BASE is easy and simple by following instructions at [node-setup-instructions](../decentralized-knowledge-graph/node-setup-instructions/ "mention"). If you want to integrate BASE to already running DKG node you should follow steps from [connect-to-base.md](../decentralized-knowledge-graph/node-setup-instructions/switch-dkg-node-to-multichain/connect-to-base.md "mention").
+Setting up DKG node on BASE is easy and simple by following instructions at [node-setup-instructions](../dkg-v6-current-version/node-setup-instructions/ "mention"). If you want to integrate BASE to already running DKG node you should follow steps from [connect-to-base.md](../dkg-v6-current-version/node-setup-instructions/switch-dkg-node-to-multichain/connect-to-base.md "mention").
 
 ### Building on DKG on BASE
 
-Powerful tool to build upon the DKG on BASE is the [dkg-sdk](../decentralized-knowledge-graph/dkg-sdk/ "mention"). By leveraging the DKG SDK, developers can harness all the capabilities that the DKG on BASE provides, unlocking new potentials for creating advanced decentralized applications and services.
+Powerful tool to build upon the DKG on BASE is the [dkg-sdk](../dkg-v6-current-version/dkg-sdk/ "mention"). By leveraging the DKG SDK, developers can harness all the capabilities that the DKG on BASE provides, unlocking new potentials for creating advanced decentralized applications and services.
 
-At OriginTrail, we are empowering builders to transcend the ordinary and construct the extraordinary. Dive into our tutorials to harness the power of decentralized AI. Explore guides prepared by the OriginTrail Builders community to inspire your own innovative projects - 📚 [tutorials.md](../decentralized-knowledge-graph/tutorials.md "mention").
+At OriginTrail, we are empowering builders to transcend the ordinary and construct the extraordinary. Dive into our tutorials to harness the power of decentralized AI. Explore guides prepared by the OriginTrail Builders community to inspire your own innovative projects - 📚 [tutorials.md](../dkg-v6-current-version/tutorials.md "mention").

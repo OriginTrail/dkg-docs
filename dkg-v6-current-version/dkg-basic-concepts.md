@@ -1,4 +1,4 @@
-# 🔌 DKG Basic concepts
+# DKG Basic concepts
 
 The OriginTrail Decentralized Knowledge Graph (DKG) combines several standardized components from both blockchain and knowledge graph technologies. The core primitive of the DKG is the "knowledge asset" (KA), the _"molecule"_ of the DKG.\
 

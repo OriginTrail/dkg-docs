@@ -1,4 +1,4 @@
-# 🌐 OriginTrail - Decentralized Knowledge Graph (DKG)
+# OriginTrail - Decentralized Knowledge Graph (DKG)
 
 ## What is the OriginTrail Decentralized Knowledge Graph?
 
