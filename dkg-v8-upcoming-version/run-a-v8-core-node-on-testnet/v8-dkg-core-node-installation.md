@@ -78,7 +78,7 @@ Do not run the installer with "sudo".
 
 If your installation has been successful, your node will show the “**Node is up and running!**” log as shown in the example image below:
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>V8 DKG Core node successful initialization</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>V8 DKG Core node successful initialization</p></figcaption></figure>
 
 <mark style="color:green;">**`Congratulations, your V8 DKG Core node is up and running!`**</mark>
 
@@ -98,3 +98,14 @@ If your installation has been successful, your node will show the “**Node is u
 
 
 
+## Need help?
+
+If you encounter any issues during the installation process or have questions regarding any of the above topics, jump into our official [Discord](https://discordapp.com/invite/FCgYk2S) channel and ask for assistance.
+
+Apart from Discord, feel free to contact [tech@origin-trail.com](mailto:tech@origin-trail.com) and we will do our best to respond in a timely manner.
+
+Follow our official channels for updates:&#x20;
+
+* [Twitter](https://twitter.com/origin\_trail)&#x20;
+* [Medium](https://medium.com/origintrail)&#x20;
+* [Telegram](https://t.me/origintrail)

@@ -11,10 +11,10 @@
   * [V8 DKG Core Node installation](dkg-v8-upcoming-version/run-a-v8-core-node-on-testnet/v8-dkg-core-node-installation.md)
 * [V8 DKG SDK](dkg-v8-upcoming-version/v8-dkg-sdk/README.md)
   * [Development environment setup](dkg-v8-upcoming-version/v8-dkg-sdk/setting-up-your-development-environment.md)
-  * [DKG Javascript SDK (dkg.js)](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v6-js-client/README.md)
-    * [Interact with DKG Paranets](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v6-js-client/interact-with-dkg-paranets.md)
-  * [DKG Python SDK (dkg.py)](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v6-py-client/README.md)
-    * [Interact with DKG Paranets](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v6-py-client/interact-with-dkg-paranets.md)
+  * [DKG Javascript SDK (dkg.js)](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v8-js-client/README.md)
+    * [Interact with DKG Paranets](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v8-js-client/interact-with-dkg-paranets.md)
+  * [DKG Python SDK (dkg.py)](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v8-py-client/README.md)
+    * [Interact with DKG Paranets](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v8-py-client/interact-with-dkg-paranets.md)
 
 ## DKG V6 (current version)
 

@@ -6,11 +6,7 @@ description: Python library for interacting with the Decentralized Knowledge Gra
 
 If you are looking to build applications leveraging [knowledge assets](../../../dkg-v6-current-version/dkg-basic-concepts.md) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.py library is the best place to start!
 
-The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on [your local environment](../../../dkg-v6-current-version/dkg-sdk/setting-up-your-development-environment.md) or a [hosted OT-Node](../../../dkg-v6-current-version/node-setup-instructions/), in order to use the SDK.
-
-{% hint style="info" %}
-Running a gateway node is not the same as running a **full (DKG hosting) node**, which requires 50 000 TRAC tokens to be posted as stake collateral. Running a gateway node requires no tokens to be posted as collateral.
-{% endhint %}
+The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-Node](../../run-a-v8-core-node-on-testnet/), in order to use the SDK.
 
 ### Installation
 
@@ -19,19 +15,19 @@ The library can be used in any Python application.
 Run the command to install dkg.py library using pip:
 
 ```bash
-pip install dkg
+pip install dkg.py==8.0.0a0
 ```
 
 pip x:
 
 ```bash
-pipx install dkg
+pipx install dkg.py==8.0.0a0
 ```
 
 or poetry:
 
 ```bash
-poetry add dkg
+poetry add dkg.py==8.0.0a0
 ```
 
 Then import DKG, BlockchainProvider and NodeHTTPProvider classes inside your project:
@@ -302,63 +298,6 @@ The response of the get operation will be the assertion graph:
 
 </code></pre>
 
-#### Update Knowledge Asset data
-
-Knowledge assets can be updated by using the **update** function. In this example we will update the previously published knowledge asset to reflect the features of the Tesla S model. The updated content can be seen below:
-
-```python
-updated_public_assertion = {
-    "@context": "https://schema.org",
-    "@id": "https://tesla.modelS/2322",
-    "@type": "Car",
-    "name": "Tesla Model S",
-    "brand": {"@type": "Brand", "name": "Tesla"},
-    "model": "Model S",
-    "manufacturer": {"@type": "Organization", "name": "Tesla, Inc."},
-    "fuelType": "Electric",
-}
-```
-
-The function call for updating a knowledge asset receives a UAL (the same one that the previous create returned) and is of same structure as for knowledge asset creation:
-
-```python
-update_asset_result = dkg.asset.update(ual, {"public": updated_public_assertion})
-
-print(update_asset_result)
-```
-
-The returned response will contain the UAL and operation status:
-
-```python
-{
-  "UAL": "did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0",
-  "operation": {
-    "operationId": "50fd6920-e084-433b-a518-26bf326a7b5a",
-    "status": "COMPLETED"
-  }
-}
-```
-
-After an update is finalized, a user can get the updated asset state by invoking the get operation.
-
-**Note on state finality**
-
-Similar to distributed databases, the OriginTrail Decentralized Knowledge Graph applies replication mechanisms and needs mechanisms to reach a consistent state on the network for knowledge assets. In OriginTrail DKG, state consistency is reconciled using the blockchain, which hosts state proofs for knowledge assets as well as replication commit information from DKG nodes. This means that updates for an existing knowledge asset are accepted by the network nodes (similar to the way nodes accept knowledge assets on creation) and can operate with all accepted states.
-
-There are three phases for a state of a knowledge asset:
-
-* LATEST: which indicates the Knowledge Asset state pending for an update, awaiting commits from DKG nodes. Once commits are received, the state transitions to LATEST\_FINALIZED.
-* LATEST\_FINALIZED: latest committed state, accepted by the network.
-* HISTORICAL: any previously finalized state, identifiable by its state hash.
-
-The user is able to specify if he wants to get the latest or latest finalized state. Example:
-
-```python
-asset = dkg.asset.get(ual, state="LATEST_FINALIZED")
-```
-
-Application builders are able to get all above states, however querying the DKG (via query functions) will only return the cumulative finalized state, for consistency reasons.
-
 #### Querying knowledge asset data with SPARQL
 
 Querying the DKG is done by using the SPARQL query language, which is very similar to SQL, applied to graph data (if you have SQL experience, SPARQL should be relatively easy to get started with - more information[ can be found here](https://www.w3.org/TR/rdf-sparql-query/)).
@@ -415,30 +354,6 @@ There are 4 repositories available:
 * **publicHistory** - public data of the historical states.
 * **privateCurrent** - private and public data of the latest finalized state.
 * **publicCurrent** - public data of the latest finalized state.
-
-**Query for Historical State of the Knowledge Asset**
-
-Sometimes we want to get data of historical state of the Knowledge Asset. To do so, we can use the following query:
-
-```python
-state_id = "0xd721c7aa159430f23b30f9fda5fe906eacce6f468a72cb08448bcb2828ba54f3"
-
-query_graph_result = dkg.graph.query(
-    f"""
-    PREFIX SCHEMA: <http://schema.org/>
-    CONSTRUCT {{ ?s ?p ?o }}
-    WHERE {{
-        {{
-            GRAPH <assertion:{state_id}>
-            {{ ?s ?p ?o . }}
-        }}
-    }}
-    """,
-    repository="privateHistory",
-)
-
-print(query_graph_result)
-```
 
 **Create a Knowledge Asset with private data**
 

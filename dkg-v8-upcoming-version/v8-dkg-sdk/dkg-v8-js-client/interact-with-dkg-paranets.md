@@ -23,11 +23,11 @@ The DKG JavaScript SDK provides functionality for interacting with Paranets on t
 
 #### Setup and Installation
 
-To interact with Paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.js SDK installed and properly configured. Follow the general setup instructions for[ installing dkg.js](../../../dkg-v6-current-version/dkg-sdk/dkg-v6-js-client/) and read more about Paranets [in the following section](../../../dkg-v6-current-version/autonomous-ai-paranets/).
+To interact with Paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.js SDK installed and properly configured. Follow the general setup instructions for [installing dkg.js](./) and read more about Paranets [in the following section](../../../dkg-v6-current-version/autonomous-ai-paranets/).
 
 #### Creating a Paranet
 
-Before creating a Paranet, you must first create a Knowledge Asset (KA) on the Decentralized Knowledge Graph (DKG) that will represent the Paranet. To create a Knowledge Asset on the DKG refer to [the following page.](../../../dkg-v6-current-version/dkg-sdk/dkg-v6-js-client/)
+Before creating a Paranet, you must first create a Knowledge Asset (KA) on the Decentralized Knowledge Graph (DKG) that will represent the Paranet. To create a Knowledge Asset on the DKG refer to [the following page](./).
 
 Once the Knowledge Asset is created, it will have a unique identifier known as a Universal Asset Locator (UAL). To create a Paranet, you will use this UAL. The Paranet creation process essentially links the Paranet to the Knowledge Asset, establishing it on the blockchain. This on-chain representation allows for decentralized management and interaction with the Paranet.
 
@@ -48,35 +48,6 @@ In this example:
 * `paranetDescription` provides additional context about the Paranet, explaining its purpose and the types of knowledge assets or services it will involve.
 
 After the Paranet is successfully created, the Paranet UAL can be used to interact with the specific Paranet. This includes deploying services within the Paranet, managing incentives, and claiming rewards associated with the Paranet's operations.
-
-#### Deploying Incentives for a Paranet
-
-The `deployIncentivesContract` function sets up the incentive mechanism for a Paranet, ensuring that contributors are fairly rewarded for their efforts. This function requires the `paranetUAL` as the first parameter, which is the Universal Asset Locator for the Paranet. The second parameter specifies the type of incentivization mechanism, currently limited to 'Neuroweb'.
-
-The incentivization mechanism is only available on the NeuroWeb blockchain, meaning 'Neuroweb' is the only supported `incentiveType` at this time. When the Paranet receives incentives, these will be distributed according to predefined rules: a portion goes to the Paranet operator, another portion is shared among voters who supported proposals, and the remainder is dedicated to knowledge miners who contributed to the Paranet.
-
-```javascript
-const paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1';
-await dkg.paranet.deployIncentivesContract(paranetUAL, 'Neuroweb', {
-    tracToNeuroEmissionMultiplier: 2.5,
-    operatorRewardPercentage: 10.00,
-    incentivizationProposalVotersRewardPercentage: 10.00,
-});
-```
-
-In this example:
-
-* `paranetUAL` is the identifier of the Paranet on the DKG.
-* `'Neuroweb'` specifies the type of incentivization mechanism, currently limited to the NeuroWeb blockchain.
-
-The object passed as the third parameter includes the following properties:
-
-* **TRAC to NEURO Emission Multiplier:** This defines the conversion rate for emissions. For instance, with a multiplier of `2.5`, for every 1 TRAC used in knowledge mining, 2.5 NEURO will be emitted. This is distributed among the contributors as follows:
-  * **Paranet Operator:** Receives a percentage of the emissions, calculated as a fraction of the TRAC used (10% of 2.5 NEURO).
-  * **Proposal Voters:** Share the remaining portion of the emissions, rewarded for supporting incentivization proposals (10% of 2.5 NEURO).
-  * **Knowledge Miners:** Receive the rest of the emissions, equating to 2 NEURO per 1 TRAC used in this case.
-* **Operator Reward Percentage:** Defines the portion of the NEURO emissions that will be allocated to the Paranet operator as a fee. For example, if set to `10.00%`, the operator receives 0.25 NEURO per 1 TRAC used for knowledge mining.
-* **Incentivization Proposal Voters Reward Percentage:** Specifies the percentage of NEURO emissions that will be distributed among the voters who supported incentivization proposals. For instance, with a `10.00%` setting, 0.25 NEURO will be shared among the voters per 1 TRAC used.
 
 #### Adding Services to a Paranet
 

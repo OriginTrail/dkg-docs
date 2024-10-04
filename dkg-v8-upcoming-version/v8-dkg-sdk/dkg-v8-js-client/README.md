@@ -6,15 +6,7 @@ description: Javascript library for the Decentralized Knowledge Graph.
 
 If you are looking to build applications leveraging [knowledge assets](../../../dkg-v6-current-version/dkg-basic-concepts.md) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.js SDK library is the best place to start!
 
-The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on [your local environment](../../../dkg-v6-current-version/dkg-sdk/setting-up-your-development-environment.md) or a [hosted OT-Node](../../../dkg-v6-current-version/node-setup-instructions/), in order to use the SDK.
-
-{% hint style="info" %}
-Running a gateway node is not the same as running a **full (DKG hosting) node**, which requires 50 000 TRAC tokens to be posted as stake collateral. Running a gateway node requires no tokens to be posted as collateral.
-{% endhint %}
-
-{% hint style="info" %}
-This library operates with OriginTrail nodes starting from version 6.0.0.
-{% endhint %}
+The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-Node](../../run-a-v8-core-node-on-testnet/), in order to use the SDK.
 
 ### Installation
 
@@ -49,7 +41,7 @@ Make sure to also include web3.js library as it is a dependency for dkg.js.
 Run the command to install dependency from the [NPM](https://www.npmjs.com/package/dkg.js) repository:
 
 ```bash
-npm install dkg.js
+npm install dkg.js@8.0.0-alpha.0
 ```
 
 Then include `dkg.js` in your project files. This will expose the `DKG` object:
@@ -64,11 +56,11 @@ To use the DKG library, you need to connect to a running local or remote OT-Node
 
 ```javascript
 const dkg = new DKG({
-    environment: development, // or devnet, testnet, mainnet
+    environment: development, // or devnet, testnet
     endpoint: 'http://127.0.0.1',  // gateway node URI
     port: 8900,
     blockchain: {
-        name: 'hardhat1:31337', // or otp:2043, base:8453, gnosis:100
+        name: 'hardhat1:31337', // or base:8453
         publicKey: PUBLIC_KEY, // not required in browser, metamask used instead
         privateKey: PRIVATE_KEY, // not required in browser, metamask used instead
     },
@@ -76,7 +68,7 @@ const dkg = new DKG({
 ​
 const nodeInfo = await dkg.node.info(); 
 // if successfully connected, the will return an object indicating the node version
-// { 'version': '6.X.X' }
+// { 'version': '8.X.X' }
 ```
 
 #### Create a Knowledge Asset
@@ -346,116 +338,6 @@ The response of the get operation will be the assertion graph:
 
 </code></pre>
 
-Get function also takes options object as a second argument, where state of the knowledge asset can be specified.
-
-Example:
-
-```javascript
-await dkg.asset.get(UAL, { state: 'LATEST_FINALIZED' });
-```
-
-Available states:
-
-* **LATEST (default)** - gets latest state of the knowledge asset (can get both finalized and unfinalized states)
-* **LATEST\_FINALIZED** - gets latest from finalized states (doesn't take into account updates that aren't finished)
-* **State hash** - assertion id
-* **State index** - numerical index of the state
-
-#### Update Knowledge Asset data
-
-Knowledge assets can be updated by using the **update** function. In this example we will update the previously published knowledge asset to reflect the features of the Tesla S model. The updated content can be seen below:
-
-```javascript
-const updatedPublicAssertion = {
-    '@context': 'https://schema.org',
-    '@id': 'https://tesla.modelS/2322',
-    '@type': 'Car',
-    'name': 'Tesla Model S',
-    'brand': {
-        '@type': 'Brand',
-        'name': 'Tesla'
-    },
-    'model': 'Model S',
-    'manufacturer': {
-        '@type': 'Organization',
-        'name': 'Tesla, Inc.'
-    },
-    'fuelType': 'Electric',
-}
-
-```
-
-The function call for updating a knowledge asset receives a UAL (the same one that the previous create returned) and is of same structure as for knowledge asset creation:
-
-```javascript
-const result = await dkg.asset.update(UAL, {
-    public: updatedPublicAssertion
- });
-
-console.log(JSON.stringify(result, null, 2));
-```
-
-The returned response will contain the UAL and operation status:
-
-```javascript
-{
-  UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
-  operation: {
-    operationId: '50fd6920-e084-433b-a518-26bf326a7b5a',
-    status: 'COMPLETED'
-  }
-}
-```
-
-In case you want to update multiple different assets you can increase your allowance and then each time you initiate an update, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a much faster update time.
-
-```javascript
-await dkg.asset.increaseAllowance('1569429592284014000');
-
-const result = await dkg.asset.update(UAL, {
-    public: updatedPublicAssertion,
-  }
-);
-```
-
-After you've finished updating data, you can decrease your allowance to revoke the authorization given to the contract to spend your tokens - so if you want to revoke all remaining authorization, it's a good practice to pass the same value that you used for increasing your allowance.
-
-```javascript
-await dkg.asset.decreaseAllowance('1569429592284014000');
-```
-
-After an update is finalized, a user can get the updated asset state by invoking the get operation.
-
-**Note on state finality**
-
-Similar to distributed databases, the OriginTrail Decentralized Knowledge Graph applies replication mechanisms and needs mechanisms to reach a consistent state on the network for knowledge assets. In OriginTrail DKG, state consistency is reconciled using the blockchain, which hosts state proofs for knowledge assets as well as replication commit information from DKG nodes. This means that updates for an existing knowledge asset are accepted by the network nodes (similar to the way nodes accept knowledge assets on creation) and can operate with all accepted states.
-
-There are three phases for a state of a knowledge asset:
-
-* LATEST: which indicates the Knowledge Asset state pending for an update, awaiting commits from DKG nodes. Once commits are received, the state transitions to LATEST\_FINALIZED.
-* LATEST\_FINALIZED: latest committed state, accepted by the network.
-* HISTORICAL: any previously finalized state, identifiable by its state hash.
-
-From DKG.js v6.0.2, the user is able to specify if he wants to get the latest or latest finalized state. Example:
-
-```javascript
-let options = {
-    state: 'LATEST_FINALIZED'
-};
-
-let asset = await dkg.asset.get(UAL, options);
-```
-
-Application builders are able to get all above states, however querying the DKG (via query functions) will only return the cumulative finalized state, for consistency reasons.
-
-Additionally, user can call the _waitFinalization_ function to wait for knowledge asset update finalization (network nodes commit to storing the updated knowledge asset):
-
-```javascript
-await dkg.asset.waitFinalization(UAL);
-```
-
-After the user waits for finalization, the get operation will return the same response for the latest and latest finalized state.
-
 #### Querying knowledge asset data with SPARQL
 
 Querying the DKG is done by using the SPARQL query language, which is very similar to SQL, applied to graph data (if you have SQL experience, SPARQL should be relatively easy to get started with - more information[ can be found here](https://www.w3.org/TR/rdf-sparql-query/)).
@@ -493,11 +375,13 @@ As the OriginTrail node leverages a fully fledged graph database (triple store s
 
 However, when it comes to querying the DKG, it is important to note that at the moment there are only options to query finalized and historical states. This means that any SPARQL queries that are run on the DKG will return data from the latest finalized state by default, or any previously finalized states, identifiable by their state hash.
 
-To query for historical states in the DKG, you need to pass the `graphState: 'HISTORICAL'` option when making the SPARQL query. Here's an example of how to do that:
+There is a `graphLocation` option which determines where the query will be executed. The two available options are `LOCAL_KG` and `PUBLIC_KG`. The `LOCAL_KG` option is used to query data from the local knowledge graph which stores all private that is not shared with the network, while the `PUBLIC_KG` option is used to query all data on the node that is received from the network. By default, if the `graphLocation` option is not specified, the query will be executed on the local knowledge graph (`LOCAL_KG`).
+
+Example:
 
 ```javascript
 let options = {
-    graphState: 'HISTORICAL'
+    graphLocation: 'LOCAL_KG'
 };
 
 const result = await dkg.graph.query(
@@ -511,35 +395,6 @@ const result = await dkg.graph.query(
 );
 
 console.log(JSON.stringify(result, null, 2));
-```
-
-To query the latest finalized state of the DKG, the `'CURRENT'` option should be passed for the graphState parameter. It's important to note that this is also the default behavior if the graphState parameter is not specified in the SPARQL query.
-
-In addition to the `graphState` option, there is also the `graphLocation` option which determines where the query will be executed. The two available options are `LOCAL_KG` and `PUBLIC_KG`. The `LOCAL_KG` option is used to query data from the local knowledge graph which stores all private that is not shared with the network, while the `PUBLIC_KG` option is used to query all data on the node that is received from the network. By default, if the `graphLocation` option is not specified, the query will be executed on the local knowledge graph (`LOCAL_KG`).
-
-**Query for Historical State of the Knowledge Asset**
-
-Sometimes we want to get data of historical state of the Knowledge Asset. To do so, we can use the following query:
-
-```javascript
-let options = {
-    graphState: 'HISTORICAL'
-};
-
-const stateId = '0xe3a6733d7b999ca6f0d141afe3e38ac59223a4dfde7a5458932d2094ed4193cf';
-
-const result = await dkg.graph.query(
-    `PREFIX schema: <http://schema.org/>
-        CONSTRUCT { ?s ?p ?o }
-        WHERE {
-            {
-                GRAPH <assertion:${stateId}>
-                { ?s ?p ?o . }
-            }
-        }`,
-    'CONSTRUCT',
-    options
-);
 ```
 
 **Create a Knowledge Asset with private data**
@@ -713,31 +568,6 @@ Result of the transfer operation:
   UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
   owner: '0x2ACa90078563133db78085F66e6B8Cf5531623Ad',
   operation: { operationId: null, status: 'COMPLETED' }
-}
-```
-
-#### Get states of the Knowledge Asset
-
-As you already know, Knowledge Assets can be updated, therefore one Knowledge Assets can have multiple states.
-
-In order to get a list of all asset states, we can you the following function:
-
-```javascript
-const getStatesResult = await dkg.asset.getStates(UAL);
-
-console.log(getStatesResult);
-```
-
-Result of the get states operation:
-
-```javascript
-{
-    UAL: 'did:dkg:hardhat1:31337/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
-    states: [
-        '0xe3a6733d7b999ca6f0d141afe3e38ac59223a4dfde7a5458932d2094ed4193cf',
-        '0xe37350c9b0e2881af2e7e89a986e87f3d3158611b794bf75dcbb8d6e4aea7f95'
-    ],
-    operation: { operationId: null, status: 'COMPLETED' }
 }
 ```
 
