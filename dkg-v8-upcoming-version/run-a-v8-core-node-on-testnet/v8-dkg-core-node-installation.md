@@ -90,7 +90,7 @@ If your installation has been successful, your node will show the “**Node is u
 
 **Stopping the node:** `otnode-stop` or `systecmtl stop otnode`
 
-**Restarting the node:** `otnode-restart`  or `systecmtl restart otnode`
+**Restarting the node:** `otnode-restart`  or `systemctl restart otnode`
 
 **Showing node logs:** `otnode-logs`  or `journalctl -u otnode --output cat -fn 100`
 
