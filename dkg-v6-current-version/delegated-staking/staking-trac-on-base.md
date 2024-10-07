@@ -12,7 +12,7 @@ These instructions will guide you through the process of staking your TRAC token
 2. Base ETH to pay for fees
 
 {% hint style="success" %}
-The process of bridging TRAC tokens to Base is described [here](https://app.gitbook.com/s/qMnH71Mmd7Au6HK5UAji/).
+The process of bridging TRAC tokens to Base is described [here](https://docs.origintrail.io/integrated-blockchains/base-blockchain).
 {% endhint %}
 
 {% hint style="warning" %}
