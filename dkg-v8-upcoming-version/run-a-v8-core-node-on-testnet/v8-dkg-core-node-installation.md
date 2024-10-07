@@ -86,11 +86,11 @@ If your installation has been successful, your node will show the “**Node is u
 
 ### **Useful commands:**
 
-**Starting your node:** `otnode-start` or `systecmtl start otnode`
+**Starting your node:** `otnode-start` or `systemctl start otnode`
 
-**Stopping the node:** `otnode-stop` or `systecmtl stop otnode`
+**Stopping the node:** `otnode-stop` or `systemctl stop otnode`
 
-**Restarting the node:** `otnode-restart`  or `systecmtl restart otnode`
+**Restarting the node:** `otnode-restart`  or `systemctl restart otnode`
 
 **Showing node logs:** `otnode-logs`  or `journalctl -u otnode --output cat -fn 100`
 
