@@ -15,6 +15,23 @@ To enable your node to sync with a paranet, you will need to add `assetSync` obj
 }
 ```
 
+
+
+Once .origintrail\_noderc is updated, it should look something like this:
+
+<pre class="language-java"><code class="lang-java">...
+    "auth": {
+        "ipWhitelist": [
+            "::1",
+            "127.0.0.1"
+        ]
+    },
+<strong>    "assetSync": {
+</strong>        "syncParanets": ["did:dkg:hardhat2:31337/0x8aafc28.../1"]
+    }    
+}
+</code></pre>
+
 After you have updated the `.origintrail_noderc` file, save your changes and restart your OriginTrail node. This ensures that the new settings take effect and your node starts syncing data from the specified paranet.
 
 Your node will start syncing when you see following log:
