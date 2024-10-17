@@ -52,6 +52,12 @@ systemctl disable otnode-logger.service
 systemctl stop otnode-logger.service
 ```
 
+### Installer video tutorial:
+
+Before proceeding, make sure to check our quick video tutorial, which explains the process of interacting with the installer.
+
+{% embed url="https://www.youtube.com/watch?v=RZvIx27I8Ts" %}
+
 ## 2. Download OriginTrail V8 DKG Core node installer:
 
 Ensure that you're logged in as root. Then, execute the following command in order to download the installer and grant it executable access:
@@ -74,7 +80,7 @@ Do not run the installer with "sudo".
 
 ## 4. Verify V8 DKG Core node installation:
 
-###
+
 
 If your installation has been successful, your node will show the “**Node is up and running!**” log as shown in the example image below:
 
