@@ -34,6 +34,8 @@ dkg.paranet.create(
     ual=paranet_ual,
     name="TestParanet",
     description="TestParanetDescription",
+    paranet_nodes_access_policy=ParanetNodesAccessPolicy.CURATED,
+    paranet_miners_access_policy=ParanetMinersAccessPolicy.CURATED
 )
 ```
 
@@ -42,8 +44,75 @@ In this example:
 * `ual` is the unique identifier of the Knowledge Asset created on the DKG.
 * `name` is the name you want to give to your Paranet. It should be descriptive enough to indicate the Paranet's purpose or focus.
 * `description` provides additional context about the Paranet, explaining its purpose and the types of knowledge assets or services it will involve.
+* `paranet_nodes_access_policy` defines a paranet's policy towards including nodes. If OPEN, any node can be a part of the paranet. If CURATED, only the paranet owner can approve nodes to be a part of the paranet.
+* `paranet_miners_access_policy` defines a paranet's policy towards including knowledge miners. If OPEN, anyone can publish to a paranet. If CURATED, only the paranet owner can approve knowledge miners who can publish to the paranet.
 
 After the Paranet is successfully created, the Paranet UAL can be used to interact with the specific Paranet. This includes deploying services within the Paranet, managing incentives, and claiming rewards associated with the Paranet's operations.
+
+#### Adding/removing nodes to/from a Paranet
+
+This functionality is only available to the paranet operator if they created a paranet with `ParanetNodesAccessPolicy.CURATED`. By default a node can participate in any paranet. However, with this change, if a node wants to participate in a paranet with the curated nodes access policy it has to either be added to a paranet by a paranet operator or it has to request access. The paranet operator can add nodes to a paranet or remove them from a paranet by passing a `paranet_ual` and nodes `identity_ids`.
+
+```python
+paranet_ual  = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1'
+node1_identity_id = dkg.node.get_identity_id(NODE1_PUBLIC_KEY)
+node2_identity_id = dkg.node.get_identity_id(NODE2_PUBLIC_KEY)
+node3_identity_id = dkg.node.get_identity_id(NODE3_PUBLIC_KEY)
+
+identity_ids = [node1_identity_id, node2_identity_id, node3_identity_id]
+dkg.paranet.add_curated_nodes(paranet_ual, identity_ids)
+
+identity_ids = [node2_identity_id, node3_identity_id]
+dkg.paranet.remove_curated_nodes(paranet_ual, identity_ids)
+```
+
+#### Request curated node access to a Paranet
+
+A node can request access to be added to a paranet. A paranet operator can then either reject or approve access to the node based on its `identity_id`.&#x20;
+
+```python
+paranet_ual = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1'
+identity_id = dkg.node.get_identity_id(NODE_PUBLIC_KEY)
+
+# Node requests access to a curated paranet - Rejected
+requesting_node.paranet.request_curated_node_access(paranet_ual)
+dkg.paranet.reject_curated_node(paranet_ual, identity_id)
+
+# Node requests access to a curated paranet - Approved
+requestingNode.paranet.request_curated_node_access(paranet_ual)
+dkg.paranet.approve_curated_node(paranet_ual, identity_id)
+```
+
+#### Adding/removing knowledge miners to/from a Paranet
+
+This functionality is only available to the paranet operator if they created a paranet with `ParanetMinersAccessPolicy.CURATED`. By default a knowledge miner can publish to any paranet. However, with this change, if a knowledge miner wants to publish to a paranet with the curated miner access policy it has to either be added to a paranet by a paranet operator or it has to request access. The paranet operator can add knowledge miners to a paranet or remove them from a paranet by passing a `paranet_ual` and `miner_addresses`.
+
+<pre class="language-python"><code class="lang-python">paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1'
+<strong>miner_address1 = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
+</strong>miner_address2 = '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC'
+miner_address3 = '0x90F79bf6EB2c4f870365E785982E1f101E93b906'
+<strong>
+</strong><strong>miner_addresses = [miner_address1, miner_address2, miner_address3]
+</strong>dkg.paranet.add_curated_miners(paranetUAL, miner_addresses)
+
+miner_addresses = [miner_address2, miner_address3]
+dkg.paranet.remove_curated_miners(paranetUAL, miner_addresses)
+</code></pre>
+
+#### Request curated knowledge miner access to a Paranet
+
+A knowledge miner can request access to be added to a paranet. A paranet operator can then either reject or approve access to the knowledge miner based on its `miner_address`.&#x20;
+
+```python
+paranet_ual = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1'
+miner_address = '0xe5beaB7853A22f054Ef287EA62aCe7A32528b3eE'
+
+requesting_kminer.paranet.request_curated_miner_access(paranet_ual)
+dkg.paranet.reject_curated_miner(paranet_ual, miner_address)
+
+requesting_kminer.paranet.request_curated_miner_access(paranet_ual)
+dkg.paranet.approve_curated_miner(paranet_ual, miner_address)
+```
 
 #### Adding Services to a Paranet
 
@@ -76,7 +145,7 @@ In this example:
 
 By integrating and managing services, Paranet operators can expand the capabilities of their Paranet, providing a robust infrastructure for decentralized applications and AI-driven services.
 
-#### Knowledge mining for Paranets
+#### Knowledge mining for Open Paranets
 
 Paranets allow users to leverage collective intelligence by contributing their knowledge assets, enhancing the overall utility and value of the network. There are two primary ways to add a Knowledge Asset to a Paranet:
 
@@ -114,6 +183,42 @@ submit_ka_result = dkg.asset.submit_to_paranet(ual=ka_ual, paranet_ual=paranet_u
 ```
 
 Adding Knowledge Assets to Paranets can be done directly during the creation process or by submitting existing assets. This flexibility allows for robust management and contribution of knowledge, enhancing the collective intelligence and functionality of the Paranet.
+
+#### Knowledge Mining for Curated Paranets
+
+#### Knowledge mining for Curated Paranets
+
+In curated Paranets, there is a single method for adding Knowledge Assets, which is through the `dkg.asset.local_store` function.
+
+Unlike open Paranets, where assets can be mined or submitted, curated Paranets offer more controlled management of data, ensuring consistency and integrity across the network. This approach enables users to store both public and private data on their node, providing enhanced security and control.&#x20;
+
+Additionally, other nodes in the curated Paranet can synchronize data from your node, ensuring that all participating nodes have access to the most up-to-date information. This model prioritizes privacy, control, and efficient data sharing within a trusted network.
+
+Here's an example of how to create a KA for Curated Paranet:
+
+```python
+paranet_ual = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1'
+ka_data = {
+    "public": {
+        "@context": ["http://schema.org"],
+        "@id": "uuid:3",
+    },
+    "private": {
+        "@context": ["http://schema.org"],
+        "@graph": [
+            {"@id": "uuid:user:1", "name": "Adam", "lastname": "Smith"},
+            {"@id": "uuid:belgrade", "title": "Belgrade", "postCode": "11000"},
+        ],
+    },
+}
+
+local_store_result = dkg.asset.local_store(
+    ka_data,
+    1,
+    100000000000000000000,
+    paranet_ual=paranet_ual,
+)
+```
 
 #### Checking and Claiming Rewards
 

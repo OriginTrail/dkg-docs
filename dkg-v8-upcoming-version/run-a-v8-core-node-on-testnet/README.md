@@ -13,7 +13,7 @@ The setup process should usually last between 30 minutes to an hour, depending o
 Happy DKG node running!
 
 {% hint style="warning" %}
-The DKG V8 Core Nodes are currently in development and are intended to run on [the V8 incentivised testnet](../v8-incentivised-testnet-measure-manage-master.md) only. Do not attempt to connect the V8 Core Node to the V6 mainnet.&#x20;
+The DKG V8 Core Nodes are currently in development and are intended to run on [the V8 incentivised testnet](../v8-incentivised-testnet-measure-manage-master/) only. Do not attempt to connect the V8 Core Node to the V6 mainnet.&#x20;
 
 You can contribute to the development by running Core Nodes and contributing to the [relevant Github](https://github.com/OriginTrail/) repositories.
 {% endhint %}

@@ -5,10 +5,12 @@
 ## DKG V8 (upcoming version)
 
 * [What's new with OriginTrail V8](dkg-v8-upcoming-version/whats-new-with-origintrail-v8.md)
-* [V8 Incentivised Testnet - Measure, Manage, Master](dkg-v8-upcoming-version/v8-incentivised-testnet-measure-manage-master.md)
+* [V8 Incentivised Testnet - Measure, Manage, Master](dkg-v8-upcoming-version/v8-incentivised-testnet-measure-manage-master/README.md)
+  * [V8 Testnet Scoring Guide](dkg-v8-upcoming-version/v8-incentivised-testnet-measure-manage-master/v8-testnet-scoring-guide.md)
 * [Run a V8 Core Node on testnet](dkg-v8-upcoming-version/run-a-v8-core-node-on-testnet/README.md)
   * [Preparation for V8 DKG Core Node deployment](dkg-v8-upcoming-version/run-a-v8-core-node-on-testnet/preparation-for-v8-dkg-core-node-deployment.md)
   * [V8 DKG Core Node installation](dkg-v8-upcoming-version/run-a-v8-core-node-on-testnet/v8-dkg-core-node-installation.md)
+  * [Sync a DKG V8 Paranet](dkg-v8-upcoming-version/run-a-v8-core-node-on-testnet/sync-a-dkg-v8-paranet.md)
 * [V8 DKG SDK](dkg-v8-upcoming-version/v8-dkg-sdk/README.md)
   * [Development environment setup](dkg-v8-upcoming-version/v8-dkg-sdk/setting-up-your-development-environment.md)
   * [DKG Javascript SDK (dkg.js)](dkg-v8-upcoming-version/v8-dkg-sdk/dkg-v8-js-client/README.md)

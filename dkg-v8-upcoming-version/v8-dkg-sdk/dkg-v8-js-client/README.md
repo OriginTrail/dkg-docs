@@ -41,7 +41,7 @@ Make sure to also include web3.js library as it is a dependency for dkg.js.
 Run the command to install dependency from the [NPM](https://www.npmjs.com/package/dkg.js) repository:
 
 ```bash
-npm install dkg.js@8.0.0-alpha.0
+npm install dkg.js@8.0.0-alpha.2
 ```
 
 Then include `dkg.js` in your project files. This will expose the `DKG` object:

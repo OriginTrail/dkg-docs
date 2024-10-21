@@ -1,13 +1,13 @@
 ---
+icon: display-chart-up
 description: >-
   Join the OriginTrail community in building the internet scale DKG V8 and earn
   TRAC rewards
-icon: display-chart-up
 ---
 
 # V8 Incentivised Testnet - Measure, Manage, Master
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 As with former updates, the launch of the new version 8 of OriginTrail DKG is a joint effort of the OriginTrail community, driven by **an incentivised testnet** system. **The goal of the V8 incentivised testnet is to ensure security, scalability and usability for all ecosystem participants in a joint test environment, before releasing the new version to the DKG mainnet.**&#x20;
 
@@ -34,7 +34,7 @@ In the first layer the core network infrastructure is established running the ne
 
 Each node contribution will be assigned a **score**, which is based on the activity of each node. Simply put, the more "a core node is being used", the more telemetry data it will generate, and the higher the node score. The most "rewarding" operation is publishing Knowledge Assets, which triggers the most activity on the network.
 
-If you would like to run a V8 testnet core node, head over to [this page](run-a-v8-core-node-on-testnet/).
+If you would like to run a V8 testnet core node, head over to [this page](../run-a-v8-core-node-on-testnet/).
 
 ### 2. Security Layer: V8 staking (coming soon)
 

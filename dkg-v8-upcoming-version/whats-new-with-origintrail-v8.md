@@ -1,8 +1,8 @@
 ---
+icon: globe
 description: >-
   Bringing the power of DKG to Any Device, for Anyone, on Any Chain at Internet
   scale
-icon: globe
 ---
 
 # What's new with OriginTrail V8
@@ -31,7 +31,7 @@ Since such AI applications can also be run locally on devices directly, this ena
 
 To unlock these powerful capabilities, DKG Edge Node will include new features that have previously not been available on DKG nodes but were elements of other proprietary or open-source products. To enable a seamless creation of knowledge, DKG nodes will inherit the proven knowledge publishing pipelines from the Network Operating System (nOS). The data protection techniques for private and sensitive data will be based on the NGI-funded OpenPKG project outcomes. The DKG Node will support all major standards such as GS1 Digital Link, EPCIS, Verifiable Credentials, and Decentralized Identities. To support the growing field of knowledge graph implementations globally, it will enable seamless knowledge graph integrations of major knowledge graph providers such as Ontotext, Oracle, Snowflake, Neo4j, Amazon Neptune, and others.
 
-To launch the DKG V8 in the best way, the core developers have launched an [**incentivised testnet program**](v8-incentivised-testnet-measure-manage-master.md) **to which anyone can contribute and get rewarded in TRAC tokens.** Continue to the next page to learn more.
+To launch the DKG V8 in the best way, the core developers have launched an [**incentivised testnet program**](v8-incentivised-testnet-measure-manage-master/) **to which anyone can contribute and get rewarded in TRAC tokens.** Continue to the next page to learn more.
 
 
 

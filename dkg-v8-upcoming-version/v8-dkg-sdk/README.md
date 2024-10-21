@@ -1,5 +1,7 @@
 ---
 description: The one-stop-shop SDK for your Semantic Web3 needs
+icon: gear-complex-code
+coverY: 0
 ---
 
 # V8 DKG SDK

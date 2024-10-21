@@ -15,19 +15,19 @@ The library can be used in any Python application.
 Run the command to install dkg.py library using pip:
 
 ```bash
-pip install dkg==8.0.0a1
+pip install dkg==8.0.0a2
 ```
 
 pip x:
 
 ```bash
-pipx install dkg==8.0.0a1
+pipx install dkg==8.0.0a2
 ```
 
 or poetry:
 
 ```bash
-poetry add dkg==8.0.0a1
+poetry add dkg==8.0.0a2
 ```
 
 Then import DKG, BlockchainProvider and NodeHTTPProvider classes inside your project:

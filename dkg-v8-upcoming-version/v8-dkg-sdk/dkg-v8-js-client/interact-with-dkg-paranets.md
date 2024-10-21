@@ -38,6 +38,8 @@ const UAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1
 await dkg.paranet.create(UAL, {
         paranetName: 'AiParanet',
         paranetDescription: 'AI agents paranet for demonstration purposes.',
+        paranetNodesAccessPolicy: PARANET_NODES_ACCESS_POLICY.CURATED,
+        paranetMinersAccessPolicy: PARANET_MINERS_ACCESS_POLICY.CURATED,
 });
 ```
 
@@ -46,8 +48,76 @@ In this example:
 * `UAL` is the unique identifier of the Knowledge Asset created on the DKG.
 * `paranetName` is the name you want to give to your Paranet. It should be descriptive enough to indicate the Paranet's purpose or focus.
 * `paranetDescription` provides additional context about the Paranet, explaining its purpose and the types of knowledge assets or services it will involve.
+* `paranetNodesAccessPolicy` defines a paranet's policy towards including nodes. If OPEN, any node can be a part of the paranet. If CURATED, only the paranet owner can approve nodes to be a part of the paranet.
+* `paranetMinersAccessPolicy` defines a paranet's policy towards including knowledge miners. If OPEN, anyone can publish to a paranet. If CURATED, only the paranet owner can approve knowledge miners who can publish to the paranet.
 
 After the Paranet is successfully created, the Paranet UAL can be used to interact with the specific Paranet. This includes deploying services within the Paranet, managing incentives, and claiming rewards associated with the Paranet's operations.
+
+#### Adding/removing nodes to/from a Curated Paranet
+
+This functionality is only available to the paranet operator if they created a paranet with `paranetNodesAccessPolicy.CURATED`. By default a node can participate in any paranet. However, with this change, if a node wants to participate in a paranet with the curated nodes access policy it has to either be added to a paranet by a paranet operator or it has to request access. The paranet operator can add nodes to a paranet or remove them from a paranet by passing a `paranetUAL` and nodes`identityIds`.
+
+<pre class="language-javascript"><code class="lang-javascript">const paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1';
+const node1IdentityId = await dkg.node.getIdentityId(NODE1_PUBLIC_KEY);
+const node2IdentityId = await dkg.node.getIdentityId(NODE2_PUBLIC_KEY);
+const node3IdentityId = await dkg.node.getIdentityId(NODE3_PUBLIC_KEY);
+<strong>
+</strong><strong>// Adding nodes to a curated paranet
+</strong><strong>const identityIdsToAdd = [node1IdentityId, node2IdentityId, node3IdentityId];
+</strong>await dkg.paranet.addCuratedNodes(paranetUAL, identityIdsToAdd);
+
+// Removing nodes from a curated paranet
+const identityIdsToRemove = [node2IdentityId, node3IdentityId];
+await dkg.paranet.removeCuratedNodes(paranetUAL, identityIdsToRemove);
+</code></pre>
+
+#### Request curated node access to a Curated Paranet
+
+A node can request access to be added to a paranet. A paranet operator can then either reject or approve access to the node based on its `identityId`.&#x20;
+
+<pre class="language-javascript"><code class="lang-javascript">const paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1';
+const identityId = await dkg.node.getIdentityId(REQUESTING_NODE_PUBLIC_KEY);
+
+// Node requests access to a curated paranet - Access rejected
+await requestingNode.paranet.requestCuratedNodeAccess(paranetUAL);
+<strong>await dkg.paranet.rejectCuratedNode(paranetUAL, identityId);
+</strong>
+// Node requests access to a curated paranet - Access approved
+await requestingNode.paranet.requestCuratedNodeAccess(paranetUAL); 
+await dkg.paranet.approveCuratedNode(paranetUAL, identityId);
+</code></pre>
+
+#### Adding/removing knowledge miners to/from a Curated Paranet
+
+This functionality is only available to the paranet operator if they created a paranet with `paranetMinersAccessPolicy.CURATED`. By default a knowledge miner can publish to any paranet. However, with this change, if a knowledge miner wants to publish to a paranet with the curated miner access policy it has to either be added to a paranet by a paranet operator or it has to request access. The paranet operator can add knowledge miners to a paranet or remove them from a paranet by passing a `paranetUAL` and `minerAddresses`.
+
+<pre class="language-javascript"><code class="lang-javascript">const paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1';
+<strong>const minerAddress1 = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266';
+</strong>const minerAddress2 = '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC';
+const minerAddress3 = '0x90F79bf6EB2c4f870365E785982E1f101E93b906';
+<strong>
+</strong><strong>const minerAddressesToAdd = [minerAddress1, minerAddress2, minerAddress3];
+</strong>await dkg.paranet.addCuratedMiners(paranetUAL, minerAddressesToAdd);
+
+const minerAddressesToRemove = [minerAddress2, minerAddress3];
+await dkg.paranet.removeCuratedMiners(paranetUAL, minerAddressesToRemove);
+</code></pre>
+
+#### Request Knowledge Miner access to a Curated Paranet
+
+A knowledge miner can request access to be added to a paranet. A paranet operator can then either reject or approve access to the knowledge miner based on its `minerAddress`.&#x20;
+
+<pre class="language-javascript"><code class="lang-javascript">const paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1';
+const requestingMinerAddress = '0x90F79bf6EB2c4f870365E785982E1f101E93b906';
+
+// Knowlegde miner requests access - Access rejected
+<strong>await requestingMiner.paranet.requestCuratedMinerAccess(paranetUAL);
+</strong>await dkg.paranet.rejectCuratedMiner(paranetUAL, requestingMinerAddress);
+
+// Knowlegde miner requests access - Access approved
+await requestingMiner.paranet.requestCuratedMinerAccess(paranetUAL);
+await dkg.paranet.approveCuratedMiner(paranetUAL, requestingMinerAddress);
+</code></pre>
 
 #### Adding Services to a Paranet
 
@@ -79,7 +149,7 @@ In this example:
 
 By integrating and managing services, Paranet operators can expand the capabilities of their Paranet, providing a robust infrastructure for decentralized applications and AI-driven services.
 
-#### Knowledge mining for Paranets
+#### Knowledge mining for Open Paranets
 
 Paranets allow users to leverage collective intelligence by contributing their knowledge assets, enhancing the overall utility and value of the network. There are two primary ways to add a Knowledge Asset to a Paranet:
 
@@ -120,6 +190,51 @@ await DkgClient.asset.submitToParanet(kaUAL, paranetUAL);
 ```
 
 Adding Knowledge Assets to Paranets can be done directly during the creation process or by submitting existing assets. This flexibility allows for robust management and contribution of knowledge, enhancing the collective intelligence and functionality of the Paranet.
+
+#### Knowledge mining for Curated Paranets
+
+In curated Paranets, there is a single method for adding Knowledge Assets, which is through the `dkg.asset.localStore` function.
+
+Unlike open Paranets, where assets can be mined or submitted, curated Paranets offer more controlled management of data, ensuring consistency and integrity across the network. This approach enables users to store both public and private data on their node, providing enhanced security and control.&#x20;
+
+Additionally, other nodes in the curated Paranet can synchronize data from your node, ensuring that all participating nodes have access to the most up-to-date information. This model prioritizes privacy, control, and efficient data sharing within a trusted network.
+
+Here's an example of how to create a KA for Curated Paranet:
+
+```javascript
+const content = {
+    public: {
+        '@context': ['https://schema.org'],
+        '@id': 'uuid:22',
+        company: 'KA-Company',
+        user: {
+            '@id': 'uuid:user:22',
+        },
+        city: {
+            '@id': 'uuid:budapest',
+        },
+    },
+    private: {
+        '@context': ['https://schema.org'],
+        '@graph': [
+            {
+                '@id': 'uuid:user:1',
+                name: 'Adam',
+                lastname: 'Smith',
+            },
+            {
+                @id': 'uuid:belgrade',
+                title: 'Belgrade',
+                postCode: '11000',
+            },
+        ],
+    },
+};
+const paranetUAL = 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/1';
+
+const knowledgeAsset = await DkgClient.asset.localStore(content, { epochsNum: 2, paranetUAL: paranetUAL });
+console.log('Knowledge asset created with UAL: ', knowledgeAsset.UAL);
+```
 
 #### Checking and Claiming Rewards
 
