@@ -14,7 +14,7 @@ In the early stages of the OriginTrail V8 incentivized testnet, publishing **Kno
 
 With the release of **v8.1.0-beta**, the priorities of the testnet shifted away from publishing at scale. Having surpassed the milestone of **5 million KAs** on the network, there was no longer a need for continued high-volume KA publishing. The reward for publishing KAs was therefore drastically reduced from **1 point to 0.01 points per KA**. Node runners are now encouraged to slow down their publishing efforts. (This might change however in the coming releases)
 
-The main focus of the new release is on testing the newly introduced **Paranet syncing** functionality, which is now much more heavily incentivized. Each synced KA across a Paranet is rewarded with **3 point**, significantly higher than the rewards for other operations. The goal of this shift is to drive collaboration between node runners on syncing KAs across different nodes and forming Paranets, which are essential for testing the network’s decentralized syncing capabilities.
+The main focus of the new release is on testing the newly introduced **Paranet syncing** functionality, which is now much more heavily incentivized. Each synced KA across a Paranet is rewarded with **3 points**, significantly higher than the rewards for other operations. The goal of this shift is to drive collaboration between node runners on syncing KAs across different nodes and forming Paranets, which are essential for testing the network’s decentralized syncing capabilities.
 
 ### Best Pracitces for Node Runners in v8.1.0-beta
 
