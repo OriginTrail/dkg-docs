@@ -28,6 +28,7 @@
   * [Initial Paranet Offerings (IPOs)](dkg-v6-current-version/autonomous-ai-paranets/initial-paranet-offerings-ipos.md)
   * [IPO specification](dkg-v6-current-version/autonomous-ai-paranets/ipo-specification.md)
   * [Launching your IPO](dkg-v6-current-version/autonomous-ai-paranets/launching-your-ipo.md)
+  * [IPO voting](dkg-v6-current-version/autonomous-ai-paranets/ipo-voting.md)
 * [Running DKG nodes](dkg-v6-current-version/node-setup-instructions/README.md)
   * [Installation prerequisites](dkg-v6-current-version/node-setup-instructions/installation-prerequisites/README.md)
     * [Hardware requirements](dkg-v6-current-version/node-setup-instructions/installation-prerequisites/hardware-requirements.md)
