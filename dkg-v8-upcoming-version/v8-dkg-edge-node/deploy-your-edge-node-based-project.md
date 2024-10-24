@@ -20,7 +20,7 @@ Please note that the automated installer currently supports Ubuntu versions 20.0
 * **OS:** Linux
 * **RAM:** At least 8 GB
 * **CPU:** 4
-* **Storage:** At least 60 GB available space
+* **Storage:** At least 20 GB available space
 * **Network:** Stable internet connection
 
 ### Software Dependencies
