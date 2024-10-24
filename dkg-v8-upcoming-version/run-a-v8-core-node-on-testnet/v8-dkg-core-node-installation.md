@@ -108,8 +108,6 @@ If your installation has been successful, your node will show the “**Node is u
 
 If you encounter any issues during the installation process or have questions regarding any of the above topics, jump into our official [Discord](https://discordapp.com/invite/FCgYk2S) channel and ask for assistance.
 
-Apart from Discord, feel free to contact [tech@origin-trail.com](mailto:tech@origin-trail.com) and we will do our best to respond in a timely manner.
-
 Follow our official channels for updates:&#x20;
 
 * [Twitter](https://twitter.com/origin\_trail)&#x20;

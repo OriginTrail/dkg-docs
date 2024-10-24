@@ -33,7 +33,7 @@ Navigate to it:
 cd ot-node
 ```
 
-Then, install the required dependencies by running:
+Install the required dependencies by running:
 
 ```
 npm install
