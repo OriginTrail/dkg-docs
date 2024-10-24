@@ -65,7 +65,7 @@ Example: **ghp\_4JEzJXwD....@github.com/\<organization>/\<project>.git**
 Simply run the installer with the command provided below:
 
 ```bash
-./edge-node-installer.sh
+bash edge-node-installer.sh
 ```
 
 {% hint style="info" %}
