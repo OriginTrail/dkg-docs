@@ -55,14 +55,17 @@ When you delegate TRAC tokens to a node, they are locked inside DKG smart contra
 
 In order to introduce a level of predictability of network operations, withdrawing tokens is subject to an unbonding period of 28 days.
 
+{% hint style="warning" %}
+If you want to withdraw tokens in order to delegate to another node on the same network (blockchain) - you **do not** have to wait 28 days! See [new-redelegating-trac.md](new-redelegating-trac.md "mention")
+{% endhint %}
+
 {% hint style="success" %}
 Delegated staking is a non-custodial system, so the node operator has no access to the locked TRAC tokens at any time.
 {% endhint %}
 
-\
 Each node operator can also set an “**operator fee**” which is taken as a percentage of the TRAC rewards deducted each time when a node claims rewards from a knowledge asset. The remaining TRAC fee is then split proportionally to the share of staked tokens across all delegators.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **Example**: if a node accumulated **1000 TRAC** tokens in the previous period, and the node has two delegators both of 50% share, and the operator\_fee is 10%:
 
 * the node operator will receive 100 TRAC (10%)
@@ -76,10 +79,6 @@ If you are running a DKG node you can delegate TRAC tokens to your node in the s
 To understand how to set up your operator fee, follow the [node-setup-instructions](../node-setup-instructions/ "mention") instructions for node setup. Note that changing your operator fee incurs a 28 day delay, balancing the 28 day delay delegators experience when withdrawing stake from your node.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Depiction of delegating and withdrawing of TRAC from DKG smart contracts</p></figcaption></figure>
-
-### What is next for delegated staking?
-
-After successful deployment and verification on Gnosis blockchain, the delegated staking feature will roll out to all other DKG supported blockchains.
 
 ### Have questions?
 

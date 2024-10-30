@@ -71,6 +71,7 @@
   * [Staking TRAC on Base](dkg-v6-current-version/delegated-staking/staking-trac-on-base.md)
   * [Staking TRAC on Neuroweb](dkg-v6-current-version/delegated-staking/staking-trac-on-neuroweb.md)
   * [Staking TRAC on Gnosis](dkg-v6-current-version/delegated-staking/staking-trac-on-gnosis.md)
+  * [(NEW) Redelegating TRAC](dkg-v6-current-version/delegated-staking/new-redelegating-trac.md)
 * [Tutorials](dkg-v6-current-version/tutorials.md)
 * [Ecosystem White Paper](dkg-v6-current-version/ecosystem-white-paper.md)
 * [OriginTrail RFCs](dkg-v6-current-version/origintrail-rfcs.md)
