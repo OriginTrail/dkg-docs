@@ -21,7 +21,7 @@ In order to deploy your V8 DKG node, you will need a Linux server with the minim
 Make sure that you have root access to your server.
 
 {% hint style="info" %}
-The installer script provided in these instructions is designed for installing the OriginTrail node on **Ubuntu 20.04 LTS and 22.04 LTS** distributions.\
+The installer script provided in these instructions is designed for installing the OriginTrail node on **Ubuntu 20.04 LTS , 22.04 LTS and 24.04 LTS** distributions.\
 \
 It is also possible to install the OriginTrail V8 Core Node on other systems, but it would require  modifications to the installer script. If you have any such modifications in mind, we highly encourage your contributions. Please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
 {% endhint %}

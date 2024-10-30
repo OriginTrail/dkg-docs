@@ -6,7 +6,7 @@ description: This page will guide you trough the V8 DKG Core Node installation p
 
 The installation process involves interacting with the installer through the terminal. To proceed you should have all the required input ready, as they will be required by the installer.
 
-* Ubuntu 20.04 or 22.04 instance
+* Ubuntu 20.04, 22.04 or 24.04 instance
 * Admin and operational keys and their private keys
 * Funds on the wallets
 * RPC endpoints
@@ -15,7 +15,7 @@ The installation process involves interacting with the installer through the ter
 ## 1. **How the installer works**:
 
 {% hint style="info" %}
-The provided installer is designed for installing the OriginTrail node on **Ubuntu 20.04 LTS and 22.04 LTS** distributions.\
+The provided installer is designed for installing the OriginTrail node on **Ubuntu 20.04 LTS, 22.04 LTS and 24.04 LTS** distributions.\
 \
 It is also possible to install the OriginTrail node on other systems, but it would require  modifications to the installer. If you have any such modifications in mind, we highly encourage your contributions. Please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
 {% endhint %}
@@ -63,13 +63,13 @@ Before proceeding, make sure to check our quick video tutorial, which explains t
 Ensure that you're logged in as root. Then, execute the following command in order to download the installer and grant it executable access:
 
 ```sh
-cd /root/ && curl -k -o v8_installer.sh https://raw.githubusercontent.com/OriginTrail/ot-node/v8/develop/installer/v8_installer.sh && chmod +x v8_installer.sh
+cd /root/ && curl -k -o installer.sh https://raw.githubusercontent.com/OriginTrail/ot-node/v8/develop/installer/installer.sh && chmod +x installer.sh
 ```
 
 ## 3. Execute the installer by running:
 
 ```
-./v8_installer.sh
+./installer.sh
 ```
 
 {% hint style="info" %}
