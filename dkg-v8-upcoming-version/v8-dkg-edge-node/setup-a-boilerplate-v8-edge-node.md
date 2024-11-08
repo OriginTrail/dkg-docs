@@ -246,7 +246,7 @@ Once you've finalized configuring of all DKG Edge node services, please make sur
 ## Setup with pre-deployed V8 DKG Runtime testnet node
 
 {% hint style="warning" %}
-Prior to proceeding with this setup option, it is essential to have a V8 DKG Core Node operational on the testnet, as this is a critical requirement. If you have not yet installed the Core Node, please consult the installation guide available on the following [page](https://docs.origintrail.io/dkg-v8-upcoming-version/run-a-v8-core-node-on-testnet) for detailed instructions.
+Prior to proceeding with this setup option, it is essential to have a V8 DKG Core Node operational on the testnet, as this is a critical requirement. If you have not yet deployed a Testnet Core Node, please consult the installation guide available on the following [page](https://docs.origintrail.io/dkg-v8-upcoming-version/run-a-v8-core-node-on-testnet) for detailed instructions.
 {% endhint %}
 
 ### System Requirements

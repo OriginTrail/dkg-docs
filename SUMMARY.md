@@ -23,7 +23,7 @@
   * [Customize the Edge node & Build your project](dkg-v8-upcoming-version/v8-dkg-edge-node/customize-the-edge-node-and-build-your-project.md)
   * [Deploy your Edge node based project](dkg-v8-upcoming-version/v8-dkg-edge-node/deploy-your-edge-node-based-project.md)
   * [DKG Edge Node API documentation](dkg-v8-upcoming-version/v8-dkg-edge-node/dkg-edge-node-api-documentation.md)
-  * [V8 DKG Inception program](dkg-v8-upcoming-version/v8-dkg-edge-node/v8-dkg-inception-program.md)
+  * [DKG Edge node Inception program](dkg-v8-upcoming-version/v8-dkg-edge-node/dkg-edge-node-inception-program.md)
 
 ## DKG V6 (current version)
 
