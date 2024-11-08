@@ -1,5 +1,7 @@
 # DKG Edge node Inception program
 
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+
 Are you building a next generation Artificial Intelligence product, and excited about hybrid, neuro-symbolic AI?
 
 The **DKG Edge Node inception program** is designed for builders of neuro-symbolic, privacy-enabled AI on the OriginTrail Decentralized Knowledge Graph with the DKG Edge Nodes and Paranets.
