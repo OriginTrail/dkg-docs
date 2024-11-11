@@ -1,8 +1,8 @@
 ---
+icon: circle-nodes
 description: >-
   The platform for building collective neuro-symbolic AI. Start building with
   the V8 DKG edge node beta version
-icon: circle-nodes
 cover: ../../.gitbook/assets/Edge_Node_cover (1).png
 coverY: 0
 layout:
@@ -38,7 +38,8 @@ Edge nodes enable running Decentralized AI services on the "network edge", provi
 
 
 {% hint style="info" %}
-The V8 DKG Edge node is currently in Beta and intented for builders on the V8 DKG Testnet. We expect issues to occur and encourage code fixes and bug report contributions, which [are also incentivised](../v8-incentivised-testnet-measure-manage-master/).&#x20;
+Though currently in Beta, the individual DKG Edge node components have been successfully deployed in various productive environments by builders on DKG V6 mainnet. We expect to reach a productive release by end of 2024. \
+As an early builder, you can additionally benefit from the [DKG Edge node inception program](dkg-edge-node-inception-program.md) with up to 100k TRAC tokens for your publishing costs on DKG mainnet.&#x20;
 {% endhint %}
 
 {% hint style="warning" %}
