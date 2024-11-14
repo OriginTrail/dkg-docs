@@ -26,9 +26,9 @@ There following four categories of contributions and their incentive pools are i
 Incentivised testnet rewards are subject to the [V8 terms and conditions](https://dkg-v8-incentivised-testnet.origintrail.io/terms-and-conditions)
 {% endhint %}
 
-The V8 incentivised testnet will go through a "3 layer launch", each layer introducing new functionality.
+The V8 testnet incentivisation will go through a "3 layer" process, each layer introducing new functionality.
 
-### 1. Core infrastructure Layer:  V8 core nodes
+### 1. Core infrastructure Layer:  V8 core nodes (completed)
 
 In the first layer the core network infrastructure is established running the new V8 core nodes, which form the backbone of the DKG network. As features such as batch minting Knowledge Assets, random sampling and others are gradually rolled out on the network, the core nodes will **generate useful telemetry data on the V8 testnet operation,** which will be sent to the core development team and for which the community will be incentivised.
 
@@ -36,13 +36,17 @@ Each node contribution will be assigned a **score**, which is based on the activ
 
 If you would like to run a V8 testnet core node, head over to [this page](../run-a-v8-core-node-on-testnet/).
 
-### 2. Security Layer: V8 staking (coming soon)
+{% hint style="info" %}
+The core node incentivisation program of the V8 testnet has completed, read more about it [here ](claiming-rewards.md)&#x20;
+{% endhint %}
 
-Once the core infrastructure is established, we will proceed with the security layer features deployment and testing, including the new Staking UI. Once live, you will be able to contribute by testing out the system and be eligible for rewards for your on-chain activity.
+### 2. AI Layer: V8 edge nodes (active)
 
-### 3. AI Layer: V8 edge nodes (coming soon)
+To build on the DKG V8 and test out it's AI features, we have recently introduced [DKG V8 Edge Nodes,](../v8-dkg-edge-node/) designed to run neuro-symbolic, privacy enabled AI on the DKG on various edge devices, with high customizability for builders.  Builders looking to build on the DKG can join the [DKG Edge Node inception program](../v8-dkg-edge-node/dkg-edge-node-inception-program.md), which provides a pool of **750k TRAC tokens** for teams launching their paranets with  DKG Edge nodes on both the DKG V6 or V8 Mainnet, with tokens exclusively used to publish Knowledge Assets to their paranets.
 
-The final layer will introduce DKG V8 Edge Nodes, designed to run neuro-symbolic, privacy enabled AI on the DKG on various edge devices, with high customizability for builders. The V8 Edge Nodes are currently being tested by the OriginTrail core developers in various environments and are to enable easy creation of Knowledge Assets at scale, creating DRAG applications, fine-tuning AI models based on DKG data, all through a modular architecture fully customizable by builders.
+### 3. Security Layer: V8 staking (tested in mainnet environment)
+
+Once the core infrastructure is established and V8.0 mainnet launch, we will proceed with the security layer features deployment and testing, including the new Staking UI. Once live, you will be able to contribute by testing out the system and be eligible for rewards for your on-chain activity.
 
 {% hint style="info" %}
 The best way to stay up to date with the current status and updates of the incentivised testnet, join the dedicated [OriginTrail #v8-discussion Discord channel](https://discord.gg/JEqKe9dB).
