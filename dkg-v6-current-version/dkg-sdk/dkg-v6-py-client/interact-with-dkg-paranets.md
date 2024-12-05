@@ -47,9 +47,9 @@ After the Paranet is successfully created, the Paranet UAL can be used to intera
 
 #### Deploying Incentives for a Paranet
 
-The `deploy_incentives_contract` function sets up the incentive mechanism for a Paranet, ensuring that contributors are fairly rewarded for their efforts. This function requires the `paranet_ual` as the first parameter, which is the Universal Asset Locator for the Paranet. The second parameter specifies parameters of the incentivization and third — the type of incentivization mechanism, currently limited and defaulted to 'Neuroweb'.
+The `deploy_incentives_contract` function sets up the incentive mechanism for a Paranet, ensuring that contributors are fairly rewarded for their efforts. This function requires the `paranet_ual` as the first parameter, which is the Universal Asset Locator for the Paranet. The second parameter specifies parameters of the incentivization and third — the type of incentivization mechanism - 'Neuroweb' (for rewards directly on Neuroweb) or 'NeurowebERC20' for supported EVM chains.
 
-The incentivization mechanism is only available on the NeuroWeb blockchain, meaning 'Neuroweb' is the only supported `incentive_type` at this time. When the Paranet receives incentives, these will be distributed according to predefined rules: a portion goes to the Paranet operator, another portion is shared among voters who supported proposals, and the remainder is dedicated to knowledge miners who contributed to the Paranet.
+When the Paranet receives incentives, these will be distributed according to predefined rules: a portion goes to the Paranet operator, another portion is shared among voters who supported proposals, and the remainder is dedicated to knowledge miners who contributed to the Paranet.
 
 ```python
 incentives_pool_parameters = dkg.paranet.NeuroWebIncentivesPoolParams(
