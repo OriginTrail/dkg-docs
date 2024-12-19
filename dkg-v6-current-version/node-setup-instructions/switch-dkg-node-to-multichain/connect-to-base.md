@@ -39,8 +39,6 @@ List of available exchanges is available on our [website](https://origintrail.io
 
 Instructions on how to bridge TRAC and ETH tokens to Base blockchains can be found [here](https://docs.origintrail.io/integrated-blockchains/ethereum-ecosystem/base-blockchain#bridging-trac-to-base).
 
-
-
 ### 3. Update DKG node configuration
 
 Open the **.origintrail\_noderc** configuration file of your DKG node located inside the **ot-node** directory. Within the config, locate the **"blockchain"** object, and add the following object to the **"implementation"** array, specifying your RPC endpoint and wallets.&#x20;
@@ -197,7 +195,7 @@ As `operationalWallets` is an array, you can define multiple operational wallets
  }
 ```
 
-After adding **"base:**84532**"**, your **"blockchain"** object in the configuration file should look like the one below:
+After adding **"base:**&#x38;453&#x32;**"**, your **"blockchain"** object in the configuration file should look like the one below:
 
 ```json
 ...

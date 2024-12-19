@@ -43,7 +43,7 @@ The **Knowledge mining API** is one of the most powerful services in the Edge no
     * optionally: If _airflow webserver_ is used, it should also be restarted
   * **Unpause** your pipeline\
     `airflow dags unpause ${YOUR_DAG_NAME}`\
-    _e.g. If your pipeline filename is xlsx\_to\_jsonld.py, unpause command should be "airflow tags unpause xlsx\_to\_jsonld"_\
+    &#xNAN;_&#x65;.g. If your pipeline filename is xlsx\_to\_jsonld.py, unpause command should be "airflow tags unpause xlsx\_to\_jsonld"_\
     \
     **NOTE:** If you are using airflow webserver, you should be able to see your pipeline on http://localhost:8080 (or any other port you selected for the service) inside of "unpaused DAGS"
 * **Registering the pipeline**

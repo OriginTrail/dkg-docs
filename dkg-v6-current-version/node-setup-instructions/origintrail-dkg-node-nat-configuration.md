@@ -7,7 +7,7 @@ description: >-
 
 # OriginTrail DKG node NAT configuration
 
-## What is **Network Address Translation (**NAT) and libp2p?
+## What is **Network Address Translation (**&#x4E;AT) and libp2p?
 
 libp2p is a peer-to-peer (P2P) networking framework that enables the development of P2P applications. **OriginTrail's DKG node** utilizes libp2p for networking, enabling seamless communication within the OriginTrail decentralized network.&#x20;
 

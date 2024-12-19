@@ -5,6 +5,7 @@
 ## DKG V8 (upcoming version)
 
 * [What's new with OriginTrail V8](dkg-v8-upcoming-version/whats-new-with-origintrail-v8.md)
+* [DKG V8 update guidebook](dkg-v8-upcoming-version/dkg-v8-update-guidebook.md)
 * [V8 Incentivised Testnet - Measure, Manage, Master](dkg-v8-upcoming-version/v8-incentivised-testnet-measure-manage-master/README.md)
   * [V8 Testnet Scoring Guide](dkg-v8-upcoming-version/v8-incentivised-testnet-measure-manage-master/v8-testnet-scoring-guide.md)
   * [Claiming Rewards](dkg-v8-upcoming-version/v8-incentivised-testnet-measure-manage-master/claiming-rewards.md)
