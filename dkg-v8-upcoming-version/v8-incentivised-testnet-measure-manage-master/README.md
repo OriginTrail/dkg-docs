@@ -17,9 +17,9 @@ There following four categories of contributions and their incentive pools are i
 
 | Incentivised Activity                              | Required technical level | Reward Budget |
 | -------------------------------------------------- | ------------------------ | ------------- |
-| Staking & UI testing                               | Low                      | 50 000 TRAC   |
+| Staking & UI testing                               | Low                      | 100 000 TRAC  |
 | Running core nodes                                 | Medium                   | 100 000 TRAC  |
-| Bug submissions & Code contributions               | Medium                   | 100 000 TRAC  |
+| Bug submissions & Code contributions               | Medium                   | 50 000 TRAC   |
 | Building Paranets (inception program for Builders) | High                     | 750 000 TRAC  |
 
 {% hint style="info" %}
@@ -44,15 +44,22 @@ The core node incentivisation program of the V8 testnet has completed, read more
 
 To build on the DKG V8 and test out it's AI features, we have recently introduced [DKG V8 Edge Nodes,](../v8-dkg-edge-node/) designed to run neuro-symbolic, privacy enabled AI on the DKG on various edge devices, with high customizability for builders.  Builders looking to build on the DKG can join the [DKG Edge Node inception program](../v8-dkg-edge-node/dkg-edge-node-inception-program.md), which provides a pool of **750k TRAC tokens** for teams launching their paranets with  DKG Edge nodes on both the DKG V6 or V8 Mainnet, with tokens exclusively used to publish Knowledge Assets to their paranets.
 
-### 3. Security Layer: V8 staking (tested in mainnet environment)
+### 3. Security Layer: V8 staking (actived on Mainnet Launch)
 
-Once the core infrastructure is established and V8.0 mainnet launch, we will proceed with the security layer features deployment and testing, including the new Staking UI. Once live, you will be able to contribute by testing out the system and be eligible for rewards for your on-chain activity.
+As part of the DKG V8 launch, a Staking security bounty will be deployed to test out the Staking system in the real economic environment of the DKG mainnet. The new improved Staking system includes a new Staking Dashboard and updated smart contracts - more details on the updates can be found [here](../dkg-v8-update-guidebook.md#v8-staking-updates).
 
-{% hint style="info" %}
-The best way to stay up to date with the current status and updates of the incentivised testnet, join the dedicated [OriginTrail #v8-discussion Discord channel](https://discord.gg/JEqKe9dB).
-{% endhint %}
+A total of 100.000 TRAC tokens for staking security bounty will be rewarded.
+
+To be eligible users need to:&#x20;
+
+* Stake TRAC on mainnet to test the upgraded V8 Staking Dashboard between Dec 24th 5pm CET and January 7th 5pm CET&#x20;
+* Register for claiming the reward **from January 7th 5pm CET to January 14th 5pm** on the designated [reward claiming interface](https://dkg-v8-incentivised-testnet.origintrail.io/claim-rewards). Registration includes submitting KYC data for the purposes of reward distribution and qualitative feedback on the usage of staking interface.  &#x20;
+
+The total reward amount will be distributed pro rata among eligible participants, according to the size of the stake they contributed during that period.&#x20;
+
+Rewards will be distributed no later than **January 21st 5pm CET**. The 14 day period begins with an announcement of V8 launch, which will also carry a message regarding the V8 security bounty period beginning and the end.&#x20;
 
 {% hint style="success" %}
-To check the current progress of the incentivised testnet, [head over to the Incentivised testnet website](https://dkg-v8-incentivised-testnet.origintrail.io/)
+Qualified total stake is determined following the one week period after the 14 day period since the V8 launch, as a sum of all received claims through an claiming interface. Claims should be registered no longer than one week after the completion of the 14 day period.&#x20;
 {% endhint %}
 
