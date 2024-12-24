@@ -52,8 +52,8 @@ A total of 100.000 TRAC tokens for staking security bounty will be rewarded.
 
 To be eligible users need to:&#x20;
 
-* Stake TRAC on mainnet to test the upgraded V8 Staking Dashboard between Dec 24th 5pm CET and January 7th 5pm CET&#x20;
-* Register for claiming the reward **from January 7th 5pm CET to January 14th 5pm** on the designated [reward claiming interface](https://dkg-v8-incentivised-testnet.origintrail.io/claim-rewards). Registration includes submitting KYC data for the purposes of reward distribution and qualitative feedback on the usage of staking interface.  &#x20;
+* Stake TRAC on mainnet to test the upgraded V8 Staking Dashboard between Dec 26th 5pm CET and January 9th 5pm CET&#x20;
+* Register for claiming the reward **from January 9th 5pm CET to January 16th 5pm** on the designated [reward claiming interface](https://dkg-v8-incentivised-testnet.origintrail.io/claim-rewards). Registration includes submitting KYC data for the purposes of reward distribution and qualitative feedback on the usage of staking interface.  &#x20;
 
 The total reward amount will be distributed pro rata among eligible participants, according to the size of the stake they contributed during that period.&#x20;
 
