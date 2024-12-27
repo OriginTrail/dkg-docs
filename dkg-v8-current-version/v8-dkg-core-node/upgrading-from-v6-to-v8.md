@@ -19,25 +19,38 @@ The new V8 ot-node engine introduces a <mark style="color:green;">blockchainEven
 * **Adjust the&#x20;**<mark style="color:green;">**blockchains**</mark>**&#x20;array**: Only include the blockchain IDs relevant to your node. For example, if your node is not connected to the <mark style="color:green;">gnosis:100</mark> blockchain, remove it from the array.
 * **Update the&#x20;**<mark style="color:green;">**rpcEndpoints**</mark>**&#x20;section**: Provide the appropriate RPC endpoints for each blockchain your node is connected to. Remove any endpoints that do not apply to your node’s blockchain configuration.
 
-**Template blockchainEvents module:**
+**Example configuration with blockchainEvents added:**
 
 ```
- "blockchainEvents": {
-                "enabled": true,
-                "implementation": {
-                    "ot-ethers": {
-                        "enabled": true,
-                        "package": "./blockchain-events/implementation/ot-ethers/ot-ethers.js",
-                        "config": {
-                            "blockchains": ["otp:2043", "gnosis:100", "base:8453"],
-                            "rpcEndpoints": {
-                                "base:8453": ["<your rpc>"],
-                                "gnosis:100": ["<your rpc>"]
-                            }
+{
+    "modules": {
+        "autoUpdater": {
+            <auto_updater_module_configuration>
+        },
+        "blockchainEvents": {
+            "enabled": true,
+            "implementation": {
+                "ot-ethers": {
+                    "enabled": true,
+                    "package": "./blockchain-events/implementation/ot-ethers/ot-ethers.js",
+                    "config": {
+                        "blockchains": [
+                            "otp:2043",
+                            "gnosis:100",
+                            "base:8453"
+                        ],
+                        "rpcEndpoints": {
+                            "base:84532": ["https://<your_rpc>"],
+                            "gnosis:10200": ["https://<your_rpc>"]
                         }
                     }
                 }
             }
+        },
+        "blockchain": {
+            <blockchain_module_configuration>
+        },
+        ...
 ```
 
 ### Running data migration:
