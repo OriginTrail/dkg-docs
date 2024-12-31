@@ -55,9 +55,16 @@ The new V8 ot-node engine introduces a <mark style="color:green;">blockchainEven
 
 ### Running data migration:
 
-After the node successfully starts with version 8, you **should manually run the data migration script** run-data-migration.sh, located in the "**`/ot-node/current/v8-data-migration/`**" directory, by executing:
+After the node successfully starts with version 8, you **should manually run the data migration script** run-data-migration.sh. Before that, make sure you update the **MAIN\_DIR** variables in these two files if your main directory is **NOT** "root":
 
-```
+1. run-data-migration.sh
+2. constants.js
+
+Both files are located in the "**`/ot-node/current/v8-data-migration/`**" directory.\
+\
+After that, execute the data migration script in the same directory by running:
+
+```bash
 bash run-data-migration.sh
 ```
 
@@ -67,11 +74,34 @@ The data migration script migrates all triples from their V6 to V8 triple store 
 This migration will not influence your node reward performance. Your node will remain fully operational, and all pre-V8 Knowledge Assets will remain queryable via the GET protocol method.
 {% endhint %}
 
-If the data migration is interrupted for any reason (e.g., server restart), simply re-run the script. It will automatically resume from the point where it was interrupted.
+If the data migration is interrupted for any reason (e.g., server restart), simply re-run the script (Make sure the script is not already running, check the [#restarting-terminating-the-data-migration](upgrading-from-v6-to-v8.md#restarting-terminating-the-data-migration "mention") section for more information). It will automatically resume from the point where it was interrupted.
 
 ### Tracking data migration progress:
 
-To track the data migration progress, check the migration script log file located at                               **"`/ot-node/current/v8-data-migration/logs/migration.log`**", for example by using the command "**tail -f migration.log**".
+To track the data migration progress, check the migration script log file located at                               check the nohup.out file located at "**`/ot-node/data/nohup.out`**", for example by using the command:
+
+```bash
+tail -f nohup.out
+```
+
+If you want to analyse the logs, we suggest taking a look at the migration log file located at "/**`ot-node/data/data-migration/logs/migration.log`**".
+
+### Restarting/terminating the data migration:
+
+If you want to restart the script, make sure you terminate the old process first. You can find out whether the old process is still running by entering this into the terminal:
+
+```bash
+ps aux | grep v8-data-migration
+```
+
+If the old data migration process is still running you should see an output like this:
+
+```bash
+root     1046979 30.9  3.8 22159880 152996 pts/0 Sl   11:12   0:15 node v8-data-migration.js
+root     1047113  0.0  0.0   8164   712 pts/0    S+   11:13   0:00 grep --color=auto v8-data-migration
+```
+
+Run "**`kill <PID>`**" command on the node process and repeat the steps under the[#running-data-migration](upgrading-from-v6-to-v8.md#running-data-migration "mention") section.
 
 {% hint style="warning" %}
 We strongly encourage all node runners to update as soon as the release is out to ensure continued compatibility and to take advantage of the latest features and improvements.
