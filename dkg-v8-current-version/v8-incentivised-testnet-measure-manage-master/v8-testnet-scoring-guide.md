@@ -47,7 +47,7 @@ In the OriginTrail V8 Incentivized Testnet, syncing KAs across Paranets is a cri
          3. Node just joined the network
          4. KA is submitted to the Paranet after the publishing
          5. Node has data in Public Repository, but not in Paranets Repository
-      2. How to start syncing: For details on how to sync Open Paranets, refer to[ this guide](broken-reference).
+      2. How to start syncing: For details on how to sync Open Paranets, refer to[ this guide](../../dkg-v6-previous-version/node-setup-instructions/sync-a-dkg-paranet.md).
 2. **Curated Paranets:**
    1. **Access Control:** Curated Paranets provide two levels of control:
       1. Who can publish KAs to the Paranet (curated miners).

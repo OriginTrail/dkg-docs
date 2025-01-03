@@ -4,7 +4,7 @@ description: Javascript library for the Decentralized Knowledge Graph.
 
 # DKG Javascript SDK (dkg.js)
 
-If you are looking to build applications leveraging [knowledge assets](broken-reference) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.js SDK library is the best place to start!
+If you are looking to build applications leveraging [knowledge assets](https://origintrail.io/products/knowledge-assets) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.js SDK library is the best place to start!
 
 The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-Node](../../node-setup-instructions/), in order to use the SDK.
 

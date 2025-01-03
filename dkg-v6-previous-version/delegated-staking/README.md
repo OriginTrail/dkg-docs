@@ -29,7 +29,7 @@ Contrary to inflationary systems, TRAC staking is strictly utility-based and rew
 
 ### How do delegators earn TRAC fees?
 
-As knowledge publishers create [Knowledge Assets](broken-reference) on the DKG, they lock an appropriate amount of TRAC tokens in the DKG smart contracts. The TRAC amount offered has to be high enough to ensure enough DKG nodes will store it for a specific amount of time (more details on the DKG market mechanics [here](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-14%20DKG%20v6%20TRAC%20Tokenomics.pdf)). The nodes then commit to storing the knowledge assets for a specific amount of time, measured in **epochs which last 3 months**.&#x20;
+As knowledge publishers create [Knowledge Assets](https://origintrail.io/products/knowledge-assets) on the DKG, they lock an appropriate amount of TRAC tokens in the DKG smart contracts. The TRAC amount offered has to be high enough to ensure enough DKG nodes will store it for a specific amount of time (more details on the DKG market mechanics [here](https://github.com/OriginTrail/OT-RFC-repository/blob/main/RFCs/OT-RFC-14%20DKG%20v6%20TRAC%20Tokenomics.pdf)). The nodes then commit to storing the knowledge assets for a specific amount of time, measured in **epochs which last 3 months**.&#x20;
 
 At the end of each epoch, DKG nodes prove to the smart contract that they are still storing a Knowledge Asset and unlock the TRAC reward locked initially by the knowledge publisher.&#x20;
 
