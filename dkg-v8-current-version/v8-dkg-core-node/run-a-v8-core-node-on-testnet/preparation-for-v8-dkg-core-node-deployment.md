@@ -70,7 +70,7 @@ In order to receive Base Sepolia TRAC, send the following message to the channel
 
 `!fundme_v8_base_sepolia_trac 0x0134a3e4...`
 
-Once executed, you will receive 60000 TRAC tokens to the provided wallet address. TRAC address on the V8 testnet is `0x9b17032749aa066a2DeA40b746AA6aa09CdE67d9`.\
+Once executed, you will receive 60000 TRAC tokens to the provided wallet address. TRAC address on the V8 Base Sepolia testnet is `0x9b17032749aa066a2DeA40b746AA6aa09CdE67d9`.\
 
 
 {% hint style="info" %}

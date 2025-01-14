@@ -44,7 +44,7 @@ Make sure the following services are installed and properly configured:
 
 * **Git:** Version control system
 * **MySQL 8:** Database service
-* **Redis:** In-memory data structure store ([documentation](https://redis.io/docs/latest/operate/oss\_and\_stack/install/install-redis/))
+* **Redis:** In-memory data structure store ([documentation](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/))
 * **Node.js:** JavaScript runtime environment
   * **v20.04:** Used for the local network/ot-node setup
   * **v22.4.0:** Used for Edge node services
@@ -64,9 +64,9 @@ Edge Node services require a V8 DKG Runtime Node endpoint in order to be configu
 In order to deploy a local DKG network, do the following:
 
 * Clone the OriginTrail node: `git clone https://github.com/OriginTrail/ot-node`&#x20;
-* Enter **ot-node** directory and checkout to v8/develop branch: `cd ot-node && git checkout v8/stable-development-network`&#x20;
+* Enter **ot-node** directory and checkout to v8/develop branch: `cd ot-node && git checkout v8/develop`&#x20;
 * Switch to Node.js v20 and install node modules: `npm install`&#x20;
-* Download blazegraph.jar (Triple store db) from the following [link](https://github.com/blazegraph/database/releases/tag/BLAZEGRAPH\_2\_1\_6\_RC) and save it to location of your choice locally
+* Download blazegraph.jar (Triple store db) from the following [link](https://github.com/blazegraph/database/releases/tag/BLAZEGRAPH_2_1_6_RC) and save it to location of your choice locally
 * Run blazegraph.jar file with the following command: `java -server -Xmx4g -jar blazegraph.jar` in order to start the triple store database (from the directory where blazegraph is downloaded)
 * Make sure that the MySQL service is running
 * In ot-node directory, create .env file in ot-node directory and populate it with the following parameters (If your mysql is password protected, add the password to REPOSITORY\_PASSWORD):
@@ -78,7 +78,7 @@ RPC_ENDPOINT_BC2=http://127.0.0.1:9545
 REPOSITORY_PASSWORD=
 ```
 
-* Start the local DKG network by executing the following command from the ot-node directory: `bash tools/local-network-setup/setup-macos-environment.sh --nodes=8`&#x20;
+* Start the local DKG network by executing the following command from the ot-node directory: `bash tools/local-network-setup/setup-macos-environment.sh --nodes=5`&#x20;
 * Once the network deployment is initiated, you will be provided with the local hardhat blockchain and the amount of local DKG nodes that you defined via **--nodes** flag
 
 Once the network is up and running, you will select one of the local node endpoints to configure the Edge Node services, which will be explained in the continuation of these instructions.
@@ -263,7 +263,7 @@ Make sure the following services are installed and properly configured:
 
 * **Git:** Version control system
 * **MySQL 8:** Database service
-* **Redis:** In-memory data structure store ([documentation](https://redis.io/docs/latest/operate/oss\_and\_stack/install/install-redis/))
+* **Redis:** In-memory data structure store ([documentation](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/))
 * **Node.js v22.4.0:** JavaScript runtime environment
 * **Python** v3.11.7
 

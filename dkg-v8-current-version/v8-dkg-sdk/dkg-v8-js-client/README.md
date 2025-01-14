@@ -60,7 +60,7 @@ const dkg = new DKG({
     endpoint: 'http://127.0.0.1',  // gateway node URI
     port: 8900,
     blockchain: {
-        name: 'hardhat1:31337', // or base:8453
+        name: 'hardhat1:31337', // or base:8453 etc.
         publicKey: PUBLIC_KEY, // not required in browser, metamask used instead
         privateKey: PRIVATE_KEY, // not required in browser, metamask used instead
     },

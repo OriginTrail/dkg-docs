@@ -52,7 +52,7 @@ systemctl disable otnode-logger.service
 systemctl stop otnode-logger.service
 ```
 
-### Installer video tutorial:
+### Installer video tutorial (slightly outdated):
 
 Before proceeding, make sure to check our quick video tutorial, which explains the process of interacting with the installer.
 

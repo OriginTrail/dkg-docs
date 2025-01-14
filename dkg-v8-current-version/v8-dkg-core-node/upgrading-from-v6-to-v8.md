@@ -40,8 +40,8 @@ The new V8 ot-node engine introduces a <mark style="color:green;">blockchainEven
                             "base:8453"
                         ],
                         "rpcEndpoints": {
-                            "base:84532": ["https://<your_rpc>"],
-                            "gnosis:10200": ["https://<your_rpc>"]
+                            "base:8453": ["https://<your_rpc>"],
+                            "gnosis:100": ["https://<your_rpc>"]
                         }
                     }
                 }

@@ -47,7 +47,7 @@ systemctl stop otnode-logger.service
 
 <figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Installer interraction</p></figcaption></figure>
 
-### Installer video tutorial:
+### Installer video tutorial (slightly outdated):
 
 Before proceeding, make sure to check our quick video tutorial, which explains the process of interacting with the installer.
 
