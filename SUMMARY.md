@@ -8,6 +8,8 @@
 
 * [AI agents](dkg-v8-current-version/ai-agents/README.md)
   * [ElizaOS DKG agent](dkg-v8-current-version/ai-agents/elizaos-dkg-agent.md)
+  * [Custom DKG JavaScript agent](dkg-v8-current-version/ai-agents/custom-dkg-javascript-agent.md)
+  * [Custom DKG Python agent](dkg-v8-current-version/ai-agents/custom-dkg-python-agent.md)
 * [Delegated Staking (V8)](dkg-v8-current-version/delegated-staking-v8/README.md)
   * [Step-by-step staking](dkg-v8-current-version/delegated-staking-v8/step-by-step-staking.md)
   * [Redelegating Stake](dkg-v8-current-version/delegated-staking-v8/redelegating-stake.md)
