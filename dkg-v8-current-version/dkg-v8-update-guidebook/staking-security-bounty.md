@@ -14,5 +14,5 @@ To be eligible users need to:
 
 The total reward amount will be distributed pro rata among eligible participants, according to the size of the stake they contributed during that period.
 
-Rewards will be distributed no later than January 26th 5pm CET.&#x20;
+Rewards will be distributed no later than January 27th 5pm CET.&#x20;
 
