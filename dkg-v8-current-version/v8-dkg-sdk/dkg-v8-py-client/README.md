@@ -55,6 +55,10 @@ print(dkg.node.info)
 # { "version": "8.X.X" }
 ```
 
+{% hint style="warning" %}
+Make sure to create an .env file and add PRIVATE\_KEY variable to it so that the blockchain provider can pick it up.
+{% endhint %}
+
 The system supports multiple blockchain networks, which can be configured using the `BlockchainIds` constants. You can select the desired blockchain by specifying the corresponding constant. The available options are:
 
 DKG mainnet options:

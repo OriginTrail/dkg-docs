@@ -65,7 +65,7 @@ const dkg = new DKG({
         privateKey: PRIVATE_KEY, // not required in browser, metamask used instead
     },
 });
-​
+
 const nodeInfo = await dkg.node.info(); 
 // if successfully connected, the will return an object indicating the node version
 // { 'version': '8.X.X' }
