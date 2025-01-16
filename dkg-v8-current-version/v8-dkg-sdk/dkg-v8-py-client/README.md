@@ -42,72 +42,132 @@ from dkg.providers import BlockchainProvider, NodeHTTPProvider
 To use the DKG library, you need to connect to a running local or remote OT-Node.&#x20;
 
 ```python
-node_provider = NodeHTTPProvider("http://localhost:8900")
+node_provider = NodeHTTPProvider(endpoint_uri="http://localhost:8900", api_version="v1")
 blockchain_provider = BlockchainProvider(
-    "http://localhost:8545",
-    PRIVATE_KEY,
+    Environments.DEVELOPMENT.value, # or TESTNET, MAINNET
+    BlockchainIds.HARDHAT_1.value,
 )
 
 dkg = DKG(node_provider, blockchain_provider)
 
 print(dkg.node.info)
 # if successfully connected, this should print the dictionary with node version
-# { "version": "6.X.X" }
+# { "version": "8.X.X" }
 ```
+
+The system supports multiple blockchain networks, which can be configured using the `BlockchainIds` constants. You can select the desired blockchain by specifying the corresponding constant. The available options are:
+
+DKG mainnet options:
+
+* Base: base:8453
+* Gnosis: gnosis:100
+* Neuroweb: otp:2043
+
+DKG testnet options:
+
+* Base: base:84532
+* Gnosis: gnosis:10200
+* Neuroweb: otp:20430
+
+DKG devnet options:
+
+* Base: base:84532
+* Gnosis: gnosis:10200
+* Neuroweb: otp:2160
+
+Local options:
+
+* Hardhat1: hardhat1:31337
+* Hardhat2: hardhat2:31337
 
 #### Create a Knowledge Asset
 
-In this example, let’s create an example Knowledge Asset representing a Tesla Model X car. We will be using a Schema.org type **Car** for our data (detailed schema can be found on [https://schema.org/Car](https://schema.org/Car)). The sample content can be seen below:
+In this example, let’s create an example Knowledge Asset representing a city. The content contains both public and private assertions. Public assertions will be exposed publicly (replicated to other nodes) while private ones won't (stays on the node you published to only). If you have access to the particular node that has the data when you search for it using get or query you will see both public and private assertions.&#x20;
 
 ```python
-public_assertion = {
-    "@context": "https://schema.org",
-    "@id": "https://tesla.modelX/2321",
-    "@type": "Car",
-    "name": "Tesla Model X",
-    "brand": {"@type": "Brand", "name": "Tesla"},
-    "model": "Model X",
-    "manufacturer": {"@type": "Organization", "name": "Tesla, Inc."},
-    "fuelType": "Electric",
-    "numberOfDoors": 5,
-    "vehicleEngine": {
-        "@type": "EngineSpecification",
-        "engineType": "Electric motor",
-        "enginePower": {
-            "@type": "QuantitativeValue",
-            "value": "416",
-            "unitCode": "BHP",
-        },
-    },
-    "driveWheelConfiguration": "AWD",
-    "speed": {"@type": "QuantitativeValue", "value": "250", "unitCode": "KMH"},
+const content = {
+     public: {
+            '@context': 'http://schema.org',
+            '@id': 'https://en.wikipedia.org/wiki/New_York_City',
+            '@type': 'City',
+            name: 'New York',
+            state: 'New York',
+            population: '8,336,817',
+            area: '468.9 sq mi',
+     },
+     private: {
+        '@context': 'http://schema.org',
+        '@id': 'https://en.wikipedia.org/wiki/New_York_City',
+        '@type': 'CityPrivateData',
+        crimeRate: 'Low',
+        averageIncome: '$63,998',
+        infrastructureScore: '8.5',
+        relatedCities: [
+            { '@id': 'urn:us-cities:info:los-angeles', name: 'Los Angeles' },
+            { '@id': 'urn:us-cities:info:chicago', name: 'Chicago' },
+        ],
+     },
 }
 ```
 
-When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](broken-reference)). When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochs_number` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
+When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion**. When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochs_number` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
 
 ```python
 create_asset_result = dkg.asset.create(
-    {
-        "public": public_assertion,
+    content=content,
+    options={
+        "epochs_num": 6
     },
-    epochs_number=2,
 )
-
 print(create_asset_result)
+
 ```
 
 The complete response of the method will look like:
 
 ```python
 {
-  "UAL": "did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0",
-  "publicAssertionId": "0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42",
-  "operation": {
-    "operationId": "5195d01a-b437-4aae-b388-a77b9fa715f1",
-    "status": "COMPLETED"
-  }
+    "UAL": "did:dkg:otp:2043/0x8f678eb0e57ee8a109b295710e23076fa3a443fe/572238",
+    "datasetRoot": "0xd7a2dd6d747d2f8d2d0f76cc6fa04ebf383a368249cc24a701788f271a41df4d",
+    "signatures": [
+        {
+            "identityId": 131,
+            "v": 28,
+            "r": "0x583598a701e4c54a1e47e6ff2f0cf0a9660d1749f3e413408ccd3ff5ca2288dc",
+            "s": "0x131c07215977c4d681dc30cc32d9e8c1644825b932fb72cf035bb62f0963d2a5",
+            "vs": "0x931c07215977c4d681dc30cc32d9e8c1644825b932fb72cf035bb62f0963d2a5"
+        },
+    ],
+    "operation": {
+        "mintKnowledgeAsset": {
+            "transactionHash": "0x04efacfc576578836c6736f376d23930bb01accd38df31414ff7b5e35861d8f2",
+            "transactionIndex": 1,
+            "blockHash": "0x98bf84f7cb05f5742213ed305d9e99b59f6c874b6abf10312fc5062bc32f14ac",
+            "from": "0x0E1405adD312D97d1a0A4fAA134C7113488D6ceA",
+            "to": "0xc8cf8064d7fc7cF42d51Ca5B28218472157F3d90",
+            "blockNumber": 7459414,
+            "cumulativeGasUsed": 572870,
+            "gasUsed": 537962,
+            "contractAddress": null,
+            "logs": [
+             ],
+            "logsBloom": "0x000002000000000000000000000000000000000000000000000008004000000000008000000000080000000000000000000000000000000000000000000c0000000000000008000008000008000000000040000000042000004000000000200000000000020100000000000000000808000000000802828000000010000000004000000000000000000000200000000000000000000000000000000200000000000000000000000002001a00000000000000000000000000080000000000001100000042000000000000000000040000000400000001000000000000000060000000080000000000020000000000010000000000000000000000000802000000",
+            "status": 1,
+            "effectiveGasPrice": 8,
+            "type": 2
+        },
+        "publish": {
+            "operationId": "a1709e45-0a0e-44c8-8c67-19edb4baefaa",
+            "status": "COMPLETED"
+        },
+        "finality": {
+            "status": "FINALIZED"
+        },
+        "numberOfConfirmations": 6,
+        "requiredConfirmations": 3
+    }
 }
+
 ```
 
 In case you want to create multiple different assets you can increase your allowance and then each time you initiate a publish, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a faster publish time.
@@ -116,10 +176,10 @@ In case you want to create multiple different assets you can increase your allow
 dkg.asset.increase_allowance(1569429592284014000)
 
 result = dkg.asset.create(
-  {
-    "public": publicAssertion,
-  },
-  epochs_number=2,
+    content=content,
+    options={
+        "epochs_num": 6
+    },
 )
 ```
 
@@ -129,20 +189,6 @@ After you've finished publishing data to the blockchain, you can decrease your a
 dkg.asset.decrease_allowance(1569429592284014000)
 ```
 
-Alternatively, you can set allowance to specific amount of tokens, increasing or decreasing it depending on your current allowance. To do so, you can utilize the following function:
-
-```python
-dkg.asset.set_allowance(1000000000000000000)
-```
-
-Furthermore, you can always check your current allowance:
-
-```python
-current_allowance = dkg.asset.get_current_allowance()
-
-print(current_allowance)
-```
-
 #### Read Knowledge Asset data from the DKG
 
 To read knowledge asset data from the DKG we utilize the **get** protocol operation.
@@ -150,7 +196,7 @@ To read knowledge asset data from the DKG we utilize the **get** protocol operat
 In this example we will get the latest state of the knowledge asset we published previously:
 
 ```python
-ual = create_asset_result["UAL"]
+ual = create_asset_result.get("did:dkg:otp:2043/0x8f678eb0e57ee8a109b295710e23076fa3a443fe/572238")
 
 get_asset_result = dkg.asset.get(ual)
 
@@ -159,144 +205,78 @@ print(get_asset_result)
 
 The response of the get operation will be the assertion graph:
 
-<pre class="language-python"><code class="lang-python">{
-  "assertion": [
-    {
-      "@id": "_:c14n0",
-      "http://schema.org/name": [
+```python
+{
+    "assertion": [
         {
-          "@value": "Tesla, Inc."
-        }
-      ],
-      "@type": [
-        "http://schema.org/Organization"
-      ]
-    },
-    {
-      "@id": "_:c14n1",
-      "http://schema.org/unitCode": [
+            "@id": "https://ontology.origintrail.io/dkg/1.0#metadata-hash:0x5cb6421dd41c7a62a84c223779303919e7293753d8a1f6f49da2e598013fe652",
+            "https://ontology.origintrail.io/dkg/1.0#representsPrivateResource": [
+                {
+                    "@id": "uuid:a7a27a50-7180-4949-b9d7-48ab931b9650"
+                }
+            ]
+        },
         {
-          "@value": "KMH"
-        }
-      ],
-      "http://schema.org/value": [
+            "@id": "https://ontology.origintrail.io/dkg/1.0#metadata-hash:0x6a2292b30c844d2f8f2910bf11770496a3a79d5a6726d1b2fd3ddd18e09b5850",
+            "https://ontology.origintrail.io/dkg/1.0#representsPrivateResource": [
+                {
+                    "@id": "uuid:43e30a8d-fc1e-41e1-a4b4-4d419c21108a"
+                }
+            ]
+        },
         {
-          "@value": "250"
-        }
-      ],
-      "@type": [
-        "http://schema.org/QuantitativeValue"
-      ]
-    },
-    {
-      "@id": "_:c14n2",
-      "http://schema.org/enginePower": [
+            "@id": "https://ontology.origintrail.io/dkg/1.0#metadata-hash:0xc1f682b783b1b93c9d5386eb1730c9647cf4b55925ec24f5e949e7457ba7bfac",
+            "https://ontology.origintrail.io/dkg/1.0#representsPrivateResource": [
+                {
+                    "@id": "uuid:eec71df5-bb62-48cb-b196-9804aff60f51"
+                }
+            ]
+        },
         {
-          "@id": "_:c14n4"
-        }
-      ],
-      "http://schema.org/engineType": [
+            "@id": "urn:us-cities:info:new-york",
+            "http://schema.org/name": [
+                {
+                    "@value": "New York"
+                }
+            ],
+            "http://schema.org/area": [
+                {
+                    "@value": "468.9 sq mi"
+                }
+            ],
+            "http://schema.org/population": [
+                {
+                    "@value": "8,336,817"
+                }
+            ],
+            "http://schema.org/state": [
+                {
+                    "@value": "New York"
+                }
+            ],
+            "@type": [
+                "http://schema.org/City"
+            ]
+        },
         {
-          "@value": "Electric motor"
+            "@id": "uuid:e63489c8-618b-494c-8fbb-f22ab0537b89",
+            "https://ontology.origintrail.io/dkg/1.0#privateMerkleRoot": [
+                {
+                    "@value": "0xaac2a420672a1eb77506c544ff01beed2be58c0ee3576fe037c846f97481cefd"
+                }
+            ]
         }
-      ],
-      "@type": [
-        "http://schema.org/EngineSpecification"
-      ]
-    },
-    {
-      "@id": "_:c14n3",
-      "http://schema.org/name": [
-        {
-          "@value": "Tesla"
+    ],
+    "operation": {
+        "get": {
+            "operationId": "9918220b-5175-44c3-b43a-3544610be560",
+            "status": "COMPLETED"
         }
-      ],
-      "@type": [
-        "http://schema.org/Brand"
-      ]
-    },
-    {
-      "@id": "_:c14n4",
-      "http://schema.org/unitCode": [
-        {
-          "@value": "BHP"
-        }
-      ],
-      "http://schema.org/value": [
-        {
-          "@value": "416"
-        }
-      ],
-      "@type": [
-        "http://schema.org/QuantitativeValue"
-      ]
-    },
-    {
-      "@id": "https://tesla.modelX/2321",
-      "http://schema.org/brand": [
-        {
-          "@id": "_:c14n3"
-        }
-      ],
-      "http://schema.org/driveWheelConfiguration": [
-        {
-          "@value": "AWD"
-        }
-      ],
-<strong>      "http://schema.org/fuelType": [
-</strong>        {
-          "@value": "Electric"
-        }
-      ],
-      "http://schema.org/manufacturer": [
-        {
-          "@id": "_:c14n0"
-        }
-      ],
-      "http://schema.org/model": [
-        {
-          "@value": "Model X"
-        }
-      ],
-      "http://schema.org/name": [
-        {
-          "@value": "Tesla Model X"
-        }
-      ],
-      "http://schema.org/numberOfDoors": [
-        {
-          "@value": "5",
-          "@type": "http://www.w3.org/2001/XMLSchema#integer"
-        }
-      ],
-      "http://schema.org/speed": [
-        {
-          "@id": "_:c14n1"
-        }
-      ],
-      "http://schema.org/vehicleEngine": [
-        {
-          "@id": "_:c14n2"
-        }
-      ],
-      "@type": [
-        "http://schema.org/Car"
-      ],
-      "https://dkg.private": [
-        {
-          "@value": "0x0742b8172dd827e2b2905b4968df1e5d1213071cbcba0b04378a4931c904e9b1"
-        }
-      ]
     }
-  ],
-  "assertionId": "0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42",
-  "operation": {
-    "operationId": "5f343130-bf0f-471e-8fda-9b400f0aa392",
-    "status": "COMPLETED"
-  }
 }
 
-</code></pre>
+
+```
 
 #### Querying knowledge asset data with SPARQL
 
@@ -305,15 +285,14 @@ Querying the DKG is done by using the SPARQL query language, which is very simil
 Let’s write simple query to select all subjects and objects in graph that have the **Model** property of Schema.org context:
 
 ```python
-query_graph_result = dkg.graph.query(
+query_operation_result = dkg.graph.query(
     """
     PREFIX SCHEMA: <http://schema.org/>
-    SELECT ?s ?modelName
+    SELECT ?s ?stateName
     WHERE {
-        ?s schema:model ?modelName
+        ?s schema:state ?stateName .
     }
-    """,
-    repository="publicCurrent",
+    """
 )
 
 print(query_graph_result)
@@ -322,255 +301,18 @@ print(query_graph_result)
 The returned response will contain an array of n-quads:
 
 ```python
-[{'s': 'https://tesla.modelX/2321', 'modelName': '"Model X"'}]
+{
+  "status": "COMPLETED",
+  "data": [
+    {
+      "s": "urn:us-cities:info:new-york",
+      "stateName": "\"New York\""
+    }
+  ]
+}
 ```
 
 As the OriginTrail node leverages a fully fledged graph database (triple store supporting RDF), you can run arbitrary SPARQL queries on it.&#x20;
-
-However, when it comes to querying the DKG, it is important to note that at the moment there are only options to query finalized and historical states. This means that any SPARQL queries that are run on the DKG will return data from the latest finalized state by default, or any previously finalized states, identifiable by their state hash.
-
-To query for full (private+public data) historical states in the DKG, you need to use the `repository: 'privateHistory'` option when making the SPARQL query. Here's an example of how to do that:
-
-```python
-query_graph_result = dkg.graph.query(
-    """
-    PREFIX SCHEMA: <http://schema.org/>
-    SELECT ?s ?modelName
-    WHERE {
-        ?s schema:model ?modelName
-    }
-    """,
-    repository="privateHistory",
-)
-
-print(query_graph_result)
-```
-
-To query the full latest finalized state of the DKG, the `'privateCurrent'` option should be passed for the repository parameter. It's important to note that this is also the default behavior if the repository parameter is not specified in the SPARQL query.
-
-There are 4 repositories available:
-
-* **privateHistory (default)** - private and public data of the historical states.
-* **publicHistory** - public data of the historical states.
-* **privateCurrent** - private and public data of the latest finalized state.
-* **publicCurrent** - public data of the latest finalized state.
-
-**Create a Knowledge Asset with private data**
-
-In addition to knowledge assets with public assertions, we can add private data to our knowledge asset by creating private assertions, which will contain data that we don’t want to expose publicly.
-
-The sample assertion content for public assertion will be the same as before, just a bit reduced:
-
-```python
-public_assertion = {
-    "@context": "https://schema.org",
-    "@id": "https://tesla.modelX/2321",
-    "@type": "Car",
-    "name": "Tesla Model X",
-    "brand": {"@type": "Brand", "name": "Tesla"},
-    "model": "Model X",
-    "manufacturer": {"@type": "Organization", "name": "Tesla, Inc."},
-}
-```
-
-Sample private assertion:
-
-```python
-private_assertion = {
-    "@context": "https://schema.org",
-    "@id": "https://tesla.modelX/2321",
-    "productionDate": "2015-09-29",
-    "mileageFromOdometer": {
-        "@type": "QuantitativeValue",
-        "value": "25672",
-        "unitCode": "KMT",
-    },
-}
-```
-
-When assertions with public and private data are prepared, we can publish it on the DKG. It’s actually as simple as executing one function:&#x20;
-
-```python
-create_asset_result = dkg.asset.create(
-    {
-        "public": public_assertion,
-        "private": private_assertion,
-    },
-    epochs_number=2,
-)
-
-print(create_asset_result)
-```
-
-The complete response of the method will look like:
-
-```python
-{
-    "UAL": "did:dkg:hardhat1:31337/0xa5cef543538b997b7a125cc849005b62a3da2271/1",
-    "publicAssertionId": "0xef11c3f4bc3331f5d1ad3ec8ddb63928913f7a4d546c6a03fe4485837ad4c494",
-    "operation": {
-        "operationId": "1c7e860a-219c-4a0c-896d-9c62e19e3fe4",
-        "status": "COMPLETED"
-    }
-}
-
-```
-
-**Get Knowledge Asset private assertion from the DKG**
-
-To read knowledge asset private assertion from the DKG we utilize the same get protocol operation as before, just now we will specify content\_visibility option to be private. Keep in mind, you can only get private assertions if your node owns them. This feature is to be further extended with knowledge marketplace tools for knowledge asset monetization.
-
-```python
-ual = create_asset_result["UAL"]
-
-get_asset_result = dkg.asset.get(ual, content_visibility="private")
-
-print(get_asset_result)
-```
-
-The response of the get operation will be the assertion graph:
-
-```python
-{
-  "operation": {
-    "queryPrivate": {
-      "operationId": "30734787-3779-4a02-8b79-82102c508327",
-      "status": "COMPLETED"
-    }
-  },
-  "assertion": [
-    {
-      "@id": "_:c14n0",
-      "http://schema.org/unitCode": [
-        {
-          "@value": "KMT"
-        }
-      ],
-      "http://schema.org/value": [
-        {
-          "@value": "25672"
-        }
-      ],
-      "@type": [
-        "http://schema.org/QuantitativeValue"
-      ]
-    },
-    {
-      "@id": "https://tesla.modelX/2321",
-      "http://schema.org/mileageFromOdometer": [
-        {
-          "@id": "_:c14n0"
-        }
-      ],
-      "http://schema.org/productionDate": [
-        {
-          "@value": "2015-09-29",
-          "@type": "http://schema.org/Date"
-        }
-      ]
-    }
-  ],
-  "assertionId": "0x0742b8172dd827e2b2905b4968df1e5d1213071cbcba0b04378a4931c904e9b1"
-}
-```
-
-#### Check Knowledge Asset Owner
-
-Thanks to the blockchain representation of the Knowledge Assets it’s possible to check the owner of the Knowledge Asset by checking the ownership record of its NFT token, representing the asset on-chain.
-
-In order to do this, we should execute the function below:
-
-```python
-owner = dkg.asset.get_owner(ual)
-
-print(owner)
-```
-
-Owner of the Knowledge Asset:
-
-```python
-{
-  "UAL": "did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0",
-  "owner": "0xBaF76aC0d0ef9a2FFF76884d54C9D3e270290a43",
-  "operation": { "operationId": None, "status": "COMPLETED" }
-}
-```
-
-#### Transfer Knowledge Asset ownership
-
-It’s also possible to transfer ownership of the asset ERC721 token.
-
-In this example we will transfer our Tesla ERC721 token to another wallet:
-
-```python
-new_owner = "0x2ACa90078563133db78085F66e6B8Cf5531623Ad"
-
-asset_transfer_result = dkg.asset.transfer(ual, new_owner)
-
-print(asset_transfer_result)
-```
-
-Result of the transfer operation:
-
-```python
-{
-  "UAL": "did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0",
-  "owner": "0x2ACa90078563133db78085F66e6B8Cf5531623Ad",
-  "operation": { "operationId": None, "status": "COMPLETED" }
-}
-```
-
-#### Estimate cost of the Knowledge Asset publishing
-
-Before actual creation of the Knowledge Asset, we can estimate how much would it cost for publisher to host Knowledge Asset on the DKG for a specific period of time.
-
-In order to do this, we can send a request to one of the DKG nodes, which would return suggested cost of the publishing (so that Knowledge Asset is accepted by at least 8 nodes on the DKG).
-
-In order to estimate cost of the publishing, you should know the metadata of the public assertion, such as: assertion ID (Merkle Root) and size in bytes. Additionally, you need to provide number of epochs.
-
-Don't know how to calculate assertion metadata? Don't you worry, in the following example we will go through all the steps from having just Knowledge Asset content to having estimated price.
-
-```python
-knowledge_asset_content = {
-    "public": {
-        "@context": ["http://schema.org"],
-        "@id": "uuid:1",
-        "company": "OT",
-        "user": {"@id": "uuid:user:1"},
-        "city": {"@id": "uuid:belgrade"},
-    },
-    "private": {
-        "@context": ["http://schema.org"],
-        "@graph": [
-            {"@id": "uuid:user:1", "name": "Adam", "lastname": "Smith"},
-            {"@id": "uuid:belgrade", "title": "Belgrade", "postCode": "11000"},
-        ],
-    },
-}
-```
-
-In order to calculate public assertion metadata, we would use **assertion module**:
-
-```python
-public_assertion_id = dkg.assertion.get_public_assertion_id(knowledge_asset_content)
-public_assertion_size = dkg.assertion.get_size(knowledge_asset_content)
-```
-
-Besides assertion ID and size, following functions are available in the **assertion module**:
-
-* **format\_graph(knowledge\_asset\_content)** - formats the content provided, producing both a public and, if available, a private assertion and a link to it in the public assertion.
-* **get\_triples\_number(knowledge\_asset\_content)** - calculates and returns the number of triples of the public assertion from the provided content.
-* **get\_chunks\_number(knowledge\_asset\_content)** - calculates and returns the number of chunks of the public assertion from the provided content.
-
-After calculating public assertion metadata, we can get suggested publishing cost using the **network module**:
-
-```python
-bid_suggestion = dkg.network.get_bid_suggestion(
-    public_assertion_id,
-    public_assertion_size,
-    2,
-)
-```
 
 #### **More on types of interaction with the DKG SDK**
 

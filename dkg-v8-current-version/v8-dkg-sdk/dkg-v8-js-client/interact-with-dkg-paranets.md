@@ -19,6 +19,10 @@ layout:
 
 # Interact with DKG Paranets
 
+{% hint style="danger" %}
+**Paranets are not currently supported in V8. Expect the paranet support to be back latest by the end of February.**
+{% endhint %}
+
 The DKG JavaScript SDK provides functionality for interacting with Paranets on the OriginTrail Decentralized Knowledge Graph. This section of the SDK allows developers to create, manage, and utilize paranets effectively.
 
 #### Setup and Installation

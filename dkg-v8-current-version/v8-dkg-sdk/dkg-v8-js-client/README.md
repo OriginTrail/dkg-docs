@@ -41,7 +41,7 @@ Make sure to also include web3.js library as it is a dependency for dkg.js.
 Run the command to install dependency from the [NPM](https://www.npmjs.com/package/dkg.js) repository:
 
 ```bash
-npm install dkg.js@8.0.0-alpha.2
+npm install dkg.js@latest
 ```
 
 Then include `dkg.js` in your project files. This will expose the `DKG` object:
@@ -56,11 +56,11 @@ To use the DKG library, you need to connect to a running local or remote OT-Node
 
 ```javascript
 const dkg = new DKG({
-    environment: development, // or devnet, testnet
-    endpoint: 'http://127.0.0.1',  // gateway node URI
+    environment: ENVIRONMENTS.DEVELOPMENT, // or devnet, testnet, mainnet
+    endpoint: 'http://localhost',  // gateway node URI
     port: 8900,
     blockchain: {
-        name: 'hardhat1:31337', // or base:8453 etc.
+        name: BLOCKCHAIN_IDS.HARDHAT_1, // or any other blockchain id
         publicKey: PUBLIC_KEY, // not required in browser, metamask used instead
         privateKey: PRIVATE_KEY, // not required in browser, metamask used instead
     },
@@ -71,54 +71,68 @@ const nodeInfo = await dkg.node.info();
 // { 'version': '8.X.X' }
 ```
 
+The system supports multiple blockchain networks, which can be configured using the BLOCKCHAIN\_IDS constants. You can select the desired blockchain by specifying the corresponding constant. The available options are:
+
+DKG mainnet options:
+
+* Base: base:8453
+* Gnosis: gnosis:100
+* Neuroweb: otp:2043
+
+DKG testnet options:
+
+* Base: base:84532
+* Gnosis: gnosis:10200
+* Neuroweb: otp:20430
+
+DKG devnet options:
+
+* Base: base:84532
+* Gnosis: gnosis:10200
+* Neuroweb: otp:2160
+
+Local options:
+
+* Hardhat1: hardhat1:31337
+* Hardhat2: hardhat2:31337
+
 #### Create a Knowledge Asset
 
-In this example, let’s create an example Knowledge Asset representing a Tesla Model X car. We will be using a Schema.org type **Car** for our data (detailed schema can be found on [https://schema.org/Car](https://schema.org/Car)). The sample content can be seen below:
+In this example, let’s create an example Knowledge Asset representing a city. The content contains both public and private assertions. Public assertions will be exposed publicly (replicated to other nodes) while private ones won't (stays on the node you published to only). If you have access to the particular node that has the data when you search for it using get or query you will see both public and private assertions.&#x20;
 
 ```javascript
-const publicAssertion = {
-    '@context': 'https://schema.org',
-    '@id': 'https://tesla.modelX/2321',
-    '@type': 'Car',
-    'name': 'Tesla Model X',
-    'brand': {
-        '@type': 'Brand',
-        'name': 'Tesla'
-    },
-    'model': 'Model X',
-    'manufacturer': {
-        '@type': 'Organization',
-        'name': 'Tesla, Inc.'
-    },
-    'fuelType': 'Electric',
-    'numberOfDoors': 5,
-    'vehicleEngine': {
-        '@type': 'EngineSpecification',
-        'engineType': 'Electric motor',
-        'enginePower': {
-        	'@type': 'QuantitativeValue',
-        	'value': '416',
-        	'unitCode': 'BHP'
-        }
-    },
-    'driveWheelConfiguration': 'AWD',
-    'speed': {
-        '@type': 'QuantitativeValue',
-        'value': '250',
-        'unitCode': 'KMH'
-    },
+const content = {
+     public: {
+            '@context': 'http://schema.org',
+            '@id': 'https://en.wikipedia.org/wiki/New_York_City',
+            '@type': 'City',
+            name: 'New York',
+            state: 'New York',
+            population: '8,336,817',
+            area: '468.9 sq mi',
+     },
+     private: {
+        '@context': 'http://schema.org',
+        '@id': 'https://en.wikipedia.org/wiki/New_York_City',
+        '@type': 'CityPrivateData',
+        crimeRate: 'Low',
+        averageIncome: '$63,998',
+        infrastructureScore: '8.5',
+        relatedCities: [
+            { '@id': 'urn:us-cities:info:los-angeles', name: 'Los Angeles' },
+            { '@id': 'urn:us-cities:info:chicago', name: 'Chicago' },
+        ],
+     },
 }
 
 ```
 
-When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](broken-reference)). When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochsNum` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
+When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion**. When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochsNum` specifies for how many epochs the asset should be kept (an epoch is equal to one month).
 
 ```javascript
-const result = await dkg.asset.create({
-    public: publicAssertion,
-  },
-  { epochsNum: 2 }
-);
+const result = await DkgClient.asset.create(content, {
+        epochsNum: 6
+});
 
 console.log(result);
 ```
@@ -127,60 +141,61 @@ The complete response of the method will look like:
 
 ```javascript
 {
-  UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
-  publicAssertionId: '0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42',
-  operation: {
-    operationId: '5195d01a-b437-4aae-b388-a77b9fa715f1',
-    status: 'COMPLETED'
-  }
+    "UAL": "did:dkg:base:84532/0xd5550173b0f7b8766ab2770e4ba86caf714a5af5/10310",
+    "datasetRoot": "0x09d732838cb1e4ff56a080d58d2b50fd8383ef66c783655a80cd7522b80b53df",
+    "signatures": [
+        ...
+    ],
+    "operation": {
+        "mintKnowledgeAsset": {
+            "blockHash": "0x729fbb3bb2852dbc51a6996ae03aed27cebb987b51ec8a3da65e642749b70b74",
+            "blockNumber": 20541620,
+            "contractAddress": null,
+            "cumulativeGasUsed": 1680639,
+            "effectiveGasPrice": 1026844,
+            "from": "0x0e1405add312d97d1a0a4faa134c7113488d6cea",
+            "gasUsed": 530457,
+            "l1BaseFeeScalar": "0x44d",
+            "l1BlobBaseFee": "0x20fbab8dde",
+            "l1BlobBaseFeeScalar": "0xa118b",
+            "l1Fee": "0x6b3eb30359ac",
+            "l1GasPrice": "0x411f05c9f",
+            "l1GasUsed": "0x4e95",
+            "logs": [
+               ...
+            ],
+            "logsBloom": "0x00000200000000000000000000000000000000000000000000000000400000000000800000000000000000000000000000000000000000000000000000240000000000800000000000000008000000000000000000042800004000000000000008000000020000000000000100000808000000004800040010040010000000004000000800000020001000000000000000000002000000000000010000000000020000000000000000000a000000000000000000000000000820000020000011000000020020000000000000000000000004000084410000000000000000e0000010000000000000020000000000000000000000000000000000000802000000",
+            "status": true,
+            "to": "0x46121121f78f8351da4526813fbfbffd044dec6c",
+            "transactionHash": "0x1a9f6b954c2149fb03d6adec21ca7b0829a4d84b3bc93fad62291fcbeb74aace",
+            "transactionIndex": 10,
+            "type": "0x0"
+        },
+        "publish": {
+            "operationId": "6f6a0960-e577-43ef-88c9-04e0314347c5",
+            "status": "PUBLISH_REPLICATE_END"
+        },
+        "finality": { "status": "FINALIZED" },
+        "numberOfConfirmations": 3,
+        "requiredConfirmations": 3
+    }
 }
 ```
-
-Before creating a new asset, you have the option to calculate the recommended bid amount to determine how much tokens you'll need to create an asset successfully. This can help you ensure that you have the necessary funds available. Optionally, you can specify bidSuggestionRange as low, mid,  high or all to adjust the suggested bid accordingly and satisfy the ask on desired number of nodes.
-
-<pre class="language-javascript"><code class="lang-javascript"><strong>const bidSuggestion = await dkg.network.getBidSuggestion({
-</strong>    public: publicAssertion,
-  },
-  { epochsNum: 2, bidSuggestionRange: low|mid|high|all }
-);
-
-const result = await dkg.asset.create({
-    public: publicAssertion,
-  },
-  { tokenAmount: bidSuggestion, epochsNum: 2 }
-);
-</code></pre>
 
 In case you want to create multiple different assets you can increase your allowance and then each time you initiate a publish, the step where a call to the blockchain is made to increase your allowance will be skipped, resulting in a faster publish time.
 
 ```javascript
 await dkg.asset.increaseAllowance('1569429592284014000');
 
-const result = await dkg.asset.create({
-    public: publicAssertion,
-  },
-  { epochsNum: 2 }
-);
+const result = await DkgClient.asset.create(content, {
+        epochsNum: 6
+});
 ```
 
 After you've finished publishing data to the blockchain, you can decrease your allowance to revoke the authorization given to the contract to spend your tokens - so if you want to revoke all remaining authorization, it's a good practice to pass the same value that you used for increasing your allowance.
 
 ```javascript
 await dkg.asset.decreaseAllowance('1569429592284014000');
-```
-
-Alternatively, you can set allowance to specific amount of tokens, increasing or decreasing it depending on your current allowance. To do so, you can utilize the following function:
-
-```javascript
-await dkg.asset.setAllowance('1000000000000000000');
-```
-
-Furthermore, you can always check your current allowance:
-
-```javascript
-const currentAllowance = await dkg.asset.getCurrentAllowance();
-
-console.log(currentAllowance);
 ```
 
 #### Read Knowledge Asset data from the DKG
@@ -199,157 +214,135 @@ console.log(JSON.stringify(getAssetResult, null, 2));
 
 The response of the get operation will be the assertion graph:
 
-<pre class="language-javascript"><code class="lang-javascript">{
+```javascript
+{
   "assertion": [
     {
-      "@id": "_:c14n0",
+      "@id": "https://ontology.origintrail.io/dkg/1.0#metadata-hash:0x5cb6421dd41c7a62a84c223779303919e7293753d8a1f6f49da2e598013fe652",
+      "https://ontology.origintrail.io/dkg/1.0#representsPrivateResource": [
+        {
+          "@id": "uuid:e8edba11-5c95-4b02-941b-b662220c4be8"
+        }
+      ]
+    },
+    {
+      "@id": "https://ontology.origintrail.io/dkg/1.0#metadata-hash:0x6a2292b30c844d2f8f2910bf11770496a3a79d5a6726d1b2fd3ddd18e09b5850",
+      "https://ontology.origintrail.io/dkg/1.0#representsPrivateResource": [
+        {
+          "@id": "uuid:51e3c267-096f-4ff9-b963-bd48f2b0a210"
+        }
+      ]
+    },
+    {
+      "@id": "https://ontology.origintrail.io/dkg/1.0#metadata-hash:0xc1f682b783b1b93c9d5386eb1730c9647cf4b55925ec24f5e949e7457ba7bfac",
+      "https://ontology.origintrail.io/dkg/1.0#representsPrivateResource": [
+        {
+          "@id": "uuid:4b6065d0-7ed3-4b37-af44-7e202510fd44"
+        }
+      ]
+    },
+    {
+      "@id": "urn:us-cities:data:new-york",
+      "http://schema.org/averageIncome": [
+        {
+          "@value": "$63,998"
+        }
+      ],
+      "http://schema.org/crimeRate": [
+        {
+          "@value": "Low"
+        }
+      ],
+      "http://schema.org/infrastructureScore": [
+        {
+          "@value": "8.5"
+        }
+      ],
+      "http://schema.org/relatedCities": [
+        {
+          "@id": "urn:us-cities:info:chicago"
+        },
+        {
+          "@id": "urn:us-cities:info:los-angeles"
+        }
+      ],
+      "@type": [
+        "http://schema.org/CityPrivateData"
+      ]
+    },
+    {
+      "@id": "urn:us-cities:info:chicago",
       "http://schema.org/name": [
         {
-          "@value": "Tesla, Inc."
+          "@value": "Chicago"
         }
-      ],
-      "@type": [
-        "http://schema.org/Organization"
       ]
     },
     {
-      "@id": "_:c14n1",
-      "http://schema.org/unitCode": [
-        {
-          "@value": "KMH"
-        }
-      ],
-      "http://schema.org/value": [
-        {
-          "@value": "250"
-        }
-      ],
-      "@type": [
-        "http://schema.org/QuantitativeValue"
-      ]
-    },
-    {
-      "@id": "_:c14n2",
-      "http://schema.org/enginePower": [
-        {
-          "@id": "_:c14n4"
-        }
-      ],
-      "http://schema.org/engineType": [
-        {
-          "@value": "Electric motor"
-        }
-      ],
-      "@type": [
-        "http://schema.org/EngineSpecification"
-      ]
-    },
-    {
-      "@id": "_:c14n3",
+      "@id": "urn:us-cities:info:los-angeles",
       "http://schema.org/name": [
         {
-          "@value": "Tesla"
+          "@value": "Los Angeles"
         }
-      ],
-      "@type": [
-        "http://schema.org/Brand"
       ]
     },
     {
-      "@id": "_:c14n4",
-      "http://schema.org/unitCode": [
-        {
-          "@value": "BHP"
-        }
-      ],
-      "http://schema.org/value": [
-        {
-          "@value": "416"
-        }
-      ],
-      "@type": [
-        "http://schema.org/QuantitativeValue"
-      ]
-    },
-    {
-      "@id": "https://tesla.modelX/2321",
-      "http://schema.org/brand": [
-        {
-          "@id": "_:c14n3"
-        }
-      ],
-      "http://schema.org/driveWheelConfiguration": [
-        {
-          "@value": "AWD"
-        }
-      ],
-<strong>      "http://schema.org/fuelType": [
-</strong>        {
-          "@value": "Electric"
-        }
-      ],
-      "http://schema.org/manufacturer": [
-        {
-          "@id": "_:c14n0"
-        }
-      ],
-      "http://schema.org/model": [
-        {
-          "@value": "Model X"
-        }
-      ],
+      "@id": "https://en.wikipedia.org/wiki/New_York_City",
       "http://schema.org/name": [
         {
-          "@value": "Tesla Model X"
+          "@value": "New York"
         }
       ],
-      "http://schema.org/numberOfDoors": [
+      "http://schema.org/state": [
         {
-          "@value": "5",
-          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+          "@value": "New York"
         }
       ],
-      "http://schema.org/speed": [
+      "http://schema.org/area": [
         {
-          "@id": "_:c14n1"
+          "@value": "468.9 sq mi"
         }
       ],
-      "http://schema.org/vehicleEngine": [
+      "http://schema.org/population": [
         {
-          "@id": "_:c14n2"
+          "@value": "8,336,817"
         }
       ],
       "@type": [
-        "http://schema.org/Car"
-      ],
-      "https://dkg.private": [
+        "http://schema.org/City"
+      ]
+    },
+    {
+      "@id": "uuid:bb6841b5-ff3d-4c91-aed6-4d2e7726b5a9",
+      "https://ontology.origintrail.io/dkg/1.0#privateMerkleRoot": [
         {
-          "@value": "0x0742b8172dd827e2b2905b4968df1e5d1213071cbcba0b04378a4931c904e9b1"
+          "@value": "0xaac2a420672a1eb77506c544ff01beed2be58c0ee3576fe037c846f97481cefd"
         }
       ]
     }
   ],
-  "assertionId": "0xde58cc52a5ce3a04ae7a05a13176226447ac02489252e4d37a72cbe0aea46b42",
   "operation": {
-    "operationId": "5f343130-bf0f-471e-8fda-9b400f0aa392",
-    "status": "COMPLETED"
+    "get": {
+      "operationId": "171045d8-3adc-4d23-832e-6c1c9cb1d612",
+      "status": "COMPLETED"
+    }
   }
 }
 
-</code></pre>
+```
 
 #### Querying knowledge asset data with SPARQL
 
 Querying the DKG is done by using the SPARQL query language, which is very similar to SQL, applied to graph data (if you have SQL experience, SPARQL should be relatively easy to get started with - more information[ can be found here](https://www.w3.org/TR/rdf-sparql-query/)).
 
-Let’s write simple query to select all subjects and objects in graph that have the **Model** property of Schema.org context:
+Let’s write simple query to select all subjects and objects in graph that have the **State** property of Schema.org context:
 
 ```javascript
 const result = await dkg.graph.query(
     `prefix schema: <http://schema.org/>
-        select ?s ?modelName
+        select ?s ?stateName
         where {
-            ?s schema:model ?modelName
+            ?s schema:state ?stateName
         }`,
     'SELECT',
 );
@@ -359,326 +352,18 @@ console.log(JSON.stringify(result, null, 2));
 
 The returned response will contain an array of n-quads:
 
-```javascript
-{
+<pre class="language-javascript"><code class="lang-javascript">{
   "status": "COMPLETED",
   "data": [
     {
-      "s": "https://tesla.modelX/2321",
-      "modelName": "\"Model X\""
-    }
+        s: 'https://en.wikipedia.org/wiki/New_York_City', 
+<strong>        stateName: '"New York"'
+</strong>    }
   ]
-}
-```
-
-As the OriginTrail node leverages a fully fledged graph database (triple store supporting RDF), you can run arbitrary SPARQL queries on it.&#x20;
-
-However, when it comes to querying the DKG, it is important to note that at the moment there are only options to query finalized and historical states. This means that any SPARQL queries that are run on the DKG will return data from the latest finalized state by default, or any previously finalized states, identifiable by their state hash.
-
-There is a `graphLocation` option which determines where the query will be executed. The two available options are `LOCAL_KG` and `PUBLIC_KG`. The `LOCAL_KG` option is used to query data from the local knowledge graph which stores all private that is not shared with the network, while the `PUBLIC_KG` option is used to query all data on the node that is received from the network. By default, if the `graphLocation` option is not specified, the query will be executed on the local knowledge graph (`LOCAL_KG`).
-
-Example:
-
-```javascript
-let options = {
-    graphLocation: 'LOCAL_KG'
-};
-
-const result = await dkg.graph.query(
-    `prefix schema: <https://schema.org/>
-        select ?s ?modelName
-        where {
-            ?s schema:model ?modelName
-        }`,
-    'SELECT',
-    options
-);
-
-console.log(JSON.stringify(result, null, 2));
-```
-
-**Create a Knowledge Asset with private data**
-
-In addition to knowledge assets with public assertions, we can add private data to our knowledge asset by creating private assertions, which will contain data that we don’t want to expose publicly.
-
-The sample assertion content for public assertion will be the same as before, just a bit reduced:
-
-```javascript
-const publicAssertion = {
-    '@context': 'https://schema.org',
-    '@id': 'https://tesla.modelX/2321',
-    '@type': 'Car',
-    'name': 'Tesla Model X',
-    'brand': {
-        '@type': 'Brand',
-        'name': 'Tesla'
-    },
-    'model': 'Model X',
-    'manufacturer': {
-        '@type': 'Organization',
-        'name': 'Tesla, Inc.'
-    },
-}
-```
-
-Sample private assertion:
-
-<pre class="language-javascript"><code class="lang-javascript">const privateAssertion = {
-<strong>    '@context': 'https://schema.org',
-</strong><strong>    '@id': 'https://tesla.modelX/2321',
-</strong>    'productionDate': '2015-09-29',
-    'mileageFromOdometer': {
-        '@type': 'QuantitativeValue',
-    	'value': '25672',
-    	'unitCode': 'KMT'
-    },
 }
 </code></pre>
 
-When assertions with public and private data are prepared, we can publish it on the DKG. It’s actually as simple as executing one function:&#x20;
-
-```javascript
-const result = await dkg.asset.create({
-            public: publicAssertion,
-            private: privateAssertion,      
-      },
-      {
-            epochsNum: 2,
-      }
-);
-
-console.log(result);
-```
-
-The complete response of the method will look like:
-
-```javascript
-{
-    UAL: 'did:dkg:hardhat1:31337/0xa5cef543538b997b7a125cc849005b62a3da2271/1',
-    publicAssertionId: '0xef11c3f4bc3331f5d1ad3ec8ddb63928913f7a4d546c6a03fe4485837ad4c494',
-    operation: {
-        operationId: '1c7e860a-219c-4a0c-896d-9c62e19e3fe4',
-        status: 'COMPLETED'
-    }
-}
-
-```
-
-**Get Knowledge Asset private assertion from the DKG**
-
-To read knowledge asset private assertion from the DKG we utilize the same get protocol operation as before, just now we will specify content type option to be private. Keep in mind, you can only get private assertions if your node owns them. This feature is to be further extended with knowledge marketplace tools for knowledge asset monetization.
-
-```javascript
-const { UAL } = createAssetResult;
-
-const options = {
-	contentType: "private"
-};
-const getAssetResult = await dkg.asset.get(UAL, options);
-
-console.log(JSON.stringify(getAssetResult, null, 2));
-```
-
-The response of the get operation will be the assertion graph:
-
-```javascript
-{
-  "operation": {
-    "queryPrivate": {
-      "operationId": "30734787-3779-4a02-8b79-82102c508327",
-      "status": "COMPLETED"
-    }
-  },
-  "assertion": [
-    {
-      "@id": "_:c14n0",
-      "http://schema.org/unitCode": [
-        {
-          "@value": "KMT"
-        }
-      ],
-      "http://schema.org/value": [
-        {
-          "@value": "25672"
-        }
-      ],
-      "@type": [
-        "http://schema.org/QuantitativeValue"
-      ]
-    },
-    {
-      "@id": "https://tesla.modelX/2321",
-      "http://schema.org/mileageFromOdometer": [
-        {
-          "@id": "_:c14n0"
-        }
-      ],
-      "http://schema.org/productionDate": [
-        {
-          "@value": "2015-09-29",
-          "@type": "http://schema.org/Date"
-        }
-      ]
-    }
-  ],
-  "assertionId": "0x0742b8172dd827e2b2905b4968df1e5d1213071cbcba0b04378a4931c904e9b1"
-}
-```
-
-#### Check Knowledge Asset Owner
-
-Thanks to the blockchain representation of the Knowledge Assets it’s possible to check the owner of the Knowledge Asset by checking the ownership record of its NFT token, representing the asset on-chain.
-
-In order to do this, we should execute the function below:
-
-```javascript
-const getOwnerResult = await dkg.asset.getOwner(UAL);
-
-console.log(getOwnerResult);
-```
-
-Owner of the Knowledge Asset:
-
-```javascript
-{
-  UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
-  owner: '0xBaF76aC0d0ef9a2FFF76884d54C9D3e270290a43',
-  operation: { operationId: null, status: 'COMPLETED' }
-}
-```
-
-#### Transfer Knowledge Asset ownership
-
-It’s also possible to transfer ownership of the asset ERC721 token.
-
-In this example we will transfer our Tesla ERC721 token to another wallet:
-
-```javascript
-const newOwner = "0x2ACa90078563133db78085F66e6B8Cf5531623Ad";
-
-const assetTransferResult = await dkg.asset.transfer(UAL, newOwner);
-
-console.log(assetTransferResult);
-```
-
-Result of the transfer operation:
-
-```javascript
-{
-  UAL: 'did:dkg:hardhat1:31337/0x791ee543738b997b7a125bc849005b62afd35578/0',
-  owner: '0x2ACa90078563133db78085F66e6B8Cf5531623Ad',
-  operation: { operationId: null, status: 'COMPLETED' }
-}
-```
-
-#### Check Knowledge Asset State Issuer
-
-Since it's possible to transfer ownership of the Knowledge Asset and also update it, we can expect that different states of the asset can have different issuers.
-
-Knowing index of the state we're interested in, it's possible to get issuer of this specific state.
-
-In this example, we will get issuer of the previous state for the asset that has multiple states:
-
-```javascript
-const getStatesResult = await dkg.asset.getStates(UAL);
-const previousStateIndex = getStatesResult.states.length - 2;
-
-const getStateIssuerResult = await dkg.asset.getStateIssuer(UAL, previousStateIndex);
-
-console.log(getStateIssuerResult);
-```
-
-&#x20;Result of the get issuer operation:
-
-```javascript
-{
-  UAL: 'did:dkg:hardhat1:31337/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
-  issuer: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
-  state: '0xe3a6733d7b999ca6f0d141afe3e38ac59223a4dfde7a5458932d2094ed4193cf',
-  operation: { operationId: null, status: 'COMPLETED' }
-}
-```
-
-In order to get latest state issuer, you can use this function:
-
-```javascript
-const getLatestStateIssuerResult = await dkg.asset.getLatestStateIssuer(UAL);
-```
-
-With the following result:
-
-```javascript
-{
-  UAL: 'did:dkg:hardhat1:31337/0xb0d4afd8879ed9f52b28595d31b441d079b2ca07/0',
-  issuer: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
-  latestState: '0xe37350c9b0e2881af2e7e89a986e87f3d3158611b794bf75dcbb8d6e4aea7f95',
-  operation: { operationId: null, status: 'COMPLETED' }
-}
-```
-
-#### Estimate cost of the Knowledge Asset publishing
-
-Before actual creation of the Knowledge Asset, we can estimate how much would it cost for publisher to host Knowledge Asset on the DKG for a specific period of time.
-
-In order to do this, we can send a request to one of the DKG nodes, which would return suggested cost of the publishing (so that Knowledge Asset is accepted by at least 8 nodes on the DKG).
-
-In order to estimate cost of the publishing, you should know the metadata of the public assertion, such as: assertion ID (Merkle Root) and size in bytes. Additionally, you need to provide number of epochs.
-
-Don't know how to calculate assertion metadata? Don't you worry, in the following example we will go through all the steps from having just Knowledge Asset content to having estimated price.
-
-```javascript
-const knowledgeAssetContent = {
-    public: {
-        '@context': ['https://schema.org'],
-        '@id': 'uuid:1',
-        company: 'OT',
-        user: {
-            '@id': 'uuid:user:1',
-        },
-        city: {
-            '@id': 'uuid:belgrade',
-        },
-    },
-    private: {
-        '@context': ['https://schema.org'],
-        '@graph': [
-            {
-                '@id': 'uuid:user:1',
-                name: 'Adam',
-                lastname: 'Smith',
-            },
-            {
-                '@id': 'uuid:belgrade',
-                title: 'Belgrade',
-                postCode: '11000',
-            },
-        ],
-    },
-};
-```
-
-In order to calculate public assertion metadata, we would use **assertion module**:
-
-```javascript
-const publicAssertionId = await dkg.assertion.getPublicAssertionId(knowledgeAssetContent);
-const publicAssertionSize = await dkg.assertion.getSizeInBytes(knowledgeAssetContent);
-```
-
-Besides assertion ID and size, following functions are available in the **assertion module**:
-
-* **formatGraph(knowledgeAssetContent)** - formats the content provided, producing both a public and, if available, a private assertion and a link to it in the public assertion.
-* **getTriplesNumber(knowledgeAssetContent)** - calculates and returns the number of triples of the public assertion from the provided content.
-* **getChunksNumber(knowledgeAssetContent)** - calculates and returns the number of chunks of the public assertion from the provided content.
-
-After calculating public assertion metadata, we can get suggested publishing cost (in Wei), using the **network module**:
-
-```javascript
-const bidSuggestion = await dkg.network.getBidSuggestion(
-    publicAssertionId,
-    publicAssertionSize,
-    { epochsNum: 2 },
-);
-```
+As the OriginTrail node leverages a fully fledged graph database (triple store supporting RDF), you can run arbitrary SPARQL queries on it.&#x20;
 
 #### **More on types of interaction with the DKG SDK**
 
