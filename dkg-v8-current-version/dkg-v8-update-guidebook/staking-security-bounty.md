@@ -10,7 +10,7 @@ The new improved Staking system includes:
 To be eligible users need to:
 
 * Stake TRAC on mainnet and test the upgraded V8 Staking Dashboard between Dec 27th 5pm CET and January 10th 5pm CET
-* Register for claiming the reward from January 10th 5pm CET to January 16th 5pm on a designated reward claiming interface. Registration includes submitting KYC data for the purposes of reward distribution and qualitative feedback on the usage of staking interface.
+* Register for claiming the reward from January 10th 5pm CET to January 16th 5pm on [the designated reward claiming interface](https://dkg-v8-incentivised-testnet.origintrail.io/claim-rewards). Registration includes submitting KYC data for the purposes of reward distribution and qualitative feedback on the usage of staking interface.
 
 The total reward amount will be distributed pro rata among eligible participants, according to the size of the stake they contributed during that period.
 
