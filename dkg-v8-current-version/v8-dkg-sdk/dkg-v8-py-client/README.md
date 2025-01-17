@@ -160,15 +160,22 @@ const content = {
 When you create the knowledge collection, the above JSON-LD object will be converted into an **assertion**. When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochs_number` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
 
 ```python
-create_asset_result = await dkg.asset.create(
+create_asset_result = dkg.asset.create(
     content=content,
     options={
-        "epochs_num": 6
+        "epochs_num": 2,
+        "minimum_number_of_finalization_confirmations": 3,
+        "minimum_number_of_node_replications": 1,
+        #"token_amount":100
     },
 )
 print(create_asset_result)
 
 ```
+
+{% hint style="info" %}
+If you are in development mode you should add "token\_amount" as one of the options
+{% endhint %}
 
 {% hint style="warning" %}
 To use the synchronous version just remove the await (this applies for any function call you see in rest of this document)
