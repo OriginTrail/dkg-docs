@@ -39,9 +39,19 @@ from dkg.providers import BlockchainProvider, NodeHTTPProvider
 
 ### :snowboarder:Quickstart
 
-To use the DKG library, you need to connect to a running local or remote OT-Node.&#x20;
+In this package there are both synchronous and asynchronous. versions of DKG client.&#x20;
+
+The synchronous client is designed for applications where blocking calls are acceptable. It operates sequentially, making it simpler to integrate into existing codebases that do not use asynchronous programming.
+
+The asynchronous client is built for non-blocking operations, making it ideal for scenarios where multiple tasks need to run concurrently. It is generally faster than the synchronous client.
+
+#### Synchronous DKG client
+
+To use the Synchronous DKG library, you need to connect to a running local or remote OT-Node.&#x20;
 
 ```python
+from dkg.providers import BlockchainProvider, NodeHTTPProvider
+
 node_provider = NodeHTTPProvider(endpoint_uri="http://localhost:8900", api_version="v1")
 blockchain_provider = BlockchainProvider(
     Environments.DEVELOPMENT.value, # or TESTNET, MAINNET
@@ -55,9 +65,42 @@ print(dkg.node.info)
 # { "version": "8.X.X" }
 ```
 
+#### Asynchronous DKG client
+
+The asynchronous DKG client leverages Python's `asyncio` library for managing asynchronous operations. Below is an example of how to set up and use the asynchronous DKG client:
+
+```python
+import asyncio
+from dkg.providers import AsyncBlockchainProvider, AsyncNodeHTTPProvider
+from dkg import AsyncDKG
+
+async def main():
+    node_provider = AsyncNodeHTTPProvider(
+        endpoint_uri="http://localhost:8900",
+        api_version="v1",
+    )
+
+    # make sure that you have PRIVATE_KEY in .env so the blockchain provider can load it
+    blockchain_provider = AsyncBlockchainProvider(
+        Environments.DEVELOPMENT.value,
+        BlockchainIds.HARDHAT_1.value,
+    )
+
+    dkg = AsyncDKG(
+        node_provider,
+        blockchain_provider,
+        config={"max_number_of_retries": 300, "frequency": 2},
+    )
+    
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
 {% hint style="warning" %}
 Make sure to create an .env file and add PRIVATE\_KEY variable to it so that the blockchain provider can pick it up.
 {% endhint %}
+
+#### Blockchain networks
 
 The system supports multiple blockchain networks, which can be configured using the `BlockchainIds` constants. You can select the desired blockchain by specifying the corresponding constant. The available options are:
 
@@ -84,9 +127,9 @@ Local options:
 * Hardhat1: hardhat1:31337
 * Hardhat2: hardhat2:31337
 
-#### Create a Knowledge Asset
+#### Create a Knowledge Collection
 
-In this example, let’s create an example Knowledge Asset representing a city. The content contains both public and private assertions. Public assertions will be exposed publicly (replicated to other nodes) while private ones won't (stays on the node you published to only). If you have access to the particular node that has the data when you search for it using get or query you will see both public and private assertions.&#x20;
+In this example, let’s create an example Knowledge Collection representing a city. The content contains both public and private assertions. Public assertions will be exposed publicly (replicated to other nodes) while private ones won't (stays on the node you published to only). If you have access to the particular node that has the data when you search for it using get or query you will see both public and private assertions.&#x20;
 
 ```python
 const content = {
@@ -114,10 +157,10 @@ const content = {
 }
 ```
 
-When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion**. When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochs_number` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
+When you create the knowledge collection, the above JSON-LD object will be converted into an **assertion**. When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochs_number` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
 
 ```python
-create_asset_result = dkg.asset.create(
+create_asset_result = await dkg.asset.create(
     content=content,
     options={
         "epochs_num": 6
@@ -126,6 +169,10 @@ create_asset_result = dkg.asset.create(
 print(create_asset_result)
 
 ```
+
+{% hint style="warning" %}
+To use the synchronous version just remove the await (this applies for any function call you see in rest of this document)
+{% endhint %}
 
 The complete response of the method will look like:
 
@@ -179,7 +226,7 @@ In case you want to create multiple different assets you can increase your allow
 ```python
 dkg.asset.increase_allowance(1569429592284014000)
 
-result = dkg.asset.create(
+result = await dkg.asset.create(
     content=content,
     options={
         "epochs_num": 6
@@ -202,7 +249,7 @@ In this example we will get the latest state of the knowledge asset we published
 ```python
 ual = create_asset_result.get("did:dkg:otp:2043/0x8f678eb0e57ee8a109b295710e23076fa3a443fe/572238")
 
-get_asset_result = dkg.asset.get(ual)
+get_asset_result = await dkg.asset.get(ual)
 
 print(get_asset_result)
 ```
@@ -289,7 +336,7 @@ Querying the DKG is done by using the SPARQL query language, which is very simil
 Let’s write simple query to select all subjects and objects in graph that have the **Model** property of Schema.org context:
 
 ```python
-query_operation_result = dkg.graph.query(
+query_operation_result = await dkg.graph.query(
     """
     PREFIX SCHEMA: <http://schema.org/>
     SELECT ?s ?stateName
@@ -334,7 +381,6 @@ You can use default keys from the example below for hardhat blockchain:
 
 ```python
 PRIVATE_KEY = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
-PUBLIC_KEY = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
 ```
 
 {% hint style="warning" %}
