@@ -13,9 +13,9 @@ Prerequisites:
 3. Bridge your TRAC to that blockchain
 4. Have some gas fee tokens (e.g. NEURO on Neuroweb, ETH on Base etc)
 
-_**Note:** If you are staking on Neuroweb, please make sure that you update both **"Max base fee"** and "**Priority fee**" to **0.00000001** before signing transactions (see image below)._
-
-(IAMGE)Neuroweb fee setting
+{% hint style="warning" %}
+_If you are staking on Neuroweb, please make sure that you update both **"Max base fee"** and "**Priority fee**" to **0.00000001** before signing transactions._
+{% endhint %}
 
 ### **TRAC Staking using the Staking Dashboard:**
 
