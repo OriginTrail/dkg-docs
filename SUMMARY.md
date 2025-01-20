@@ -3,6 +3,7 @@
 * [OriginTrail Decentralized Knowledge Graph - Official Documentation](README.md)
 * [OriginTrail - Decentralized Knowledge Graph (DKG)](origintrail-decentralized-knowledge-graph-dkg.md)
 * [DKG key concepts](dkg-key-concepts.md)
+* [Powering AI minds: OriginTrail hackathon](powering-ai-minds-origintrail-hackathon.md)
 
 ## DKG V8 (current version)
 
