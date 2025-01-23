@@ -1,6 +1,6 @@
 ---
-description: Do you have what it takes to revolutionize the future of AI agents?
 icon: lightbulb-exclamation-on
+description: Do you have what it takes to revolutionize the future of AI agents?
 cover: >-
   .gitbook/assets/Empowering ai minds_ Origintrail hackathon (gitbook doc cover)
   1.png
@@ -30,7 +30,7 @@ First DKG-powered agents like [**ChatDKG**](https://x.com/ChatDKG) (powered by t
 ## 💡 How to join the hackathon?
 
 1. **Explore challenges:** Check out the themes and prizes below.
-2. **Register to compete:** Complete the [**Google form** ](https://forms.gle/yAxTfP8taEBQMavu9)by **Thursday, January 23, at noon**.
+2. **Register to compete:** Complete the [**Google form** ](https://forms.gle/yAxTfP8taEBQMavu9)by **Friday, January 24, at noon**.
 3. **Build your solution:** Create an AI agent using the OriginTrail DKG as its brain.
 4. **Submit your work:** Send your GitHub repo (with a clear README) to **office@origin-trail.com** by **Monday, January 27, at noon**.
 5. **Showcase your work:** Join us for **Demo day** at Nova Iskra Dorćol, Belgrade, on **January 27, 18:00**!
