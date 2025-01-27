@@ -8,6 +8,11 @@ If you are looking to build applications leveraging [knowledge assets](broken-re
 
 The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail Decentralized Network (the node is a dependency). Therefore you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-Node](../../v8-dkg-core-node/run-a-v8-core-node-on-testnet/), in order to use the SDK.
 
+### Prerequisites
+
+* node ≥ 16.0.0
+* npm ≥ 8.0.0
+
 ### Installation
 
 The library can be used both in the browser or in a NodeJS application.
