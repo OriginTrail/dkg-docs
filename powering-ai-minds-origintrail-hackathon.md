@@ -1,6 +1,7 @@
 ---
 icon: lightbulb-exclamation-on
 description: Do you have what it takes to revolutionize the future of AI agents?
+hidden: true
 cover: >-
   .gitbook/assets/Empowering ai minds_ Origintrail hackathon (gitbook doc cover)
   1.png
