@@ -145,7 +145,7 @@ Selecting an archival endpoint is a crucial requirement for the optimal function
 
 ### 2. Acquire TRAC and Chiado test tokens
 
-Go to [dkg-testnet-faucet.md](../useful-resources/dkg-testnet-faucet.md "mention") to get test TRAC and xDAI tokens.
+Go to [faucet.md](../../../useful-resources/faucet.md "mention") to get test TRAC and xDAI tokens.
 
 ### 3. Update DKG node configuration
 

@@ -18,7 +18,9 @@ layout:
     visible: true
 ---
 
-# OriginTrail Decentralized Knowledge Graph - Official Documentation
+# Get started with OriginTrail
+
+### Build verifiable Internet for AI
 
 > _“Q. **How do you propose to do this?**_
 >
@@ -26,19 +28,25 @@ layout:
 >
 > Hari Seldon, **Foundation series by Isaac Asimov (1951)**
 
-OriginTrail is an ecosystem dedicated to the vision of a **Verifiable Internet for AI through organizing all human knowledge in a neuro-symbolic Decentralized Knowledge Graph**.&#x20;
+**OriginTrail** is an ecosystem working toward a **verifiable Internet for artificial intelligence (AI)**—an Internet where information is trustworthy, easy to check, and keeps humans in the loop. It aims to achieve this by organizing all human knowledge in a **Decentralized Knowledge Graph (DKG)**, enabling a **collective neuro-symbolic AI.** &#x20;
 
-It aims to address the challenge of misinformation in the age of AI by tackling the problems of AI hallucinations, data ownership and IP rights, centralization of power, bias and model collapse. It does so by building on core values of **information provenance**, **verifiability** and **positive incentive alignment** through organizing human knowledge in a **neuro-symbolic Decentralized Knowledge Graph (DKG)** and the Decentralized Retrieval Augmented Generation (DRAG) framework.
+A collective neuro-symbolic AI combines structured and connected information from symbolic AI (DKG) with the creativity of neural AI technologies (LLMs), building a **robust decentralized AI infrastructure.**&#x20;
 
-To learn more about the vision of the Verifiable Internet for AI and DRAG check out the [ecosystem white paper](dkg-v6-previous-version/ecosystem-white-paper.md).
+This provides a powerful substrate for **trusted, human-centric AI solutions** to tackle some of humanity's most pressing challenges. It also **drives AI agents’ autonomous memories and trusted intents**, as both AI agents and robots become potent enough to act on behalf of humans.&#x20;
 
-If you're looking to learn more about the inner workings of the DKG,  [start here](dkg-v6-previous-version/dkgintro.md).
+### Choose your start
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="build-with-dkg/ai-agents/">AI agents</a></td><td>Create, expand, and share your AI agents’ memories in a transparent and verifiable way on the DKG</td><td></td><td><a href="build-with-dkg/ai-agents/">ai-agents</a></td></tr><tr><td><a href="build-with-dkg/dkg-edge-node/">DKG Edge Node</a></td><td>Build your decentralized AI applications on the DKG</td><td></td><td><a href="build-with-dkg/dkg-edge-node/">dkg-edge-node</a></td></tr><tr><td><a href="build-with-dkg/dkg-core-node/">DKG Core Node</a></td><td>Contribute to the DKG security, stability, and functionality and earn rewards</td><td></td><td><a href="build-with-dkg/dkg-core-node/">dkg-core-node</a></td></tr></tbody></table>
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="dkg-v6-previous-version/delegated-staking/">Delegated staking</a></td><td>Contribute your TRAC tokens for network utility and earn rewards</td><td></td><td><a href="dkg-v6-previous-version/delegated-staking/">delegated-staking</a></td></tr><tr><td><a href="key-concepts/dkg-key-concepts/">DKG key concepts </a></td><td>Learn key concepts of the DKG and empower yourself to build decentralized AI</td><td></td><td><a href="key-concepts/dkg-key-concepts/">dkg-key-concepts</a></td></tr><tr><td><a href="build-with-dkg/dkg-sdk/">DKG SDK</a></td><td>Explore the client libraries for your applications to interact and connect with the DKG</td><td></td><td></td></tr></tbody></table>
 
 
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Explore the OriginTrail ecosystem:</strong></td><td></td><td><p></p><ul><li><a href="https://origintrail.io/">OriginTrail website</a></li><li><a href="https://origintrail.io/ecosystem/whitepaper">OriginTrail White paper</a></li><li><a href="https://github.com/origintrail">GitHub</a></li><li><a href="https://medium.com/origintrail">Medium blog</a></li><li><a href="https://www.youtube.com/c/OriginTrail">YouTube channel</a></li><li><a href="https://tracelabs.io/">Trace Labs - OriginTrail Core Developers</a></li><li><a href="https://alliance.origintrail.io/">Trace Alliance</a> website</li><li><a href="https://neuroweb.ai">NeuroWeb</a></li></ul></td></tr><tr><td><p><strong>Join the OriginTrail community:</strong></p><ul><li><a href="https://discord.gg/gYq6GuJ4sJ">Discord</a></li><li><a href="https://t.me/origintrail">Telegram group</a></li><li><a href="https://www.reddit.com/r/OriginTrail/">Reddit</a></li></ul></td><td></td><td></td></tr><tr><td><p><strong>Follow the latest announcements:</strong></p><ul><li><a href="https://twitter.com/origin_trail">OriginTrail </a>on X</li><li><a href="https://twitter.com/OriginTrailDev">Developers </a>on X</li><li><a href="https://twitter.com/NeuroWebAI">NeuroWeb </a>on X</li></ul></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="success" %}
-This site is a constantly updated, work-in-progress documentation built by the OriginTrail community and core developers. Find the "Edit on Github" button in the upper right corner and submit your updates as pull requests (or do it directly on the [docs Github repo).](https://github.com/OriginTrail/dkg-docs) We appreciate any feedback, improvement ideas and comments.
+This site is a constantly updated, work-in-progress official OriginTrail documentation built by the OriginTrail community and core developers.&#x20;
+
+Find the "Edit on GitHub" button in the upper right corner and submit your updates as pull requests (or do it directly on the [docs Github repo).](https://github.com/OriginTrail/dkg-docs)&#x20;
+
+We appreciate any feedback, improvement ideas and comments.
 {% endhint %}
 
