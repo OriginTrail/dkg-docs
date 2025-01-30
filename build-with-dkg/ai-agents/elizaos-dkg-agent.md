@@ -48,7 +48,7 @@ Copy the `.env.example` file (from the Elizagraph folder in cloned repository) a
 
 1. **Node information**
 
-If you do not already have a DKG node set up, you can use a public node or set up a [development node](../dkg-sdk/setting-up-your-development-environment.md), [testnet](../dkg-core-node/run-a-v8-core-node-on-testnet/) or [mainnet](../dkg-core-node/run-a-v8-core-node-on-mainnet/). Then, populate the following variables.
+If you do not already have a DKG node set up, you can use a public node that the OriginTrail team set up so that everyone has an easy way to interact with the DKG.
 
 There's one public node available for mainnet ([https://positron.origin-trail.network](https://positron.origin-trail.network/)) and one for testnet ([https://v6-pegasus-node-02.origin-trail.network](https://v6-pegasus-node-02.origin-trail.network)). All blockchains are supported on each of the nodes.
 

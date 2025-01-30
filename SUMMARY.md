@@ -80,6 +80,7 @@
 
 ## Useful Resources
 
+* [Public Nodes](useful-resources/public-nodes.md)
 * [Tutorials](useful-resources/tutorials.md)
 * [Faucet](useful-resources/faucet.md)
 * [Development principles](useful-resources/development-principles.md)

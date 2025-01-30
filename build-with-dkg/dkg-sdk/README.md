@@ -21,6 +21,10 @@ The OriginTrail SDK currently comes in two forms:
 * Javascript SDK - [**dkg.js**](dkg-v8-js-client/)&#x20;
 * Python SDK - [**dkg.py**](dkg-v8-py-client/)**.**&#x20;
 
+{% hint style="info" %}
+You can check **Public Nodes on the mainnet or testnet** and choose one to use [here](../../useful-resources/public-nodes.md).
+{% endhint %}
+
 SDKs for other programming languages would be welcome contributions to the project. The core development team is also considering including them in the roadmap.
 
 {% hint style="info" %}
