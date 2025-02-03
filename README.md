@@ -9,7 +9,7 @@ layout:
   title:
     visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: true
   outline:
@@ -20,7 +20,7 @@ layout:
 
 # Get started with OriginTrail
 
-### Build verifiable Internet for AI
+
 
 > _“Q. **How do you propose to do this?**_
 >
@@ -47,6 +47,6 @@ This site is a constantly updated, work-in-progress official OriginTrail documen
 
 Find the "Edit on GitHub" button in the upper right corner and submit your updates as pull requests (or do it directly on the [docs Github repo).](https://github.com/OriginTrail/dkg-docs)&#x20;
 
-We appreciate any feedback, improvement ideas and comments.
+We appreciate any feedback, improvement ideas, and comments.
 {% endhint %}
 

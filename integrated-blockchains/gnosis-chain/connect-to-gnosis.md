@@ -1,5 +1,5 @@
 ---
-cover: ../../../.gitbook/assets/MicrosoftTeams-image (1).png
+cover: ../../.gitbook/assets/MicrosoftTeams-image (1).png
 coverY: 0
 layout:
   cover:
@@ -37,7 +37,7 @@ Selecting an archival endpoint is a crucial requirement for the optimal function
 
 In order for your node to be able to create the profile on the Gnosis blockchain, it will require some xDai tokens on the operational wallet (at least one of the wallets in **operationalWallets**). Make sure that you acquire them before proceeding to update the configuration file; otherwise, your node will fail to connect to the Gnosis network.
 
-If you are planning on running an OriginTrail [Full node](../running-a-full-node.md), make sure that you also acquire TRAC tokens on Gnosis network and have them ready on the management wallet (**evmManagementWalletPublicKey**). TRAC is required for the process of setting up stake on your node once it's successfully connected to Gnosis and created its profile.
+If you are planning on running an OriginTrail [Full node](../../dkg-v6-previous-version/node-setup-instructions/running-a-full-node.md), make sure that you also acquire TRAC tokens on Gnosis network and have them ready on the management wallet (**evmManagementWalletPublicKey**). TRAC is required for the process of setting up stake on your node once it's successfully connected to Gnosis and created its profile.
 
 {% hint style="info" %}
 As described in the "[**Acquiring tokens**](https://docs.origintrail.io/decentralized-knowledge-graph/node-setup-instructions/installation-prerequisites/acquiring-tokens)" instructions page, bridging TRAC tokens from Ethereum to Gnosis network is done via [**OmniBridge**](https://omnibridge.gnosischain.com/bridge) or any other bridging platform.&#x20;
@@ -145,7 +145,7 @@ Selecting an archival endpoint is a crucial requirement for the optimal function
 
 ### 2. Acquire TRAC and Chiado test tokens
 
-Go to [faucet.md](../../../useful-resources/faucet.md "mention") to get test TRAC and xDAI tokens.
+Go to [test-token-faucet.md](../../useful-resources/test-token-faucet.md "mention") to get test TRAC and xDAI tokens.
 
 ### 3. Update DKG node configuration
 

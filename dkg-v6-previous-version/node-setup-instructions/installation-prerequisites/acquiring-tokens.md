@@ -54,7 +54,7 @@ At the current stage, OriginTrail DKG node can be deployed on the following test
 1. NeuroWeb testnet
 2. Chiado (Gnosis testnet)
 
-In order to acquire testnet tokens for the above listed blockchains, please refer to OriginTrail's Discord Faucet usage [instructions](../../../useful-resources/faucet.md).
+In order to acquire testnet tokens for the above listed blockchains, please refer to OriginTrail's Discord Faucet usage [instructions](../../../useful-resources/test-token-faucet.md).
 
 ## Teleporting TRAC tokens to NeuroWeb:
 

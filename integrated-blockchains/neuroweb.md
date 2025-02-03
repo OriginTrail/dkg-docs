@@ -1,25 +1,42 @@
-# Neuroweb Network
+# NeuroWeb
 
-NeuroWeb Network is a decentralized Artificial Intelligence blockchain designed to incentivise knowledge creation, connectivity and sharing through **Knowledge Mining**. It's utility token NEURO is designed to fuel the AI knowledge economy, rewarding relevant knowledge contributions to the **OriginTrail Decentralized Knowledge Graph**.
+NeuroWeb network is a decentralized artificial intelligence (AI) blockchain designed to incentivize knowledge creation, connectivity, and sharing through **knowledge mining**. Its utility token, NEURO, is designed to fuel the AI knowledge economy, rewarding relevant knowledge contributions to the **OriginTrail Decentralized Knowledge Graph (DKG)**.
 
-NeuroWeb builds on the basis of its predecessor - the OriginTrail Parachain - which was transformed into NeuroWeb via a community Governance vote on OriginTrail Parachain in December 2023. NeuroWeb is a permissionless, EVM enabled blockchain secured by Polkadot validators.
+NeuroWeb builds on the basis of its predecessor - the OriginTrail Parachain - which was transformed into NeuroWeb via a community governance vote on OriginTrail Parachain in December 2023. NeuroWeb is a permissionless, EVM-enabled blockchain secured by Polkadot validators.
 
-Dedicated documentation for Neuroweb can be found [here](https://docs.neuroweb.ai/).
+Dedicated documentation for NeuroWeb can be found [here](https://docs.neuroweb.ai/).
 
-### Adding TRAC on Neuroweb to your wallet
+## NEURO token
 
-Here are step by step instructions for adding TRAC token on Neuroweb to your wallet (in this case Metamask). These instructions and TRAC token address are same for both NeuroWeb mainnet and testnet.
+NEURO is the native token of NeuroWeb. It's used to incentivize knowledge creation, sharing, and connectivity through knowledge mining. NEURO powers the AI knowledge economy by rewarding valuable contributions to the OriginTrail DKG.
+
+More information on NEURO can be found in the [official NeuroWeb documentation](https://docs.neuroweb.ai/neuro-token).
+
+## Bridging TRAC to NeuroWeb
+
+To use TRAC tokens on NeuroWeb for powering your nodes, staking, or other activities, you need to bridge TRAC to NeuroWeb.&#x20;
+
+Teleport interface has been launched in order to allow users to transfer TRAC tokens from Ethereum to NeuroWeb and vice versa. More information on [teleport is available here](teleport-instructions-neuroweb.md).
+
+## Adding TRAC on NeuroWeb to your wallet
+
+Here are step-by-step instructions for adding the TRAC token on NeuroWeb to your wallet (in this case Metamask). These instructions and TRAC token address are the same for both NeuroWeb mainnet and testnet.
 
 TRAC token address: 0xFfFFFFff00000000000000000000000000000001
 
-First open Metamask that is connected to NeuroWeb (connection details available here), then under the Assets tab click on `Import tokens`.
+### **Step 1:**&#x20;
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2022-12-15 at 14.22.00.png" alt=""><figcaption></figcaption></figure>
+Open Metamask that is connected to NeuroWeb (connection details available here), then under the Assets tab, click on `Import tokens`.
 
+<figure><img src="../.gitbook/assets/Screen Shot 2022-12-15 at 14.22.00.png" alt=""><figcaption></figcaption></figure>
 
+### Step 2:
 
-On the import tokens page you need to add TRAC token contract address and usually all other fields will be automatically populated by Metamask.
+On the import tokens page, you need to add the TRAC token contract address. Usually, all the other fields will be automatically populated by Metamask.
 
-<figure><img src="../../.gitbook/assets/trac_metamask.png" alt=""><figcaption><p>Import TRAC token</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/trac_metamask.png" alt=""><figcaption><p>Import TRAC token</p></figcaption></figure>
 
-After you get all fields filled with right information (like on the image above), you click `Add custom tokens` and your TRAC balance will be displayed in Metamask.
+### Step 3:
+
+After you get all the fields filled with the right information (as in the image above), you click **'Add custom tokens'** and your TRAC balance will be displayed in Metamask.
+

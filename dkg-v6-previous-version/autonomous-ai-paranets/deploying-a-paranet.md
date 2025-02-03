@@ -2,6 +2,7 @@
 description: >-
   A guide for developers & paranet operators on launching their Paranet on the
   DKG
+hidden: true
 ---
 
 # Deploying a Paranet

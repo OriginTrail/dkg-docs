@@ -8,16 +8,16 @@ If you are looking to build applications leveraging [Knowledge Assets](./#create
 
 The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail DKG  (the node is a dependency). Therefore, to use the SDK, you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-node](../../dkg-core-node/run-a-v8-core-node-on-testnet/).
 
-### Prerequisites
+## Prerequisites
 
 * node ≥ 16.0.0
 * npm ≥ 8.0.0
 
-### Installation
+## Installation
 
-The library can be used both in the browser or in a NodeJS application.
+The library can be used either in the browser or in a NodeJS application.
 
-#### Using dkg.js in the browser
+### Using dkg.js in the browser
 
 Use the prebuilt `dist/dkg.min.js`, or build the file on your own using the[ dkg.js](https://github.com/OriginTrail/dkg.js) repository:
 
@@ -41,7 +41,7 @@ Then include `dist/dkg.min.js` in your html file. This will expose `DKG` on the 
 Make sure to also include the web3.js library, as it is a dependency for dkg.js.
 {% endhint %}
 
-#### Using dkg.js in NodeJS apps
+### Using dkg.js in NodeJS apps
 
 Run the command to install dependency from the [NPM](https://www.npmjs.com/package/dkg.js) repository:
 
@@ -55,9 +55,11 @@ Then, include `dkg.js` in your project files. This will expose the `DKG` object:
 const DKG = require('dkg.js');
 ```
 
-### :snowboarder:Quickstart
+## :snowboarder: Quickstart
 
 {% embed url="https://youtu.be/4oi_0hJmxcY?si=SD7GUy35mtovBiPW" %}
+OriginTrail dev tutorial: SDK walkthrough
+{% endembed %}
 
 To use the DKG library, you need to connect to a running local or remote OT-node.&#x20;
 
@@ -103,7 +105,7 @@ The system supports multiple blockchain networks, which can be configured using 
 * Hardhat1: hardhat1:31337
 * Hardhat2: hardhat2:31337
 
-#### Create a Knowledge Asset
+## Create a Knowledge Asset
 
 In this example, let’s create an example Knowledge Asset representing a city. The content contains both public and private assertions. Public assertions will be exposed publicly (replicated to other nodes), while private ones won't (stay on the node you published to only).&#x20;
 
@@ -207,7 +209,7 @@ After you've finished publishing data to the blockchain, you can decrease your a
 await dkg.asset.decreaseAllowance('1569429592284014000');
 ```
 
-#### Read Knowledge Asset data from the DKG
+## Read Knowledge Asset data from the DKG
 
 To read Knowledge Asset data from the DKG, we utilize the **get** protocol operation.
 
@@ -340,7 +342,7 @@ The response of the get operation will be the assertion graph:
 
 ```
 
-#### Querying Knowledge Asset data with SPARQL
+## Querying Knowledge Asset data with SPARQL
 
 Querying the DKG is done by using the SPARQL query language, which is very similar to SQL applied to graph data.&#x20;
 
@@ -374,9 +376,9 @@ The returned response will contain an array of n-quads:
 }
 </code></pre>
 
-As the OriginTrail node leverages a fully fledged graph database (triple store supporting RDF), you can run arbitrary SPARQL queries on it.&#x20;
+As the OriginTrail node leverages a fully fledged graph database (a triple store supporting RDF), you can run arbitrary SPARQL queries on it.&#x20;
 
-#### **More on types of interaction with the DKG SDK**
+## **More on types of interaction with the DKG SDK**
 
 We can divide operations done by SDK into 3 types:
 
@@ -386,7 +388,7 @@ We can divide operations done by SDK into 3 types:
 
 Non-state-changing interactions with smart contracts are free and can be described as contract-getters. They don’t require transactions on the blockchain. This means they do not incur transaction fees.&#x20;
 
-Smart contract transactions are state-changing operations. This means they change the state of the smart contract memory, which costs some amount of blockchain-native gas tokens (such as ETH, NEURO, etc.).
+Smart contract transactions are state-changing operations. This means they change the state of the smart contract memory, which requires some blockchain-native gas tokens (such as ETH, NEURO, etc.).
 
 In order to perform state-changing operations, you need to use a wallet funded with gas tokens.
 

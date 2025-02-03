@@ -1,9 +1,9 @@
 ---
+icon: lightbulb-exclamation-on
 description: >-
   The OriginTrail Decentralized Knowledge Graph (DKG) introduces novel concepts,
   such as Knowledge Assets, autonomous paranets, and others. Find an overview of
   key concepts below.
-icon: lightbulb-exclamation-on
 ---
 
 # DKG key concepts
@@ -33,11 +33,11 @@ Technically, an assertion is represented using the n-quads serialization and a c
 
 In summary, a Knowledge Asset is a combination of an NFT record and a semantic record. Using the dkg.js SDK, you can perform CRUT (create, read, update, transfer) operations on Knowledge Assets, which are explained below in further detail.
 
-#### Knowledge Asset state finality
+### Knowledge Asset state finality
 
 Similar to distributed databases, the OriginTrail DKG applies replication mechanisms and needs mechanisms to reach a consistent state on the network for Knowledge Assets. In OriginTrail DKG, state consistency is reconciled using the blockchain, which hosts state proofs for Knowledge Assets, and replication commit information from DKG nodes. This means that updates for an existing Knowledge Asset are accepted by the network nodes (similar to the way nodes accept Knowledge Assets on creation) and can operate with all accepted states.
 
-### Decentralized Retrieval Augmented Generation
+## Decentralized Retrieval Augmented Generation
 
 Patrick Lewis coined the term Retrieval-Augmented Generation (RAG) in a [2020 paper](https://arxiv.org/pdf/2005.11401.pdf). It is a technique for enhancing the accuracy and reliability of GenAI models with facts fetched from external sources. This allows artificial intelligence (AI) solutions to dynamically fetch relevant information before the generation process, enhancing the accuracy of responses by limiting the generation to re-working the retrieved inputs. \
 \
@@ -56,7 +56,7 @@ It operates on two core components:
 
 The dRAG applications framework is entirely compatible with the existing techniques, tools, and RAG frameworks and supports all major data formats.&#x20;
 
-### Knowledge mining
+## Knowledge mining
 
 **Knowledge mining** is the process of producing high-quality, blockchain-tracked knowledge for AI pioneered by the OriginTrail ecosystem. This cyclical process leverages the key component of the OriginTrail technology - Knowledge Assets - which are ownable containers for knowledge with inherent discoverability, connectivity, and data provenance.
 
@@ -64,23 +64,21 @@ Similarly to Bitcoin mining, where miners collectively provide computing resourc
 
 Read more about knowledge mining in the [NeuroWeb docs](https://docs.neuroweb.ai/knowledge-mining).
 
-### RDF & SPARQL
+## RDF & SPARQL
 
 The Resource Description Framework (RDF) is a W3C standardized model designed to represent data about physical objects and abstract concepts (resources). It’s a model to express relations between entities using a graph format.
 
 RDF schemas provide mechanisms for describing related resources and their relationships. It is similar to object-oriented programming languages and differs in that it describes properties in terms of resource classes. RDF enables querying via the SPARQL query language.
 
-[More information about RDF schemas used for Knowledge Assets](broken-reference)
-
 [Examples of schema definitions by schema.org](https://schema.org/docs/schemas.html)
 
-### What is an NFT?
+## What is an NFT?
 
 NFT—short for the non-fungible token—is a type of blockchain token used as an implementation component of Knowledge Assets in the OriginTrail DKG. The token represents ownership of the Knowledge Asset and enables its owner to perform all standardized NFT functionality, such as transferring ownership, listing it on NFT marketplaces, and using it as a rich NFT in Web3 applications.
 
 If you are interested in learning more about NFTs, you can find out more [here](https://en.wikipedia.org/wiki/Non-fungible_token).
 
-### What is a UAL?
+## What is a UAL?
 
 Uniform Asset Locators (UALs) are ownable identifiers of the DKG, similar to URLs in the traditional web. The UALs follow the DID URL specification and are used to identify and locate a specific Knowledge Asset within the OriginTrail DKG.&#x20;
 

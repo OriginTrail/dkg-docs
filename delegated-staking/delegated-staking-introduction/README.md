@@ -2,7 +2,7 @@
 icon: diagram-project
 ---
 
-# Delegated Staking Introduction
+# Delegated Staking - Introduction
 
 As a decentralized system, the OriginTrail DKG enables all ecosystem stakeholders owning TRAC to contribute their economic stake to the functioning of the network for utility. Delegated staking involves locking up TRAC for contributing to the DKG security on selected DKG Core Nodes. The DKG Core Node rewards are shared between the TRAC stake delegators.
 
@@ -12,7 +12,7 @@ As a decentralized system, the OriginTrail DKG enables all ecosystem stakeholder
 
 For a DKG Core Node to be eligible to host a portion of the DKG and receive TRAC network rewards, its TRAC stake plays a crucial role. Set at a minimum of 50,000 TRAC on a particular blockchain, the stake has an important role in ensuring the security of the DKG. The DKG Core Node operators can contribute to the node stake on their own or by attracting more TRAC to their stake through delegated staking.&#x20;
 
-There are 2 roles involved in delegated staking -  **Core Node operators** and **TRAC delegators.**
+There are 2 roles involved in delegated staking: **Core Node operators** and **TRAC delegators.**
 
 **Core Node operators** are network participants who choose to host and maintain core network nodes (specialized DKG software running servers). Core Nodes store, validate, and make knowledge available to AI systems. They receive $TRAC rewards for this service. All Core Nodes together form a permissionless market of DKG services, competing for their share of network TRAC rewards.
 
@@ -24,14 +24,12 @@ Note that Core Node operators and node delegators are not distinct - you can be 
 Contrary to inflationary systems, TRAC staking is strictly utility-based, and rewards are generated through DKG usage via knowledge publishing fees.
 {% endhint %}
 
-#### How do delegators earn TRAC fees?
+## How do delegators earn TRAC fees?
 
-As knowledge publishers create Knowledge Assets on the DKG, they lock an appropriate amount of TRAC tokens in the DKG smart contracts. The TRAC amount offered has to be high enough to ensure that enough DKG Core Nodes will store it for a specific amount of time. The nodes then commit to storing the Knowledge Assets for a specific amount of time, measured in **30-day periods called epochs**.\
+As knowledge publishers create Knowledge Assets on the DKG, they lock an appropriate amount of TRAC tokens in the DKG smart contracts. The TRAC amount offered has to be high enough to ensure that enough DKG Core Nodes will store it for a specific amount of time. The nodes then commit to storing the Knowledge Assets for a specific amount of time, measured in **30-day periods called epochs**.
 
+At the end of each epoch, DKG nodes "prove" that they are providing DKG services to the DKG smart contracts, which in turn unlocks TRAC rewards initially locked by the knowledge publisher.&#x20;
 
-At the end of each epoch, DKG nodes "prove" that they are providing DKG services to the DKG smart contracts, which in turn unlocks  TRAC rewards initially locked by the knowledge publisher.&#x20;
-
-\
 Many Core Nodes can compete for the same TRAC reward on the basis of their total stake, node ask, and publishing factor. Node rewards are a function of 4 parameters in order of importance:
 
 1. **Node uptime & availability,** in positive correlation, as nodes need to prove their commitment to hosting the DKG by submitting proofs to the blockchain (through the new V8 random sampling proof system);
@@ -51,11 +49,11 @@ In order to introduce a level of predictability of network operations, withdrawi
 If you want to withdraw tokens in order to delegate to another node on the same network (blockchain) - you **do not** have to wait 28 days! [See here >](redelegating-stake.md)&#x20;
 {% endhint %}
 
-
-
 {% hint style="success" %}
 Delegated staking is a non-custodial system, so the Core Node operator has no access to the locked TRAC tokens at any time.
 {% endhint %}
+
+
 
 Each Core Node operator can also set an “**operator fee,**” which is a percentage of the TRAC rewards deducted each time when a node claims rewards from a Knowledge Asset. The remaining TRAC fee is then split proportionally to the share of staked tokens across all delegators.
 
@@ -66,7 +64,7 @@ Each Core Node operator can also set an “**operator fee,**” which is a perce
 * each delegator receives 450 TRAC (50% of the remaining 900 TRAC)
 {% endhint %}
 
-#### If you are running a Core Node
+## Delegating if you run a Core Node
 
 If you are running a DKG Core Node, you can delegate TRAC tokens to your node in the same way as others. It is recommended that you also delegate TRAC tokens, signaling your commitment to the network via economic stake - this provides a trust signal to other delegators.
 
@@ -74,8 +72,7 @@ To understand how to set up your operator fee, follow the instructions for Core 
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Depiction of delegating and withdrawing of TRAC from DKG smart contracts</p></figcaption></figure>
 
-\
-**Have questions?**
+## **Have questions?**
 
 Drop by our [Discord](https://discord.com/invite/xCaY7hvNwD) or [Telegram group](https://t.me/origintrail), and feel free to ask your questions there. Make sure to follow our official announcements, and stay safe!
 

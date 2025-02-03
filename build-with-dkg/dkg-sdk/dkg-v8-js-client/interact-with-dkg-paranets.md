@@ -25,13 +25,13 @@ layout:
 
 The DKG JavaScript SDK provides functionality for interacting with paranets on the OriginTrail Decentralized Knowledge Graph (DKG). This section of the SDK allows developers to create, manage, and utilize paranets effectively.
 
-### Setup and installation
+## Setup and installation
 
 To interact with paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.js SDK installed and properly configured.&#x20;
 
 Follow the general setup instructions for [installing dkg.js](./) and read more about paranets [in the following section](../../../dkg-v6-previous-version/autonomous-ai-paranets/).
 
-#### Creating a paranet
+### Creating a paranet
 
 Before creating a paranet, you must first create a Knowledge Asset (KA) on the DKG that will represent the paranet. To create a Knowledge Asset on the DKG, refer to [the following page](./).
 
@@ -59,7 +59,7 @@ In this example:
 
 After the paranet is successfully created, the paranet UAL can be used to interact with it. This includes deploying services within the paranet, managing incentives, and claiming rewards associated with the paranet's operations.
 
-#### Adding services to a paranet
+### Adding services to a paranet
 
 Enhance the capabilities of your paranet by integrating new services. The `addServices` function allows you to add both on-chain and off-chain services to your paranet. These services can range from AI agents and data oracles to decentralized knowledge interfaces and more.
 
@@ -89,7 +89,7 @@ In this example:
 
 By integrating and managing services, paranet operators can expand the capabilities of their paranet, providing a robust infrastructure for decentralized applications and AI-driven services.
 
-### Knowledge mining for open paranets
+## Knowledge mining for open paranets
 
 Paranets allow users to leverage collective intelligence by contributing their Knowledge Assets, enhancing the overall utility and value of the network. There are two primary ways to add a Knowledge Asset to a paranet:
 
@@ -108,7 +108,7 @@ await DkgClient.asset.submitToParanet(kaUAL, paranetUAL);
 
 Adding Knowledge Assets to paranets can be done directly during the creation process or by submitting existing assets. This flexibility allows for robust management and contribution of knowledge, enhancing the collective intelligence and functionality of the paranet.
 
-### Checking and claiming rewards
+## Checking and claiming rewards
 
 Participants in a paranet can earn rewards for their various roles and contributions, such as knowledge mining, voting on proposals, or operating the paranet. The dkg.js library provides functions to check if an address has a specific role within the paranet and to claim rewards associated with that role.
 
@@ -163,7 +163,7 @@ By following these steps, you can effectively check your role and claim the rewa
 
 This system ensures that all participants are fairly compensated for their efforts, promoting a robust and active community within the paranet.
 
-### Updating claimable rewards
+## Updating claimable rewards
 
 In some cases, you may have already mined a Knowledge Asset to a specific paranet but decided to update the Knowledge Asset. By doing so, you become eligible for additional NEURO rewards.&#x20;
 
@@ -179,7 +179,7 @@ console.log('Claimable rewards updated successfully!');
 
 This function only updates the claimable rewards based on your latest contributions. To actually claim the rewards, use the respective claiming functions, such as `claimMinerReward`, `claimVoterReward`, or `claimOperatorReward`.
 
-### Performing SPARQL queries on a specific paranet
+## Performing SPARQL queries on a specific paranet
 
 The DKG enables users to perform SPARQL queries on specific paranets. By specifying a paranet, users can target their queries to retrieve data related to that paranet. This can be particularly useful when working with domain-specific data or services within a paranet.
 
@@ -221,7 +221,7 @@ console.log(queryResult.data);
 
 By querying specific paranets, you can leverage the powerful capabilities of the DKG to interact with domain-specific Knowledge Assets and services, ensuring that your queries are targeted and efficient. This makes it easier to work with complex data structures and gain insights from your paranet's Knowledge Assets.
 
-#### Federated SPARQL queries
+### Federated SPARQL queries
 
 Federated SPARQL queries allow users to execute queries across multiple knowledge graphs or paranets simultaneously. In the context of the DKG, a node might sync with multiple paranets. Federated queries allow you to query multiple paranets within a single SPARQL query, accessing data from each specified paranet and merging the results.
 

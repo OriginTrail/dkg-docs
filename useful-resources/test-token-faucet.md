@@ -1,13 +1,13 @@
 ---
-description: Learn how to get testnet tokens from the OriginTrail Discord faucet bot
 icon: droplet
+description: Learn how to get testnet tokens from the OriginTrail Discord faucet bot
 ---
 
-# Faucet
+# Test token faucet
 
-The OriginTrail Decentralized Knowledge Graph (DKG) provides a testing environment on the NeuroWeb testnet, Gnosis Chiado, and Base Sepolia blockchains. To perform various blockchain operations on these testnets, users need both test TRAC on the chosen network and the test utility token of their chosen blockchain for gas.
+The OriginTrail Decentralized Knowledge Graph (DKG) provides a testing environment on the NeuroWeb testnet, Gnosis Chiado, and Base Sepolia blockchains. To perform various blockchain operations on these testnets, users need both **test TRAC on the chosen network** and the **test utility token** of their chosen blockchain for gas.
 
-The **OriginTrail faucet service**, which provides test tokens, is deployed on the [**OriginTrail Discord server**](https://discord.gg/xCaY7hvNwD) and located in the **#faucet-bot** channel.
+The **OriginTrail faucet service**, which provides test tokens, is deployed on the [**OriginTrail Discord server**](https://discord.com/invite/WaeSb5Mxj6) and located in the [**#faucet-bot**](https://discord.com/invite/WaeSb5Mxj6) channel.
 
 To view the available faucet options, run the following command in the chat of the **#faucet-bot** channel:
 
@@ -15,7 +15,7 @@ To view the available faucet options, run the following command in the chat of t
 !help
 ```
 
-The output will look like shown below:
+The output will look like the one shown below:
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-01-29 at 13.34.32.png" alt=""><figcaption><p>Available Faucet commands</p></figcaption></figure>
 
@@ -31,5 +31,5 @@ Currently, depending on your requirements, you can request tokens for the follow
 **Base Sepolia:** Please refer to the official Base [documentation](https://docs.base.org/docs/tools/network-faucets/) for instructions on acquiring test ETH as gas for the Base Sepolia blockchain.
 {% endhint %}
 
-If you experience any issues with the faucet bot, please tag the core developers in one of the Discord channels.
+If you experience any issues with the Faucet Bot, please tag the core developers in one of the Discord channels.
 

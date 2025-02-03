@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Initial Paranet Offerings (IPOs)
 
 Initial Paranet Offerings (IPO) are introduced as **a means of a public launch of a paranet, with a collection of Knowledge Assets and accompanying incentivization structure proposed and voted upon via the NeuroWeb governance mechanism**.&#x20;
@@ -15,7 +19,7 @@ The paranets feature is initially rolled out on Neuroweb blockchain. Other DKG e
 To launch your Initial Paranet Offering you are expected to:
 
 1. **Share your initial AI Paranet idea publicly** with the Knowledge Miner community (e.g. in [Discord](https://discord.gg/3BrQDvHpdc) paranets channel)
-2. **Specify your paranet** using the provided [IPO template](https://docs.google.com/document/d/1QzKpH\_ex-U8mxh-IgwTjijEe3n6vwRVAhG599siapQQ/edit#heading=h.61lymw4v18qp) to prepare it for the NeuroWeb governance proposal. Request a custom Discord channel creation for your paranet via the #paranets channel.&#x20;
+2. **Specify your paranet** using the provided [IPO template](https://docs.google.com/document/d/1QzKpH_ex-U8mxh-IgwTjijEe3n6vwRVAhG599siapQQ/edit#heading=h.61lymw4v18qp) to prepare it for the NeuroWeb governance proposal. Request a custom Discord channel creation for your paranet via the #paranets channel.&#x20;
 3. Introduce your paranet topic, knowledge assets and AI services to the community. To ensure the required community support, we recommend sharing your proposal widely:
    * Sharing it on X (Twitter)
    * Posting on [Discord](https://discord.com/invite/qRc4xHpFnN)&#x20;

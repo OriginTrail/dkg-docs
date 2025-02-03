@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Launching your IPO
 
 This page assumes you have completed the previous steps:

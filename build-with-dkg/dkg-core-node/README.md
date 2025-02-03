@@ -1,10 +1,10 @@
 ---
-icon: share-nodes
+icon: circle-nodes
 ---
 
 # DKG Core Node
 
-DKG Core Nodes form the backbone of the Decentralized Knowledge Graph (DKG). They host the public network and ensure its security and high availability. These nodes are incentivized to maintain uptime and play a crucial role in the network's stability and functionality.
+DKG Core Nodes form the backbone of the OriginTrail Decentralized Knowledge Graph (DKG). They host the public network and ensure its security and high availability. These nodes are incentivized to maintain uptime and play a crucial role in the network's stability and functionality.
 
 ### What are DKG Core Nodes?
 

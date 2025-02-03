@@ -1,12 +1,12 @@
 # Custom DKG Python agent
 
-This guide explains how to build a custom agent implementation using the [dkg.py](../../dkg-v6-previous-version/dkg-sdk/dkg-v6-py-client/) SDK. AI agents can leverage the Decentralized Knowledge Graph (DKG) to create knowledge-graph-based, collective, persistent memory for individual agents or agentic swarms
+This guide explains how to build a custom agent implementation using the [dkg.py](../../dkg-v6-previous-version/dkg-sdk/dkg-v6-py-client/) SDK. AI agents can leverage the Decentralized Knowledge Graph (DKG) to create knowledge-graph-based, collective, persistent memory for individual agents or agentic swarms.
 
-### Overview of dkg.py
+## Overview of dkg.py
 
 dkg.py is a Python library for interacting with the DKG. It enables the creation, querying, and retrieval of structured knowledge assets stored in a decentralized and verifiable manner.
 
-#### Key Operations:
+### Key Operations:
 
 1. Create: Publish a knowledge asset to the DKG.
 2. Query: Search for knowledge assets using structured queries.
@@ -14,9 +14,9 @@ dkg.py is a Python library for interacting with the DKG. It enables the creation
 
 Set up DKG.py as per the instructions [here](../dkg-sdk/dkg-v8-py-client/).
 
-**Use Case: AI Agent Memory**
+## **Use Case: AI Agent Memory**
 
-#### Creating Memory:
+### Creating Memory
 
 AI agents can store structured knowledge or memory by creating knowledge assets in the DKG. For example, an agent can record user interactions or task results:
 
@@ -98,7 +98,7 @@ response = dkg.asset.create(memory_asset)
 print("Memory Asset UAL:", response["UAL"])
 ```
 
-#### Querying Memory:
+### Querying Memory
 
 Retrieve specific memories using queries based on metadata or content:
 
@@ -136,7 +136,7 @@ results = dkg.graph.query(query)
 print("Retrieved Memories:", results)
 ```
 
-#### Retrieving Specific Memories:
+### Retrieving Specific Memories
 
 Use the get operation to fetch detailed information about a memory:
 
@@ -146,10 +146,10 @@ print("Memory Details:", response)
 
 ```
 
-### Conclusion
+## Conclusion
 
 Using dkg.py, AI agents can create persistent, verifiable, and decentralized memory. This functionality enables advanced use cases like long-term interaction tracking, knowledge storage, and retrieval. Start building smarter AI agents with dkg.py today!
 
-For further assistance, refer to the rest of the documentation or contact the development team.
+For further assistance, refer to the rest of the documentation or contact the core development team.
 
 \

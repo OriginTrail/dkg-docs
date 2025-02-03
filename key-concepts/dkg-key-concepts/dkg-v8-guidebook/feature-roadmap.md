@@ -2,7 +2,7 @@
 
 ## Release timeline
 
-The V8 deployment is a major update executed as a direct upgrade on the existing OriginTrail V6 network. The update process will therefore require several migrations to be executed. To successfully complete all the necessary activities, the V8 launch will be executed through an “**Upgrade Period**”, which will last for approximately 1 week. During the upgrade period, all relevant DKG components will be updated (nodes, blockchain contracts, Staking Dashboard, DKG Explorer, and others). The update will be executed on all three connected blockchains - Neuroweb, Gnosis, and Base.&#x20;
+The V8 deployment is a major update executed as a direct upgrade on the existing OriginTrail V6 network. The update process will, therefore, require several migrations to be executed. To successfully complete all the necessary activities, the V8 launch will be executed through an “**Upgrade Period**”, which will last for approximately 1 week. During the Upgrade Period, all relevant DKG components will be updated (nodes, blockchain contracts, Staking Dashboard, DKG Explorer, and others). The update will be executed on all three connected blockchains - NeuroWeb, Gnosis, and Base.&#x20;
 
 
 
@@ -20,17 +20,17 @@ The pending publishing rewards from the V6 period will also be made available th
 
 Features and updates expected for the Tuning period  (V8.0.x)
 
-<table><thead><tr><th width="182">Feature</th><th width="246">Description</th><th width="180">Release</th><th>ETA</th></tr></thead><tbody><tr><td>Paranets support</td><td>Introducing V8 paranets and re-enabling existing ones</td><td>V8.0.1</td><td>mid-January 2025</td></tr><tr><td>Tuning release</td><td>Updates discovered during the Tuning Period, backwards compatibility</td><td>V8.0.2</td><td>January 2025</td></tr><tr><td>Tuning release 2</td><td>Updates discovered during the Tuning Period, updating V8 knowledge assets becomes operational</td><td>V8.0.3</td><td>January 2025</td></tr></tbody></table>
+<table><thead><tr><th width="182">Feature</th><th width="246">Description</th><th width="180">Release</th><th>ETA</th></tr></thead><tbody><tr><td>Paranets support</td><td>Introducing V8 paranets and re-enabling existing ones</td><td>V8.0.1</td><td>mid-January 2025</td></tr><tr><td>Tuning release</td><td>Updates discovered during the Tuning Period, backwards compatibility</td><td>V8.0.2</td><td>January 2025</td></tr><tr><td>Tuning release 2</td><td>Updates discovered during the Tuning Period, updating V8 Knowledge Assets becomes operational</td><td>V8.0.3</td><td>January 2025</td></tr></tbody></table>
 
-### Backwards compatibility
+### Backward compatibility
 
-Due to the changes in Knowledge Assets V2 and protocol updates, the V8.0 network is unfortunately not fully backwards compatible with V6 clients, however the backwards compatibility will be extended in the coming minor releases as well.  **If you need any assistance with your V6 applications or migrating to V8,** [**contact us (Core developers) directly in Discord**](https://discord.gg/xCaY7hvNwD) **and we will gladly assist.**&#x20;
+Due to changes in Knowledge Assets V2 and protocol updates, the V8.0 network is unfortunately not fully backward compatible with V6 clients. However, backward compatibility will be extended in the coming minor releases as well.  **If you need any assistance with your V6 applications or migrating to V8,** [**contact the core developers in Discord directly**](https://discord.gg/xCaY7hvNwD)**, and we will gladly assist.**&#x20;
 
-We intend to expand the level of backwards compatibility over the V8.0 releases.
+We intend to expand the level of backward compatibility over the V8.0 releases.
 
 ## Post Tuning period
 
-The Tuning Period ends with **V8.1**, which will fully introduce the **Random Sampling** features and complete the scalability updates. From this moment on the Core Nodes will start collecting rewards, and the system will be further tuned for different blockchains. More details on the Random Sampling features will be published in the documentation in due time.
+The Tuning Period ends with **V8.1**, which fully introduces the **Random Sampling** features and completes the scalability updates. From this point on, the Core Nodes will start collecting rewards, and the system will be further tuned for different blockchains. More details on the Random Sampling features will be published in the documentation in due time.
 
 Features and updates expected after the Tuning period
 

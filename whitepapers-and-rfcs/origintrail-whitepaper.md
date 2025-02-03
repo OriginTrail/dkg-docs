@@ -1,3 +1,7 @@
+---
+icon: file-lines
+---
+
 # OriginTrail whitepaper
 
-Explore [the OriginTrail Whitepaper](https://origintrail.io/ecosystem/whitepaper) to learn more about a vision for the future of Artificial Intelligence through the concept of a Verifiable Internet for AI, leveraging synergies of crypto, internet, and AI technologies.
+Explore [the OriginTrail Whitepaper](https://origintrail.io/ecosystem/whitepaper) to learn more about a vision for the future of artificial intelligence (AI) through the concept of a verifiable Internet for AI, leveraging the synergies of crypto, internet, and AI technologies.

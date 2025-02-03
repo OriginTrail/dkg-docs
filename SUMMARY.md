@@ -38,10 +38,10 @@
 * [DKG Edge Node](build-with-dkg/dkg-edge-node/README.md)
   * [DKG Edge Node architecture](build-with-dkg/dkg-edge-node/dkg-edge-node-architecture.md)
   * [Setup a boilerplate Edge Node](build-with-dkg/dkg-edge-node/setup-a-boilerplate-edge-node.md)
-  * [Customize the Edge Node & Build your project](build-with-dkg/dkg-edge-node/customize-the-edge-node-and-build-your-project.md)
-  * [Deploy your Edge Node based project](build-with-dkg/dkg-edge-node/deploy-your-edge-node-based-project.md)
+  * [Customize the Edge Node & build your project](build-with-dkg/dkg-edge-node/customize-the-edge-node-and-build-your-project.md)
+  * [Deploy your Edge-Node-based project](build-with-dkg/dkg-edge-node/deploy-your-edge-node-based-project.md)
   * [DKG Edge Node API documentation](build-with-dkg/dkg-edge-node/dkg-edge-node-api-documentation.md)
-  * [DKG Edge Node Inception Program](build-with-dkg/dkg-edge-node/dkg-edge-node-inception-program.md)
+  * [DKG Edge Node inception program](build-with-dkg/dkg-edge-node/dkg-edge-node-inception-program.md)
 * [DKG Core Node](build-with-dkg/dkg-core-node/README.md)
   * [Upgrading from V6 to V8](build-with-dkg/dkg-core-node/upgrading-from-v6-to-v8.md)
   * [Run a V8 Core Node on testnet](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-testnet/README.md)
@@ -49,29 +49,31 @@
     * [V8 DKG Core Node installation](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-testnet/v8-dkg-core-node-installation.md)
   * [Run a V8 Core Node on mainnet](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-mainnet/README.md)
     * [Preparation for V8 DKG Core Node deployment](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-mainnet/preparation-for-v8-dkg-core-node-deployment.md)
-    * [V8 DKG Core node installation](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-mainnet/v8-dkg-core-node-installation.md)
+    * [V8 DKG Core Node installation](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-mainnet/v8-dkg-core-node-installation.md)
 * [DKG V8 update guidebook](build-with-dkg/dkg-v8-update-guidebook.md)
 
 ## Delegated staking
 
-* [Delegated Staking Introduction](delegated-staking/delegated-staking-introduction/README.md)
+* [Delegated Staking - Introduction](delegated-staking/delegated-staking-introduction/README.md)
   * [Step-by-step staking](delegated-staking/delegated-staking-introduction/step-by-step-staking.md)
-  * [Redelegating Stake](delegated-staking/delegated-staking-introduction/redelegating-stake.md)
+  * [Redelegating stake](delegated-staking/delegated-staking-introduction/redelegating-stake.md)
 
 ## Integrated Blockchains
 
-* [Base blockchain](integrated-blockchains/base-blockchain.md)
+* [Base blockchain](integrated-blockchains/base-blockchain/README.md)
+  * [Connect to Base](integrated-blockchains/base-blockchain/connect-to-base.md)
+* [Gnosis chain](integrated-blockchains/gnosis-chain/README.md)
+  * [Connect to Gnosis](integrated-blockchains/gnosis-chain/connect-to-gnosis.md)
 * [NeuroWeb](integrated-blockchains/neuroweb.md)
-* [Gnosis chain](integrated-blockchains/gnosis-chain.md)
-* [Teleport instructions](integrated-blockchains/teleport-instructions.md)
+* [Teleport instructions - NeuroWeb](integrated-blockchains/teleport-instructions-neuroweb.md)
 * [Bridging to Moonbeam](integrated-blockchains/bridging-to-moonbeam.md)
 * [Deployed smart contracts](integrated-blockchains/deployed-smart-contracts.md)
 
 ## Bounties & rewards
 
-* [Ongoing Bug bounty](bounties-and-rewards/ongoing-bug-bounty/README.md)
-  * [Staking security bounty](bounties-and-rewards/ongoing-bug-bounty/staking-security-bounty.md)
-  * [Code contributions & bug bounty](bounties-and-rewards/ongoing-bug-bounty/code-contributions-and-bug-bounty.md)
+* [General bug bounty](bounties-and-rewards/general-bug-bounty/README.md)
+  * [Staking security bounty](bounties-and-rewards/general-bug-bounty/staking-security-bounty.md)
+* [Code contributions & V8 bug bounty](bounties-and-rewards/code-contributions-and-v8-bug-bounty.md)
 
 ## Whitepapers & RFCs
 
@@ -82,17 +84,17 @@
 
 * [Public Nodes](useful-resources/public-nodes.md)
 * [Tutorials](useful-resources/tutorials.md)
-* [Faucet](useful-resources/faucet.md)
+* [Test token faucet](useful-resources/test-token-faucet.md)
 * [Development principles](useful-resources/development-principles.md)
 * [Community created resources](useful-resources/community-resources.md)
 * [Linked data & knowledge graphs](useful-resources/kg.md)
 * [Available networks (testnets, mainnet)](useful-resources/networks.md)
-* [OT Node Implementation details](useful-resources/ot-node-implementation-details/README.md)
-  * [Modules](useful-resources/ot-node-implementation-details/modules.md)
-  * [Command Executor](useful-resources/ot-node-implementation-details/command-executor.md)
-* [Contribution Guidelines](useful-resources/contribute/README.md)
+* [OT Node Engine implementation details](useful-resources/ot-node-engine-implementation-details/README.md)
+  * [Modules](useful-resources/ot-node-engine-implementation-details/modules.md)
+  * [Command Executor](useful-resources/ot-node-engine-implementation-details/command-executor.md)
+* [Contribution guidelines](useful-resources/contribute/README.md)
   * [Guidelines for automated test contributions](useful-resources/contribute/guidelines-for-automated-test-contributions.md)
-* [Explore OriginTrail](useful-resources/explore-origintrail.md)
+* [Explore the OriginTrail ecosystem](useful-resources/explore-the-origintrail-ecosystem.md)
 
 ## DKG V6 (previous version)
 
@@ -119,9 +121,7 @@
   * [Running a gateway node](dkg-v6-previous-version/node-setup-instructions/running-a-gateway-node.md)
   * [Sync a DKG Paranet](dkg-v6-previous-version/node-setup-instructions/sync-a-dkg-paranet.md)
   * [Houston - OriginTrail node command center](dkg-v6-previous-version/node-setup-instructions/houston-origintrail-node-command-center.md)
-  * [🔗 Switch DKG node to multichain](dkg-v6-previous-version/node-setup-instructions/switch-dkg-node-to-multichain/README.md)
-    * [Connect to Base](dkg-v6-previous-version/node-setup-instructions/switch-dkg-node-to-multichain/connect-to-base.md)
-    * [Connect to Gnosis](dkg-v6-previous-version/node-setup-instructions/switch-dkg-node-to-multichain/connect-to-gnosis.md)
+  * [🔗 Switch DKG node to multichain](dkg-v6-previous-version/node-setup-instructions/switch-dkg-node-to-multichain.md)
   * [Useful resources](dkg-v6-previous-version/node-setup-instructions/useful-resources/README.md)
     * [Migrating your V5 node to V6](dkg-v6-previous-version/node-setup-instructions/useful-resources/migrating-your-v5-node-to-v6.md)
     * [Node keys explained](dkg-v6-previous-version/node-setup-instructions/useful-resources/node-keys-explained.md)

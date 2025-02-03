@@ -1,5 +1,5 @@
 ---
-icon: circle-nodes
+icon: diagram-project
 description: >-
   The platform for building collective neuro-symbolic AI. Start building with
   the DKG Edge Node beta version
@@ -36,10 +36,7 @@ Edge Nodes enable running decentralized AI services on the "network edge", provi
 * **Customizable and extendable user interface (UI) elements for your projects, such as paranet UIs,** on the basis of the Edge Node codebase.
 
 {% hint style="info" %}
-Though currently in Beta, the individual DKG Edge Node components have been successfully deployed in various productive environments by builders on the DKG V6 mainnet. We expect to reach a productive release by the end of 2024. \
-
-
-As an early builder, you can additionally benefit from the [DKG Edge Node inception program](dkg-edge-node-inception-program.md) with up to 100k TRAC tokens for your publishing costs on the DKG mainnet.&#x20;
+As an early builder, you can benefit from the [DKG Edge Node inception program](dkg-edge-node-inception-program.md) with up to 100k TRAC tokens for your publishing costs on the DKG mainnet.&#x20;
 {% endhint %}
 
 {% hint style="warning" %}
@@ -52,10 +49,10 @@ Feel free to contribute to these docs directly through [GitHub](https://github.c
 
 <table data-view="cards" data-full-width="false"><thead><tr><th></th></tr></thead><tbody><tr><td><a href="dkg-edge-node-architecture.md">Step 1: Learn about the Edge Node internals (architecture)</a></td></tr><tr><td><a href="setup-a-boilerplate-edge-node.md">Step 2: Setup a boilerplate Edge Node project</a></td></tr><tr><td><a href="customize-the-edge-node-and-build-your-project.md">Step 3: Customize the Edge Node to build your project</a></td></tr><tr><td><a href="deploy-your-edge-node-based-project.md">Step 4: Deploy to your environment</a></td></tr></tbody></table>
 
-### What's the difference between a Core node and an Edge node?
+### What's the difference between a Core Node and an Edge Node?
 
-The OriginTrail DKG V8 network is comprised of two types of DKG nodes - **Core nodes**, which form the DKG network core and host the DKG, and **Edge Nodes** which run on edge devices and connect to network core. The current beta version is designed to operate on edge devices running Linux and MacOS, with future support for a wide range of edge devices such as mobile phones, wearables, IoT devices, and generally enterprise environments. This enables large volumes of sensitive data to safely enter the AI age while maintaining privacy.
+The OriginTrail DKG V8 network is comprised of two types of DKG nodes - **Core Nodes**, which form the DKG network core and host the DKG, and **Edge Nodes,** which run on edge devices and connect to the network core. The current beta version is designed to operate on edge devices running Linux and MacOS, with future support for a wide range of edge devices such as mobile phones, wearables, IoT devices, and generally enterprise environments. This enables large volumes of sensitive data to safely enter the AI age while maintaining privacy.
 
-The DKG Edge Node ensures that data remains protected on the device, giving owners full control over how their data is shared. This data becomes part of the global DKG, with precise access management permissions controlled by the data owner. Through decentralized Retrieval Augmented Generation (dRAG), AI applications can access both private and public DKG data, with the owner’s permission, to power privacy-preserving AI solutions.
+The DKG Edge Node ensures that data remains protected on the device, giving owners full control over how their data is shared. This data becomes part of the global DKG, with precise access management permissions controlled by the data owner. Through Decentralized Retrieval Augmented Generation (dRAG), AI applications can access both private and public DKG data, with the owner’s permission, to power privacy-preserving AI solutions.
 
 With the ability to run AI applications directly on edge devices, DKG Edge Nodes enable secure and decentralized data usage on the growing number of network edge devices. The DKG Edge Node also plays a key role in expanding the DKG into a large-scale decentralized physical infrastructure network (DePIN).

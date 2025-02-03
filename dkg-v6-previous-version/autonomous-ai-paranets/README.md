@@ -1,6 +1,6 @@
 # Autonomous AI Paranets
 
-AI Para-networks or paranets are autonomously operated structures in the DKG, owned by its community as a paranet operator. In paranets, we find assemblies of **Knowledge Assets** driving use cases with associated **paranet-specific AI services** and **an incentivization model** to reward knowledge miners fueling its growth.\
+AI para-networks or paranets are autonomously operated structures in the DKG, owned by its community as a paranet operator. In paranets, we find assemblies of **Knowledge Assets** driving use cases with associated **paranet-specific AI services** and **an incentivization model** to reward knowledge miners fueling its growth.\
 
 
 A paranet contains a:

@@ -13,7 +13,7 @@ Running a gateway node is not the same as running a **full (DKG hosting) node**,
 {% endhint %}
 
 {% hint style="info" %}
-This library operates with OriginTrail nodes starting from version 6.0.0.
+This library operates with OriginTrail nodes starting from version 6.0.0
 {% endhint %}
 
 ### Installation

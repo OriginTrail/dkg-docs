@@ -4,11 +4,11 @@ description: How to setup a local and shared development environment
 
 # Development environment setup
 
-### Quick Start
+## Quick Start
 
 These instructions are made for macOS and Linux.
 
-#### Prerequisites
+### Prerequisites
 
 * An installed and running **Blazegraph**
   * In order to download and run Blazegraph, please visit their [official website](https://blazegraph.com/).
@@ -54,12 +54,12 @@ RPC_ENDPOINT_BC1=http://127.0.0.1:8545
 RPC_ENDPOINT_BC2=http://127.0.0.1:9545
 ```
 
-To start the local DKG network, run the **local network setup** script to install multiple network engines in the local environment. To ensure the stability of operation, it is recommended to run at least 5 network engines (1 bootstrap and 4 subsequent network engines).
+To start the local DKG network, run the **local network setup** script to install multiple node engines in the local environment. To ensure stability of operation, it is recommended to run at least 5 node engines (1 bootstrap and 4 subsequent node engines).
 
 {% hint style="warning" %}
 The scripts below only work for macOS and Linux (or Windows WSL).&#x20;
 
-If you need help with the setup, contact the team on [Discord](https://discord.com/invite/FCgYk2S).
+If you need help with the setup, contact the core development team on [Discord](https://discord.com/invite/FCgYk2S).
 {% endhint %}
 
 \
@@ -75,9 +75,9 @@ For running the local DKG network on **Linux**, run the following command:
 ./tools/local-network-setup/setup-linux-environment.sh --nodes=5
 ```
 
-## Running network engines on the DKG testnet
+## Running node engines on the DKG testnet
 
-For a shared development environment, we recommend deploying DKG testnet network engines - instructions can be found [here](https://docs.origintrail.io/dkg-v8-upcoming-version/run-a-v8-core-node-on-testnet).
+For a shared development environment, we recommend deploying DKG testnet node engines - instructions can be found [here](../dkg-core-node/run-a-v8-core-node-on-testnet/).
 
 
 

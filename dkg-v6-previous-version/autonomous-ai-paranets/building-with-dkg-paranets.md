@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Building with DKG paranets
 
 Paranets are like "virtual" knowledge graphs on the OriginTrail DKG and building with them is quite similar to building on the DKG in general. Paranets enable you to however contain your operations services on these "virtual" graphs, e.g. querying a specific paranet with SPARQL, or adding a knowledge asset to a specific paranet.

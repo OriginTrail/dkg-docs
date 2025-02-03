@@ -4,13 +4,13 @@ description: The engine behind the OT-Node application.
 
 # Command Executor
 
-### Introduction
+## Introduction
 
-The Command Executor is a component of the ot-node implementation which uses an approach similar to the event sourcing pattern. Essentially it allows developers to organize functionalities (code) in "commands" which can be executed in sequence to implement the protocol features, as well as enable system recovery in case of the node stopping or restarting for some reason.
+The Command Executor is a component of the ot-node implementation, which uses an approach similar to the event sourcing pattern. Essentially, it allows developers to organize functionalities (code) in "commands" that can be executed in sequence to implement the protocol features. It also enables system recovery in case of the node stopping or restarting for some reason.
 
-### Commands
+## Commands
 
-The Command Executor splits business logic into **commands**. A command is a general abstraction with many features that can be enabled. The Command interface is described in the table below.
+The Command Executor splits business logic into **commands**. A command is a general abstraction with many features that can be enabled. The Command Interface is described in the table below.
 
 | **Method**                                                          | **Description**                                                                                                                                                                                                                                            |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -23,16 +23,16 @@ The Command Executor splits business logic into **commands**. A command is a gen
 | continueSequence(data, sequence, opts)                              | Makes command from the sequence and continues the execution                                                                                                                                                                                                |
 | async handleError(operationId, errorMessage, errorName, markFailed) | Error handler for command. If an error pops up during the execution of a command, operation status is set to **FAILED** with the appropriate operation error message. List of operation errors can be found in the **\*/src/constants/constants.js** file. |
 
-Table 1.1 Command interface
+_Table 1.1 Command interface_
 
-Creating a command is done by extending this abstract class called simply **Command**, meaning it inherits the default behaviour of all the methods and can override them with specific behaviour.
+Creating a command is done by extending an abstract class called simply **Command.** This means it inherits the default behavior of all the methods and can override them with specific behavior.
 
 The core command method is the **execute** method. This method executes the code of the command and returns one of the three results:
 
-* **this.continueSequence(data,sequence,opts)** - A list of commands taken from the execution context that will be executed after the current command is finished successfully.&#x20;
+* **this.continueSequence(data,sequence,opts)** — A list of commands taken from the execution context that will be executed after the current command is finished successfully.&#x20;
   * Returns **Command.empty()** if the current command is the last one in the sequence.&#x20;
-* **Command.repeat()** - Command object with the **repeat** flag set to **true.** That means that the command will be executed once again.
-* **Command.retry()** - Command object with the **retry** flag set to **true**. That means that the command will be executed again and the retried counter will be decreased.
+* **Command.repeat()** — Command object with the **repeat** flag set to **true.** That means that the command will be executed once again.
+* **Command.retry()** — Command object with the **retry** flag set to **true**. That means that the command will be executed again, and the retried counter will be decreased.
 
 Command data describes everything that is related to the specific command. This is described in the table below.
 
@@ -53,13 +53,13 @@ Command data describes everything that is related to the specific command. This 
 | retries       | If the command fails this is the number of times the command can retry to execute again                                            |
 | sequence      | Command can carry information about the future commands that can be executed after successful completion (chain of commands)       |
 
-Table 1.2 Command data parameters
+_Table 1.2 Command data parameters_
 
-### Command Executor and dependency injection
+## Command Executor and dependency injection
 
-Command executor is initialized on ot-node start. Commands are stored in the **\*/src/commands** directory. Commands will be injected into [Awilix](https://www.npmjs.com/package/awilix) automatically. The naming convention of the command is in camel case and the name of the file where the command is described by using slashes(kebab case). In the following chapter we will create a simple command called `PublishStartedCommand`.&#x20;
+Command executor is initialized on ot-node start. Commands are stored in the **\*/src/commands** directory. Commands will be injected into [Awilix](https://www.npmjs.com/package/awilix) automatically. The naming convention of the command is in camel case, and the name of the file where the command is described by using slashes(kebab case). In the following section, we will create a simple command called `PublishStartedCommand`.&#x20;
 
-#### PublishStartedCommand
+### PublishStartedCommand
 
 Let’s create a simple `PublishStartedCommand` and call it in`handleHttpApiPublishRequest` controller method that handles the asset publishing request.
 
@@ -137,9 +137,9 @@ async handleHttpApiPublishRequest(req, res) {
 }
 ```
 
-This is the simplest command that logs the **name** given in the data parameter. After this command is finished, command executor continues with the next command in the sequence,  in this case it continues with the execution of `validateAssertionCommand` and `networkPublishCommand`.&#x20;
+This is the simplest command that logs the **name** given in the data parameter. After this command is finished, the Command Executor continues with the next command in the sequence. In this case, it continues with the execution of `validateAssertionCommand` and `networkPublishCommand`.&#x20;
 
-If we want to return some new command or list of commands, the return statement will look like in this
+If we want to return some new command or list of commands, the return statement will look like this:
 
 ```javascript
 return {
@@ -155,7 +155,7 @@ return {
 }
 ```
 
-In order to make this new command repetitive and add a delay for example, we would add these parameters to the command. The code snippet will look like in this
+In order to make this new command repetitive and add a delay for example, we would add these parameters to the command. The code snippet will look like this:
 
 ```javascript
 return {
@@ -173,9 +173,9 @@ return {
 }
 ```
 
-### Command Executor API
+## Command Executor API
 
-Command Executor API is simple and it looks like this:
+Command Executor API is simple, and it looks like this:
 
 ```javascript
 /**
@@ -205,7 +205,7 @@ async add(addCommand, addDelay = 0, insert = true) {...}
 async replay() {...}
 ```
 
-One of the key methods of the API is **add()** which is responsible for adding new commands to the array of commands for command-executor to carry out. Such a call would look like this:
+One of the key methods of the API is **add(),** which is responsible for adding new commands to the array of commands for command-executor to carry out. Such a call would look like this:
 
 ```javascript
 await this.commandExecutor.add({
@@ -218,6 +218,6 @@ await this.commandExecutor.add({
 
 The **start()** command starts the executor and all the repetitive commands listed in the **constants.PERMANENT\_COMMANDS**. Those commands will be executed permanently throughout the node execution.
 
-### Need help with command executor?
+### Need help with the Command Executor?
 
-Jump into our [Discord](https://discordapp.com/invite/FCgYk2S) and someone from the OriginTrail Community of developers will gladly help!
+Jump into our [Discord](https://discord.gg/xCaY7hvNwD), and someone from the OriginTrail community of developers will gladly help!
