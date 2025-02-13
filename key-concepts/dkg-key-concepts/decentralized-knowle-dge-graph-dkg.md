@@ -8,6 +8,10 @@ OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data str
 
 As a builder, you can create **collaborative knowledge graphs** using DKG paranets, incentivize the growth of your knowledge graph with Initial Paranet Offerings (IPOs), with a combination of public and private (and hybrid) [Knowledge Assets](https://origintrail.io/products/knowledge-assets), and use them within an ecosystem of composable services on multiple blockchains.
 
+In hopes of a better understanding of DKG, the analogy can be compared to traditional centralized SQL solutions like so.
+
+<table><thead><tr><th>DKG</th><th>SQL Server</th><th data-hidden></th></tr></thead><tbody><tr><td>Paranet</td><td>Database</td><td></td></tr><tr><td>Knowledge collection</td><td>Table</td><td></td></tr><tr><td>Knowledge asset</td><td>Individual record (row)</td><td></td></tr><tr><td>Triplets</td><td>Values (columns)</td><td></td></tr></tbody></table>
+
 OriginTrail DKG strongly focuses on interoperability through standards such as semantic web standards (RDF, SPARQL, JSON-LD, etc.), Verifiable Credentials and Decentralized Identifiers (DIDs) by W3C, as well as GS1 standards such as the [Digital Link](https://www.gs1.org/standards/gs1-digital-link) and [EPCIS 2.0](https://www.gs1au.org/standards/epcis) for real-world asset tracking (and to which OriginTrail core developers have actively contributed to).
 
 OriginTrail DKG is multi-chain, integrating with Ethereum and Polkadot ecosystem blockchains such as Gnosis, NeuroWeb, Base, and others. It is fueled by the TRAC utility token, which is used to manage relations between DKG network participants.&#x20;
