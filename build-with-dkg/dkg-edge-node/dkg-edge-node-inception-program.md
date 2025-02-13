@@ -12,7 +12,7 @@ Ready to apply? Here's a clear roadmap to help you get started:
 
 * **Step 1**: Explore and prototype locally
   * **Begin** by thoroughly **reading** the [DKG Edge Node documentation](dkg-edge-node-architecture.md), which will provide you with an understanding of key concepts such as Knowledge Assets, paranets, and the role of Edge Nodes within the DKG ecosystem.
-  * **Install** the DKG Edge Node services on your local machine following [the local setup guide](setup-a-boilerplate-edge-node.md).
+  * **Install** the DKG Edge Node services on your local machine following [the local setup guide](run-an-edge-node/manual-development-environment-setup.md).
   * **Experiment** with the node by publishing Knowledge Assets locally and trying out the different knowledge mining and dRAG pipelines.
 * **Step 2:** Build your MVP on the testnet
   * **Define** a high-level concept for your AI service/application, which you want to build a paranet around.

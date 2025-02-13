@@ -1,28 +1,16 @@
 ---
 description: >-
-  Setting up a "boilerplate" Edge Node project to explore its capabilities and
-  build your own projects. As an open-source solution, the Edge Node offers
-  complete customization to fit your needs.
+  Setting up an Edge Node project to explore its capabilities and build your own
+  projects. As an open-source solution, the Edge Node offers complete
+  customization to fit your needs.
 ---
 
-# Setup a boilerplate Edge Node
+# Manual development environment setup
 
-{% hint style="info" %}
-This is the first version of the Edge Node documentation, and your feedback and contributions are much appreciated.
+To manually set up the DKG Edge Node in your local environment, you can choose between the following two options:
 
-Currently, the setup options require manual configuration, which involves several steps to install and configure the necessary components. This setup will take some time, so grab a coffee and be ready to explore the node's internals.
-
-The core developers are working on an **automated development environment setup** and would **love to hear your feedback** on the installation process. Join the discussion in the [Discord](https://discord.gg/xCaY7hvNwD) _#_&#xD83D;&#xDC77;_&#x62;uilders-hub_ channel!
-{% endhint %}
-
-To set up the DKG Edge Node in your local environment, you can choose between the following two options:
-
-1. **\[Recommended]** [**Set up local Edge Node services with a local DKG network**](setup-a-boilerplate-edge-node.md#setup-with-a-local-dkg-network)
-2. [**Configure local Edge Node services with a pre-deployed V8 DKG Core Testnet Node**](setup-a-boilerplate-edge-node.md#setup-with-pre-deployed-v8-dkg-runtime-testnet-node)
-
-
-
-## Manual development environment setup
+1. **\[Recommended]** [**Set up local Edge Node services with a local DKG network**](manual-development-environment-setup.md#setup-with-a-local-dkg-network)
+2. [**Configure local Edge Node services with a pre-deployed V8 DKG Core Testnet Node**](manual-development-environment-setup.md#setup-with-pre-deployed-v8-dkg-runtime-testnet-node)
 
 ## Setup with a local DKG network \[Recommended]
 
@@ -345,7 +333,7 @@ The instructions for configuring DKG Edge Node services are also available in th
 * Replace placeholder wallet - The following table "**user\_wallets**" will be populated with a pre-defined wallet address (local network related) which should be replaced by your Base Sepolia wallet with funds (ETH and TRAC)
 
 {% hint style="info" %}
-Instructions on how to use the TRAC faucet can be found [here](../../useful-resources/test-token-faucet.md).
+Instructions on how to use the TRAC faucet can be found [here](../../../useful-resources/test-token-faucet.md).
 {% endhint %}
 
 * Initiate Edge Node Authentication Service with: `npm run start`

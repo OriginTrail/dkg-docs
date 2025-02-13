@@ -47,7 +47,7 @@ Feel free to contribute to these docs directly through [GitHub](https://github.c
 
 ### How can I start building with the Edge Node?
 
-<table data-view="cards" data-full-width="false"><thead><tr><th></th></tr></thead><tbody><tr><td><a href="dkg-edge-node-architecture.md">Step 1: Learn about the Edge Node internals (architecture)</a></td></tr><tr><td><a href="setup-a-boilerplate-edge-node.md">Step 2: Setup a boilerplate Edge Node project</a></td></tr><tr><td><a href="customize-the-edge-node-and-build-your-project.md">Step 3: Customize the Edge Node to build your project</a></td></tr><tr><td><a href="deploy-your-edge-node-based-project.md">Step 4: Deploy to your environment</a></td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><a href="dkg-edge-node-architecture.md">Step 1: Learn about the Edge Node internals (architecture)</a></td><td></td></tr><tr><td><a href="./">Step 2: Setup a Edge Node project</a></td><td></td></tr><tr><td><a href="customize-the-edge-node-and-build-your-project.md">Step 3: Customize the Edge Node to build your project</a></td><td></td></tr><tr><td><a href="deploy-your-edge-node-based-project.md">Step 4: Deploy to your environment</a></td><td></td></tr></tbody></table>
 
 ### What's the difference between a Core Node and an Edge Node?
 
