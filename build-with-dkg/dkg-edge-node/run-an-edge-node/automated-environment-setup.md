@@ -1,11 +1,11 @@
 ---
-description: This page will guide you trough the DKG Edge Node installation process
+description: This page will guide you through the DKG Edge Node installation process
 ---
 
 # Automated environment setup
 
 {% hint style="warning" %}
-Currently, the automated environment setup works only on Ubuntu.
+Currently, the automated environment setup works only on **Ubuntu 24.04 LTS** and **Ubuntu 22.04 LTS**.
 {% endhint %}
 
 The installation process involves interacting with the installer through the terminal. To proceed, you should have all the required inputs ready, as they will be required by the installer:
@@ -30,20 +30,25 @@ Ensure the following services are installed:
 
 ## 1. How the installer works
 
-This installer automatically sets up and configures all the necessary processes for the Edge Node:
-
-1. [Authentication service](https://github.com/OriginTrail/edge-node-authentication-service)
-2. [Edge Node API](https://github.com/OriginTrail/edge-node-api)
-3. [Edge Node interface](https://github.com/OriginTrail/edge-node-interface)
-4. [Knowledge mining API](https://github.com/OriginTrail/edge-node-knowledge-mining)
-5. [dRAG](https://github.com/OriginTrail/edge-node-drag)
-
 {% hint style="info" %}
 The provided installer is designed to install the **OriginTrail Edge Node** on **Ubuntu 22.04 LTS, and 24.04 LTS** distributions.
 {% endhint %}
 
+When the installation process is finalized, you will be provided with the following Edge Node services deployed to your Linux server:
+
+* [V8 DKG Runtime Node](https://github.com/OriginTrail/ot-node/tree/v8/release/testnet)
+* [Edge Node Interface](https://github.com/OriginTrail/edge-node-interface)
+* [Edge Node API](https://github.com/OriginTrail/edge-node-api)
+* [Knowledge Mining API](https://github.com/OriginTrail/edge-node-knowledge-mining)
+* [dRAG](https://github.com/OriginTrail/edge-node-drag)
+* [Authentication Service](https://github.com/OriginTrail/edge-node-authentication-service)
+
+Each Edge Node service will have its required runtime environment and dependencies properly configured. This includes the installation and setup of **Node.js (with npm), Python, MySQL, Redis**, and **Apache Airflow**.&#x20;
+
+All services will be configured to run as **`systemd`** processes, which will be enabled and started automatically upon installation.
+
 {% hint style="info" %}
-It is also possible to install the OriginTrail Edge Node on other systems, but it would require modifications to the installer. If you have any such modifications in mind, we highly encourage your contributions. Please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
+It is also possible to install the OriginTrail Edge Node on other systems, but it would require modifications to the installer. If you have any such modifications in mind, we highly encourage your contributions. Please visit our [GitHub](https://github.com/OriginTrail/edge-node-installer) for more information.
 {% endhint %}
 
 ## 2. Download the OriginTrail DKG Edge Node installer
@@ -53,7 +58,6 @@ In order to clone the Edge Node installer repository, simply run the commands be
 ```sh
 git clone https://github.com/OriginTrail/edge-node-installer.git
 cd edge-node-installer
-chmod +x edge-node-installer.sh
 ```
 
 ## 3. Set the environment variables file (.env)
@@ -77,19 +81,6 @@ Simply run the installer with the command provided below:
 ```bash
 bash edge-node-installer.sh
 ```
-
-When the installation process is finalized, you will be provided with the following Edge Node services deployed to your Linux server:
-
-* [V8 DKG Runtime Node](https://github.com/OriginTrail/ot-node/tree/v8/release/testnet)
-* [Edge Node Interface](https://github.com/OriginTrail/edge-node-interface)
-* [Edge Node API](https://github.com/OriginTrail/edge-node-api)
-* [Knowledge Mining API](https://github.com/OriginTrail/edge-node-knowledge-mining)
-* [dRAG](https://github.com/OriginTrail/edge-node-drag)
-* [Authentication Service](https://github.com/OriginTrail/edge-node-authentication-service)
-
-Each Edge Node service will have its required runtime environment and dependencies properly configured. This includes the installation and setup of **Node.js (with npm), Python, MySQL, Redis**, and **Apache Airflow**.&#x20;
-
-All services will be configured to run as **`systemd`** processes, which will be enabled and started automatically upon installation.
 
 ## 5. Usage
 
