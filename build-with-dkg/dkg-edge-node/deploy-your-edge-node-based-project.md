@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Deploy your Edge-Node-based project
 
 Following the steps bellow will allow you to clone and execute the automated installer, enabling you to easily set up the DKG Edge Node with minimal configuration.&#x20;
