@@ -7,7 +7,7 @@ description: This page will guide you trough the DKG Edge Node installation proc
 The installation process involves interacting with the installer through the terminal. To proceed, you should have all the required inputs ready, as they will be required by the installer:
 
 * Ubuntu 20.04, 22.04 or 24.04 instance
-* Admin and operational keys and their private keys
+* Admin and operational keys for your Edge Node and their private keys
 * Funds on the wallets
 * Firewall configured
 
@@ -22,11 +22,11 @@ This installer automatically sets up and configures all the necessary processes 
 5. [dRAG](https://github.com/OriginTrail/edge-node-drag)
 
 {% hint style="info" %}
-The provided installer is designed to install the **OriginTrail Edge** node on **Ubuntu 20.04 LTS, 22.04 LTS and 24.04 LTS** distributions.
+The provided installer is designed to install the **OriginTrail Edge Node** on **Ubuntu 20.04 LTS, 22.04 LTS, and 24.04 LTS** distributions.
 {% endhint %}
 
 {% hint style="info" %}
-It is also possible to install the OriginTrail Edge node on other systems, but it would require modifications to the installer. If you have any such modifications in mind, we highly encourage your contributions. Please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
+It is also possible to install the OriginTrail Edge Node on other systems, but it would require modifications to the installer. If you have any such modifications in mind, we highly encourage your contributions. Please visit our [GitHub](https://github.com/OriginTrail/ot-node) for more information.
 {% endhint %}
 
 ## 2. Download the OriginTrail DKG Edge Node installer
@@ -35,7 +35,7 @@ It is also possible to install the OriginTrail Edge node on other systems, but i
 cd /root/ && curl -L -o edge-node-installer-main.zip https://github.com/OriginTrail/edge-node-installer/archive/refs/heads/main.zip
 ```
 
-After changing to root directory and downloading the main.zip file, proceed to unziping and removing it, as it's no longer needed:
+After changing to the root directory and downloading the main.zip file, proceed to unzip and remove it, as it's no longer needed:
 
 ```bash
 unzip edge-node-installer-main.zip && rm edge-node-installer-main.zip && cd edge-node-installer-main
@@ -63,21 +63,21 @@ bash edge-node-installer.sh
 
 ## 5. Usage
 
-You can interact with the user interface on _http://your-nodes-ip-address_.
+You can interact with the user interface at _http://your-nodes-ip-address_.
 
 {% hint style="info" %}
-The default login credentials are as following:
+The default login credentials are as follows:
 
 **username:** my\_edge\_node
 
 **password:** edge\_node\_pass
 
-It is recommended to change the default credentials, you can do that by directly altering the _Users_ table in the _edge-node-auth-service_.
+It is recommended to change the default credentials. You can do that by directly altering the _Users_ table in the _edge-node-auth-service_.
 {% endhint %}
 
 ## Need help? <a href="#need-help" id="need-help"></a>
 
-If you encounter any issues during the installation process or have questions regarding any of the above topics, jump into our official [Discord](https://discord.gg/xCaY7hvNwD) and ask for assistance.
+If you encounter any issues during the installation process or have questions about any of the topics above, jump into our official [Discord](https://discord.gg/xCaY7hvNwD) and ask for assistance.
 
 Follow our official channels for updates:
 

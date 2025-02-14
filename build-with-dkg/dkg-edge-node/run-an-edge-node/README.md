@@ -8,9 +8,9 @@ description: >-
 # Run an Edge Node
 
 {% hint style="info" %}
-is is the first version of the Edge Node documentation, and your feedback and contributions are much appreciated.
+This is the first version of the Edge Node documentation, and your feedback and contributions are much appreciated.
 
-This setup will take some time, so grab a coffee and be ready to explore the node's internals.
+The manual setup will take some time, so grab a coffee and be ready to explore the node's internals.
 {% endhint %}
 
 {% hint style="info" %}
