@@ -467,12 +467,4 @@ Once you've finalized configuring all DKG Edge Node services, please make sure t
 * **Edge Node Knowledge Mining:** [http://localhost:5005](http://localhost:5005)
 * **Edge Node dRAG:** [http://localhost:5002](http://localhost:5002)
 
-
-
-## Automated development environment setup
-
-{% hint style="success" %}
-An automated local environment setup will be available soon.
-{% endhint %}
-
 [^1]: 

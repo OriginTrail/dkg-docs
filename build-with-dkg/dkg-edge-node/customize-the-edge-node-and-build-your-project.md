@@ -1,6 +1,6 @@
 # Customize the Edge Node & build your project
 
-Now that you've set up the boilerplate project with all the essential components, it's time to explore the customization options. Each service in the app — Interface, API, Knowledge Mining API, dRAG API, and Authentication Service — is **open** **source** and **fully** **customizable**. You can fork any of these repositories to modify them to better suit your specific requirements.
+Now that you've set up the boilerplate project with all the essential components, it's time to explore the customization options. Each service in the app — interface, API, Knowledge Mining API, dRAG API, and Authentication Service — is **open** **source** and **fully** **customizable**. You can fork any of these repositories to modify them to better suit your specific requirements.
 
 This section will focus primarily on customizing the **Knowledge Mining API** and **dRAG API**, two core services that empower you to process data and build Decentralized Retrieval-Augmented Generations (dRAGs) based on Knowledge Assets.
 
@@ -14,7 +14,7 @@ Users can add custom variables to the `UserConfig` table, making them accessible
 
 ## Common customization scenarios
 
-### Creating a custom Knowledge Mining pipeline
+### Creating a custom knowledge mining pipeline
 
 The **Knowledge Mining API** is one of the most powerful services in the Edge Node, offering builders the flexibility to create custom processing pipelines without limitations. Registering new pipelines is straightforward, and the service is built in Python, a versatile environment well-suited for **data** **processing**, **AI** **tools**, **models**, and more. It’s up to the builder to decide how to parse the input data from incoming requests. The only requirement is that the pipeline outputs data in JSON-LD format, as this is necessary for publishing it as a Knowledge Asset on the DKG.
 
@@ -37,21 +37,28 @@ The **Knowledge Mining API** is one of the most powerful services in the Edge No
     * Use external APIs for data enrichment.
     * Incorporate any processing logic to transform incoming data into the required graph structure (JSON-LD).
   * **Requirement:** The pipeline must output data in JSON-LD format (in the same format as existing mining pipelines) so that the Edge Node API can process it and pass it to the Publish Service for creating a Knowledge Asset on the DKG
+
+{% hint style="info" %}
+A **DAG** defines the execution order of tasks within a **pipeline**, while a **pipeline** is the entire data processing workflow. A pipeline can contain multiple DAGs, but a DAG is just one part of a pipeline.
+
+* All your **DAGs** were initially paused.
+{% endhint %}
+
 * **Starting the pipeline**
-  * **Restart the services:** After creating the pipeline (DAG), Edge Node Knowledge Mining API should be restarted
-    * _python app.py_ and _airflow scheduler_ (scripts mentioned in the previous chapter, required to be running in order to use the Knowledge Mining service)
+  * **Restart the services:** After creating the pipeline (DAG), the Edge Node Knowledge Mining API should be restarted
+    * _python app.py_ and _airflow scheduler_ (scripts mentioned in the previous chapter, required to be running in order to use the knowledge mining service)
     * optionally: If _airflow webserver_ is used, it should also be restarted
   * **Unpause** your pipeline\
     `airflow dags unpause ${YOUR_DAG_NAME}`\
-    &#xNAN;_&#x65;.g. If your pipeline filename is xlsx\_to\_jsonld.py, unpause command should be "airflow tags unpause xlsx\_to\_jsonld"_\
+    &#xNAN;_&#x65;.g. If your pipeline filename is xlsx\_to\_jsonld.py, unpause command should be "airflow dags unpause xlsx\_to\_jsonld"_\
     \
     **NOTE:** If you are using Airflow webserver, you should be able to see your pipeline on http://localhost:8080 (or any other port you selected for the service) inside of "unpaused DAGS"
 * **Registering the pipeline**
-  * In order for Edge Node to **recognize** and **use** your new pipeline for certain filetypes, it needs to be registered in your main **UserConfig** **table** inside of Authentication Service MYSQL DB (edge-node-auth-service)
-  * By default, Edge Node will offer three variables for three main file types
-    * _kmining\_json\_pipeline\_id_ - this pipeline will be used when the input file MIME type is detected as **"application/json"**
-    * _kmining\_pdf\_pipeline\_id_ - this pipeline will be used when the input file MIME type is detected as **"application/pdf"**
-    * _kmining\_csv\_pipeline\_id_ - this pipeline will be used when the input file MIME type is detected as **"text/csv"**
+  * In order for the Edge Node to **recognize** and **use** your new pipeline for certain filetypes, it needs to be registered in your main **UserConfig** **table** inside of the Authentication Service MYSQL DB (edge-node-auth-service)
+  * By default, the Edge Node will offer three variables for three main file types
+    * _kmining\_json\_pipeline\_id_ — this pipeline will be used when the input file MIME type is detected as **"application/json"**
+    * _kmining\_pdf\_pipeline\_id_ — this pipeline will be used when the input file MIME type is detected as **"application/pdf"**
+    * _kmining\_csv\_pipeline\_id_ — this pipeline will be used when the input file MIME type is detected as **"text/csv"**
   * If your pipeline handles one of the above file types, simply replace the default pipeline with your custom one. **Here are some ideas:**
     * **Convert science paper PDFs to JSON-LD using a bibliographic ontology**\
       Extract metadata from science paper PDFs, such as title, authors, publication date, and references, and convert the data into JSON-LD following a bibliographic ontology like BIBO. This allows for structured, machine-readable representation of academic papers for easier citation management and searchability.
@@ -66,13 +73,20 @@ The **Knowledge Mining API** is one of the most powerful services in the Edge No
     * adapt the code in [Edge Node API - kMiningService](https://github.com/OriginTrail/edge-node-api/blob/main/services/kMiningService.js) to handle the new variable based on the input file's MIME type
 * You should now be ready to test your setup. Visit the Edge Node interface, go to the "Contribute" page, import a file, and verify that the pipeline processes it correctly.
 
+{% hint style="info" %}
+Every **Knowledge Asset** consists of both a **private** and a **public part**, both of which can be published. Regarding publishing private and/or public data, you should note:
+
+1. When you query the node, you will be able to retrieve both the private and public parts (use `contentType: 'all'` in the `get` function).
+2. Anyone with access to the node will be able to view the private knowledge. If you prefer to keep it private, simply whitelist yourself.
+{% endhint %}
+
 ### Creating a custom dRAG pipeline
 
 Now that you have created your processing pipelines and published Knowledge Assets on the DKG, you can customize the dRAG (Decentralized Retrieval-Augmented Generation) service to build your own decentralized RAGs. The dRAG service is built in Node.js, providing a flexible environment that supports integrations with LLMs, AI tools, and more, giving you limitless possibilities to customize your RAGs.
 
 The native query language for interacting with the DKG is SPARQL, as we use a triple store for data storage. You can combine SPARQL, LLMs, vector databases, or other tools to extract and process data from the DKG, refine the results, and deliver answers to natural language questions. The dRAG service functions like any other RAG but with the added benefits of decentralized data sources from the DKG.
 
-* **Forking the Repository**
+* **Forking the repository**
   * Start by **forking** the dRAG API repository from GitHub. This creates a copy of the original repository under your GitHub account, which you can modify as needed.
   *   Clone your forked repository locally:
 
@@ -96,20 +110,27 @@ The native query language for interacting with the DKG is SPARQL, as we use a tr
     * **Knowledge Assets** — This will be used to show based on which Knowledge Assets the answer is created\
       NOTE: As mentioned earlier, you can fork and update [Edge Node Interface](https://github.com/OriginTrail/edge-node-interface) as well and adapt the responses of your dRAGs to be compatible with the adapted interface.
 * **Integration with interface**
-  * As mentioned earlier, the AI Assistant is available in the current version of the Edge Node interface. To connect your dRAG with the interface, all you need to do is update the route used for fetching answers.
+  * As mentioned earlier, the AI Assistant is available in the current version of the Edge Node interface. To connect your dRAG to the interface, all you need to do is update the route used for fetching answers.
 * **Potential dRAG ideas:**
   * **Teach an LLM to convert natural language to SPARQL:** Leverage few-shot learning to train an LLM to convert natural language queries into SPARQL, tailored to your specific ontology and data model. Provide a set of example queries and responses to guide the model's understanding. (Example: `exampleSparqlController.js`)
   * **Integrate vector search with reranking for precision:** Use a vector database to retrieve content similar to the user's question, then refine the results with AI-based reranking tools to improve relevance and accuracy. This can enhance both the speed and precision of the search. (Example: `exampleVectorController.js`)
   * **Intent-matching AI for predefined SPARQL queries:** Create a set of predefined SPARQL queries and use an intent-matching algorithm powered by AI to map user queries to the most relevant SPARQL queries. This allows for efficient querying with minimal overhead.
   * **Feedback-loop-based SPARQL refinement:** Combine the LLM's natural language to SPARQL conversion with a feedback loop, in which the AI iteratively enhances the generated SPARQL queries, ensuring they align with the ontology and avoid errors.
-  * **Hybrid search: Combine vector and symbolic Search:** Use a hybrid approach where both vector search (for semantic similarity) and symbolic search (e.g., SPARQL) work in tandem. This can help ensure both accuracy and broad coverage by balancing structured queries with open-ended search results.
+  * **Hybrid search — Combine vector and symbolic search:** Use a hybrid approach in which vector search (for semantic similarity) and symbolic search (e.g., SPARQL) work in tandem. Balancing structured queries with open-ended search results in this way can help ensure both accuracy and broad coverage.
   * **Ontology-aware LLM fine-tuning:** Create a system to fine-tune a large language model (LLM) specifically on a given ontology. This approach involves providing the LLM with structured data from the ontology, including relationships, entities, and definitions, so it can learn to generate responses that align with the specific concepts and rules of the ontology. Then, use the trained model to formulate SPARQL queries based on the natural language.
-* You should now be ready to test your setup. Visit the Edge Node interface, go to the "AI Assistant" page, ask a question, and verify that your dRAG is able to answer it based on your custom logic.\
+* You should now be ready to test your setup. Visit the Edge Node interface, go to the "AI Assistant" page, ask a question, and verify that your dRAG can answer it based on your custom logic.\
 
+
+| Feature           | dRAG                                                                                      | Pipeline                                                                                       |
+| ----------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Purpose**       | Retrieves and generates responses based on decentralized knowledge                        | Processes and transforms data from input to output                                             |
+| **Functionality** | Uses SPARQL, AI, and vector search to answer queries                                      | Automates data processing steps like extraction, transformation, and storage                   |
+| **Workflow**      | Queries the Decentralized Knowledge Graph (DKG), processes results, and generates answers | Sequentially processes data through multiple steps (e.g., extraction, transformation, storage) |
+| **Components**    | Includes query execution, LLM integration, and knowledge retrieval                        | Can consist of multiple DAGs, data transformation steps, and processing logic                  |
+| **Output**        | AI-generated answers + linked Knowledge Assets                                            | Structured, transformed, or enriched data for further use                                      |
 
 ### Customizing other services
 
 Since all services are open source, you have the freedom to customize any component to suit your specific needs. Your contributions are highly encouraged! For example, if you need to implement a new authentication mechanism, you can add it directly to the Authentication Service and seamlessly integrate it across the other components.
 
 The open-source nature not only allows you to tailor the system to your requirements but also gives you the opportunity to share your improvements with the community, potentially influencing future features and enhancing the Edge Node ecosystem. Whether you're adding new functionality, optimizing existing features, or experimenting with innovative integrations, your contributions can help drive the evolution of the platform.
-

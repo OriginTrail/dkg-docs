@@ -4,7 +4,7 @@ description: This page will guide you through the DKG Edge Node installation pro
 
 # Automated environment setup
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Currently, the automated environment setup works only on **Ubuntu 24.04 LTS** and **Ubuntu 22.04 LTS**.
 {% endhint %}
 
@@ -13,6 +13,41 @@ The installation process involves interacting with the installer through the ter
 * Admin and operational keys for your Edge Node and their private keys
 * Funds on the wallets
 * Firewall configured
+
+### Funds on the wallets
+
+You should have funds on your operational wallet, both TRAC and the native blockchain token.
+
+{% hint style="info" %}
+If using NeuroWeb, the default blockchain network for the Edge Node, your operational wallet must have NEURO and TRAC tokens.
+
+Learn how to obtain test funds, via our faucet, [here](../../../useful-resources/test-token-faucet.md).
+{% endhint %}
+
+{% hint style="info" %}
+For just getting started, your management wallet does not need to have funds.
+{% endhint %}
+
+### Firewall configuration
+
+Firewall configuration implies opening these ports, for the following services:
+
+* 80 - UI HTTP
+* 443 - UI HTTPS
+* 3001 - Authentication service
+* 3002 - API
+* 5002 - DRAG
+* 5005 - Knowledge mining
+* 8900 - OT Node
+* 8008 - Airflow webserver - optional
+
+{% hint style="info" %}
+On Ubuntu this is most commonly done by running the command:
+
+```bash
+ufw allow <PORT>
+```
+{% endhint %}
 
 ### System Requirements
 
@@ -55,12 +90,11 @@ It is also possible to install the OriginTrail Edge Node on other systems, but i
 
 In order to clone the Edge Node installer repository, simply run the commands below on your Linux server:
 
-```sh
-git clone https://github.com/OriginTrail/edge-node-installer.git
-cd edge-node-installer
-```
+<pre class="language-sh"><code class="lang-sh">git clone https://github.com/OriginTrail/edge-node-installer.git
+<strong>cd edge-node-installer
+</strong></code></pre>
 
-## 3. Set the environment variables file (.env)
+## 3. See environment variables file (.env)
 
 Fill in the required parameters.
 
@@ -82,18 +116,64 @@ Simply run the installer with the command provided below:
 bash edge-node-installer.sh
 ```
 
-## 5. Usage
+## 5. Changing the environment variables after deploying the Edge Node
 
-You can interact with the user interface at _http://your-nodes-ip-address_.
+### Publishing wallet setup
+
+By default, the development wallet will be already set, which cannot be used for actual Edge node deployment, and needs to be updated with real wallet credentials.
 
 {% hint style="info" %}
-The default login credentials are as follows:
+For testing/development, you can use your “**Operational wallet**” since it has funds
+{% endhint %}
 
-**username:** my\_edge\_node
+Obtain access to the MySQL database.
 
-**password:** edge\_node\_pass
+```bash
+mysql -u root -p
+```
 
-It is recommended to change the default credentials. You can do that by directly altering the _Users_ table in the _edge-node-auth-service_.
+{% hint style="info" %}
+The default password for the MySQL database is **otnodedb.** It's set it in the `.env` file under "SQL\_PASSWORD".
+{% endhint %}
+
+Then, execute the following:
+
+```sql
+USE edge-node-auth-service;
+```
+
+And update the details:
+
+```sql
+UPDATE user_wallets
+SET
+    wallet = 'YOUR_WALLET',
+    private_key = 'PRIVATE_KEY',
+    blockchain = 'SELECTED_CHAIN_ID'
+WHERE id = 1
+LIMIT 1;
+```
+
+### Blockchain network setup
+
+The Edge Node currently supports Neuroweb (default), Base, and Gnosis blockchain networks. In order to change the default one, the below steps should be followed.
+
+#### Pre-requisites:
+
+* Selected blockchain is supported
+* Selected blockchain variables are populated in the `.env` file
+
+If all requirements are met, the process of changing the Edge Nodes blockchain is as simple as just setting up a new [publishing wallet setup](automated-environment-setup.md#publishing-wallet-setup).
+
+{% hint style="info" %}
+The available SELECTED\_CHAIN\_ID are:
+
+* **NeuroWeb mainnet** - otp:2043
+* **NeuroWeb testnet** - otp:20430
+* **Base mainnet** - base:8453
+* **Base testnet** - base:84532
+* **Gnosis mainnet** - gnosis:100
+* **Gnosis testnet** - gnosis:10200
 {% endhint %}
 
 ### Configure the rest of the DKG Edge Node services
