@@ -42,11 +42,12 @@ Firewall configuration implies opening these ports, for the following services:
 * 8008 - Airflow webserver - optional
 
 {% hint style="info" %}
-On Ubuntu this is most commonly done by running the command:
+Please keep in mind that different cloud providers use different security practices when it comes to configuring firewalls on the servers. Make sure that your firewall rules are configured according to the practices of the cloud provider you chose.\
+\
+If UFW is your framework of choice, simply use the below command template to open required ports on the machine.
 
-```bash
-ufw allow <PORT>
-```
+<pre class="language-bash"><code class="lang-bash"><strong>ufw allow &#x3C;PORT>
+</strong></code></pre>
 {% endhint %}
 
 ### System Requirements
