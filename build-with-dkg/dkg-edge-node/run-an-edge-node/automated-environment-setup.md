@@ -8,6 +8,10 @@ description: This page will guide you through the DKG Edge Node installation pro
 Currently, the automated environment setup works only on **Ubuntu 24.04 LTS** and **Ubuntu 22.04 LTS**.
 {% endhint %}
 
+{% hint style="info" %}
+If you are on Windows or Mac, you can use **WSL** to run the Edge node.
+{% endhint %}
+
 The installation process involves interacting with the installer through the terminal. To proceed, you should have all the required inputs ready, as they will be required by the installer:
 
 * Admin and operational keys for your Edge Node and their private keys
@@ -39,7 +43,7 @@ Firewall configuration implies opening these ports, for the following services:
 * 5002 - DRAG
 * 5005 - Knowledge mining
 * 8900 - OT Node
-* 8008 - Airflow webserver - optional
+* 8080 - Airflow webserver - optional
 
 {% hint style="info" %}
 Please keep in mind that different cloud providers use different security practices when it comes to configuring firewalls on the servers. Make sure that your firewall rules are configured according to the practices of the cloud provider you chose.\
