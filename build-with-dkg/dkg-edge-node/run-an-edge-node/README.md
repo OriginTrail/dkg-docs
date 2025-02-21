@@ -1,7 +1,7 @@
 ---
 description: >-
-  Setting up an Edge Node project to explore its capabilities and build your own
-  projects. As an open-source solution, the Edge Node offers complete
+  Set up an Edge Node project to explore the node's capabilities and build your
+  own projects. As an open-source solution, the Edge Node offers complete
   customization to fit your needs.
 ---
 
@@ -21,4 +21,4 @@ To set up the DKG Edge Node in your local environment, you can choose between th
 
 
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Automated environment setup (Ubuntu)</td><td><a href="automated-environment-setup.md">automated-environment-setup.md</a></td></tr><tr><td>Manual development environment setup</td><td><a href="manual-development-environment-setup.md">manual-development-environment-setup.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="automated-environment-setup.md">Automated environment setup (Ubuntu)</a></td><td><a href="automated-environment-setup.md">automated-environment-setup.md</a></td></tr><tr><td><a href="manual-development-environment-setup.md">Manual development environment setup</a></td><td><a href="manual-development-environment-setup.md">manual-development-environment-setup.md</a></td></tr></tbody></table>

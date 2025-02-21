@@ -87,4 +87,4 @@ The Edge Node will:
 
 ### Passing a query
 
-After successfully creating the Knowledge Asset, go to _<mark style="color:blue;">http://your-nodes-ip-address/ai-assistant</mark>,_ and ask the AI Assistant a question about your digital document to see how it works.
+After successfully creating the Knowledge Asset, go to _<mark style="color:blue;">http://your-nodes-ip-address/ai-assistant</mark>,_ and ask the AI Assistant a question about the content of to see how it works.
