@@ -6,7 +6,7 @@ hidden: true
 
 Paranets are like "virtual" knowledge graphs on the OriginTrail DKG and building with them is quite similar to building on the DKG in general. Paranets enable you to however contain your operations services on these "virtual" graphs, e.g. querying a specific paranet with SPARQL, or adding a knowledge asset to a specific paranet.
 
-To gain access to the paranet knowledge graph you can deploy a DKG [gateway node](../node-setup-instructions/running-a-gateway-node.md) and set it up to host the paranet (or "sync" it). More information is available on the [sync-a-dkg-paranet.md](../node-setup-instructions/sync-a-dkg-paranet.md "mention") page.
+To gain access to the paranet knowledge graph you can deploy a DKG [gateway node](../node-setup-instructions/running-a-gateway-node.md) and set it up to host the paranet (or "sync" it). More information is available on the [sync-a-dkg-paranet.md](../../build-with-dkg/dkg-paranets/sync-a-dkg-paranet.md "mention") page.
 
 ### Querying paranets
 

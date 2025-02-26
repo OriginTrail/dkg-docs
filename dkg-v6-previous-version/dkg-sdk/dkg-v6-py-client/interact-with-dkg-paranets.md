@@ -210,7 +210,7 @@ This function only updates the claimable rewards based on your latest contributi
 
 The Decentralized Knowledge Graph (DKG) enables users to perform SPARQL queries on specific Paranets. By specifying a Paranet, users can target their queries to retrieve data related to that Paranet. This can be particularly useful when working with domain-specific data or services within a Paranet.
 
-To query a specific Paranet, ensure that the node you are querying has already enabled Paranet syncing for the Paranet you wish to query. Without this setup, the node may not have the relevant data required to process your queries.[ Read here](../../node-setup-instructions/sync-a-dkg-paranet.md) how to setup node to sync a Paranet.
+To query a specific Paranet, ensure that the node you are querying has already enabled Paranet syncing for the Paranet you wish to query. Without this setup, the node may not have the relevant data required to process your queries.[ Read here](../../../build-with-dkg/dkg-paranets/sync-a-dkg-paranet.md) how to setup node to sync a Paranet.
 
 To query a specific Paranet, you should set the `graph_location` to the desired Paranet UAL. This approach allows you to direct your queries to the Paranet that holds the relevant data.
 

@@ -119,7 +119,7 @@ const publicAssertion = {
 
 ```
 
-When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion** (see more [here](broken-reference)). When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochsNum` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
+When you create the knowledge asset, the above JSON-LD object will be converted into an **assertion**. When an assertion with public data is prepared, we can create an knowledge asset on DKG. `epochsNum` specifies for how many epochs the asset should be kept (an epoch is equal to three months).
 
 ```javascript
 const result = await dkg.asset.create({

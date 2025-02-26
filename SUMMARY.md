@@ -6,7 +6,7 @@
 
 * [DKG key concepts](key-concepts/dkg-key-concepts/README.md)
   * [Decentralized Knowle﻿dge Graph (DKG)](key-concepts/dkg-key-concepts/decentralized-knowle-dge-graph-dkg.md)
-  * [DKG V8 Guidebook](key-concepts/dkg-key-concepts/dkg-v8-guidebook/README.md)
+  * [DKG V8 guidebook](key-concepts/dkg-key-concepts/dkg-v8-guidebook/README.md)
     * [Protocol updates](key-concepts/dkg-key-concepts/dkg-v8-guidebook/protocol-updates.md)
     * [Feature roadmap](key-concepts/dkg-key-concepts/dkg-v8-guidebook/feature-roadmap.md)
     * [How to upgrade to V8?](key-concepts/dkg-key-concepts/dkg-v8-guidebook/how-to-upgrade-to-v8.md)
@@ -22,15 +22,19 @@
   * [Development environment setup](build-with-dkg/dkg-sdk/setting-up-your-development-environment.md)
   * [DKG Javascript SDK (dkg.js)](build-with-dkg/dkg-sdk/dkg-v8-js-client/README.md)
     * [Interact with DKG paranets](build-with-dkg/dkg-sdk/dkg-v8-js-client/interact-with-dkg-paranets.md)
+    * [Knowledge submission & curation](build-with-dkg/dkg-sdk/dkg-v8-js-client/knowledge-submission-and-curation.md)
+    * [Paranets Incentives Pool Implementation](build-with-dkg/dkg-sdk/dkg-v8-js-client/paranets-incentives-pool-implementation.md)
   * [DKG Python SDK (dkg.py)](build-with-dkg/dkg-sdk/dkg-v8-py-client/README.md)
     * [Interact with DKG paranets](build-with-dkg/dkg-sdk/dkg-v8-py-client/interact-with-dkg-paranets.md)
-  * [Autonomous AI Paranets](build-with-dkg/dkg-sdk/autonomous-ai-paranets/README.md)
-    * [Deploying a Paranet](build-with-dkg/dkg-sdk/autonomous-ai-paranets/deploying-a-paranet.md)
-    * [Building with DKG paranets](build-with-dkg/dkg-sdk/autonomous-ai-paranets/building-with-dkg-paranets.md)
-    * [Initial Paranet Offerings (IPOs)](build-with-dkg/dkg-sdk/autonomous-ai-paranets/initial-paranet-offerings-ipos.md)
-    * [IPO specification](build-with-dkg/dkg-sdk/autonomous-ai-paranets/ipo-specification.md)
-    * [Launching your IPO](build-with-dkg/dkg-sdk/autonomous-ai-paranets/launching-your-ipo.md)
-    * [IPO voting](build-with-dkg/dkg-sdk/autonomous-ai-paranets/ipo-voting.md)
+* [DKG paranets](build-with-dkg/dkg-paranets/README.md)
+  * [Deploying a paranet](build-with-dkg/dkg-paranets/deploying-a-paranet.md)
+  * [Building with paranets](build-with-dkg/dkg-paranets/building-with-paranets.md)
+  * [Sync a DKG Paranet](build-with-dkg/dkg-paranets/sync-a-dkg-paranet.md)
+  * [Initial Paranet Offerings (IPOs)](build-with-dkg/dkg-paranets/initial-paranet-offerings-ipos/README.md)
+    * [IPO specification](build-with-dkg/dkg-paranets/initial-paranet-offerings-ipos/ipo-specification.md)
+    * [Launching your IPO](build-with-dkg/dkg-paranets/initial-paranet-offerings-ipos/launching-your-ipo.md)
+    * [Paranets Incentives Pool](build-with-dkg/dkg-paranets/initial-paranet-offerings-ipos/paranets-incentives-pool.md)
+    * [IPO voting](build-with-dkg/dkg-paranets/initial-paranet-offerings-ipos/ipo-voting.md)
 * [AI agents](build-with-dkg/ai-agents/README.md)
   * [ElizaOS DKG agent](build-with-dkg/ai-agents/elizaos-dkg-agent.md)
   * [Custom DKG Python agent](build-with-dkg/ai-agents/custom-dkg-python-agent.md)
@@ -57,7 +61,7 @@
 
 ## Delegated staking
 
-* [Delegated Staking - Introduction](delegated-staking/delegated-staking-introduction/README.md)
+* [Delegated staking—Introduction](delegated-staking/delegated-staking-introduction/README.md)
   * [Step-by-step staking](delegated-staking/delegated-staking-introduction/step-by-step-staking.md)
   * [Redelegating stake](delegated-staking/delegated-staking-introduction/redelegating-stake.md)
 
@@ -85,7 +89,7 @@
 
 ## Useful Resources
 
-* [Public Nodes](useful-resources/public-nodes.md)
+* [Public nodes](useful-resources/public-nodes.md)
 * [Tutorials](useful-resources/tutorials.md)
 * [Test token faucet](useful-resources/test-token-faucet.md)
 * [Development principles](useful-resources/development-principles.md)
@@ -122,7 +126,6 @@
   * [OriginTrail DKG node NAT configuration](dkg-v6-previous-version/node-setup-instructions/origintrail-dkg-node-nat-configuration.md)
   * [Running a full node](dkg-v6-previous-version/node-setup-instructions/running-a-full-node.md)
   * [Running a gateway node](dkg-v6-previous-version/node-setup-instructions/running-a-gateway-node.md)
-  * [Sync a DKG Paranet](dkg-v6-previous-version/node-setup-instructions/sync-a-dkg-paranet.md)
   * [Houston - OriginTrail node command center](dkg-v6-previous-version/node-setup-instructions/houston-origintrail-node-command-center.md)
   * [🔗 Switch DKG node to multichain](dkg-v6-previous-version/node-setup-instructions/switch-dkg-node-to-multichain.md)
   * [Useful resources](dkg-v6-previous-version/node-setup-instructions/useful-resources/README.md)

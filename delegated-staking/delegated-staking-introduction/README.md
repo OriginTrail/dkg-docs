@@ -2,9 +2,9 @@
 icon: diagram-project
 ---
 
-# Delegated Staking - Introduction
+# Delegated staking—Introduction
 
-As a decentralized system, the OriginTrail DKG enables all ecosystem stakeholders owning TRAC to contribute their economic stake to the functioning of the network for utility. Delegated staking involves locking up TRAC for contributing to the DKG security on selected DKG Core Nodes. The DKG Core Node rewards are shared between the TRAC stake delegators.
+As a decentralized system, the OriginTrail Decentralized Knowledge Graph (DKG) enables all ecosystem stakeholders owning TRAC to contribute their economic stake to the functioning of the network for utility. Delegated staking involves locking up TRAC for contributing to the DKG security on selected DKG Core Nodes. The DKG Core Node rewards are shared between the TRAC stake delegators.
 
 <figure><img src="../../.gitbook/assets/Staking updates.png" alt=""><figcaption></figcaption></figure>
 
