@@ -1,6 +1,6 @@
 # Custom DKG Python agent
 
-This guide explains how to build a custom agent implementation using the [dkg.py](broken-reference) SDK. AI agents can leverage the Decentralized Knowledge Graph (DKG) to create knowledge-graph-based, collective, persistent memory for individual agents or agentic swarms.
+This guide explains how to build a custom agent implementation using the [dkg.py](../dkg-sdk/dkg-v8-py-client/) SDK. AI agents can leverage the Decentralized Knowledge Graph (DKG) to create knowledge-graph-based, collective, persistent memory for individual agents or agentic swarms.
 
 ## Overview of dkg.py
 
