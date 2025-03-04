@@ -14,7 +14,7 @@ To use Ontotext GraphDB with your DKG node, follow these steps:
 2. **Request and download GraphDB**: Follow the instructions to request and download the GraphDB software.
 3. **Setup GraphDB on your server**: Install and configure GraphDB according to the provided guidelines.
 4. **Modify your DKG node configuration**: Edit the configuration file of your DKG node to use GraphDB as the default triple store implementation.
-   * Navigate to: [manually-configuring-your-node.md](../useful-resources/manually-configuring-your-node.md "mention")
+   * Navigate to: [Broken link](broken-reference "mention")
    * Locate the `tripleStore` object and set the `defaultImplementation` to `ot-graphdb`.
 
 #### Blazegraph

@@ -107,4 +107,4 @@ The next building block of the DKG is **AI para-networks** or **paranets**.
 
 **AI para-networks** or **paranets** are autonomously operated structures in the DKG, owned by their community as a paranet operator. In paranets, we find **assemblies of Knowledge Assets** driving use cases with associated **paranet-specific AI services** and an **incentivization model** to reward knowledge miners fueling its growth.&#x20;
 
-**To see the DKG in action, continue to the** [**DKG SDK section**](../../dkg-v6-previous-version/dkg-sdk/)**.**
+**To see the DKG in action, continue to the** [**DKG SDK section**](./)**.**

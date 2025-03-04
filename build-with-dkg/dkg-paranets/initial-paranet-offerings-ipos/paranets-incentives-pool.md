@@ -1,6 +1,6 @@
-# Paranets Incentives Pool
+# Paranet's incentives pool
 
-The **Incentives Pool** serves to encourage key participants in the paranet ecosystem to perform essential tasks that support its operation. Here's a breakdown of who receives rewards and for what:
+The **incentives pool** serves to encourage key participants in the paranet ecosystem to perform essential tasks that support its operation. Here's a breakdown of who receives rewards and for what:
 
 1. **Knowledge miners**:
    * Receive rewards for **publishing valuable data and knowledge** to the paranet.

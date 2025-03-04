@@ -1,4 +1,4 @@
-# Building with paranets
+# Building with DKG paranets
 
 Paranets are like "virtual" knowledge graphs on the OriginTrail Decentralized Knowledge Graph (DKG). Building with them is quite similar to building on the DKG in general. However, paranets enable you to contain your operations services on these "virtual" graphs, e.g., querying a specific paranet with SPARQL or adding a knowledge collection\* to a specific paranet.
 
@@ -6,7 +6,7 @@ Paranets are like "virtual" knowledge graphs on the OriginTrail Decentralized Kn
 \***A** **knowledge collection (KC)** is a **collection of Knowledge Assets.** It refers to structured data that can be stored, shared, and validated within a distributed network.
 {% endhint %}
 
-To gain access to the paranet knowledge graph, you can use one of the [public DKG nodes](../../useful-resources/public-nodes.md), or deploy a [DKG node](../dkg-core-node/) and set it up to host the paranet (or "sync" it). More information is available on the [Sync a DKG Paranet](sync-a-dkg-paranet.md) page.
+To gain access to the paranet knowledge graph, you can use one of the [public DKG nodes](../../useful-resources/public-nodes.md), or deploy a [DKG node](../dkg-core-node/) and set it up to host the paranet (or "sync" it). More information is available on the [Sync a DKG Paranet](syncing-a-dkg-paranet.md) page.
 
 **A direct code example of paranets in use can be found here -** [**Paranet Demo**](https://github.com/OriginTrail/dkg.js/blob/v8/develop/examples/paranet-demo.js)
 

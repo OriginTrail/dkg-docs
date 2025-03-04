@@ -4,7 +4,7 @@ icon: hexagon-image
 
 # Decentralized Knowle﻿dge Graph (DKG)
 
-OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **Knowledge Assets structured in an RDF knowledge graph** hosted on an open, permissionless decentralized network of DKG nodes. It's designed to support the [**verifiable Internet for AI**](../../dkg-v6-previous-version/ecosystem-white-paper.md) based on an open, permissionless knowledge economy in which knowledge is the primary asset class.
+OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **Knowledge Assets structured in an RDF knowledge graph** hosted on an open, permissionless decentralized network of DKG nodes. It's designed to support the [**verifiable Internet for AI**](broken-reference) based on an open, permissionless knowledge economy in which knowledge is the primary asset class.
 
 As a builder, you can create **collaborative knowledge graphs** using DKG paranets, incentivize the growth of your knowledge graph with Initial Paranet Offerings (IPOs), with a combination of public and private (and hybrid) [Knowledge Assets](https://origintrail.io/products/knowledge-assets), and use them within an ecosystem of composable services on multiple blockchains.
 
@@ -18,7 +18,7 @@ OriginTrail DKG is multi-chain, integrating with Ethereum and Polkadot ecosystem
 
 There are many ways to participate, such as:
 
-* Building dapps with [DKG SDKs](../../dkg-v6-previous-version/dkg-sdk/)&#x20;
+* Building dapps with [DKG SDKs](../../build-with-dkg/dkg-sdk/)&#x20;
 * Launching DKG paranets
 * Publishing knowledge to the DKG via knowledge mining&#x20;
 * [Delegating TRAC tokens](../../delegated-staking/delegated-staking-introduction/) to DKG nodes to help secure the network and earn TRAC&#x20;

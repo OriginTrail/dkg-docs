@@ -21,7 +21,7 @@ Ready to apply? Here's a clear roadmap to help you get started:
   * **Share** the MVP with the OriginTrail community on the [Discord](https://discord.gg/xCaY7hvNwD) #builders-hub channel and get feedback.
 * **Step 3**: Launch on mainnet
   * **Migrate** your paranet services from the DKG testnet to the DKG mainnet - this includes reconfiguring your Edge Node to operate on your mainnet node and creating a mainnet paranet.
-  * Optionally,  **launch** your [Initial Paranet Offering (IPO)](../../dkg-v6-previous-version/autonomous-ai-paranets/launching-your-ipo.md).
+  * Optionally,  **launch** your [Initial Paranet Offering (IPO)](../dkg-paranets/initial-paranet-offerings-ipos/launching-your-ipo.md).
   * **Continue building**, create Knowledge Assets, and scale your paranet services as the paranet operator!
 * **Step 4 (optional):** Apply for the DKG Edge Node inception program
   * **Apply** to the inception program [via this form](https://docs.google.com/forms/d/e/1FAIpQLSdOoyoBFC7oEftK67Sioo32Yf1YHHONME4_c8j-34IxwpBgHg/viewform).

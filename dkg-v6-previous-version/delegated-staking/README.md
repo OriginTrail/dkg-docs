@@ -13,7 +13,7 @@ Staking is currently enabled on Neuroweb, Base and Gnosis blockchains.
 2. [Staking on Base](https://docs.origintrail.io/decentralized-knowledge-graph/delegated-staking/staking-trac-on-base)
 3. [Staking on Gnosis](https://docs.origintrail.io/decentralized-knowledge-graph/delegated-staking/staking-trac-on-gnosis)
 
-For a DKG node to be eligible to host a portion of the [DKG](../dkgintro.md) and receive TRAC network rewards, its TRAC stake plays a crucial role. Set at the minimum of 50 000 TRAC on a particular blockchain, stake has an important role in ensuring security of the DKG. The DKG node operators can contribute to the node stake on their own or by attracting more TRAC to their stake through delegated staking. &#x20;
+For a DKG node to be eligible to host a portion of the [DKG](broken-reference) and receive TRAC network rewards, its TRAC stake plays a crucial role. Set at the minimum of 50 000 TRAC on a particular blockchain, stake has an important role in ensuring security of the DKG. The DKG node operators can contribute to the node stake on their own or by attracting more TRAC to their stake through delegated staking. &#x20;
 
 There are 2 roles involved in delegated staking -  **node operators** and **TRAC delegators**.
 
@@ -82,7 +82,7 @@ To understand how to set up your operator fee, follow the [node-setup-instructio
 
 ### Have questions?
 
-Drop by our [Discord](https://discordapp.com/invite/FCgYk2S) or [Telegram group](https://t.me/origintrail) and feel free to post it there. Make sure to follow our official announcements and stay safe!
+Drop by our [Discord](https://discord.com/invite/xCaY7hvNwD) or [Telegram group](https://t.me/origintrail) and feel free to post it there. Make sure to follow our official announcements and stay safe!
 
 Happy staking! :rocket:
 

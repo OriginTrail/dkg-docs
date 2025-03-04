@@ -13,7 +13,7 @@ For a DKG node to be able to properly operate, it will need to execute transacti
 * **operational** keys, for which the node requires access to (you will need to generate and upload their private keys to your node)&#x20;
 * **admin** keys, for which the node doesn't require access and are used to manage the node on chain configuration
 
-To get you started, you will need at least one operational and one one admin key. More details on keys can be found [here](../useful-resources/node-keys-explained.md).&#x20;
+To get you started, you will need at least one operational and one one admin key. More details on keys can be found [here](broken-reference).&#x20;
 
 The details of key setup can vary between particular blockchains, so are presented below separately for clarity.
 
@@ -21,7 +21,7 @@ The details of key setup can vary between particular blockchains, so are present
 
 Since DKG nodes are connected to one or more blockchains, in order to perform actions on them they need to appropriate keys (wallets). Therefore, for each blockchain you want to support with your node, you will need to setup several keys.&#x20;
 
-More info can be found in [the node keys explained page](../useful-resources/node-keys-explained.md).
+More info can be found in [the node keys explained page](broken-reference).
 
 {% hint style="info" %}
 Since version 6.2.0 DKG nodes support multiple operational wallets.

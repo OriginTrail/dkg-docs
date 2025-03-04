@@ -46,7 +46,7 @@ In order to introduce a level of predictability of network operations, withdrawi
 
 
 {% hint style="warning" %}
-If you want to withdraw tokens in order to delegate to another node on the same network (blockchain) - you **do not** have to wait 28 days! [See here >](redelegating-stake.md)&#x20;
+If you want to withdraw tokens in order to delegate to another node on the same network (blockchain), you **do not** have to wait 28 days! [See here >](redelegating-stake.md)&#x20;
 {% endhint %}
 
 {% hint style="success" %}
@@ -55,7 +55,7 @@ Delegated staking is a non-custodial system, so the Core Node operator has no ac
 
 
 
-Each Core Node operator can also set an “**operator fee,**” which is a percentage of the TRAC rewards deducted each time when a node claims rewards from a Knowledge Asset. The remaining TRAC fee is then split proportionally to the share of staked tokens across all delegators.
+Each Core Node operator can also set an “**operator fee,**” which is a percentage of the TRAC rewards deducted each time a node claims rewards from a Knowledge Asset. The remaining TRAC fee is then split proportionally to the share of staked tokens across all delegators.
 
 {% hint style="info" %}
 **Example**: If a node accumulated **1,000 TRAC** tokens in the previous period, and the node has two delegators, both with a 50% share, and the operator\_fee is 10%:
@@ -68,7 +68,7 @@ Each Core Node operator can also set an “**operator fee,**” which is a perce
 
 If you are running a DKG Core Node, you can delegate TRAC tokens to your node in the same way as others. It is recommended that you also delegate TRAC tokens, signaling your commitment to the network via economic stake - this provides a trust signal to other delegators.
 
-To understand how to set up your operator fee, follow the instructions for Core Node setup. Note that changing your operator fee incurs a 28-day delay, balancing the 28-day delay delegators experience when withdrawing stake from your node.
+To understand how to set up your operator fee, follow the instructions for [Core Node setup](../../build-with-dkg/dkg-core-node/). Note that changing your operator fee incurs a 28-day delay, balancing the 28-day delay that delegators experience when withdrawing stake from your node.
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Depiction of delegating and withdrawing of TRAC from DKG smart contracts</p></figcaption></figure>
 

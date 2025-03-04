@@ -4,14 +4,14 @@ description: >-
   DKG
 ---
 
-# Deploying a paranet
+# Deploying a DKG paranet
 
 ### 1. Prepare for paranet deployment
 
-To successfully deploy a paranet, you will have to create a Knowledge Collection on the DKG and execute paranet registration transactions on the blockchain. This guide assumes you already have a good idea of what purpose you are deploying your DKG paranet for and will focus only on the technical steps.&#x20;
+To successfully deploy a paranet, you will have to create a knowledge collection on the DKG and execute paranet registration transactions on the blockchain. This guide assumes you already have a good idea of what purpose you are deploying your DKG paranet for and will focus only on the technical steps.&#x20;
 
 {% hint style="info" %}
-A _**Knowledge Asset**_ is an individual knowledge graph entity or a piece of data, while a _**Knowledge Collection**_ is a group of interconnected _Knowledge Assets_ that form a broader set of information. **Knowledge collections** enable creating multiple Knowledge Assets through one atomic operation.
+A _**Knowledge Asset**_ is an individual knowledge graph entity or a piece of data, while a _**knowledge collection**_ is a group of interconnected _Knowledge Assets_ that form a broader set of information. **Knowledge collections** enable the creation of multiple Knowledge Assets through one atomic operation.
 {% endhint %}
 
 Below is the input you will need:
@@ -21,11 +21,11 @@ Below is the input you will need:
 * Decide what kind of permissions the _paranet_ will have.&#x20;
 * Prepare a _**paranet profile Knowledge Asset**_ to represent your paranet as its profile on the DKG. It can be as minimal or as rich in content as you'd like.
 
-### 2. Create your Paranet Profile on the DKG&#x20;
+### 2. Create your paranet profile on the DKG&#x20;
 
-A Paranet Profile is a Knowledge Asset that will uniquely identify your paranet and you as the paranet operator. As long as you own this Knowledge Asset, you will be able to manage paranet operator functions in the DKG paranet smart contracts.
+A _paranet profile_ is a Knowledge Asset that will uniquely identify your paranet and you as the paranet operator. As long as you own this Knowledge Asset, you will be able to manage paranet operator functions in the DKG paranet smart contracts.
 
-An example paranet Knowledge Asset could look like this:
+An example paranet profile Knowledge Asset could look like this:
 
 ```json
 {
@@ -44,10 +44,10 @@ Paranet Knowledge Assets UAL looks like this:
 did:dkg:otp:2043/0x8f678eB0E57ee8A109B295710E23076fA3a443fe/1497611/125
 ```
 
-Once you create your **paranet** knowledge asset, save the **Knowledge Asset UALs** that are contained within the **knowledge collection UAL**, as you will need them for the next step.
+Once you create your paranet profile Knowledge Asset, save the **Knowledge Asset UALs** that are contained within the **knowledge collection UAL**, as you will need them for the next step.
 
 {% hint style="info" %}
-As the paranet profile **knowledge asset** is an NFT on-chain, if you would like to change your operator key (wallet), all you need to do is transfer this NFT to your new address.
+As the **paranet profile** **Knowledge Asset** is an **NFT on-chain**, if you would like to change your operator key (wallet), all you need to do is transfer this NFT to your new address.
 {% endhint %}
 
 ### 3. Execute _registerParanet_ transaction on the blockchain
@@ -97,5 +97,5 @@ To proceed, we recommend setting up a **DKG node** that will continuously sync y
 Additionally, you might want to consider [running an IPO](initial-paranet-offerings-ipos/) to incentivize knowledge miners.
 
 {% hint style="info" %}
-If you have been running a paranet on the previous V6 version of the DKG your paranet will not automatically update to the new system. If you need help updating, please contact the core developers in [Discord](https://discord.gg/xCaY7hvNwD) for assistance.
+If you have been running a paranet on the previous V6 version of the DKG, your paranet will not automatically update to the new system. If you need help updating, please contact the core developers in [Discord](https://discord.gg/xCaY7hvNwD) for assistance.
 {% endhint %}

@@ -23,7 +23,7 @@ The DKG Python SDK provides functionality for interacting with paranets on the O
 
 ## Setup and installation
 
-To interact with paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.py SDK installed and properly configured. Follow the general setup instructions for [installing dkg.py](./) and read more about paranets [in the following section](../../../dkg-v6-previous-version/autonomous-ai-paranets/).
+To interact with paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.py SDK installed and properly configured. Follow the general setup instructions for [installing dkg.py](./) and read more about paranets [in the following section](../../dkg-paranets/).
 
 ### Creating a paranet
 
@@ -177,9 +177,9 @@ This function only updates the claimable rewards based on your latest contributi
 
 The DKG enables users to perform SPARQL queries on specific paranets. By specifying a paranet, users can target their queries to retrieve data related to that paranet. This can be particularly useful when working with domain-specific data or services within a paranet.
 
-To query a specific paranet, ensure that the node you are querying has already enabled paranet syncing for the paranet you wish to query. Without this setup, the node may not have the relevant data required to process your queries.[ ](../../dkg-paranets/sync-a-dkg-paranet.md)
+To query a specific paranet, ensure that the node you are querying has already enabled paranet syncing for the paranet you wish to query. Without this setup, the node may not have the relevant data required to process your queries.[ ](../../dkg-paranets/syncing-a-dkg-paranet.md)
 
-[Read here](../../dkg-paranets/sync-a-dkg-paranet.md) how to set up a node to sync a paranet.
+[Read here](../../dkg-paranets/syncing-a-dkg-paranet.md) how to set up a node to sync a paranet.
 
 To query a specific paranet, you should set the `graph_location` to the desired paranet UAL. This approach allows you to direct your queries to the paranet that holds the relevant data.
 

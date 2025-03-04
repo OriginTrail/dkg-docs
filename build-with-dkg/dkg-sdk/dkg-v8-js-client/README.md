@@ -38,7 +38,7 @@ Then include `dist/dkg.min.js` in your html file. This will expose `DKG` on the 
 ```
 
 {% hint style="info" %}
-Make sure to also include the web3.js library, as it is a dependency for dkg.js.
+Make sure to also include the **web3.js library**, as it is a dependency for dkg.js.
 {% endhint %}
 
 ### Using dkg.js in NodeJS apps
