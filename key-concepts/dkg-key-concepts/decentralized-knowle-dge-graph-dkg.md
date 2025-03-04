@@ -4,7 +4,7 @@ icon: hexagon-image
 
 # Decentralized Knowle﻿dge Graph (DKG)
 
-OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **Knowledge Assets structured in an RDF knowledge graph** hosted on an open, permissionless decentralized network of DKG nodes. It's designed to support the [**verifiable Internet for AI**](broken-reference) based on an open, permissionless knowledge economy in which knowledge is the primary asset class.
+OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **Knowledge Assets structured in an RDF knowledge graph** hosted on an open, permissionless decentralized network of DKG nodes. It's designed to support the [**verifiable Internet for AI**](../../build-with-dkg/ai-agents/) based on an open, permissionless knowledge economy in which knowledge is the primary asset class.
 
 As a builder, you can create **collaborative knowledge graphs** using DKG paranets, incentivize the growth of your knowledge graph with Initial Paranet Offerings (IPOs), with a combination of public and private (and hybrid) [Knowledge Assets](https://origintrail.io/products/knowledge-assets), and use them within an ecosystem of composable services on multiple blockchains.
 
