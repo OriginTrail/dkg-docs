@@ -46,6 +46,7 @@
     * [Manual development environment setup](build-with-dkg/dkg-edge-node/run-an-edge-node/manual-development-environment-setup.md)
   * [Usage example](build-with-dkg/dkg-edge-node/usage-example.md)
   * [Customize the Edge Node & build your project](build-with-dkg/dkg-edge-node/customize-the-edge-node-and-build-your-project.md)
+  * [Knowledge Mining and dRAG examples](build-with-dkg/dkg-edge-node/knowledge-mining-and-drag-examples.md)
   * [Deploy your Edge-Node-based project](build-with-dkg/dkg-edge-node/deploy-your-edge-node-based-project.md)
   * [DKG Edge Node inception program](build-with-dkg/dkg-edge-node/dkg-edge-node-inception-program.md)
   * [DKG Edge Node API documentation](build-with-dkg/dkg-edge-node/dkg-edge-node-api-documentation.md)
