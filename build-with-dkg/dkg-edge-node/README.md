@@ -1,9 +1,9 @@
 ---
-icon: diagram-project
 description: >-
   The platform for building collective neuro-symbolic AI. Start building with
   the DKG Edge Node beta version
-cover: ../../.gitbook/assets/Edge_Node_cover (1).png
+icon: diagram-project
+cover: ../../.gitbook/assets/DKG Edge Node - beta version - docs visual2 1 (1).png
 coverY: 0
 layout:
   cover:
@@ -47,7 +47,7 @@ Feel free to contribute to these docs directly through [GitHub](https://github.c
 
 ### How can I start building with the Edge Node?
 
-<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><a href="dkg-edge-node-architecture.md">Step 1: Learn about the Edge Node internals (architecture)</a></td><td></td></tr><tr><td><a href="./">Step 2: Set up an Edge Node project</a></td><td></td></tr><tr><td><a href="customize-the-edge-node-and-build-your-project.md">Step 3: Customize the Edge Node to build your project</a></td><td></td></tr><tr><td><a href="deploy-your-edge-node-based-project.md">Step 4: Deploy to your environment</a></td><td></td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Step 1: <a href="dkg-edge-node-architecture.md">Learn about the Edge Node internals (architecture)</a></td><td></td><td><a href="../../.gitbook/assets/Learn about the Edge Node internals (architecture).png">Learn about the Edge Node internals (architecture).png</a></td></tr><tr><td>Step 2:<a href="get-started-with-the-edge-node-boilerplate/manual-setup.md"> </a><a href="get-started-with-the-edge-node-boilerplate/">Get started with the Edge Node boilerplate</a></td><td></td><td><a href="../../.gitbook/assets/Get started with the Edge Node boilerplate.png">Get started with the Edge Node boilerplate.png</a></td></tr><tr><td>Step 3: <a href="customize-and-build-with-the-edge-node.md">Customize &#x26; build with the Edge Node</a></td><td></td><td><a href="../../.gitbook/assets/Customize the Edge Node to build your project (1).png">Customize the Edge Node to build your project (1).png</a></td></tr></tbody></table>
 
 ### What's the difference between a Core Node and an Edge Node?
 

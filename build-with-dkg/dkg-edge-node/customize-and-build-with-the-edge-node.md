@@ -1,4 +1,4 @@
-# Customize the Edge Node & build your project
+# Customize & build with the Edge Node
 
 Now that you've set up the boilerplate project with all the essential components, it's time to explore the customization options. Each service in the app — interface, API, Knowledge Mining API, dRAG API, and Authentication Service — is **open** **source** and **fully** **customizable**. You can fork any of these repositories to modify them to better suit your specific requirements.
 
@@ -11,6 +11,64 @@ Each service is hosted in a separate GitHub repository, enabling you to fork the
 Before diving into how you can customize Edge Node services, it's important to highlight the role of the Authentication Service, which acts as the connecting hub between all components. This service manages the `UserConfig` data, including both required and optional parameters that are shared across all services to ensure the system functions cohesively.
 
 Users can add custom variables to the `UserConfig` table, making them accessible across all services. For instance, if a use case requires an external tool with an authentication key, the `UserConfig` table is the ideal place to store this key, ensuring that the variable is available to all services in the system.
+
+## Local environment setup with forked services
+
+To begin customizing and building your own solution using the OriginTrail Edge Node stack, we recommend the following local development setup:\
+
+
+1.  ### Fork Core Edge Node Repositories
+
+    In order to fully tailor the Edge Node to your specific use case, it is recommended that you **fork the following components** into your own GitHub account:
+
+    1. **Edge Node Knowledge Mining API**\
+       Handles the ingestion and transformation of your datasets into Knowledge Assets.\
+       👉 Fork this service to add new file format support and custom data transformation logic.
+    2. **Edge Node DRAG API**\
+       Provides search, retrieval, and chat functionality based on Knowledge Assets.\
+       👉 Fork this to extend the retrieval-augmented generation (RAG) logic or customize how assets are queried.
+    3. **Edge Node API**\
+       Main backend orchestrator connecting your UI, authentication, and data pipelines.\
+       👉 Fork this if you want to modify business logic, expose new routes, or integrate additional microservices.
+    4. **Edge Node UI**\
+       The user-facing interface of the Edge Node.\
+       👉 Fork this to customize branding, UX, workflows, or connect it with your own backend services.\
+
+2. ### Authentication Service (Optional Fork)
+   1.  **Edge Node Authentication Service**\
+       This handles user sessions and tokens.\
+       Recommended to use as-is for most cases to keep things simple and aligned with best practices.\
+       🛠️ Optional: You may fork this if you need:
+
+       1. Custom authentication methods (e.g., biometric login, enterprise SSO)
+       2. Integration with external identity providers
+       3. Custom logic for Verifiable Credential issuance or DID resolution
+
+
+3.  ### Forked Repositories Setup
+
+    Once you’ve successfully forked the core Edge Node repositories and tested the default setup using the official public repos, you’ll need to **clean your local environment** before installing your customized versions.
+
+    1.  **Prune Default Services**
+
+        To avoid conflicts and ensure a clean state, run the following command from the root of your Edge Node setup:\
+        \
+        `bash edge-node-installer/reset-env.sh`\
+        \
+        After pruning the default Edge Node setup, your environment will be reset:
+
+        1. All previously cloned **Edge Node service repositories** will be deleted
+        2. All **Edge Node databases** will be dropped\
+
+    2. **Switch to Your Forked Repositories**
+       1. **Open your `.env` file** located at the root of the project.
+       2. Replace the official repository URLs with the links to your **forked repositories.**\
+
+    3. **Install Your Custom Edge Node**
+       1. Run Edge node installer script which will install services based on your forked repos.
+       2. If your Edge node is set on MacOS, execute following script to run your services:\
+          \
+          `bash edge-node-installer/run-dev.sh`
 
 ## Common customization scenarios
 
@@ -25,7 +83,7 @@ The **Knowledge Mining API** is one of the most powerful services in the Edge No
       ```bash
       git clone https://github.com/your-username/edge-node-knowledge-mining.git
       ```
-* **Creating your pipeline**
+* **Creating your pipeline file**
   * To create a new processing pipeline, add a new file in the "dags" folder of your project.
   * As a starting point, you can use the existing example file `dags/exampleDAG.py`. Duplicate this file and modify it as needed:
     * The example pipeline serves as a basic illustration. It performs two tasks:

@@ -5,12 +5,12 @@ description: >-
   customization to fit your needs.
 ---
 
-# Manual development environment setup
+# Manual setup
 
 To manually set up the DKG Edge Node in your local environment, you can choose between the following two options:
 
-1. **\[Recommended]** [**Set up local Edge Node services with a local DKG network**](manual-development-environment-setup.md#setup-with-a-local-dkg-network)
-2. [**Configure local Edge Node services with a pre-deployed V8 DKG Core Testnet Node**](manual-development-environment-setup.md#setup-with-pre-deployed-v8-dkg-runtime-testnet-node)
+1. **\[Recommended]** [**Set up local Edge Node services with a local DKG network**](manual-setup.md#setup-with-a-local-dkg-network)
+2. [**Configure local Edge Node services with a pre-deployed V8 DKG Core Testnet Node**](manual-setup.md#setup-with-pre-deployed-v8-dkg-runtime-testnet-node)
 
 ## Setup with a local DKG network \[Recommended]
 

@@ -11,4 +11,9 @@ This is a **testnet** environment and is **not intended for production use**.\
 It is subject to frequent changes and updates as part of ongoing testing efforts to validate and improve new releases.
 {% endhint %}
 
+{% hint style="info" %}
+This is a **testnet** environment and is **not intended for production use**.\
+It is subject to frequent changes and updates as part of ongoing testing efforts to validate and improve new releases.
+{% endhint %}
+
 Happy DKG node running!
