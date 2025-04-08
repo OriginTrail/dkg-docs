@@ -23,11 +23,11 @@ The DKG Python SDK provides functionality for interacting with paranets on the O
 
 ## Setup and installation
 
-To interact with paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.py SDK installed and properly configured. Follow the general setup instructions for [installing dkg.py](./) and read more about paranets [in the following section](../../dkg-paranets/).
+To interact with paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.py SDK installed and properly configured. Follow the general setup instructions for [installing dkg.py](../../../dkg-sdk/dkg-v8-py-client/) and read more about paranets [in the following section](../../dkg-paranets/).
 
 ### Creating a paranet
 
-Before creating a paranet, you must first create a Knowledge Collection (KC) on the DKG and choose a Knowledge Asset (KA) from that KC that will represent the paranet. To create a Knowledge Asset on the DKG, refer to [the following page](./).
+Before creating a paranet, you must first create a Knowledge Collection (KC) on the DKG and choose a Knowledge Asset (KA) from that KC that will represent the paranet. To create a Knowledge Asset on the DKG, refer to [the following page](../../../dkg-sdk/dkg-v8-py-client/).
 
 Once the Knowledge Collection is created, you can choose which KA from that KC will represent a paranet. KA will have a unique identifier known as a Universal Asset Locator (UAL). You will use this UAL to create a paranet. The paranet creation process essentially links the paranet to the Knowledge Asset, establishing it on the blockchain. This on-chain representation allows for decentralized management and interaction with the paranet.
 
@@ -49,7 +49,7 @@ await dkg.paranet.create(paranet_ual, options)
 {% hint style="warning" %}
 To use the synchronous version, just remove the await (this applies to all function calls you will see in the rest of this document)
 
-Asynchronous version setup guide can be found here: [async guide](./)
+Asynchronous version setup guide can be found here: [async guide](../../../dkg-sdk/dkg-v8-py-client/)
 {% endhint %}
 
 In this example:

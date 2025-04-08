@@ -1,12 +1,12 @@
 # Knowledge submission & curation
 
-Staging Paranet is the process of submitting a **Knowledge Collection (KC)** for approval before it becomes part of the decentralized system. **Curators review and either approve or reject the KC** to ensure data accuracy and quality before it's added to the network.
+Staging Paranet is the process of submitting a **Knowledge Collection (KC)** for approval before it becomes part of the paranet. **Curators review and either approve or reject the KC** to ensure data accuracy and quality before it's added to the network.
 
 {% hint style="info" %}
 **Knowledge collection(KC)** is a **collection of knowledge assets.** It refers to structured data that can be stored, shared, and validated within a distributed network.
 {% endhint %}
 
-However, in order to maintain data integrity and prevent malicious or irrelevant information from being added, the paranet system includes **permission controls** that regulate who can submit and approve new data entries.
+In order to maintain data integrity and prevent malicious or irrelevant information from being added, the paranet system includes **permission controls** that regulate who can submit and approve new data entries.
 
 {% hint style="info" %}
 Here's the demo code for a [**staging paranet**](https://github.com/OriginTrail/dkg.js/blob/v8/develop/examples/paranet-permissioned-kc-submission-demo.js).

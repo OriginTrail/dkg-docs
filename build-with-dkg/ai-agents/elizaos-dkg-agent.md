@@ -97,7 +97,7 @@ Eliza uses a basic X authentication setup. Use your username, password, and emai
 
 If you wish to do so, modify the templates in `plugin-dkg/constants.ts` to change the format in which your data is stored or queried.
 
-Additionally, you can modify the interactions with the DKG in the Eliza providers, actions, and evaluators by calling different DKG.js functions, or modifying the parameters. For example, you could use a paranet for your agent. Check out the SDK docs [here](../chatdkg-builder-toolkit/dkg-sdk/).
+Additionally, you can modify the interactions with the DKG in the Eliza providers, actions, and evaluators by calling different DKG.js functions, or modifying the parameters. For example, you could use a paranet for your agent. Check out the SDK docs [here](../dkg-sdk/).
 
 ### **5. Run the character**
 

@@ -1,6 +1,6 @@
 # Paranet's incentives pool implementation
 
-The **incentives pool** is designed to motivate key participants in the paranet ecosystem by rewarding them for their contributions. Knowledge miners, voters, and operators all play crucial roles in maintaining and growing the system. These incentives ensure the continued success and proper functioning of the network.
+The **incentives pool** is designed to motivate key participants in the paranet ecosystem by rewarding them for their contributions. Knowledge miners, voters, and operators all play crucial roles in maintaining and growing the system. These incentives ensure the continued success and proper functioning of the network. Multiple incentives pools can be deployed for one paranet.
 
 ### Incentives pool options&#x20;
 
@@ -21,7 +21,7 @@ const incentivesPoolOptions = {
 * **operatorRewardPercentage**: Operators who are responsible for managing and maintaining the paranet.
 * **incentivizationProposalVotersRewardPercentage**: Voters who participate in proposals.
 * **incentivesPoolName**: Sets the name of the pool.
-* **rewardTokenAddress**: This specifies the address of the reward token. If zero address is set, then the chain's native token is used for incentivization.
+* **rewardTokenAddress**: This specifies the address of the reward token. If zero address is set, then the chain's native token is used for incentivization. The reward token address can also be any ERC-20 token of the respective chain.
 
 ### Deployment of incentives pool&#x20;
 

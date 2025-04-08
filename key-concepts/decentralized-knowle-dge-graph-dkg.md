@@ -18,7 +18,7 @@ OriginTrail DKG is multi-chain, integrating with Ethereum and Polkadot ecosystem
 
 There are many ways to participate, such as:
 
-* Building dapps with [DKG SDKs](../build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/)&#x20;
+* Building dapps with [DKG SDKs](../build-with-dkg/dkg-sdk/)&#x20;
 * Launching DKG paranets
 * Publishing knowledge to the DKG via knowledge mining&#x20;
 * [Delegating TRAC tokens](../delegated-staking/delegated-staking-introduction/) to DKG nodes to help secure the network and earn TRAC&#x20;

@@ -1,5 +1,5 @@
 ---
-cover: ../../../../.gitbook/assets/dkg-js-banner.jpg
+cover: ../../../.gitbook/assets/dkg-js-banner.jpg
 coverY: 0
 layout:
   cover:
@@ -25,7 +25,7 @@ The DKG JavaScript SDK provides functionality for interacting with paranets on t
 
 To interact with paranets, you need to connect to a running OriginTrail node (either local or remote) and ensure you have the dkg.js SDK installed and properly configured.&#x20;
 
-Follow the general setup instructions for [installing dkg.js](./) and read more about paranets [in the following section](../../dkg-paranets/).
+Follow the general setup instructions for [installing dkg.js](./) and read more about paranets [in the following section](../../chatdkg-builder-toolkit/dkg-paranets/).
 
 ### Creating a paranet
 
@@ -114,7 +114,7 @@ await DkgClient.asset.submitToParanet(kcUAL, paranetUAL);
 
 Participants in an incentivized paranet can earn rewards for their various roles and contributions, such as knowledge mining, voting on proposals, or operating the paranet. The dkg.js library provides functions to check if an address has a specific role within the paranet and to claim rewards associated with that role.
 
-If you're interested in deploying a **paranet's incentive pool**, you can find more details and guidelines at this [link](../../dkg-paranets/initial-paranet-offerings-ipos/paranets-incentives-pool.md).
+If you're interested in deploying a **paranet's incentive pool**, you can find more details and guidelines at this [link](../../chatdkg-builder-toolkit/dkg-paranets/initial-paranet-offerings-ipos/paranets-incentives-pool.md).
 
 **Roles in a paranet:**
 
@@ -131,7 +131,7 @@ const incentivesPoolOptions = {
         operatorRewardPercentage: 10.0,
         incentivizationProposalVotersRewardPercentage: 12.0,
         incentivesPoolName: 'YourIncentivesPoolName',
-        rewardTokenAddress: '0x0000000000000000000000000000000000000000', // the gas token for the chosen network
+        rewardTokenAddress: '0x0000000000000000000000000000000000000000', // the native token for the chosen network
  };
  
  // Deploys the incentives contract to the Paranet using the defined options and prints the deployment result.
@@ -201,9 +201,9 @@ To learn more about **managing the submission and approval process for knowledge
 
 The DKG enables users to perform SPARQL queries on specific paranets. By specifying a paranet, users can target their queries to retrieve data related to that paranet. This can be particularly useful when working with domain-specific data or services within a paranet.
 
-To query a specific paranet, ensure that the node you are querying already has paranet syncing enabled for the paranet you wish to query. Without this setup, the node may not have the relevant data required to process your queries.[ ](../../dkg-paranets/syncing-a-dkg-paranet.md)
+To query a specific paranet, ensure that the node you are querying already has paranet syncing enabled for the paranet you wish to query. Without this setup, the node may not have the relevant data required to process your queries.[ ](../../chatdkg-builder-toolkit/dkg-paranets/syncing-a-dkg-paranet.md)
 
-[Read here](../../dkg-paranets/syncing-a-dkg-paranet.md) how to set up a node to sync a paranet.
+[Read here](../../chatdkg-builder-toolkit/dkg-paranets/syncing-a-dkg-paranet.md) how to set up a node to sync a paranet.
 
 To query a specific paranet, you have to specify the paranet UAL using the `paranetUAL` parameter. This approach allows you to direct your queries to the paranet that holds the relevant data.
 

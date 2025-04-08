@@ -6,7 +6,7 @@ description: Python library for interacting with the DKG
 
 If you are looking to build applications leveraging [Knowledge Assets](./#create-a-knowledge-collection) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.py library is the best place to start!
 
-The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail DKG (the node is a dependency). Therefore, you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-node](../../../dkg-core-node/run-a-v8-core-node-on-testnet/), in order to use the SDK.
+The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail DKG (the node is a dependency). Therefore, you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-node](../../dkg-core-node/run-a-v8-core-node-on-testnet/), in order to use the SDK.
 
 ## Prerequisites
 
@@ -35,13 +35,6 @@ or poetry:
 poetry add dkg==8.0.1
 ```
 
-Then import DKG, BlockchainProvider, and NodeHTTPProvider classes inside your project:
-
-```python
-from dkg import DKG
-from dkg.providers import BlockchainProvider, NodeHTTPProvider
-```
-
 ## :snowboarder: Quickstart
 
 In this package, there are both synchronous and asynchronous versions of the DKG client.&#x20;
@@ -54,9 +47,9 @@ The asynchronous client is built for non-blocking operations, making it ideal fo
 
 To use the Synchronous DKG library, you need to connect to a running local or remote OT-node.&#x20;
 
-```python
-from dkg.providers import BlockchainProvider, NodeHTTPProvider
-
+<pre class="language-python"><code class="lang-python">from dkg import DKG
+<strong>from dkg.providers import BlockchainProvider, NodeHTTPProvider
+</strong>
 node_provider = NodeHTTPProvider(endpoint_uri="http://localhost:8900", api_version="v1")
 blockchain_provider = BlockchainProvider(
     Environments.DEVELOPMENT.value, # or TESTNET, MAINNET
@@ -68,7 +61,7 @@ dkg = DKG(node_provider, blockchain_provider)
 print(dkg.node.info)
 # if successfully connected, this should print the dictionary with node version
 # { "version": "8.X.X" }
-```
+</code></pre>
 
 ### Asynchronous DKG client
 
@@ -226,25 +219,6 @@ The complete response of the method will look like:
     }
 }
 
-```
-
-If you want to create multiple different assets, you can increase your allowance. Then, each time you initiate a publish, the step of calling the blockchain to increase your allowance will be skipped, resulting in a faster publishing time.
-
-```python
-dkg.asset.increase_allowance(1569429592284014000)
-
-result = await dkg.asset.create(
-    content=content,
-    options={
-        "epochs_num": 6
-    },
-)
-```
-
-After you've finished publishing data to the blockchain, you can decrease your allowance to revoke the authorization given to the contract to spend your tokens. If you want to revoke all remaining authorization, it's a good practice to pass the same value that you used for increasing your allowance.
-
-```python
-dkg.asset.decrease_allowance(1569429592284014000)
 ```
 
 ## Read Knowledge Asset data from the DKG

@@ -4,7 +4,11 @@ description: How to setup a local and shared development environment
 
 # Development environment setup
 
-## Quick Start
+## Running node engines on the DKG testnet (recommended)
+
+We recommend following the [Edge Node Deployment Guide](https://docs.origintrail.io/build-with-dkg/dkg-edge-node/setup-your-edge-node-development-environment) for  testnet setup instructions.
+
+## Running a local DKG network
 
 These instructions are made for macOS and Linux.
 
@@ -74,10 +78,6 @@ For running the local DKG network on **Linux**, run the following command:
 ```bash
 ./tools/local-network-setup/setup-linux-environment.sh --nodes=5
 ```
-
-## Running node engines on the DKG testnet
-
-For a shared development environment, we recommend deploying DKG testnet node engines - instructions can be found [here](../../dkg-core-node/run-a-v8-core-node-on-testnet/).
 
 
 

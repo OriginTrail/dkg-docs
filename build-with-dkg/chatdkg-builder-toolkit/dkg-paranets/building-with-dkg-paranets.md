@@ -12,7 +12,7 @@ To gain access to the paranet knowledge graph, you can use one of the [public DK
 
 ### Querying paranets
 
-Once you have access to the paranet knowledge graph via a gateway node, you can use one of the [DKG SDKs](../dkg-sdk/) to interact with it. It is also possible to open up your triple store SPARQL endpoint directly and query the paranet knowledge graph in its own repository (the paranet repository name is equivalent to the paranet profile Knowledge Asset UAL, with dash characters instead of slash).&#x20;
+Once you have access to the paranet knowledge graph via a gateway node, you can use one of the [DKG SDKs](../../dkg-sdk/) to interact with it. It is also possible to open up your triple store SPARQL endpoint directly and query the paranet knowledge graph in its own repository (the paranet repository name is equivalent to the paranet profile Knowledge Asset UAL, with dash characters instead of slash).&#x20;
 
 Using SPARQL, it is possible to query and integrate knowledge from multiple paranets and whole DKG in one query using SPARQL federated queries. &#x20;
 

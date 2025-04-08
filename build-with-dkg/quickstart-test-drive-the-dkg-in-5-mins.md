@@ -10,7 +10,7 @@ Welcome to your first hands-on experience with the **OriginTrail Decentralized K
 
 ### What You’ll Do
 
-You’ll use the [**DKG SDK**](chatdkg-builder-toolkit/dkg-sdk/) (JavaScript or Python) to:
+You’ll use the [**DKG SDK**](dkg-sdk/) (JavaScript or Python) to:
 
 * Connect to a public DKG node
 * Publish a simple **Knowledge Asset**
@@ -52,7 +52,7 @@ pip install dkg
 ```
 
 {% hint style="info" %}
-Learn more about SDK in the [SDK Overview](chatdkg-builder-toolkit/dkg-sdk/)
+Learn more about SDK in the [SDK Overview](dkg-sdk/)
 {% endhint %}
 
 ### Step 2: Publish Your First Knowledge Asset

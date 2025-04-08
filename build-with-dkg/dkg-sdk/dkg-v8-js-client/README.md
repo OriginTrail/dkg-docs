@@ -6,11 +6,11 @@ description: Javascript library for the Decentralized Knowledge Graph.
 
 If you are looking to build applications leveraging [Knowledge Assets](./#create-a-knowledge-asset) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.js SDK library is the best place to start!
 
-The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail DKG  (the node is a dependency). Therefore, to use the SDK, you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-node](../../../dkg-core-node/run-a-v8-core-node-on-testnet/).
+The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail DKG  (the node is a dependency). Therefore, to use the SDK, you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-node](../../dkg-core-node/run-a-v8-core-node-on-testnet/).
 
 ## Prerequisites
 
-* node ≥ 16.0.0
+* node ≥ 20.0.0
 * npm ≥ 8.0.0
 
 ## Installation
@@ -104,6 +104,8 @@ The system supports multiple blockchain networks, which can be configured using 
 
 * Hardhat1: hardhat1:31337
 * Hardhat2: hardhat2:31337
+
+The system uses default publicy available RPCs for each chain. However, because these RPCs are shared by many users, they can become overloaded, leading to errors—such as failures when creating a KA. To avoid this, we recommend using your own RPC if possible. You can set a custom RPC by passing `rpc: RPC_URL` in the blockchain options.
 
 ## Create a Knowledge Asset
 
