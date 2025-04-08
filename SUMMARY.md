@@ -18,6 +18,7 @@
 
 ## Build with DKG
 
+* [Quickstart (test drive the DKG in 5 mins)](build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins.md)
 * [ChatDKG builder toolkit](build-with-dkg/chatdkg-builder-toolkit/README.md)
   * [DKG SDK](build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/README.md)
     * [Development environment setup](build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/setting-up-your-development-environment.md)
