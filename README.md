@@ -1,6 +1,6 @@
 ---
-icon: earth-asia
 description: Build a verifiable Internet for AI
+icon: earth-asia
 cover: .gitbook/assets/kk.png
 coverY: 0
 layout:
@@ -35,7 +35,7 @@ This provides a powerful substrate for **trusted, human-centric AI solutions** t
 
 ### Choose your start
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="build-with-dkg/ai-agents/">AI agents</a></td><td>Create, expand, and share your AI agents’ memories in a transparent and verifiable way on the DKG</td><td></td><td><a href="build-with-dkg/ai-agents/">ai-agents</a></td></tr><tr><td><a href="build-with-dkg/dkg-edge-node/">DKG Edge Node</a></td><td>Build your decentralized AI applications on the DKG</td><td></td><td><a href="build-with-dkg/dkg-edge-node/">dkg-edge-node</a></td></tr><tr><td><a href="build-with-dkg/dkg-core-node/">DKG Core Node</a></td><td>Contribute to the DKG security, stability, and functionality and earn rewards</td><td></td><td><a href="build-with-dkg/dkg-core-node/">dkg-core-node</a></td></tr><tr><td><a href="dkg-v6-previous-version/delegated-staking/">Delegated staking</a></td><td>Contribute your TRAC tokens for network utility and earn rewards</td><td></td><td></td></tr><tr><td><a href="key-concepts/dkg-key-concepts/">DKG key concepts </a></td><td>Learn key concepts of the DKG and empower yourself to build decentralized AI</td><td></td><td></td></tr><tr><td><a href="build-with-dkg/dkg-sdk/">DKG SDK</a></td><td>Explore the client libraries for your applications to interact and connect with the DKG</td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="build-with-dkg/chatdkg-builder-toolkit/ai-agents/">AI agents</a></td><td>Create, expand, and share your AI agents’ memories in a transparent and verifiable way on the DKG</td><td></td><td><a href="build-with-dkg/chatdkg-builder-toolkit/ai-agents/">ai-agents</a></td></tr><tr><td><a href="build-with-dkg/dkg-edge-node/">DKG Edge Node</a></td><td>Build your decentralized AI applications on the DKG</td><td></td><td><a href="build-with-dkg/dkg-edge-node/">dkg-edge-node</a></td></tr><tr><td><a href="build-with-dkg/dkg-core-node/">DKG Core Node</a></td><td>Contribute to the DKG security, stability, and functionality and earn rewards</td><td></td><td><a href="build-with-dkg/dkg-core-node/">dkg-core-node</a></td></tr><tr><td><a href="dkg-v6-previous-version/delegated-staking/">Delegated staking</a></td><td>Contribute your TRAC tokens for network utility and earn rewards</td><td></td><td></td></tr><tr><td><a href="key-concepts/dkg-key-concepts/">DKG key concepts </a></td><td>Learn key concepts of the DKG and empower yourself to build decentralized AI</td><td></td><td></td></tr><tr><td><a href="build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/">DKG SDK</a></td><td>Explore the client libraries for your applications to interact and connect with the DKG</td><td></td><td></td></tr></tbody></table>
 
 
 

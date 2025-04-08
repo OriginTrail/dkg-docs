@@ -6,7 +6,7 @@ description: Python library for interacting with the DKG
 
 If you are looking to build applications leveraging [Knowledge Assets](./#create-a-knowledge-collection) on the OriginTrail Decentralized Knowledge Graph (DKG), the dkg.py library is the best place to start!
 
-The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail DKG (the node is a dependency). Therefore, you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-node](../../dkg-core-node/run-a-v8-core-node-on-testnet/), in order to use the SDK.
+The DKG SDK is used together with an **OriginTrail gateway node** to build applications that interface with the OriginTrail DKG (the node is a dependency). Therefore, you either need to run a gateway node on [your local environment](../setting-up-your-development-environment.md) or a [hosted OT-node](../../../dkg-core-node/run-a-v8-core-node-on-testnet/), in order to use the SDK.
 
 ## Prerequisites
 

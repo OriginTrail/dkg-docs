@@ -15,6 +15,6 @@ DKG Testnet runs the same implementation as the DKG Mainnet, and it is used for 
 {% hint style="info" %}
 If you want to play around and test out the DKG, we recommend using the DKG Testnet. For that, you will need test TRAC and test NEURO tokens, which you can obtain by joining the OriginTrail [Discord](https://discord.com/invite/FCgYk2S) and [requesting them from our Faucet Bot](test-token-faucet.md).
 
-You can also run a local network on your machine. To run a local network, please refer to the [Local network setup page](../build-with-dkg/dkg-sdk/setting-up-your-development-environment.md)
+You can also run a local network on your machine. To run a local network, please refer to the [Local network setup page](../build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/setting-up-your-development-environment.md)
 {% endhint %}
 

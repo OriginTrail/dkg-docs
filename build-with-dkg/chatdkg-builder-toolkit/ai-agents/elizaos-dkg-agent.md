@@ -67,7 +67,7 @@ Here's an example of how to set up a MetaMask wallet: [here](https://youtu.be/-H
 * `PRIVATE_KEY`: The private key corresponding to the above wallet. Ensure you keep this secure and never share it outside of the .env file.
 * `BLOCKCHAIN_NAME`: Specify the blockchain network you’re using. `otp:2043` (NeuroWeb mainnet), `base:8453` (Base mainnet), `gnosis:100` (Gnosis mainnet), `otp:20430` (NeuroWeb testnet), `base:84532` (Base testnet), `gnosis:10200` (Gnosis testnet)
 
-In order to fund your wallet on testnet, feel free to use the [Faucet](../../useful-resources/test-token-faucet.md) in the [OriginTrail Discord](https://discord.gg/xCaY7hvNwD). There's a message pinned in the **#faucet-bot** channel in case some of the faucets are down. In that case, feel free to ping the core team to send you some testnet funds manually.
+In order to fund your wallet on testnet, feel free to use the [Faucet](../../../useful-resources/test-token-faucet.md) in the [OriginTrail Discord](https://discord.gg/xCaY7hvNwD). There's a message pinned in the **#faucet-bot** channel in case some of the faucets are down. In that case, feel free to ping the core team to send you some testnet funds manually.
 
 {% hint style="info" %}
 If you are building your agent on the NeuroWeb, you need to get NEURO first and then TRAC.

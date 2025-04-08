@@ -1,5 +1,5 @@
 ---
-cover: ../../../.gitbook/assets/dkg-js-banner.jpg
+cover: ../../../../.gitbook/assets/dkg-js-banner.jpg
 coverY: 0
 layout:
   cover:

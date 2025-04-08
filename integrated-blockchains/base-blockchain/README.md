@@ -20,6 +20,6 @@ Setting up a DKG node on Base is easy and simple by following instructions in th
 
 ### Building on DKG on Base
 
-A powerful tool to build upon the DKG on BASE is the [DKG SDK](../../build-with-dkg/dkg-sdk/). By leveraging the DKG SDK, developers can harness all the capabilities that the DKG on Base provides, unlocking new potentials for creating advanced decentralized applications and services.
+A powerful tool to build upon the DKG on BASE is the [DKG SDK](../../build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/). By leveraging the DKG SDK, developers can harness all the capabilities that the DKG on Base provides, unlocking new potentials for creating advanced decentralized applications and services.
 
 At OriginTrail, we are empowering builders to transcend the ordinary and construct the extraordinary. Dive into our tutorials to harness the power of decentralized AI. Explore guides prepared by the OriginTrail Builders community to inspire your own innovative projects - 📚 [Tutorials](../../useful-resources/tutorials.md).

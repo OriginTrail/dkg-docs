@@ -4,7 +4,7 @@ icon: yelp
 
 # DKG paranets
 
-<figure><img src="../../.gitbook/assets/DKG Paranets.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/DKG Paranets.png" alt=""><figcaption></figcaption></figure>
 
 **DKG para-networks**, or "**paranets",** are a feature of the OriginTrail Decentralized Knowledge Graph (DKG) designed to enable decentralized, co-owned, and incentivized knowledge graphs.&#x20;
 
@@ -54,7 +54,7 @@ DKG paranets provide a structured, transparent knowledge-sharing system where va
 * **Decentralized journalism**—Independent journalists can publish reports that are verified and co-owned by a decentralized network, reducing misinformation and ensuring accountability.
 * **Crowdsourced innovation**—Communities and organizations can jointly develop and maintain R\&D knowledge bases, allowing open collaboration while ensuring contributions are fairly recognized and rewarded.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-02-26 at 17.22.36.png" alt=""><figcaption><p>A paranet knowledge graph example</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-02-26 at 17.22.36.png" alt=""><figcaption><p>A paranet knowledge graph example</p></figcaption></figure>
 
 ### Decentralized knowledge sharing for AI
 

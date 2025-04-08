@@ -2,7 +2,7 @@
 
 To interact with specific DKG paranet's knowledge graphs using your OriginTrail node, you need to configure your node to synchronize the paranet's knowledge collections. This setup can be achieved by modifying your node's configuration file to include the paranet UAL.&#x20;
 
-If you have not yet set up your node or need guidance on configuring a DKG Core Node, please refer to the [DKG Core Node](../dkg-core-node/).
+If you have not yet set up your node or need guidance on configuring a DKG Core Node, please refer to the [DKG Core Node](../../dkg-core-node/).
 
 To enable your node to sync with a paranet, you will need to add `assetSync` object  to your node’s `.origintrail_noderc` file. Below is an example of how to configure this (make sure to replace the UAL in the example below):
 

@@ -77,7 +77,7 @@ For running the local DKG network on **Linux**, run the following command:
 
 ## Running node engines on the DKG testnet
 
-For a shared development environment, we recommend deploying DKG testnet node engines - instructions can be found [here](../dkg-core-node/run-a-v8-core-node-on-testnet/).
+For a shared development environment, we recommend deploying DKG testnet node engines - instructions can be found [here](../../dkg-core-node/run-a-v8-core-node-on-testnet/).
 
 
 
