@@ -4,13 +4,8 @@
 
 ## Key Concepts
 
-* [DKG key concepts](key-concepts/dkg-key-concepts/README.md)
-  * [Decentralized Knowle﻿dge Graph (DKG)](key-concepts/dkg-key-concepts/decentralized-knowle-dge-graph-dkg.md)
-  * [DKG V8 guidebook](key-concepts/dkg-key-concepts/dkg-v8-guidebook/README.md)
-    * [Protocol updates](key-concepts/dkg-key-concepts/dkg-v8-guidebook/protocol-updates.md)
-    * [Feature roadmap](key-concepts/dkg-key-concepts/dkg-v8-guidebook/feature-roadmap.md)
-    * [How to upgrade to V8?](key-concepts/dkg-key-concepts/dkg-v8-guidebook/how-to-upgrade-to-v8.md)
-  * [What's new with OriginTrail V8](key-concepts/dkg-key-concepts/whats-new-with-origintrail-v8.md)
+* [Decentralized Knowle﻿dge Graph (DKG)](key-concepts/decentralized-knowle-dge-graph-dkg.md)
+* [DKG key concepts](key-concepts/dkg-key-concepts.md)
 
 ***
 
@@ -92,6 +87,11 @@
 
 ## Useful Resources
 
+* [What's new with OriginTrail V8](useful-resources/whats-new-with-origintrail-v8.md)
+* [DKG V8 guidebook](useful-resources/dkg-v8-guidebook/README.md)
+  * [Protocol updates](useful-resources/dkg-v8-guidebook/protocol-updates.md)
+  * [Feature roadmap](useful-resources/dkg-v8-guidebook/feature-roadmap.md)
+  * [How to upgrade to V8?](useful-resources/dkg-v8-guidebook/how-to-upgrade-to-v8.md)
 * [Public nodes](useful-resources/public-nodes.md)
 * [Tutorials](useful-resources/tutorials.md)
 * [Test token faucet](useful-resources/test-token-faucet.md)

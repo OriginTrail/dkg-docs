@@ -1,9 +1,9 @@
 ---
-icon: lightbulb-exclamation-on
 description: >-
   The OriginTrail Decentralized Knowledge Graph (DKG) introduces novel concepts,
   such as Knowledge Assets, autonomous paranets, and others. Find an overview of
   key concepts below.
+icon: lightbulb-exclamation-on
 ---
 
 # DKG key concepts
@@ -23,7 +23,7 @@ More precisely, a Knowledge Asset is a web resource identified by a unique Unifo
 
 
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-06-13 at 22.59.48.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-13 at 22.59.48.png" alt=""><figcaption></figcaption></figure>
 
 Knowledge content can be observed as a time series of knowledge content states or **assertions**. Each assertion can be independently verified for integrity, by recomputing the cryptographic fingerprint by the verifier and comparing if the computed result matches with the corresponding blockchain fingerprint record.
 
@@ -36,6 +36,17 @@ In summary, a Knowledge Asset is a combination of an NFT record and a semantic r
 ### Knowledge Asset state finality
 
 Similar to distributed databases, the OriginTrail DKG applies replication mechanisms and needs mechanisms to reach a consistent state on the network for Knowledge Assets. In OriginTrail DKG, state consistency is reconciled using the blockchain, which hosts state proofs for Knowledge Assets, and replication commit information from DKG nodes. This means that updates for an existing Knowledge Asset are accepted by the network nodes (similar to the way nodes accept Knowledge Assets on creation) and can operate with all accepted states.
+
+## TRAC token
+
+The Trace token (TRAC) is the utility token that powers the OriginTrail Decentralized Knowledge Graph (DKG). Introduced in 2018 as an ERC-20 token on Ethereum with a fixed supply of 500 million, TRAC is essential for various network operations.
+
+**How TRAC is used**
+
+* **Publishing & updating Knowledge Assets** – TRAC is required to create, update, and manage Knowledge Assets in the DKG.
+* **Node incentives** – Network nodes earn TRAC by hosting data, securing the network, and ensuring knowledge integrity.
+* **Staking** – Nodes stake TRAC to increase their reputation and improve their ability to participate in the network.
+* **Multi-Chain compatibility** – TRAC operates across multiple blockchains, including Ethereum, NeuroWeb, Base, Gnosis, and Polygon.
 
 ## Decentralized Retrieval Augmented Generation
 
@@ -107,4 +118,4 @@ The next building block of the DKG is **AI para-networks** or **paranets**.
 
 **AI para-networks** or **paranets** are autonomously operated structures in the DKG, owned by their community as a paranet operator. In paranets, we find **assemblies of Knowledge Assets** driving use cases with associated **paranet-specific AI services** and an **incentivization model** to reward knowledge miners fueling its growth.&#x20;
 
-**To see the DKG in action, continue to the** [**DKG SDK section**](./)**.**
+**To see the DKG in action, continue to the Quickstart section.**

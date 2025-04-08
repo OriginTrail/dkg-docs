@@ -4,9 +4,9 @@ icon: hexagon-image
 
 # Decentralized Knowle﻿dge Graph (DKG)
 
-OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **Knowledge Assets structured in an RDF knowledge graph** hosted on an open, permissionless decentralized network of DKG nodes. It's designed to support the [**verifiable Internet for AI**](../../build-with-dkg/chatdkg-builder-toolkit/ai-agents/) based on an open, permissionless knowledge economy in which knowledge is the primary asset class.
+OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **Knowledge Assets structured in an RDF knowledge graph** hosted on an open, permissionless decentralized network of DKG nodes. It's designed to support the **verifiable Internet for AI** based on an open, permissionless knowledge economy in which knowledge is the primary asset class.
 
-As a builder, you can create **collaborative knowledge graphs** using DKG paranets, incentivize the growth of your knowledge graph with Initial Paranet Offerings (IPOs), with a combination of public and private (and hybrid) [Knowledge Assets](https://origintrail.io/products/knowledge-assets), and use them within an ecosystem of composable services on multiple blockchains.
+As a builder, you can create **collaborative knowledge graphs** using DKG paranets, incentivize the growth of your knowledge graph with Initial Paranet Offerings (IPOs), with a combination of public and private (and hybrid) [Knowledge Assets](dkg-key-concepts.md#knowledge-assets), and use them within an ecosystem of composable services on multiple blockchains.
 
 In hopes of a better understanding of DKG, the analogy can be compared to traditional centralized SQL solutions like so.
 
@@ -18,12 +18,12 @@ OriginTrail DKG is multi-chain, integrating with Ethereum and Polkadot ecosystem
 
 There are many ways to participate, such as:
 
-* Building dapps with [DKG SDKs](../../build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/)&#x20;
+* Building dapps with [DKG SDKs](../build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/)&#x20;
 * Launching DKG paranets
 * Publishing knowledge to the DKG via knowledge mining&#x20;
-* [Delegating TRAC tokens](../../delegated-staking/delegated-staking-introduction/) to DKG nodes to help secure the network and earn TRAC&#x20;
-* [Running DKG Core Nodes](../../build-with-dkg/dkg-core-node/), helping to host the DKG network, and earning TRAC node operator fees&#x20;
-* Open-source contributions [to DKG code](../../useful-resources/contribute/)
+* [Delegating TRAC tokens](../delegated-staking/delegated-staking-introduction/) to DKG nodes to help secure the network and earn TRAC&#x20;
+* [Running DKG Core Nodes](../build-with-dkg/dkg-core-node/), helping to host the DKG network, and earning TRAC node operator fees&#x20;
+* Open-source contributions [to DKG code](../useful-resources/contribute/)
 * Aharing your ideas and joining the discussion in [Discord](https://discord.gg/xCaY7hvNwD), [Telegram](https://t.me/origintrail), [Reddit](https://www.reddit.com/r/OriginTrail/), [X](https://x.com/origin_trail)&#x20;
 
 ### Why combine blockchain with knowledge graphs?
@@ -34,7 +34,7 @@ Blockchains and knowledge graphs are two different types of networks:
 * **Knowledge graphs are semantic networks.** When Google first coined the term "knowledge graph", they explained it as "things, not strings". Knowledge graphs connect highly structured, machine-understandable semantic entities into one **semantic data network.** This enables powerful data capabilities, such as search, reasoning, inference, recommendations, and other forms of symbolic AI. Knowledge graphs inherit the technology stack idea of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web) (introduced as the "original" Web 3.0 by Sir Tim Berners-Lee, the inventor of WWW). They are particularly well positioned for use with LLMs as they provide highly contextualized knowledge (or annotated data)
 
 {% hint style="info" %}
-If you are looking to jump right into the code, head over to the [DKG SDK](../../build-with-dkg/chatdkg-builder-toolkit/dkg-sdk/) page.
+If you want to jump into the code, head over to the [ChatDKG builder toolkit](https://docs.origintrail.io/build-with-dkg/chatdkg-builder-toolkit) page.
 {% endhint %}
 
 ## System architecture
@@ -43,7 +43,7 @@ OriginTrail synergizes blockchains and knowledge graphs in a layered architectur
 
 **Blockchains are trust networks** established to enable reliable computation through **decentralized consensus**, operating as a global, dependable computer. In contrast, **knowledge graphs serve as semantic data networks** for **knowledge management**. The OriginTrail architecture is crafted to ensure a trustworthy environment for AI applications by leveraging these two fundamental layers.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-06-13 at 23.54.29.png" alt=""><figcaption><p>The three layers of OriginTrail</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-13 at 23.54.29.png" alt=""><figcaption><p>The three layers of OriginTrail</p></figcaption></figure>
 
 The following sections of the documentation dive deep into each of the two technical layers and their interplay.
 
@@ -54,7 +54,7 @@ We distinguish several sub-layers of the DKG layer (Layer 2):
 * **Consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols (currently supporting Ethereum, xDai blockchain, and the OriginTrail NeuroWeb).
 * **Application layer,** encompassing both dapps and traditional applications which utilize the OriginTrail DKG as part of their data flows.
 
-<div align="center"><img src="../../.gitbook/assets/Screenshot 2022-03-30 at 16.46.10.png" alt="OriginTrail conceptual architecture"></div>
+<div align="center"><img src="../.gitbook/assets/Screenshot 2022-03-30 at 16.46.10.png" alt="OriginTrail conceptual architecture"></div>
 
 We also distinguish between:
 

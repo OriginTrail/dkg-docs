@@ -1,6 +1,6 @@
 ---
-icon: rocket-launch
 hidden: true
+icon: rocket-launch
 cover: ../.gitbook/assets/DKG V8 update guide book - gitbook cover.png
 coverY: 0
 layout:
@@ -27,11 +27,11 @@ This guide will introduce you to the DKG V8 update, what you can expect from the
 
 Check [this page](https://docs.origintrail.io/dkg-v8-upcoming-version/whats-new-with-origintrail-v8) to get acquainted with the most important new updates of the DKG V8. In this document, we will focus on the implementation details of the protocol.
 
-**Learn more on** [**Protocol updates here**](../key-concepts/dkg-key-concepts/dkg-v8-guidebook/protocol-updates.md)
+**Learn more on** [**Protocol updates here**](../useful-resources/dkg-v8-guidebook/protocol-updates.md)
 
-**Learn more on the upcoming** [**Feature roadmap**](../key-concepts/dkg-key-concepts/dkg-v8-guidebook/feature-roadmap.md) **here**
+**Learn more on the upcoming** [**Feature roadmap**](../useful-resources/dkg-v8-guidebook/feature-roadmap.md) **here**
 
-To understand what you need to **do to upgrade your applications or nodes**, head over to the "[How to upgrade to V8](../key-concepts/dkg-key-concepts/dkg-v8-guidebook/how-to-upgrade-to-v8.md)" page
+To understand what you need to **do to upgrade your applications or nodes**, head over to the "[How to upgrade to V8](../useful-resources/dkg-v8-guidebook/how-to-upgrade-to-v8.md)" page
 
 If you have any questions or issues, please contact us in the [Discord #v8-discussion](https://discord.gg/9WwMRhP9) channel and post them there.
 
