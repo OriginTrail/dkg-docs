@@ -1,7 +1,6 @@
 ---
 description: Decentralized Knowledge Graph V8 client
 icon: gear-complex-code
-coverY: 0
 ---
 
 # DKG SDK
