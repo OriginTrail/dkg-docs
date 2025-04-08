@@ -2,7 +2,17 @@
 description: >-
   This page will guide you through the DKG Edge Node installation process for
   MacOS and Linux
-layout: editorial
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Automated setup with the installer
