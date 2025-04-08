@@ -2,15 +2,23 @@
 icon: globe
 ---
 
-# Available networks (testnets, mainnet)
+# Available networks, network details and RPCs
 
 ### DKG Mainnet
 
-The OriginTrail ecosystem is centered around the **Decentralized Knowledge Graph (DKG)**, which launched in December 2018 and is the main network with the full protocol implementation. In March 2021, the DKG has become a multichain network, expanding DKG's consensus layer to the xDAI blockchain, enabling the users to choose which network to utilize based on their requirements. In December 2022, DKG version 6 was launched, which is also connected to the NeuroWeb mainnet secured by the Polkadot Relay Chain.
+| Network Name     | RPC URL                                              | Chain ID | Currency Symbol | Block Explorer URL           |
+| ---------------- | ---------------------------------------------------- | -------- | --------------- | ---------------------------- |
+| Base Mainnet     | https://base-mainnet.infura.io/v3/YOUR-PROJECT-ID    | 8453     | ETH             | https://basescan.org         |
+| Gnosis Mainnet   | https://rpc.gnosischain.com                          | 100      | xDAI            | https://gnosisscan.io        |
+| NeuroWeb Mainnet | https://astrosat-parachain-rpc.origin-trail.network/ | 2043     | MNEURO          | https://neuroweb.subscan.io/ |
 
 ### DKG Testnet
 
-DKG Testnet runs the same implementation as the DKG Mainnet, and it is used for final release testing prior to hitting the mainnet. Testnet is connected to NeuroWeb Testnet, which is secured by Rococo Relay Chain.
+| Network Name     | RPC URL                                    | Chain ID | Currency Symbol | Block Explorer URL                   |
+| ---------------- | ------------------------------------------ | -------- | --------------- | ------------------------------------ |
+| Base Sepolia     | https://sepolia.base.org                   | 84532    | ETH             | https://sepolia.basescan.org         |
+| Gnosis Chiado    | https://rpc.chiadochain.net                | 10200    | xDAI            | https://blockscout.chiadochain.net   |
+| NeuroWeb Testnet | https://lofar-testnet.origin-trail.network | 20430    | MNEURO          | https://neuroweb-testnet.subscan.io/ |
 
 {% hint style="info" %}
 If you want to play around and test out the DKG, we recommend using the DKG Testnet. For that, you will need test TRAC and test NEURO tokens, which you can obtain by joining the OriginTrail [Discord](https://discord.com/invite/FCgYk2S) and [requesting them from our Faucet Bot](test-token-faucet.md).

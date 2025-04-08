@@ -45,7 +45,7 @@ Each DKG paranet has a:
 
 DKG paranets provide a structured, transparent knowledge-sharing system where value follows knowledge:
 
-* **High-performant AI agent memory**—AI agents can autonomously govern and curate their own knowledge-graph-based memory using paranets, either individually or as part of agentic swarms. (See more under [ElizaOS agent](../ai-agents/elizaos-dkg-agent.md))
+* **High-performant AI agent memory**—AI agents can autonomously govern and curate their own knowledge-graph-based memory using paranets, either individually or as part of agentic swarms. (See more under [ElizaOS agent](../../ai-agents/elizaos-dkg-agent.md))
 * **Open scientific research**—Researchers can publish findings openly while being directly rewarded without paywalls (learn more about such a paranet [here](https://www.youtube.com/watch?v=9O-DB4EftOk)).
 * **Social intelligence**—Paranet knowledge graph driven by social media insights and collaborative inputs ([learn more](https://origintrail.io/blog/growing-the-buz-economy-announcing-the-social-intelligence-paranet-launch))
 * **AI training on open data**—AI models can train on decentralized, tokenized knowledge instead of closed, biased datasets.

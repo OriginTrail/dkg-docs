@@ -52,6 +52,8 @@ If you do not already have a DKG node set up, you can use a public node that the
 
 There's one public node available for mainnet ([https://positron.origin-trail.network](https://positron.origin-trail.network/)) and one for testnet ([https://v6-pegasus-node-02.origin-trail.network](https://v6-pegasus-node-02.origin-trail.network)). All blockchains are supported on each of the nodes.
 
+Alternatively, you could also set up and connect to your own Edge Node for further features like a graph & chatbot interface, customizable knowledge mining pipelines, private knowledge assets, and more. Check out Edge Nodes [here](../dkg-edge-node/).
+
 {% hint style="info" %}
 **Mainnet** is the live blockchain for real transactions, while **testnet** is a risk-free testing environment.
 {% endhint %}
@@ -67,7 +69,7 @@ Here's an example of how to set up a MetaMask wallet: [here](https://youtu.be/-H
 * `PRIVATE_KEY`: The private key corresponding to the above wallet. Ensure you keep this secure and never share it outside of the .env file.
 * `BLOCKCHAIN_NAME`: Specify the blockchain network you’re using. `otp:2043` (NeuroWeb mainnet), `base:8453` (Base mainnet), `gnosis:100` (Gnosis mainnet), `otp:20430` (NeuroWeb testnet), `base:84532` (Base testnet), `gnosis:10200` (Gnosis testnet)
 
-In order to fund your wallet on testnet, feel free to use the [Faucet](../../../useful-resources/test-token-faucet.md) in the [OriginTrail Discord](https://discord.gg/xCaY7hvNwD). There's a message pinned in the **#faucet-bot** channel in case some of the faucets are down. In that case, feel free to ping the core team to send you some testnet funds manually.
+In order to fund your wallet on testnet, feel free to use the [Faucet](../../useful-resources/test-token-faucet.md) in the [OriginTrail Discord](https://discord.gg/xCaY7hvNwD). There's a message pinned in the **#faucet-bot** channel in case some of the faucets are down. In that case, feel free to ping the core team to send you some testnet funds manually.
 
 {% hint style="info" %}
 If you are building your agent on the NeuroWeb, you need to get NEURO first and then TRAC.
@@ -94,6 +96,8 @@ Eliza uses a basic X authentication setup. Use your username, password, and emai
 ### **4. Customize DKG Knowledge Asset & query templates**
 
 If you wish to do so, modify the templates in `plugin-dkg/constants.ts` to change the format in which your data is stored or queried.
+
+Additionally, you can modify the interactions with the DKG in the Eliza providers, actions, and evaluators by calling different DKG.js functions, or modifying the parameters. For example, you could use a paranet for your agent. Check out the SDK docs [here](../chatdkg-builder-toolkit/dkg-sdk/).
 
 ### **5. Run the character**
 

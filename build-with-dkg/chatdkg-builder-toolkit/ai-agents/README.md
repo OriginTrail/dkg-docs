@@ -1,8 +1,8 @@
 ---
-icon: robot
 description: >-
   Create, expand, and share your AI agents’ memories in a transparent and
   verifiable way on the DKG
+icon: robot
 ---
 
 # AI agents
@@ -13,8 +13,8 @@ AI agents can leverage the OriginTrail Decentralized Knowledge Graph (DKG) to cr
 
 There are several ways to create your DKG-enabled AI agent:
 
-* **Easiest**: Create an [ElizaOS DKG Agent](elizaos-dkg-agent.md) using the popular ElizaOS framework.&#x20;
-  * Full guide [here](elizaos-dkg-agent.md)
+* **Easiest**: Create an [ElizaOS DKG Agent](../../ai-agents/elizaos-dkg-agent.md) using the popular ElizaOS framework.&#x20;
+  * Full guide [here](../../ai-agents/elizaos-dkg-agent.md)
 * **Advanced:** Use one of the DKG SDKs to build your own custom agent.
   * [Python SDK ](custom-dkg-python-agent.md)agent-building guide&#x20;
   * [Javascript SDK ](custom-dkg-javascript-agent.md)agent-building guide (coming soon)
