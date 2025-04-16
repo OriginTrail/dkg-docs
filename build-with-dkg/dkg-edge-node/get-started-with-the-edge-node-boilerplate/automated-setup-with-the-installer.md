@@ -151,13 +151,13 @@ Edge node services will be available and listening on the following local ports 
 * 5002 - dRAG
 * 5005 - Knowledge mining
 * 8900 - OT Node
-* 8080 - Airflow web-server
+* 8008 - Airflow web-server
 
 \
 UI (Edge node interface) will be cloned and configured in the following paths:
 
-* MacOS - /var/www/edge-node-ui/
-* Linux - /opt/homebrew/etc/nginx/servers/edge-node-ui
+* MacOS - /opt/homebrew/etc/nginx/servers/edge-node-ui
+* Linux - /var/www/edge-node-ui
 
 {% hint style="success" %}
 The default login credentials for the Edge node UI are as follows:
