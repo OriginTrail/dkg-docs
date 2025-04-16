@@ -1,7 +1,7 @@
 ---
 description: >-
   The platform for building collective neuro-symbolic AI. Start building with
-  the DKG Edge Node beta version
+  the DKG Edge Node.
 icon: diagram-project
 cover: ../../.gitbook/assets/DKG Edge Node - beta version - docs visual2 1 (1).png
 coverY: 0
