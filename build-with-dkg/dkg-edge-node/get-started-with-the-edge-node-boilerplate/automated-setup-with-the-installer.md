@@ -53,7 +53,7 @@ Note: To check your wallets funds on Neuroweb testnet, use [Subscan explorer](ht
 
 Once you have your wallets funded and ready, you may proceed with cloning, configuring and running the Edge node installer by following the instructions provided below.
 
-#### 2.1 Clone the edge-node-installer repository using git:
+#### 2.1 - Clone the edge-node-installer repository using git:
 
 <pre class="language-sh"><code class="lang-sh">git clone https://github.com/OriginTrail/edge-node-installer.git
 <strong>cd edge-node-installer
@@ -61,7 +61,7 @@ Once you have your wallets funded and ready, you may proceed with cloning, confi
 
 ## 3. Configure the environment (.env)
 
-#### 3.1 Prepare .env file using .env.example:
+#### 3.1 - Create .env file using .env.example:
 
 ```bash
 cp .env.example .env
@@ -69,53 +69,49 @@ cp .env.example .env
 
 The **.env.example** is used as a guide template, but is well documented and should help you understand what each of the variables mean.
 
-#### 3.2  Open .env file using nano or any editor of your choice:
+#### **3.2 - Populate .env file:**&#x20;
+
+To simplify the development setup, we’ve provided the `env-setup.js` script. This script will automatically generate and populate all required `.env` parameters, including:
+
+* Management keys
+* Operational keys
+* Publishing keys (for all supported chains)
+* Node name (same across all chains)
+
+To populate your `.env` file, run:
 
 ```
-nano .env
+node env-setup.js
 ```
 
-Refer to the section below which will help you prepare your Edge node configuration.&#x20;
+#### 3.3 Funding your keys:
 
-### MADATORY PARAMETERS (.env)
+Once the `.env` file is populated with the mandatory parameters, you will have to fund the keys (wallets) which were added to the .env file.&#x20;
 
-* <kbd>**DEPLOYMENT\_MODE**</kbd> (defaults to development) - The installer differentiates between two modes of operation - development and production, controlled by the DEPLOYMENT\_MODE variable. Production mode enables persistency, by enabling and starting services. **Production mode is currently only supported for systems with systemd.**
-* <kbd>**DB\_USER**</kbd> - Set this to root&#x20;
-* <kbd>**DB\_PASSWORD**</kbd> -  used to connect to existing **MySQL** instance, or setup an authenticated connection on fresh installs.
+1. Open your `.env` file using `nano` or any text editor.
+2. Locate the following wallet entries for each blockchain:
+   * `OPERATIONAL_KEY_PUBLIC_ADDRESS`&#x20;
+   * `MANAGEMENT_KEY_PUBLIC_ADDRESS` &#x20;
+   * `PUBLISH_WALLET_01_PUBLIC_KEY`
+3. Fund wallets for at least one blockchain under `NODE ENGINE PARAMETERS` in the `.env` file using the instructions from the [Faucet documentation page](../../../useful-resources/test-token-faucet.md), so your node can create its on-chain profile.&#x20;
 
-{% hint style="info" %}
-If you already have a password for root user configured, pass it to the <kbd>**DB\_PASSWORD**</kbd> variable in .env. and installer will use it to setup MySQL tables required for the Edge node services.\
-If you do not have MySQL running locally, <kbd>**DB\_PASSWORD**</kbd>  that you provide will be set as your root password.
+**Note:** `OPERATIONAL_KEY_PUBLIC_ADDRESS`  and `MANAGEMENT_KEY_PUBLIC_ADDRESS`  require a small amount of native token (e.g., NEURO, ETH, xDAI) while `PUBLISH_WALLET_01_PUBLIC_KEY`  require both native and TRAC token in order to be able to publish Knowledge Assets
+
+{% hint style="warning" %}
+Ensure your Edge Node creates its profile on the blockchain set in `DEFAULT_PUBLISH_BLOCKCHAIN` which is by default set to **neuroweb.** \
+You can update this parameter according to your needs.
 {% endhint %}
 
-* <kbd>**DEFAULT\_PUBLISH\_BLOCKCHAIN**</kbd> and <kbd>**BLOCKCHAIN\_ENVIRONMENT**</kbd>**&#x20;-** By default, the Edge Node publishes to the Neuroweb testnet blockchain. You can change this behaviour by editing the **DEFAULT\_PUBLISH\_BLOCKCHAIN** and **BLOCKCHAIN\_ENVIRONMENT** variables.&#x20;
+#### 3.4  - Configure LLM functionality:
 
-{% hint style="info" %}
-To prevent loss of funds, we recommend developing the Edge Node on the testnet environment at this stage since you are still getting familiar with the technology.
-{% endhint %}
+Edge Node components rely on LLMs to function properly. To ensure full functionality, you must add at least one of the two external service keys to your `.env`:&#x20;
 
-* <kbd>**PUBLISH\_WALLET\_01\_PUBLIC\_KEY**</kbd> and <kbd>**PUBLISH\_WALLET\_01\_PRIVATE\_KEY**</kbd> - Are keys used by the node to publish knowledge assets to the blockchain (using the default blockchain configuration mentioned above).
+* `OPEN_AI_KEY` or&#x20;
+* `ANTHROPIC_API_KEY`
 
-{% hint style="info" %}
-At least 1 key should be provided to the installer in order for the Edge node to be able to execute publish operations.
-{% endhint %}
+#### Optional .env parameters:
 
-* <kbd>**NODE ENGINE PARAMETERS**</kbd> - This section of the .env file is related to passing management and operational keys for your Edge node as well as RPC endpoints which your node engine will use to communicate with the selected blockchain.&#x20;
-
-{% hint style="info" %}
-Populating <kbd>**NODE ENGINE PARAMETERS**</kbd>  is required for at least 1 blockchain otherwise Edge node will not connect to any chain which will prevent services from properly operating.
-{% endhint %}
-
-{% hint style="info" %}
-RPC endpoints for Neuroweb blockchain are not required and are automatically passed to your node engine (Core node) while for Base and Gnosis, we have already added public ones. \
-**If you have your own, private RPC endpoint for Base or Gnosis, you can replace public ones.**
-{% endhint %}
-
-* <kbd>**OPEN\_AI\_KEY**</kbd>**&#x20; or&#x20;**<kbd>**ANTHROPIC\_API\_KEY**</kbd>**&#x20; -** Edge Node components rely on LLMs to function properly. To ensure full functionality, at least one of the two external services is required.
-
-### OPTIONAL PARAMETERS (.env)
-
-Edge node supports multiple external services and tools which can be configured via `.env`  before running the installer. The list of supported ones is presented below in the form of parameters:
+The Edge Node supports additional external services and tools that can be configured via the `.env` file before running the installer. Below is a list of supported services represented as configuration parameters:
 
 ```sh
 # Unstructured.io - can be obtained from https://unstructured.io/api-key-free 
@@ -133,7 +129,7 @@ MILVUS_PASSWORD=""
 MILVUS_URI=""
 ```
 
-## 4. Execute the installer by running: <a href="#id-3.-execute-the-installer-by-running" id="id-3.-execute-the-installer-by-running"></a>
+## 4. Run installation: <a href="#id-3.-execute-the-installer-by-running" id="id-3.-execute-the-installer-by-running"></a>
 
 Once all the required parameters have been configured in the .env file, simply run the installer and wait for it to finish the Edge node setup.
 

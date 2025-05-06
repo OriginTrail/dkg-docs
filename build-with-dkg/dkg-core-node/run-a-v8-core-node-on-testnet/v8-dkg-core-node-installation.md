@@ -35,24 +35,9 @@ It is also possible to install the OriginTrail node on other systems, but it wou
   * RPC endpoint&#x20;
 * Install and enable MySQL service and create operationaldb for the node
 * Configure MySQL user password for the OriginTrail node operational database (based on your inputs)
-* Install and enable Tripple store database
-* Automatically deploy **otnode-logger.service** in order to pass logs to OriginTrail team
+* Install and enable Triple store database
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Installer interraction</p></figcaption></figure>
-
-{% hint style="warning" %}
-During the V8 DKG Core Node installation process, the installer will deploy&#x20;
-
-**otnode-logger.service** which will automatically stream the V8 DKG Core Node logs to the OriginTrail core development team for support/debug purposes.\
-This service is a <mark style="color:yellow;">**hard**</mark> <mark style="color:yellow;">**requirement for the**</mark> <mark style="color:yellow;">**incentivized testnet rewards.**</mark>&#x20;
-{% endhint %}
-
-To disable this service, execute the following commands on the server once the installation is finalized:
-
-```sh
-systemctl disable otnode-logger.service
-systemctl stop otnode-logger.service
-```
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Installer interaction</p></figcaption></figure>
 
 ### Installer video tutorial (slightly outdated):
 
