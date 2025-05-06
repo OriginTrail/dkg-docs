@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Get started with OriginTrail](README.md)
+* [OriginTrail Ecosystem — Call for Papers (Coming Soon)](origintrail-ecosystem-call-for-papers-coming-soon.md)
 
 ## Key Concepts
 
