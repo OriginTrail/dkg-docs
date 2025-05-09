@@ -31,7 +31,7 @@ npm init -y
 npm install dkg.js@latest
 ```
 
-#### 1.4 Set up your private key
+### 1.4 Set up your private key
 
 1. Create a new file named `.env` in your project root
 2. Add your wallet's private key:
