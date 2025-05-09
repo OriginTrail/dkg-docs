@@ -4,7 +4,7 @@ icon: flag-checkered
 
 # Quickstart (test drive the DKG in 5 mins)
 
-Welcome to your first hands-on experience with the **OriginTrail Decentralized Knowledge Graph (DKG)**! In just a few minutes, you'll **publish and retrieve your first** [**Knowledge Asset**](broken-reference) **(KA)** using [public DKG nodes](../useful-resources/public-nodes.md)—no setup required.
+Welcome to your first hands-on experience with the **OriginTrail Decentralized Knowledge Graph (DKG)**! In just a few minutes, you'll **publish and retrieve your first** [**Knowledge Asset**](broken-reference) **(KA)** using [public DKG nodes](../useful-resources/public-nodes.md)—no complex setup required.
 
 ***
 
@@ -12,7 +12,7 @@ Welcome to your first hands-on experience with the **OriginTrail Decentralized K
 
 You’ll use the [**DKG SDK**](dkg-sdk/) (JavaScript or Python) to:
 
-* Connect to a public DKG node
+* Connect to a [public DKG node](../useful-resources/public-nodes.md)
 * Publish a simple **Knowledge Asset**
 * Retrieve that KA by querying the graph
 
@@ -25,9 +25,9 @@ You’ll use the [**DKG SDK**](dkg-sdk/) (JavaScript or Python) to:
 ### What You’ll Need
 
 * **Node.js** (for JavaScript SDK) or **Python** (3.8+)
-* A Web3 wallet (e.g., MetaMask) with:
-  * **Test TRAC tokens**
-  * **Test Neuro tokens**
+* A Web3 wallet (e.g., MetaMask) with [test tokens](../useful-resources/test-token-faucet.md) for the [NeuroWeb blockchain](../integrated-blockchains/neuroweb.md):
+  * **TRAC token**
+  * **Neuro token**
 * A **public DKG node endpoint** which you can find [**here**](../useful-resources/public-nodes.md)
 
 {% hint style="info" %}
@@ -71,11 +71,10 @@ Here’s a super-simple JSON-LD Knowledge Asset:
 
 Use the JavaScript SDK to publish it:
 
-```javascript
-import DKG from '../index.js';
-import { BLOCKCHAIN_IDS, ENVIRONMENTS } from '../constants.js';
-import 'dotenv/config';
-
+<pre class="language-javascript"><code class="lang-javascript">import DKG from 'dkg.js';
+import { BLOCKCHAIN_IDS, ENVIRONMENTS } from 'dkg.js/constants';
+<strong>import 'dotenv/config';
+</strong>
 const ENVIRONMENT = ENVIRONMENTS.TESTNET;
 const OT_NODE_HOSTNAME = 'https://v6-pegasus-node-02.origin-trail.network';
 const OT_NODE_PORT = '8900';
@@ -116,7 +115,7 @@ const DkgClient = new DKG({
 
     console.log(JSON.stringify(create_result));
 })();
-```
+</code></pre>
 
 Or you can use the Python SDK
 
@@ -134,8 +133,8 @@ node_provider = NodeHTTPProvider(
 )
 # make sure that you have PRIVATE_KEY in .env so the blockchain provider can load it
 blockchain_provider = BlockchainProvider(
-    Environments.DEVELOPMENT.value,
-    BlockchainIds.HARDHAT_1.value,
+    Environments.TESTNET.value,
+    BlockchainIds.NEUROWEB_TESTNET.value,
 )
 
 config = {
@@ -176,6 +175,8 @@ Now that you've published your first Knowledge Asset, let's query the DKG to ret
 
 Here’s how to fetch the `name` and `description` from your KA:
 
+Using the JavaScript SDK:
+
 ```javascript
 const queryOperationResult = await DkgClient.graph.query(
     `
@@ -190,6 +191,22 @@ const queryOperationResult = await DkgClient.graph.query(
 );
 
 console.log('Query results:', queryOperationResult);
+```
+
+Using the Python SDK:
+
+```python
+query_operation_result = dkg.graph.query(
+    """
+    PREFIX schema: <http://schema.org/>
+    SELECT ?s ?name ?description
+    WHERE {
+        ?s schema:name ?name ;
+           schema:description ?description .
+    }
+    """
+)
+print(query_operation_result)
 ```
 
 ### What's Next?
