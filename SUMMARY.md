@@ -14,7 +14,9 @@
 
 ## Build with DKG
 
-* [Quickstart (test drive the DKG in 5 mins)](build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins.md)
+* [Quickstart (test drive the DKG in 5 mins)](build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins/README.md)
+  * [Quickstart with Node.js](build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins/quickstart-with-node.js.md)
+  * [Quickstart with Python](build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins/quickstart-with-python.md)
 * [ChatDKG builder toolkit](build-with-dkg/chatdkg-builder-toolkit/README.md)
   * [DKG SDK](build-with-dkg/dkg-sdk/README.md)
     * [Development environment setup](build-with-dkg/dkg-sdk/setting-up-your-development-environment.md)
