@@ -129,7 +129,7 @@ const DkgClient = new DKG({
 3. Run the script by entering the following into the terminal:
 
 ```bash
-node publish_ka.js
+node publish_ka.mjs
 ```
 
 {% hint style="info" %}
@@ -191,7 +191,7 @@ const query = `
 2. Run the query by entering the following into your terminal:&#x20;
 
 ```bash
-node query_ka.js
+node query_ka.mjs
 ```
 
 #### ⚠️ Query Troubleshooting

@@ -199,7 +199,7 @@ except Exception as e:
 2. Run the query by entering the following into your terminal:&#x20;
 
 ```bash
-python query.py
+python query_ka.py
 ```
 
 {% hint style="info" %}
