@@ -78,10 +78,15 @@ To simplify the development setup, we’ve provided the `env-setup.js` script. T
 * Publishing keys (for all supported chains)
 * Node name (same across all chains)
 
-To populate your `.env` file, run:
+{% hint style="success" %}
+We assume that Node.js is already installed on your system to run the `env-setup.js` script.\
+If Node.js is not installed or you're setting up a fresh system, we recommend using NVM to install Node.js version 20 along with npm.
+{% endhint %}
+
+Once Node.js and npm are successfully installed, you can use the following command to populate your `.env` file:
 
 ```
-node env-setup.js
+npm install ethers && node env-setup.js
 ```
 
 #### 3.3 Funding your keys:
