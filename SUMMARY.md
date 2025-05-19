@@ -47,7 +47,9 @@
     * [Usage example](build-with-dkg/dkg-edge-node/get-started-with-the-edge-node-boilerplate/usage-example.md)
   * [Customize & build with the Edge Node](build-with-dkg/dkg-edge-node/customize-and-build-with-the-edge-node.md)
   * [Knowledge Mining and dRAG examples](build-with-dkg/dkg-edge-node/knowledge-mining-and-drag-examples.md)
-  * [Deploy your Edge-Node-based project](build-with-dkg/dkg-edge-node/deploy-your-edge-node-based-project.md)
+  * [Deploy your Edge Node based project](build-with-dkg/dkg-edge-node/deploy-your-edge-node-based-project/README.md)
+    * [Automated deployment via Google Cloud Marketplace](build-with-dkg/dkg-edge-node/deploy-your-edge-node-based-project/automated-deployment-via-google-cloud-marketplace.md)
+    * [Automated deployment with installer](build-with-dkg/dkg-edge-node/deploy-your-edge-node-based-project/automated-deployment-with-installer.md)
   * [DKG Edge Node inception program](build-with-dkg/dkg-edge-node/dkg-edge-node-inception-program.md)
   * [DKG Edge Node API documentation](build-with-dkg/dkg-edge-node/dkg-edge-node-api-documentation.md)
 * [DKG Core Node](build-with-dkg/dkg-core-node/README.md)
@@ -58,6 +60,7 @@
   * [Run a V8 Core Node on mainnet](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-mainnet/README.md)
     * [Preparation for V8 DKG Core Node deployment](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-mainnet/preparation-for-v8-dkg-core-node-deployment.md)
     * [V8 DKG Core Node installation](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-mainnet/v8-dkg-core-node-installation.md)
+  * [Deploy Core node via Google Cloud marketplace](build-with-dkg/dkg-core-node/deploy-core-node-via-google-cloud-marketplace.md)
 * [DKG V8 update guidebook](build-with-dkg/dkg-v8-update-guidebook.md)
 
 ## Delegated staking

@@ -37,17 +37,7 @@ Before getting started with the installation, there are a few important preparat
 
 #### 1.2. Edge node keys (wallets):
 
-The Edge Node uses three types of keys: a **management key**, an **operational key**, and a **publishing key**. The management and operational keys need a small amount of the utility token based on the blockchain you will be using (NEURO, Base ETH, xDai) to sign transactions for certain operations, while publishing key requires both the utility and TRAC tokens to perform publishing operations.&#x20;
-
-#### 1.3. Funding Edge node keys (wallets):
-
-In order to fund your wallets, please refer to our faucet [page](https://docs.origintrail.io/useful-resources/test-token-faucet).
-
-{% hint style="warning" %}
-In order to receive TRAC to on Neuroweb, first acquire NEURO via faucet to initiate your wallet.
-{% endhint %}
-
-Note: To check your wallets funds on Neuroweb testnet, use [Subscan explorer](https://neuroweb-testnet.subscan.io/). &#x20;
+The Edge Node uses three types of keys: a **management key**, an **operational key**, and a **publishing key**. The management and operational keys need a small amount of the utility token based on the blockchain you will be using (NEURO, Base ETH, xDai) to sign transactions for certain operations, while publishing key requires both the utility and TRAC tokens to perform publishing operations. To check your wallets funds on Neuroweb testnet, use [Subscan explorer](https://neuroweb-testnet.subscan.io/). &#x20;
 
 ## 2. Download the OriginTrail DKG Edge Node installer
 
@@ -55,9 +45,9 @@ Once you have your wallets funded and ready, you may proceed with cloning, confi
 
 #### 2.1 - Clone the edge-node-installer repository using git:
 
-<pre class="language-sh"><code class="lang-sh">git clone https://github.com/OriginTrail/edge-node-installer.git
-<strong>cd edge-node-installer
-</strong></code></pre>
+```sh
+git clone https://github.com/OriginTrail/edge-node-installer.git && cd edge-node-installer
+```
 
 ## 3. Configure the environment (.env)
 
@@ -71,16 +61,19 @@ The **.env.example** is used as a guide template, but is well documented and sho
 
 #### **3.2 - Populate .env file:**&#x20;
 
-To simplify the development setup, we’ve provided the `env-setup.js` script. This script will automatically generate and populate all required `.env` parameters, including:
+To simplify the development setup, we’ve provided the `env-setup.js` script. \
+This script will automatically generate and populate all required `.env` parameters, including:
 
 * Management keys
 * Operational keys
 * Publishing keys (for all supported chains)
 * Node name (same across all chains)
 
+To populate your `.env` file, run:
+
 {% hint style="success" %}
 We assume that Node.js is already installed on your system to run the `env-setup.js` script.\
-If Node.js is not installed or you're setting up a fresh system, we recommend using NVM to install Node.js version 20 along with npm.
+If Node.js is not installed or you're setting up  on a fresh system, we recommend using NVM to install Node.js version 20 along with npm.
 {% endhint %}
 
 Once Node.js and npm are successfully installed, you can use the following command to populate your `.env` file:
@@ -98,21 +91,34 @@ Once the `.env` file is populated with the mandatory parameters, you will have t
    * `OPERATIONAL_KEY_PUBLIC_ADDRESS`&#x20;
    * `MANAGEMENT_KEY_PUBLIC_ADDRESS` &#x20;
    * `PUBLISH_WALLET_01_PUBLIC_KEY`
-3. Fund wallets for at least one blockchain under `NODE ENGINE PARAMETERS` in the `.env` file using the instructions from the [Faucet documentation page](../../../useful-resources/test-token-faucet.md), so your node can create its on-chain profile.&#x20;
+3. Fund wallets for at least one blockchain in the `.env` file using our faucet. Instructions on how to use the Faucet can be found on the [Faucet documentation page](../../../useful-resources/test-token-faucet.md). Our faucet can provide you with the testnet tokens as follows:
+   1. **Neuroweb:** TRAC and NEURO
+   2. **Gnosis Chiado:** TRAC and xDai
+   3. **Base Sepolia:** TRAC (ETH for Base Sepolia can be received via the faucets provided in the official Base [documentation](https://docs.base.org/chain/network-faucets))
 
-**Note:** `OPERATIONAL_KEY_PUBLIC_ADDRESS`  and `MANAGEMENT_KEY_PUBLIC_ADDRESS`  require a small amount of native token (e.g., NEURO, ETH, xDAI) while `PUBLISH_WALLET_01_PUBLIC_KEY`  require both native and TRAC token in order to be able to publish Knowledge Assets
+{% hint style="info" %}
+`OPERATIONAL_KEY_PUBLIC_ADDRESS`  and `MANAGEMENT_KEY_PUBLIC_ADDRESS`  require a small amount of native token (e.g., NEURO, ETH, xDAI) while `PUBLISH_WALLET_01_PUBLIC_KEY`  requires both native and TRAC token in order to be able to publish Knowledge Assets.
+{% endhint %}
 
 {% hint style="warning" %}
-Ensure your Edge Node creates its profile on the blockchain set in `DEFAULT_PUBLISH_BLOCKCHAIN` which is by default set to **neuroweb.** \
-You can update this parameter according to your needs.
+It’s important to ensure that your node creates its profile **on the blockchain** specified in `DEFAULT_PUBLISH_BLOCKCHAIN` parameter.&#x20;
+
+\
+**For Neuroweb, first use the faucet to acquire NEURO in order to initiate your wallet, and then request TRAC, otherwise the TRAC funding transaction will fail.**
 {% endhint %}
 
 #### 3.4  - Configure LLM functionality:
 
-Edge Node components rely on LLMs to function properly. To ensure full functionality, you must add at least one of the two external service keys to your `.env`:&#x20;
+Edge Node components require a large language model (LLM) to operate. To ensure full functionality, you must provide at least one of the supported external API keys below:
 
-* `OPEN_AI_KEY` or&#x20;
-* `ANTHROPIC_API_KEY`
+* [**OpenAI**](https://platform.openai.com/api-keys) **API Key** – Used to access OpenAI’s GPT models.\
+  Example: `sk-4hsR2exampleXv29NSHtDyzt0NlFgk1LXj6zS7`
+* [**Anthropic**](https://console.anthropic.com/account/keys) **API Key** – Used to access Anthropic’s Claude models.\
+  Example: `claude-56a8e5eexamplef27b5b6e47b1`
+
+{% hint style="success" %}
+🔐 Ensure that the API keys have the necessary usage quotas and permissions based on your expected workload. Always keep them secure and never share them publicly.
+{% endhint %}
 
 #### Optional .env parameters:
 
@@ -126,12 +132,6 @@ UNSTRUCTURED_API_URL=""
 # HuggingFace - can be obtained from https://huggingface.co/settings/tokens 
 # (used if you use vector search in your dRAG pipeline)
 HUGGINGFACE_API_KEY=""
-
-# Milvus (vector database) - Can be obtained from https://cloud.zilliz.com/ 
-# (used if using vector search for the dRAG pipeline)
-MILVUS_USERNAME=""
-MILVUS_PASSWORD=""
-MILVUS_URI=""
 ```
 
 ## 4. Run installation: <a href="#id-3.-execute-the-installer-by-running" id="id-3.-execute-the-installer-by-running"></a>
@@ -142,7 +142,7 @@ Once all the required parameters have been configured in the .env file, simply r
 bash edge-node-installer.sh
 ```
 
-Edge node installer will deploy each component within the **edge\_node** directory: airflow, drag-api, edge-node-auth-service, ka-mining-api, ot-node.
+Edge node installer will deploy each component within the **edge\_node** directory: drag-api, edge-node-auth-service, ka-mining-api, ot-node.
 
 Edge node services will be available and listening on the following local ports upon installation:
 
@@ -152,7 +152,6 @@ Edge node services will be available and listening on the following local ports 
 * 5002 - dRAG
 * 5005 - Knowledge mining
 * 8900 - OT Node
-* 8008 - Airflow web-server
 
 \
 UI (Edge node interface) will be cloned and configured in the following paths:
