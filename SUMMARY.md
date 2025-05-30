@@ -39,6 +39,7 @@
     * [ElizaOS DKG agent](build-with-dkg/ai-agents/elizaos-dkg-agent.md)
     * [Custom DKG Python agent](build-with-dkg/chatdkg-builder-toolkit/ai-agents/custom-dkg-python-agent.md)
     * [Custom DKG JavaScript agent](build-with-dkg/chatdkg-builder-toolkit/ai-agents/custom-dkg-javascript-agent.md)
+  * [Using the DKG with MCP](build-with-dkg/chatdkg-builder-toolkit/using-the-dkg-with-mcp.md)
 * [DKG Edge Node](build-with-dkg/dkg-edge-node/README.md)
   * [DKG Edge Node architecture](build-with-dkg/dkg-edge-node/dkg-edge-node-architecture.md)
   * [Get started with the Edge Node boilerplate](build-with-dkg/dkg-edge-node/get-started-with-the-edge-node-boilerplate/README.md)
