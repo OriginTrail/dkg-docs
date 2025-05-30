@@ -53,6 +53,6 @@ When paired with the DKG, this gives LLM-based systems access to a decentralized
 
 To get started:
 
-* Explore the [`dkg-mcp-tools`](https://github.com/OriginTrail/dkg-tools) repo (coming soon)
+* Explore the dkg-mcp repo (coming soon)
 * Try integrating the DKG into your MCP server
 * Build agents that reason over, expand, and query the decentralized web of knowledge
