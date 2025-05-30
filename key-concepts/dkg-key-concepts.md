@@ -12,7 +12,7 @@ icon: lightbulb-exclamation-on
 
 ## Knowledge Assets
 
-A Knowledge Asset is an ownable knowledge graph entity in the DKG with a verifiable provenance and publisher. It can describe any digital or physical object, abstract concept, or really any "thing." It can easily connect to other Knowledge Assets in the OriginTrail DKG, enabling the building of sophisticated graph representations of the world (a.k.a. the World model).
+A Knowledge Asset is an ownable knowledge graph entity in the DKG with a verifiable provenance and source. It can describe any digital or physical object, abstract concept, or really any "thing." It can easily connect to other Knowledge Assets in the OriginTrail DKG, enabling the building of sophisticated graph representations of the world (a.k.a. the World model).
 
 More precisely, a Knowledge Asset is a web resource identified by a unique Uniform Asset Locator (or UAL, which is an extension of the traditional URL), consisting of:
 
@@ -46,7 +46,7 @@ The Trace token (TRAC) is the utility token that powers the OriginTrail Decentra
 * **Publishing & updating Knowledge Assets** – TRAC is required to create, update, and manage Knowledge Assets in the DKG.
 * **Node incentives** – Network nodes earn TRAC by hosting data, securing the network, and ensuring knowledge integrity.
 * **Staking** – Nodes stake TRAC to increase their reputation and improve their ability to participate in the network.
-* **Multi-Chain compatibility** – TRAC operates across multiple blockchains, including Ethereum, NeuroWeb, Base, Gnosis, and Polygon.
+* **Multi-chain compatibility** – TRAC operates across multiple blockchains, including Ethereum, NeuroWeb, Base, Gnosis, and Polygon.
 
 ## Decentralized Retrieval Augmented Generation
 
@@ -118,4 +118,4 @@ The next building block of the DKG is **AI para-networks** or **paranets**.
 
 **AI para-networks** or **paranets** are autonomously operated structures in the DKG, owned by their community as a paranet operator. In paranets, we find **assemblies of Knowledge Assets** driving use cases with associated **paranet-specific AI services** and an **incentivization model** to reward knowledge miners fueling its growth.&#x20;
 
-**To see the DKG in action, continue to the** [**Quickstart section**](../build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins/)**.**
+**To see the DKG in action, continue to the** [**Quickstart section**](../build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins.md)**.**

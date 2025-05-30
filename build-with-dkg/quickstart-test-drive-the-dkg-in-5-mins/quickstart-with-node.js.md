@@ -227,7 +227,7 @@ Your **Knowledge Asset now lives on the DKG**, where it's:
 
 Now that you've mastered the basics, here's what comes next.
 
-[**Explore the ChatDKG builder toolkit**](../chatdkg-builder-toolkit/)
+[**Explore the ChatDKG builder toolkit**](../dkg-toolkit/)
 
 Everything you need to build with the DKG: publish and query knowledge, deploy autonomous AI agents, and launch decentralized knowledge ecosystems with paranets—all from a unified toolkit.
 

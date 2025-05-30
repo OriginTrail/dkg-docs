@@ -1,29 +1,62 @@
 ---
+description: The engine of the DKG Knowledge Layer
 icon: circle-nodes
 ---
 
 # DKG Core Node
 
-DKG Core Nodes form the backbone of the OriginTrail Decentralized Knowledge Graph (DKG). They host the public network and ensure its security and high availability. These nodes are incentivized to maintain uptime and play a crucial role in the network's stability and functionality.
+**DKG Core Nodes** are the operational foundation of the OriginTrail Decentralized Knowledge Graph (DKG). They form a permissionless peer-to-peer network that stores, verifies, and makes published knowledge assets available to AI systems and other users. By participating in Random Sampling and responding to publishing activity, they ensure that knowledge remains available and the network remains decentralized.
 
-### What are DKG Core Nodes?
+### What Are DKG Core Nodes?
 
-* Core Nodes are essential for providing consistent and reliable access to the DKG. They are designed with incentives to maintain high uptime, ensuring the network remains stable and dependable.
-* **Full node:** Full participation as a Core Node requires a minimum stake of 50,000 TRAC tokens. Nodes with larger stakes are rewarded with increased chances of earning network rewards, making staking an integral part of the Core Node ecosystem.
-* **Gateway Nodes:** In addition to their role in network security, Core Nodes can serve as Gateway Nodes, specializing in publishing data to the DKG. Nodes with higher publishing activity have an enhanced opportunity to earn rewards, encouraging active contributions.
+Core Nodes are designed for reliability, availability, and fair participation. They are incentivized to maintain uptime, publish new knowledge, and offer services to the network in exchange for TRAC rewards.
 
-Core Nodes offer services to the network for a fee. These fees are globally determined through a pricing mechanism that considers the individual asks of each node. Nodes that set competitive fees (or appear less “greedy”) are prioritized, improving their chances of earning rewards.
+#### Staking Requirements
 
-By balancing staking incentives, publishing capabilities, and fair pricing mechanisms, DKG Core Nodes foster a robust and equitable ecosystem that supports the growth and reliability of the Decentralized Knowledge Graph.
+To operate a DKG Core Node, a minimum stake of **50,000 TRAC** is required. Nodes with higher stakes gain stronger eligibility in the reward distribution process, as stake directly influences their **Node Power** and visibility to publishers and delegators.
 
-## Good to know before proceeding:
+#### Publishing & Gateway Function
 
-To run a DKG Core Node, you don’t need in-depth knowledge of blockchain or knowledge graphs. If you are comfortable with:
+DKG Core Nodes can also serve as **Gateway Nodes**, meaning they support the publishing of new Knowledge Assets into the network. Nodes that publish more knowledge gain a higher **publishing factor**, which increases their rewards through the Random Sampling proof system.
 
-* Navigating through directories and using basic Linux commands (e.g., `cd`, `ls`, `cp`, `mv`, `cat`, `nano/vi`)
-* Updating files and configurations
-* Understanding and using blockchain wallets
-* Basic log monitoring and troubleshooting (e.g., `tail`, `grep`, `less`)
-* Setting up and managing firewalls (e.g., `ufw`, `iptables`)
+To becoeme Gateway nodes, node operators can open their Core Node **publishing API endpoint** to external publishers. This allows developers, AI agents, or platforms to use this Core Node as a gateway service for publishing their knowledge assets - similar to how blockchain RPC providers offer access to blockchain infrastructure. In OriginTrail, however, this access is **incentivized**: if others publish through your Core node, your node's publishing factor grows proportionally improving your Node Power, which improves both your rewards and overall network value.
 
-... you should be quite ready to operate a DKG Core Node effectively. The best way to be sure, though, is to try it on the testnet :). To do so, proceed to the next page.
+### Network Services and Fair Pricing
+
+Each DKG Core Node sets a **service ask** - a configurable percentage fee charged when serving publishing transactions. This ask value plays a direct role in network competitiveness:
+
+* Nodes with **lower ask fees** are prioritized by the network
+* Ask pricing influences **Node Power**, impacting score in the reward calculation
+
+Over time, tokenomics naturally favor nodes converging on a **fair price point**, where efficient, well-operated nodes benefit from lower ask values that increase their usage and overall rewards. All of this contributes to a fair and open market of DKG services.
+
+### Quality Metrics: Node Power and Node Health
+
+Delegators and publishers alike benefit from understanding two key metrics that determine node performance:
+
+#### Node Power
+
+Node Power is a relative metric that reflects a node’s influence in the network’s reward system. It is calculated from:
+
+* **Staked TRAC** — More stake signals trust and increases reward eligibility
+* **Publishing activity** — More published knowledge assets increase score
+* **Service ask** — Lower fees improve network competitiveness
+
+A higher Node Power means the node is more likely to earn rewards.
+
+#### Node Health
+
+Node Health tracks how successfully a node is responding to random sampling challenges. It is a relative metric, calculated as:
+
+* The ratio of **successful proofs submitted**
+* Compared to the **expected number of proofs** during an epoch
+
+High Node Health indicates reliability and strong uptime - crucial for reward consistency and delegator trust.&#x20;
+
+### What You Need to Operate a Node
+
+Operating a DKG Core Node doesn’t require blockchain or knowledge graph expertise, however **it requires diligent monitoring and maintenance in order for your Core node to attract a sensible amount of TRAC rewards**, including regular updates, maintaining uptime etc. It is recommended to have at least some general knowledge about the DKG, operating Linux servers, long running services and firewalls.&#x20;
+
+We recommend trying it out on the **DKG testnet** to get familiar with the environment. When you're ready, proceed to the Core Node setup guide to learn how to deploy a node and begin participating.
+
+> As a Core Node operator, you can also delegate TRAC to your own node. This shows economic commitment to the network and can improve your attractiveness to other delegators.

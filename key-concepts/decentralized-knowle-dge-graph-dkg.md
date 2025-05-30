@@ -1,83 +1,81 @@
 ---
+description: What Bitcoin did for money, OriginTrail is doing for knowledge
 icon: hexagon-image
 ---
 
 # Decentralized Knowle﻿dge Graph (DKG)
 
-OriginTrail Decentralized Knowledge Graph (DKG) presents a global, open data structure comprised of interlinked **Knowledge Assets structured in an RDF knowledge graph** hosted on an open, permissionless decentralized network of DKG nodes. It's designed to support the **verifiable Internet for AI** based on an open, permissionless knowledge economy in which knowledge is the primary asset class.
+The OriginTrail Decentralized Knowledge Graph (DKG) is a **global decentralized data structure that interlinks Knowledge Assets in a semantic format (RDF)**, hosted on a permissionless peer-to-peer network. It enables a **verifiable knowledge layer** for artificial intelligence (AI) and other advanced applications.
 
-As a builder, you can create **collaborative knowledge graphs** using DKG paranets, incentivize the growth of your knowledge graph with Initial Paranet Offerings (IPOs), with a combination of public and private (and hybrid) [Knowledge Assets](dkg-key-concepts.md#knowledge-assets), and use them within an ecosystem of composable services on multiple blockchains.
+### Why a Decentralized Knowledge Graph
 
-In hopes of a better understanding of DKG, the analogy can be compared to traditional centralized SQL solutions like so.
+Modern AI applications increasingly demand:
 
-<table><thead><tr><th>DKG</th><th>SQL Server</th><th data-hidden></th></tr></thead><tbody><tr><td>Paranet</td><td>Database</td><td></td></tr><tr><td>Knowledge collection</td><td>Table</td><td></td></tr><tr><td>Knowledge asset</td><td>Individual record (row)</td><td></td></tr><tr><td>Triplets</td><td>Values (columns)</td><td></td></tr></tbody></table>
+* **Structured, contextualized memory**
+* **Data integrity and provenance**
+* **Cross-system interoperability**
 
-OriginTrail DKG strongly focuses on interoperability through standards such as semantic web standards (RDF, SPARQL, JSON-LD, etc.), Verifiable Credentials and Decentralized Identifiers (DIDs) by W3C, as well as GS1 standards such as the [Digital Link](https://www.gs1.org/standards/gs1-digital-link) and [EPCIS 2.0](https://www.gs1au.org/standards/epcis) for real-world asset tracking (and to which OriginTrail core developers have actively contributed to).
+The DKG meets these needs by uniting the **trust layer of blockchains**, the **semantic expressiveness of knowledge graphs (symbolic AI),** and **state-of-the-art generative AI models (neural AI).**
 
-OriginTrail DKG is multi-chain, integrating with Ethereum and Polkadot ecosystem blockchains such as Gnosis, NeuroWeb, Base, and others. It is fueled by the TRAC utility token, which is used to manage relations between DKG network participants.&#x20;
+### Why Use Blockchain?
 
-There are many ways to participate, such as:
+Blockchains enable:
 
-* Building dapps with [DKG SDKs](../build-with-dkg/dkg-sdk/)&#x20;
-* Launching DKG paranets
-* Publishing knowledge to the DKG via knowledge mining&#x20;
-* [Delegating TRAC tokens](../delegated-staking/delegated-staking-introduction/) to DKG nodes to help secure the network and earn TRAC&#x20;
-* [Running DKG Core Nodes](../build-with-dkg/dkg-core-node/), helping to host the DKG network, and earning TRAC node operator fees&#x20;
-* Open-source contributions [to DKG code](../useful-resources/contribute/)
-* Aharing your ideas and joining the discussion in [Discord](https://discord.gg/xCaY7hvNwD), [Telegram](https://t.me/origintrail), [Reddit](https://www.reddit.com/r/OriginTrail/), [X](https://x.com/origin_trail)&#x20;
+* **Trustless verification:** Every claim is anchored to a consensus-verified state
+* **Decentralized Computation**: Blockchains enable consensus based code execution (e.g. via smart contracts) on decentralized networks, with no single point of control, perfect for building decentralized protocols like OriginTrail.
+* **Data integrity and auditability:** Through cryptographic hashing and timestamping of data records on a blockchain, making it possible to verifiably track the origin of records and their update trail
+* **Tokenization -** enabling decentralized participation and support of the system through the TRAC token, as well as the ability to tokenize data through Knowledge Assets
 
-### Why combine blockchain with knowledge graphs?
+In the DKG, blockchain smart contracts handle:
 
-Blockchains and knowledge graphs are two different types of networks:
+* Identity (via DIDs)
+* Knowledge Asset ownership (via NFTs) and temporal state anchoring (via graph fingerprints)
+* decentralized service agreements between nodes and DKG users (through publishing and staking)
 
-* **Blockchains are trust networks**. They run on decentralized stateful protocols enabling a verifiable shared state and are used for applications such as decentralized identity, asset tokenization (NFTs), decentralized finance, trusted multi-party computation, etc.
-* **Knowledge graphs are semantic networks.** When Google first coined the term "knowledge graph", they explained it as "things, not strings". Knowledge graphs connect highly structured, machine-understandable semantic entities into one **semantic data network.** This enables powerful data capabilities, such as search, reasoning, inference, recommendations, and other forms of symbolic AI. Knowledge graphs inherit the technology stack idea of the [Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web) (introduced as the "original" Web 3.0 by Sir Tim Berners-Lee, the inventor of WWW). They are particularly well positioned for use with LLMs as they provide highly contextualized knowledge (or annotated data)
+### Why Use Knowledge Graphs?
 
-{% hint style="info" %}
-If you want to jump into the code, head over to the [ChatDKG builder toolkit](https://docs.origintrail.io/build-with-dkg/chatdkg-builder-toolkit) page.
-{% endhint %}
+Knowledge graphs are the best approach to managing knowledge due to their rich context, flexibility and data integration capabilities. Specifically, knowledge graphs:
+
+* Represent **relationships and context** between data
+* Enable **semantic search and inferencing**
+* Are **machine-readable and human-intelligible**
+* Provide a foundation for interoperable data exchange
+
+The DKG leverages the RDF data model and SPARQL query language, aligning with W3C Semantic Web standards.
+
+### Why OriginTrail DKG combines Blockchains and Knowledge Graphs?
+
+While powerful on their own, blockchains and knowledge graphs are **exponentially more effective** when combined:
+
+* **Trust meets meaning** — Blockchains provide decentralized trust and data integrity, while knowledge graphs provide structured, meaningful context.
+* **Immutable semantics** — Verifiable knowledge assets can be timestamped, hashed, and anchored on-chain, ensuring that their meaning is preserved over time.
+* **Decentralized collaboration** — Communities or ecosystems can build shared knowledge bases without central authorities, enabled by smart contracts and semantic interoperability.
+* **Discoverable and verifiable** — A knowledge graph indexed across a peer-to-peer network enables discovery of information, while blockchain ensures that what is found is provably authentic and untampered.
+
+This synergy creates a foundational infrastructure for the next generation of intelligent and verifiable applications, from AI agents to decentralized identity, supply chain, healthcare, and beyond.
+
+The DKG leverages the RDF data model and SPARQL query language, aligning with W3C Semantic Web standards.
+
+### How Does the DKG Support Neuro-Symbolic AI
+
+Neuro-symbolic AI combines the pattern recognition capabilities of neural networks with the reasoning capabilities of symbolic systems like knowledge graphs. The DKG enhances this hybrid approach in several critical ways:
+
+* **Contextual grounding** — Structured RDF data allows LLMs and other neural systems to operate with clearly defined entities and relationships, enriching prompt responses and grounding model outputs in verifiable facts.
+* **Retrieval-augmented generation (RAG)** — SPARQL-compatible queries over the DKG can fetch symbolic facts at runtime, improving relevance and reducing hallucination in generated content.
+* **Symbolic reasoning** — The DKG’s RDF-based structure supports formal reasoning, inference rules, and logic-based querying, which neural networks can’t natively perform.
+* **Neural graph reasoning** — Neural-symbolic architectures that operate over graph structures benefit from the DKG’s richly connected semantic data, enabling advanced reasoning tasks like entity disambiguation, link prediction, and knowledge completion.
+* **Memory and feedback loops** — Persistent, verifiable memory allows autonomous agents to build and refer to structured experiences over time. When shared across multiple agents through a common knowledge graph, this forms a **collective memory** — enabling agents to learn from each other, reason jointly, and contribute to a growing corpus of semantically interlinked knowledge.
+
+In short, the DKG is an essential infrastructure layer for building trusted, intelligent systems that integrate learning with logic.
 
 ## System architecture
 
-OriginTrail synergizes blockchains and knowledge graphs in a layered architecture.&#x20;
+OriginTrail synergizes blockchains, knowledge graphs (symbolic AI) and LLMs (neural AI) in a 3-layer architecture, where each layer is implemented as a decentralized network.&#x20;
 
-**Blockchains are trust networks** established to enable reliable computation through **decentralized consensus**, operating as a global, dependable computer. In contrast, **knowledge graphs serve as semantic data networks** for **knowledge management**. The OriginTrail architecture is crafted to ensure a trustworthy environment for AI applications by leveraging these two fundamental layers.
+**The trust layer leverages blockchains as trust networks,** established to enable reliable computation through **decentralized consensus**, operating as a global, dependable computer. It is used to track the origin of knowledge, its provenance, integrity and enable decentralized economic interactions in the system.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-06-13 at 23.54.29.png" alt=""><figcaption><p>The three layers of OriginTrail</p></figcaption></figure>
+**The knowledge base layer is the core of the DKG,** implemented as a peer to peer network of DKG Core nodes, **leveraging knowledge graphs serve as semantic data networks** for **knowledge management, tightly integrating with** the trust layer.
 
-The following sections of the documentation dive deep into each of the two technical layers and their interplay.
+**The verifiable AI layer** hosts AI agents and systems leveraging both the knowledge base and the trust layer underneath. This is the realm of the DKG Edge Nodes, as well as MCP and other integration enablers, with operations supported by the Knowledge Base and Trust layers below.
 
-We distinguish several sub-layers of the DKG layer (Layer 2):
-
-* **Data layer**, hosting the knowledge graph data, distributed across the network in separate instances of graph databases.
-* **Service layer**, implementing various core & extended services, such as authentication, standard interfaces, and data pipelines.
-* **Consensus layer**, implementing interfaces to several blockchains hosting trusted smart contracts, used to manage relations between the nodes and implement trustless protocols (currently supporting Ethereum, xDai blockchain, and the OriginTrail NeuroWeb).
-* **Application layer,** encompassing both dapps and traditional applications which utilize the OriginTrail DKG as part of their data flows.
-
-<div align="center"><img src="../.gitbook/assets/Screenshot 2022-03-30 at 16.46.10.png" alt="OriginTrail conceptual architecture"></div>
-
-We also distinguish between:
-
-* **Public, replicated knowledge graph**, shared by all network nodes according to the protocol.
-* **Private graphs**, hosted separately by each of the networked nodes, connected with the public knowledge graph.
-
-The public knowledge graph enables data discoverability by hosting a decentralized index of information replicated across the network, enabling search queries through its discovery protocols. Once information is discovered in separate (private) graphs, data exchange protocols are used to obtain full query results. An example of a data exchange protocol is a data marketplace protocol, implementing trusted data-for-tokens exchange.
-
-The protocol actors are:
-
-* Data creator nodes (DC), responsible for publishing datasets to the DKG
-* Data holder nodes (DH), hosting the DKG datasets, incentivized by tokens deposited by DCs
-* Data viewers (DV), usually services or dapps that query the DKG
-* Data providers (DP), which provide data to DC nodes for publishing
-
-The distinction between DC and DH nodes is only behavioral, as they implement the same interfaces (each node can be both a DH and a DC node at the same time).
-
-Therefore, a dataset published to the DKG by a DC node:
-
-* Contains a cryptographic identity (DID) of the DC and DP, rooted in one of the supported blockchain networks
-* Is structured as graph-linked data
-* Has a corresponding set of cryptographic fingerprints (graph merkle roots) stored immutably on a blockchain
-* Is timestamped and has a "data lifespan" on the network&#x20;
-* Is randomly replicated across peers based on a DKG content addressing scheme
-
-In this way, any given graph vertex or edge (triple/chunk) in the DKG can be verifiably associated with a publisher DID, its originating dataset, and cryptographic hashes proving it is contained in that dataset, as well as enabling data integrity verification on-chain and off-chain.&#x20;
+<figure><img src="../.gitbook/assets/Layers-Infographic.png" alt=""><figcaption><p>The three layers of OriginTrail</p></figcaption></figure>
