@@ -167,6 +167,29 @@ The default login credentials for the Edge node UI are as follows:
 **password:** edge\_node\_pass
 {% endhint %}
 
+## 5. Control and Manage Edge Node Services (Linux)
+
+Below is a list of the deployed services and how to manage them using `systemd`. \
+All Edge Node services are deployed as `systemd` units, making them easy to manage.
+
+#### List of Services:
+
+1. **Edge Node API -** `edge-node-api.service`
+2. **Authentication Service** – `auth-service.service`
+3. **Knowledge Mining API** – `ka-mining-api.service`
+4. **DRAG API** – `drag-api.service.service`
+5. **OTNode** – `otnode.service`
+
+#### Managing Services:
+
+For each service, you can perform the following actions using the respective systemd commands:
+
+* **Check service status:** `systemctl status <service-name>`
+* **Start a service (if it is not already running):** `systemctl start <service-name>`
+* **Stop a service:** `systemctl stop <service-name>`
+* **Restart a service:** `systemctl restart <service-name>`
+* **View Service Logs:** `journalctl -f -u <service-name>`
+
 ## Exploring Edge Node Capabilities
 
 Once the Edge Node is up and running in your local environment, you’re ready to explore its features and capabilities. To get started, refer to the [**Usage Example**](usage-example.md) section to learn how to interact with the node and understand what it can do.
