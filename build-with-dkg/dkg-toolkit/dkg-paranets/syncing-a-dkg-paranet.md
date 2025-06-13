@@ -41,5 +41,5 @@ The paranet is fully synced when you see the following log:
 Paranet sync: KA count from contract and in DB is the same, nothing new to sync, for paranet: did:dkg:hardhat2:31337/0x8aafc28174bb6c3bdc7be92f18c2f134e876c05e/1/5
 ```
 
-Interacting with the paranet knowledge graph through your node is explained on [this](building-with-dkg-paranets.md) page.
+Interacting with the paranet knowledge graph through your node is explained on [this](../../chatdkg-builder-toolkit/dkg-paranets/building-with-dkg-paranets.md) page.
 
