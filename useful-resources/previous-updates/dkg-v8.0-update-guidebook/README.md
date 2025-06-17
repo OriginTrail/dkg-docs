@@ -1,8 +1,4 @@
----
-icon: arrows-to-dot
----
-
-# DKG V8 Guidebook
+# DKG V8.0 update guidebook
 
 V8 is a major update that increases scalability up to 1000x, introduces DKG Edge Nodes to power privacy-preserving AI use, improves Knowledge Assets, and much more.&#x20;
 

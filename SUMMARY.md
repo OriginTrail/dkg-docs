@@ -106,14 +106,18 @@
 
 ## Useful Resources
 
-* [What's new with OriginTrail V8](useful-resources/whats-new-with-origintrail-v8.md)
-* [DKG V8 guidebook](useful-resources/dkg-v8-guidebook/README.md)
-  * [Protocol updates](useful-resources/dkg-v8-guidebook/protocol-updates.md)
-  * [Feature roadmap](useful-resources/dkg-v8-guidebook/feature-roadmap.md)
-  * [How to upgrade to V8?](useful-resources/dkg-v8-guidebook/how-to-upgrade-to-v8.md)
+* [DKG V8.1.X update guidebook](useful-resources/dkg-v8.1.x-update-guidebook.md)
 * [Public nodes](useful-resources/public-nodes.md)
-* [Tutorials](useful-resources/tutorials.md)
 * [Test token faucet](useful-resources/test-token-faucet.md)
+* [Contribution guidelines](useful-resources/contribute/README.md)
+  * [Guidelines for automated test contributions](useful-resources/contribute/guidelines-for-automated-test-contributions.md)
+* [Previous updates](useful-resources/previous-updates/README.md)
+  * [What's new with OriginTrail V8](useful-resources/previous-updates/whats-new-with-origintrail-v8.md)
+  * [DKG V8.0 update guidebook](useful-resources/previous-updates/dkg-v8.0-update-guidebook/README.md)
+    * [Protocol updates](useful-resources/previous-updates/dkg-v8.0-update-guidebook/protocol-updates.md)
+    * [Feature roadmap](useful-resources/previous-updates/dkg-v8.0-update-guidebook/feature-roadmap.md)
+    * [How to upgrade to V8?](useful-resources/previous-updates/dkg-v8.0-update-guidebook/how-to-upgrade-to-v8.md)
+* [Tutorials](useful-resources/tutorials.md)
 * [Development principles](useful-resources/development-principles.md)
 * [Community created resources](useful-resources/community-resources.md)
 * [Linked data & knowledge graphs](useful-resources/kg.md)
@@ -121,8 +125,6 @@
 * [OT Node Engine implementation details](useful-resources/ot-node-engine-implementation-details/README.md)
   * [Modules](useful-resources/ot-node-engine-implementation-details/modules.md)
   * [Command Executor](useful-resources/ot-node-engine-implementation-details/command-executor.md)
-* [Contribution guidelines](useful-resources/contribute/README.md)
-  * [Guidelines for automated test contributions](useful-resources/contribute/guidelines-for-automated-test-contributions.md)
 * [Explore the OriginTrail ecosystem](useful-resources/explore-the-origintrail-ecosystem.md)
 
 ## Graveyard

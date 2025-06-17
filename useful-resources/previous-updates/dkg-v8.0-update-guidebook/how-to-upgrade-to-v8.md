@@ -6,7 +6,7 @@ description: >-
 
 # How to upgrade to V8?
 
-<figure><img src="../../.gitbook/assets/DKG V8 update guide book - gitbook cover1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/DKG V8 update guide book - gitbook cover1 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## For builders
 
@@ -28,7 +28,7 @@ If you have previously delegated your TRAC on any of the DKG-supported blockchai
 
 There is no rush to migrate - your rewards will continue to accrue even if you don’t migrate. The only thing unavailable before migration is managing your stake.&#x20;
 
-Learn more about the new Delegated staking [here](../../dkg-under-the-hood/delegated-staking/).
+Learn more about the new Delegated staking [here](../../../dkg-under-the-hood/delegated-staking/).
 
 ## For Core Node runners
 
