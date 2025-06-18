@@ -10,9 +10,9 @@ The deployment of the DKG Random Sampling system follows a carefully phased appr
 * **Outcome:** Approval of the Random Sampling design by the community and core development team
 * **Phase status:&#x20;**<mark style="color:green;">**Completed**</mark>
 
-#### 🚀 Phase 2: V8.1.0 — Initial Rollout (Active Proof System)
+#### 🚀 Phase 2: V8.1.0 — Initial rollout (Active Proof System)
 
-* **Features Introduced:**
+* **Features introduced:**
   * Live Random Sampling challenge generation and proof submission
   * Score calculation per proof period
   * Epoch-based reward allocation system
@@ -29,8 +29,8 @@ The deployment of the DKG Random Sampling system follows a carefully phased appr
 * **How it works:**
   * Applies the Random Sampling system retroactively for TRAC fees in the V6 period
   * Nodes that were active during the V6 phase can compete for retroactive rewards, claiming tokens for completed epochs and competing for upcoming epochs.
-* **Compatibility Duration:** Available for a limited window (12 months from V8.0 launch)
-* **Phase status: Testnet & Mainnet rollout expected in June 2025**
+* **Compatibility duration:** Available for a limited window (12 months from V8.0 launch)
+* **Phase status: Testnet & mainnet rollout expected in June 2025**
 
 #### 🛠 Phase 4: V8.1.2 — Tuning Period Module
 
@@ -38,28 +38,28 @@ The deployment of the DKG Random Sampling system follows a carefully phased appr
 * **How it works:**
   * All active nodes during this period are considered to have **100% uptime** for the purpose of reward allocation
   * The same score distribution and reward formula is applied as in the live Random Sampling system
-* **Phase status: Testnet & Mainnet rollout expected in June 2025**
+* **Phase status: Testnet & mainnet rollout expected in June 2025**
 
-### Rollout Principles
+### Rollout principles
 
-* **Incremental Activation** - Each module builds on the previous one, ensuring that no backward compatibility is broken
-* **Transparency First** - The DKG Staking UI will be upgraded to reflect:
-  * **Node power**, which will represent the current node power in the network with regards to its stake, service ask and publishing factor
-  * **Node health,** computed based on Proof submissions per epoch
+* **Incremental activation** — Each module builds on the previous one, ensuring that no backward compatibility is broken
+* **Transparency first** — The DKG Staking Dashboard will be upgraded to reflect:
+  * **Node Power**, which will represent the current node power in the network with regard to its stake, service ask, and publishing factor
+  * **Node Health,** computed based on proof submissions per epoch
   * Compatibility module reward status
-* **Fail-Safe Participation** - Delegators and Node Runners are protected from loss of eligibility due to technical transitions, with catch-up mechanisms in place for reward collection
+* **Fail-safe participation** — Delegators and node runners are protected from loss of eligibility due to technical transitions, with catch-up mechanisms in place for reward collection
 
-### What You Should Do
+### What you should do
 
-#### Node Runners
+#### Node runners
 
-* Make sure to follow the updates to update your node as soon as the V8.1 release goes live on mainnet
-* Once your node is update mane sure to monitor and maintain its proof submission health
-* Optionally enable auto-claiming for delegators via node services to automatically restake all rewards and increase your Node power
+* Make sure to follow the updates to update your node as soon as the V8.1 release goes live on the mainnet.
+* Once your node is updated, make sure to monitor and maintain its proof submission health.
+* Optionally enable auto-claiming for delegators via node services to automatically restake all rewards and increase your Node Power.
 
 #### Delegators
 
-* You don’t need to take immediate action
-* Make sure you understand when rewards become claimable based on finalization rules
-* Use the upgraded Staking UI to track your delegator epoch scores and rewards
+* You don’t need to take immediate action.
+* Make sure you understand when rewards become claimable based on finalization rules.
+* Use the upgraded Staking Dashboard to track your delegator epoch scores and rewards
 

@@ -77,7 +77,7 @@
 
 ***
 
-* [Random Sampling DKG Proof System](random-sampling-dkg-proof-system/README.md)
+* [Random Sampling DKG proof system](random-sampling-dkg-proof-system/README.md)
   * [Random sampling rollout](random-sampling-dkg-proof-system/random-sampling-rollout.md)
   * [Random Sampling FAQ](random-sampling-dkg-proof-system/random-sampling-faq.md)
 * [DKG Sync](dkg-sync.md)

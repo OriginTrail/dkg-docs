@@ -2,15 +2,15 @@
 
 
 
-**How do I choose which Core node to delegate my TRAC to?**
+**How do I choose which Core Node to delegate my TRAC to?**
 
-The system is designed in such a way to incentivise positive network behavior (see more in [.](./ "mention")). That means your delegated TRAC will help increase a Core node's chances of receiving rewards, while the nodes with the best characteristics receive a higher share of the rewards. To pick a node, consider the following metrics (available in the [Staking UI](https://staking.origintrail.io))
+The system is designed in such a way as to incentivize positive network behavior (see more in [.](./ "mention")). That means your delegated TRAC will help increase a Core Node's chances of receiving rewards, while the nodes with the best characteristics receive a higher share of the rewards. To pick a node, consider the following metrics (available in the [Staking Dashboard](https://staking.origintrail.io))
 
-* **Node Power** – Shows how competitive the node is in earning rewards. Higher Node Power means higher chance of rewards.&#x20;
-* **Node Health** – Reflects reliability and uptime. Higher Node health means higher chance of rewards
-* **Operator Fee** – The percentage cut the node takes from rewards to cover the cost of its operations (e.g. blockchain transaction fees).&#x20;
+* **Node Power** — Shows how competitive the node is in earning rewards. Higher Node Power means a higher chance of rewards.&#x20;
+* **Node Health** — Reflects reliability and uptime. Higher Node health means a higher chance of rewards.
+* **Operator fee** — The percentage cut the node takes from rewards to cover the cost of its operations (e.g., blockchain transaction fees).&#x20;
 
-You’re generally looking for a node with high Power, high Health, and a reasonable fee.
+You’re generally looking for a node with high power, high health, and a reasonable fee.
 
 
 
@@ -20,14 +20,14 @@ No. Delegated TRAC tokens are locked in smart contracts. Node operators cannot a
 
 
 
-**What happens if my Core node goes offline during an upgrade?**
+**What happens if my Core Node goes offline during an upgrade?**
 
 DKG is designed to be resilient. If your node goes offline (e.g., for maintenance), it won’t be slashed, but it may miss proof submissions during that downtime. This means:
 
 * Your node’s **Node Health** score may decrease.
 * You may receive lower rewards for that epoch.
 
-As a node operator, maintaining your node uptime is one of the highest priorities and therefore it is incentivised. You can use the **DKG Sync** feature to catch up on missed data and rejoin the network without penalty.
+As a node operator, maintaining your node uptime is one of the highest priorities, and it is, therefore, incentivized. You can use the **DKG Sync** feature to catch up on missed data and rejoin the network without penalty.
 
 
 
@@ -53,11 +53,11 @@ These are released in quick succession as development and testing complete, roll
 
 Node rewards are based on three main factors:
 
-1. **Uptime and proof submissions** – Stay online and responsive to increase your Node health
-2. **Publishing activity** – Publish Knowledge Assets or [open your publishing API](../build-with-dkg/dkg-core-node/how-to-open-up-your-node-for-publishing.md) for others to use to increase your Node Power
-3. **Ask price** – Set a fair, competitive service fee, increasing your Node Power
-4. **Set a low operator fee -** making your node more interesting for delegators
-5. **Promote your node -** get TRAC holders excited to delegate their stake to your node to increase your Node Power
+1. **Uptime and proof submissions** — Stay online and responsive to increase your Node Health.
+2. **Publishing activity** — Publish Knowledge Assets or [open your publishing API](../build-with-dkg/dkg-core-node/how-to-open-up-your-node-for-publishing.md) for others to use to increase your Node Power.
+3. **Ask price** — Set a fair, competitive service fee, increasing your Node Power.
+4. **Set a low operator fee** — Making your node more interesting for delegators.
+5. **Promote your node** — Get TRAC holders excited to delegate their stake to your node to increase your Node Power.
 
 **How are rewards collected for V6 and the Tuning Period?**
 
@@ -68,7 +68,7 @@ Both the V6 rewards and the Tuning Period (between V8.0.0 and V8.1.0) are proces
 
 **Who is eligible for V6 era rewards?**
 
-Nodes that were active during the DKG V6 period (before the V8 upgrade) are eligible to earn accumulated rewards from that era.  V6 rewards will be distributed via a compatibility module introduced in version V8.1.1, and are consolidated for the period of all 12 epochs in 2025 (1 year). Specifically, eligible nodes will be submitting proofs for upcoming epochs based on the same principles as for V8 era rewards.&#x20;
+Nodes that were active during the DKG V6 period (before the V8 upgrade) are eligible to earn accumulated rewards from that era.  V6 rewards will be distributed via a compatibility module introduced in version V8.1.1, and are consolidated for the period of all 12 epochs in 2025 (1 year). Specifically, eligible nodes will submit proofs for upcoming epochs based on the same principles as those for V8 era rewards.&#x20;
 
-Reward claiming for already elapsed epochs **will assume 100% uptime for that period (all nodes will have equal Node Health),** so nodes will compete on **Node Power**. Further technical details will be released with the V6 compatiblity module release on the DKG Testnet.
+Reward claiming for already elapsed epochs **will assume 100% uptime for that period (all nodes will have equal Node Health),** so nodes will compete on **Node Power**. Further technical details will be released with the V6 compatibility module release on the DKG testnet.
 
