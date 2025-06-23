@@ -135,9 +135,9 @@ To complete the V8.1.0 update safely, **staking features will be temporarily sus
 Once staking is locked, the smart contracts will be updated to V8.1.0, **maintaining the state (snapshot)** of staking values present at that time in V8.0.X contracts via an on-chain migration. Target time for the beginning of the on-chain migration (and latest snapshot time) is at&#x20;
 
 * Timestamp **1750683600** ( June 23rd 15:00 CET)&#x20;
-* NeuroWeb: Target Block - 9778900
-* Base : Target Block - 22983560
-* Gnosis: Target Block - 40734845
+* NeuroWeb: Snapshot Block - 9777120
+* Base : Snapshot Block - 31948000
+* Gnosis: Snapshot Block - 40731720
 
 ### No more V6 token migration required
 
