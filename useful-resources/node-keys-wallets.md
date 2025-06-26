@@ -2,9 +2,10 @@
 description: >-
   This section will guide you trough the preparation of the node wallets (keys)
   for each of the blockchains currently supported by OriginTrail DKG node.
+icon: key
 ---
 
-# Setting up node keys (wallets)
+# Node keys (wallets)
 
 ## What are node keys and why are they needed?
 
