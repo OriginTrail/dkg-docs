@@ -6,13 +6,13 @@ icon: memo-circle-info
 
 **Contribute to building the trusted knowledge foundation for AI and humanity.**
 
-OriginTrail is inviting researchers and builders to submit proposals and research papers that advance the frontier of decentralized knowledge technologies. The initiative aims to support the development of systems that make AI more explainable, trustworthy, and beneficial to all.
+OriginTrail is inviting researchers and builders to submit proposals and research papers that advance the frontier of decentralized knowledge technologies. The initiative aims to support the development of systems that make artificial intelligence (AI) more explainable, trustworthy, and beneficial to all.
 
 This call will formally launch soon. Until then, we invite interested contributors to join the conversation and prepare for submission.
 
-### Why This Matters
+### Why this matters
 
-The world is entering a critical phase of digital evolution, where artificial intelligence systems increasingly shape decisions in science, healthcare, finance, and governance. Yet, the trustworthiness, provenance, and interpretability of these systems remain significant challenges.
+The world is entering a critical phase of digital evolution, where AI systems increasingly shape decisions in science, healthcare, finance, and governance. Yet, the trustworthiness, provenance, and interpretability of these systems remain significant challenges.
 
 This Call for Papers is part of a broader effort to address these challenges through:
 
@@ -22,7 +22,7 @@ This Call for Papers is part of a broader effort to address these challenges thr
 
 All submissions will be published on the OriginTrail Decentralized Knowledge Graph (DKG), a public infrastructure for trusted knowledge. Discussions will be supported through community calls and asynchronous collaboration tools.
 
-### What We're Looking For
+### What we're looking for
 
 We invite papers and project proposals that explore and advance any of the following (non-exhaustive) areas:
 
@@ -39,9 +39,9 @@ We invite papers and project proposals that explore and advance any of the follo
 
 We encourage submissions that demonstrate both rigorous research and practical experimentation—especially those that aim to publish, interact with, or expand knowledge on the DKG.
 
-### Who Should Apply
+### Who should apply
 
-This call is open to individuals and teams with expertise in artificial intelligence, semantic technologies, graph data systems, distributed computing, and related domains. Both academic and industry participants are welcome.
+This call is open to individuals and teams with expertise in AI, semantic technologies, graph data systems, distributed computing, and related domains. Both academic and industry participants are welcome.
 
 Ideal applicants will have prior experience in:
 
@@ -49,16 +49,16 @@ Ideal applicants will have prior experience in:
 * Publishing technical or scientific work
 * Building experimental or deployed AI systems
 
-### Funding and Recognition
+### Funding and recognition
 
-Top 10 submissions will receive support to further develop and deploy their work with a:
+The top 10 submissions will receive support to further develop and deploy their work with a:
 
 * A total prize pool of 100,000 TRAC tokens
 * All accepted papers will be published on the DKG, making them accessible, immutable, and referenceable
 
 Proposals that intend to conduct live experiments, publish structured knowledge, or extend the DKG’s capabilities will be given priority in evaluation.
 
-### Submission and Tools
+### Submission and tools
 
 A new set of tools and infrastructure will accompany the call, including:
 
@@ -68,7 +68,7 @@ A new set of tools and infrastructure will accompany the call, including:
 
 Detailed submission guidelines will be announced shortly.
 
-### Stay Involved
+### Stay involved
 
 Join the OriginTrail community to exchange ideas, get early access to submission details, and help shape the future of decentralized knowledge systems.
 
