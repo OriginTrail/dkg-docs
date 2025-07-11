@@ -52,13 +52,13 @@ PRIVATE_KEY="your_private_key_here"
 > 4. Click "Export Private Key"
 > 5. Enter your password and copy the key
 
-## 📝 Step 2: Publish your first knowledge asset
+## 📝 Step 2: Publish your first Knowledge Asset
 
 A Knowledge Asset (KA) is structured data stored on the DKG. Let's create a simple one!
 
 ### Example Knowledge Asset
 
-Here's the JSON-LD KA we'll publish
+Here's an example of Klowledge Asset written in JSON-LD format.
 
 
 
