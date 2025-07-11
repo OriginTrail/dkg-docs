@@ -19,7 +19,7 @@ To operate a DKG Core Node, a minimum stake of **50,000 TRAC** is required. Node
 
 DKG Core Nodes can also serve as **Gateway Nodes**, meaning they support the publishing of new Knowledge Assets into the network. Nodes that publish more knowledge gain a higher **publishing factor**, which increases their rewards through the Random Sampling proof system.
 
-To becoeme Gateway nodes, node operators can open their Core Node **publishing API endpoint** to external publishers. This allows developers, AI agents, or platforms to use this Core Node as a gateway service for publishing their knowledge assets - similar to how blockchain RPC providers offer access to blockchain infrastructure. In OriginTrail, however, this access is **incentivized**: if others publish through your Core node, your node's publishing factor grows proportionally improving your Node Power, which improves both your rewards and overall network value.
+To become Gateway nodes, node operators can open their Core Node **publishing API endpoint** to external publishers. This allows developers, AI agents, or platforms to use this Core Node as a gateway service for publishing their knowledge assets - similar to how blockchain RPC providers offer access to blockchain infrastructure. In OriginTrail, however, this access is **incentivized**: if others publish through your Core node, your node's publishing factor grows proportionally improving your Node Power, which improves both your rewards and overall network value.
 
 ### Network Services and Fair Pricing
 
