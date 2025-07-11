@@ -8,8 +8,6 @@ Welcome to your first hands-on experience with the **OriginTrail Decentralized K
 
 ***
 
-### What you’ll do
-
 ### ✨ What you'll accomplish
 
 You'll use the [**DKG SDK** ](dkg-toolkit/dkg-sdk/)(JavaScript or Python) to:
@@ -24,37 +22,6 @@ You'll use the [**DKG SDK** ](dkg-toolkit/dkg-sdk/)(JavaScript or Python) to:
 
 ***
 
-### What you’ll need
-
-* **Node.js** (for JavaScript SDK) or **Python** (3.8+)
-* A Web3 wallet (e.g., MetaMask) with:
-  * **Test TRAC tokens**
-  * **Test Neuro tokens**
-* A **public DKG node endpoint,** which you can find [**here**](../useful-resources/public-nodes.md)
-
-### Step 2: Publish your first Knowledge Asset
-
-### Step 3: Query & retrieve the Knowledge Asset
-
-Or you can use the Python SDK:
-
-```python
-query_operation_result = dkg.graph.query(
-    """
-    PREFIX schema: <http://schema.org/>
-    SELECT ?s ?name ?description
-    WHERE {
-        ?s schema:name ?name ;
-           schema:description ?description .
-    }
-    """
-)
-print_json(query_operation_result)
-```
-
-To learn more about querying the DKG go [here](querying-the-dkg.md).
-
-### What's next?
 
 ### 📋 What you'll need&#x20;
 
@@ -76,11 +43,8 @@ Before you start, make sure you have:
 1. Join our [Discord server](https://discord.com/invite/xCaY7hvNwD)
 2. Navigate to the `#faucet-bot` channel
 3. Type `!help` to see available commands
-4. Use the bot to get free Test TRAC and NEURO tokens
-
-{% hint style="warning" %}
-To receive TRAC on Neuroweb, first acquire NEURO via the faucet to initiate your wallet.
-{% endhint %}
+4. Type `!fundme_neuroweb [YOUR_ADDRESS]` to get NEURO tokens and activate your wallet (used to pay transaction fees on NeuroWeb blockchain)
+5. Type `!fundme_neuroweb_trac [YOUR_ADDRESS]` to get TRAC tokens (used for publishing new Knowledge Assets)
 
 ### 💻 Choose your development path
 

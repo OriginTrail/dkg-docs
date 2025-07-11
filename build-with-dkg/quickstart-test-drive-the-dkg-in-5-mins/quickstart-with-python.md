@@ -64,7 +64,7 @@ A Knowledge Asset (KA) is structured data stored on the DKG. Let's create a simp
 
 ### Example Knowledge Asset
 
-Here's the JSON-LD KA we'll publish
+Here's an example of Klowledge Asset written in JSON-LD format.
 
 
 
