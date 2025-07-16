@@ -41,6 +41,7 @@
     * [V8 DKG Core Node installation](build-with-dkg/dkg-core-node/run-a-v8-core-node-on-mainnet/v8-dkg-core-node-installation.md)
   * [Deploy Core node via Google Cloud marketplace](build-with-dkg/dkg-core-node/deploy-core-node-via-google-cloud-marketplace.md)
   * [How to open up your node for publishing](build-with-dkg/dkg-core-node/how-to-open-up-your-node-for-publishing.md)
+  * [Auto Updater](build-with-dkg/dkg-core-node/auto-updater.md)
 * [DKG toolkit](build-with-dkg/dkg-toolkit/README.md)
   * [DKG SDK](build-with-dkg/dkg-toolkit/dkg-sdk/README.md)
     * [Development environment setup](build-with-dkg/dkg-toolkit/dkg-sdk/setting-up-your-development-environment.md)
