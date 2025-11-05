@@ -1,50 +1,32 @@
----
-description: >-
-  Build trusted neuro-symbolic AI with Knowledge Assets and the Decentralized
-  Knowledge Graph
-icon: earth-asia
-cover: .gitbook/assets/kk.png
-coverY: 0
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
+# Introduction
 
-# Get started with OriginTrail
+OriginTrail is an ecosystem building **collective, trusted memory** for AI. The core ecosystem technology is the **Decentralized Knowledge Graph (DKG)**, a decentralized, permissionless network of nodes, through which both humans and machines can share knowledge, reason together, and preserve context across time.
 
-> _“Q. **How do you propose to do this?**_
->
-> _A. **By saving the knowledge of the race**. The sum of human knowing is beyond any one man; any thousand men. With the destruction of our social fabric, science will be broken into a million pieces. Individuals will know much of the exceedingly tiny facets of which there is to know. They will be helpless and useless by themselves. The bits of lore, meaningless, will not be passed on. They will be lost through the generations. **But, if we now prepare a giant summary of all knowledge, it will never be lost**. Coming generations will build on it, and will not have to rediscover it for themselves. One millennium will do the work of thirty thousand.”_
->
-> Hari Seldon, **Foundation series by Isaac Asimov (1951)**
+Modern AI is powerful but ungrounded. It predicts without knowing, hallucinates, forgets what it said, and relies on data controlled by a few centralized platforms. LLMs in particular have an "explainability" problem - why did an LLM respond a certain way, based on what knowledge, coming from which source?&#x20;
 
-OriginTrail is building a verifiable knowledge layer for AI, where knowledge is traceable, memory is decentralized, and humans remain in control. It aims to achieve this by organizing all human knowledge in a **Decentralized Knowledge Graph (DKG)** through a **collective neuro-symbolic AI** approach. &#x20;
+The **Decentralized Knowledge Graph (DKG)** hosts **Knowledge Assets** that encode facts, data provenance, and meaning in a tamper-proof way. The network is hosted by a set of independent **DKG Nodes**. Anyone can run a **DKG network Node** - organizations and individuals - contributing to the DKG and at the same time building upon their knowledge in a **privacy-preserving** way. Thus the DKG ensures that no single entity can rewrite, censor, or monopolize the collective memory. Decentralization keeps AI accountable, bias-resistant, and aligned with human diversity.
 
-A collective neuro-symbolic AI combines structured and connected information from symbolic AI (DKG) with the creativity of neural AI technologies (LLMs), building a **robust decentralized AI infrastructure.**&#x20;
+OriginTrail’s **neuro-symbolic approach** combines the structure and reasoning of **symbolic AI** with the creativity and pattern recognition of **neural AI**. This enables AI systems to think with context, grounding their outputs in verifiable knowledge rather than probabilistic guesses.
 
-This provides a powerful substrate for **trusted, human-centric AI solutions** to tackle some of humanity's most pressing challenges. It also **drives AI agents’ autonomous memories and trusted intents**, as both AI agents and robots become potent enough to act on behalf of humans.&#x20;
+The DKG grows through human participation. Researchers, developers, and citizens can all publish, link, and improve knowledge — ensuring that the world’s intelligence is shaped by the many, not the few.
 
-### Choose your start
+**Core operations**
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins.md">Quickstart</a></td><td>Try the DKG in 5 minutes—publish and query your first Knowledge Asset with zero setup.</td><td></td><td><a href="build-with-dkg/quickstart-test-drive-the-dkg-in-5-mins.md">quickstart-test-drive-the-dkg-in-5-mins.md</a></td></tr><tr><td><a href="build-with-dkg/dkg-toolkit/">DKG builder toolkit</a></td><td>A unified toolkit to publish knowledge, deploy AI agents, and launch collaborative paranets on the DKG.</td><td></td><td><a href="https://docs.origintrail.io/build-with-dkg/chatdkg-builder-toolkit">https://docs.origintrail.io/build-with-dkg/chatdkg-builder-toolkit</a></td></tr><tr><td><a href="build-with-dkg/dkg-edge-node/">DKG Edge Node</a></td><td>Run your own node to deploy agents, power paranets, and take full control of your DKG stack.</td><td></td><td><a href="build-with-dkg/dkg-edge-node/">dkg-edge-node</a></td></tr><tr><td><a href="build-with-dkg/dkg-core-node/">DKG Core Node</a></td><td>Contribute to the DKG security, stability, and functionality and earn rewards</td><td></td><td><a href="build-with-dkg/dkg-core-node/">dkg-core-node</a></td></tr><tr><td><a href="graveyard/delegated-staking/">Delegated staking</a></td><td>Contribute your TRAC tokens for network utility and earn rewards</td><td></td><td></td></tr><tr><td><a href="key-concepts/dkg-key-concepts.md">DKG key concepts </a></td><td>Learn key concepts of the DKG and empower yourself to build decentralized AI</td><td></td><td><a href="key-concepts/dkg-key-concepts.md">dkg-key-concepts.md</a></td></tr></tbody></table>
+* **Publishing knowledge:** Turning data into structured, verifiable Knowledge Assets
+* **Knowledge Discovery:** Querying, traversing, and monetizing knowledge in the decentralized graph and its _paranets_
+* **Trusted sharing:** Cryptographically verify authenticity and provenance of knowledge
+* **Neuro-symbolic Reasoning**: Infer new facts based on rules, leveraging graph-based reasoning in combination with LLMs and GenAI models
 
+We encourage developers to [try out the DKG Node](getting-started/decentralized-knowle-dge-graph-dkg.md) and build their first DKG based agent with it, to get a feel of what the technology can do.
 
+### Three ways to get started
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="getting-started/decentralized-knowle-dge-graph-dkg.md">Build your DKG Agent</a></td><td>Begin your journey on the Decentralized Knowledge Graph by staking TRAC and setting up your first DKG Node. This is your entry point into the verifiable knowledge economy</td><td><a href=".gitbook/assets/Delegated Staking.png">Delegated Staking.png</a></td><td></td></tr><tr><td><a href="broken-reference">Contrubute to the DKG</a></td><td>Activate your DKG Node and join the decentralized knowledge economy by staking TRAC.</td><td><a href=".gitbook/assets/DKG key concepts.png">DKG key concepts.png</a></td><td><a href="dkg-knowledge-hub/learn-more/readme/dkg-key-concepts.md">dkg-key-concepts.md</a></td></tr><tr><td><a href="broken-reference">Learn more about the DKG</a></td><td>Explore the core concepts behind the DKG and how it powers verifiable, intelligent AI.</td><td><a href=".gitbook/assets/DKG under the hood.png">DKG under the hood.png</a></td><td></td></tr></tbody></table>
 
 {% hint style="success" %}
 This site is a constantly updated, work-in-progress official OriginTrail documentation built by the OriginTrail community and core developers.&#x20;
 
-Find the "Edit on GitHub" button in the upper right corner and submit your updates as pull requests (or do it directly on the [docs Github repo).](https://github.com/OriginTrail/dkg-docs)&#x20;
+Find the "Edit on GitHub" button in the upper-right corner and submit your updates as pull requests (or do it directly in the [docs GitHub repo).](https://github.com/OriginTrail/dkg-docs)&#x20;
 
 We appreciate any feedback, improvement ideas, and comments.
 {% endhint %}
